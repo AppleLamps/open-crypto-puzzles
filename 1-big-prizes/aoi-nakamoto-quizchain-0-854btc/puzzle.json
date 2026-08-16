@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "slug": "aoi-nakamoto-quizchain-0-854btc",
+  "title": "Aoi Nakamoto Quizchain",
+  "tier": "big",
+  "status": "open",
+  "dead_end_reason": null,
+  "series": null,
+  "author": {
+    "name": "AoiNakamoto (pseudonymous)",
+    "handles": ["reddit:AoiNakamoto", "wattpad:AoiNakamoto"],
+    "url": "https://www.reddit.com/r/Grycoin/"
+  },
+  "published": {
+    "date": "2019-04-01",
+    "url": "https://www.reddit.com/r/Grycoin/"
+  },
+  "chain": "bitcoin",
+  "prize": {
+    "amount": 0.854,
+    "asset": "BTC",
+    "usd_estimate": 53802,
+    "usd_snapshot": "2026-08-16",
+    "note": "two lots: 0.777 BTC at 14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W (Real Big Block, stage 2) and 0.077 BTC at 13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd (Quizchain2 Block 76); both are the last 2 unclaimed of approximately 90 blocks the author published and funded herself between April and October 2019"
+  },
+  "addresses": [
+    {
+      "address": "14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "Real Big Block, stage 2",
+      "explorer": "https://mempool.space/address/14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W",
+      "expected": "77700000 sats",
+      "verified_on": "2026-08-16",
+      "verified_state": "funded-unspent"
+    },
+    {
+      "address": "13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "Quizchain2 Block 76",
+      "explorer": "https://mempool.space/address/13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd",
+      "expected": "7700000 sats",
+      "verified_on": "2026-08-16",
+      "verified_state": "funded-unspent"
+    },
+    {
+      "address": "19TbyN5KCg1Lg7qHwezifsLVcdSa2Rj5KN",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "Real Big Block, stage 1 (certification reference, solved by a third party in 2019, not part of the live prize)",
+      "explorer": "https://mempool.space/address/19TbyN5KCg1Lg7qHwezifsLVcdSa2Rj5KN",
+      "expected": "n/a",
+      "verified_on": "2026-08-16",
+      "verified_state": "swept"
+    }
+  ],
+  "puzzle_type": ["bip39-seed", "word-selection"],
+  "target_format": "source text (candidate answer); MD5 of its UTF-8 bytes as 128-bit entropy; BIP39 mnemonic; BIP44 m/44'/0'/0'/0/i for i = 0 to 5; P2PKH address",
+  "derivation": {
+    "summary": "candidate text to MD5 (128-bit entropy) to BIP39 mnemonic to BIP44 m/44'/0'/0'/0/i to P2PKH address, compared against both open escrows",
+    "oracle": "tools/oracle.py",
+    "oracle_certified": true,
+    "certified_against": "the author's own published calibration vector (entropy 2941774a2abec9f30c7d6777d1d53d91 to WIF L5Z66qPm... at BIP44 index 1), self-contained and exact; the case-flip rule and Block 76 prefix filter are certified separately with a synthetic example and a community-found candidate pair; full reproduction of the solved sibling lot Block 77 Stage One needs Hal Finney's bitcointalk post text, which this repository does not ship (third-party content), but which anyone can supply themselves to apply_stage_one_rule()"
+  },
+  "difficulty_left": "external-info",
+  "difficulty_note": "Real Big Block: the transform and the case-flip rule are confirmed exactly on a solved sibling lot; what is missing is the precise source text the author hashed on 2019-07-30, most likely the 2019 browser-rendered copy of a Wattpad chapter rather than today's API storage, which has been normalized; approximately 272 million candidate paragraph selections and edits tested, 0 match. Block 76: a community-found candidate pair satisfies both published MD5-prefix hints but no standard derivation of it reaches the address; roughly 78 million scripted derivations plus tens of thousands of thematic word-transform candidates tested, 0 match; the block may be a short human-reasoned wordplay riddle rather than a search problem, or may be misconfigured",
+  "tested_total": { "candidates": 350000000, "families": 21, "certified": true },
+  "leads": [
+    { "rank": 1, "title": "reconstruct the 2019 browser-copy rendering of the Wattpad chapter", "cost": "hours", "status": "open" },
+    { "rank": 2, "title": "read the 27 posts and comments between the rehash and the shutdown", "cost": "about an hour", "status": "open" },
+    { "rank": 3, "title": "a bounded 2-character-edit sweep on the strongest base texts", "cost": "about an hour on a rented GPU", "status": "open" },
+    { "rank": 4, "title": "identify what 76 indexes for Block 76", "cost": "minutes per candidate corpus", "status": "open" },
+    { "rank": 5, "title": "a short, human-reasoned answer to change to / from change to", "cost": "minutes per candidate", "status": "open" }
+  ],
+  "solutions": [],
+  "artifacts": [],
+  "sources": [
+    { "title": "Real Big Block stage 1", "url": "https://www.reddit.com/r/Grycoin/comments/ca6jxv/77_mbtc_quizchain2_block_77_stage_one/", "date": "2019-07-07", "archived": null },
+    { "title": "Quizchain2 Block 76", "url": "https://www.reddit.com/r/Grycoin/comments/cgcv9i/77_mbtc_quizchain2_block_76/", "date": "2019-07-22", "archived": null },
+    { "title": "Real Big Block Discussion", "url": "https://www.reddit.com/r/Grycoin/comments/chn8un/real_big_block_discussion/", "date": "2019-07-25", "archived": null },
+    { "title": "Second, Wattpad chapter by AoiNakamoto", "url": "https://www.wattpad.com/720888559-second", "date": "2019-07-23", "archived": null },
+    { "title": "Real Big Block escrow funding transaction", "url": "https://mempool.space/tx/a1916e7ed9eac3fcc56a55056328cb09d06925e2694f2e6720de12b228514d1f", "date": "2019-07-30", "archived": null },
+    { "title": "Block 76 escrow funding transaction", "url": "https://mempool.space/tx/979670f3d1d4134e7989ed6f4a4370362e15c101711c93675790cf0751c8dbd4", "date": "2019-07-22", "archived": null },
+    { "title": "Hal Finney, Bitcoin and me, bitcointalk topic 155054", "url": "https://bitcointalk.org/index.php?topic=155054.0", "date": "2013-05-27", "archived": null }
+  ],
+  "third_party_material": "no book, chapter text, forum dump, or other bulk third-party material is included; the Wattpad chapter (the author's own fiction) and Hal Finney's bitcointalk post (third-party historical content) are both referenced by URL only, never reproduced; quotes in clues/author-posts.md are short excerpts from the puzzle author's own public Reddit posts",
+  "last_updated": "2026-08-16"
+}

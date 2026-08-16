@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="300" viewBox="0 0 1140 300" font-family="DejaVu Sans, sans-serif">
+<rect x="0" y="0" width="1140" height="300" fill="#FFFFFF"/>
+<defs><marker id="arrow2" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#222222"/></marker></defs>
+<rect x="20" y="90" width="180" height="90" rx="8" fill="none" stroke="#1F5FBF" stroke-width="2.5"/>
+<text x="110.0" y="112" font-size="13" font-weight="bold" fill="#222222" text-anchor="middle">12 BIP39 words</text>
+<text x="110.0" y="130" font-size="13" font-weight="bold" fill="#222222" text-anchor="middle">in clock order</text>
+<text x="110.0" y="198" font-size="11" fill="#9A9A9A" text-anchor="middle">read off the seed grid,</text>
+<text x="110.0" y="212" font-size="11" fill="#9A9A9A" text-anchor="middle">one candidate order at a</text>
+<text x="110.0" y="226" font-size="11" fill="#9A9A9A" text-anchor="middle">time</text>
+<line x1="200" y1="135.0" x2="250" y2="135.0" stroke="#222222" stroke-width="2" marker-end="url(#arrow2)"/>
+<rect x="250" y="90" width="180" height="90" rx="8" fill="none" stroke="#1F5FBF" stroke-width="2.5"/>
+<text x="340.0" y="112" font-size="13" font-weight="bold" fill="#222222" text-anchor="middle">BIP39 seed</text>
+<text x="340.0" y="130" font-size="13" font-weight="bold" fill="#222222" text-anchor="middle">(PBKDF2-HMAC-SHA512)</text>
+<text x="340.0" y="198" font-size="11" fill="#9A9A9A" text-anchor="middle">empty passphrase</text>
+<line x1="430" y1="135.0" x2="480" y2="135.0" stroke="#222222" stroke-width="2" marker-end="url(#arrow2)"/>
+<rect x="480" y="90" width="180" height="90" rx="8" fill="none" stroke="#1F5FBF" stroke-width="2.5"/>
+<text x="570.0" y="112" font-size="13" font-weight="bold" fill="#222222" text-anchor="middle">BIP44 derivation</text>
+<text x="570.0" y="130" font-size="13" font-weight="bold" fill="#222222" text-anchor="middle">m/44'/60'/0'/0/0</text>
+<text x="570.0" y="198" font-size="11" fill="#9A9A9A" text-anchor="middle">standard MetaMask path,</text>
+<text x="570.0" y="212" font-size="11" fill="#9A9A9A" text-anchor="middle">precedented by the</text>
+<text x="570.0" y="226" font-size="11" fill="#9A9A9A" text-anchor="middle">artist's 2021 puzzle</text>
+<line x1="660" y1="135.0" x2="710" y2="135.0" stroke="#222222" stroke-width="2" marker-end="url(#arrow2)"/>
+<rect x="710" y="90" width="180" height="90" rx="8" fill="none" stroke="#1F5FBF" stroke-width="2.5"/>
+<text x="800.0" y="120" font-size="13" font-weight="bold" fill="#222222" text-anchor="middle">ETH address</text>
+<text x="800.0" y="198" font-size="11" fill="#9A9A9A" text-anchor="middle">compared byte-exact to</text>
+<text x="800.0" y="212" font-size="11" fill="#9A9A9A" text-anchor="middle">the winner wallet</text>
+<line x1="890" y1="135.0" x2="940" y2="135.0" stroke="#222222" stroke-width="2" marker-end="url(#arrow2)"/>
+<rect x="940" y="90" width="180" height="90" rx="8" fill="none" stroke="#1F5FBF" stroke-width="2.5"/>
+<text x="1030.0" y="112" font-size="13" font-weight="bold" fill="#222222" text-anchor="middle">withdraw() on the</text>
+<text x="1030.0" y="130" font-size="13" font-weight="bold" fill="#222222" text-anchor="middle">Base pot contract</text>
+<text x="1030.0" y="198" font-size="11" fill="#9A9A9A" text-anchor="middle">selector 0x2f0c39ec,</text>
+<text x="1030.0" y="212" font-size="11" fill="#9A9A9A" text-anchor="middle">reverts for every</text>
+<text x="1030.0" y="226" font-size="11" fill="#9A9A9A" text-anchor="middle">address except the</text>
+<text x="1030.0" y="240" font-size="11" fill="#9A9A9A" text-anchor="middle">winner wallet</text>
+<text x="20" y="30" font-size="16" font-weight="bold" fill="#222222">12 words to withdraw() authorization</text>
+<text x="20" y="52" font-size="12" fill="#9A9A9A">winner wallet 0x635739254BDE27d28301f25aD57c3cAC3C3468f3 is the only address withdraw() accepts, selector 0x2f0c39ec</text>
+</svg>

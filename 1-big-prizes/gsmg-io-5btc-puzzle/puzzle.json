@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "slug": "gsmg-io-5btc-puzzle",
+  "title": "GSMG.io Puzzle",
+  "tier": "big",
+  "status": "open",
+  "dead_end_reason": null,
+  "series": null,
+  "author": {
+    "name": "Jrk Bgrt (pseudonymous, real identity not publicly resolved)",
+    "handles": ["telegram:@SoWut"],
+    "url": null
+  },
+  "published": {
+    "date": "2019-04-13",
+    "url": "https://mempool.space/tx/73e48ff571a7e9a4387574a50cf2fcb7b21b6ea5702c777a035664df57cbce02"
+  },
+  "chain": "bitcoin",
+  "prize": {
+    "amount": 5.0068982,
+    "asset": "BTC",
+    "usd_estimate": 315435,
+    "usd_snapshot": "2026-08-16",
+    "note": "two addresses: 1.2563451 BTC at 1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe (originally funded with 5 BTC on 2019-04-13, partially spent to the second address below) and 3.7505531 BTC at 17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa (first funded 2020-05-11, entirely from the first address's own funds, never spent)"
+  },
+  "addresses": [
+    {
+      "address": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "small blob gate",
+      "explorer": "https://mempool.space/address/1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+      "expected": "125634510 sats",
+      "verified_on": "2026-08-16",
+      "verified_state": "partially-spent"
+    },
+    {
+      "address": "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "Dualite blob gate",
+      "explorer": "https://mempool.space/address/17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+      "expected": "375055310 sats",
+      "verified_on": "2026-08-16",
+      "verified_state": "funded-unspent"
+    }
+  ],
+  "puzzle_type": ["text-cipher", "pixel-code", "web-tree", "raw-private-key"],
+  "target_format": "candidate answer string X; password = sha256(X) hex; decrypts an OpenSSL Salted__ AES-256-CBC blob printed on the final page; plaintext reduces to a 32-byte private key; uncompressed secp256k1 public key; P2PKH address",
+  "derivation": {
+    "summary": "candidate answer to sha256 password to AES-256-CBC decrypt of the small final-page blob to a 32-byte private key (one of 4 standard readings of the plaintext) to uncompressed P2PKH address",
+    "oracle": "tools/oracle.py",
+    "oracle_certified": true,
+    "certified_against": "two independent parts: the escrow's own on-chain public key (from its 2024-04-24 spending transaction) hashes byte-exact to its address; a self-made OpenSSL-compatible AES-256-CBC round trip decrypts correctly with the right password and produces no valid padding with a wrong one. No end-to-end vector exists because X is unsolved."
+  },
+  "difficulty_left": "insight",
+  "difficulty_note": "the stage chain to the final page is fully solved and reproducible; the 256-symbol object the puzzle's own Bifid step produces has been tested as a direct 32-byte key reduction across roughly 335.7 million candidates with 0 match; the small blob's AES-decrypt pipeline is certified but no password has been found; a further 116,043-candidate replay of historical literal password guesses is also negative and explicitly partial (dynamically-constructed candidates from the same scripts were never replayed); the larger Dualite blob, which likely gates the second address, has never had any password tested against it",
+  "tested_total": { "candidates": 335840658, "families": 8, "certified": true },
+  "leads": [
+    { "rank": 1, "title": "replay the dynamically-constructed candidates a filter bug never reached", "cost": "hours-to-days", "status": "open" },
+    { "rank": 2, "title": "determine whether the 256-symbol object is the right target at all", "cost": "hours", "status": "open" },
+    { "rank": 3, "title": "identify the single tool reportedly used to build every phase", "cost": "hours", "status": "open" },
+    { "rank": 4, "title": "follow esrever, the earliest published hint", "cost": "minutes-to-hours", "status": "open" },
+    { "rank": 5, "title": "read the 29 dropped letters as their own message", "cost": "minutes", "status": "open" }
+  ],
+  "solutions": [],
+  "artifacts": [],
+  "sources": [
+    { "title": "GSMG.io, platform site", "url": "https://www.gsmg.io/", "date": "2026-08-16", "archived": null },
+    { "title": "Escrow first-funding transaction", "url": "https://mempool.space/tx/73e48ff571a7e9a4387574a50cf2fcb7b21b6ea5702c777a035664df57cbce02", "date": "2019-04-13", "archived": null },
+    { "title": "First transfer to the second address", "url": "https://mempool.space/tx/2aa9a4a90be819d5122d70c993280785a0508f163521e7b38cebb4db0b071b13", "date": "2020-05-11", "archived": null },
+    { "title": "Second transfer to the second address", "url": "https://mempool.space/tx/88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3", "date": "2024-04-24", "archived": null },
+    { "title": "bitcointalk topic 5532424", "url": "https://bitcointalk.org/index.php?topic=5532424.0", "date": "2025-02-18", "archived": null },
+    { "title": "Community-maintained stage documentation", "url": "https://github.com/puzzlehunt/gsmgio-5btc-puzzle", "date": "2026-08-16", "archived": null }
+  ],
+  "third_party_material": "no book, article, forum dump, or other bulk third-party material is included; the 2 short strings quoted in clues/author-posts.md are verbatim decodings of the puzzle's own published page content; no Telegram export is quoted, since the puzzle's Telegram group has no stable public URL",
+  "last_updated": "2026-08-16"
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "slug": "bc1q21-timelock-challenge-l5-100ksats",
+  "title": "bc1q21 Time-Lock Challenge, Level 5",
+  "tier": "solved",
+  "status": "solved",
+  "dead_end_reason": null,
+  "series": null,
+  "author": {
+    "name": "bc1q21",
+    "handles": ["x:@bc1q21", "primal:bc1q21", "youtube:bc1q21"],
+    "url": "https://bc1q21.com"
+  },
+  "published": { "date": "2026-07-13", "url": "https://bc1q21.com" },
+  "chain": "bitcoin",
+  "prize": {
+    "amount": 100000,
+    "asset": "sats",
+    "usd_estimate": 63,
+    "usd_snapshot": "2026-08-16",
+    "note": "100,000 sats locked in the P2SH time lock; I received 99,604 sats after the 396 sat network fee"
+  },
+  "addresses": [
+    {
+      "address": "37xcRXcYRht9VZJeLYWegDRC2fjX5XVnAp",
+      "chain": "bitcoin",
+      "role": "contract",
+      "label": "P2SH CLTV time lock holding the prize",
+      "explorer": "https://mempool.space/address/37xcRXcYRht9VZJeLYWegDRC2fjX5XVnAp",
+      "expected": "100,000 sats, funded 2026-07-03",
+      "verified_on": "2026-08-16",
+      "verified_state": "swept"
+    },
+    {
+      "address": "bc1q3pwpgp7dkhtzj6qya39l8tu6dgdarv9gr9kx0r",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "funding-oracle address, BIP84 m/84'/0'/0'/0/0 of the recovery phrase",
+      "explorer": "https://mempool.space/address/bc1q3pwpgp7dkhtzj6qya39l8tu6dgdarv9gr9kx0r",
+      "expected": "101,750 sats total received",
+      "verified_on": "2026-08-16",
+      "verified_state": "swept"
+    }
+  ],
+  "puzzle_type": ["bip39-seed", "timelock"],
+  "target_format": "BIP39 12 words, English, BIP84 m/84'/0'/0'/0/0 for the funding-oracle address; the prize itself sits behind a P2SH CLTV script spent with a key at m/44'/0'/0'/0/0, no passphrase",
+  "derivation": {
+    "summary": "assemble 12 BIP39 words from 12 daily riddle clues under a wordlist-constrained reading (the operator substitutes the closest BIP39 word when the natural English word is not in the list); validate against the funding-oracle address; separately reconstruct the CLTV redeem script by hashing candidate (derivation path, midnight-UTC locktime) pairs and comparing the result to the P2SH address",
+    "oracle": "tools/oracle.py",
+    "oracle_certified": true,
+    "certified_against": "the official BIP84 test vector, and the solved mnemonic itself, which reproduces the funding-oracle address exactly"
+  },
+  "difficulty_left": "none",
+  "difficulty_note": "solved; the claim transaction confirms the answer",
+  "tested_total": { "candidates": 2488320000, "families": 1, "certified": true },
+  "solutions": [
+    {
+      "lot": "level-5",
+      "date": "2026-07-24",
+      "answer": "can large cool deny mean quick wish spare argue body ski spot",
+      "key_material_disclosed": true,
+      "payout_txid": "73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed",
+      "payout_amount": "99604 sats",
+      "payout_to": "bc1qax0hsnwnxl7393awtc3hsy0ftm6tg4tyk2nfja",
+      "explorer": "https://mempool.space/tx/73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed"
+    }
+  ],
+  "sources": [
+    { "title": "bc1q21, official site", "url": "https://bc1q21.com", "date": "2026-08-16", "archived": null },
+    { "title": "Claim transaction, mempool.space", "url": "https://mempool.space/tx/73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed", "date": "2026-07-24", "archived": null },
+    { "title": "Time-lock creation transaction, mempool.space", "url": "https://mempool.space/tx/d2c8237bd6d107a4d08ab390c0bfa4f21f4e52a19d8672d66012bceaab881901", "date": "2026-07-03", "archived": null }
+  ],
+  "third_party_material": "12 short daily riddle quotes from the operator's own public posts, reproduced verbatim with dates; nothing else",
+  "last_updated": "2026-08-16"
+}

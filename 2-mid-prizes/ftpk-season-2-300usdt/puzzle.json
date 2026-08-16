@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "slug": "ftpk-season-2-300usdt",
+  "title": "FTPK Season 2: Never-Ending",
+  "tier": "mid",
+  "status": "open",
+  "dead_end_reason": null,
+  "series": "ftpk",
+  "author": {
+    "name": "FTPKgame",
+    "handles": ["x:@FTPKgame"],
+    "url": "https://x.com/FTPKgame"
+  },
+  "published": { "date": "2025-05-19", "url": "https://x.com/FTPKgame/status/1924450289311961483" },
+  "chain": "ethereum",
+  "prize": {
+    "amount": 305.930218,
+    "asset": "USDT",
+    "usd_estimate": 306,
+    "usd_snapshot": "2026-08-16",
+    "note": "ERC-20 USDT; the escrow's native ETH balance is 0, the prize is entirely the token balance"
+  },
+  "addresses": [
+    {
+      "address": "0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc",
+      "chain": "ethereum",
+      "role": "escrow",
+      "label": "main",
+      "explorer": "https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc",
+      "expected": "305.930218 USDT",
+      "verified_on": "2026-08-16",
+      "verified_state": "funded-unspent"
+    }
+  ],
+  "puzzle_type": ["bip39-seed", "word-selection"],
+  "target_format": "12 English BIP39 words, BIP44 Ethereum m/44'/60'/0'/0/0, no passphrase, order recoverable offline once the word set is known",
+  "derivation": {
+    "summary": "solve each of 12 mini-games (ciphers, grids, an audio track) to get one BIP39 word each, then derive the standard BIP44 first Ethereum address and compare it to the escrow",
+    "oracle": "tools/oracle.py",
+    "oracle_certified": true,
+    "certified_against": "the author's own published worked example, mnemonic 'claim cycle staff clump domain judge boy session razor tiny shoulder coconut' deriving to 0x50D7e097e61121140c19871F06eA6FeB6d14105b"
+  },
+  "difficulty_left": "insight",
+  "difficulty_note": "the derivation is fully certified and the site is completely mapped, including a hidden 12th game found by breaking the page-naming scheme; 0 of the 12 words are confirmed via the oracle yet",
+  "leads": [
+    { "rank": 1, "title": "harvest the rest of the author's X posts and cross-reference the Season 4 hidden hint-mapping page, which names Game 7 as the weakest game", "cost": "hours", "status": "open" },
+    { "rank": 2, "title": "transcribe the Game 12 audio track as notes to digits, the method a Season 1 page uses for the same author's puzzle grammar", "cost": "hours", "status": "open" }
+  ],
+  "solutions": [],
+  "artifacts": [],
+  "sources": [
+    { "title": "\"Here we go for a new game, 300 USDT to win\"", "url": "https://x.com/FTPKgame/status/1924450289311961483", "date": "2025-05-19", "archived": null },
+    { "title": "FTPK hub page", "url": "https://findtheprivatekeys.vercel.app/", "date": "2026-08-16", "archived": null },
+    { "title": "Season 2 puzzle site", "url": "https://findtheprivatekeys2.vercel.app/", "date": "2026-08-16", "archived": null },
+    { "title": "Season 4 hidden page cross-referencing Season 2 clues, including the Game 7 admission", "url": "https://findtheprivatekeys4.vercel.app/servicecricketgloomattendsupremejumpannualeagerpulpprojectdiseaseround.html", "date": "2026-08-16", "archived": null },
+    { "title": "Escrow wallet, etherscan.io", "url": "https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc", "date": "2026-08-16", "archived": null }
+  ],
+  "third_party_material": "no images, audio, or video shipped; the Game 12 audio track is a real music recording of undetermined origin and is not reproduced here; only short quoted author text and the site's own rule text are included",
+  "last_updated": "2026-08-16"
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "slug": "dug-student-treasure-hunt-63ksats",
+  "title": "Dug's Student Treasure Hunt (2025 edition)",
+  "tier": "solved",
+  "status": "solved",
+  "dead_end_reason": null,
+  "series": null,
+  "author": {
+    "name": "Dug",
+    "handles": [
+      "nostr:npub1zrmu0amjmkynxlxgmdsyrjmp8vhxdz8ch5vja9vh9ym4natg8k5s8ge9wx",
+      "nip05:Dug@primal.net"
+    ],
+    "url": "https://njump.me/npub1zrmu0amjmkynxlxgmdsyrjmp8vhxdz8ch5vja9vh9ym4natg8k5s8ge9wx"
+  },
+  "published": { "date": "2025-06-26", "url": "https://njump.me/npub1zrmu0amjmkynxlxgmdsyrjmp8vhxdz8ch5vja9vh9ym4natg8k5s8ge9wx" },
+  "chain": "bitcoin",
+  "prize": {
+    "amount": 63216,
+    "asset": "sats",
+    "usd_estimate": 40,
+    "usd_snapshot": "2026-08-16",
+    "note": "the portion I recovered (index 1 of 3); a third party had already swept the larger index 0 plus index 2 portion, 95,792 sats, five weeks earlier"
+  },
+  "addresses": [
+    {
+      "address": "bc1qych2me6h85j38s3xmfwdkcvpqakpld3yr2y5ss",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "index 0, m/84'/0'/0'/0/0",
+      "explorer": "https://mempool.space/address/bc1qych2me6h85j38s3xmfwdkcvpqakpld3yr2y5ss",
+      "expected": "75,082 sats, funded 2025-06-26",
+      "verified_on": "2026-08-16",
+      "verified_state": "swept"
+    },
+    {
+      "address": "bc1qphfklk568cf93267yetpngqsz0mthw4z4x2q69",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "index 1, m/84'/0'/0'/0/1, the one I solved",
+      "explorer": "https://mempool.space/address/bc1qphfklk568cf93267yetpngqsz0mthw4z4x2q69",
+      "expected": "63,216 sats, funded 2026-06-26",
+      "verified_on": "2026-08-16",
+      "verified_state": "swept"
+    },
+    {
+      "address": "bc1qnclravnmv7vta9fhnp44hu3y85z3tfgz0n33wl",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "index 2, m/84'/0'/0'/0/2",
+      "explorer": "https://mempool.space/address/bc1qnclravnmv7vta9fhnp44hu3y85z3tfgz0n33wl",
+      "expected": "20,888 sats, funded 2026-06-26",
+      "verified_on": "2026-08-16",
+      "verified_state": "swept"
+    }
+  ],
+  "puzzle_type": ["bip39-seed", "text-cipher"],
+  "target_format": "BIP39 12 words, English, BIP84 m/84'/0'/0'/0/i for i in 0, 1, 2, no passphrase",
+  "derivation": {
+    "summary": "assemble 12 BIP39 words (11 recovered by decoding a glyph-substitution cipher over a scrambled key page, 1 posted on a public lecture slide); validate the checksum; derive the BIP84 first three receive addresses; compare to the funded addresses",
+    "oracle": "tools/oracle.py",
+    "oracle_certified": true,
+    "certified_against": "the official BIP84 test vector, and the solved mnemonic itself, which reproduces all three funded addresses exactly"
+  },
+  "difficulty_left": "none",
+  "difficulty_note": "solved; the payout transaction confirms the answer",
+  "tested_total": { "candidates": 1935, "families": 1, "certified": true },
+  "solutions": [
+    {
+      "lot": "index-1",
+      "date": "2026-08-02",
+      "answer": "profit general lava hover jar visa joy immense install first give kingdom",
+      "key_material_disclosed": true,
+      "payout_txid": "ee70de514686588173b64fc31fc317ae15f1e903c742cc99140d2cf1bb2e8db1",
+      "payout_amount": "59916 sats",
+      "payout_to": "bc1qax0hsnwnxl7393awtc3hsy0ftm6tg4tyk2nfja",
+      "explorer": "https://mempool.space/tx/ee70de514686588173b64fc31fc317ae15f1e903c742cc99140d2cf1bb2e8db1"
+    }
+  ],
+  "sources": [
+    { "title": "Dug, Nostr profile", "url": "https://njump.me/npub1zrmu0amjmkynxlxgmdsyrjmp8vhxdz8ch5vja9vh9ym4natg8k5s8ge9wx", "date": "2026-08-16", "archived": null },
+    { "title": "Payout transaction, mempool.space", "url": "https://mempool.space/tx/ee70de514686588173b64fc31fc317ae15f1e903c742cc99140d2cf1bb2e8db1", "date": "2026-08-02", "archived": null },
+    { "title": "Third-party consolidation transaction, mempool.space", "url": "https://mempool.space/tx/bcc2154f4eb33c361973313b9fe81131568b2f4ee3ef5a2c3e98dc327afd8074", "date": "2026-07-08", "archived": null }
+  ],
+  "third_party_material": "one lecture-slide image and one handwritten cipher sheet published by the author on Nostr, described but not reproduced in full; the Seed Cipher template referenced is a free, publicly distributed Stackchain Magazine artwork, not reproduced here",
+  "last_updated": "2026-08-16"
+}

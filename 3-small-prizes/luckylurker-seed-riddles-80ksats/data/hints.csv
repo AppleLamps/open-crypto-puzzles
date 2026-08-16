@@ -1,0 +1,18 @@
+# The 12 hints published on luckylurker.com/bitcoin-vault/ (2026-03-17), captured
+# verbatim, one per seed word position (the page's own label is the position, no
+# other ordering is implied). resolved_word/confidence are filled only for the 4
+# positions with a structural marker (a single non-icon italic word inside the
+# linked article, itself a valid BIP39 word); the other 8 are open riddles.
+position,hint_text,resolved_word,confidence,source_url
+1,"Presence without permanence.",,,https://luckylurker.com/bitcoin-vault/
+2,"A realm where the crown is law.",,,https://luckylurker.com/bitcoin-vault/
+3,"The word is hidden inside this article. It's marked visually, so you can't miss it if you look closely.",unveil,high,https://luckylurker.com/crypto-casinos-guide/
+4,"Born twice, seen once.",,,https://luckylurker.com/bitcoin-vault/
+5,"Find it inside the review of our #1 rated CS2 gambling site for 2026.",deposit,high,https://luckylurker.com/casino/gamdom/
+6,"Not created but uncovered.",,,https://luckylurker.com/bitcoin-vault/
+7,"You'll probably agree this hunt is...",,,https://luckylurker.com/bitcoin-vault/
+8,"Just read N1 Casino review. The word is already there.",grid,high,https://luckylurker.com/casino/n1/
+9,"The quickest path still needs a second thought. Find the article on the site. The word is there.",remind,high,https://luckylurker.com/fastest-crypto-casino-withdrawals-2026/
+10,"The systematic pursuit of the unknown.",,,https://luckylurker.com/bitcoin-vault/
+11,"It only works when it's open, and it's there to shield you.",,,https://luckylurker.com/bitcoin-vault/
+12,"A single mark on a map, or the act of finding it.",,,https://luckylurker.com/bitcoin-vault/

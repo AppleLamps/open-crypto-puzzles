@@ -1,0 +1,11 @@
+{
+  "_comment": "Stage labels for the derivation pipeline figure, from the puzzle's own published rules (bitcoinmovieenigma.com/rules).",
+  "stages": [
+    {"label": "34 movie panels\n(one still per movie,\nin panel order)"},
+    {"label": "34 movie titles", "edge": "identify\nthe film"},
+    {"label": "34 BIP39 words", "edge": "\"somehow\"\ntitle to word"},
+    {"label": "24 BIP39 words", "edge": "drop 10\nintruders\n(IMDb field,\n\"somehow\")"},
+    {"label": "seed", "edge": "BIP39"},
+    {"label": "P2WPKH address", "edge": "BIP84\nm/84'/0'/0'/0/i"}
+  ]
+}

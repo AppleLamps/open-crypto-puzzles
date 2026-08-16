@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "slug": "veteranhodl-hunting-time-420ksats",
+  "title": "VeteranHODL: Hunting Time",
+  "tier": "mid",
+  "status": "open",
+  "dead_end_reason": null,
+  "series": null,
+  "author": {
+    "name": "VeteranHODL",
+    "handles": ["x:@VeteranHODL"],
+    "url": "https://x.com/VeteranHODL"
+  },
+  "published": {
+    "date": "2026-06-15",
+    "url": "https://x.com/VeteranHODL/status/2066614083105738752"
+  },
+  "chain": "bitcoin",
+  "prize": {
+    "amount": 420000,
+    "asset": "sats",
+    "usd_estimate": 265,
+    "usd_snapshot": "2026-08-16",
+    "note": "funded in two tranches, 210000 sats on 2023-07-22 and 210000 sats on 2026-07-31, the day before the author's wallet-type announcement post"
+  },
+  "addresses": [
+    {
+      "address": "bc1qhzy6j4amw26z7e694mgfr7kvzl7xteu54f0a85",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "main",
+      "explorer": "https://mempool.space/address/bc1qhzy6j4amw26z7e694mgfr7kvzl7xteu54f0a85",
+      "expected": "420000 sats",
+      "verified_on": "2026-08-16",
+      "verified_state": "funded-unspent"
+    }
+  ],
+  "puzzle_type": ["bip39-seed", "book", "word-selection"],
+  "target_format": "12-word phrase, one word per clue image in publication order; author states an Electrum wallet",
+  "derivation": {
+    "summary": "one clue image equals one word, in the order the author posted them; derive BIP39/BIP84 or an Electrum segwit seed and compare to the escrow address",
+    "oracle": "tools/oracle.py",
+    "oracle_certified": true,
+    "certified_against": "the public BIP39/BIP84 test vector for the BIP39/BIP84 branch; the Electrum segwit branch (the format the author actually named) has no certified vector"
+  },
+  "difficulty_left": "bounded-compute",
+  "difficulty_note": "the mechanism is understood and a candidate word pool exists for all 12 positions; the combinatorial sweep of that pool is only about 20 percent run and was not compared against the target address, and the wallet format the author named (Electrum) has no certified oracle yet",
+  "tested_total": { "candidates": 4924764, "families": 2, "certified": false },
+  "leads": [
+    { "rank": 1, "title": "certify the Electrum derivation branch", "cost": "minutes-to-hours", "status": "open" },
+    { "rank": 2, "title": "re-run the numeric-index hypothesis after cleaning the candidate pools", "cost": "minutes", "status": "open" },
+    { "rank": 3, "title": "recover the book's cover image", "cost": "needs-a-person", "status": "open" }
+  ],
+  "solutions": [],
+  "artifacts": [],
+  "sources": [
+    { "title": "VeteranHODL on X", "url": "https://x.com/VeteranHODL", "date": "2026-08-16", "archived": null },
+    { "title": "Hunt announcement post", "url": "https://x.com/VeteranHODL/status/2071632285951226106", "date": "2026-06-29", "archived": null },
+    { "title": "Wallet type and second funding", "url": "https://x.com/VeteranHODL/status/2083486983142142452", "date": "2026-08-01", "archived": null }
+  ],
+  "third_party_material": "the novel is not reproduced; the clue images are the author's own puzzle photographs posted on X and are described but not included in this folder",
+  "last_updated": "2026-08-16"
+}

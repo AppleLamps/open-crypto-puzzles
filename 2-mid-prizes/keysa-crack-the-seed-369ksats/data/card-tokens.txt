@@ -1,0 +1,11 @@
+# My transcription of the 70-token card in clues/L9rQ.jpg, read at native resolution
+# (1284x549). 6 rows of 12/12/11/12/12/11 tokens, 70 total, 67 distinct (bless, lift,
+# beauty each appear twice). All 70 tokens are valid English BIP39 words. A trailing
+# period marks a token that carries a dot on the card; end-of-row tokens never carry one.
+# Produced 2026-08-02, re-verified against the image 2026-08-16.
+mad focus. opinion. stool. style. napkin. olive. path. fox. above. journey. buffalo
+shop beauty vocal office. bless. fall. lift. imitate. blouse. almost. decorate. sight
+mother. faint. hub. shock. rare. deposit. excess. episode. bless. candy. upgrade
+trend dizzy. nation. brick. motion. tool. already. lemon. ethics. muffin. blush. zoo
+food. jealous. pepper. pencil. catch. lift. net. obtain. canoe. beauty. current. skull
+steel monkey. pair. seven. potato. mystery. drink. boost. include. sugar. essence

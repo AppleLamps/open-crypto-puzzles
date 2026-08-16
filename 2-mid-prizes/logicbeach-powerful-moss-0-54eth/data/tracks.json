@@ -1,0 +1,18 @@
+{
+  "_comment": "The 12 track titles for the album Powerful Moss, exactly as published in the NFT's own tokenURI(0) metadata (captured 2026-08-16). Author-published data, listed here rather than spelled out in README prose.",
+  "source": "tokenURI(0), IPFS QmXuC6cLqXkq4puj8BoxrqDjxVD9jUmUdKaUNjjJX8jasw/",
+  "tracks": [
+    "GenerativeAdversarialNeurology",
+    "PowerfulMoss",
+    "TooManyBees",
+    "EmptyLongWaves",
+    "TempoRare",
+    "DiscomfortMeditation",
+    "CurvedHorizon",
+    "DarkForest",
+    "FallingUp",
+    "Cliffside",
+    "ShadowRealm",
+    "GravitationalWaveAntennae"
+  ]
+}

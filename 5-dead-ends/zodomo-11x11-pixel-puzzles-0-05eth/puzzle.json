@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "slug": "zodomo-11x11-pixel-puzzles-0-05eth",
+  "title": "Zodomo 11x11 Pixel Puzzles",
+  "tier": "dead-end",
+  "status": "dead-end",
+  "dead_end_reason": "unfunded",
+  "series": null,
+  "author": {
+    "name": "Zodomo",
+    "handles": ["x:@Zodomo", "ens:zodomo.eth", "farcaster:fid 9511"],
+    "url": "https://networked.art/11x11"
+  },
+  "published": { "date": "2026-07-30", "url": "https://networked.art/11x11" },
+  "chain": "ethereum",
+  "prize": {
+    "amount": 0.05,
+    "asset": "ETH",
+    "usd_estimate": 94,
+    "usd_snapshot": "2026-08-16",
+    "note": "the active (fourth) puzzle's nominal per-piece prize; no escrow currently holds it, see Why this is a dead end"
+  },
+  "addresses": [
+    {
+      "address": "0x60a5431a138b0320641408694562f624f3c977a8",
+      "chain": "ethereum",
+      "role": "escrow",
+      "label": "piece #869 escrow",
+      "explorer": "https://etherscan.io/address/0x60a5431a138b0320641408694562f624f3c977a8",
+      "expected": "0.05 ETH, funded 2026-07-30",
+      "verified_on": "2026-08-16",
+      "verified_state": "swept"
+    },
+    {
+      "address": "0x9cc846fe9b75a4cee897f605b240dd0030fcd5a2",
+      "chain": "ethereum",
+      "role": "escrow",
+      "label": "piece #930 escrow, encoding scheme not reconstructed",
+      "explorer": "https://etherscan.io/address/0x9cc846fe9b75a4cee897f605b240dd0030fcd5a2",
+      "expected": "0.05 ETH, funded 2026-07-30",
+      "verified_on": "2026-08-16",
+      "verified_state": "swept"
+    },
+    {
+      "address": "0xf5d45c9d798aedb754b1ed8660af3ea79178b765",
+      "chain": "ethereum",
+      "role": "escrow",
+      "label": "piece #993 escrow, reclaimed by the artist himself",
+      "explorer": "https://etherscan.io/address/0xf5d45c9d798aedb754b1ed8660af3ea79178b765",
+      "expected": "0.05 ETH, funded 2026-07-30",
+      "verified_on": "2026-08-16",
+      "verified_state": "swept"
+    },
+    {
+      "address": "0xa15585918e6ef74239246f4e1538acdf70b4743e",
+      "chain": "ethereum",
+      "role": "payout",
+      "label": "queengarden.eth, paid by hand as the 3rd solver's prize; a real person's active personal wallet, not an escrow for the active puzzle",
+      "explorer": "https://etherscan.io/address/0xa15585918e6ef74239246f4e1538acdf70b4743e",
+      "expected": "n/a",
+      "verified_on": "2026-08-16",
+      "verified_state": "unknown"
+    }
+  ],
+  "puzzle_type": ["bip39-seed", "pixel-code"],
+  "target_format": "BIP39 mnemonic, 12 or 24 words, English, encoded in an 11x11 pixel grid using an 11-color base-11 palette, BIP44 m/44'/60'/0'/0/0, no passphrase",
+  "derivation": {
+    "summary": "read the 121-pixel grid (an 11-color palette read as base-11 digits) in a traversal order into a bit string, pack it into BIP39 word indices, derive an Ethereum address at m/44'/60'/0'/0/0, compare to a known escrow; two schemes (a boustrophedon triple-repetition for piece #869, a color-partition split for piece #993) are fully reconstructed and certified; the scheme used for piece #930 and for the active puzzle is not",
+    "oracle": "tools/oracle.py",
+    "oracle_certified": true,
+    "certified_against": "piece #993, whose reconstructed mnemonic reproduces its escrow address exactly (the escrow has since been reclaimed by the artist, not a live prize)"
+  },
+  "difficulty_left": "external-info",
+  "difficulty_note": "the active puzzle's escrow does not exist on Ethereum mainnet as of the last check; even once it does, its encoding scheme is not yet identified, and the strongest lead is a set of author-distributed hints in a gated community chat",
+  "solutions": [],
+  "sources": [
+    { "title": "Zodomo, piece collection", "url": "https://networked.art/11x11", "date": "2026-08-16", "archived": null },
+    { "title": "Zodomo, X post announcing the active puzzle", "url": "https://x.com/Zodomo/status/2083364549697155550", "date": "2026-08-01", "archived": null },
+    { "title": "Zodomo, X post naming the intended difficulty", "url": "https://x.com/Zodomo/status/2082949091244327366", "date": "2026-07-30", "archived": null }
+  ],
+  "third_party_material": "5 short verbatim X posts by the artist, and the artist's own published pixel grids and palette; no third-party copyrighted material",
+  "last_updated": "2026-08-16"
+}

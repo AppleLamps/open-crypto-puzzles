@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "slug": "commander-u-puzzle-8-5btc",
+  "title": "Commander U Riddle for 8.5 BTC",
+  "tier": "dead-end",
+  "status": "dead-end",
+  "dead_end_reason": "suspected-fake",
+  "series": null,
+  "author": {
+    "name": "Commander U",
+    "handles": ["github:commanderu"],
+    "url": "https://commanderu.github.io/index.html"
+  },
+  "published": { "date": "2019-05-15", "url": "https://commanderu.github.io/index.html" },
+  "chain": "bitcoin",
+  "prize": {
+    "amount": 8.50099081,
+    "asset": "BTC",
+    "usd_estimate": 535562,
+    "usd_snapshot": "2026-08-16",
+    "note": "8.5 BTC of this sits in a 2010 P2PK output, which mempool.space's address API does not index; it shows only the 99,081 sats held in 8 separate P2PKH outputs at the same address. Both readings are correct for what each indexer counts; the full total is spendable by the one private key that controls both, since the P2PKH outputs derive from the same uncompressed public key exposed by the P2PK output"
+  },
+  "addresses": [
+    {
+      "address": "1KDUcZh5Z6H1of4Pwoy5ojJtkQxcQBHhnH",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "the announced prize address",
+      "explorer": "https://mempool.space/address/1KDUcZh5Z6H1of4Pwoy5ojJtkQxcQBHhnH",
+      "expected": "8.50099081 BTC (850,000,000 sats P2PK, not shown by mempool.space; 99,081 sats P2PKH, shown)",
+      "verified_on": "2026-08-16",
+      "verified_state": "funded-unspent"
+    }
+  ],
+  "puzzle_type": ["raw-private-key", "text-cipher"],
+  "target_format": "51-character uncompressed mainnet WIF (6 concatenated base58 fragments, lengths 9, 8, 9, 9, 8, 8), matching P2PKH address 1KDUcZh5Z6H1of4Pwoy5ojJtkQxcQBHhnH and uncompressed public key 041ebfac69910efb17ab697db5f2a4ff815e1d37c05e40d56977031a3a36b80464ea6782ad2913e2a5ec33e187f0fee50675bc78a25d657846e08e8425f2384b2a",
+  "derivation": {
+    "summary": "concatenate 6 base58 fragments, each meant to be recovered by solving one sub-riddle and checked against a per-fragment MD5 hash, into a 51-character WIF; decode it to a private key; the resulting uncompressed public key must equal the known exposed public key exactly",
+    "oracle": null,
+    "oracle_certified": false
+  },
+  "difficulty_left": "external-info",
+  "difficulty_note": "4 of 6 fragments are unrecovered; one has no published checksum at all, and 3 do not match the MD5 of any base58 string of the stated length under any of 28 standard transforms tried; the missing piece is the original 2019 channel with the sub-riddle answers, which I could not find, and which may never have existed as a real puzzle in the first place",
+  "solutions": [],
+  "sources": [
+    { "title": "Commander U, puzzle site", "url": "https://commanderu.github.io/index.html", "date": "2026-07-26", "archived": null },
+    { "title": "Commander U repository issues", "url": "https://github.com/commanderu/commanderu.github.io/issues", "date": "2026-07-26", "archived": null },
+    { "title": "Bitcointalk repost, thread 5573629", "url": "https://bitcointalk.org/index.php?topic=5573629.0", "date": "2026-02-01", "archived": null },
+    { "title": "Funding transaction (2010 P2PK output), mempool.space", "url": "https://mempool.space/tx/80d8bc9856938d3dce012dfa2b2f93d6724bc046e10f4d0dde824ce3392eb774", "date": "2010-09-22", "archived": null }
+  ],
+  "third_party_material": "the site's own hint text and fragment table, reproduced as published; no third-party copyrighted material",
+  "last_updated": "2026-08-16"
+}

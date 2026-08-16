@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "slug": "luckylurker-seed-riddles-80ksats",
+  "title": "LuckyLurker Seed Riddles",
+  "tier": "small",
+  "status": "open",
+  "dead_end_reason": null,
+  "series": null,
+  "author": {
+    "name": "unknown individual, published on luckylurker.com",
+    "handles": [],
+    "url": "https://luckylurker.com"
+  },
+  "published": {
+    "date": "2026-03-17",
+    "url": "https://luckylurker.com/bitcoin-vault/"
+  },
+  "chain": "bitcoin",
+  "prize": {
+    "amount": 80000,
+    "asset": "sats",
+    "usd_estimate": 50,
+    "usd_snapshot": "2026-08-16",
+    "note": "single P2WPKH escrow, 2 funding transactions of 40,000 sats each"
+  },
+  "addresses": [
+    {
+      "address": "bc1q32e3dxcd0n2tlzdmchraf2057d0ax4xdwrk3jq",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "main",
+      "explorer": "https://mempool.space/address/bc1q32e3dxcd0n2tlzdmchraf2057d0ax4xdwrk3jq",
+      "expected": "80000 sats",
+      "verified_on": "2026-08-16",
+      "verified_state": "funded-unspent"
+    }
+  ],
+  "puzzle_type": ["bip39-seed", "word-selection", "text-cipher"],
+  "target_format": "BIP39 12 words (English), fixed 1:1 position mapping from the 12 published hints, most likely BIP84 m/84'/0'/0'/0/0 (script type v0_p2wpkh), no passphrase stated",
+  "derivation": {
+    "summary": "resolve each of the 12 labeled hints to one BIP39 word at its stated position, then derive the 12-word mnemonic to a Bitcoin address",
+    "oracle": "tools/oracle.py",
+    "oracle_certified": true,
+    "certified_against": "the public BIP39/BIP84 test vectors, since no solved sibling puzzle exists on this site"
+  },
+  "difficulty_left": "external-info",
+  "difficulty_note": "4 of 12 words are fixed with high confidence; the other 8 are one-line riddles and about 2 million plausible synonym combinations tested against them found no match, so the intended words most likely require the site's own confirmation",
+  "tested_total": { "candidates": 2000000, "families": 1, "certified": false },
+  "leads": [
+    { "rank": 1, "title": "Wait for or request the site's own canonical answer to the 8 riddles", "cost": "needs a person or external information", "status": "open" },
+    { "rank": 2, "title": "Re-check the other 8 riddle-linked articles for the same italic-tag device", "cost": "minutes", "status": "open" }
+  ],
+  "solutions": [],
+  "sources": [
+    { "title": "Bitcoin Vault puzzle page", "url": "https://luckylurker.com/bitcoin-vault/", "date": "2026-03-17", "archived": null },
+    { "title": "Crypto casinos guide (hint 3 target)", "url": "https://luckylurker.com/crypto-casinos-guide/", "date": "2026-08-16", "archived": null },
+    { "title": "Gamdom review (hint 5 target)", "url": "https://luckylurker.com/casino/gamdom/", "date": "2026-08-16", "archived": null },
+    { "title": "N1 Casino review (hint 8 target)", "url": "https://luckylurker.com/casino/n1/", "date": "2026-08-16", "archived": null },
+    { "title": "Fastest crypto casino withdrawals article (hint 9 target)", "url": "https://luckylurker.com/fastest-crypto-casino-withdrawals-2026/", "date": "2026-08-16", "archived": null }
+  ],
+  "third_party_material": "The puzzle page and 4 target review articles are the site's own published pages; only short verbatim hints and a table of the marked words are included, no full page content.",
+  "last_updated": "2026-08-16"
+}

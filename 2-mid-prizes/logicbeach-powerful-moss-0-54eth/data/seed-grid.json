@@ -1,0 +1,20 @@
+{
+  "_comment": "State of the 12-hour BIP39 seed grid read off clues/powerfulmoss-poap.png. Each clock hour overlays a cell of the alphabetical BIP39 wordlist rendered as wrapped monospace flow-text; the numeral's row can only be pinned to +/-1 row on the published 2004x2011 raster, so most hours carry 3 candidate words (the row above, the row read, the row below) rather than 1 confirmed word. 3 hours were read cleanly by eye (the numeral sits squarely on one word with no row ambiguity). Source: results/STATUS.md, 2026-06-17 GRID-READ pass (candidate columns) and 2026-07-14 grid-enumeration pass (same candidate columns, oracle-tested).",
+  "image": "clues/powerfulmoss-poap.png",
+  "hours": [
+    {"hour": 1, "status": "candidate", "candidates": ["logic", "mandate", "mechanic"]},
+    {"hour": 2, "status": "candidate", "candidates": ["open", "oyster", "peace"]},
+    {"hour": 3, "status": "candidate", "candidates": ["retreat", "romance", "sand"]},
+    {"hour": 4, "status": "confirmed", "candidates": ["strategy"]},
+    {"hour": 5, "status": "candidate", "candidates": ["trash", "turtle", "unlock"]},
+    {"hour": 6, "status": "candidate", "candidates": ["valve", "vintage", "waste"]},
+    {"hour": 7, "status": "candidate", "candidates": ["traffic", "tuition", "uniform"]},
+    {"hour": 8, "status": "confirmed", "candidates": ["stick"]},
+    {"hour": 9, "status": "candidate", "candidates": ["recycle", "require", "riot"]},
+    {"hour": 10, "status": "candidate", "candidates": ["notable", "okay", "outdoor"]},
+    {"hour": 11, "status": "candidate", "candidates": ["lizard", "main", "maze"]},
+    {"hour": 12, "status": "confirmed", "candidates": ["leisure"]}
+  ],
+  "order_hypotheses_tested": ["clockwise 1 to 12", "reverse 12 to 1", "12-first clockwise", "12-first counterclockwise"],
+  "enumeration_result": {"tested": 1193373, "checksum_valid": 132597, "matches": 0, "seconds": 131.8, "date": "2026-07-14"}
+}

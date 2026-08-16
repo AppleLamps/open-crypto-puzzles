@@ -1,0 +1,23 @@
+# site-structure.csv -- page chain per branch of the Wix treasure-hunt site, used by
+# tools/fig_structure.py to draw images/02-structure-branches.svg. One row per page reached
+# after the shared entry chain (EXIF coordinates, then the compass page). state: open = page
+# content is readable (password already known), locked = the page gating the branch's word
+# fragments has not been opened, dead-end = branch confirmed to carry 0 of the 12 words.
+# Sourced from the puzzle's own password-gated pages, page ids as assigned by the site.
+branch,step,page_id,state
+North,1,eetj4,open
+North,2,kx8wx,open
+North,3,gps16,open
+North,4,mwfaz,dead-end
+West,1,g5jpk,open
+West,2,wt1jy,locked
+East,1,qomxw,open
+East,2,wqcam,open
+East,3,pxsqo,open
+East,4,c2ozw,locked
+South,1,neyhh,open
+South,2,shzgm,open
+South,3,t2xjy,open
+South,4,kvvu4,open
+South,5,wdnv9,open
+South,6,b3vye,locked

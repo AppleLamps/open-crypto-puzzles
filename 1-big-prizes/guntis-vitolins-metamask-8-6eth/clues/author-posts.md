@@ -1,0 +1,70 @@
+# Author posts and quotes
+
+Guntis Vitolins (Managing Director, mineshop.eu) published this challenge as a
+YouTube video and a blog post, both dated 2020-02-12. All quotes below are his
+own published text, reproduced short and verbatim, with source and date.
+
+## The challenge video
+
+https://www.youtube.com/watch?v=w4mpiuBP_aY
+"10 ETH challenge | Ethereum Parabolic | Bitcoin generator portfolio update !?"
+(2020-02-12)
+
+Two sentences planted in the video description, unrelated to the video's
+finance topic:
+
+> V1: "Don't expect anything easy there will be dark fog on the lake."
+
+The same sentence continues with a short assurance that the challenge can, in
+fact, be solved.
+
+> V2: "Do you think its more likely for parrot can sing a song then for a goat
+> to whistle?"
+
+## The blog post
+
+https://mineshop.eu/2020/02/12/crypto-pumping-hardcore-research-portfolio-update-how-are-we-doing/
+
+Three sentences planted mid-paragraph, unrelated to the post's market
+discussion:
+
+> A1: "Round dutch cattle is living in the forest and eating wood."
+
+> A2: "Only because there is a lot of healthy fiber."
+
+> A3: "Hunter like the rib roast dinner fresh."
+
+The archived HTML of this post (Wayback Machine capture, 2020-05-28) carries,
+in its footer: "Posted in Blog. Tagged altcoin season, altcoins, bitcoin, bull
+market, crypto pumping, ethereum, ethereum fork, round." The current live page
+no longer carries these tags; the site redesign removed them.
+
+## The 5 hints, published later in other video descriptions
+
+Hint 1: the last word is a tropical bird.
+Hint 2: word 1 names the Netherlands (also spelled "Netherland" in some of his
+later descriptions).
+Hint 3: word 5 is made of condensed water droplets.
+Hint 4, spoken in [youtube.com/watch?v=03wXiMczCXk](https://www.youtube.com/watch?v=03wXiMczCXk)
+at 15:26: a plant-based food the body cannot digest, also said to be good for
+digestion. Resolves to "fiber".
+Hint 5, spoken and spelled letter by letter in
+[youtube.com/watch?v=ZjBJKooVmuE](https://www.youtube.com/watch?v=ZjBJKooVmuE)
+at 17:28: "the keyword is fork, f-o-r-k. It's not necessarily in its place in
+the order." Both official captions and an independent transcription agree on
+the spelling despite both hearing "keyboard" for "keyword".
+
+## What the author has said in comments (paraphrased, not verbatim)
+
+Asked whether all 12 words are written somewhere: yes, everything is under the
+video or in the blog post.
+Asked about decoy entries: confirmed the catalogue words present in his texts
+are mostly real, "maybe two added on top to complicate".
+Asked whether audio matters: in 2020, before hints 4 and 5 existed, he said
+only the written elements were needed.
+Asked whether hints can be paraphrases rather than exact words: yes; reading
+the texts finds the actual word.
+Confirmed: an element appearing in both the video and the post stays valid,
+and hint 4's word has no fixed position in the final list.
+Confirmed to a reader asking if only the order remains to be guessed: all
+elements are under the video and in the blog post.

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "slug": "onfo-forsyth-1btc",
+  "title": "ONFO / Dr. J.R. Forsyth Bitcoin Treasure Hunt",
+  "tier": "dead-end",
+  "status": "dead-end",
+  "dead_end_reason": "author-deceased-unfinished",
+  "series": null,
+  "author": {
+    "name": "Dr. John Forsyth (Onfo LLC, persona \"Dr. J.R. Forsyth\")",
+    "handles": ["youtube:@onfocoin"],
+    "url": "https://www.youtube.com/channel/UCzphFzDxPwGFJ4jofoN30qg"
+  },
+  "published": { "date": "2021-06-25", "url": "https://www.benzinga.com/pressreleases/21/06/a21717862/onfo-announces-bitcoin-treasure-hunt" },
+  "chain": "bitcoin",
+  "prize": {
+    "amount": 1,
+    "asset": "BTC",
+    "usd_estimate": 63000,
+    "usd_snapshot": "2026-08-16",
+    "note": "reported in contemporaneous coverage as funded from the author's personal funds, not a company treasury"
+  },
+  "addresses": [
+    {
+      "address": "157dpLJgAAKugukKz8UwBHapM4idyZvnLc",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "label": "the announced prize wallet",
+      "explorer": "https://mempool.space/address/157dpLJgAAKugukKz8UwBHapM4idyZvnLc",
+      "expected": "1 BTC",
+      "verified_on": "2026-08-16",
+      "verified_state": "funded-unspent"
+    }
+  ],
+  "puzzle_type": ["raw-private-key", "video-series"],
+  "target_format": "a Bitcoin private key, format not specified by the author (WIF or hex), matching P2PKH address 157dpLJgAAKugukKz8UwBHapM4idyZvnLc",
+  "derivation": {
+    "summary": "the author stated a private key is hidden \"in plain sight\" somewhere in the visual or audio content of 10 video segments, all required together; no decoding method, cipher, or steganographic technique was ever specified, and only 5 of the 10 segments were ever published",
+    "oracle": null,
+    "oracle_certified": false
+  },
+  "difficulty_left": "external-info",
+  "difficulty_note": "half of the announced material (segments 6 to 10) was never published, and the sole self-declared key holder died in 2023; no known method applies to an incomplete corpus",
+  "solutions": [],
+  "sources": [
+    { "title": "ONFO Announces Bitcoin Treasure Hunt (press release)", "url": "https://www.benzinga.com/pressreleases/21/06/a21717862/onfo-announces-bitcoin-treasure-hunt", "date": "2021-06-25", "archived": null },
+    { "title": "SEGMENT 1 - Intro to Crypto", "url": "https://www.youtube.com/watch?v=YMl3-AfBBvs", "date": "2021-06-22", "archived": null },
+    { "title": "SEGMENT 2 - Modern Slavery", "url": "https://www.youtube.com/watch?v=40l9ukS7Nmg", "date": "2021-07-09", "archived": null },
+    { "title": "Segment 5 - Leveling the Playing Field (last segment published)", "url": "https://www.youtube.com/watch?v=LMbvquFBhoE", "date": "2022-03-29", "archived": null },
+    { "title": "Missing 'Bitcoin Millionaire' and ONFO coin co-creator found dead: Report", "url": "https://cointelegraph.com/news/bitcoin-millionaire-onfo-coin-creator-dead", "date": "2023-06-01", "archived": null }
+  ],
+  "third_party_material": "short verbatim quotes from the author's own press release and video descriptions; one news report cited for the date of the author's death, no further detail reproduced",
+  "last_updated": "2026-08-16"
+}
