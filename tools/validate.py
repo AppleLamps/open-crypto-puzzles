@@ -46,7 +46,7 @@ TIER_DIR_TO_KEY = {
     "2-mid-prizes": "mid",
     "3-small-prizes": "small",
     "4-solved": "solved",
-    "5-dead-ends": "dead-end",
+    "archive/dead-ends": "dead-end",
 }
 
 STATUS_BADGE = {

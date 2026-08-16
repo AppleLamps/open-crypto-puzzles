@@ -32,7 +32,7 @@ from datetime import date
 import requests
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TIERS = ["1-big-prizes", "2-mid-prizes", "3-small-prizes", "4-solved", "5-dead-ends"]
+TIERS = ["1-big-prizes", "2-mid-prizes", "3-small-prizes", "4-solved", "archive/dead-ends"]
 
 TIMEOUT = 15
 RETRIES = 1  # one retry after the first attempt, so two attempts total

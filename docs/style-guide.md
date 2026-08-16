@@ -97,7 +97,7 @@ STYLE CARD, open-crypto-puzzles
 3. Never write: delve, worth noting, tapestry, realm, landscape/journey/navigate/unlock (figurative), embark, dive into, deep dive, testament to, game-changer, cutting-edge, leverage, utilize, seamless, robust, crucial, pivotal, exciting, fascinating, impossible, hopeless, wall.
 4. Never mention AI, agents, models, or tools as having done the work. "I tested", "I measured".
 5. Never reproduce book text, transcripts, articles, wordlists, dumps. Link them. Author-published puzzle images and short author quotes are fine, with URL and date.
-6. Follow docs/templates/README.template.md headings exactly, in order. Delete "Solution" unless solved. Add "Why this is a dead end" only in 5-dead-ends.
+6. Follow docs/templates/README.template.md headings exactly, in order. Delete "Solution" unless solved. Add "Why this is a dead end" only in archive/dead-ends.
 7. Dates ISO 8601. Sats with commas (369,369 sats). BTC as 1.2563 BTC. USD as "about $79,000 (BTC at $63,000, 2026-08-16)", once per README.
 8. Addresses and txids full, in backticks, with an explorer link on first mention. Paths in backticks.
 9. Negatives: "N candidates tested, 0 match. Method: ... Witness: ... / uncertified. Rate: ... Date: ...". Scope travels with the number.

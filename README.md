@@ -104,7 +104,7 @@ grouped by prize, is in the tables below.
 <!-- generated:end -->
 
 Puzzles that turned out swept, unfunded, custodial, or fake are kept off the lists above, in
-[5-dead-ends/](5-dead-ends/), for anyone curious about the ones that did not pan out.
+[archive/dead-ends/](archive/dead-ends/), for anyone curious about the ones that did not pan out.
 
 ## Series
 

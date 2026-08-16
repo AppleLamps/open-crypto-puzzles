@@ -3,7 +3,7 @@
 build_index.py -- generate the machine-readable index and the generated README tables.
 
 Purpose:
-    Walk every <tier>/<slug>/puzzle.json plus 5-dead-ends/rows.json, concatenate them into
+    Walk every <tier>/<slug>/puzzle.json plus archive/dead-ends/rows.json, concatenate them into
     the root puzzles.json, and rewrite the generated table blocks (between
     <!-- generated:start --> and <!-- generated:end -->) in the root README.md and in each
     tier's README.md. Also fills in the "Snapshot: <N> puzzles, <M> still funded, about $<USD>
@@ -15,7 +15,7 @@ Usage (run from the repository root):
 
 Input:
     <tier-folder>/<slug>/puzzle.json for every puzzle folder.
-    5-dead-ends/rows.json for dead ends that have no folder of their own.
+    archive/dead-ends/rows.json for dead ends that have no folder of their own.
 
 Output:
     puzzles.json at the repository root.
@@ -39,7 +39,7 @@ TIERS = [
     ("2-mid-prizes", "mid"),
     ("3-small-prizes", "small"),
     ("4-solved", "solved"),
-    ("5-dead-ends", "dead-end"),
+    ("archive/dead-ends", "dead-end"),
 ]
 
 GENERATED_START = "<!-- generated:start -->"
@@ -68,7 +68,7 @@ def load_puzzles():
                 manifest["folder"] = f"{folder_prefix}/{entry}"
                 puzzles.append(manifest)
 
-    rows_path = os.path.join(REPO_ROOT, "5-dead-ends", "rows.json")
+    rows_path = os.path.join(REPO_ROOT, "archive/dead-ends", "rows.json")
     if os.path.isfile(rows_path):
         with open(rows_path, encoding="utf-8") as f:
             rows_doc = json.load(f)
