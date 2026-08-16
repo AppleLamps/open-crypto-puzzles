@@ -200,8 +200,6 @@ def build_root_block(puzzles):
         build_table(puzzles, "small", BIG_MID_SMALL_HEADER, row_big_mid_small, "No puzzles in this tier yet."),
         "\n\n## Solved and cashed\n",
         build_table(puzzles, "solved", SOLVED_HEADER, row_solved, "None yet."),
-        "\n\n## Dead ends (do not spend time here)\n",
-        build_table(puzzles, "dead-end", DEAD_END_HEADER, row_dead_end, "None logged yet."),
     ]
     return "".join(parts)
 

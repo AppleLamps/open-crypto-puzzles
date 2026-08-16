@@ -101,21 +101,10 @@ grouped by prize, is in the tables below.
 |---|---|---|---|---|
 | [bc1q21 Time-Lock Challenge, Level 5](4-solved/bc1q21-timelock-challenge-l5-100ksats/) | 99604 sats | [73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed](https://mempool.space/tx/73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed) | 2026-07-24 | solved; the claim transaction confirms the answer |
 | [Dug's Student Treasure Hunt (2025 edition)](4-solved/dug-student-treasure-hunt-63ksats/) | 59916 sats | [ee70de514686588173b64fc31fc317ae15f1e903c742cc99140d2cf1bb2e8db1](https://mempool.space/tx/ee70de514686588173b64fc31fc317ae15f1e903c742cc99140d2cf1bb2e8db1) | 2026-08-02 | solved; the payout transaction confirms the answer |
-
-## Dead ends (do not spend time here)
-| Puzzle | Announced | Why | Verified | Lesson |
-|---|---|---|---|---|
-| [Commander U Riddle for 8.5 BTC](5-dead-ends/commander-u-puzzle-8-5btc/) | 8.50099081 BTC | suspected-fake | 2026-08-16 | 4 of 6 fragments are unrecovered; one has no published checksum at all, and 3 do not match the MD5 of any base58 string of the stated length under any of 28 standard transforms tried; the missing piece is the original 2019 channel with the sub-riddle answers, which I could not find, and which may never have existed as a real puzzle in the first place |
-| Phemex Dorian Nakamoto 2.1 BTC puzzle | 1.1 BTC | swept-by-third-party | 2026-08-16 | Swept 2020-03-21; the sweep transaction exposed the public key. The chain, not the press, is the source of truth: a 2024 article calling it unclaimed was wrong by four years. |
-| [ONFO / Dr. J.R. Forsyth Bitcoin Treasure Hunt](5-dead-ends/onfo-forsyth-1btc/) | 1 BTC | author-deceased-unfinished | 2026-08-16 | half of the announced material (segments 6 to 10) was never published, and the sole self-declared key holder died in 2023; no known method applies to an incomplete corpus |
-| The Game of Satoshi (Season 1) | 0.21 BTC | custodial | 2026-08-16 | Custodial: the 24 words are a game answer submitted to a server, not a mnemonic controlling a wallet. Ask first: custodial or permissionless? If the answer goes to a server, there is no key to derive. |
-| De Mint: Bitcoin Evangelism book puzzle | 3,146,386 sats | solved-by-others | 2026-08-16 | Puzzle 1 was cashed by a reader around October 2022 (author confirmed on camera); the escrow was never published. A podcast publish date is not an event date, and a coincidental amount match in a balance dump is not the escrow. |
-| [Zodomo 11x11 Pixel Puzzles](5-dead-ends/zodomo-11x11-pixel-puzzles-0-05eth/) | 0.05 ETH | unfunded | 2026-08-16 | the active puzzle's escrow does not exist on Ethereum mainnet as of the last check; even once it does, its encoding scheme is not yet identified, and the strongest lead is a set of author-distributed hints in a gated community chat |
-| BAM x AskABitcoiner 42k Seed Cipher | 42,100 sats | swept-by-third-party | 2026-08-16 | Swept 2026-06-05 by another solver; passphrase was an artwork title. Reusable: this maker's series uses BIP49 m/49'/0'/0'/0/0 and a passphrase equal to an artwork title, not a block height. |
-| Wares Wallets (Solana video series) | 0.1 SOL | swept-by-third-party | 2026-08-16 | Checked escrows at 0 SOL; channel inactive since 2025-07-04. Reusable: Solana path m/44'/501'/0' (solana-cli/Solflare), not Phantom's .../0'/0'. Measure the real prize before the marketing number. |
-| ZK Guess #31 (chainhackers, Base) | 0.0025 ETH | window-closed | 2026-08-16 | Secret 149 was identified, but a third party guessed it about 40 hours later and the puzzle forfeited. A zero-cost, positive-value action runs immediately. |
-| Aenigma Shards (AESH NFT cryptogram) | 34 ETH | unfunded | 2026-08-16 | A promised total is not a funded prize: mint stalled at 72 of 100, contract holds 0 ETH, no puzzle ever released beyond a demo. Check the contract balance, not the marketing. |
 <!-- generated:end -->
+
+Puzzles that turned out swept, unfunded, custodial, or fake are kept off the lists above, in
+[5-dead-ends/](5-dead-ends/), for anyone curious about the ones that did not pan out.
 
 ## Series
 
