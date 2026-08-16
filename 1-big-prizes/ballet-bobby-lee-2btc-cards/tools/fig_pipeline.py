@@ -7,6 +7,10 @@ Purpose:
     P2PKH address) as a left-to-right chain of boxes. This is the transform confirmed
     by tools/oracle.py --selftest against the solved sibling card AA007448.
 
+    Every box is sized to its own label (width = longest line * font size * 0.62 +
+    padding) and every gap is widened to fit its edge label, so no text ever runs
+    past a box edge or the canvas edge regardless of label length.
+
 Usage:
     python3 tools/fig_pipeline.py
 
@@ -25,11 +29,16 @@ ROOT = os.path.dirname(HERE)
 DATA_PATH = os.path.join(ROOT, "data", "pipeline-stages.json")
 OUT_PATH = os.path.join(ROOT, "images", "02-pipeline-derivation.svg")
 
-BOX_W = 170
+BOX_W_MIN = 170
 BOX_H = 60
-GAP = 90
+GAP_MIN = 90
 MARGIN = 30
 FONT = "DejaVu Sans"
+FONT_SIZE = 11
+EDGE_FONT_SIZE = 9
+CHAR_W = 0.62
+PAD_X = 12
+EDGE_PAD_X = 8
 
 COLOR_BOX = "#1F5FBF"
 COLOR_TEXT = "#FFFFFF"
@@ -41,13 +50,36 @@ def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+def box_width(lines):
+    longest = max(len(line) for line in lines)
+    return max(BOX_W_MIN, int(longest * FONT_SIZE * CHAR_W) + 2 * PAD_X)
+
+
+def gap_width(edge_lines):
+    if not edge_lines:
+        return GAP_MIN
+    longest = max(len(line) for line in edge_lines)
+    return max(GAP_MIN, int(longest * EDGE_FONT_SIZE * CHAR_W) + 2 * EDGE_PAD_X)
+
+
 def main():
     with open(DATA_PATH, encoding="utf-8") as f:
         data = json.load(f)
     stages = data["stages"]
-
     n = len(stages)
-    width = MARGIN * 2 + n * BOX_W + (n - 1) * GAP
+
+    box_lines = [stage["label"].split("\n") for stage in stages]
+    box_ws = [box_width(lines) for lines in box_lines]
+    edge_lines_list = [(stages[i].get("edge") or "").split("\n") if stages[i].get("edge") else [] for i in range(n)]
+    gaps = [0] + [gap_width(edge_lines_list[i]) for i in range(1, n)]
+
+    lefts = []
+    x = MARGIN
+    for i in range(n):
+        x += gaps[i]
+        lefts.append(x)
+        x += box_ws[i]
+    width = x + MARGIN
     height = 260
 
     parts = []
@@ -58,43 +90,40 @@ def main():
     parts.append(f'<rect x="0" y="0" width="{width}" height="{height}" fill="{COLOR_BG}"/>')
 
     y = height // 2 - BOX_H // 2
-    x = MARGIN
-    centers = []
-    for stage in stages:
-        cx = x + BOX_W / 2
-        centers.append((x, cx))
+    for i, stage in enumerate(stages):
+        x = lefts[i]
+        bw = box_ws[i]
+        cx = x + bw / 2
         parts.append(
-            f'<rect x="{x}" y="{y}" width="{BOX_W}" height="{BOX_H}" rx="8" '
+            f'<rect x="{x}" y="{y}" width="{bw}" height="{BOX_H}" rx="8" '
             f'fill="{COLOR_BOX}" stroke="#14406e" stroke-width="1.5"/>'
         )
-        lines = stage["label"].split("\n")
+        lines = box_lines[i]
         line_h = 14
         start_ty = y + BOX_H / 2 - (len(lines) - 1) * line_h / 2 + 5
         for li, line in enumerate(lines):
             parts.append(
                 f'<text x="{cx}" y="{start_ty + li * line_h}" text-anchor="middle" '
-                f'font-size="11" fill="{COLOR_TEXT}">{esc(line)}</text>'
+                f'font-size="{FONT_SIZE}" fill="{COLOR_TEXT}">{esc(line)}</text>'
             )
-        x += BOX_W + GAP
 
     for i in range(1, n):
-        prev_right = centers[i - 1][0] + BOX_W
-        this_left = centers[i][0]
+        prev_right = lefts[i - 1] + box_ws[i - 1]
+        this_left = lefts[i]
         mid_y = y + BOX_H / 2
         parts.append(
             f'<line x1="{prev_right}" y1="{mid_y}" x2="{this_left - 8}" y2="{mid_y}" '
             f'stroke="{COLOR_EDGE}" stroke-width="1.5" marker-end="url(#arrow)"/>'
         )
-        edge_label = stages[i].get("edge")
-        if edge_label:
+        edge_lines = edge_lines_list[i]
+        if edge_lines and edge_lines != [""]:
             label_x = (prev_right + this_left) / 2
-            edge_lines = edge_label.split("\n")
             line_h = 12
             base_y = mid_y - 16 - (len(edge_lines) - 1) * line_h
             for li, line in enumerate(edge_lines):
                 parts.append(
                     f'<text x="{label_x}" y="{base_y + li * line_h}" text-anchor="middle" '
-                    f'font-size="9" fill="{COLOR_EDGE}">{esc(line)}</text>'
+                    f'font-size="{EDGE_FONT_SIZE}" fill="{COLOR_EDGE}">{esc(line)}</text>'
                 )
 
     parts.append(

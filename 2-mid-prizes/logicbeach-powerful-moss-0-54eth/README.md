@@ -58,9 +58,6 @@ numeral falls on can only be pinned to within 1 row on the published 2004x2011 r
 numeral glyphs themselves span roughly 2 rows: this is a resolution limit of the only image that
 exists, not a gap in the analysis.
 
-![The confirmed pipeline from a 12-word candidate to the withdraw() call it would authorize](images/02-pipeline-derivation.svg)
-*Figure 2. The derivation and authorization pipeline (source: data/pipeline-stages.json, script tools/fig_pipeline.py), 2026-08-16.*
-
 ### Derivation and oracle
 
 ```
@@ -146,14 +143,11 @@ Full notes: [analysis/leads.md](analysis/leads.md).
 | `clues/author-posts.md` | the author's published NFT metadata and launch-period quote, dated and linked |
 | `data/tracks.json` | the album's 12 track titles, exactly as published in the NFT metadata |
 | `data/seed-grid.json` | the 12-hour seed grid state (confirmed words, candidate words) |
-| `data/pipeline-stages.json` | the derivation pipeline stage labels and contract constants |
 | `analysis/tested.md` | the complete negatives ledger |
 | `analysis/leads.md` | full notes behind the 3 ranked leads |
 | `images/01-seed-grid.svg` | the seed grid figure |
-| `images/02-pipeline-derivation.svg` | the derivation and authorization pipeline figure |
 | `tools/oracle.py` | candidate checker, BIP44 path sweep, certified |
 | `tools/fig_seed_grid.py` | generates images/01-seed-grid.svg from data/seed-grid.json |
-| `tools/fig_pipeline.py` | generates images/02-pipeline-derivation.svg from data/pipeline-stages.json |
 
 ## Sources
 

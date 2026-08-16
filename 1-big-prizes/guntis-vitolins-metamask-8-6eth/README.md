@@ -86,9 +86,6 @@ word) before it can even be tested: for any fixed first 11 words, only 1 in 16
 possible last words passes, so anchoring the last word first is the single
 most valuable constraint.
 
-![12 words to Ethereum address, five stages linked by BIP39, BIP44 and keccak256](images/02-pipeline-derivation.svg)
-*Figure 2. The MetaMask-default derivation pipeline confirmed by the canonical BIP-0039 vector (source: data/pipeline-stages.json, script tools/fig_pipeline.py), 2026-08-16.*
-
 ### Derivation and oracle
 
 ```
@@ -195,14 +192,11 @@ Full notes: [analysis/leads.md](analysis/leads.md).
 |---|---|
 | `clues/author-posts.md` | the 5 planted sentences, the 5 hints, and paraphrased author statements, with dates and links |
 | `data/seed-slots.json` | the 12-position grid state, for the seed slot figure |
-| `data/pipeline-stages.json` | the 6-stage label list for the derivation pipeline figure |
 | `analysis/tested.md` | the complete negatives ledger |
 | `analysis/leads.md` | full notes behind the 3 ranked leads |
 | `images/01-seed-slot-grid.svg` | the 12-word seed grid, confirmed vs unknown |
-| `images/02-pipeline-derivation.svg` | the MetaMask-default derivation pipeline |
 | `tools/oracle.py` | candidate checker, certified against the canonical BIP-0039 vector |
 | `tools/fig_slots.py` | generates images/01-seed-slot-grid.svg from data/seed-slots.json |
-| `tools/fig_pipeline.py` | generates images/02-pipeline-derivation.svg from data/pipeline-stages.json |
 
 ## Sources
 

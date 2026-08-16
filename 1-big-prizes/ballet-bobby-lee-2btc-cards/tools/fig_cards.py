@@ -11,6 +11,12 @@ Purpose:
     each publishes only the half on one physical face, and the other face was never
     photographed.
 
+    Each face box's height is computed from its own wrapped label/known/detail line
+    count (label line + up to 2 known lines + up to 2 detail lines, each with its own
+    line height and bottom padding), so a face with more text (AA012381's front, 2
+    known lines and 2 detail lines) gets a taller box instead of letting its last
+    line clip past a fixed box bottom.
+
 Usage:
     python3 tools/fig_cards.py
 
@@ -30,8 +36,13 @@ DATA_PATH = os.path.join(ROOT, "data", "card-faces.json")
 OUT_PATH = os.path.join(ROOT, "images", "01-structure-card-faces.svg")
 
 CARD_W = 260
-CARD_H = 150
-FACE_H = 60
+FACE_H_MIN = 60
+LABEL_Y = 14         # label baseline, relative to face box top
+KNOWN_Y0 = 28         # first known-value line baseline, relative to face box top
+KNOWN_LINE_H = 12
+DETAIL_LINE_H = 11
+BOTTOM_PAD = 10        # clearance below the last line's baseline, inside the box
+GAP_V = 6              # vertical gap between the front and back box
 GAP_X = 40
 MARGIN = 30
 FONT = "DejaVu Sans"
@@ -62,6 +73,45 @@ def wrap(text, width=30):
     return lines
 
 
+def face_layout(face):
+    """Return (known_lines, detail_lines, box_h) for one face, sized to its own text."""
+    known_lines = wrap(face["known"], 34)[:2]
+    detail_lines = wrap(face["detail"], 40)[:2]
+    if detail_lines:
+        last_y = KNOWN_Y0 + len(known_lines) * KNOWN_LINE_H + (len(detail_lines) - 1) * DETAIL_LINE_H
+    elif known_lines:
+        last_y = KNOWN_Y0 + (len(known_lines) - 1) * KNOWN_LINE_H
+    else:
+        last_y = LABEL_Y
+    box_h = max(FACE_H_MIN, last_y + BOTTOM_PAD)
+    return known_lines, detail_lines, box_h
+
+
+def render_face(parts, x, fy, face, box_h):
+    is_missing = face["known"] == "MISSING"
+    color = COLOR_MISSING if is_missing else COLOR_KNOWN
+    parts.append(
+        f'<rect x="{x}" y="{fy}" width="{CARD_W}" height="{box_h}" rx="8" '
+        f'fill="{color}" stroke="#333333" stroke-width="1"/>'
+    )
+    parts.append(
+        f'<text x="{x + 8}" y="{fy + LABEL_Y}" font-size="9" font-weight="bold" '
+        f'fill="{COLOR_TEXT}">{esc(face["label"].upper())}</text>'
+    )
+    known_lines, detail_lines, _ = face_layout(face)
+    for li, line in enumerate(known_lines):
+        parts.append(
+            f'<text x="{x + 8}" y="{fy + KNOWN_Y0 + li * KNOWN_LINE_H}" font-size="9.5" '
+            f'fill="{COLOR_TEXT}">{esc(line)}</text>'
+        )
+    detail_y0 = fy + KNOWN_Y0 + len(known_lines) * KNOWN_LINE_H
+    for li, line in enumerate(detail_lines):
+        parts.append(
+            f'<text x="{x + 8}" y="{detail_y0 + li * DETAIL_LINE_H}" '
+            f'font-size="8" fill="{COLOR_TEXT}" opacity="0.9">{esc(line)}</text>'
+        )
+
+
 def main():
     with open(DATA_PATH, encoding="utf-8") as f:
         data = json.load(f)
@@ -69,7 +119,18 @@ def main():
 
     n = len(cards)
     width = MARGIN * 2 + n * CARD_W + (n - 1) * GAP_X
-    height = 260
+
+    # First pass: work out how tall each card's front/back stack needs to be, so the
+    # canvas (and the legend strip under it) can be sized to fit the tallest card.
+    card_heights = []
+    for card in cards:
+        _, _, front_h = face_layout(card["front"])
+        _, _, back_h = face_layout(card["back"])
+        card_heights.append(front_h + GAP_V + back_h)
+    top_y = MARGIN + 30
+    max_stack_h = max(card_heights)
+    legend_h = 50
+    height = top_y + max_stack_h + legend_h
 
     parts = []
     parts.append(
@@ -89,32 +150,14 @@ def main():
             f'font-size="10" fill="{COLOR_TITLE}">{esc(card["state"])}</text>'
         )
 
-        top_y = MARGIN + 30
-        for i, face_key in enumerate(("front", "back")):
-            face = card[face_key]
-            fy = top_y + i * (FACE_H + 6)
-            is_missing = face["known"] == "MISSING"
-            color = COLOR_MISSING if is_missing else COLOR_KNOWN
-            parts.append(
-                f'<rect x="{x}" y="{fy}" width="{CARD_W}" height="{FACE_H}" rx="8" '
-                f'fill="{color}" stroke="#333333" stroke-width="1"/>'
-            )
-            parts.append(
-                f'<text x="{x + 8}" y="{fy + 14}" font-size="9" font-weight="bold" '
-                f'fill="{COLOR_TEXT}">{esc(face["label"].upper())}</text>'
-            )
-            known_lines = wrap(face["known"], 34)
-            for li, line in enumerate(known_lines[:2]):
-                parts.append(
-                    f'<text x="{x + 8}" y="{fy + 28 + li * 12}" font-size="9.5" '
-                    f'fill="{COLOR_TEXT}">{esc(line)}</text>'
-                )
-            detail_lines = wrap(face["detail"], 40)
-            for li, line in enumerate(detail_lines[:2]):
-                parts.append(
-                    f'<text x="{x + 8}" y="{fy + 28 + len(known_lines[:2]) * 12 + li * 11}" '
-                    f'font-size="8" fill="{COLOR_TEXT}" opacity="0.9">{esc(line)}</text>'
-                )
+        _, _, front_h = face_layout(card["front"])
+        front_fy = top_y
+        render_face(parts, x, front_fy, card["front"], front_h)
+
+        back_fy = front_fy + front_h + GAP_V
+        _, _, back_h = face_layout(card["back"])
+        render_face(parts, x, back_fy, card["back"], back_h)
+
         x += CARD_W + GAP_X
 
     legend_y = height - 30

@@ -58,11 +58,8 @@ locked pages; I have not recovered any of them. Every page reachable without ope
 the three locks has been read directly and carries none of the 12 words (full channel map in
 [analysis/mechanism.md](analysis/mechanism.md)).
 
-![Pipeline from the 12 unknown BIP39 words and passphrase, through BIP39 and BIP32 derivation, to a P2WPKH address compared against the escrow](images/01-pipeline-derivation.svg)
-*Figure 1. The seed-to-address derivation pipeline; the input stage is unknown, every step after it is confirmed by the published xpub (source: data/pipeline-stages.json, script tools/fig_pipeline.py), 2026-08-16.*
-
 ![The site as a tree: a shared entry chain fanning into 4 branches, colored by whether each page is open, a confirmed dead end, or a locked insight gate](images/02-structure-branches.svg)
-*Figure 2. The full page-chain structure reached from the entry page, by branch and state (source: data/site-structure.csv, script tools/fig_structure.py), 2026-08-16.*
+*Figure 1. The full page-chain structure reached from the entry page, by branch and state (source: data/site-structure.csv, script tools/fig_structure.py), 2026-08-16.*
 
 ### Derivation and oracle
 
@@ -154,14 +151,11 @@ Full notes: [analysis/leads.md](analysis/leads.md).
 |---|---|
 | `clues/author-posts.md` | verbatim riddle text and entry-page quotes from the puzzle site, with links |
 | `data/site-structure.csv` | the page chain per branch (page id, state), from direct site navigation |
-| `data/pipeline-stages.json` | stage labels for the derivation pipeline figure |
 | `analysis/mechanism.md` | the full 7-channel carrier map and branch-format rules |
 | `analysis/tested.md` | the complete negatives ledger |
 | `analysis/leads.md` | full notes behind the 4 ranked leads |
-| `images/01-pipeline-derivation.svg` | the seed-to-address derivation pipeline |
 | `images/02-structure-branches.svg` | the site's branch structure, colored by state |
 | `tools/oracle.py` | candidate checker (mnemonic plus passphrase against the escrow), certified |
-| `tools/fig_pipeline.py` | generates images/01-pipeline-derivation.svg from data/pipeline-stages.json |
 | `tools/fig_structure.py` | generates images/02-structure-branches.svg from data/site-structure.csv |
 
 ## Sources

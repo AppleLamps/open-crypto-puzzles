@@ -65,9 +65,6 @@ escrow's on-chain funding date and resolves what would otherwise look like an
 unexplained 21-month gap between funding and the January 2024 launch: the wallet
 was pre-funded as a donation well before the puzzle was announced.
 
-![34 movie panels feed into 34 titles, 34 BIP39 words, drop 10 intruders to 24 words, then BIP39 to BIP84 to the address](images/01-pipeline-derivation.svg)
-*Figure 1. The derivation pipeline as stated in the puzzle's own rules (source: data/pipeline-stages.json, script tools/fig_pipeline.py), 2026-08-16.*
-
 ## What is understood
 
 ### Mechanism
@@ -128,7 +125,7 @@ Reproduced 2026-08-16.
    tried; none produces an exact 24-versus-10 split (`analysis/tested.md`).
 
 ![34 panel slots colored by identification confidence: confirmed, probable or uncertain or disputed, and unidentified](images/02-panel-grid-identification.svg)
-*Figure 2. Identification status of the 34 panels, no film stills reproduced (source: data/films.csv, script tools/fig_panel_grid.py), 2026-08-16.*
+*Figure 1. Identification status of the 34 panels, no film stills reproduced (source: data/films.csv, script tools/fig_panel_grid.py), 2026-08-16.*
 
 ## What has been tested
 
@@ -167,13 +164,10 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 |---|---|
 | `clues/author-posts.md` | verbatim quotes from the rules, about and wallet pages, with links; no film stills reproduced |
 | `data/films.csv` | my identification state for all 34 panels: title, MPAA rating, confidence, candidate BIP39 words |
-| `data/pipeline-stages.json` | the 6-stage label list for the derivation pipeline figure |
 | `analysis/tested.md` | the complete negatives ledger |
 | `analysis/leads.md` | full notes behind the 4 ranked leads |
-| `images/01-pipeline-derivation.svg` | the derivation pipeline diagram |
 | `images/02-panel-grid-identification.svg` | the 34-panel identification status grid |
 | `tools/oracle.py` | candidate checker, certified against the public BIP39/BIP84 test vectors |
-| `tools/fig_pipeline.py` | generates images/01-pipeline-derivation.svg from data/pipeline-stages.json |
 | `tools/fig_panel_grid.py` | generates images/02-panel-grid-identification.svg from data/films.csv |
 
 ## Sources
