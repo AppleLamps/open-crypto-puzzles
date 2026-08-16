@@ -12,3 +12,15 @@ main reason a solved puzzle stays useful to a reader working on an open sibling.
 | [bc1q21 Time-Lock Challenge, Level 5](bc1q21-timelock-challenge-l5-100ksats/) | 99604 sats | [73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed](https://mempool.space/tx/73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed) | 2026-07-24 | solved; the claim transaction confirms the answer |
 | [Dug's Student Treasure Hunt (2025 edition)](dug-student-treasure-hunt-63ksats/) | 59916 sats | [ee70de514686588173b64fc31fc317ae15f1e903c742cc99140d2cf1bb2e8db1](https://mempool.space/tx/ee70de514686588173b64fc31fc317ae15f1e903c742cc99140d2cf1bb2e8db1) | 2026-08-02 | solved; the payout transaction confirms the answer |
 <!-- generated:end -->
+
+
+## Partially solved (open lots remain)
+
+Two puzzles are a series where I solved part of the prize and other lots are still open. They
+live with the open puzzles (so the open lots stay visible), but the parts I solved, with the
+answers and payout transactions, are here:
+
+| Puzzle | What I solved | Still open |
+|---|---|---|
+| [Keir Finlow-Bates book puzzles](../2-mid-prizes/keir-finlow-bates-blockchain-book-600ksats/README.md#solution) | 4 of 12 lots (EN_hard_1, EN_hard_2, IT_medium, IT_hard), each swept to my wallet | 3 lots, 600,000 sats |
+| [TeikhosBounty solver puzzles](../2-mid-prizes/teikhos-bipedaljoe-solver-bounties-2eth/README.md#solution) | contract 735B, 0.5 ETH claimed | 3 contracts, 2 ETH |

@@ -1,16 +1,17 @@
 # open-crypto-puzzles
 
-Public crypto treasure hunts: an author locks BTC, ETH or AR behind a riddle, publishes the
-address, and invites anyone to solve it and take the coins. I am floflo777. Over the past
-months I found and worked about 45 of these. I solved and cashed a few of them: a
-TeikhosBounty contract for 0.5 ETH, four lots of the Finlow-Bates "Blockchain book"
-puzzles, Dug's student treasure hunt, and the bc1q21 time-lock challenge (about 0.01 BTC
-on top of the 0.5 ETH). Most are still open. This repository is everything I
-learned, in one format per puzzle: the escrow and how to check it, the author's clues, what
-is understood, what I tested with numbers, the open leads, and for solved ones the answer
-and the payout transaction. Take a puzzle and keep going.
+Public crypto puzzles: an author locks coins behind a riddle, publishes the address, and
+dares anyone to solve it and take them. I am floflo777. I worked about 40 of these and
+solved a few (0.5 ETH and about 0.01 BTC). Here is my research on the rest.
 
-Snapshot: 46 puzzles, 34 still funded, about $657,276 at stake (BTC $63,000, ETH $1,880, AR $1.81 on 2026-08-16). Last escrow checks: see each table.
+Still unsolved and funded on-chain, checked 2026-08-16:
+
+- about 10 BTC across 23 puzzles
+- 12.2 ETH across 5 puzzles
+- 1,900 AR across 3 puzzles
+- 306 USDT + 166 USDC across 2 puzzles
+
+Prices and balances move. Verify each escrow yourself before spending any effort.
 
 ## How to read this repository
 

@@ -246,7 +246,7 @@ def replace_snapshot_line(text, n_total, m_funded, usd_total):
     # next blank line (or end of file) so no orphan continuation line is left behind.
     pattern = re.compile(r"^Snapshot:.*?(?=\n\n|\Z)", re.MULTILINE | re.DOTALL)
     if not pattern.search(text):
-        raise ValueError("Snapshot line not found in root README.md")
+        return text  # front page manages its own totals; nothing to replace
     return pattern.sub(lambda _m: new_line, text, count=1)
 
 
