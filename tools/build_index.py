@@ -43,6 +43,8 @@ TIERS = [
 ]
 
 GENERATED_START = "<!-- generated:start -->"
+TOTALS_START = "<!-- totals:start -->"
+TOTALS_END = "<!-- totals:end -->"
 GENERATED_END = "<!-- generated:end -->"
 
 BIG_MID_SMALL_HEADER = "| Puzzle | Prize | USD | Chain | Type | What remains | Escrow checked | Status |\n|---|---|---|---|---|---|---|---|"
@@ -190,6 +192,45 @@ def build_table(puzzles, tier, header, row_fn, empty_note, tier_relative=False):
     return "\n".join(lines)
 
 
+def build_totals_block(puzzles):
+    funded = [p for p in puzzles if p.get("status") in ("open", "watch")]
+    btc = eth = ar = usdt = usdc = 0.0
+    usd = 0.0
+    for p in funded:
+        pr = p.get("prize", {})
+        amt = pr.get("amount") or 0
+        a = pr.get("asset")
+        if a == "BTC": btc += amt
+        elif a == "sats": btc += amt / 1e8
+        elif a == "ETH": eth += amt
+        elif a == "AR": ar += amt
+        elif a == "USDT": usdt += amt
+        elif a == "USDC": usdc += amt
+        u = pr.get("usd_estimate")
+        if isinstance(u, (int, float)): usd += u
+
+    def rnd(v):
+        if v >= 10000: return f"${round(v, -3):,.0f}"
+        return f"${round(v, -2):,.0f}"
+
+    def usd_for(asset_amt, per):
+        return rnd(asset_amt * per)
+
+    p = PRICE_SNAPSHOT
+    rows = [
+        "| Asset | Locked in unsolved puzzles | Approx. value |",
+        "|---|---|---|",
+        f"| Bitcoin | {btc:,.2f} BTC | {usd_for(btc, p['BTC'])} |",
+        f"| Ethereum | {eth:,.2f} ETH | {usd_for(eth, p['ETH'])} |",
+        f"| Arweave | {ar:,.0f} AR | {usd_for(ar, p['AR'])} |",
+        f"| Stablecoins | {usdt:,.0f} USDT + {usdc:,.0f} USDC | {rnd(usdt + usdc)} |",
+        f"| **Total** | **across {len(funded)} funded puzzles** | **{rnd(usd)}** |",
+    ]
+    note = (f"\n\nChecked {p['date']} at BTC ${p['BTC']:,}, ETH ${p['ETH']:,}, AR ${p['AR']}. "
+            "Prices and balances move; verify each escrow yourself.")
+    return "\n".join(rows) + note
+
+
 def build_root_block(puzzles):
     parts = [
         "## Big prizes (>= $10,000)\n",
@@ -210,6 +251,16 @@ def build_tier_block(puzzles, tier):
     if tier == "solved":
         return build_table(puzzles, tier, SOLVED_HEADER, row_solved, "None yet.", tier_relative=True)
     return build_table(puzzles, tier, DEAD_END_HEADER, row_dead_end, "None logged yet.", tier_relative=True)
+
+
+def replace_named_block(text, start_marker, end_marker, new_block):
+    start = text.find(start_marker)
+    end = text.find(end_marker)
+    if start == -1 or end == -1 or end < start:
+        return text
+    before = text[: start + len(start_marker)]
+    after = text[end:]
+    return f"{before}\n{new_block}\n{after}"
 
 
 def replace_generated_block(text, new_block):
@@ -253,7 +304,8 @@ def process_readme(path, new_block, check, changed_files, is_root=False, snapsho
         original = f.read()
     updated = replace_generated_block(original, new_block)
     if is_root:
-        updated = replace_snapshot_line(updated, *snapshot_args)
+        updated = replace_snapshot_line(updated, *snapshot_args[:3])
+        updated = replace_named_block(updated, TOTALS_START, TOTALS_END, snapshot_args[3])
     if updated != original:
         changed_files.append(path)
         if not check:
@@ -285,7 +337,7 @@ def main():
 
     root_readme = os.path.join(REPO_ROOT, "README.md")
     root_block = build_root_block(puzzles)
-    snapshot_numbers = compute_snapshot_numbers(puzzles)
+    snapshot_numbers = compute_snapshot_numbers(puzzles) + (build_totals_block(puzzles),)
     process_readme(root_readme, root_block, args.check, changed_files, is_root=True, snapshot_args=snapshot_numbers)
 
     for folder_prefix, tier in TIERS:

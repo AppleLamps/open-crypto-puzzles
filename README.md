@@ -1,17 +1,26 @@
 # open-crypto-puzzles
 
-Public crypto puzzles: an author locks coins behind a riddle, publishes the address, and
-dares anyone to solve it and take them. I am floflo777. I worked about 40 of these and
-solved a few (0.5 ETH and about 0.01 BTC). Here is my research on the rest.
+Someone hides a crypto wallet inside a puzzle, publishes the address, and dares the internet
+to solve it and keep what is in it. These are real, still unsolved, and the coins are sitting
+on-chain right now.
 
-Still unsolved and funded on-chain, checked 2026-08-16:
+## Still unsolved, sitting on-chain
 
-- about 10 BTC across 23 puzzles
-- 12.2 ETH across 5 puzzles
-- 1,900 AR across 3 puzzles
-- 306 USDT + 166 USDC across 2 puzzles
+<!-- totals:start -->
+| Asset | Locked in unsolved puzzles | Approx. value |
+|---|---|---|
+| Bitcoin | 10.01 BTC | $630,000 |
+| Ethereum | 12.21 ETH | $23,000 |
+| Arweave | 1,900 AR | $3,400 |
+| Stablecoins | 306 USDT + 166 USDC | $500 |
+| **Total** | **across 34 funded puzzles** | **$657,000** |
 
-Prices and balances move. Verify each escrow yourself before spending any effort.
+Checked 2026-08-16 at BTC $63,000, ETH $1,880, AR $1.81. Prices and balances move; verify each escrow yourself.
+<!-- totals:end -->
+
+I am floflo777. I worked about 40 of these and solved a few (0.5 ETH and about 0.01 BTC).
+This is my research on the rest: for every puzzle, the address, the author's clues, what I
+tried, and where I got stuck. Pick one and keep going.
 
 ## How to read this repository
 
