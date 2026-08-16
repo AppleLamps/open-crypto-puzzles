@@ -6,9 +6,9 @@ on-chain right now.
 
 ## Still unsolved, sitting on-chain
 
-![Donut chart of where the unsolved prize money sits, biggest prizes first, colored by blockchain](assets/prize-map.png)
+![Donut chart of where the unsolved prize money sits, biggest prizes first](assets/prize-map.png)
 
-*The biggest unsolved prizes, by blockchain. Regenerated from the manifests by `tools/fig_readme_totals.py`.*
+*The biggest unsolved prizes on-chain right now. Regenerated from the manifests by `tools/fig_readme_totals.py`.*
 
 <!-- totals:start -->
 | Asset | Locked in unsolved puzzles | Approx. value |
