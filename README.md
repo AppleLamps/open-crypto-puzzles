@@ -157,4 +157,4 @@ audiobooks and articles are not reproduced; each folder links to where to find t
 
 ## Contact
 
-X: @floflo777. Issues on this repository for corrections, solves, and new leads.
+X: [@0xFlorent_](https://x.com/0xFlorent_). Issues on this repository for corrections, solves, and new leads.
