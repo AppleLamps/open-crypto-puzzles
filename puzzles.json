@@ -8,11 +8,11 @@
     "AR": 1.81
   },
   "counts": {
-    "big": 8,
+    "big": 7,
     "mid": 22,
     "small": 4,
     "solved": 2,
-    "dead-end": 10
+    "dead-end": 11
   },
   "puzzles": [
     {
@@ -806,129 +806,6 @@
       "third_party_material": "no video or audio files are included; the challenge and hint videos are linked by URL only. The 5 planted sentences and 5 hints are the author's own published text, quoted short and verbatim with dates and links",
       "last_updated": "2026-08-16",
       "folder": "1-big-prizes/guntis-vitolins-metamask-8-6eth"
-    },
-    {
-      "schema_version": 1,
-      "slug": "objective-thune-licorne-0-21btc",
-      "title": "Objective Thune: Le Secret de la Licorne",
-      "tier": "big",
-      "status": "open",
-      "dead_end_reason": null,
-      "series": null,
-      "author": {
-        "name": "Jacques Favier and Philippe Ratte, published by PVH editions",
-        "handles": [
-          "web:pvh-editions.com",
-          "x:@EditionsPvh"
-        ],
-        "url": "https://pvh-editions.com"
-      },
-      "published": {
-        "date": "2020-03-01",
-        "url": "https://bitcoin.fr/le-secret-de-la-licorne/"
-      },
-      "chain": "bitcoin",
-      "prize": {
-        "amount": 0.21021,
-        "asset": "BTC",
-        "usd_estimate": 13243,
-        "usd_snapshot": "2026-08-16",
-        "note": "P2SH escrow, 2 funding transactions: 2020-01-03 (21,000,000 sats) and 2020-06-19 (21,000 sats)"
-      },
-      "addresses": [
-        {
-          "address": "3Jf995GANG4EmFBK89byNNyZdtB3ELXJsZ",
-          "chain": "bitcoin",
-          "role": "escrow",
-          "label": "main",
-          "explorer": "https://mempool.space/address/3Jf995GANG4EmFBK89byNNyZdtB3ELXJsZ",
-          "expected": "0.21021 BTC (21,021,000 sats)",
-          "verified_on": "2026-08-16",
-          "verified_state": "funded-unspent"
-        }
-      ],
-      "puzzle_type": [
-        "multisig",
-        "physical-object",
-        "book"
-      ],
-      "target_format": "3 private keys, physically hidden in 3 of 210 numbered book copies; their public keys form a Bitcoin Core 0.18.1-style P2SH multisig redeem script (M-of-3, key order not sorted)",
-      "derivation": {
-        "summary": "rebuild OP_M <pk1> <pk2> <pk3> OP_3 OP_CHECKMULTISIG for every key order and every M from candidate public keys, hash160 the script, base58check-encode as P2SH, compare to the escrow",
-        "oracle": "tools/oracle.py",
-        "oracle_certified": true,
-        "certified_against": "a real, already-spent 2-of-3 P2SH multisig found on-chain (block 360000, transaction de5af572e195ecbd7ce715be0464f79cd720b1c540c23c07a9d4e23dd24f8e47), decoded directly from its scriptSig"
-      },
-      "difficulty_left": "human-action",
-      "difficulty_note": "the mechanism is fully specified and the oracle is ready; what is missing is which 3 of the 210 physical book copies hold the keys, a physical fact, not a computation",
-      "tested_total": {
-        "candidates": 4308174,
-        "families": 6,
-        "certified": true
-      },
-      "leads": [
-        {
-          "rank": 1,
-          "title": "write to the authors or the publisher: has the lot ever been claimed",
-          "cost": "zero, one email",
-          "status": "open"
-        },
-        {
-          "rank": 2,
-          "title": "the 2025 CC BY-SA print-files zip (currently 404, not archived)",
-          "cost": "periodic recheck",
-          "status": "open"
-        },
-        {
-          "rank": 3,
-          "title": "locate a physical numbered collector copy and inspect it",
-          "cost": "needs-a-person",
-          "status": "open"
-        },
-        {
-          "rank": 4,
-          "title": "re-read the authors' and publisher's social accounts for a claim mention",
-          "cost": "minutes",
-          "status": "open"
-        }
-      ],
-      "solutions": [],
-      "artifacts": [],
-      "sources": [
-        {
-          "title": "Le secret de la Licorne",
-          "url": "https://bitcoin.fr/le-secret-de-la-licorne/",
-          "date": "2020-03-01",
-          "archived": null
-        },
-        {
-          "title": "Objective Thune, collector edition product page",
-          "url": "https://www.plaisirvaleurdhistoire.com/shop/objective-thune/222-soutien-licorne-financement-participatif-d-une-collection-bitcoin.html",
-          "date": "2021-01-16",
-          "archived": "https://web.archive.org/web/20210116213114/https://www.plaisirvaleurdhistoire.com/shop/objective-thune/222-soutien-licorne-financement-participatif-d-une-collection-bitcoin.html"
-        },
-        {
-          "title": "journalducoin.com, interview with the publisher",
-          "url": "https://journalducoin.com",
-          "date": "2020-02-29",
-          "archived": null
-        },
-        {
-          "title": "PVH editions",
-          "url": "https://pvh-editions.com",
-          "date": "2026-08-16",
-          "archived": null
-        },
-        {
-          "title": "mempool.space, escrow address",
-          "url": "https://mempool.space/address/3Jf995GANG4EmFBK89byNNyZdtB3ELXJsZ",
-          "date": "2026-08-16",
-          "archived": null
-        }
-      ],
-      "third_party_material": "the book is a commercial work; no page scans, OCR text, or press photos of the interior are included. Only short verbatim quotes (with source and date) from the publisher's own announcements are used, none exceeding 2 sentences; no image from the book, its cover, or press coverage is shipped in this folder",
-      "last_updated": "2026-08-16",
-      "folder": "1-big-prizes/objective-thune-licorne-0-21btc"
     },
     {
       "schema_version": 1,
@@ -4584,6 +4461,129 @@
       "third_party_material": "the site's own hint text and fragment table, reproduced as published; no third-party copyrighted material",
       "last_updated": "2026-08-16",
       "folder": "archive/dead-ends/commander-u-puzzle-8-5btc"
+    },
+    {
+      "schema_version": 1,
+      "slug": "objective-thune-licorne-0-21btc",
+      "title": "Objective Thune: Le Secret de la Licorne",
+      "tier": "dead-end",
+      "status": "dead-end",
+      "dead_end_reason": "unobtainable-material",
+      "series": null,
+      "author": {
+        "name": "Jacques Favier and Philippe Ratte, published by PVH editions",
+        "handles": [
+          "web:pvh-editions.com",
+          "x:@EditionsPvh"
+        ],
+        "url": "https://pvh-editions.com"
+      },
+      "published": {
+        "date": "2020-03-01",
+        "url": "https://bitcoin.fr/le-secret-de-la-licorne/"
+      },
+      "chain": "bitcoin",
+      "prize": {
+        "amount": 0.21021,
+        "asset": "BTC",
+        "usd_estimate": 13243,
+        "usd_snapshot": "2026-08-16",
+        "note": "P2SH escrow, 2 funding transactions: 2020-01-03 (21,000,000 sats) and 2020-06-19 (21,000 sats)"
+      },
+      "addresses": [
+        {
+          "address": "3Jf995GANG4EmFBK89byNNyZdtB3ELXJsZ",
+          "chain": "bitcoin",
+          "role": "escrow",
+          "label": "main",
+          "explorer": "https://mempool.space/address/3Jf995GANG4EmFBK89byNNyZdtB3ELXJsZ",
+          "expected": "0.21021 BTC (21,021,000 sats)",
+          "verified_on": "2026-08-16",
+          "verified_state": "funded-unspent"
+        }
+      ],
+      "puzzle_type": [
+        "multisig",
+        "physical-object",
+        "book"
+      ],
+      "target_format": "3 private keys, physically hidden in 3 of 210 numbered book copies; their public keys form a Bitcoin Core 0.18.1-style P2SH multisig redeem script (M-of-3, key order not sorted)",
+      "derivation": {
+        "summary": "rebuild OP_M <pk1> <pk2> <pk3> OP_3 OP_CHECKMULTISIG for every key order and every M from candidate public keys, hash160 the script, base58check-encode as P2SH, compare to the escrow",
+        "oracle": "tools/oracle.py",
+        "oracle_certified": true,
+        "certified_against": "a real, already-spent 2-of-3 P2SH multisig found on-chain (block 360000, transaction de5af572e195ecbd7ce715be0464f79cd720b1c540c23c07a9d4e23dd24f8e47), decoded directly from its scriptSig"
+      },
+      "difficulty_left": "none",
+      "difficulty_note": "the mechanism is fully specified and the oracle is ready; what is missing is which 3 of the 210 physical book copies hold the keys, a physical fact, not a computation",
+      "tested_total": {
+        "candidates": 4308174,
+        "families": 6,
+        "certified": true
+      },
+      "leads": [
+        {
+          "rank": 1,
+          "title": "write to the authors or the publisher: has the lot ever been claimed",
+          "cost": "zero, one email",
+          "status": "open"
+        },
+        {
+          "rank": 2,
+          "title": "the 2025 CC BY-SA print-files zip (currently 404, not archived)",
+          "cost": "periodic recheck",
+          "status": "open"
+        },
+        {
+          "rank": 3,
+          "title": "locate a physical numbered collector copy and inspect it",
+          "cost": "needs-a-person",
+          "status": "open"
+        },
+        {
+          "rank": 4,
+          "title": "re-read the authors' and publisher's social accounts for a claim mention",
+          "cost": "minutes",
+          "status": "open"
+        }
+      ],
+      "solutions": [],
+      "artifacts": [],
+      "sources": [
+        {
+          "title": "Le secret de la Licorne",
+          "url": "https://bitcoin.fr/le-secret-de-la-licorne/",
+          "date": "2020-03-01",
+          "archived": null
+        },
+        {
+          "title": "Objective Thune, collector edition product page",
+          "url": "https://www.plaisirvaleurdhistoire.com/shop/objective-thune/222-soutien-licorne-financement-participatif-d-une-collection-bitcoin.html",
+          "date": "2021-01-16",
+          "archived": "https://web.archive.org/web/20210116213114/https://www.plaisirvaleurdhistoire.com/shop/objective-thune/222-soutien-licorne-financement-participatif-d-une-collection-bitcoin.html"
+        },
+        {
+          "title": "journalducoin.com, interview with the publisher",
+          "url": "https://journalducoin.com",
+          "date": "2020-02-29",
+          "archived": null
+        },
+        {
+          "title": "PVH editions",
+          "url": "https://pvh-editions.com",
+          "date": "2026-08-16",
+          "archived": null
+        },
+        {
+          "title": "mempool.space, escrow address",
+          "url": "https://mempool.space/address/3Jf995GANG4EmFBK89byNNyZdtB3ELXJsZ",
+          "date": "2026-08-16",
+          "archived": null
+        }
+      ],
+      "third_party_material": "the book is a commercial work; no page scans, OCR text, or press photos of the interior are included. Only short verbatim quotes (with source and date) from the publisher's own announcements are used, none exceeding 2 sentences; no image from the book, its cover, or press coverage is shipped in this folder",
+      "last_updated": "2026-08-16",
+      "folder": "archive/dead-ends/objective-thune-licorne-0-21btc"
     },
     {
       "schema_version": 1,

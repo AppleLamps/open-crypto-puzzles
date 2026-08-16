@@ -1,4 +1,4 @@
-# Objective Thune: Le Secret de la Licorne (0.21021 BTC, [OPEN])
+# Objective Thune: Le Secret de la Licorne (0.21021 BTC, [DEAD END])
 
 "Objective Thune" is a French satirical essay pairing Tintin with Bitcoin, written by
 Jacques Favier and Philippe Ratte, illustrated by Pamina Calisti, and published by PVH
@@ -19,12 +19,22 @@ is missing is not a computation, it is which 3 of 210 physical books hold the ke
 | Chain | bitcoin |
 | Escrow | `3Jf995GANG4EmFBK89byNNyZdtB3ELXJsZ` ([mempool.space](https://mempool.space/address/3Jf995GANG4EmFBK89byNNyZdtB3ELXJsZ)) |
 | Last on-chain check | 2026-08-16: funded and unspent, 2 funding transactions, 21,021,000 sats, 0 spent |
-| Status | OPEN |
+| Status | DEAD END |
 | Puzzle type | multisig, physical-object, book |
 | Target format | 3 private keys hidden in 3 of 210 book copies; public keys form a P2SH multisig redeem script (M-of-3, Bitcoin Core 0.18.1 semantics, key order not sorted) |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against a real, already-spent 2-of-3 P2SH multisig found on-chain; it checks candidate public keys, it does not search for private keys) |
 | What remains | which 3 of 210 physical book copies hold the keys (human action, not computation) |
 | Series | none |
+
+## Why this is a dead end
+
+The escrow is real and still funded, but the material needed to solve it cannot be
+obtained. The three private keys are split across 3 of only 210 numbered collector
+copies of the book, and the publisher halted the print run over copyright on the
+Tintin-derived artwork, so those copies were never widely distributed. Reason:
+unobtainable material. Verified funded and unspent on 2026-08-16
+(`3Jf995GANG4EmFBK89byNNyZdtB3ELXJsZ`). It would reopen if one of the three
+key-bearing collector copies surfaces, or the authors or publisher release the keys.
 
 ## The puzzle as published
 
@@ -122,20 +132,8 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 
 ## Open leads, ranked
 
-1. **Write to the authors or the publisher** (zero cost, one email). PVH editions is
-   still active and publicly funded by the Swiss federal culture office for 2026-2028;
-   it lists a public contact address, and author Jacques Favier publishes his own. The
-   publisher has stated it does not know which 3 copies hold the keys, but it can
-   answer whether the lot has ever been claimed.
-2. **The 2025 CC BY-SA print-files zip** (periodic recheck). Announced 2025-05-02,
-   currently returns HTTP 404, not archived anywhere I checked. Would give free, full
-   access to the book's interior if it reappears.
-3. **Locate a physical numbered collector copy** (needs a person). About 128 of 210 had
-   sold by 2021-01-16; no buyer registry has surfaced.
-4. **Re-read the authors' and publisher's social accounts** (minutes). Not yet done for
-   a claim mention; earlier attempts hit rate limits, not a negative result.
-
-Full notes: [analysis/leads.md](analysis/leads.md).
+None while the reason above holds. It reopens only if the three key-bearing collector
+copies surface, or the authors or the publisher release the keys.
 
 ## Files in this folder
 

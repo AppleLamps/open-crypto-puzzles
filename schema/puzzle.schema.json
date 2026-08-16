@@ -41,14 +41,28 @@
     },
     "tier": {
       "type": "string",
-      "enum": ["big", "mid", "small", "solved", "dead-end"]
+      "enum": [
+        "big",
+        "mid",
+        "small",
+        "solved",
+        "dead-end"
+      ]
     },
     "status": {
       "type": "string",
-      "enum": ["open", "watch", "solved", "dead-end"]
+      "enum": [
+        "open",
+        "watch",
+        "solved",
+        "dead-end"
+      ]
     },
     "dead_end_reason": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "enum": [
         null,
         "unfunded",
@@ -59,51 +73,114 @@
         "no-exit-path",
         "author-deceased-unfinished",
         "window-closed",
-        "uneconomic"
+        "uneconomic",
+        "unobtainable-material"
       ]
     },
     "series": {
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "author": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "properties": {
-        "name": { "type": "string", "minLength": 1 },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
         "handles": {
           "type": "array",
-          "items": { "type": "string" }
+          "items": {
+            "type": "string"
+          }
         },
-        "url": { "type": ["string", "null"] }
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
     "published": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["date", "url"],
+      "required": [
+        "date",
+        "url"
+      ],
       "properties": {
-        "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-        "url": { "type": ["string", "null"] }
+        "date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
     "chain": {
       "type": "string",
-      "enum": ["bitcoin", "ethereum", "base", "arweave", "solana", "none"]
+      "enum": [
+        "bitcoin",
+        "ethereum",
+        "base",
+        "arweave",
+        "solana",
+        "none"
+      ]
     },
     "prize": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["amount", "asset", "usd_estimate", "usd_snapshot"],
+      "required": [
+        "amount",
+        "asset",
+        "usd_estimate",
+        "usd_snapshot"
+      ],
       "properties": {
-        "amount": { "type": ["number", "string"] },
+        "amount": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
         "asset": {
           "type": "string",
-          "enum": ["BTC", "sats", "ETH", "AR", "USDT", "USDC", "SOL", "NFT"]
+          "enum": [
+            "BTC",
+            "sats",
+            "ETH",
+            "AR",
+            "USDT",
+            "USDC",
+            "SOL",
+            "NFT"
+          ]
         },
-        "usd_estimate": { "type": ["number", "null"] },
-        "usd_snapshot": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-        "note": { "type": "string" }
+        "usd_estimate": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "usd_snapshot": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "note": {
+          "type": "string"
+        }
       }
     },
     "addresses": {
@@ -111,21 +188,53 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["address", "chain", "role", "explorer", "verified_on", "verified_state"],
+        "required": [
+          "address",
+          "chain",
+          "role",
+          "explorer",
+          "verified_on",
+          "verified_state"
+        ],
         "properties": {
-          "address": { "type": "string", "minLength": 1 },
+          "address": {
+            "type": "string",
+            "minLength": 1
+          },
           "chain": {
             "type": "string",
-            "enum": ["bitcoin", "ethereum", "base", "arweave", "solana", "none"]
+            "enum": [
+              "bitcoin",
+              "ethereum",
+              "base",
+              "arweave",
+              "solana",
+              "none"
+            ]
           },
           "role": {
             "type": "string",
-            "enum": ["escrow", "contract", "funder", "payout", "decoy"]
+            "enum": [
+              "escrow",
+              "contract",
+              "funder",
+              "payout",
+              "decoy"
+            ]
           },
-          "label": { "type": "string" },
-          "explorer": { "type": "string" },
-          "expected": { "type": "string" },
-          "verified_on": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "label": {
+            "type": "string"
+          },
+          "explorer": {
+            "type": "string"
+          },
+          "expected": {
+            "type": "string"
+          },
+          "verified_on": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
           "verified_state": {
             "type": "string",
             "enum": [
@@ -179,10 +288,21 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "summary": { "type": "string" },
-        "oracle": { "type": ["string", "null"] },
-        "oracle_certified": { "type": "boolean" },
-        "certified_against": { "type": "string" }
+        "summary": {
+          "type": "string"
+        },
+        "oracle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "oracle_certified": {
+          "type": "boolean"
+        },
+        "certified_against": {
+          "type": "string"
+        }
       }
     },
     "difficulty_left": {
@@ -197,14 +317,24 @@
         "none"
       ]
     },
-    "difficulty_note": { "type": "string" },
+    "difficulty_note": {
+      "type": "string"
+    },
     "tested_total": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "candidates": { "type": "integer", "minimum": 0 },
-        "families": { "type": "integer", "minimum": 0 },
-        "certified": { "type": "boolean" }
+        "candidates": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "families": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "certified": {
+          "type": "boolean"
+        }
       }
     },
     "leads": {
@@ -212,12 +342,26 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["rank", "title", "cost", "status"],
+        "required": [
+          "rank",
+          "title",
+          "cost",
+          "status"
+        ],
         "properties": {
-          "rank": { "type": "integer", "minimum": 1 },
-          "title": { "type": "string" },
-          "cost": { "type": "string" },
-          "status": { "type": "string" }
+          "rank": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "title": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
         }
       }
     },
@@ -226,16 +370,42 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["lot", "date", "answer", "key_material_disclosed", "payout_txid", "payout_amount", "payout_to", "explorer"],
+        "required": [
+          "lot",
+          "date",
+          "answer",
+          "key_material_disclosed",
+          "payout_txid",
+          "payout_amount",
+          "payout_to",
+          "explorer"
+        ],
         "properties": {
-          "lot": { "type": "string" },
-          "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-          "answer": { "type": "string" },
-          "key_material_disclosed": { "type": "boolean" },
-          "payout_txid": { "type": "string" },
-          "payout_amount": { "type": "string" },
-          "payout_to": { "type": "string" },
-          "explorer": { "type": "string" }
+          "lot": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "key_material_disclosed": {
+            "type": "boolean"
+          },
+          "payout_txid": {
+            "type": "string"
+          },
+          "payout_amount": {
+            "type": "string"
+          },
+          "payout_to": {
+            "type": "string"
+          },
+          "explorer": {
+            "type": "string"
+          }
         }
       }
     },
@@ -244,12 +414,28 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["path", "sha256", "source"],
+        "required": [
+          "path",
+          "sha256",
+          "source"
+        ],
         "properties": {
-          "path": { "type": "string" },
-          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
-          "source": { "type": "string" },
-          "archived": { "type": ["string", "null"] }
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "source": {
+            "type": "string"
+          },
+          "archived": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         }
       }
     },
@@ -258,12 +444,28 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["title", "url", "date"],
+        "required": [
+          "title",
+          "url",
+          "date"
+        ],
         "properties": {
-          "title": { "type": "string" },
-          "url": { "type": "string" },
-          "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-          "archived": { "type": ["string", "null"] }
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "archived": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         }
       }
     },
