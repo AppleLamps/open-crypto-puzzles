@@ -74,6 +74,14 @@ received anything at all. This is different from "swept": the funds were never t
 first place, often because a follow-up announcement never materialized, or the amount quoted
 publicly does not match anything on chain.
 
+## What "zero-balance-contract" looks like
+
+A deployed contract that is part of a puzzle but is not itself an escrow can be expected to
+hold no prize funds. Its manifest uses `zero-balance-contract` so the funding checker records
+that expectation without calling it `unfunded` or `swept`. The EVM check requires both a zero
+balance and non-empty bytecode, rather than inferring funding history from the account nonce.
+Empty bytecode or a later positive balance is reported as drift and makes the check fail.
+
 ## What "custodial" means
 
 Some puzzles do not lock funds in a wallet you can check directly. Instead, a platform or a

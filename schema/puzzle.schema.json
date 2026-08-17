@@ -243,10 +243,37 @@
               "swept",
               "unfunded",
               "contract-holds-funds",
+              "zero-balance-contract",
               "unknown"
             ]
           }
-        }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "verified_state": {
+                  "const": "zero-balance-contract"
+                }
+              },
+              "required": ["verified_state"]
+            },
+            "then": {
+              "required": ["expected"],
+              "properties": {
+                "chain": {
+                  "enum": ["ethereum", "base"]
+                },
+                "role": {
+                  "const": "contract"
+                },
+                "expected": {
+                  "pattern": "^0+(?:\\.0+)?\\s"
+                }
+              }
+            }
+          }
+        ]
       }
     },
     "puzzle_type": {

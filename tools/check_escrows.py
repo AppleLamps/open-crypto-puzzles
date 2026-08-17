@@ -18,9 +18,15 @@ Input:
     puzzles.json if present at the repository root, otherwise every <tier>/<slug>/puzzle.json.
 
 Output:
-    One printed row per address: slug, label, address, expected, observed, spent, verdict.
-    Exit code 1 if any address that a manifest claims is "funded-unspent" is observed as
-    swept or unfunded. Network errors are printed as ERROR and never counted as a sweep.
+    One printed row per address: slug, label, address, expected, observed state and verdict,
+    followed by chain-specific details.
+    Exit code 1 if an address claimed as "funded-unspent" is observed as swept or unfunded,
+    or if a "zero-balance-contract" no longer has both bytecode and a zero balance. Network
+    errors are printed as ERROR and never counted as drift.
+
+    A deployed EVM contract that is not itself an escrow may use the manifest state
+    "zero-balance-contract". For that state, the checker verifies both a zero balance and
+    non-empty bytecode without claiming that the contract ever held prize funds.
 """
 
 import argparse
@@ -28,6 +34,7 @@ import json
 import os
 import sys
 from datetime import date
+from decimal import Decimal, InvalidOperation
 
 import requests
 
@@ -37,7 +44,11 @@ TIERS = ["1-big-prizes", "2-mid-prizes", "3-small-prizes", "4-solved", "archive/
 TIMEOUT = 15
 RETRIES = 1  # one retry after the first attempt, so two attempts total
 
-ETH_RPC_ENDPOINTS = ["https://eth.drpc.org", "https://cloudflare-eth.com"]
+ETH_RPC_ENDPOINTS = [
+    "https://eth.drpc.org",
+    "https://cloudflare-eth.com",
+    "https://ethereum-rpc.publicnode.com",
+]
 BASE_RPC_ENDPOINT = "https://mainnet.base.org"
 
 
@@ -109,6 +120,30 @@ def check_evm(address, endpoints):
     return "ERROR", f"network error: {last_exc}"
 
 
+def check_zero_balance_evm_contract(address, endpoints):
+    last_exc = None
+    for url in endpoints:
+        try:
+            balance_hex = _eth_rpc(url, "eth_getBalance", [address, "latest"])
+            code = _eth_rpc(url, "eth_getCode", [address, "latest"])
+            balance_wei = int(balance_hex, 16)
+            code_empty = code in ("0x", "0x0")
+            code_bytes = 0 if code_empty else (len(code.removeprefix("0x")) + 1) // 2
+            if balance_wei > 0:
+                return "funded-unspent", (
+                    f"balance_wei={balance_wei} code_bytes={code_bytes} (via {url})"
+                )
+            if code_empty:
+                return "unfunded", f"balance_wei=0 code=empty (via {url})"
+            return "zero-balance-contract", (
+                f"balance_wei=0 code_bytes={code_bytes} (via {url})"
+            )
+        except Exception as exc:
+            last_exc = exc
+            continue
+    return "ERROR", f"network error: {last_exc}"
+
+
 def check_ethereum(address):
     return check_evm(address, ETH_RPC_ENDPOINTS)
 
@@ -133,6 +168,9 @@ def check_arweave(address):
 def check_address(entry):
     chain = entry.get("chain", "")
     address = entry.get("address", "")
+    if is_zero_balance_contract_entry(entry):
+        endpoints = ETH_RPC_ENDPOINTS if chain == "ethereum" else [BASE_RPC_ENDPOINT]
+        return check_zero_balance_evm_contract(address, endpoints)
     if chain == "bitcoin":
         return check_bitcoin(address)
     if chain == "ethereum":
@@ -144,6 +182,25 @@ def check_address(entry):
     if chain == "solana":
         return "SKIPPED", "Solana is not queried automatically; check https://solscan.io/account/<address> by hand."
     return "ERROR", f"unknown chain: {chain}"
+
+
+def expected_amount_is_zero(entry):
+    token = entry.get("expected", "").strip().split(maxsplit=1)
+    if not token:
+        return False
+    try:
+        return Decimal(token[0].replace(",", "")) == 0
+    except InvalidOperation:
+        return False
+
+
+def is_zero_balance_contract_entry(entry):
+    return (
+        entry.get("chain") in ("ethereum", "base")
+        and entry.get("role") == "contract"
+        and expected_amount_is_zero(entry)
+        and entry.get("verified_state") == "zero-balance-contract"
+    )
 
 
 def load_puzzles(slug_filter=None):
@@ -235,6 +292,9 @@ def main():
                 verdict = "ERROR (network, not a verdict)"
             elif state == "SKIPPED":
                 verdict = "SKIPPED"
+            elif claimed_state == "zero-balance-contract" and state != claimed_state:
+                verdict = f"DRIFT: manifest says zero-balance-contract, chain says {state}"
+                any_drift = True
             elif claimed_state == "funded-unspent" and state in ("swept", "unfunded"):
                 verdict = f"DRIFT: manifest says funded-unspent, chain says {state}"
                 any_drift = True
@@ -249,7 +309,7 @@ def main():
             update_manifest(puzzle, results_by_address)
 
     if any_drift:
-        print("\nAt least one address that a manifest claims is funded-unspent is now swept or unfunded.")
+        print("\nAt least one critical manifest state no longer matches the chain.")
         sys.exit(1)
     sys.exit(0)
 
