@@ -1,4 +1,4 @@
-# Aoi Nakamoto Quizchain (0.854 BTC, [OPEN])
+# Aoi Nakamoto Quizchain (0.854 BTC, [Partially Solved - Quizchain Block 2 : 0.077 BTC solved])
 
 AoiNakamoto, a pseudonymous Reddit user, ran a series of roughly 90 self-funded
 Bitcoin puzzle blocks from April to October 2019 on r/bitcoinpuzzles and her own
