@@ -177,14 +177,47 @@ derivation it then decrypted with. A round trip certifies self-consistency, not 
 choice, and cannot fail on a wrong constant used on both sides. `tools/oracle.py` now
 certifies against the phase-2 blob instead, and asserts that MD5 fails on it.
 
-Scope: it is proven that the shipped digest fails on both blobs in this puzzle whose
-passwords are known. That the small blob also requires SHA-256 is an inference from the
-same author, the same page family, the formula the pages themselves print
-("aes-256-cbc /w base64 sha-256(password)"), and two independent confirmations. It cannot
-be proven without the small blob's password.
+Scope, corrected 2026-08-19: it is proven that MD5 fails on the phase-2 and phase-3
+blobs, which is enough to establish that the shipped oracle's hardcoded MD5 was wrong.
+It is NOT true that MD5 is unused in this puzzle. The Cosmic Duality blob decrypts only
+under EVP_BytesToKey with MD5, verified by reproducing its published plaintext hash
+4f7a1e4e...c081 at 1327 bytes from the live page (see section 11). The author therefore
+used both digests on different blobs, and nothing determines which the small blob uses,
+because its password is unknown. Hardcoding either digest is an error; `tools/oracle.py`
+now tries both.
 
 Consequence: any negative previously obtained through the shipped oracle is uncertified
 and needs re-running. Date: 2026-08-19.
+
+
+## 11. Cosmic Duality is decryptable, and it uses MD5
+
+Not a candidate sweep, and a correction to this folder's account of the large blob. Row 6
+and the README describe the "Dualite" / Cosmic Duality blob as never successfully
+decrypted under any tested password. It has been decrypted, publicly, and the result
+reproduces here from primary sources.
+
+Method: the key is the XOR chain of the SHA-256 digests of seven tokens, in order --
+matrixsumlist, enter, lastwordsbeforearchichoice, thispassword, matrixsumlist,
+yourlastcommand, secondanswer -- giving
+a795de117e472590e572dc193130c763e3fb555ee5db9d34494e156152e50735. Those 32 raw bytes are
+then used as the password to EVP_BytesToKey with MD5 against the blob published on the
+SalPhaseIon page.
+
+Result: 1327 bytes of high-entropy output, SHA-256
+4f7a1e4efe4bf6c5581e32505c019657cb7b030e90232d33f011aca6a5e9c081. Both the key and the
+plaintext hash were reproduced independently here from the live page, matching the
+published values exactly. Witness: yes, the reproduction is the witness. Date: 2026-08-19.
+
+Note that four of the seven tokens are the strings this folder already documents from the
+SalPhaseIon page. They are ingredients in a key derivation, not the answer string the
+small blob's password is built from; reading `lastwordsbeforearchichoice` and
+`thispassword` as an instruction naming the small blob's password (section 9's last-words
+sweeps) is therefore probably the wrong reading of them.
+
+Consequence for the small blob: since the puzzle demonstrably mixes digests, sweeps that
+assume one digest cover only half the space. Section 9's sweeps assumed SHA-256 and are
+negative only for SHA-256.
 
 
 ## Cumulative

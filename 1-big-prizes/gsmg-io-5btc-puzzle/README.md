@@ -144,11 +144,13 @@ stages do provide real blobs with known passwords for the decryption half:
 2. **AES decrypt**: the puzzle's own phase-2 blob, whose password is the known stage
    answer `sha256("causality")`, decrypts to its known plaintext under
    EVP_BytesToKey with SHA-256, and produces no valid PKCS7 padding under a wrong
-   password. A third check asserts that EVP_BytesToKey with MD5 fails on the same
-   blob. This replaces an earlier synthetic round-trip vector, which could not detect
-   a wrong digest because it encrypted and decrypted with the same derivation; that
-   is how the file came to ship MD5, which fails on every blob in this puzzle whose
-   password is known (see `analysis/tested.md` section 10).
+   password. A third check asserts that EVP_BytesToKey with MD5 fails on that
+   particular blob. This replaces an earlier synthetic round-trip vector, which could
+   not detect a wrong digest because it encrypted and decrypted with the same
+   derivation. Note that the puzzle uses both digests: phases 2 and 3 use SHA-256,
+   while the Cosmic Duality blob uses MD5 (see `analysis/tested.md` sections 10 and
+   11). Since the small blob's password is unknown, its digest cannot be determined,
+   and the oracle tries both.
 3. The published blob itself is confirmed to decode to the documented shape: 96
    bytes, header `Salted__`, salt `3ab585348552415d`.
 

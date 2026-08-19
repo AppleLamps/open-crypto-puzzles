@@ -92,17 +92,24 @@ def sha256(b: bytes) -> bytes:
     return hashlib.sha256(b).digest()
 
 
-def evp_bytes_to_key(password: bytes, salt: bytes, key_len: int, iv_len: int) -> tuple[bytes, bytes]:
-    """OpenSSL's EVP_BytesToKey with SHA-256, the default for `openssl enc` without
-    -md since OpenSSL 1.1.0, and the scheme this puzzle's own blobs actually use.
+def evp_bytes_to_key(password: bytes, salt: bytes, key_len: int, iv_len: int,
+                     digest: str = "sha256") -> tuple[bytes, bytes]:
+    """OpenSSL's EVP_BytesToKey, with the digest selectable.
 
-    An earlier version of this file used MD5 here, on the assumption that the puzzle
-    predated the OpenSSL default change. That is wrong: the puzzle's phase-2 and
-    phase-3 blobs decrypt cleanly under SHA-256 and produce garbage under MD5, which
-    selftest part 2 now checks directly against a real puzzle blob."""
+    This puzzle uses BOTH digests, so neither can be assumed:
+
+      phase 2, phase 3   SHA-256 (the `openssl enc` default since OpenSSL 1.1.0);
+                         MD5 yields invalid padding and garbage on both.
+      Cosmic Duality     MD5; SHA-256 fails on it.
+
+    An earlier version of this file hardcoded MD5 and described it as the scheme used
+    throughout, which is wrong for phases 2 and 3. Hardcoding SHA-256 instead would be
+    equally wrong for Cosmic Duality. Since the small blob's password is unknown, its
+    digest cannot be determined, so `attempt` tries both."""
+    H = hashlib.sha256 if digest == "sha256" else hashlib.md5
     derived, prev = b"", b""
     while len(derived) < key_len + iv_len:
-        prev = hashlib.sha256(prev + password + salt).digest()
+        prev = H(prev + password + salt).digest()
         derived += prev
     return derived[:key_len], derived[key_len:key_len + iv_len]
 
@@ -118,14 +125,14 @@ def unpad_pkcs7(data: bytes) -> bytes | None:
     return data[:-n]
 
 
-def decrypt_blob(blob_b64: str, password: str) -> bytes | None:
+def decrypt_blob(blob_b64: str, password: str, digest: str = "sha256") -> bytes | None:
     """Decrypt an OpenSSL "Salted__" AES-256-CBC blob. Returns the unpadded
     plaintext, or None if the header is malformed or padding does not validate."""
     raw = base64.b64decode(blob_b64)
     if raw[:8] != b"Salted__":
         return None
     salt, ciphertext = raw[8:16], raw[16:]
-    key, iv = evp_bytes_to_key(password.encode("utf-8"), salt, 32, 16)
+    key, iv = evp_bytes_to_key(password.encode("utf-8"), salt, 32, 16, digest)
     plain = AES.new(key, AES.MODE_CBC, iv).decrypt(ciphertext)
     return unpad_pkcs7(plain)
 
@@ -160,10 +167,14 @@ def wif_uncompressed(priv_bytes: bytes) -> str:
 
 def attempt(candidate: str) -> tuple[bool, dict]:
     password = hashlib.sha256(candidate.encode("utf-8")).hexdigest()
-    plain = decrypt_blob(BLOB_B64, password)
-    if plain is None:
-        return False, {"reason": "PKCS7 padding did not validate"}
-    for name, key_bytes in readings(plain):
+    # The puzzle uses both digests on different blobs, and this blob's password is
+    # unknown, so neither can be ruled out. Try both.
+    plains = [(d, decrypt_blob(BLOB_B64, password, d)) for d in ("sha256", "md5")]
+    plains = [(d, p) for d, p in plains if p is not None]
+    if not plains:
+        return False, {"reason": "PKCS7 padding did not validate under either digest"}
+    for digest, plain in plains:
+      for name, key_bytes in readings(plain):
         if len(key_bytes) != 32:
             continue
         try:
@@ -172,6 +183,7 @@ def attempt(candidate: str) -> tuple[bool, dict]:
             continue
         if address == TARGET_ADDRESS:
             return True, {
+                "digest": digest,
                 "reading": name,
                 "address": address,
                 "priv_hex": key_bytes.hex(),
@@ -210,9 +222,10 @@ def selftest() -> bool:
     print(f"wrong password on the same blob -> no valid padding: {'OK' if part2b else 'FAIL'}")
     ok = ok and part2b
 
-    # Part 2c: the MD5 derivation this file used previously must FAIL on the same real
-    # blob. This is the check whose absence let the wrong digest stand: a self-made
-    # vector round-trips under any digest, so only a real blob can catch it.
+    # Part 2c: MD5 must fail on the phase-2 blob specifically. This does NOT mean MD5
+    # is unused in the puzzle: the Cosmic Duality blob uses MD5 (verified against its
+    # published plaintext hash). The two digests appear on different blobs, which is
+    # why attempt() tries both rather than assuming either.
     def _md5_derive(password, salt, key_len, iv_len):
         derived, prev = b"", b""
         while len(derived) < key_len + iv_len:
@@ -224,7 +237,7 @@ def selftest() -> bool:
     k2, iv2 = _md5_derive(phase2_password.encode("utf-8"), raw2[8:16], 32, 16)
     md5_plain = AES.new(k2, AES.MODE_CBC, iv2).decrypt(raw2[16:])
     part2c = unpad_pkcs7(md5_plain) is None
-    print(f"MD5 derivation fails on the same blob (regression guard): {'OK' if part2c else 'FAIL'}")
+    print(f"MD5 fails on the phase-2 blob specifically: {'OK' if part2c else 'FAIL'}")
     ok = ok and part2c
 
     # Part 3: the real blob decodes to the documented shape (96 bytes total,
@@ -239,7 +252,8 @@ def selftest() -> bool:
         print(
             "Note: part 1 certifies the address half against on-chain data; parts 2, "
             "2b and 2c certify the key-derivation and AES half against a real puzzle "
-            "blob whose password is known. X itself remains unsolved."
+            "blob whose password is known. The puzzle uses SHA-256 on phases 2 and 3 "
+            "and MD5 on Cosmic Duality, so attempt() tries both. X remains unsolved."
         )
     return ok
 
