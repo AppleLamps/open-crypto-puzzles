@@ -55,13 +55,15 @@
   },
   "difficulty_left": "insight",
   "difficulty_note": "the stage chain to the final page is fully solved and reproducible; the 256-symbol object the puzzle's own Bifid step produces has been tested as a direct 32-byte key reduction across roughly 335.7 million candidates with 0 match; the small blob's AES-decrypt pipeline is certified but no password has been found; a further 116,043-candidate replay of historical literal password guesses is also negative and explicitly partial (dynamically-constructed candidates from the same scripts were never replayed); the larger Dualite blob, which likely gates the second address, has never had any password tested against it",
-  "tested_total": { "candidates": 335840658, "families": 8, "certified": true },
+  "tested_total": { "candidates": 337199235, "families": 10, "certified": true },
   "leads": [
-    { "rank": 1, "title": "replay the dynamically-constructed candidates a filter bug never reached", "cost": "hours-to-days", "status": "open" },
-    { "rank": 2, "title": "determine whether the 256-symbol object is the right target at all", "cost": "hours", "status": "open" },
-    { "rank": 3, "title": "identify the single tool reportedly used to build every phase", "cost": "hours", "status": "open" },
-    { "rank": 4, "title": "follow esrever, the earliest published hint", "cost": "minutes-to-hours", "status": "open" },
-    { "rank": 5, "title": "read the 29 dropped letters as their own message", "cost": "minutes", "status": "open" }
+    { "rank": 1, "title": "re-run anything tested through the shipped oracle, whose key derivation was wrong until 2026-08-19", "cost": "cost of the original sweep", "status": "open" },
+    { "rank": 2, "title": "the small blob is published on the SalPhaseIon page, whose own text names its password", "cost": "hours", "status": "open" },
+    { "rank": 3, "title": "replay the dynamically-constructed candidates a filter bug never reached", "cost": "hours-to-days", "status": "open" },
+    { "rank": 4, "title": "determine whether the 256-symbol object is the right target at all", "cost": "hours", "status": "open" },
+    { "rank": 5, "title": "identify the single tool reportedly used to build every phase", "cost": "hours", "status": "open" },
+    { "rank": 6, "title": "follow esrever, the earliest published hint", "cost": "minutes-to-hours", "status": "open" },
+    { "rank": 7, "title": "read the 29 dropped letters as their own message", "cost": "minutes", "status": "open" }
   ],
   "solutions": [],
   "artifacts": [],
@@ -74,5 +76,5 @@
     { "title": "Community-maintained stage documentation", "url": "https://github.com/puzzlehunt/gsmgio-5btc-puzzle", "date": "2026-08-16", "archived": null }
   ],
   "third_party_material": "no book, article, forum dump, or other bulk third-party material is included; the 2 short strings quoted in clues/author-posts.md are verbatim decodings of the puzzle's own published page content; no Telegram export is quoted, since the puzzle's Telegram group has no stable public URL",
-  "last_updated": "2026-08-16"
+  "last_updated": "2026-08-19"
 }

@@ -124,15 +124,81 @@ scripts constructed dynamically at run time (concatenations, permutations, chain
 derivations). Those dynamic patterns are the subject of the open lead ranked first
 in the README; this row is why that lead is ranked first rather than closed.
 
+## 9. The small-blob pipeline, first sweeps
+
+The rows above test the 256-symbol object and the large blob. None of them tests the
+small-blob pipeline `tools/oracle.py` implements (candidate answer to sha256 password to
+AES decrypt to 32-byte key to address). These rows are the first sweeps of it.
+
+Every sweep below was first run against the shipped oracle, which derived the AES key with
+EVP_BytesToKey/MD5. That derivation is wrong for this puzzle (see section 10). The counts
+and results here are from the re-run under EVP_BytesToKey/SHA-256; the earlier results are
+void rather than negative, and are not reported.
+
+Method: candidates pushed through the corrected oracle with no filter ahead of the address
+comparison. PKCS7 padding rejects about 255 of every 256 wrong passwords before any
+elliptic-curve work, measured at 0.35 percent of random passwords producing valid padding
+against 0.39 percent expected, which is what makes this pipeline cheap to sweep. Measured
+rate 76,803 candidates per second per core.
+
+| Configuration | Candidates | Result |
+|---|---|---|
+| Puzzle vocabulary and stage names, each in four cases and reversed | 273 | 0 match |
+| Ordered pairs of that vocabulary | 74,256 | 0 match |
+| Suffixes and prefixes of the Architect message | 4,174 | 0 match |
+| Every contiguous word window up to 14 words of the Architect message, the VIC plaintext, and the phase-2 and phase-3 decryptions | 49,808 | 0 match |
+| Last-N-word readings of every stage text, in the conventions the pages state | 5,608 | 0 match |
+| Live-page prose re-fetched from the site, SalPhaseIon and Cosmic Duality terms | 17,125 | 0 match |
+| The system word list, each entry in four cases and reversed | 1,194,789 | 0 match |
+| Confirmed stage passwords and their pairwise concatenations, including the phase-1 form password recovered from the hidden POST form on the theseedisplanted page | 12,544 | 0 match |
+
+Result: 1,358,577 submissions, 0 match. Witness: yes, the corrected oracle reproduces two
+real puzzle blobs from their known passwords (section 10). Date: 2026-08-19.
+
+## 10. Key derivation: the shipped oracle used the wrong digest
+
+Not a candidate sweep. `tools/oracle.py` derived the AES key with EVP_BytesToKey/MD5, and
+its docstring described MD5 as "the scheme used throughout this puzzle's earlier stages".
+That is false, and it is checkable against the puzzle's own material.
+
+Method: the phase-2 and phase-3 blobs were re-fetched from the live page and decrypted
+with their known stage passwords under both digests.
+
+| blob | password | MD5 | SHA-256 |
+|---|---|---|---|
+| phase 2 | sha256 of the stage answer | padding invalid, 35 percent printable | padding valid, 100 percent printable, known plaintext |
+| phase 3 | sha256 of the concatenated parts 1 to 7 | padding invalid, 38 percent printable | padding valid, 100 percent printable, known plaintext |
+
+The phase-3 password digest was recomputed independently and reproduces the digest the
+community published, which confirms the password string as well as the digest choice.
+
+Why the old selftest passed anyway: its part 2 encrypted a self-made blob with the same
+derivation it then decrypted with. A round trip certifies self-consistency, not the digest
+choice, and cannot fail on a wrong constant used on both sides. `tools/oracle.py` now
+certifies against the phase-2 blob instead, and asserts that MD5 fails on it.
+
+Scope: it is proven that the shipped digest fails on both blobs in this puzzle whose
+passwords are known. That the small blob also requires SHA-256 is an inference from the
+same author, the same page family, the formula the pages themselves print
+("aes-256-cbc /w base64 sha-256(password)"), and two independent confirmations. It cannot
+be proven without the small blob's password.
+
+Consequence: any negative previously obtained through the shipped oracle is uncertified
+and needs re-running. Date: 2026-08-19.
+
+
 ## Cumulative
 
 Across the 7 completed hypothesis families above (rows 1 to 7), 335,724,615
 candidate submissions were made against the real address-comparison logic used in
 the private research, all negative. Row 8's 116,043 submissions are reported
-separately because that replay is explicitly partial. Rows 1 to 5 test the
+separately because that replay is explicitly partial. Section 9's 1,358,577 submissions
+are reported separately again, because they sweep a different half of the final gate (the
+small blob) and because they postdate the key-derivation correction in section 10. Rows 1 to 5 test the
 hypothesis that the 256-symbol object reduces directly to a 32-byte key, bypassing
-the AES blob entirely; row 6 tests the large blob without a password. None of these
-rows tested the small-blob pipeline that `tools/oracle.py` in this folder
-implements (candidate answer to sha256 password to AES decrypt); that specific,
-publicly reproducible half of the final gate had not been isolated and swept on its
-own as of the private research's last update.
+the AES blob entirely; row 6 tests the large blob without a password. Rows 1 to 8 do not
+test the small-blob pipeline that `tools/oracle.py` in this folder implements
+(candidate answer to sha256 password to AES decrypt); as of the private research's last
+update that publicly reproducible half of the final gate had not been isolated and swept
+on its own. Section 9 is the first sweep of it, and section 10 records why every result
+obtained through the shipped oracle before that point has to be discarded.
