@@ -220,6 +220,65 @@ assume one digest cover only half the space. Section 9's sweeps assumed SHA-256 
 negative only for SHA-256.
 
 
+## 12. The Half / Better Half derivation, reproduced end to end
+
+Not a candidate sweep. The Cosmic Duality plaintext from section 11 carries the rest of
+the chain, and the whole of it reproduces here from primary sources.
+
+Method, applied to the 1327-byte plaintext:
+
+1. Read as a bitstream, row-major, into a 103 x 103 binary matrix. 1327 bytes is 10,616
+   bits and 103 x 103 is 10,609, leaving 7 padding bits; the fit is exact.
+2. Take row_sums[i] (ones per row) and col_sums[i] (ones per column).
+3. secondary[i] = chr((row_sums[i] + col_sums[(i + 7) mod 103]) and 0xFF), giving 103
+   characters whose ordinals lie in 80..117, i.e. exactly 38 distinct symbols.
+4. Decode those 103 characters as a base-38 number with digit = ord(ch) - 80, giving 68
+   bytes: 32 for "Half", 32 for "Better half", and 4 trailing.
+
+Result: the 103-character secondary string reproduces the value published in
+puzzlehunt/gsmgio-5btc-puzzle#72 exactly, and the two 32-byte values reproduce the keys
+published in that repository's issue #79, which derive to:
+
+| | compressed | uncompressed |
+|---|---|---|
+| Half | 1JG648yaB7Wp2dpUfcZoRSD4q35oq47vCu | 15E3pcDDXSKhvi3CLVhRTHEgd8dbVKvSZg |
+| Better half | 145ZQ9siLrsXBKf465wjdyQYAP5dRwhRhQ | 1FhbJnrdq1FmeiXrpTqnpQ8jvYV7naze96 |
+
+The private keys are already public in that issue and are not repeated here; the four
+addresses above are enough to check the derivation. All four were empty when checked on
+2026-08-19. Witness: yes, the reproduction from the live page is the witness.
+Date: 2026-08-19.
+
+## 13. The trailing 4 bytes complete the phase-2 variable table
+
+The 4 bytes left over from section 12's base-38 decode are `fc0c1b02`. Read as signed
+bytes they are -4, 12, 27, 2.
+
+Those are the four unknowns in the table the phase-2 page prints as
+`# X 2 S H 4 Y 0 Q B 15 #`. Two of its variables were already public: S = 32, from the
+Klingon arithmetic the page gives (cha' + vagh x jav = 2 + 5 x 6), and B = -16, from the
+Intel processor model number the page gives ((4i)^2). X, H, Y and Q had no published
+values. With the trailing bytes supplying X = -4, H = 12, Y = 27 and Q = 2, the table
+resolves in full to:
+
+    -4, 2, 32, 12, 4, 27, 0, 2, -16, 15
+
+This closes an object that had been partially solved since 2019 and connects two stages
+that were previously unrelated in this folder's account: the phase-2 riddle table and the
+tail of the Cosmic Duality decode.
+
+Tested as password material for the small blob (decimal joins with several separators,
+absolute values, hex forms, the raw byte string, the concatenated and XORed key material,
+each under both key-derivation digests): 32 forms, 0 match.
+
+Provenance note: the same reading appears in puzzlehunt/gsmgio-5btc-puzzle#88. That issue
+also asserts a hidden "Salted__" blob at offset 158 of the Cosmic Duality plaintext with
+salt 5bbd88ac32481bca, which is false: there is no such marker anywhere in the 1327 bytes
+and those eight salt bytes occur at no offset, checked against a file whose SHA-256
+matches the one that issue itself publishes. The table reading is recorded here because it
+was independently verified, not because it was posted.
+
+
 ## Cumulative
 
 Across the 7 completed hypothesis families above (rows 1 to 7), 335,724,615
