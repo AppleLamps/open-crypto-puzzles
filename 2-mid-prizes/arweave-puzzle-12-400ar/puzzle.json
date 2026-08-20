@@ -42,7 +42,7 @@
   },
   "difficulty_left": "insight",
   "difficulty_note": "mechanism and oracle fully certified; piece 3 is solved with certainty, piece 1 has a strong unconfirmed reading, piece 4's hatching is refuted as an ordering scheme; the open gap is piece 2's exact 18-character string once the other 3 pieces are fixed",
-  "tested_total": { "candidates": 156730, "families": 5, "certified": true },
+  "tested_total": { "candidates": 3014356, "families": 16, "certified": true },
   "leads": [
     { "rank": 1, "title": "identify piece 2, \"the whale\": a co-investor, a ticker, or a date-derived string once AndreessenHorowitz is ruled out", "cost": "hours", "status": "open" },
     { "rank": 2, "title": "confirm piece 1's blank flag as Blue by an oracle hit rather than by the 58-character budget alone", "cost": "hours", "status": "open" }
@@ -60,5 +60,5 @@
     { "title": "Escrow wallet, viewblock.io", "url": "https://viewblock.io/arweave/address/XRGEfkMbCMHeTY9mZI9Lh6hf8EmA8RstmBFUjDm40fg", "date": "2026-08-16", "archived": null }
   ],
   "third_party_material": "the jigsaw image is the author's own puzzle material, published on the Arweave permaweb page; no book, audio, or video material",
-  "last_updated": "2026-08-16"
+  "last_updated": "2026-08-19"
 }
