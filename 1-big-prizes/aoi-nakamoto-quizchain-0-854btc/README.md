@@ -1,4 +1,4 @@
-# Aoi Nakamoto Quizchain (0.854 BTC, [Partially Solved - Quizchain Block 2 : 0.077 BTC solved])
+# Aoi Nakamoto Quizchain (0.777 BTC, [OPEN])
 
 AoiNakamoto, a pseudonymous Reddit user, ran a series of roughly 90 self-funded
 Bitcoin puzzle blocks from April to October 2019 on r/bitcoinpuzzles and her own
@@ -6,10 +6,13 @@ r/Grycoin, each with its own escrow address, question, and prize. She stopped
 posting in October 2019 without ever reclaiming her own puzzle funds. Every
 block was solved and swept by readers except the last two she published: the
 second and final stage of "Real Big Block" (0.777 BTC) and "Quizchain2 Block
-76" (0.077 BTC), both still funded seven years later. The MD5-to-BIP39
+76" (0.077 BTC). Real Big Block is still funded seven years later; Block 76 was
+solved and swept by a reader on 2026-08-17 (tx
+`2e271ac2f63f488cd14112bceeed56f159ecd98cb3ce753f08e2d94bb62714a3`), so only Real
+Big Block, 0.777 BTC, remains open. The MD5-to-BIP39
 derivation mechanism is confirmed exactly, including a case-flip rule proven on
 a solved sibling lot; what remains is the precise source text for Real Big
-Block and a short answer to a word riddle for Block 76.
+Block.
 
 ## At a glance
 
@@ -17,16 +20,16 @@ Block and a short answer to a word riddle for Block 76.
 |---|---|
 | Author | AoiNakamoto (pseudonymous), [r/Grycoin](https://www.reddit.com/r/Grycoin/) |
 | Published | 2019-04 to 2019-07-30, rolling releases on r/bitcoinpuzzles and r/Grycoin; the two open lots funded 2019-07-22 and 2019-07-30 |
-| Prize | 0.777 BTC + 0.077 BTC = 0.854 BTC (about $53,802 at BTC = $63,000, 2026-08-16) |
+| Prize | 0.777 BTC open (Real Big Block); Block 76's 0.077 BTC was solved and swept by a reader 2026-08-17 (about $48,951 at BTC = $63,000, 2026-08-16) |
 | Chain | bitcoin |
-| Escrow | `14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W` (Real Big Block, [explorer](https://mempool.space/address/14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W)) and `13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd` (Block 76, [explorer](https://mempool.space/address/13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd)) |
-| Last on-chain check | 2026-08-16: both funded and unspent (0.777 BTC and 0.077 BTC) |
+| Escrow | `14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W` (Real Big Block, [explorer](https://mempool.space/address/14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W)) and `13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd` (Block 76, solved and swept 2026-08-17, [explorer](https://mempool.space/address/13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd)) |
+| Last on-chain check | 2026-08-21: Real Big Block funded and unspent (0.777 BTC); Block 76 swept 2026-08-17 (0.077 BTC claimed by a reader) |
 | Status | OPEN |
 | Puzzle type | bip39-seed, word-selection |
 | Target format | source text (candidate answer), MD5 to 128-bit entropy, BIP39 mnemonic, BIP44 `m/44'/0'/0'/0/i` for i = 0 to 5, P2PKH address |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the author's own published entropy-to-WIF vector; see "Certified against" for what is and is not covered) |
-| What remains | Real Big Block: the exact source text the author hashed on 2019-07-30 (the transform and rule are confirmed). Block 76: a short answer to a published word riddle, since no derivation of the one candidate chain found by search reaches the address |
-| Series | this folder covers the 2 open lots of the approximately 90-block Quizchain series; the rest were solved by other readers in 2019 |
+| What remains | Real Big Block: the exact source text the author hashed on 2019-07-30 (the transform and rule are confirmed). Block 76 was solved and swept by a reader on 2026-08-17, so it is no longer open |
+| Series | this folder covers Real Big Block, the last open lot of the approximately 90-block Quizchain series; the rest, including Block 76 (August 2026), were solved by other readers |
 
 ## The puzzle as published
 
