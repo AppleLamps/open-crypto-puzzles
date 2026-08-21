@@ -1,4 +1,4 @@
-# LuckyLurker Seed Riddles (80,000 sats, [OPEN])
+# LuckyLurker Seed Riddles (80,000 sats, [DEAD END])
 
 The crypto-casino affiliate site luckylurker.com published a Bitcoin puzzle on
 its own "Bitcoin Vault" page in March 2026: 12 hints, labeled "Word #1" through
@@ -22,13 +22,17 @@ fraction of a second.
 | Prize | 80,000 sats (about $50 at BTC = $63,000, 2026-08-16) |
 | Chain | bitcoin |
 | Escrow | `bc1q32e3dxcd0n2tlzdmchraf2057d0ax4xdwrk3jq` ([explorer](https://mempool.space/address/bc1q32e3dxcd0n2tlzdmchraf2057d0ax4xdwrk3jq)) |
-| Last on-chain check | 2026-08-16: funded and unspent (80,000 sats, 2 transactions) |
-| Status | OPEN |
+| Last on-chain check | 2026-08-21: swept, 0 sats (80,000 sats claimed 2026-08-17) |
+| Status | DEAD END |
 | Puzzle type | bip39-seed, word-selection, text-cipher |
 | Target format | BIP39 12 words (English), fixed 1:1 position mapping from the 12 hints, most likely BIP84 `m/84'/0'/0'/0/0` (script type v0_p2wpkh), no passphrase stated |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the public BIP39/BIP84 test vectors, since no solved sibling exists on this site) |
 | What remains | pinning the exact intended word for 8 of 12 riddle-style hints; 4 of 12 are already fixed |
 | Series | none |
+
+## Why this is a dead end
+
+The 80,000 sats were swept on 2026-08-17 (tx `75e570a5ea243c492e2804916482f046b2392b463c51be15624e6e25a84119f7`) to `17oKQHHRxdQBiRaGKCoVDQJfebhPaZV3r7`, by a reader who solved the 12 riddles. The escrow is empty, verified on-chain 2026-08-21. Reason: solved by another reader, after this repository was published. It stays here for the method it documents.
 
 ## The puzzle as published
 
@@ -95,15 +99,7 @@ derives to `bc1qcr8te4kr609gcawutmrza0j4xv80jy8z306fyu` under
 
 ## Open leads, ranked
 
-1. **Wait for or request the site's own canonical answer** (needs a person or
-   external information). The vault page released all 12 hints at once and
-   remains the only place a confirmation could come from at no cost. Once about
-   7 of the 8 riddle words are confidently pinned, checksum plus the 4 known
-   words reduce the rest to a sub-second exact-match check.
-2. **Re-check the other 8 articles for the same italic-tag device** (minutes).
-   The marker is confirmed on 4 of 12 target articles; whether it extends to
-   any of the remaining riddle-linked pages has not been checked.
-
+None. The prize has been claimed; this puzzle is solved.
 ## Files in this folder
 
 | Path | What it is |

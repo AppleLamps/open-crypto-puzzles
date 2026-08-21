@@ -1,4 +1,4 @@
-# VeteranHODL: Hunting Time (420,000 sats, [OPEN])
+# VeteranHODL: Hunting Time (420,000 sats, [DEAD END])
 
 VeteranHODL, on X, hid a real BIP39 seed phrase inside their novel "Hunting Time" and ran a
 13-post clue campaign from 2026-06-15 to 2026-08-13, releasing one numbered photograph a week.
@@ -17,13 +17,17 @@ just before the campaign closed, remains unclaimed.
 | Prize | 420,000 sats (about $265 at BTC = $63,000, 2026-08-16) |
 | Chain | bitcoin |
 | Escrow | `bc1qhzy6j4amw26z7e694mgfr7kvzl7xteu54f0a85` ([explorer](https://mempool.space/address/bc1qhzy6j4amw26z7e694mgfr7kvzl7xteu54f0a85)) |
-| Last on-chain check | 2026-08-16: funded and unspent, 420,000 sats total across 2 funding transactions |
-| Status | OPEN |
+| Last on-chain check | 2026-08-21: swept, 0 sats (420,000 sats claimed 2026-08-18) |
+| Status | DEAD END |
 | Puzzle type | bip39-seed, book, word-selection |
 | Target format | 12-word phrase, one word per clue image in publication order; author states an Electrum wallet |
 | Certified oracle | yes, for the BIP39 to BIP84 branch only: `tools/oracle.py --selftest`; the Electrum-seed branch the author actually named is implemented but not certified (no known-good vector) |
 | What remains | the full 12-word phrase; the semantic candidate-word sweep is about 20 percent run and not certified with a witness |
 | Series | none |
+
+## Why this is a dead end
+
+The 420,000 sats were swept on 2026-08-18 (tx `d3783a1cde2c491a6edfbead81aeebda90257c8c25b4b0c9b2bac89bc5cd607a`) to `3KBUSqmnxCDspUYe5HwskVvTbLfs5baeXb`, by a reader who reconstructed the seed from the author's clue series. The escrow is empty, verified on-chain 2026-08-21. Reason: solved by another reader, after this repository was published. It stays here for the method it documents.
 
 ## The puzzle as published
 
@@ -93,17 +97,7 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 
 ## Open leads, ranked
 
-1. **Certify the Electrum derivation branch** (minutes to hours). This is the only wallet format
-   the author has explicitly named, and precisely the branch with no known-good vector. A
-   documented Electrum seed and its resulting address, from Electrum's own documentation or
-   generated and read back by the software itself, would settle whether any negative on this
-   branch means anything.
-2. **Re-run the numeric-index hypothesis after cleaning the candidate pools** (minutes). With 9 of
-   12 positions fixed by their visible numbers, only 3 positions remain free once the crash is
-   fixed, dropping the space to a few million combinations.
-3. **Recover the book's cover image**, referenced in the opening post as carrying a first code
-   from the Genesis Block and hinting at a second hidden code, but never brought into this folder.
-
+None. The prize has been claimed; this puzzle is solved.
 ## Files in this folder
 
 | Path | What it is |

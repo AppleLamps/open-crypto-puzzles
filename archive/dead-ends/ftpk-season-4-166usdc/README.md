@@ -1,4 +1,4 @@
-# FTPK Season 4: Something in Common (166.000000 USDC, [OPEN])
+# FTPK Season 4: Something in Common (166.000000 USDC, [DEAD END])
 
 FTPKgame (@FTPKgame on X), the same author behind the Season 2 puzzle in this repository,
 launched a fourth season on 2026-07-16: 12 independent mini-games, each worth one English
@@ -19,13 +19,17 @@ wordlist index.
 | Prize | 166.000000 USDC (about $166, stablecoin, 2026-08-16) |
 | Chain | ethereum |
 | Escrow | `0xa468335485cE853F21A44451755bd88364e9d618` ([explorer](https://etherscan.io/address/0xa468335485cE853F21A44451755bd88364e9d618)) |
-| Last on-chain check | 2026-08-16: USDC balance 166.000000, native ETH 0.00053941261264344 (gas preload for the winner), 0 outgoing transactions ever |
-| Status | OPEN |
+| Last on-chain check | 2026-08-21: escrow emptied, 0 USDC (nonce 2) |
+| Status | DEAD END |
 | Puzzle type | bip39-seed, word-selection |
 | Target format | 12 English BIP39 words, BIP44 `m/44'/60'/0'/0/0`, no passphrase |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the public BIP39/BIP44 test mnemonic; no author-published worked example exists for this season) |
 | What remains | solve enough of the 12 mini-games and identify their common mechanic; 1 word established, 1 more a strong candidate |
 | Series | FTPK (this folder covers Season 4 only) |
+
+## Why this is a dead end
+
+The 166 USDC prize was claimed from the escrow: the escrow address signed two transactions (nonce 2) and its USDC balance is now 0, verified on-chain 2026-08-21. Someone reconstructed the 12 words, imported the seed, and swept the prize, so the puzzle is solved and no longer funded. Season 2 of the same series is still funded. Reason: solved by another reader. It stays here for the method it documents.
 
 ## The puzzle as published
 
@@ -108,16 +112,7 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 
 ## Open leads, ranked
 
-1. **Identify the common mechanic across the 12 games** (hours). The leading reading,
-   from the author's own hint and the games built around dice, darts, and a board game,
-   is that each game yields a number usable as a 1-to-2048 index into the BIP39 wordlist.
-   Confirmed by a reading that correctly derives 2 or more of the already-established
-   words from their games' own numbers; killed by a full 12-word attempt that fails under
-   every indexing convention tried.
-2. **Solve the remaining games directly** (hours), since the word order is not a real
-   lock once the set of 12 words is known. Confirmed by a full 12-word candidate matching
-   the escrow; killed only by exhausting every game's plausible readings.
-
+None. The prize has been claimed; this puzzle is solved.
 ## Files in this folder
 
 | Path | What it is |

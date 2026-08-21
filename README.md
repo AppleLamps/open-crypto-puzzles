@@ -13,11 +13,11 @@ on-chain right now.
 <!-- totals:start -->
 | Asset | Locked in unsolved puzzles | Approx. value |
 |---|---|---|
-| Bitcoin | 9.72 BTC | $612,000 |
+| Bitcoin | 9.71 BTC | $612,000 |
 | Ethereum | 13.21 ETH | $25,000 |
 | Arweave | 1,900 AR | $3,400 |
-| Stablecoins | 306 USDT + 166 USDC | $500 |
-| **Total** | **across 34 funded puzzles** | **$641,000** |
+| Stablecoins | 306 USDT + 0 USDC | $300 |
+| **Total** | **across 31 funded puzzles** | **$641,000** |
 
 Checked 2026-08-16 at BTC $63,000, ETH $1,880, AR $1.81. Prices and balances move; verify each escrow yourself.
 <!-- totals:end -->
@@ -95,10 +95,8 @@ grouped by prize, is in the tables below.
 | [Zden Cryptopuzzle LVL.5](2-mid-prizes/zden-haluska-lvl5-555ksats/) | 555,550 sats | 350 | bitcoin | geometry, raw-private-key | external-info | 2026-08-16 | open |
 | [FTPK Season 2: Never-Ending](2-mid-prizes/ftpk-season-2-300usdt/) | 305.930218 USDT | 306 | ethereum | bip39-seed, word-selection | insight | 2026-08-16 | open |
 | [Andy Bauch: New Money, COG](2-mid-prizes/andy-bauch-new-money-cog-428ksats/) | 428,206 sats | 270 | bitcoin | pixel-code, physical-object | external-info | 2026-08-16 | open |
-| [VeteranHODL: Hunting Time](2-mid-prizes/veteranhodl-hunting-time-420ksats/) | 420,000 sats | 265 | bitcoin | bip39-seed, book, word-selection | bounded-compute | 2026-08-16 | open |
 | [Keysa: Crack the Seed Game](2-mid-prizes/keysa-crack-the-seed-369ksats/) | 369,369 sats | 233 | bitcoin | bip39-seed, word-selection | insight | 2026-08-16 | open |
 | [Zden Level HALV](2-mid-prizes/zden-haluska-halv-312ksats/) | 312,500 sats | 197 | bitcoin | geometry, raw-private-key | external-info | 2026-08-16 | open |
-| [FTPK Season 4: Something in Common](2-mid-prizes/ftpk-season-4-166usdc/) | 166 USDC | 166 | ethereum | bip39-seed, word-selection | insight | 2026-08-16 | open |
 | [Pindar Van Arman: cryptoArtGAN Act 1 Puzzle](2-mid-prizes/pindar-van-arman-cryptoartgan-nft/) | 1 NFT |  | ethereum | bip39-seed, word-selection | insight | 2026-08-16 | open |
 
 ## Small prizes (< $100)
@@ -106,7 +104,6 @@ grouped by prize, is in the tables below.
 |---|---|---|---|---|---|---|---|
 | [Crypto Puzzles 2018: Puzzle #2](3-small-prizes/crypto-puzzles-2018-puzzle-2-0-05eth/) | 0.05 ETH | 94 | ethereum | raw-private-key, image-stego, video-series | external-info | 2026-08-16 | open |
 | [Bitcoin Movie Enigma](3-small-prizes/bitcoin-movie-enigma-100ksats/) | 100,000 sats | 63 | bitcoin | bip39-seed, text-cipher, word-selection | insight | 2026-08-16 | open |
-| [LuckyLurker Seed Riddles](3-small-prizes/luckylurker-seed-riddles-80ksats/) | 80,000 sats | 50 | bitcoin | bip39-seed, word-selection, text-cipher | external-info | 2026-08-16 | open |
 | [Exitonly Bitcoin Challenge 14](3-small-prizes/exitonly-challenge-14-30ksats/) | 30,000 sats | 18.90 | bitcoin | bip39-seed, word-selection | uneconomic | 2026-08-16 | open |
 
 ## Solved and cashed
