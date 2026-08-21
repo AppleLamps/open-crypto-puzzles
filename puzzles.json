@@ -1491,8 +1491,8 @@
       "difficulty_left": "insight",
       "difficulty_note": "mechanism and oracle fully certified; piece 3 is solved with certainty, piece 1 has a strong unconfirmed reading, piece 4's hatching is refuted as an ordering scheme; the open gap is piece 2's exact 18-character string once the other 3 pieces are fixed",
       "tested_total": {
-        "candidates": 156730,
-        "families": 5,
+        "candidates": 3014356,
+        "families": 16,
         "certified": true
       },
       "leads": [
@@ -1557,7 +1557,7 @@
         }
       ],
       "third_party_material": "the jigsaw image is the author's own puzzle material, published on the Arweave permaweb page; no book, audio, or video material",
-      "last_updated": "2026-08-16",
+      "last_updated": "2026-08-19",
       "folder": "2-mid-prizes/arweave-puzzle-12-400ar"
     },
     {
