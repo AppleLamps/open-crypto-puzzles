@@ -84,7 +84,10 @@ I and O removed, reduces to exactly 256 symbols drawn from a 23-letter alphabet.
 Every attempt so far to turn that 256-symbol object directly into a 32-byte private
 key has failed (see "What has been tested").
 
-The final page separately publishes a small OpenSSL "Salted__" AES-256-CBC blob (96
+The SalPhaseIon page,
+`gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32`, reached by
+hashing the text of the first puzzle page rather than through the Architect Choice,
+publishes a small OpenSSL "Salted__" AES-256-CBC blob (96
 bytes total: 8-byte header, 8-byte salt `3ab585348552415d`, 80 bytes of ciphertext,
 enough for a 64-byte plaintext after PKCS7 padding). The password is reported to be
 `sha256(X).hexdigest()` for an answer string X the solver must find; this repository
@@ -127,8 +130,9 @@ and which this repository has no access to.
 
 ### Certified against
 
-`tools/oracle.py --selftest` certifies the pipeline's two halves independently,
-since X is unsolved and no end-to-end known-good vector exists:
+`tools/oracle.py --selftest` certifies the pipeline's two halves independently. X is
+unsolved, so no vector exists for the answer string itself, but the puzzle's earlier
+stages do provide real blobs with known passwords for the decryption half:
 
 1. **Address derivation**: the escrow's own uncompressed public key, recovered from
    its 2024-04-24 spending transaction
@@ -137,12 +141,16 @@ since X is unsolved and no end-to-end known-good vector exists:
    hashes byte-exact to `1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe`. This certifies the
    HASH160-plus-Base58Check half of the pipeline against a real, independently
    checkable fact.
-2. **AES decrypt**: a self-made OpenSSL-compatible blob (a 64-byte test plaintext,
-   encrypted with a test password using the same EVP_BytesToKey MD5 key derivation
-   and AES-256-CBC scheme) decrypts back to the exact original plaintext with the
-   correct password, and produces no valid PKCS7 padding with a wrong password.
-   This is a synthetic vector, not one from the puzzle, since no real password is
-   known.
+2. **AES decrypt**: the puzzle's own phase-2 blob, whose password is the known stage
+   answer `sha256("causality")`, decrypts to its known plaintext under
+   EVP_BytesToKey with SHA-256, and produces no valid PKCS7 padding under a wrong
+   password. A third check asserts that EVP_BytesToKey with MD5 fails on that
+   particular blob. This replaces an earlier synthetic round-trip vector, which could
+   not detect a wrong digest because it encrypted and decrypted with the same
+   derivation. Note that the puzzle uses both digests: phases 2 and 3 use SHA-256,
+   while the Cosmic Duality blob uses MD5 (see `analysis/tested.md` sections 10 and
+   11). Since the small blob's password is unknown, its digest cannot be determined,
+   and the oracle tries both.
 3. The published blob itself is confirmed to decode to the documented shape: 96
    bytes, header `Salted__`, salt `3ab585348552415d`.
 
@@ -186,6 +194,8 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | A substring of the object is a Base58Check string to decode | 123,728 candidates | Base58Check checksum, then address comparison | 0 match, 0 valid checksum | yes | 2026-07-28 |
 | Large "Dualite" blob read directly as bits, no password | 59,269 candidates | direct address comparison | 0 match | yes | 2026-07-30 |
 | Literal password strings harvested from 1,017 archived scripts, replayed under a fixed appearance filter | 116,043 candidates | AES decrypt then address comparison | 0 match | yes | 2026-07-28 |
+| Small-blob pipeline swept for the first time: puzzle vocabulary, stage texts and their word windows, "last words" readings, live-page prose, the system word list, and the confirmed stage passwords | 1,358,577 candidates | corrected oracle, AES decrypt then address comparison | 0 match | yes | 2026-08-19 |
+| Key derivation: the shipped oracle used EVP_BytesToKey/MD5, which fails on both puzzle blobs whose passwords are known | not a sweep | decrypt phase-2 and phase-3 blobs under both digests | MD5 refuted, SHA-256 confirmed | yes | 2026-08-19 |
 
 Cumulative: approximately 335.7 million candidates tested as direct reductions of
 the 256-symbol object or the large blob, all negative; a further 116,043-candidate

@@ -102,3 +102,40 @@ decrypted under any tested password (`analysis/tested.md` row 6). No lead above
 targets it directly with a password sweep, because no password-generation
 hypothesis for it currently has more support than any other; leads 2 to 4 are the
 routes most likely to produce one.
+
+## 6. Re-run anything that was tested through the shipped oracle
+
+Not a hypothesis about the puzzle, but the precondition for trusting any result from this
+folder's own tool. Until 2026-08-19 `tools/oracle.py` derived the AES key with
+EVP_BytesToKey/MD5, which fails on every blob in this puzzle whose password is known
+(`analysis/tested.md` section 10). Any candidate previously pushed through it was compared
+against a key the puzzle does not produce.
+
+What would confirm it: nothing further; the derivation is now certified against the
+phase-2 blob, and the selftest asserts that MD5 fails on the same blob.
+What this changes: negatives obtained through the shipped oracle are void rather than
+negative. Section 9's sweeps have been re-run under the corrected derivation. Anyone who
+swept this pipeline independently before this date should assume the same.
+Cost: the pipeline runs at about 76,800 candidates per second per core, so re-running a
+past sweep costs roughly what the original cost.
+
+## 7. The small blob is on the SalPhaseIon page, not the final page
+
+The README described the small blob as published on the final page reached after the
+Architect Choice. It is published on the SalPhaseIon page,
+`gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32`, reached by a
+different route: hashing the text of the first puzzle page. Verified by reassembling the
+blob from that page's own single-character token run, where the two 64-character halves sit
+at token positions 916 and 1020 with a 40-character run of a and b between them; reading
+that run as a=0, b=1 gives the five bytes `enter`.
+
+Why it matters as a lead, not just a correction: the password should be sought in the
+instructions on the page that carries the blob. That page decodes to exactly two
+directives, `lastwordsbeforearchichoice` and `thispassword`, which read together as a
+statement that the last words before the Architect Choice are this blob's password.
+What would confirm it: a reading of those "last words" that matches.
+What would kill it: exhausting the candidate texts. Section 9's last-N-word sweeps are a
+first pass over the texts currently held and are negative; they do not exhaust the
+instruction, because the phase-1 page is an image whose own wording is not transcribed
+anywhere in this folder.
+Cost: hours, and it needs sources rather than compute.
