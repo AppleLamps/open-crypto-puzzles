@@ -7,9 +7,9 @@ was solved within 3 hours of release and its prize was claimed; Puzzle #2, poste
 5 days after Puzzle #1's escrow was funded by the same wallet for the same
 amount, has sat untouched for 8 years. The transform is certified end to end
 using Puzzle #1's own published solution as a known-good vector. What is missing
-is a complete visual read of Puzzle #2's two videos: about 40 to 50 of the
-required 64 hex characters are legible today, and a planned template-matching
-pass against Puzzle #1's known glyph shapes was never finished.
+is a complete visual read of Puzzle #2's two videos. Part 1's seam yields 10 hex
+characters, `6A6B0860B4`, read cleanly at 1280x720/60fps. Part 2 remains unread. A planned
+template-matching pass against Puzzle #1's known glyph shapes was never finished.
 
 ## At a glance
 
@@ -25,7 +25,7 @@ pass against Puzzle #1's known glyph shapes was never finished.
 | Puzzle type | raw-private-key, image-stego, video-series |
 | Target format | 64-character hex private key (32 bytes), secp256k1, Keccak-256 of the uncompressed public key to a 20-byte address, no BIP39, no passphrase, no derivation path |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against Puzzle #1's own published solution, same series) |
-| What remains | a complete visual read of Puzzle #2's two videos; about 40-50 of 64 hex characters legible, template-matching pass unfinished |
+| What remains | a complete visual read of Puzzle #2's two videos. Part 1's seam yields 10 hex characters at 720p60, `6A6B0860B4`; part 2 is unread. See `analysis/tested.md` |
 | Series | same channel as the solved Puzzle #1 (different, already-spent address); no separate folder |
 
 ## The puzzle as published
