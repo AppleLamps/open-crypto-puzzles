@@ -76,3 +76,39 @@ What would kill it: this is not a bounded space either; it stays open until all 
 films are identified and a field is proposed.
 Cost: needs an insight, ideally after leads 1 and 2 are closed; no compute action
 available today.
+
+
+## Community identifications, 2026-08 (issues #9 and #3)
+
+Two readers who watched the films posted panel identifications, one with per-scene
+notes (issue #9, garrou), one confirming two panels after re-watching (issue #3,
+CryptoBlueprint), plus a full 34-title list with IMDb ids in the issue #9 thread.
+
+**They close the two panels this folder had left open.** Panel 11 is Godzilla (1998),
+the footprint scene, and panel 34 is The Human Centipede (First Sequence), which
+settles the Dead Ringers / Human Centipede dispute in favour of Human Centipede.
+Both are now recorded in `data/films.csv`.
+
+**They also disagree with the 2026-08-04 pass on several panels, and this is the more
+important signal.** Each film maps to one BIP39 word, so a wrong title makes the seed
+underivable; two independent viewers giving scene-specific descriptions outrank a
+still-only pass. The panels to re-examine, community reading first:
+
+| panel | community (viewer) | this folder's 2026-08-04 pass |
+|---|---|---|
+| 3 | Aliens (1986) | Alien |
+| 4 | Going Places (1974) | Mad Max |
+| 5 | Alien (1979), leaving-the-ship scene | Star Trek: The Motion Picture |
+| 9 | Spartacus (1960) | Duel in the Sun |
+| 13 | Leon: The Professional (1994), apartment scene | Goodfellas |
+| 14 | The Man in the Iron Mask (1998) | Eyes Wide Shut |
+| 16 | The Visitors (1993), first five minutes | The 13th Warrior |
+| 23 | Guardians of the Galaxy (2014) | Valerian |
+| 24 | Close Encounters of the Third Kind (1977) | Ordinary People |
+| 27 | Terminator 2 (1991), biker-bar scene | The Lost Boys |
+| 28 | Scream 2 or Scream 3 (viewers differ) | Scream 2 |
+| 30 | Toy Story or Toy Story 2 (viewers differ) | Toy Story |
+
+Next step: reconcile these panel by panel against the actual stills, then recompute the
+BIP39 word per title and rerun the C(34,10) reduction through `tools/oracle.py`. This is
+the highest-value open work on this puzzle.

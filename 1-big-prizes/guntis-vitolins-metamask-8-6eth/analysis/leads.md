@@ -59,3 +59,21 @@ words.
 What would kill it: a full metadata re-read producing nothing new; there is no
 natural exhaustion point for this lead beyond a careful, complete pass.
 Cost: an hour of directed reading, not a sweep.
+
+## Community correction: R1 pool provenance (issue #10)
+
+HPreziosa (issue #10) grepped the 2020 Wayback captures of the video and blog and reports
+that three words in the R1 pool are mis-sourced in the "title and hook line" row of
+`tested.md`:
+
+- `top` is not in the video title or og:description; it appears in the blog body ("top ten
+  altcoins") and in the video description trailer ("top mining equipment").
+- `finish` does not appear as a bare stem; only `finished` does, in the og:description
+  ("Crypto Winter finished?"), so it is a morphological derivative, not a literal.
+- `cloud` appears in no authored 2020 surface; the README itself says only `fog` and `lake`
+  do, yet still carries `cloud` on semantic grounds.
+
+I have not re-run the greps against the archived pages myself, since they are not shipped
+here for copyright, so this is recorded as a correction to reconcile rather than a silent
+rewrite of the pool. It changes no confirmed anchor; it changes where three candidate words
+are said to come from, and whether `finish` and `cloud` belong in a "literal" pool at all.

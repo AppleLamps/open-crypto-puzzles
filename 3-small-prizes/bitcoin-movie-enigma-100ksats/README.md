@@ -114,10 +114,11 @@ Reproduced 2026-08-16.
    entry with the same date, resolving the apparent gap between funding and launch.
 3. Both published image sets (individual panels and the "alternative release") are
    byte-for-byte identical, 34 of 34, confirmed by MD5.
-4. 32 of the 34 films are identified with confidence (24 confirmed, 7 probable, 1
-   uncertain); panel 11 is unidentified; panel 34 has 2 competing identifications
-   from different research passes that have not been reconciled
-   (`data/films.csv`).
+4. All 34 panels now have an identification. Panel 11 (Godzilla) and panel 34
+   (The Human Centipede) were the last two left open here and were closed by community
+   reports in August 2026 (issues #9, #3). Those same reports disagree with the
+   2026-08-04 pass on about ten other panels, which is now the main lead to reconcile
+   (`data/films.csv`, `analysis/leads.md`).
 5. Of the 33 titles identified with any confidence, 29 contain at least one English
    BIP39 word as a literal substring of the title; 4 do not (The Goonies, Barry
    Lyndon, Sharknado, Raiders of the Lost Ark).

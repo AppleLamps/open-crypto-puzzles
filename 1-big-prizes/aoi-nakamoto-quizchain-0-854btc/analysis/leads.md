@@ -98,3 +98,18 @@ What would kill it, in the useful sense: nothing kills this lead outright; it
 stays open as a standing invitation, same as any human-reasoned wordplay block
 in the series.
 Cost: minutes per candidate; no sweep implied.
+
+## Stage One reproduction: the MD5 and two reimplementation gotchas (issue #1)
+
+stakeados (issue #1) wrote down the exact Stage One value, which this folder reproduced during
+research but never recorded as a number:
+
+- source: bitcointalk topic 155054, first post, raw HTML (ISO-8859-1, ASCII body)
+- md5: `9dd2efb9bc976c2095bd534d7b8d431c`
+- derives to `19TbyN5KCg1Lg7qHwezifsLVcdSa2Rj5KN` at `m/44'/0'/0'/0/0`
+
+Both reimplementation gotchas they flag are already handled in `tools/oracle.py`, but neither
+was stated in prose: a paragraph break is `<br><br>`, so a single `<br>` (as in the
+"[edited slightly]" line) does not start a new paragraph; and the byte encoding is ISO-8859-1,
+not UTF-8. Recording the MD5 makes the Stage One reproduction checkable without re-deriving
+from the post.

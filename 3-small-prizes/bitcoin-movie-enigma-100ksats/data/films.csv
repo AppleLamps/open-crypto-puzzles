@@ -1,5 +1,6 @@
 # Film identification state for the 34 panels of the Bitcoin Movie Enigma, as of my
-# last full identification pass, 2026-08-04. confidence: confirmed | probable |
+# last full identification pass, 2026-08-04, updated 2026-08-21 with community reports
+# (issues #9, #3). confidence: confirmed | confirmed-community | probable |
 # uncertain | unidentified | disputed. candidate_bip39_words: semicolon-separated
 # English BIP39 words found literally inside the title, or "none". Panel 34 is
 # "disputed": two identifications were reached in different research sessions and
@@ -17,7 +18,7 @@ panel,title,mpaa,confidence,candidate_bip39_words
 8,The Goonies,PG,probable,none
 9,Duel in the Sun,APPROVED,confirmed,sun
 10,Mission: Impossible,PG-13,confirmed,miss;possible
-11,unidentified,,unidentified,
+11,Godzilla,PG-13,confirmed-community,ill
 12,Life of Pi,PG,confirmed,life
 13,Goodfellas,R,confirmed,good
 14,Eyes Wide Shut,R,confirmed,eye;wide
@@ -40,4 +41,4 @@ panel,title,mpaa,confidence,candidate_bip39_words
 31,Ghostbusters II,PG,confirmed,ghost
 32,Raiders of the Lost Ark,PG,confirmed,none
 33,The Shining,R,confirmed,shine
-34,disputed: Dead Ringers (probable) or The Human Centipede (First Sequence) (confirmed in a separate session),R,disputed,ring
+34,The Human Centipede (First Sequence),R,confirmed-community,human;man;tip
