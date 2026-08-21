@@ -1,15 +1,19 @@
 # Solved and cashed
 
-Puzzles I solved and cashed myself. A payout transaction is mandatory for a puzzle to appear
-here: the folder is only moved into this tier once the sweep is confirmed on chain, never on
-the strength of a derivation alone. Each entry links to the full derivation, the key
+This tier holds two kinds of solved puzzle: the ones I solved and cashed myself, and the ones
+a reader solved after I published this repository (each is labelled, and its payout goes to the
+solver's address, not mine). A confirmed on-chain sweep is required either way; nothing is
+listed here on the strength of a derivation alone. Each entry links to the full derivation, the key
 material, and what the solve teaches about the wider series it belongs to, since that is the
 main reason a solved puzzle stays useful to a reader working on an open sibling.
 
 <!-- generated:start -->
 | Puzzle | Cashed | Payout tx | Date | Series lesson |
 |---|---|---|---|---|
+| [VeteranHODL: Hunting Time](veteranhodl-hunting-time-420ksats/) | 420000 sats | [d3783a1cde2c491a6edfbead81aeebda90257c8c25b4b0c9b2bac89bc5cd607a](https://mempool.space/tx/d3783a1cde2c491a6edfbead81aeebda90257c8c25b4b0c9b2bac89bc5cd607a) | 2026-08-18 | solved by a reader after publication, not by me |
+| [FTPK Season 4: Something in Common](ftpk-season-4-166usdc/) | 181 USDC | [0x4c10674a4856cbba9b66543cc027a77e6b3a1ba458085f8fe680d588ffdd8f37](https://etherscan.io/tx/0x4c10674a4856cbba9b66543cc027a77e6b3a1ba458085f8fe680d588ffdd8f37) | 2026-08-20 | solved by a reader after publication, not by me |
 | [bc1q21 Time-Lock Challenge, Level 5](bc1q21-timelock-challenge-l5-100ksats/) | 99604 sats | [73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed](https://mempool.space/tx/73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed) | 2026-07-24 | solved; the claim transaction confirms the answer |
+| [LuckyLurker Seed Riddles](luckylurker-seed-riddles-80ksats/) | 80000 sats | [75e570a5ea243c492e2804916482f046b2392b463c51be15624e6e25a84119f7](https://mempool.space/tx/75e570a5ea243c492e2804916482f046b2392b463c51be15624e6e25a84119f7) | 2026-08-17 | solved by a reader after publication, not by me |
 | [Dug's Student Treasure Hunt (2025 edition)](dug-student-treasure-hunt-63ksats/) | 59916 sats | [ee70de514686588173b64fc31fc317ae15f1e903c742cc99140d2cf1bb2e8db1](https://mempool.space/tx/ee70de514686588173b64fc31fc317ae15f1e903c742cc99140d2cf1bb2e8db1) | 2026-08-02 | solved; the payout transaction confirms the answer |
 <!-- generated:end -->
 

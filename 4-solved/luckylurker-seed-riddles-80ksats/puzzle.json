@@ -2,9 +2,9 @@
   "schema_version": 1,
   "slug": "luckylurker-seed-riddles-80ksats",
   "title": "LuckyLurker Seed Riddles",
-  "tier": "dead-end",
-  "status": "dead-end",
-  "dead_end_reason": "solved-by-others",
+  "tier": "solved",
+  "status": "solved",
+  "dead_end_reason": null,
   "series": null,
   "author": {
     "name": "unknown individual, published on luckylurker.com",
@@ -48,7 +48,7 @@
     "certified_against": "the public BIP39/BIP84 test vectors, since no solved sibling puzzle exists on this site"
   },
   "difficulty_left": "none",
-  "difficulty_note": "4 of 12 words are fixed with high confidence; the other 8 are one-line riddles and about 2 million plausible synonym combinations tested against them found no match, so the intended words most likely require the site's own confirmation",
+  "difficulty_note": "solved by a reader after publication, not by me",
   "tested_total": {
     "candidates": 2000000,
     "families": 1,
@@ -68,7 +68,18 @@
       "status": "open"
     }
   ],
-  "solutions": [],
+  "solutions": [
+    {
+      "lot": "main",
+      "date": "2026-08-17",
+      "answer": "not published by the solver",
+      "key_material_disclosed": false,
+      "payout_txid": "75e570a5ea243c492e2804916482f046b2392b463c51be15624e6e25a84119f7",
+      "payout_amount": "80000 sats",
+      "payout_to": "17oKQHHRxdQBiRaGKCoVDQJfebhPaZV3r7",
+      "explorer": "https://mempool.space/tx/75e570a5ea243c492e2804916482f046b2392b463c51be15624e6e25a84119f7"
+    }
+  ],
   "sources": [
     {
       "title": "Bitcoin Vault puzzle page",

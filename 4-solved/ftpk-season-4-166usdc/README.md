@@ -1,4 +1,4 @@
-# FTPK Season 4: Something in Common (166.000000 USDC, [DEAD END])
+# FTPK Season 4: Something in Common (166.000000 USDC, [SOLVED])
 
 FTPKgame (@FTPKgame on X), the same author behind the Season 2 puzzle in this repository,
 launched a fourth season on 2026-07-16: 12 independent mini-games, each worth one English
@@ -20,16 +20,12 @@ wordlist index.
 | Chain | ethereum |
 | Escrow | `0xa468335485cE853F21A44451755bd88364e9d618` ([explorer](https://etherscan.io/address/0xa468335485cE853F21A44451755bd88364e9d618)) |
 | Last on-chain check | 2026-08-21: escrow emptied, 0 USDC (nonce 2) |
-| Status | DEAD END |
+| Status | SOLVED |
 | Puzzle type | bip39-seed, word-selection |
 | Target format | 12 English BIP39 words, BIP44 `m/44'/60'/0'/0/0`, no passphrase |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the public BIP39/BIP44 test mnemonic; no author-published worked example exists for this season) |
 | What remains | solve enough of the 12 mini-games and identify their common mechanic; 1 word established, 1 more a strong candidate |
 | Series | FTPK (this folder covers Season 4 only) |
-
-## Why this is a dead end
-
-The 166 USDC prize was claimed from the escrow: the escrow address signed two transactions (nonce 2) and its USDC balance is now 0, verified on-chain 2026-08-21. Someone reconstructed the 12 words, imported the seed, and swept the prize, so the puzzle is solved and no longer funded. Season 2 of the same series is still funded. Reason: solved by another reader. It stays here for the method it documents.
 
 ## The puzzle as published
 
@@ -112,7 +108,11 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 
 ## Open leads, ranked
 
-None. The prize has been claimed; this puzzle is solved.
+None. The puzzle is solved; see the Solution section.
+## Solution
+
+Solved by another reader, not by me. The solver (`0x97e9E65edA435CE80c95d554bf8FBb757FCFcbfE`) sent a 1 USDC test deposit, then imported the reconstructed seed and swept the prize: 181 USDC out on 2026-08-20 in tx `0x4c10674a4856cbba9b66543cc027a77e6b3a1ba458085f8fe680d588ffdd8f37`. The answer was not published. Season 2 of the same series is still funded.
+
 ## Files in this folder
 
 | Path | What it is |

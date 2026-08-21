@@ -2,9 +2,9 @@
   "schema_version": 1,
   "slug": "ftpk-season-4-166usdc",
   "title": "FTPK Season 4: Something in Common",
-  "tier": "dead-end",
-  "status": "dead-end",
-  "dead_end_reason": "solved-by-others",
+  "tier": "solved",
+  "status": "solved",
+  "dead_end_reason": null,
   "series": "ftpk",
   "author": {
     "name": "FTPKgame",
@@ -49,7 +49,7 @@
     "certified_against": "the public BIP39/BIP44 test mnemonic (12x 'abandon' plus 'about'); no author-published worked example exists for this season"
   },
   "difficulty_left": "none",
-  "difficulty_note": "the derivation is certified and the site is fully mirrored; the author's own hint says most games share a common mechanic, likely a number used as a 1-2048 BIP39 index; 1 word is established with confidence (game 1) and a 2nd is a strong candidate (game 10)",
+  "difficulty_note": "solved by a reader after publication, not by me",
   "leads": [
     {
       "rank": 1,
@@ -64,7 +64,18 @@
       "status": "open"
     }
   ],
-  "solutions": [],
+  "solutions": [
+    {
+      "lot": "main",
+      "date": "2026-08-20",
+      "answer": "not published by the solver",
+      "key_material_disclosed": false,
+      "payout_txid": "0x4c10674a4856cbba9b66543cc027a77e6b3a1ba458085f8fe680d588ffdd8f37",
+      "payout_amount": "181 USDC",
+      "payout_to": "0x97e9E65edA435CE80c95d554bf8FBb757FCFcbfE",
+      "explorer": "https://etherscan.io/tx/0x4c10674a4856cbba9b66543cc027a77e6b3a1ba458085f8fe680d588ffdd8f37"
+    }
+  ],
   "artifacts": [],
   "sources": [
     {

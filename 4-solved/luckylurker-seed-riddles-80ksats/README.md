@@ -1,4 +1,4 @@
-# LuckyLurker Seed Riddles (80,000 sats, [DEAD END])
+# LuckyLurker Seed Riddles (80,000 sats, [SOLVED])
 
 The crypto-casino affiliate site luckylurker.com published a Bitcoin puzzle on
 its own "Bitcoin Vault" page in March 2026: 12 hints, labeled "Word #1" through
@@ -23,16 +23,12 @@ fraction of a second.
 | Chain | bitcoin |
 | Escrow | `bc1q32e3dxcd0n2tlzdmchraf2057d0ax4xdwrk3jq` ([explorer](https://mempool.space/address/bc1q32e3dxcd0n2tlzdmchraf2057d0ax4xdwrk3jq)) |
 | Last on-chain check | 2026-08-21: swept, 0 sats (80,000 sats claimed 2026-08-17) |
-| Status | DEAD END |
+| Status | SOLVED |
 | Puzzle type | bip39-seed, word-selection, text-cipher |
 | Target format | BIP39 12 words (English), fixed 1:1 position mapping from the 12 hints, most likely BIP84 `m/84'/0'/0'/0/0` (script type v0_p2wpkh), no passphrase stated |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the public BIP39/BIP84 test vectors, since no solved sibling exists on this site) |
 | What remains | pinning the exact intended word for 8 of 12 riddle-style hints; 4 of 12 are already fixed |
 | Series | none |
-
-## Why this is a dead end
-
-The 80,000 sats were swept on 2026-08-17 (tx `75e570a5ea243c492e2804916482f046b2392b463c51be15624e6e25a84119f7`) to `17oKQHHRxdQBiRaGKCoVDQJfebhPaZV3r7`, by a reader who solved the 12 riddles. The escrow is empty, verified on-chain 2026-08-21. Reason: solved by another reader, after this repository was published. It stays here for the method it documents.
 
 ## The puzzle as published
 
@@ -99,7 +95,11 @@ derives to `bc1qcr8te4kr609gcawutmrza0j4xv80jy8z306fyu` under
 
 ## Open leads, ranked
 
-None. The prize has been claimed; this puzzle is solved.
+None. The puzzle is solved; see the Solution section.
+## Solution
+
+Solved by another reader, not by me. I did not find the answer and it was not published. The 80,000 sats were swept on 2026-08-17 in tx `75e570a5ea243c492e2804916482f046b2392b463c51be15624e6e25a84119f7` to `17oKQHHRxdQBiRaGKCoVDQJfebhPaZV3r7`. This folder stays for the fixed word-to-position mapping and the four ground-truth words it documents.
+
 ## Files in this folder
 
 | Path | What it is |
