@@ -42,6 +42,15 @@ contains the rules and a starter prompt. The machine-readable index is
 [puzzles.json](puzzles.json); each folder has a `puzzle.json` and, when the derivation is
 known, `tools/oracle.py --selftest`.
 
+## Engines
+
+The GPU and CPU bruteforce engines I use on these puzzles are in [engines/](engines/): a
+checksum-aware BIP39 seed and passphrase kernel (about 790k derivations/s), a brainwallet
+`SHA256 -> secp256k1 -> hash160` kernel (about 9.3M keys/s), an Electrum v1 old-seed engine,
+and two Arweave key-stretch engines. They ship as CUDA source plus Python host drivers with
+self-tests; build them with `engines/build.sh` (nvcc), then point one at a puzzle's target.
+See [engines/README.md](engines/README.md).
+
 ## Start here: twelve to look at first
 
 If you do not know where to begin, these twelve are the clearest to pick up. The full list,
