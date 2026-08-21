@@ -73,7 +73,17 @@ that three words in the R1 pool are mis-sourced in the "title and hook line" row
 - `cloud` appears in no authored 2020 surface; the README itself says only `fog` and `lake`
   do, yet still carries `cloud` on semantic grounds.
 
-I have not re-run the greps against the archived pages myself, since they are not shipped
-here for copyright, so this is recorded as a correction to reconcile rather than a silent
-rewrite of the pool. It changes no confirmed anchor; it changes where three candidate words
-are said to come from, and whether `finish` and `cloud` belong in a "literal" pool at all.
+Verified against the archives on 2026-08-21 (Wayback `20200626184951` of the video,
+`20201026062858` of the blog), all three confirmed:
+
+- the video title is "10 ETH challenge | Ethereum Parabolic | Bitcoin generator portfolio
+  update !?"; `top` is not in it. `top` appears only as "top altcoins", "top mining", and
+  "top supporting" in the video description, and as "top ten altcoins" in the blog body.
+- the bare stem `finish` appears in neither surface; only `finished` does, nine times in the
+  video ("Crypto Winter finished?").
+- `cloud` has zero occurrences in either the video or the blog.
+
+Consequence for the pool: `top` and `finish` stay in the corpus but are re-sourced (the
+description and the blog body, not the title; `finish` as an inflection of `finished`). More
+usefully, since `cloud` is in no authored 2020 surface while `fog` is ("dark fog on the
+lake"), position 5 resolves to `fog`, and `cloud` is dropped as a candidate.
