@@ -92,12 +92,18 @@ Both are now recorded in `data/films.csv`.
 **They also disagree with the 2026-08-04 pass on several panels, and this is the more
 important signal.** Each film maps to one BIP39 word, so a wrong title makes the seed
 underivable; two independent viewers giving scene-specific descriptions outrank a
-still-only pass. The panels to re-examine, community reading first:
+still-only pass. The full community list, with IMDb ids and the community's own
+title-to-word reading, is now recorded verbatim in `data/films_community_issue9.csv`.
+
+By 2026-08-22 the thread had converged on three panels that this table used to flag:
+panel 4 is **Mad Max** (deviceio121's Going Places was corrected by SmallCakekoo against
+IMDb, agreeing with this folder), panel 28 is **Scream 2**, and panel 30 is **Toy Story 2**
+(couldes, tt0120363; the word is `story`/`toy` either way, so this changes no seed). Those
+three are settled. The panels still genuinely unreconciled, community reading first:
 
 | panel | community (viewer) | this folder's 2026-08-04 pass |
 |---|---|---|
 | 3 | Aliens (1986) | Alien |
-| 4 | Going Places (1974) | Mad Max |
 | 5 | Alien (1979), leaving-the-ship scene | Star Trek: The Motion Picture |
 | 9 | Spartacus (1960) | Duel in the Sun |
 | 13 | Leon: The Professional (1994), apartment scene | Goodfellas |
@@ -106,9 +112,18 @@ still-only pass. The panels to re-examine, community reading first:
 | 23 | Guardians of the Galaxy (2014) | Valerian |
 | 24 | Close Encounters of the Third Kind (1977) | Ordinary People |
 | 27 | Terminator 2 (1991), biker-bar scene | The Lost Boys |
-| 28 | Scream 2 or Scream 3 (viewers differ) | Scream 2 |
-| 30 | Toy Story or Toy Story 2 (viewers differ) | Toy Story |
 
-Next step: reconcile these panel by panel against the actual stills, then recompute the
-BIP39 word per title and rerun the C(34,10) reduction through `tools/oracle.py`. This is
-the highest-value open work on this puzzle.
+Where the two lists point the search: under the community identifications, exactly three
+titles yield no BIP39 word by any reading (substring, prefix, stem, or cross-token join):
+**The Goonies, Leon: The Professional, and Sharknado.** timothy-barus reports running the
+three IMDb-metadata intruder rules that leave at most two panels wordless (shares-a-year,
+released-2000-or-later, ten-shortest-by-runtime) as exhaustive escrow sweeps, about 1.23
+billion checksum-valid seeds in total with two-position wildcards, all empty (his numbers,
+not reproduced here). If that holds, compute on the clean metadata rules is spent, and the
+open problem is the single transform that turns those three titles into BIP39 words, which
+would very likely reveal the rule for the rest.
+
+Next step: reconcile the nine panels above against the actual stills, then recompute the
+BIP39 word per title and rerun the C(34,10) reduction through `tools/oracle.py`. Ideas on
+the three wordless titles are worth more right now than more compute. This is the
+highest-value open work on this puzzle.

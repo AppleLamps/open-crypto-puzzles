@@ -1,6 +1,10 @@
 # Film identification state for the 34 panels of the Bitcoin Movie Enigma, as of my
 # last full identification pass, 2026-08-04, updated 2026-08-21 with community reports
-# (issues #9, #3). confidence: confirmed | confirmed-community | probable |
+# (issues #9, #3), and 2026-08-22 with panel 30 corrected to Toy Story 2 (couldes,
+# IMDb tt0120363; the word is "story"/"toy" either way). The full community list from
+# issue #9 is recorded separately in data/films_community_issue9.csv; it diverges from
+# this canonical list on about nine panels and is not merged over it. confidence:
+# confirmed | confirmed-community | probable |
 # uncertain | unidentified | disputed. candidate_bip39_words: semicolon-separated
 # English BIP39 words found literally inside the title, or "none". Panel 34 is
 # "disputed": two identifications were reached in different research sessions and
@@ -37,7 +41,7 @@ panel,title,mpaa,confidence,candidate_bip39_words
 27,The Lost Boys,R,uncertain,boy
 28,Scream 2,R,confirmed,cream
 29,The Matrix Reloaded,R,probable,matrix
-30,Toy Story,G,confirmed,story;toy
+30,Toy Story 2,G,confirmed-community,story;toy
 31,Ghostbusters II,PG,confirmed,ghost
 32,Raiders of the Lost Ark,PG,confirmed,none
 33,The Shining,R,confirmed,shine
