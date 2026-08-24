@@ -96,20 +96,26 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | Canonical-source exact windows (whitepaper, press release, Donne) | 1,959,326 | 0 match | 2026 |
 | Song lyrics, top 301,000 songs | 52,299,649 | 0 match | 2026 |
 | OCR and community guesses | about 509,399 | 0 match | 2026 |
+| Quotes-500K corpus (`jstet/quotes-500k`), case variants plus surface normalizations | 3,376,547 | 0 match | 2026-08-22 |
+| Full genius-song-lyrics corpus tail plus re-test of the top slice (`Dr3dre/Genius-song-lyrics-cleaned`, English-language songs, per-song line dedupe), GPU brainwallet engine | 456,693,751 | 0 match | 2026-08-23 |
 
-About 95 million candidates in total, 0 matches. I did not plant a known-good passphrase
-inside any of these corpus streams before running them, so I report these as candidates
-consumed, not as certified-witnessed exhaustive sweeps.
+About 552 million candidates in total, 0 matches. Rounds 1 through 3 are reported as
+candidates consumed without planted witnesses. Rounds 4 and 5 are witnessed: in round 4
+the 3 public sibling passphrases were planted at head/middle/tail of the stream and all
+recovered through the same code path; in round 5 the checker kernel passed its built-in
+certification vectors plus an end-to-end positive control immediately before the run, and
+its consumed-candidate counter matched the fed count exactly.
 
 ## Open leads, ranked
 
 1. **A higher-fidelity copy of the original video** (needs new information). The whiteboard
    and whitepaper page held on camera are only legible above 720p, and no source above 720p
    is currently reachable. Full details in [analysis/leads.md](analysis/leads.md).
-2. **The Quotes-500K corpus** (minutes, once prepared). A public quotation corpus not yet
-   run against the oracle.
-3. **The remaining tail of the lyrics corpus** (larger, lower signal). About 4.7 million
-   further songs beyond the slice already tested.
+2. **KILLED 2026-08-22: the Quotes-500K corpus.** Executed as round 4 with planted
+   witnesses; see [analysis/tested.md](analysis/tested.md). This lead is closed.
+3. **KILLED 2026-08-23: the remaining tail of the lyrics corpus.** Executed as round 5 on
+   a rented GPU with an end-to-end positive control; about 456.7 million candidates across
+   the full ~5.1 million-song corpus (English-language songs). This lead is closed.
 
 ## Files in this folder
 

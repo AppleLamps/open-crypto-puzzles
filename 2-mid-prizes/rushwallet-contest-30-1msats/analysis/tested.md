@@ -58,3 +58,15 @@ embedded newlines with spaces.
   not prime (unlike the real Cicada 3301 group's own use of 3301, which is), and an
   associated image circulated with this material was found to be fabricated. Treated as
   contest flavor, not a channel to search.
+| Full genius-song-lyrics corpus tail plus re-test of the top slice (`Dr3dre/Genius-song-lyrics-cleaned`, about 5.1M songs; English-language filter, per-song line dedupe), case variants plus surface normalizations, checksum-free GPU brainwallet engine | 149,913,074 lyric lines from 3,374,198 English songs to 456,693,751 candidates | 0 match | 2026-08-23 (round 5) |
+
+Round 5 note (2026-08-23): witnessed at both levels. Before the run, the GPU checker
+(`engines/secp256k1_hash160_engine.cu`, stream mode) passed its built-in selftest (the
+same 2 public sibling passphrases, through the identical kernel path used for candidates)
+and an end-to-end positive control: with the target overridden to a known witness's
+hash160, feeding that witness produced a MATCH. Coverage is proven by counter equality:
+the engine consumed exactly the 456,693,751 candidates fed, on one rented L40S at a
+sustained 13.78M/s (about $0.50). Scope limits, counted rather than hidden: 1,095,140
+lyric lines longer than the engine's 180-byte input limit were skipped and counted;
+non-English songs (about 11 percent of the corpus) were excluded by the dataset's
+language field; duplicate lines within a song were collapsed before expansion.
