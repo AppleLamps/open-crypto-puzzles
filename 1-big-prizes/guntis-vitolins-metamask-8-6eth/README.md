@@ -154,21 +154,22 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | Extended pool plus natural grammatical inflections | 10,752,000,393 derivations | same | 0 match | yes: 6/6 | 2026-08-15 |
 | Text reading order, contiguous halves, interleavings, full internal orderings | approximately 5.5 million candidates | same | 0 match | not individually recorded per row | before 2026-08-15 |
 | Likelihood-ratio closure of the 6-plus-6 word budget | 91,865 candidates | same | 0 match | not recorded | before 2026-08-15 |
+| Pool extended with short connecting words from the planted texts, fog-only, `fiber`+`fork` required | 18,657,475,200 derivations (of 298.5 billion enumerated) | checksum-aware CUDA engine (`engines/`) on a rented L40S, per-chunk witness protocol | 0 match | yes: 2 planted candidates recovered in every one of 412 chunks | 2026-08-23 |
 
-Cumulative: approximately 16.75 billion candidate derivations tested across
-the 6 metadata-era sweeps, all negative and individually witnessed, plus
+Cumulative: approximately 35.4 billion candidate derivations tested across
+the metadata-era sweeps, all negative and individually witnessed, plus
 roughly 5.6 million candidates from earlier, smaller sweeps. Full method
 notes are in `analysis/tested.md`.
 
 ## Open leads, ranked
 
-1. **Extend the word pool with connecting words** (hours on one rented GPU).
-   Every sweep so far draws non-anchor words from full content words in the 5
-   sentences and confirmed metadata; short connecting words from the same
-   sentences ("there", "will", "also", "only", "because", "like", and
-   similar) have not been included. Confirmed by a match in the extended
-   pool; killed by exhausting it with none, under the same witness protocol
-   as every prior sweep.
+1. **KILLED 2026-08-23: extend the word pool with connecting words.**
+   Every sweep through 2026-08-22 drew non-anchor words from full content
+   words in the 5 sentences and confirmed metadata; short connecting words
+   from the same sentences ("there", "will", "also", "only", "because",
+   "like", and similar) had not been included. Executed as sweep C1
+   (`analysis/tested.md`): 18,657,475,200 checksum-valid derivations,
+   fog-only, per-chunk witness protocol, 0 match. This lead is closed.
 2. **Extend to substrings of longer words** (about a day on one rented GPU).
    The author, asked directly, said a list word could in principle hide
    inside a longer written word (his own example: "possible" inside its own

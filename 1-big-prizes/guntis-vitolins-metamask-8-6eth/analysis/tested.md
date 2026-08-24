@@ -111,3 +111,36 @@ is a substring of a longer written word (the author's own comment about
 is acknowledged but not confirmed as a real mechanism; see README), or that a
 word exists in material outside these
 2 texts and their direct metadata.
+
+## C1 -- pool extended with short connecting words, fog-only, GPU (2026-08-23)
+
+Set: anchors `dutch`/1, `fog`/5 (`cloud` dropped per the R1 sourcing
+correction, issue #10), `parrot`/12; `fiber` and `fork` required members on
+the post side; 6/6 video/post partition; free words drawn from the full
+content-word pools PLUS the short connecting words from the planted
+sentences and metadata ("there", "will", "also", "you", "more", "can",
+"then", "only", "because", "like"); all 12 words distinct, 9! free orders,
+1-in-16 BIP39 checksum filter.
+
+822,640 set-pairs x 9! = 298,519,603,200 lists enumerated; 18,657,475,200
+passing the checksum, derived and compared via the repo's own
+`engines/bip39_passphrase_engine.cu` (PBKDF2-HMAC-SHA512 -> BIP32
+m/44'/60'/0'/0/0 -> keccak256) on a rented Modal L40S. Overlap with the
+prior metadata-era sweeps reconstructed at 571.5 million derivations
+(3.06%), so roughly 96.9 percent of this space had never been tested.
+
+Rate: 986,965 derivations/second sustained, measured row-fed through the
+full sweep path before the run. Witness: per-chunk protocol -- every
+2,000-set-pair chunk carried the real escrow plus 2 planted candidates
+(first valid row of set-pair 0 and of set-pair 822,639) as simultaneous
+targets; a chunk whose planted witnesses were not recovered aborts the run
+with exit 3 rather than reporting a negative. The generator was validated
+against the folder oracle (40/40 canonical, zero invalid-checksum rejects)
+and the engine's known-answer tests before any measurement; the validation
+protocol caught and fixed one real generator bug (a wrong 128-of-132-bit
+checksum slice) pre-run. Cost: about 11 dollars across three resumable
+segments (one segment interrupted by a local network loss and resumed from
+its volume checkpoint, repeating only one partial chunk). Result: 0 match
+across all 822,640 set-pairs -- 18,657,475,200 derivations.
+
+This executes and closes open lead 1 as ranked in the README.
