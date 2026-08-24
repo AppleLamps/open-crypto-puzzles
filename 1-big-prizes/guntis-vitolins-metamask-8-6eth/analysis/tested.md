@@ -80,6 +80,125 @@ ordering under the confirmed anchors. It does not cover connecting words
 (prepositions, articles), substrings of longer words, or metadata beyond the
 tags, title and hook line already identified.
 
+## RO1 -- the complete reading-order model over the full recovered 2020 text (2026-08-20)
+
+Contributed. This is the first sweep to define its space by a closed form and
+then enumerate exactly that count, so the coverage claim is checkable rather
+than asserted.
+
+Hypothesis: all 12 elements are whole words appearing in the recovered 2020
+written surfaces, 6 from the video side and 6 from the post side, and the
+elements keep the order in which they are written. The 3 anchors are fixed as
+already established: `dutch` at position 1, `fog` at position 5, `parrot` at
+position 12. `fork` appears only in the post's tag "ethereum fork", which has
+no position in running prose, so it is given a free slot among the post's 6.
+
+Word pool, built from the archived 2020 text and its metadata, not from the 5
+planted sentences alone: 39 dictionary words on the video side, 83 on the post
+side, 106 distinct across both.
+
+Space, closed form. All counts are exact integers, no rounding:
+
+```
+video word sets   = C(25,2)*C(2,2) + C(25,3)*C(2,1) = 300 + 4,600 = 4,900
+templates         = C(3,2)*C(6,2) = 45  for the (2 before fog, 2 after) shape
+                    C(3,3)*C(6,1) = 6   for the (3 before fog, 1 after) shape
+video pairs       = 300*45 + 4,600*6 = 13,500 + 27,600 = 41,100
+post word sets    = C(18,3) = 816
+fork slot choices = 5
+arrangements      = 41,100 * 816 * 5 = 167,688,000
+checksum-valid    = 10,484,919
+```
+
+Method: enumerate all 167,688,000 arrangements in 3,264 units, filter by the
+BIP39 checksum in stdlib, derive every survivor at `m/44'/60'/0'/0/0` and
+compare against the escrow address.
+
+Script: `tools/sweep_reading_order.py`, which re-enumerates the identical space
+in 816 larger units (1 per post word set) without the novelty banding the
+original run used to order its units. `--size` prints the closed form and
+checks that the layout enumeration reproduces it. `--selftest` verifies the
+wordlist digest, measures the checksum acceptance rate on a real unit, and
+plants a candidate then requires the pipeline to recover it. Enumeration and
+the checksum filter are stdlib, so both of those run without `bip_utils`;
+derivation is delegated to `tools/oracle.py`. On a hit the phrase is written to
+a file and deliberately not printed to the log.
+
+Certification. The enumerated arrangement count equals the closed form to the
+unit, in all 7 novelty bands separately and in total. Duplicate arrangements
+across units: 0. The observed checksum pass rate is 6.254 percent against a
+predicted 6.25 percent, which is the independent check that the enumeration and
+the checksum filter agree. A known-answer test was run on the derivation engine
+before and after: `abandon` 11 times plus `about` derives
+`0x9858EfFD232B4033E47d90003D41EC34EcaEda94`, on both the fast engine and a
+separate reference engine, with 0 disagreements between the two over the whole
+run. A synthetic witness was planted in each unit that could hold one and
+recovered through the identical pipeline: OK 1,062, SKIP 2,202 (units whose
+shape admits no witness), NONE 0.
+
+Result: 10,484,919 derivations, **0 match**.
+
+Rate: measured 207 to 497 derivations/second on 2 CPU cores, so about 14 hours
+of elapsed time here. The same space is about 13 seconds at the 792,000
+derivations/second rate this repository's earlier sweeps were run at. The space
+is small; the point of this sweep is that it is now closed and witnessed, not
+that it was expensive.
+
+## RO2 -- the same reading-order model extended to substrings (2026-08-20)
+
+Contributed. A bounded probe of lead 2, not a closure of it.
+
+Hypothesis: as RO1, but the pool also admits substrings of longer written words
+where the substring is itself a dictionary word.
+
+Space: 9,334,500 arrangements, 582,725 checksum-valid derivations. Same
+anchors, same order constraint, same witness protocol.
+
+Result: 0 match.
+
+This does **not** close lead 2. It covers only the substrings already listed in
+`analysis/leads.md` under the reading-order constraint. The free-order
+substring space named in that lead is about 2.8x10^11 derivations and remains
+open.
+
+## What RO1 changes about the remaining space
+
+Reading order was the assumption that made any of this searchable. With it
+dropped, the same pool and the same 3 anchors give:
+
+```
+C(38,4) = 73,815          free choice of the 4 unplaced video words
+C(82,3) = 88,560          free choice of the 3 unplaced post words
+9!      = 362,880         free arrangement of the 9 unanchored positions
+arrangements   = 73,815 * 88,560 * 362,880 = 2.3722x10^15
+checksum-valid = 1.4826x10^14
+```
+
+At 792,000 derivations/second that is 5.9 years on one GPU. At 12,600
+derivations/second, the rate 64 rented CPU cores would give, it is 373 years.
+Both figures are quoted so that nobody prices this the way an earlier private
+estimate did, which put the same space at 9.1x10^9 arrangements and concluded
+that a weekend of rented CPU would cover it. That estimate was low by a factor
+of about 2.6x10^5.
+
+The consequence for this folder's ranking: the 2 open sweep leads, liaisons and
+substrings, are together about 0.2 percent of the free-order space. They are
+worth running because they are cheap, not because covering them would leave
+much behind. If the phrase is not in them, no amount of rented compute reaches
+the rest. What remains after them is a reading problem, so the leads have been
+re-ordered to put reading first.
+
+One sharper result from inside the reading-order model, offered as evidence
+rather than as a conclusion. With `fog` at 5 and `parrot` at 12 and order
+preserved, the 4 free video words must split k of them before `fog` and m of
+them between `fog` and `parrot`, with k+m=4 and k at most 3. Only 2 dictionary
+words lie between `fog` and `parrot` in the video text, `lake` and `also`, so m
+is at most 2, which forces (k,m) to be (2,2) or (3,1) and therefore forces at
+least one of `lake` or `also` into the phrase. RO1 covers 100 percent of that
+space and is negative. So either the pool is incomplete on the video side, or
+order is not preserved. Those are the only 2 options left inside this model,
+and lead 1 is the cheaper of the 2 to test.
+
 ## Earlier, smaller sweeps (pre-metadata, dates not individually re-timestamped
 in the source record, all prior to 2026-08-15)
 
@@ -104,10 +223,38 @@ in the source record, all prior to 2026-08-15)
 
 ## What none of this has tested
 
-Every sweep above assumes the 12 elements come from the 2 published texts
-(including their metadata). None of it tests the possibility that an element
-is a substring of a longer written word (the author's own comment about
-"possible" as a substring of its own negation, formed with the prefix "im-",
-is acknowledged but not confirmed as a real mechanism; see README), or that a
-word exists in material outside these
-2 texts and their direct metadata.
+1. Text shown on screen in the challenge video. The author names this as a
+   channel in his own spoken rules for the challenge, at 5:22 to 5:38 of
+   .../w4mpiuBP_aY: the words "could be you know written in the video on the
+   screen so read carefully". Every sweep in this file, including RO1 and RO2,
+   draws its pool from the description, title, tags and post body only. No
+   frame of the video image has been read. This is the largest untested channel
+   and it is not a sweep, it is a reading task.
+
+2. Free ordering over the full recovered pool. Sized above at 1.4826x10^14
+   derivations. Open and not purchasable.
+
+3. Liaisons and substrings under free ordering. The 2 sweep leads, about
+   1.4x10^10 and 2.8x10^11 derivations.
+
+4. Derivation paths other than `m/44'/60'/0'/0/0`. Every sweep in this file
+   uses the MetaMask default first account. The escrow is stated to be a
+   MetaMask wallet, so this is the right first guess, but a phrase already
+   enumerated and rejected at index 0 would also have been rejected at index 1.
+   Re-checking the already-enumerated survivors at
+   `m/44'/60'/0'/0/1`, `m/44'/60'/0'/0/2`, `m/44'/60'/1'/0/0` and
+   `m/44'/60'/2'/0/0` costs about 28 percent of the original derivation work,
+   because the seed is already computed and only the child key derivation
+   repeats.
+
+5. Material outside the 2 published texts and their metadata.
+
+A correction to what this section used to say. It attributed to the author an
+example of a list word hidden inside a longer written word, specifically a word
+nested inside its own negation formed with the prefix "im-". Reading the comment
+thread directly shows that example was written by the reader asking the
+question, not by the author. The author's own example in that reply is "usa" for
+"united states", an abbreviation in a hint, and he adds that the challenge text
+"wikk have corect word". See `clues/author-posts.md` for both replies in full.
+The substring mechanism is still possible; it is just not author-stated, and the
+lead resting on it has been demoted accordingly.
