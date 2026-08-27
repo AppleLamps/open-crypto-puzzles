@@ -2,46 +2,47 @@
 
 Ranked summary is in the README. This file has the reasoning behind the ranking.
 
-## 1. Reconstruct the 2019 browser-copy rendering of the Wattpad chapter
+## 1. Reconstruct the 2019 Wattpad editor buffer, or a 2019 pre-wrap copy
 
 The author states she typed the chapter with a blank line between paragraphs
-("two line breaks... one 13 and one 10 for each"), but the chapter's current
-storage (fetched through Wattpad's API, `modifyDate` 2019-07-23, matching the
-2019-07-30 funding of the current escrow) contains no blank paragraphs at all:
-Wattpad's storage format normalizes them away. What she actually hashed was most
-likely whatever her browser produced when she selected and copied the rendered
-page in 2019, not the raw API storage read today. A first attempt at simulating
-this (Chromium's `selection.toString` and `innerText` rendering rules) is
-included in the "simulated browser copy" row of `analysis/tested.md`, but it
-used only one rendering assumption; the actual 2019 Wattpad reader page layout
-(paragraph spacing, non-breaking spaces around punctuation, title block) has not
-been reconstructed and tested as its own base text.
+and, on 2019-08-01, that "two line breaks" means hitting Enter twice, which
+"displays in Ascii as 13 10 13 10" (CRLF CRLF). On 2019-07-28, before the
+rehash, she said the hashed solution had only one line break, "one 13 and one
+10". The chapter's current storage (fetched through Wattpad's API, `modifyDate`
+2019-07-23, matching the 2019-07-30 funding of the current escrow) contains no
+blank paragraphs at all: 273 `<p data-p-id>` nodes, 0 empty, 10 in-paragraph
+`<br>`, 6 NBSP characters inside sentences. Wattpad's storage format
+normalizes blank paragraphs away.
 
-What would confirm it: rendering `data/chapitre_second_page.html` the way a 2019
-browser would have displayed it, extracting the resulting paragraph text, and
-running it (with the certified case-flip rule applied to the same candidate
-paragraph groups already tested) through `tools/oracle.py`.
-What would kill it: a faithful reconstruction still not matching after the
-already-tested paragraph-selection hypotheses are re-applied to it.
-Cost: hours, mostly in getting the 2019 rendering right; the derivation itself is
-seconds per candidate.
+Live desktop CSS (fetched 2026-08-27) is:
 
-## 2. Read the 27 posts and comments between the rehash and the shutdown
+- generic `pre { white-space: pre-wrap }`
+- `.panel.panel-reading pre { white-space: inherit }` (so the reading panel
+  inherits `normal` and collapses the 30-space SSR indent between `<p>` tags)
+- first page is server-rendered inside `<pre>` as `id="sp720888559-pg1"` with
+  36 paragraphs; pages 2 to 12 load from `apiv2/?m=storytext&id=...&page=N`
 
-The author rehashed and refunded the Real Big Block on 2019-07-30, then stopped
-posting shortly after. The 27 posts and comments she made between 2019-07-30 and
-2019-08-04 have been read once for an explicit "twist" statement, but not
-re-read systematically against the current, narrower list of untested paragraph
-combinations.
+A 2026-08-27 search of 12,848 unique copy serializations built from those
+facts (pages, prefixes, parts, title/byline, SSR indent, empty-paragraph NBSP
+or space lines, `<br>` splits, LF/CRLF joins, Stage One flip) produced 0 match
+against both listed addresses. Witness: 3 planted texts recovered at head,
+middle and tail. Rate: 503/s.
 
-What would confirm it: a stated detail (an extra modification, a further
-paragraph, a corrected count) that, applied to the certified rule and re-tested,
-matches the address.
-What would kill it: a full re-read producing no new candidate paragraph or rule
-variant beyond what `analysis/tested.md` already covers.
-Cost: an hour of reading.
+What remains of this lead is a 2019 stylesheet that still applied `pre-wrap`
+to the reading panel (no 2019 capture of this chapter exists), or a copy from
+the write editor before save/normalize. A reader wrote on 2019-07-25 that
+Wattpad did not let them copy the chapter directly, which argues the author
+hashed an editor paste she then ran through asciivalue.com, not a reader
+`selection.toString()`.
 
-## 3. Two-character edits on the strongest base texts
+What would confirm it: a 2019 CSS or editor-buffer capture whose serialization,
+with the certified case-flip rule, matches the current escrow.
+What would kill it: that capture still not matching after the already-tested
+paragraph-selection hypotheses are re-applied to it.
+Cost: hours, mostly in getting a 2019 editor/CSS capture; the derivation itself
+is seconds per candidate.
+
+## 2. Two-character edits on the strongest base texts
 
 The single-character-edit sweep (266,038,400 candidates, `analysis/tested.md`)
 covers every one-character difference from 40 base texts and is exhaustive for
@@ -59,7 +60,7 @@ Cost: on the order of an hour on a rented GPU for the bounded version described
 above; the private research folder priced this at roughly 45 minutes per base
 text for a similarly scoped variant.
 
-## 4. Identify what "76" indexes for Block 76
+## 3. Identify what "76" indexes for Block 76
 
 A method confirmed on 3 other blocks in the same series (56, 57, 58) uses the
 block's own number as a position index into a specific corpus (a numbered post
@@ -80,7 +81,7 @@ What would kill it: exhausting the remaining candidate corpora with no match at
 position 76.
 Cost: minutes per corpus once a candidate corpus is assembled.
 
-## 5. A short, human-reasoned answer to "change to" / "from change to"
+## 4. A short, human-reasoned answer to "change to" / "from change to"
 
 The author's own hint structure (a short, freeform-text question plus a short
 TOMI expansion, confirmed on more than a dozen other blocks) argues for a short,
@@ -98,6 +99,17 @@ What would kill it, in the useful sense: nothing kills this lead outright; it
 stays open as a standing invitation, same as any human-reasoned wordplay block
 in the series.
 Cost: minutes per candidate; no sweep implied.
+
+## Killed: the 27 posts between the rehash and the shutdown
+
+Killed 2026-08-27. Full re-read of the author's Grycoin comments from
+2019-07-30 to 2019-08-04 (arctic-shift archive of r/Grycoin, plus the Real Big
+Block Discussion thread) produced no new paragraph group. It did pin down the
+line-break bytes already used in the 2026-08-27 copy search: before the rehash,
+one CRLF between paragraphs; after the rehash, Enter twice = `13 10 13 10`.
+She also said, on Grycoin Block 2 (2019-08-03), to copy-paste and change only
+capitalization. Those constraints are in `analysis/tested.md`; they did not
+yield a match.
 
 ## Stage One reproduction: the MD5 and two reimplementation gotchas (issue #1)
 

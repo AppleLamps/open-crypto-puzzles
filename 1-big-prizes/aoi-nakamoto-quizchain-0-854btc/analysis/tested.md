@@ -35,14 +35,24 @@ predecessor (`1EFojcAo2vbhRGCGCa7q8Wwvzss28mhQYC`).
 | All of the above serialization families repeated under CRLF line endings | 2,448 texts (14,688 address checks) | 0 match |
 | 1 to 3 single-letter case toggles across all sign positions, and 1 to 2 across all paragraph boundaries | 1,450,000 | 0 match |
 | Every single-character edit (insert, delete, replace, case toggle) at every position, across 40 base texts (5 paragraph-set choices x 2 NBSP conventions x 2 line-ending conventions x 2 separator conventions) | 266,038,400 | 0 match |
+| 2019 Wattpad reader-page copy families not in the rows above: the 12 live API pages and their 1-to-k prefixes; parts I/II/III; Finney-quote slice; drop title / drop headings; header "Second" and "by AoiNakamoto"; SSR 30-space indent inside `<pre>`; reconstructed empty paragraphs as a NBSP line or a space line; in-paragraph `<br>` split into extra paragraphs; joins `\n`, `\n\n`, `\r\n`, `\r\n\r\n`; NBSP kept or turned to space; Stage One case-flip on first character and on first letter; leading/trailing LF; chapter URL suffix | 12,848 unique texts (12,851 including 3 planted witnesses) | 0 match |
 
-Witness status: every row above used the oracle certified against Block 77 Stage
+Witness status: every row above 2026-08-15 used the oracle certified against Block 77 Stage
 One (see README, "Certified against"); the single-character-edit row additionally
 planted 3 synthetic witnesses per base text (head, middle, tail) and recovered
 all of them on all 40 bases, plus recovered the real Stage One text and address
-when run as a 41st base. Dates: all rows 2026-08-15.
+when run as a 41st base. Dates: those rows 2026-08-15.
 
-Cumulative for Real Big Block: approximately 272 million candidates tested, 0
+The 2026-08-27 Wattpad-copy row used `tools/oracle.py` `attempt()` (MD5 to BIP39 to
+BIP44 indices 0 to 5, compared to both listed addresses). Witness: 3 synthetic
+two-paragraph texts planted at head, middle and tail of the same generator were
+all recovered before the run was accepted. Rate: 503 candidates/s. Date:
+2026-08-27. This row is a targeted test of copy/serialization families grounded
+in the live reader DOM/CSS and in the author's 2019-07-28 / 2019-08-01 ASCII
+notes; it is not a sweep of every paragraph subset.
+
+Cumulative for Real Big Block: approximately 272 million candidates tested
+through 2026-08-15, plus 12,848 unique 2019-copy serializations on 2026-08-27, 0
 match. The single-character-edit sweep accounts for the large majority of this
 total and is the only row certified as a complete sweep of its stated space (all
 40 bases, every single edit); every other row is a targeted, not exhaustive,

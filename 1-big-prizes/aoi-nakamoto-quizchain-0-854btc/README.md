@@ -23,7 +23,7 @@ Block.
 | Prize | 0.777 BTC open (Real Big Block); Block 76's 0.077 BTC was solved and swept by a reader 2026-08-17 (about $48,951 at BTC = $63,000, 2026-08-16) |
 | Chain | bitcoin |
 | Escrow | `14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W` (Real Big Block, [explorer](https://mempool.space/address/14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W)) and `13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd` (Block 76, solved and swept 2026-08-17, [explorer](https://mempool.space/address/13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd)) |
-| Last on-chain check | 2026-08-21: Real Big Block funded and unspent (0.777 BTC); Block 76 swept 2026-08-17 (0.077 BTC claimed by a reader) |
+| Last on-chain check | 2026-08-27: Real Big Block funded and unspent (0.777 BTC); Block 76 swept 2026-08-17 (0.077 BTC claimed by a reader) |
 | Status | OPEN |
 | Puzzle type | bip39-seed, word-selection |
 | Target format | source text (candidate answer), MD5 to 128-bit entropy, BIP39 mnemonic, BIP44 `m/44'/0'/0'/0/i` for i = 0 to 5, P2PKH address |
@@ -152,14 +152,15 @@ Reproduced 2026-08-16.
 
 ### Established facts
 
-1. Both escrows are funded and unspent as of 2026-08-16: `14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W`
-   holds 0.777 BTC (funded 2019-07-30, block 587833) and
-   `13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd` holds 0.077 BTC (funded 2019-07-22,
-   block 586468), checked via [mempool.space](https://mempool.space).
-2. Across the approximately 90 blocks of the series, these are the only 2 still
-   funded: an exhaustive sweep of all 159 funding transactions cited in the
-   author's 202 Reddit posts found 0 unreadable transactions and exactly these
-   2 unspent above 100,000 sats.
+1. Real Big Block is funded and unspent as of 2026-08-27:
+   `14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W` holds 0.777 BTC (funded 2019-07-30,
+   block 587833), checked via [mempool.space](https://mempool.space). Block 76's
+   escrow `13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd` was funded 2019-07-22 (block
+   586468) and was swept by a reader on 2026-08-17.
+2. Across the approximately 90 blocks of the series, these were the only 2 still
+   funded after 2019: an exhaustive sweep of all 159 funding transactions cited
+   in the author's 202 Reddit posts found 0 unreadable transactions and exactly
+   these 2 unspent above 100,000 sats. Only Real Big Block remains funded.
 3. The MD5-to-BIP39-to-BIP44 transform is confirmed exactly against the
    author's own published calibration vector (above).
 4. The case-flip rule is confirmed exactly against the solved sibling lot Block
@@ -187,11 +188,13 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | RBB: every subset of 17 candidate paragraphs, 18 serializations | 2,360,000 | same | 0 match | yes | 2026-08-15 |
 | RBB: every single-character edit across 40 base texts | 266,038,400 | same | 0 match | yes: 3 planted witnesses per base plus the real Stage One text, all recovered | 2026-08-15 |
 | RBB: name/word paragraph selectors, browser-copy simulation, invisible characters, alternate encodings | approximately 1,830,000 | same | 0 match | yes | 2026-08-15 |
+| RBB: 2019 Wattpad reader-page copy families (12 pages and prefixes, title/byline, SSR indent, empty-paragraph NBSP/space lines, `<br>` splits, CRLF joins, Stage One flip) | 12,848 unique texts | same | 0 match | yes: 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-08-27 |
 | Block 76: standard BIP44/49/84 derivations, paths, passphrases on the one chain found by search | standard space plus 24,564 off-by-one variants | MD5 to BIP39 to address compare | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
 | Block 76: word-transform "salves" on "change to" / "from change to" | approximately 53,000 candidate solutions | MD5-prefix filter, then derivation on survivors | 0 match | yes | 2026-08-15 |
 | Block 76: scripted dictionary-times-corpus sweep | approximately 3.2x10^11 MD5, approximately 78,000,000 derivations | MD5-prefix filter, then derivation on survivors | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
 
 Cumulative: approximately 272 million candidates tested against Real Big Block
+through 2026-08-15, plus 12,848 unique 2019-copy serializations on 2026-08-27,
 and approximately 78 million derivations plus approximately 78,000 smaller
 candidates tested against Block 76, all negative. Full scope notes, including
 which rows are complete sweeps versus targeted tests, are in
@@ -199,32 +202,29 @@ which rows are complete sweeps versus targeted tests, are in
 
 ## Open leads, ranked
 
-1. **Reconstruct the 2019 browser-copy rendering of the Wattpad chapter**
-   (hours). The chapter's API storage today has no blank paragraphs, but the
-   author describes typing 2 line breaks between paragraphs; Wattpad likely
-   normalized this away, and what she hashed was probably what her browser
-   rendered and she copied in 2019, not today's raw storage. Confirmed by
-   re-testing the already-tried paragraph selections against a faithfully
-   reconstructed 2019 rendering; killed if that still does not match.
-2. **Read the 27 posts and comments between the rehash and the shutdown**
-   (about an hour). The author posted 2019-07-30 to 2019-08-04 before going
-   silent; these have been read once for an explicit hint but not re-read
-   systematically against the now-narrower list of untested paragraph
-   combinations. Confirmed by a new detail that, applied and tested, matches;
-   killed by a full re-read producing nothing new.
-3. **A bounded 2-character-edit sweep on the strongest base texts** (about an
+1. **Reconstruct the 2019 Wattpad editor buffer, or a 2019 `pre-wrap` copy
+   that the live CSS no longer produces** (hours). Live reader CSS sets
+   `.panel.panel-reading pre { white-space: inherit }`, so the 30-space SSR
+   indent between `<p>` tags collapses on copy; a generic `pre` rule still
+   uses `pre-wrap`. The 2026-08-27 copy families (pages, prefixes, title,
+   empty-paragraph lines, CRLF joins) did not match. What remains is a 2019
+   stylesheet that still used `pre-wrap` on the reading panel, or a copy from
+   the write editor before Wattpad dropped the blank paragraphs. Confirmed by
+   a 2019 CSS/editor capture that, applied, matches; killed if that capture
+   still does not match.
+2. **A bounded 2-character-edit sweep on the strongest base texts** (about an
    hour on a rented GPU). The 1-character sweep is exhaustive; a 2-character
    sweep restricted to the small set of NBSP and line-ending pairs, rather than
    every position, is a bounded extension. Confirmed by a match in that bounded
    space; killed by exhausting it with none.
-4. **Identify what "76" indexes for Block 76** (minutes per candidate corpus).
+3. **Identify what "76" indexes for Block 76** (minutes per candidate corpus).
    A method confirmed on 3 sibling blocks uses the block number as a position
    index into a specific numbered corpus; every corpus tried so far does not
    contain "change" at position 76. Confirmed by a match in an untried corpus
    (candidates include a fuller archive of Hal Finney's tweets, Satoshi's
    SourceForge posts, or the author's own r/Grycoin posts read as their own
    sequence); killed by exhausting the remaining candidate corpora.
-5. **A short, human-reasoned answer to "change to" / "from change to"**
+4. **A short, human-reasoned answer to "change to" / "from change to"**
    (minutes per candidate). The author's confirmed style elsewhere in the
    series favors short, punchy wordplay answers over long dictionary phrases; a
    free filter (`tools/oracle.py --block76-filter`) checks any candidate in
@@ -242,7 +242,7 @@ Full notes: [analysis/leads.md](analysis/leads.md).
 | `data/pipeline-stages.json` | the 6-stage label list for the derivation pipeline figure |
 | `data/blocks-structure.json` | the series structure and the 2 open gates, for the structure figure |
 | `analysis/tested.md` | the complete negatives ledger for both open lots |
-| `analysis/leads.md` | full notes behind the 5 ranked leads |
+| `analysis/leads.md` | full notes behind the ranked leads |
 | `images/01-pipeline-derivation.svg` | the MD5-to-address derivation pipeline diagram |
 | `images/02-structure-blocks.svg` | the Quizchain series structure, colored by claim status |
 | `tools/oracle.py` | candidate checker, certified against the author's own vector; includes the Block 76 prefix filter and the Stage One case-flip helper |
