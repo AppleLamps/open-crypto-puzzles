@@ -69,6 +69,57 @@ films, landing on an exact 10-film split by chance is not strong evidence on its
 own. My working rule is to not treat any criterion as confirmed before all 34
 panels are identified with confidence.
 
+## PNG EXIF and XMP on the published stills
+
+Hypothesis: the 34 published `NN_crop.png` files carry the movie title, the BIP39
+word, or some other payload in EXIF/XMP.
+
+Method: download all 34 crops from bitcoinmovieenigma.com and read PIL `Image.info`
+plus the TIFF EXIF block.
+
+Result: every file carries the same payload, byte for byte in the XMP packet:
+`dc:description` / `ImageDescription` is the literal string "nope", and
+`dc:creator` / `Artist` is `@cryptop1r4t3`. That is a decoy, not a channel.
+Witness: all 34 XMP packets compare equal; re-download and re-read to confirm.
+Date: 2026-08-27.
+
+## Title-to-word rule: unique 4-letter BIP39 prefix in the compact title
+
+Hypothesis: the transform is "find the unique BIP39 4-letter prefix (or the whole
+word, if it is 3 letters) as a substring of the title with spaces and punctuation
+removed." Under that reading, "raidersofthe" contains `soft`, "theshining"
+contains `shin` -> `shine`, "leontheprofessional" contains `prof` -> `profit`,
+and "sharknado" contains `shar` -> `share`.
+
+Method: run every 4-letter window of each compact title against the English BIP39
+wordlist's unique prefixes.
+
+Result: this produces at least one word for 33 of 34 community-identified titles.
+The only title with no prefix and no literal substring is The Goonies (panel 8).
+This is a measurement, not a match against the escrow. Date: 2026-08-27.
+
+## Intruders = G, PG, and TV-14 (keep R and PG-13, plus unrated)
+
+Hypothesis: on the reconciled community film list, the 10 intruders are the
+films whose IMDb / MPAA certificate is G, PG, or TV-14, i.e. panels 7, 8, 12,
+18, 24, 25, 26, 30, 31, and 32. That set includes both wordless-under-literal
+titles The Goonies and Sharknado, so the remaining 24 titles all have a BIP39
+reading. Paths of Glory (APPROVED) and Spartacus (no MPAA claim on Wikidata)
+were kept, not dropped.
+
+Method: take the 24 keepers in panel order and, for each title with more than
+one reading, the Cartesian product of the short alternative list in
+`data/films.csv` (leftmost unique-prefix word plus the community substring
+reading). 55,296 raw 24-word strings, of which 227 pass the BIP39 checksum.
+Each checksum-valid mnemonic was run through `tools/oracle.py` (BIP84/49/44
+and the 3 raw paths).
+
+Result: 0 match. Uncertified: no known-good 24-word mnemonic for this escrow
+exists to plant as a head/middle/tail witness in the same loop; the oracle
+self-test against the public BIP39/BIP84 vectors passed the same day. Rate:
+about 18,000 raw strings/s, checksum filter first, then the full derivation
+only on the 227 valid mnemonics. Date: 2026-08-27.
+
 ## Title-to-word rule: base rate measurement
 
 This is a measurement, not a hypothesis test with a pass or fail result: of the 33
