@@ -2120,7 +2120,7 @@
         "certified_against": "the author's own published worked example, mnemonic 'claim cycle staff clump domain judge boy session razor tiny shoulder coconut' deriving to 0x50D7e097e61121140c19871F06eA6FeB6d14105b"
       },
       "difficulty_left": "insight",
-      "difficulty_note": "the derivation is fully certified and the page-naming scheme is broken, including a hidden 12th game; live game pages sit behind Vercel Attack Challenge Mode as of 2026-08-27; 0 of the 12 words are confirmed via the oracle yet",
+      "difficulty_note": "the derivation is fully certified and the page-naming scheme is broken, including a hidden 12th game; live game pages sit behind Vercel Attack Challenge Mode as of 2026-08-27; player transcriptions exist for games 1, 4, 6, 7, 9, and 11; 0 of the 12 words are confirmed via the oracle yet",
       "leads": [
         {
           "rank": 1,
@@ -2130,13 +2130,13 @@
         },
         {
           "rank": 2,
-          "title": "apply the harvested 2025-05-19 to 2025-06-15 X clue set and the Season 4 hidden hint-mapping page, which names Game 7 as the weakest game",
+          "title": "apply the harvested 2025 X clues, the player page transcriptions (Game 7 Zero-based indexing, Game 11 Braille/+33/French poem, Game 9 digit strings, Game 6 Simplicity Must Be Rewarded I), and the Season 4 hidden hint-mapping page",
           "cost": "hours",
           "status": "open"
         },
         {
           "rank": 3,
-          "title": "transcribe the Game 12 audio track as notes to digits, the method a Season 1 page uses for the same author's puzzle grammar",
+          "title": "transcribe the Game 12 audio track as notes to digits, the method a Season 1 page uses for the same author's puzzle grammar; a player called the track the Jungle",
           "cost": "hours",
           "status": "open"
         }
@@ -2178,6 +2178,30 @@
           "title": "Author, last Season 2 clue (black knight)",
           "url": "https://x.com/FTPKgame/status/1934183762079666297",
           "date": "2025-06-15",
+          "archived": null
+        },
+        {
+          "title": "Author, naming N4Khjir and thedragon8383",
+          "url": "https://x.com/FTPKgame/status/1931006963740979489",
+          "date": "2025-06-06",
+          "archived": null
+        },
+        {
+          "title": "N4Khjir, Game 7 title Zero-based indexing",
+          "url": "https://x.com/N4Khjir/status/1927621189503005053",
+          "date": "2025-05-28",
+          "archived": null
+        },
+        {
+          "title": "N4Khjir, Game 11 Braille / +33 / French poem",
+          "url": "https://x.com/N4Khjir/status/1927623047076282678",
+          "date": "2025-05-28",
+          "archived": null
+        },
+        {
+          "title": "Author, image2.jpg is a development error",
+          "url": "https://x.com/FTPKgame/status/1931024956046909798",
+          "date": "2025-06-06",
           "archived": null
         },
         {

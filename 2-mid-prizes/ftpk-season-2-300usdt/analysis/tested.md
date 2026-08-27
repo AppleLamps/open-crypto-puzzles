@@ -71,3 +71,14 @@ same day reached the same checkpoint on Season 2, on every hashed game URL
 tried, and on the Season 4 hidden page, and failed with "Failed to verify your
 browser - Code 11". The hub still loaded in that session. Not a puzzle negative;
 it is why the twelve games were not re-mirrored on this date.
+
+## Player-comment harvest (2026-08-27)
+
+@N4Khjir and @thedragon8383, the two accounts the author named on 2025-06-06, for
+the Season 2 clue window through 2025-06-15. This is a source harvest, not a
+candidate sweep: N4's pasted titles and body text, and the dragon's progress
+replies, are recorded in `analysis/leads.md`. 0 twelve-word candidates were
+run against the oracle in this pass besides the selftest teaching example.
+Witness: the selftest mnemonic still derives
+`0x50D7e097e61121140c19871F06eA6FeB6d14105b`. Uncertified as a negative on any
+word, because no word was claimed.

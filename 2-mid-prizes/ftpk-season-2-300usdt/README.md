@@ -5,9 +5,9 @@ FTPKgame (@FTPKgame on X) launched the second season of this puzzle series on
 private key for an Ethereum wallet holding USDT. I mapped the entire site, certified the
 derivation against the author's own worked example, and broke the page-naming scheme,
 which turned out to hide a 13th page holding a 12th game. None of the 12 words is
-confirmed via the on-chain oracle yet: about half of the games have a partial reading,
-and the author has since said, on a page built for the next season, that game 7 is the
-weakest and most guessable of the twelve.
+confirmed via the on-chain oracle yet. Two players the author named left page
+transcriptions of games 1, 4, 6, 7, 9, and 11; the live pages themselves sit behind
+Vercel Attack Challenge Mode as of 2026-08-27.
 
 ## At a glance
 
@@ -23,7 +23,7 @@ weakest and most guessable of the twelve.
 | Puzzle type | bip39-seed, word-selection |
 | Target format | 12 English BIP39 words, BIP44 `m/44'/60'/0'/0/0`, no passphrase |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the author's own Game 11 worked example) |
-| What remains | solve enough of the 12 mini-games to fix all 12 words; 0 words confirmed via the oracle so far; live game pages sit behind Vercel Attack Challenge Mode as of 2026-08-27 |
+| What remains | apply the player page transcriptions and the 2025 X clues once a residential browser can read the twelve games; 0 words confirmed via the oracle so far |
 | Series | FTPK (this folder covers Season 2 only) |
 
 ## The puzzle as published
@@ -85,6 +85,10 @@ reproduced exactly.
    to an unrelated image) both decode, once the game's own cipher is solved, to a message
    from the author explicitly naming themselves as decoys.
 6. No public code repository for the author or this puzzle series exists.
+7. On 2025-06-06 the author named @N4Khjir and @thedragon8383 as having left comments
+   worth reading. N4's 2025-05-28 to 2025-06-06 replies transcribe live titles and body
+   text for games 1, 4, 6, 7, 9, and 11, plus three extra hosted paths. Those strings
+   are in [analysis/leads.md](analysis/leads.md). None of them is a 12-word MATCH.
 
 ## What has been tested
 
@@ -108,28 +112,29 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
    headed browser on this host get a checkpoint (the browser failed with Code 11),
    while the hub and Season 1 still load. Confirmed by a full transcription of every
    game; killed only by an on-chain sweep.
-2. **Apply the 2025-05-19 to 2025-06-15 X clue set to those pages** (hours), now
-   catalogued in [analysis/leads.md](analysis/leads.md): ten hidden cities and "4 cities
-   1 word", Game 6's empty contact field, a Fall Guys Creative level that needs two
-   players, French useful twice, an International Date Line map, a Scrabble board, a
-   Shure SM58 next to the word "standards", a black knight as the last published clue,
-   and Game 12 as a Drive file plus "F12". The Season 4 hidden page is still the
-   author's own S2 hint map, including the game-7-is-weakest admission, once a browser
-   can reach it. Confirmed by a 12-word MATCH on the certified oracle; killed only by
+2. **Apply the harvested 2025 X clues and the player page transcriptions** (hours).
+   Catalogued in [analysis/leads.md](analysis/leads.md): Game 7 titled "Zero-based
+   indexing" (the Season 4 page's weakest game), Game 11 titled `+33` with a Braille
+   heading and a five-line French poem whose first letters are a city name, Game 9 as
+   the digit strings `1211920` / `3114`, Game 6 as "Simplicity Must Be Rewarded I" on
+   an extra letter-named page, ten hidden cities and "4 cities 1 word", French useful
+   twice, Game 12 as a Drive file plus "F12" plus Photopea for the Game 1 `.psd`.
+   The Season 4 hidden page remains the author's own S2 hint map once a browser can
+   reach it. Confirmed by a 12-word MATCH on the certified oracle; killed only by
    exhausting every game's candidate readings.
 3. **Transcribe the Game 12 audio track as notes to digits** (hours), the same method a
    Season 1 page from this author uses for a similar audio puzzle, rather than treating
-   it as a song to identify. The 2025-05-27 posts add that the file lives on Google
-   Drive and that F12 is the intended next step. Confirmed by a digit sequence that
-   reads as a valid BIP39 word or index; killed by exhausting the plausible
-   note-to-digit mappings.
+   it as a song to identify. A player who had found the game called the track "the
+   Jungle" and had not yet read the sound. Confirmed by a digit sequence that reads as
+   a valid BIP39 word or index; killed by exhausting the plausible note-to-digit
+   mappings.
 
 ## Files in this folder
 
 | Path | What it is |
 |---|---|
 | `analysis/tested.md` | the complete negatives ledger |
-| `analysis/leads.md` | ranked leads, including the 2025-05-19 to 2025-06-15 X clue harvest |
+| `analysis/leads.md` | ranked leads, the 2025-05-19 to 2025-06-15 X clue harvest, and the player page transcriptions |
 | `tools/oracle.py` | candidate checker: 12-word mnemonic to Ethereum address, certified against the author's own example |
 
 ## Sources
@@ -140,4 +145,8 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 - Season 4 hidden page cross-referencing Season 2 clues, including the game 7 admission: https://findtheprivatekeys4.vercel.app/servicecricketgloomattendsupremejumpannualeagerpulpprojectdiseaseround.html
 - Author, Attack Challenge Mode and the request-bill posts, X, 2025-06-05: https://x.com/FTPKgame/status/1930610344247906356
 - Author, "last clue from me" (black knight), X, 2025-06-15: https://x.com/FTPKgame/status/1934183762079666297
+- Author, naming @N4Khjir and @thedragon8383, X, 2025-06-06: https://x.com/FTPKgame/status/1931006963740979489
+- N4Khjir, Game 7 title "Zero-based indexing", X, 2025-05-28: https://x.com/N4Khjir/status/1927621189503005053
+- N4Khjir, Game 11 Braille / +33 / French poem, X, 2025-05-28: https://x.com/N4Khjir/status/1927623047076282678
+- Author, image2.jpg is a development error, X, 2025-06-06: https://x.com/FTPKgame/status/1931024956046909798
 - Escrow wallet, etherscan.io: https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc

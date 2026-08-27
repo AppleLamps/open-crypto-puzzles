@@ -57,6 +57,18 @@ named by the whole sentence. Each path is
 | 11 | hashed | `1a06df824ed741b53c785079a6347f00eec5af82f9850775409ca69dff4068a6` |
 | 12 | the last game has for url this sentence that is hashed | `2d80326b034b1aa616625ecb0febf8e9f58b125c5c43bc65f5d8ab6bd6cc1d36` |
 
+Extra hosted paths transcribed by @N4Khjir from the live site in May 2025, still
+behind the same checkpoint. These are not `sha256` hex names.
+
+| Path | What N4 reported | Tweet |
+|---|---|---|
+| `/image1.psd` | Photoshop file linked from Game 1 | https://x.com/N4Khjir/status/1927619197695082629 |
+| `/gdjztvzuojmmsmuwrsudjhzdvvlkftfehnxxkbpilscjfljyyg.html` | second extra Game 1 page | https://x.com/N4Khjir/status/1927619197695082629 |
+| `/hdvpvgyqxzplxefvngacfsdsljxajfhtweksvlkihugghszomf.html` | Game 6 page titled "Simplicity Must Be Rewarded I" | https://x.com/N4Khjir/status/1929061582220276150 |
+
+Wayback has none of these three. A browser PSD editor is the reading the author
+gave for at least one image file (lead 3).
+
 ## 2. Cross-reference the Season 4 hidden page
 
 Still the author's own stated S2 hint map, including the line that game 7 is the
@@ -86,6 +98,14 @@ of the S2 track as an image was already refuted (`analysis/tested.md`); the
 remaining reading is note names or MIDI numbers to a digit string, then that
 string as a BIP39 word or as a page name.
 
+@thedragon8383 asked for a hint "through the Jungle" under the author's one-word
+post "photopea"
+(https://x.com/FTPKgame/status/1926763058266767552,
+https://x.com/thedragon8383/status/1926814830620459249). Two days later the same
+player identified "the Jungle" as Game 12's sound, with the game found and the
+audio unread (https://x.com/thedragon8383/status/1927546235486871920). Photopea
+is the browser editor for the Game 1 `.psd`; the Jungle is the Game 12 track.
+
 What would confirm it: a digit string that is a BIP39 word or that names a page
 whose body is the word, then the full 12-word mnemonic matching the escrow.
 What would kill it: exhausting the note-to-digit maps against the oracle once
@@ -105,6 +125,12 @@ This is the largest explicit constraint the author published: ten city names
 hidden across a subset of the twelve games, and one of the twelve words is
 fixed by a set of four cities. It does not say the word is a city name. It
 does not name the four cities.
+
+One city is already sitting in a player transcription. Game 11's French poem
+(lead 6) has first letters I, B, I, Z, A. That string is a city and is not an
+English BIP39 word, so it is a city-clue, not a twelfth seed word. It is a
+candidate member of the set of ten, and maybe of the set of four. I am not
+treating it as a MATCH.
 
 What would confirm it: identifying the four cities on the live pages and
 reading the one BIP39 word they share, then matching the escrow.
@@ -189,11 +215,114 @@ against the escrow on the strength of an image caption.
 
 On 2025-06-06 the author named @N4Khjir and @thedragon8383 as having left
 comments "that could interest you", in the same thread as the Game 6 contact-info
-answer. I have the Game 6 screenshot (lead 5). I have not yet pulled those two
-users' reply threads. That is a bounded, hours-scale follow-up that does not
-need the live site.
+answer (https://x.com/FTPKgame/status/1931006963740979489). I pulled both
+timelines for the Season 2 clue window (2025-05-19 through the author's
+2025-06-15 last clue). The threads are not social only. N4 pasted live page
+text. The dragon posted progress reports the author answered. None of this is a
+seed word. Every 12-word set still has to go through `tools/oracle.py`.
 
-What would confirm it: a quoted player comment that names a mechanic or a word,
-then an oracle MATCH once combined with the other eleven.
-What would kill it: those threads being social only.
-Cost: hours on X.
+### @N4Khjir page transcriptions (2025-05-28 to 2025-06-06)
+
+Posted as replies to the author, with the live titles and body text. I am
+quoting the puzzle strings, not claiming a BIP39 word.
+
+- Game 1 (https://x.com/N4Khjir/status/1927619197695082629): Vigenere block
+  `ZROQV / JVVW EHFOZV TILV XDB. / OROLV LJNH ZRX DDQ'U VTFJR IRZ / UR GFW TIH
+  MFVVAHH QVLFK`; Cicada 3301; the Cold War barrier image already named a decoy
+  in `analysis/tested.md`; extra paths `/image1.psd` and
+  `/gdjztvzuojmmsmuwrsudjhzdvvlkftfehnxxkbpilscjfljyyg.html`.
+- Game 4 (https://x.com/N4Khjir/status/1927620248426913890): two photographs.
+  The attached files are no longer served. No transcription of what they depict.
+- Game 6 (https://x.com/N4Khjir/status/1929061582220276150): page
+  `hdvpvgyqxzplxefvngacfsdsljxajfhtweksvlkihugghszomf.html`, title
+  "Simplicity Must Be Rewarded I". Season 1 used the same sentence as a hashtag
+  and as a clue, with a different final letter.
+- Game 7 (https://x.com/N4Khjir/status/1927621189503005053): title
+  "Zero-based indexing", plus a screenshot that is no longer served. This is
+  the game the Season 4 hint page calls the weakest. The title names the
+  convention for reading a number as a list position (0-based versus 1-based).
+  I am not treating the title-word as a candidate.
+- Game 9 (https://x.com/N4Khjir/status/1927621634828939664): title `1211920`,
+  body `3114`. Digit strings. Plausible readings are A1Z26 groups or BIP39
+  list indices; both are unconstrained until the live page shows how the
+  digits are grouped. I am not printing a word from either split.
+- Game 11, teaching pane (https://x.com/N4Khjir/status/1927616681964126429):
+  title `44 . C`, plus the mnemonic and address that `tools/oracle.py
+  --selftest` already reproduces. Teaching example, not the Season 2 seed.
+- Game 11, second pane (https://x.com/N4Khjir/status/1927623047076282678):
+  title `+33`, heading "Transcription from Braille", then a five-line French
+  poem. `+33` is the calling code for France, which pairs with the author's
+  "2 times throughout the game, French will help you". The live page may show
+  Braille; this is N4's Latin transcription:
+
+  > Infinie est la lumiere du matin.
+  > Berce doucement, le vent dans le jardin.
+  > Il murmurait des secrets aux fleurs endormies.
+  > Zephyr danse, leger sur l'eau de la vie.
+  > Au loin, l'horizon veille, plein de magie.
+
+  English gloss: Infinite is the morning light. Gently rocked, the wind in the
+  garden. It whispered secrets to the sleeping flowers. Zephyr dances, light
+  on the water of life. In the distance, the horizon watches, full of magic.
+  First letters: I, B, I, Z, A (lead 4). Accents omitted here; they do not
+  change the first letters.
+- Game 5 (https://x.com/N4Khjir/status/1931017991170183383): "Z = 2 ?". Pairs
+  with the author's 2025-06-05 Tetris J-piece captioned "5" and with the digit
+  grid already in `analysis/tested.md`.
+- Game 1 follow-up (https://x.com/N4Khjir/status/1931020117774668115): "The
+  file image2.jpg does not exist." The author confirmed it
+  (https://x.com/FTPKgame/status/1931024956046909798): the file was a
+  development error, and they said they would delete that part of the code.
+  Not a puzzle step.
+- White-rabbit clue (https://x.com/N4Khjir/status/1928535519022948673): N4
+  read it as a wallet with no native ETH. The escrow's ETH balance is 0; the
+  prize is the USDT token. I am not treating a thematically neighbouring
+  BIP39 word as a candidate.
+
+The author told N4 "you did some good research... nice to share it with
+others" (https://x.com/FTPKgame/status/1927681391833051513). N4's later
+2025-06-07 to 2025-06-15 posts in the Wayback capture are unrelated retweets,
+except a no-text reply to the Shure SM58 clue.
+
+### @thedragon8383 progress reports
+
+- Game 11 teaching wallet empty?
+  (https://x.com/thedragon8383/status/1925711495020560598). It is the
+  teaching example, 0 ETH / 0 USDT, not the escrow.
+- "not sure if I C what is going on"
+  (https://x.com/thedragon8383/status/1925723116078080077). Author: "This
+  game seems okay" (https://x.com/FTPKgame/status/1925716299876896917).
+  Pairs with Game 11's `44 . C` title, or with the letter C, or with neither.
+- "I think I got game 10"
+  (https://x.com/thedragon8383/status/1926386081076826598). Unverified. Game
+  10's two sub-poem acrostics already fail (`analysis/tested.md`); if the
+  player was right, the word is not in those acrostics.
+- Jungle / Photopea / Game 12 sound: see lead 3.
+- "cold German cicada", stuck on Game 1 part 2
+  (https://x.com/thedragon8383/status/1929260937292267742). Author: the
+  optional bad-vibes clue is not required to reach Game 1
+  (https://x.com/FTPKgame/status/1929299848991244698). Later recap: the
+  player's first reply was cicada, the second a GPS coordinate site
+  (https://x.com/FTPKgame/status/1929903388839350590). The GPS site the
+  player linked was https://www.itilog.com/
+  (https://x.com/thedragon8383/status/1929895434689941876).
+- Solid-red PNG: "Game 2... but why?"
+  (https://x.com/thedragon8383/status/1929885806606372961).
+- Game 5: asked for a hint; author said a first one had already been posted,
+  then the Tetris-J image. Player: "More of these two part puzzles"
+  (https://x.com/thedragon8383/status/1930789907376594980).
+- International Date Line map: "stuck in Colorado, USA"
+  (https://x.com/thedragon8383/status/1930426198095515915).
+- Empty Scrabble board: guessed Game 1 or Game 5, "did not seem to get me
+  anywhere with either game"
+  (https://x.com/thedragon8383/status/1931419058877968771).
+- Arabic تاريخ: asked whether the word was Sindhi or Arabic
+  (https://x.com/thedragon8383/status/1932077123491053972).
+
+What would confirm any transcription: the matching live page, a single BIP39
+word from that page's mechanic, and a 12-word MATCH against the escrow.
+What would kill any transcription: the live page showing the pasted text was
+flavour, plus the word coming from a different mechanic on that page.
+Cost: the harvest itself is done. Applying it still needs the residential
+browser in lead 1. I will not sweep the English wordlist against the escrow
+on the strength of a title or an acrostic.
