@@ -67,7 +67,10 @@ behind the same checkpoint. These are not `sha256` hex names.
 | `/hdvpvgyqxzplxefvngacfsdsljxajfhtweksvlkihugghszomf.html` | Game 6 page titled "Simplicity Must Be Rewarded I" | https://x.com/N4Khjir/status/1929061582220276150 |
 
 Wayback has none of these three. A browser PSD editor is the reading the author
-gave for at least one image file (lead 3).
+gave for at least one image file (lead 3). I word-broke both 50-letter names
+against the English BIP39 list: 0 reconstructions of any length
+(`analysis/tested.md`). They are not the order-helper named by concatenating
+the 12 seed words.
 
 ## 2. Cross-reference the Season 4 hidden page
 
@@ -97,6 +100,11 @@ to visit `https://findtheprivatekey.vercel.app/(the number).html`. A spectrogram
 of the S2 track as an image was already refuted (`analysis/tested.md`); the
 remaining reading is note names or MIDI numbers to a digit string, then that
 string as a BIP39 word or as a page name.
+
+The author's 2025-05-27 "Screenshot of game 12" image is still served as tweet
+media: 329x188 pixels, black rectangle, white text "Click here to view the
+file". No Google Drive id is visible at that resolution. F12 of the live HTML
+is still the step that would expose the file URL.
 
 @thedragon8383 asked for a hint "through the Jungle" under the author's one-word
 post "photopea"
@@ -243,9 +251,12 @@ quoting the puzzle strings, not claiming a BIP39 word.
   convention for reading a number as a list position (0-based versus 1-based).
   I am not treating the title-word as a candidate.
 - Game 9 (https://x.com/N4Khjir/status/1927621634828939664): title `1211920`,
-  body `3114`. Digit strings. Plausible readings are A1Z26 groups or BIP39
-  list indices; both are unconstrained until the live page shows how the
-  digits are grouped. I am not printing a word from either split.
+  body `3114`. Digit strings. As a single BIP39 index, both numbers are out of
+  range (max 2048). A1Z26 partitions of the title: 8 letter strings, 0 English
+  BIP39 words. A1Z26 of the body: 3 letter strings, 1 English BIP39 word, not
+  printed. One title grouping (12, 1, 19, 20) yields the Game 2 page-name
+  preimage already in the hash table above, which is a naming-scheme word, not
+  a seed word. The live page still has to show how the digits are grouped.
 - Game 11, teaching pane (https://x.com/N4Khjir/status/1927616681964126429):
   title `44 . C`, plus the mnemonic and address that `tools/oracle.py
   --selftest` already reproduces. Teaching example, not the Season 2 seed.
@@ -323,6 +334,9 @@ What would confirm any transcription: the matching live page, a single BIP39
 word from that page's mechanic, and a 12-word MATCH against the escrow.
 What would kill any transcription: the live page showing the pasted text was
 flavour, plus the word coming from a different mechanic on that page.
-Cost: the harvest itself is done. Applying it still needs the residential
-browser in lead 1. I will not sweep the English wordlist against the escrow
-on the strength of a title or an acrostic.
+Cost: the harvest itself is done. Two bounded readings of those strings are
+now in `analysis/tested.md` (the extra 50-letter names are not the
+concatenation oracle; Game 9 as a lone index is out of range; Game 9 title
+A1Z26 is 0 list words). Applying the rest still needs the residential browser
+in lead 1. I will not sweep the English wordlist against the escrow on the
+strength of a title or an acrostic.

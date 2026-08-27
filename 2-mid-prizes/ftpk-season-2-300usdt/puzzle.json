@@ -41,7 +41,7 @@
     "certified_against": "the author's own published worked example, mnemonic 'claim cycle staff clump domain judge boy session razor tiny shoulder coconut' deriving to 0x50D7e097e61121140c19871F06eA6FeB6d14105b"
   },
   "difficulty_left": "insight",
-  "difficulty_note": "the derivation is fully certified and the page-naming scheme is broken, including a hidden 12th game; live game pages sit behind Vercel Attack Challenge Mode as of 2026-08-27; player transcriptions exist for games 1, 4, 6, 7, 9, and 11; 0 of the 12 words are confirmed via the oracle yet",
+  "difficulty_note": "the derivation is fully certified and the page-naming scheme is broken; live game pages sit behind Vercel Attack Challenge Mode as of 2026-08-27; extra 50-letter paths are not the concatenation oracle; Game 9 as a lone index is out of range; 0 of the 12 words are confirmed via the oracle yet",
   "leads": [
     { "rank": 1, "title": "read the 12 game pages from a residential browser that passes Vercel Attack Challenge Mode (datacenter fetch and a headed browser on this host both fail, Code 11)", "cost": "hours", "status": "open" },
     { "rank": 2, "title": "apply the harvested 2025 X clues, the player page transcriptions (Game 7 Zero-based indexing, Game 11 Braille/+33/French poem, Game 9 digit strings, Game 6 Simplicity Must Be Rewarded I), and the Season 4 hidden hint-mapping page", "cost": "hours", "status": "open" },

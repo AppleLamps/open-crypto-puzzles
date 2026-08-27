@@ -103,6 +103,9 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | Image LSB steganalysis on Game 1's second decoy image | 30 layout variants | LSB extraction | refuted: nothing found | uncertified | 2026-07-26 |
 | Public code repository search for the author | n/a | GitHub search API | refuted: does not exist | yes | 2026-07-26 |
 | Solid-red X clue image as a hidden-payload carrier | 1 file, 250848 pixels | unique-colour count and EXIF/XMP | uniform #FF0000, no yellow, no metadata | uncertified | 2026-08-27 |
+| Extra 50-letter page names as the 12-word concatenation oracle | 2 strings, 50 letters | DP word-break vs English BIP39 | 0 reconstructions | yes: teaching mnemonic concat re-found as 12 words | 2026-08-27 |
+| Game 9 title/body as a single BIP39 index | 2 numbers | range check against 0..2047 / 1..2048 | both out of range | yes: bounds of the published list | 2026-08-27 |
+| Game 9 title as A1Z26 of the whole digit string | 8 partitions | A1Z26 then BIP39 membership | 0 list words | yes: 12,1,19,20 reproduces the Game 2 page-name preimage | 2026-08-27 |
 
 ## Open leads, ranked
 
@@ -117,7 +120,8 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
    indexing" (the Season 4 page's weakest game), Game 11 titled `+33` with a Braille
    heading and a five-line French poem whose first letters are a city name, Game 9 as
    the digit strings `1211920` / `3114`, Game 6 as "Simplicity Must Be Rewarded I" on
-   an extra letter-named page, ten hidden cities and "4 cities 1 word", French useful
+   an extra letter-named page (those 50-letter names are not the 12-word
+   concatenation oracle), ten hidden cities and "4 cities 1 word", French useful
    twice, Game 12 as a Drive file plus "F12" plus Photopea for the Game 1 `.psd`.
    The Season 4 hidden page remains the author's own S2 hint map once a browser can
    reach it. Confirmed by a 12-word MATCH on the certified oracle; killed only by

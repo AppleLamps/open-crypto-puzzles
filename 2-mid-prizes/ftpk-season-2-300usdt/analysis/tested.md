@@ -82,3 +82,47 @@ run against the oracle in this pass besides the selftest teaching example.
 Witness: the selftest mnemonic still derives
 `0x50D7e097e61121140c19871F06eA6FeB6d14105b`. Uncertified as a negative on any
 word, because no word was claimed.
+
+## Extra 50-letter page names as concatenated BIP39 (2026-08-27)
+
+N4's two extra paths,
+`hdvpvgyqxzplxefvngacfsdsljxajfhtweksvlkihugghszomf` (Game 6) and
+`gdjztvzuojmmsmuwrsudjhzdvvlkftfehnxxkbpilscjfljyyg` (Game 1 extra), 50
+lowercase letters each. Hypothesis: either string is the order-helper named by
+the 12 seed words concatenated with no spaces. Method: DP word-break against
+the 2048-word English BIP39 list (max word length 8). Result: 0 reconstructions
+of any word count, including 12. Witness: the author's teaching mnemonic
+concatenated without spaces
+(`claimcyclestaffclumpdomainjudgeboysessionrazortinyshouldercoconut`, 65
+letters) is re-found as exactly those 12 words through the same code. Rate:
+instant on one CPU. Date: 2026-08-27. These pages are not the concatenation
+oracle.
+
+## Game 9 digit strings as a lone index or as A1Z26 (2026-08-27)
+
+Title `1211920`, body `3114`, from
+https://x.com/N4Khjir/status/1927621634828939664.
+
+- As a single 0-based or 1-based BIP39 index: both numbers are out of range
+  (English list indices run 0 to 2047 / 1 to 2048). 2 candidates, 0 in range.
+- A1Z26 partitions (digits grouped into values 1 to 26, each group a letter):
+  title 8 letter strings, 0 English BIP39 words; body 3 letter strings, 1
+  English BIP39 word (not printed; the page still has to show the grouping);
+  title and body concatenated 24 letter strings, 0 English BIP39 words.
+- Index-splits into two or more in-range numbers: title 54 (0-based) / 26
+  (1-based) splits, body 7 / 7, concatenated 462 / 266. None of those is a
+  12-word mnemonic. I did not treat a pair of list words as a seed.
+
+Witness for the A1Z26 splitter: grouping the title as 12, 1, 19, 20 yields the
+Game 2 page-name preimage already listed in `analysis/leads.md`, so the decoder
+reproduces a known-good grouping. Uncertified as a negative on the seed word,
+because the live page's grouping is not in the transcription. Rate: instant.
+Date: 2026-08-27.
+
+## Game 12 tweet screenshot (2026-08-27)
+
+The author's 2025-05-27 image https://x.com/FTPKgame/status/1927326950692941869
+is still served as tweet media: 329x188 PNG, black field, white text "Click
+here to view the file". No Google Drive id is in those pixels. Not a puzzle
+negative; it is why F12 of the live HTML is still required. The Game 7
+screenshot from N4 (`GsBJNjIW0AAW146.png`) returns HTTP 404.
