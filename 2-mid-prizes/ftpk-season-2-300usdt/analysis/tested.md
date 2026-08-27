@@ -47,3 +47,27 @@ real answer if one were in scope, since 0 of the 12 words are confirmed yet; eac
 witness column reflects only whether that specific check's own harness was proven to
 work (a positive control), not whether the derivation oracle has been exercised on a
 real solution.
+
+## Solid-red clue image (2026-08-27)
+
+The 2025-06-03 post https://x.com/FTPKgame/status/1929833486514278892 is a 624x402 PNG
+of uniform RGB(255, 0, 0): 250,848 pixels, 1 colour, no yellow, no EXIF/XMP strings, no
+bytes past the IEND. Three days later the author wrote that "a little yellow in all
+this red" would help, so if that yellow exists it is on a game page, not in this file.
+Uncertified as a stego negative (no planted payload was pushed through the same
+decoder and re-found); it is a pixel-count of this one file only.
+
+## Live-site fetch (2026-08-27)
+
+`findtheprivatekeys2.vercel.app/` and a hashed game URL both returned a Vercel
+Security Checkpoint (HTTP 429 on `/`, HTTP 403 on a game page). The Season 4 hidden
+page returned the same checkpoint. The hub `findtheprivatekeys.vercel.app/` returned
+HTTP 200, as did Season 1 (`findtheprivatekey.vercel.app/home.html`). Wayback CDX
+for `findtheprivatekeys2.vercel.app` has only the 2025-05-19 landing page as HTTP 200;
+`home.html` and the hashed game URLs were never archived. This matches the author's
+2025-06-05 posts announcing they would enable "Attack Challenge Mode" because
+page-name probing was running up the request bill. A headed browser session the
+same day reached the same checkpoint on Season 2, on every hashed game URL
+tried, and on the Season 4 hidden page, and failed with "Failed to verify your
+browser - Code 11". The hub still loaded in that session. Not a puzzle negative;
+it is why the twelve games were not re-mirrored on this date.

@@ -18,12 +18,12 @@ weakest and most guessable of the twelve.
 | Prize | 305.930218 USDT (about $306, stablecoin, 2026-08-16) |
 | Chain | ethereum |
 | Escrow | `0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc` ([explorer](https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc)) |
-| Last on-chain check | 2026-08-16: USDT balance 305.930218, native ETH 0, 0 outgoing transactions ever |
+| Last on-chain check | 2026-08-27: USDT balance 305.930218, native ETH 0, 0 outgoing transactions ever |
 | Status | OPEN |
 | Puzzle type | bip39-seed, word-selection |
 | Target format | 12 English BIP39 words, BIP44 `m/44'/60'/0'/0/0`, no passphrase |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the author's own Game 11 worked example) |
-| What remains | solve enough of the 12 mini-games to fix all 12 words; 0 words confirmed via the oracle so far |
+| What remains | solve enough of the 12 mini-games to fix all 12 words; 0 words confirmed via the oracle so far; live game pages sit behind Vercel Attack Challenge Mode as of 2026-08-27 |
 | Series | FTPK (this folder covers Season 2 only) |
 
 ## The puzzle as published
@@ -75,7 +75,7 @@ reproduced exactly.
 
 1. The escrow holds 305.930218 USDT and 0 native ETH, with 0 outgoing transactions ever,
    checked via `eth_call` to the USDT contract and `eth_getTransactionCount` on
-   2026-08-16.
+   2026-08-27.
 2. The BIP44 derivation is certified against the author's own published example.
 3. The page-naming scheme, `sha256(word)`, is broken: the 11 known preimages spell a
    sentence that names the URL of a 12th, hidden game page, confirmed live (HTTP 200).
@@ -98,26 +98,38 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | Game 10 sub-poem acrostics | 2 sub-pages | read first letters of each line | refuted: no word spelled | uncertified | 2026-07-26 |
 | Image LSB steganalysis on Game 1's second decoy image | 30 layout variants | LSB extraction | refuted: nothing found | uncertified | 2026-07-26 |
 | Public code repository search for the author | n/a | GitHub search API | refuted: does not exist | yes | 2026-07-26 |
+| Solid-red X clue image as a hidden-payload carrier | 1 file, 250848 pixels | unique-colour count and EXIF/XMP | uniform #FF0000, no yellow, no metadata | uncertified | 2026-08-27 |
 
 ## Open leads, ranked
 
-1. **Harvest the rest of the author's X posts and cross-reference the Season 4 hidden
-   hint-mapping page** (hours), which lists which of that season's clues applies to which
-   Season 2 game, alongside the author's own admission that game 7 is the weakest. With
-   most words held to a short candidate list, sweeping the remaining 1 or 2 positions
-   against the full BIP39 wordlist takes minutes on the certified oracle. Confirmed by a
-   full 12-word candidate matching the escrow; killed only by exhausting every game's
-   candidate readings.
-2. **Transcribe the Game 12 audio track as notes to digits** (hours), the same method a
+1. **Read the 12 game pages from a residential browser that passes Vercel's Attack
+   Challenge Mode** (hours). The author enabled that mode on 2025-06-05 after page-name
+   probing ran up the request bill; as of 2026-08-27 both a datacenter fetch and a
+   headed browser on this host get a checkpoint (the browser failed with Code 11),
+   while the hub and Season 1 still load. Confirmed by a full transcription of every
+   game; killed only by an on-chain sweep.
+2. **Apply the 2025-05-19 to 2025-06-15 X clue set to those pages** (hours), now
+   catalogued in [analysis/leads.md](analysis/leads.md): ten hidden cities and "4 cities
+   1 word", Game 6's empty contact field, a Fall Guys Creative level that needs two
+   players, French useful twice, an International Date Line map, a Scrabble board, a
+   Shure SM58 next to the word "standards", a black knight as the last published clue,
+   and Game 12 as a Drive file plus "F12". The Season 4 hidden page is still the
+   author's own S2 hint map, including the game-7-is-weakest admission, once a browser
+   can reach it. Confirmed by a 12-word MATCH on the certified oracle; killed only by
+   exhausting every game's candidate readings.
+3. **Transcribe the Game 12 audio track as notes to digits** (hours), the same method a
    Season 1 page from this author uses for a similar audio puzzle, rather than treating
-   it as a song to identify. Confirmed by a digit sequence that reads as a valid BIP39
-   word or index; killed by exhausting the plausible note-to-digit mappings.
+   it as a song to identify. The 2025-05-27 posts add that the file lives on Google
+   Drive and that F12 is the intended next step. Confirmed by a digit sequence that
+   reads as a valid BIP39 word or index; killed by exhausting the plausible
+   note-to-digit mappings.
 
 ## Files in this folder
 
 | Path | What it is |
 |---|---|
 | `analysis/tested.md` | the complete negatives ledger |
+| `analysis/leads.md` | ranked leads, including the 2025-05-19 to 2025-06-15 X clue harvest |
 | `tools/oracle.py` | candidate checker: 12-word mnemonic to Ethereum address, certified against the author's own example |
 
 ## Sources
@@ -126,4 +138,6 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 - FTPK hub page: https://findtheprivatekeys.vercel.app/
 - Season 2 puzzle site: https://findtheprivatekeys2.vercel.app/
 - Season 4 hidden page cross-referencing Season 2 clues, including the game 7 admission: https://findtheprivatekeys4.vercel.app/servicecricketgloomattendsupremejumpannualeagerpulpprojectdiseaseround.html
+- Author, Attack Challenge Mode and the request-bill posts, X, 2025-06-05: https://x.com/FTPKgame/status/1930610344247906356
+- Author, "last clue from me" (black knight), X, 2025-06-15: https://x.com/FTPKgame/status/1934183762079666297
 - Escrow wallet, etherscan.io: https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc
