@@ -102,11 +102,12 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 
 ## Open leads, ranked
 
-1. **Read the 12 game pages through a browser that passes Vercel's Attack Challenge
-   Mode** (hours). The author enabled that mode on 2025-06-05 after page-name probing
-   ran up the request bill; as of 2026-08-27 a datacenter fetch of Season 2 and of the
-   Season 4 hidden page gets a checkpoint page, while the hub and Season 1 still load.
-   Confirmed by a full transcription of every game; killed only by an on-chain sweep.
+1. **Read the 12 game pages from a residential browser that passes Vercel's Attack
+   Challenge Mode** (hours). The author enabled that mode on 2025-06-05 after page-name
+   probing ran up the request bill; as of 2026-08-27 both a datacenter fetch and a
+   headed browser on this host get a checkpoint (the browser failed with Code 11),
+   while the hub and Season 1 still load. Confirmed by a full transcription of every
+   game; killed only by an on-chain sweep.
 2. **Apply the 2025-05-19 to 2025-06-15 X clue set to those pages** (hours), now
    catalogued in [analysis/leads.md](analysis/leads.md): ten hidden cities and "4 cities
    1 word", Game 6's empty contact field, a Fall Guys Creative level that needs two

@@ -2124,7 +2124,7 @@
       "leads": [
         {
           "rank": 1,
-          "title": "read the 12 game pages through a browser that passes Vercel Attack Challenge Mode, which the author enabled on 2025-06-05",
+          "title": "read the 12 game pages from a residential browser that passes Vercel Attack Challenge Mode (datacenter fetch and a headed browser on this host both fail, Code 11)",
           "cost": "hours",
           "status": "open"
         },

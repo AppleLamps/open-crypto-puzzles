@@ -10,29 +10,33 @@ hosting dashboard's "Enable Attack Challenge Mode" button and said they were
 turning it on because dictionary probing of page names was running up the
 request bill. As of 2026-08-27, `findtheprivatekeys2.vercel.app` and the Season 4
 hidden page both return a Vercel Security Checkpoint (HTTP 429/403) to a
-datacenter fetch, while the hub at `findtheprivatekeys.vercel.app` still returns
-200. Wayback has only the Season 2 landing page (2025-05-19), not `home.html` or
-any hashed game URL. A browser that can pass the checkpoint is still the way to
-read the twelve games; the X posts are the part I can work with offline.
+datacenter fetch, and a headed browser session on the same host failed the
+checkpoint with "Failed to verify your browser - Code 11". The hub at
+`findtheprivatekeys.vercel.app` still returns 200. Wayback has only the Season 2
+landing page (2025-05-19), not `home.html` or any hashed game URL. A residential
+browser that Vercel will admit is still the way to read the twelve games; the X
+posts are the part I can work with offline.
 
 I am not treating any of the images below as a BIP39 word. Several of them
 thematically neighbour words on the English list, and that is exactly the kind
 of near-miss this catalogue refuses to print as a claim.
 
-## 1. Read the twelve game pages through a real browser
+## 1. Read the twelve game pages from a residential browser
 
 The derivation is certified and the page-naming scheme is already broken. What
 is missing is the games themselves. The author's 2025-06-05 posts show why a
 scripted fetch is no longer enough: Attack Challenge Mode was enabled on
-purpose. The hub page still loads, Season 1 still loads, and the hashed Season 2
-URLs were HTTP 200 when I mapped them in 2026-07, so the content is still
-hosted.
+purpose. A headed browser on this host also failed, with checkpoint Code 11, so
+the bar is a client Vercel treats as a person on a normal ISP, not merely
+"JavaScript on". The hub page still loads, Season 1 still loads, and the hashed
+Season 2 URLs were HTTP 200 when I mapped them in 2026-07, so the content is
+still hosted.
 
 What would confirm it: a mirror of all 12 game pages (plus the word-order helper)
 from a session that passed the checkpoint, with every visible string, corner
 number, image URL, and audio URL transcribed.
 What would kill it: an on-chain sweep, or the author taking the season down.
-Cost: a browser that Vercel will admit; no compute.
+Cost: a residential browser that Vercel will admit; no compute.
 
 Known hashed URLs, in the order the 11 listed-game preimages spell, with game 12
 named by the whole sentence. Each path is

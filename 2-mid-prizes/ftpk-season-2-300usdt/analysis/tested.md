@@ -66,5 +66,8 @@ HTTP 200, as did Season 1 (`findtheprivatekey.vercel.app/home.html`). Wayback CD
 for `findtheprivatekeys2.vercel.app` has only the 2025-05-19 landing page as HTTP 200;
 `home.html` and the hashed game URLs were never archived. This matches the author's
 2025-06-05 posts announcing they would enable "Attack Challenge Mode" because
-page-name probing was running up the request bill. Not a puzzle negative; it is why
-the twelve games were not re-mirrored on this date.
+page-name probing was running up the request bill. A headed browser session the
+same day reached the same checkpoint on Season 2, on every hashed game URL
+tried, and on the Season 4 hidden page, and failed with "Failed to verify your
+browser - Code 11". The hub still loaded in that session. Not a puzzle negative;
+it is why the twelve games were not re-mirrored on this date.
