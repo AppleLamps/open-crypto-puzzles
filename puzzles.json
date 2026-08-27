@@ -3765,7 +3765,7 @@
           "label": "main",
           "explorer": "https://mempool.space/address/bc1q94ecsn0qk8lap2gefrycnms3ruepy889z969a6",
           "expected": "100000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-08-27",
           "verified_state": "funded-unspent"
         }
       ],
@@ -3782,35 +3782,29 @@
         "certified_against": "the public BIP39/BIP84 test vectors (12-word and 24-word 'abandon' vectors), since no solved sibling exists for this puzzle"
       },
       "difficulty_left": "insight",
-      "difficulty_note": "the derivation is bounded and fast once the inputs are known (checking a 24-word candidate is a single oracle call; searching every way to drop 10 of 34 known words costs on the order of an hour with this stdlib-plus-bip_utils oracle); the actual gate is cultural, not computational: 32 of 34 films are identified with confidence, 1 (panel 11) is unidentified, 1 (panel 34) has two competing identifications from different research passes that were not reconciled, and neither the title-to-word rule nor the intruder-selecting IMDb field has been found",
+      "difficulty_note": "the derivation is bounded and fast once the inputs are known; all 34 films now have an identification (nine previously disputed panels were checked against the published stills on 2026-08-27 and follow the community list). A unique BIP39 4-letter prefix scan of each compact title yields a word for 33 of 34 titles; only The Goonies has none. The remaining gate is that Goonies word plus the IMDb field that drops 10 of the 34 words. Certificate G/PG/TV-14 was tested through the oracle (55,296 raw strings, 227 checksum-valid, 0 match, uncertified)",
       "tested_total": {
-        "candidates": 0,
-        "families": 5,
+        "candidates": 55296,
+        "families": 8,
         "certified": false
       },
       "leads": [
         {
           "rank": 1,
-          "title": "identify panel 11",
-          "cost": "needs-a-person",
+          "title": "find the title-to-word rule for The Goonies",
+          "cost": "needs-new-information",
           "status": "open"
         },
         {
           "rank": 2,
-          "title": "reconcile panel 34's identity (Dead Ringers vs The Human Centipede)",
-          "cost": "needs-a-person",
+          "title": "find the IMDb field that splits 24 keepers from 10 intruders",
+          "cost": "needs-new-information",
           "status": "open"
         },
         {
           "rank": 3,
-          "title": "find the title-to-word rule for the 4 titles with no literal BIP39 word",
-          "cost": "needs-new-information",
-          "status": "open"
-        },
-        {
-          "rank": 4,
-          "title": "find the IMDb field that splits 24 keepers from 10 intruders",
-          "cost": "needs-new-information",
+          "title": "re-check panels 9, 13 and 24 against the issue #9 sources",
+          "cost": "needs-a-person",
           "status": "open"
         }
       ],
@@ -3837,7 +3831,7 @@
         }
       ],
       "third_party_material": "the 34 movie panels are individual frames from third-party films, not original material by the author; I do not reproduce them here and link to the author's still-live site instead",
-      "last_updated": "2026-08-16",
+      "last_updated": "2026-08-27",
       "folder": "3-small-prizes/bitcoin-movie-enigma-100ksats"
     },
     {

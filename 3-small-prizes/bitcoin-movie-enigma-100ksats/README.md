@@ -7,11 +7,11 @@ published on the author's own site, describe a two-step transform: turn each of 
 34 movie titles into an English BIP39 word, then drop 10 "intruder" words using
 information found on each film's IMDb page, leaving the real 24-word seed in panel
 order. The derivation is fully understood and bounded once the inputs are known.
-What is missing is entirely cultural: I have identified 32 of the 34 films with
-confidence, 1 remains unidentified, and 1 has two different candidate
-identifications from separate research passes that I have not reconciled, and I
-have not yet found either the title-to-word rule or the IMDb field that splits the
-24 keepers from the 10 intruders.
+What is missing is entirely cultural: all 34 films now have an identification
+(9 previously disputed panels were checked against the published stills on
+2026-08-27 and follow the community list in `data/films_community_issue9.csv`),
+and I have not yet found either the title-to-word rule for The Goonies or the
+IMDb field that splits the 24 keepers from the 10 intruders.
 
 ## At a glance
 
@@ -22,12 +22,12 @@ have not yet found either the title-to-word rule or the IMDb field that splits t
 | Prize | 100,000 sats (about $63 at BTC = $63,000, 2026-08-16) |
 | Chain | bitcoin |
 | Escrow | `bc1q94ecsn0qk8lap2gefrycnms3ruepy889z969a6` ([explorer](https://mempool.space/address/bc1q94ecsn0qk8lap2gefrycnms3ruepy889z969a6)) |
-| Last on-chain check | 2026-08-16: funded and unspent (100,000 sats) |
+| Last on-chain check | 2026-08-27: funded and unspent (100,000 sats) |
 | Status | OPEN |
 | Puzzle type | bip39-seed, text-cipher, word-selection |
 | Target format | BIP39 24 words (English), most likely BIP84 `m/84'/0'/0'/0/i` (script type `v0_p2wpkh`), no passphrase stated |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the public BIP39/BIP84 test vectors) |
-| What remains | identifying 2 of the 34 films, then the title-to-word rule and the IMDb intruder field |
+| What remains | the title-to-word rule for The Goonies, and the IMDb field that drops 10 of 34 words |
 | Series | none |
 
 ## The puzzle as published
@@ -107,7 +107,7 @@ Reproduced 2026-08-16.
 
 ### Established facts
 
-1. The escrow is funded and unspent as of 2026-08-16 (checked via
+1. The escrow is funded and unspent as of 2026-08-27 (checked via
    [mempool.space](https://mempool.space)); the single funding transaction
    confirmed 2022-04-08 at block 730990.
 2. The escrow's own wallet page names the address and lists the author's funding
@@ -115,18 +115,23 @@ Reproduced 2026-08-16.
 3. Both published image sets (individual panels and the "alternative release") are
    byte-for-byte identical, 34 of 34, confirmed by MD5.
 4. All 34 panels now have an identification. Panel 11 (Godzilla) and panel 34
-   (The Human Centipede) were the last two left open here and were closed by community
-   reports in August 2026 (issues #9, #3). Those same reports disagree with the
-   2026-08-04 pass on about ten other panels, which is now the main lead to reconcile
-   (`data/films.csv`, `analysis/leads.md`).
-5. Of the 33 titles identified with any confidence, 29 contain at least one English
-   BIP39 word as a literal substring of the title; 4 do not (The Goonies, Barry
-   Lyndon, Sharknado, Raiders of the Lost Ark).
+   (The Human Centipede) were closed by community reports in August 2026 (issues
+   #9, #3). On 2026-08-27 the nine remaining disagreements with the 2026-08-04
+   pass were checked against the published stills; six are confirmed from the
+   still itself (panels 3, 5, 14, 16, 23, 27) and three stay confirmed-community
+   (panels 9, 13, 24). The merged list is `data/films.csv`.
+5. A unique 4-letter BIP39 prefix scan of each title with spaces removed produces
+   a word for 33 of 34 titles. The only title with no prefix and no literal
+   substring is The Goonies (panel 8). Leon maps to `profit`, Sharknado to
+   `share`, Raiders of the Lost Ark to `soft`, The Shining to `shine`.
 6. About 25 to 30 candidate IMDb-field criteria for the 10 intruders have been
-   tried; none produces an exact 24-versus-10 split (`analysis/tested.md`).
+   tried against earlier film lists; none produces an exact 24-versus-10 split
+   that then matches the escrow (`analysis/tested.md`).
+7. The 34 published PNG stills all carry the same EXIF/XMP decoy: description
+   "nope", creator `@cryptop1r4t3`.
 
 ![34 panel slots colored by identification confidence: confirmed, probable or uncertain or disputed, and unidentified](images/02-panel-grid-identification.svg)
-*Figure 1. Identification status of the 34 panels, no film stills reproduced (source: data/films.csv, script tools/fig_panel_grid.py), 2026-08-16.*
+*Figure 1. Identification status of the 34 panels, no film stills reproduced (source: data/films.csv, script tools/fig_panel_grid.py), 2026-08-27.*
 
 ## What has been tested
 
@@ -139,25 +144,27 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | Intruders = won at least 1 Oscar | recount as films are identified | direct count | looked correct at 10/21, refuted at 11/34 | n/a: direct count | 2026-08-04 |
 | Intruders = adapted from a novel | recount as films are identified | direct count | looked correct at 10/31, refuted at 12/34 | n/a: direct count | 2026-08-04 |
 | About 25 further IMDb-field criteria | recount as films are identified | direct count | none reaches an exact 24/10 split | n/a: direct count | 2026-08-04 |
+| PNG EXIF/XMP carries a title or word | 34 published crops | read EXIF and XMP | decoy only: description "nope", creator @cryptop1r4t3, 34/34 identical | yes: all 34 XMP packets compare equal | 2026-08-27 |
+| Unique BIP39 4-letter prefix in the compact title | 34 titles | prefix scan against the English wordlist | 33/34 titles yield a word; only The Goonies yields none | n/a: direct scan, re-checkable from data/films.csv | 2026-08-27 |
+| Intruders = G, PG, and TV-14 on the reconciled list | 55,296 raw 24-word strings, 227 checksum-valid | certified oracle, BIP84/49/44 plus 3 raw paths | 0 match | uncertified: no known-good mnemonic for this escrow to plant in the loop | 2026-08-27 |
 
 ## Open leads, ranked
 
-1. **Identify panel 11** (needs a person). The still shows "Bumble Bee" branded
-   boxes buried in sand; a Nutrition Facts label dates the scene to after about
-   1994. No film has been matched yet.
-2. **Reconcile panel 34's identity** (needs a person, likely under an hour). Two
-   research passes reached different conclusions, "Dead Ringers" (probable) and
-   "The Human Centipede (First Sequence)" (2009, reached at higher confidence in a
-   later, independent pass). I have not run both methods side by side to settle
-   this, so I present it here as open rather than picking one.
-3. **Find the title-to-word rule for the 4 titles with no literal BIP39 word**
-   (needs new information). The Goonies, Barry Lyndon, Sharknado, and Raiders of
-   the Lost Ark contain no BIP39 word as a literal substring; either the rule is
-   not purely literal, or these 4 are themselves intruders.
-4. **Find the IMDb field that splits 24 keepers from 10 intruders** (needs new
-   information). About 25 to 30 criteria tried, all refuted; I am not testing new
-   criteria until panels 11 and 34 are both settled, since a 10-of-34 split found
-   against an incomplete film set has low statistical value on its own.
+1. **Find the title-to-word rule for The Goonies** (needs an insight). Under
+   both a literal substring scan and a unique 4-letter BIP39 prefix scan of the
+   compact title, panel 8 is the only remaining title with no English BIP39 word.
+   Leon, Sharknado, Raiders of the Lost Ark, and The Shining all resolve once
+   spaces are ignored. A rule that also drops panel 8 as an intruder is cheaper
+   than one that keeps it.
+2. **Find the IMDb field that splits 24 keepers from 10 intruders** (needs an
+   insight). Certificate G/PG/TV-14 on the reconciled list selects exactly 10
+   panels and was tested through the oracle (55,296 raw strings, 0 match,
+   uncertified). The three GPU metadata sweeps reported in issue #9 are empty
+   against a different word list.
+3. **Re-check panels 9, 13 and 24 against the issue #9 sources** (needs a
+   person, likely under an hour). Spartacus, Leon: The Professional, and Close
+   Encounters of the Third Kind are the last identifications that I could not
+   confirm from the published still alone.
 
 ## Files in this folder
 
