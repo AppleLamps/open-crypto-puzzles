@@ -69,8 +69,8 @@ for `findtheprivatekeys2.vercel.app` has only the 2025-05-19 landing page as HTT
 page-name probing was running up the request bill. A headed browser session the
 same day reached the same checkpoint on Season 2, on every hashed game URL
 tried, and on the Season 4 hidden page, and failed with "Failed to verify your
-browser - Code 11". The hub still loaded in that session. Not a puzzle negative;
-it is why the twelve games were not re-mirrored on this date.
+browser - Code 11". The hub still loaded in that session. A later fetch the
+same date did get the pages; see "Live-site fetch, second pass" below.
 
 ## Player-comment harvest (2026-08-27)
 
@@ -123,6 +123,39 @@ Date: 2026-08-27.
 
 The author's 2025-05-27 image https://x.com/FTPKgame/status/1927326950692941869
 is still served as tweet media: 329x188 PNG, black field, white text "Click
-here to view the file". No Google Drive id is in those pixels. Not a puzzle
-negative; it is why F12 of the live HTML is still required. The Game 7
+here to view the file". No Google Drive id is in those pixels. The Game 7
 screenshot from N4 (`GsBJNjIW0AAW146.png`) returns HTTP 404.
+
+## Live-site fetch, second pass (2026-08-27)
+
+A later fetch reached Season 2 and the Season 4 hint page. Eleven listed
+games, the extras, and the helpers returned HTTP 200. Two URLs that the
+2026-07 notes treated as live now 404:
+
+- Game 12 hashed path
+  `2d80326b034b1aa616625ecb0febf8e9f58b125c5c43bc65f5d8ab6bd6cc1d36.html`.
+  Witness: the same host still serves Game 11 at
+  `1a06df824ed741b53c785079a6347f00eec5af82f9850775409ca69dff4068a6.html`
+  (title `44 . C`, teaching address reproduced). The sha256 of the
+  sentence "the last game has for url this sentence that is hashed" still
+  equals that Game 12 hex, so the name is right and the file is gone.
+- Game 5 continuation pages named by 13-digit readings of the on-page
+  13x25 digit block. Five strings, all Vercel 404:
+  `5578700735424` (main diagonal of 13x25), `2930362455644` (anti-diagonal
+  of 13x25), `5687754201452` (main diagonal of 25x13), `5299334053960`
+  (anti-diagonal of 25x13), `5532639166513` (column 0 of 13x25). Witness:
+  Game 9 at its hashed URL still returns 200 with title `1211920` and body
+  `3114`. A July 2026 note said one diagonal then returned 200; that helper
+  is not hosted now.
+
+Rate: one fetch per URL. Date: 2026-08-27. Not a negative on any seed
+word. It is why Game 12 audio and the Game 5 number-URL step cannot be
+finished from the current site.
+
+## Game 10 Text 4 cipher (2026-08-27)
+
+Monoalphabetic substitution on the fourth Game 10 text page. Method: crib
+`QHO` = `THE`, then unique fill of the remaining letters. Plaintext is the
+eight-line city poem quoted in `analysis/leads.md`. Witness: every
+ciphertext letter maps to one plaintext letter and the result is grammatical
+English. This is a decode, not a MATCH. Date: 2026-08-27.

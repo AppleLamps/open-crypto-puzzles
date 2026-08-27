@@ -4,39 +4,37 @@ Ranked summary is in the README. This file has the reasoning behind the ranking.
 
 I harvested the author's public X timeline covering the Season 2 clue window
 (2025-05-19 launch through the author's own "last clue from me" on 2025-06-15,
-plus the remaining promotional posts that month). The live game pages themselves
-are a separate problem: on 2025-06-05 the author posted a screenshot of the
-hosting dashboard's "Enable Attack Challenge Mode" button and said they were
-turning it on because dictionary probing of page names was running up the
-request bill. As of 2026-08-27, `findtheprivatekeys2.vercel.app` and the Season 4
-hidden page both return a Vercel Security Checkpoint (HTTP 429/403) to a
-datacenter fetch, and a headed browser session on the same host failed the
-checkpoint with "Failed to verify your browser - Code 11". The hub at
-`findtheprivatekeys.vercel.app` still returns 200. Wayback has only the Season 2
-landing page (2025-05-19), not `home.html` or any hashed game URL. A residential
-browser that Vercel will admit is still the way to read the twelve games; the X
-posts are the part I can work with offline.
+plus the remaining promotional posts that month). On 2025-06-05 the author posted
+a screenshot of the hosting dashboard's "Enable Attack Challenge Mode" button and
+said they were turning it on because dictionary probing of page names was running
+up the request bill. A datacenter curl and a headed browser on this host both
+failed that checkpoint (Code 11). A later fetch on 2026-08-27 did get through:
+the eleven listed games, the extras, `home.html`, `wordorder.html`, `new.html`,
+`check.html`, and the Season 4 hint-mapping page all returned HTTP 200. The
+hashed Game 12 URL, whose preimage is still the sentence spelled by the eleven
+page names, now returns Vercel `404 NOT_FOUND`. 0 of 12 seed words are confirmed.
+
+I am quoting visible strings and describing images. I am not treating city names,
+image captions, or near-miss list neighbours as BIP39 words.
 
 I am not treating any of the images below as a BIP39 word. Several of them
 thematically neighbour words on the English list, and that is exactly the kind
 of near-miss this catalogue refuses to print as a claim.
 
-## 1. Read the twelve game pages from a residential browser
+## 1. Read the twelve game pages (done for text; Game 12 is 404)
 
-The derivation is certified and the page-naming scheme is already broken. What
-is missing is the games themselves. The author's 2025-06-05 posts show why a
-scripted fetch is no longer enough: Attack Challenge Mode was enabled on
-purpose. A headed browser on this host also failed, with checkpoint Code 11, so
-the bar is a client Vercel treats as a person on a normal ISP, not merely
-"JavaScript on". The hub page still loads, Season 1 still loads, and the hashed
-Season 2 URLs were HTTP 200 when I mapped them in 2026-07, so the content is
-still hosted.
+The derivation is certified and the page-naming scheme is already broken. On
+2026-08-27 I fetched every listed hashed URL, the four Game 10 text pages, both
+50-letter extras, the Game 1 `.psd` link, `wordorder.html`, `new.html`,
+`check.html`, and the Season 4 hint page. Source HTML (F12) is in the notes
+below. What remains of this lead is visual work the HTML does not settle:
+Photopea on `/image1.psd`, which of Game 2's four pictures contains the yellow
+the author mentioned, and recovering Game 12's Drive file now that the hashed
+page is gone.
 
-What would confirm it: a mirror of all 12 game pages (plus the word-order helper)
-from a session that passed the checkpoint, with every visible string, corner
-number, image URL, and audio URL transcribed.
+What would confirm it: a 12-word MATCH on `tools/oracle.py`.
 What would kill it: an on-chain sweep, or the author taking the season down.
-Cost: a residential browser that Vercel will admit; no compute.
+Cost: insight against the transcriptions below; Game 12 still needs the audio.
 
 Known hashed URLs, in the order the 11 listed-game preimages spell, with game 12
 named by the whole sentence. Each path is
@@ -66,30 +64,212 @@ behind the same checkpoint. These are not `sha256` hex names.
 | `/gdjztvzuojmmsmuwrsudjhzdvvlkftfehnxxkbpilscjfljyyg.html` | second extra Game 1 page | https://x.com/N4Khjir/status/1927619197695082629 |
 | `/hdvpvgyqxzplxefvngacfsdsljxajfhtweksvlkihugghszomf.html` | Game 6 page titled "Simplicity Must Be Rewarded I" | https://x.com/N4Khjir/status/1929061582220276150 |
 
-Wayback has none of these three. A browser PSD editor is the reading the author
-gave for at least one image file (lead 3). I word-broke both 50-letter names
-against the English BIP39 list: 0 reconstructions of any length
-(`analysis/tested.md`). They are not the order-helper named by concatenating
-the 12 seed words.
+Wayback has none of these three. A browser PSD editor is still the reading the
+author gave for `/image1.psd`. I word-broke both 50-letter names against the
+English BIP39 list: 0 reconstructions of any length (`analysis/tested.md`).
+They are not the order-helper named by concatenating the 12 seed words. Game 10
+adds four more 50-letter text pages, listed in the live notes below.
+
+## Live pages, 2026-08-27
+
+Quoted strings are the site's. I am not claiming a seed word.
+
+### Home, helpers, Season 4
+
+`home.html` lists games 1-11 and Word order. It does not list Game 12. The
+footer has `new.html` ("New (2/3)") and `check.html`. `wordorder.html` says to
+visit `https://findtheprivatekeys2.vercel.app/(words in game order without
+spaces).html`.
+
+`new.html` and the top of `check.html` add an author offer: if a player using
+the paid word check has at least 8 of 12 words correct, each on the right game,
+the author will share the missing four. That does not change the on-chain
+oracle, which still needs a full valid mnemonic. `check.html` is optional, asks
+for $2 to the escrow plus an email or X handle, and says no hints live on that
+page. Contact named there: `alexandredescartes77@gmail.com` and `@ftpkgame`.
+
+The Season 4 bonus page maps the 2025 X clues to Season 2 game numbers:
+
+| Clue | Games |
+|---|---|
+| Photopea | 1 |
+| F12 | 1, 3, 4, 6, 7, 11, 12 |
+| History | 7 |
+| Library image | 2 |
+| Rabbit wallet image | 11 |
+| Optional hint bad vibes | 5 |
+| Red image | 2 |
+| World map image | 3 |
+| SHA256 | 12 |
+| Tetris piece | 5 |
+| 10 hidden cities | 3, 7, 10 |
+| Scrabble board | 9 |
+| CCZA | 1 |
+| History in Arabic | 7 |
+| Colorful painter | 6 |
+| If I were a city I would be | 7 |
+| Work of art | 11 |
+| 4 cities 1 word | 3, 10 |
+| Bip | 11 |
+| Microphone | 7 |
+| Standard (broad sense) | most games |
+| French twice | 7, 10 |
+| Knight | 1, 5 |
+
+Extra line, quoted: game number 7 is the weakest, too vague and poorly designed,
+and a good candidate if one word had to be left unconstrained.
+
+### Game 1
+
+`lang=fr`. Cipher block matches N4. Invisible 1x1 download link to
+`/image1.psd`. Hidden 100x100 hit-target, bottom right, to
+`/gdjztvzuojmmsmuwrsudjhzdvvlkftfehnxxkbpilscjfljyyg.html`, whose body is only
+`image2.bmp`. CSS defines `.background-image` with no `url()`, so the old
+`image2.jpg` layer is gone (author: development error). Photopea on the PSD is
+still the unread step. CCZA and knight also map here.
+
+### Game 2
+
+Solid red page, four 150px thumbnails in a 2x2 grid:
+
+- slot machine showing 7 and BAR
+- music: 4/4, quarter note = 120, then a rest and a held note
+- analog clock, about 1:50
+- light-blue Ford GT with racing stripes in a city street, police lights on
+
+The author's uniform-red PNG and "a little yellow in all this red" both map
+here. Library image also maps here. I have not picked which thumbnail is "the
+right one".
+
+### Game 3
+
+Three 4x4 addition grids (fifth row and column are sums) on a background image
+`image7.jfif`: a low sun on a horizon, coloured streaks, a small standing
+figure. Caption `SW 1881`. The middle grid has an empty CSS `::before` at
+`top: 39.57px; left: 107.53px`. Unique fill of the blanks from the sums:
+
+```
+4 20 7 8     19 14 5 3     6 4 15 12
+20 5 1 17    9 12 7 26     14 17 26 32
+3 12 11 3    10 13 5 8     18 12 25 13
+9 19 4 18    21 17 5 4     7 19 8 9
+```
+
+World map, F12, 10 hidden cities, and "4 cities 1 word" all map here. `SW 1881`
+is also the catalog name of an 1881 "Map of the Southwest" (Texas State
+Archives Map 1592) and the flight code WN1881. I have not taken either as the
+word.
+
+### Game 4
+
+No photographs in the current HTML (N4's two photos are gone). Body:
+`simplicity must be rewarded` plus a black-on-black `<span class="hidden-letter">E</span>`
+that appears when selected. F12 maps here.
+
+### Game 5
+
+Instruction: find the 13-digit number, then visit
+`/?????????????.html`. Thirteen rows of 25 digits (325 digits, factors
+1, 5, 13, 25, 65, 325), then a lone `Z`. Tetris and "optional hint bad vibes"
+and knight map here. N4 wrote `Z = 2 ?`. Five 13-digit readings of this grid
+(both main diagonals of the 13x25 layout, both of the 25x13 layout, and column
+0 of 13x25) all return Vercel 404 (`analysis/tested.md`). A July 2026 note
+said one diagonal then returned 200; that helper page is not there now.
+
+### Game 6
+
+Fake events site branded as a French-looking company name, hero in `#c90a64`,
+further CSS variables `#660a00`, `#660000`, `#650ac8`, `#640000`. Contact block
+is empty (author removed a fake email; the empty field is part of the game).
+Nav link to `/hdvpvgyqxzplxefvngacfsdsljxajfhtweksvlkihugghszomf.html`, title
+`Simplicity Must Be Rewarded I`. Colorful painter maps here.
+
+### Game 7
+
+Title `Zero-based indexing`. Visible couplets:
+
+```
+With ifs, we put Paris in a bottle
+Directed toward gold, my bootlegs will be adorned
+
+With ifs, we put Dakar in a can
+Decorated by gold will be marked my mock-ups
+```
+
+Hidden `<h1 class="hidden">Dyor</h1>`. History, Arabic history, "If I were a
+city I would be", microphone, French-twice, and 10 hidden cities all map here.
+Paris and Dakar are cities. I am not treating them as seed words. This is the
+page the author called the weakest.
+
+### Game 8
+
+`lang=fr`. Body is the five-character string `A9759`. No title. No other
+markup.
+
+### Game 9
+
+Title `1211920`, body `3114`, `lang=fr`, huge type. Scrabble maps here. As a
+single BIP39 index both numbers are out of range; A1Z26 of the title has 0 list
+words (`analysis/tested.md`). The live page still does not show a grouping.
+
+### Game 10
+
+`lang=fr`. Four buttons, Text 1 to Text 4. French-twice, 10 hidden cities, and
+"4 cities 1 word" map here. The two sub-poem acrostics already fail
+(`analysis/tested.md`); there are now four texts, not two.
+
+- Text 1: nine-line dark poem. Line 1 quotes `bro`. First letters do not spell
+  a list word.
+- Text 2: ocean poem, last two lines `i feel good` and `still alone at sea`.
+- Text 3: title `+33` (map metadata). Grade-1 Braille of the five-line French
+  poem N4 had pasted under Game 11. First letters I, B, I, Z, A: a city name,
+  not an English BIP39 word. N4's Game 11 second pane was this Game 10 page.
+- Text 4: monoalphabetic cipher. Unique substitution with `QHO` = `THE`
+  decrypts to:
+
+  > IN THE LAND WHERE RIVERS GENTLY MEET,
+  > A CITY STANDS, BOTH GRAND AND DISCREET.
+  > MARBLE PILLARS RISE TO TOUCH THE SKY,
+  > WHERE ECHOES OF THE PAST STILL LIE.
+  > BENEATH THE WATCHFUL EAGLE'S GATE,
+  > A SILENT SENTINEL THROUGH ENDLESS DAYS.
+  > THE AIR IS FILLED WITH WHISPERED LORE,
+  > OF BATTLES FOUGHT, OF FREEDOM'S CORE.
+
+  That describes a city. A well-known Eagle Gate monument stands in Salt Lake
+  City; other cities sit where rivers meet under an eagle. I am not treating
+  any of those names as the seed word.
+
+### Game 11
+
+Title `44 . C`. Visible: the teaching address
+`0x50D7e097e61121140c19871F06eA6FeB6d14105b`. Hidden black-on-black mnemonic,
+the selftest example, not the Season 2 seed. No second pane. Rabbit wallet,
+work of art, bip, and F12 map here.
+
+### Game 12
+
+`sha256("the last game has for url this sentence that is hashed")` is still
+`2d80326b034b1aa616625ecb0febf8e9f58b125c5c43bc65f5d8ab6bd6cc1d36`. Fetching
+that `.html` on 2026-08-27 returns Vercel `404 NOT_FOUND`. A site map of the
+host does not list it. SHA256 and F12 still map here. The Drive file is not on
+the tweet screenshot. Notes-to-digits waits on that file.
 
 ## 2. Cross-reference the Season 4 hidden page
 
-Still the author's own stated S2 hint map, including the line that game 7 is the
-weakest and the best candidate to leave unconstrained. The page is named by the
-md5 of Season 4's 12 answer words concatenated, and the live URL is in this
-folder's sources. It is behind the same Vercel checkpoint as Season 2 as of
-2026-08-27. The author announced the page on 2026-07-22
-(https://x.com/FTPKgame/status/2079947035357102350) and said it is hidden "in a
-way that's a bit similar to Game 12 from Season 2."
+Done. The table is under Live pages above. It does not name any seed word. It
+does name which games hold the ten cities (3, 7, 10), which two games share
+"4 cities 1 word" (3 and 10, not 7), and that French helps on 7 and 10, not 11.
+The Game 11 Braille attribution in N4's thread is therefore the wrong game.
 
-What would confirm it: the page text, quoted, tying specific S4 clues to
-specific S2 games, then a 12-word candidate matching the escrow.
-What would kill it: reading the page and finding it does not name any S2 word.
-Cost: same browser session as lead 1.
+What would confirm it: using that map plus the live pages to build a 12-word
+MATCH.
+What would kill it: a full reading that never needs the map.
+Cost: insight; the page is transcribed.
 
 ## 3. Game 12 as notes-to-digits, not song identification
 
-Already the second README lead; the X posts add two facts. On 2025-05-27 the
+Already ranked in the README. The X posts add two facts. On 2025-05-27 the
 author posted "Screenshot of game 12" showing the Google Drive placeholder
 "Click here to view the file", then replied to themselves "F12 of course". On
 2025-06-03 they said someone had found an email address on that Drive link, that
@@ -103,8 +283,9 @@ string as a BIP39 word or as a page name.
 
 The author's 2025-05-27 "Screenshot of game 12" image is still served as tweet
 media: 329x188 pixels, black rectangle, white text "Click here to view the
-file". No Google Drive id is visible at that resolution. F12 of the live HTML
-is still the step that would expose the file URL.
+file". No Google Drive id is visible at that resolution. F12 of the hashed
+Season 2 page is no longer available: that URL is 404. The Drive id has to come
+from an old mirror, a player paste, or the tweet thread.
 
 @thedragon8383 asked for a hint "through the Jungle" under the author's one-word
 post "photopea"
@@ -118,32 +299,30 @@ What would confirm it: a digit string that is a BIP39 word or that names a page
 whose body is the word, then the full 12-word mnemonic matching the escrow.
 What would kill it: exhausting the note-to-digit maps against the oracle once
 the other 11 words are held.
-Cost: hours, once the audio file is downloaded through a browser session.
+Cost: the audio file itself, which is not on the hashed URL any more.
 
 ## 4. The cities cluster
 
-Three posts in one week, none of them a picture:
+The Season 4 map puts the ten cities in games 3, 7, and 10, and "4 cities 1
+word" in games 3 and 10 only (not 7). Live pages now supply named cities and
+city-clues, none of them a printed seed word:
 
-- 2025-06-05: "In the entire game, there are 10 hidden cities (of course, this
-  only applies to certain games)"
-- 2025-06-10: "If I were a city I would be ?"
-- 2025-06-12: "4 cities 1 word"
+- Game 7: Paris, Dakar, in the "with ifs" couplets. S4 also maps "If I were a
+  city I would be" here.
+- Game 10 Text 3: first letters of the French poem, I B I Z A, a city, and the
+  page title is `+33`.
+- Game 10 Text 4: the decrypted city poem (eagle's gate, rivers meeting).
+- Game 10 Texts 1 and 2: not yet read as city names.
+- Game 3: no city string in the HTML; the grids, `SW 1881`, and `image7.jfif`
+  are the remaining source.
 
-This is the largest explicit constraint the author published: ten city names
-hidden across a subset of the twelve games, and one of the twelve words is
-fixed by a set of four cities. It does not say the word is a city name. It
-does not name the four cities.
+The word fixed by four cities is not required to be a city name. Game 11 is not
+on S4's city list; the IBIZA acrostic is Game 10.
 
-One city is already sitting in a player transcription. Game 11's French poem
-(lead 6) has first letters I, B, I, Z, A. That string is a city and is not an
-English BIP39 word, so it is a city-clue, not a twelfth seed word. It is a
-candidate member of the set of ten, and maybe of the set of four. I am not
-treating it as a MATCH.
-
-What would confirm it: identifying the four cities on the live pages and
-reading the one BIP39 word they share, then matching the escrow.
-What would kill it: a full reading of every game that contains no city names.
-Cost: needs the pages; no compute until then.
+What would confirm it: four cities on games 3 and 10 that share one BIP39 word,
+then a 12-word MATCH.
+What would kill it: a reading of games 3 and 10 that never uses four cities.
+Cost: insight; the pages are transcribed.
 
 ## 5. The rest of the 2025-05-19 to 2025-06-15 clue posts
 
@@ -240,7 +419,8 @@ quoting the puzzle strings, not claiming a BIP39 word.
   in `analysis/tested.md`; extra paths `/image1.psd` and
   `/gdjztvzuojmmsmuwrsudjhzdvvlkftfehnxxkbpilscjfljyyg.html`.
 - Game 4 (https://x.com/N4Khjir/status/1927620248426913890): two photographs.
-  The attached files are no longer served. No transcription of what they depict.
+  The attached files are no longer served. The live Game 4 page has no photos;
+  it has the sentence with a hidden final E.
 - Game 6 (https://x.com/N4Khjir/status/1929061582220276150): page
   `hdvpvgyqxzplxefvngacfsdsljxajfhtweksvlkihugghszomf.html`, title
   "Simplicity Must Be Rewarded I". Season 1 used the same sentence as a hashtag
@@ -260,23 +440,18 @@ quoting the puzzle strings, not claiming a BIP39 word.
 - Game 11, teaching pane (https://x.com/N4Khjir/status/1927616681964126429):
   title `44 . C`, plus the mnemonic and address that `tools/oracle.py
   --selftest` already reproduces. Teaching example, not the Season 2 seed.
+  The live Game 11 page is only this pane.
 - Game 11, second pane (https://x.com/N4Khjir/status/1927623047076282678):
   title `+33`, heading "Transcription from Braille", then a five-line French
-  poem. `+33` is the calling code for France, which pairs with the author's
-  "2 times throughout the game, French will help you". The live page may show
-  Braille; this is N4's Latin transcription:
+  poem. The live site puts that title and Braille on Game 10 Text 3, not on
+  Game 11. S4 maps French to games 7 and 10. Accents omitted here; they do
+  not change the first letters I, B, I, Z, A (lead 4):
 
   > Infinie est la lumiere du matin.
   > Berce doucement, le vent dans le jardin.
   > Il murmurait des secrets aux fleurs endormies.
   > Zephyr danse, leger sur l'eau de la vie.
   > Au loin, l'horizon veille, plein de magie.
-
-  English gloss: Infinite is the morning light. Gently rocked, the wind in the
-  garden. It whispered secrets to the sleeping flowers. Zephyr dances, light
-  on the water of life. In the distance, the horizon watches, full of magic.
-  First letters: I, B, I, Z, A (lead 4). Accents omitted here; they do not
-  change the first letters.
 - Game 5 (https://x.com/N4Khjir/status/1931017991170183383): "Z = 2 ?". Pairs
   with the author's 2025-06-05 Tetris J-piece captioned "5" and with the digit
   grid already in `analysis/tested.md`.
@@ -337,6 +512,6 @@ flavour, plus the word coming from a different mechanic on that page.
 Cost: the harvest itself is done. Two bounded readings of those strings are
 now in `analysis/tested.md` (the extra 50-letter names are not the
 concatenation oracle; Game 9 as a lone index is out of range; Game 9 title
-A1Z26 is 0 list words). Applying the rest still needs the residential browser
-in lead 1. I will not sweep the English wordlist against the escrow on the
-strength of a title or an acrostic.
+A1Z26 is 0 list words). The live pages from 2026-08-27 supersede N4 on Game 10
+versus Game 11 and on Game 4's missing photos. I will not sweep the English
+wordlist against the escrow on the strength of a title or an acrostic.
