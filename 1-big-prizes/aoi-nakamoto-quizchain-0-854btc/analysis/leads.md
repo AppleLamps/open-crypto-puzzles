@@ -2,79 +2,7 @@
 
 Ranked summary is in the README. This file has the reasoning behind the ranking.
 
-## 1. Reconstruct a non-uniform 2019 Wattpad editor buffer
-
-The author states she typed the chapter with a blank line between paragraphs
-and, on 2019-08-01, that "two line breaks" means hitting Enter twice, which
-"displays in Ascii as 13 10 13 10" (CRLF CRLF). On 2019-07-28, before the
-rehash, she said the hashed solution had only one line break, "one 13 and one
-10". The chapter's current storage (fetched through Wattpad's API, `modifyDate`
-2019-07-23, matching the 2019-07-30 funding of the current escrow) contains no
-blank paragraphs at all: 273 `<p data-p-id>` nodes, 0 empty, 10 in-paragraph
-`<br>`, 6 NBSP characters inside sentences. That is this chapter's stored
-form, not a site-wide rule: other Wattpad chapters crawled the same week
-(Common Crawl CC-MAIN-2019-30, 2019-07-15 to 2019-07-23) still contain empty
-paragraphs stored as `<p data-p-id="d41d8cd98f00b204e9800998ecf8427e"><br></p>`
-(`d41d8cd98f00b204e9800998ecf8427e` is MD5 of the empty string). The "Second"
-chapter itself is absent from that crawl.
-
-Live desktop CSS (fetched 2026-08-27) is:
-
-- generic `pre { white-space: pre-wrap }`
-- `.panel.panel-reading pre { white-space: inherit }` (so the reading panel
-  inherits `normal` and collapses the live 30-space SSR indent between `<p>`
-  tags)
-- first page is server-rendered inside `<pre>` as `id="sp720888559-pg1"` with
-  36 paragraphs; pages 2 to 12 load from `apiv2/?m=storytext&id=...&page=N`
-
-July 2019 story HTML from the same crawl SSR-renders inside a classless
-`<pre>`, with a newline plus 26 spaces (not 30) between `<p>` tags. The
-stylesheet that week was
-`a.wattpad.com/css/desktop-web/desktop-web.min.css?v=eb03e30` on 2019-07-15
-and `v=28f4664` by 2019-07-21. Those CSS bytes are not in Wayback or Common
-Crawl; the live CDN ignores the `v=` hash and serves a 2022 file. The generic
-`pre { white-space: pre-wrap }` rule, including the vendor-prefixed copies,
-is copied wholesale in a 2019-08-15 userstyle
-(https://github.com/uso-archive/data/blob/master/data/usercss/170148.user.css).
-That userstyle also targets `.panel.panel-reading pre` but only to set
-`color`, so it does not prove whether the 2019 reading-panel rule already
-overrode `white-space` to `inherit`.
-
-A 2026-08-27 search of 12,848 unique copy serializations built from the live
-DOM (pages, prefixes, parts, title/byline, 30-space SSR indent, empty-paragraph
-NBSP or space lines, `<br>` splits, LF/CRLF joins, Stage One flip) produced 0
-match. Witness: 3 planted texts recovered at head, middle and tail. Rate:
-503/s.
-
-A second 2026-08-27 search of 3,030 unique texts rebuilt from the 2019 HTML
-facts (26-space indent, LF or CRLF; empty `<p><br></p>` between every pair or
-only after headings; those empties then joined as plaintext, as 26-space SSR,
-or as `13 10 13 10`; Stage One flip) produced 0 match against both listed
-addresses. Witness: 3 planted texts recovered at head, middle and tail. Rate:
-534/s.
-
-So both reader-copy readings of the 2019 CSS are now tested: `inherit` (indent
-collapses; the 12,848 set) and `pre-wrap` (26-space indent preserved; the
-3,030 set). The write-editor empty-paragraph form that 2019 storage actually
-used (`<p><br></p>` between every pair, or only after headings) is tested
-too. A reader wrote on 2019-07-25 that Wattpad did not let them copy the
-chapter directly, which still argues the author hashed an editor paste she
-then ran through asciivalue.com.
-
-What remains of this lead is a non-uniform editor buffer: empty `<p><br></p>`
-only in some gaps, not every gap and not only after headings, among a
-paragraph selection that is not already in `analysis/tested.md`. The full
-2^(n-1) gap space is not proposed here.
-
-What would confirm it: such a sparse buffer, with the certified case-flip
-rule, matching the current escrow.
-What would kill it: a reason to believe she left a blank line between every
-paragraph (already tested) or that the hashed bytes were a reader copy
-(already tested under both CSS readings).
-Cost: the uniform reconstructions are seconds; a sparse-gap search needs a
-narrower reason before it is worth running.
-
-## 2. Two-character edits on the strongest base texts
+## 1. A bounded 2-character-edit sweep on the strongest base texts
 
 The single-character-edit sweep (266,038,400 candidates, `analysis/tested.md`)
 covers every one-character difference from 40 base texts and is exhaustive for
@@ -84,6 +12,16 @@ capitalization slip. A 2-character sweep restricted to the small set of NBSP and
 line-ending pairs (rather than all positions) is a bounded space, not a full
 40-base x 2-character search.
 
+This is now rank 1 because the copy-range question is much smaller than it
+looked. Every contiguous span of the chapter, with both Stage One keep-tests
+and the author's line-break bytes, is a certified negative (see killed
+section below). A 2026-08-27 slice of this lead is also done: every subset of
+the 6 in-sentence NBSPs, and every pair of paragraph-joins swapped between
+`\n\n` and `\r\n\r\n`, on the full 273 with three keep-tests (221,520 texts, 0
+match). What remains is 2-edits that are not those two families, still
+restricted to NBSP and line-ending pairs, including on the other 4 of the 40
+1-character bases that are not the full chapter.
+
 What would confirm it: a match within the bounded 2-character space.
 What would kill it: exhausting that bounded space with 0 match; the full,
 unbounded 2-character space is not proposed here, since its cost is
@@ -91,6 +29,26 @@ disproportionate without a narrower reason to expect the answer lives there.
 Cost: on the order of an hour on a rented GPU for the bounded version described
 above; the private research folder priced this at roughly 45 minutes per base
 text for a similarly scoped variant.
+
+## 2. A non-uniform 2019 editor buffer, or a non-contiguous selection
+
+The author's 2019-08-01 ASCII note is `13 10 13 10` between paragraphs. A
+26-space SSR indent would have shown a run of ASCII 32 on asciivalue.com, which
+she did not report, so a `pre-wrap` reader copy is a weak reading of her own
+measurement. Empty `<p><br></p>` between every pair would usually produce more
+than two CRLFs, which also sits badly with that measurement. Those two uniform
+reconstructions are tested (12,848 and 3,030) and are negatives.
+
+What remains is either empty `<p><br></p>` in some gaps only, or a
+non-contiguous subset of paragraphs other than the 17 already swept and the
+contiguous spans now swept. The full 2^(n-1) gap space and the full 2^273
+subset space are not proposed here.
+
+What would confirm it: such a sparse buffer or subset, with the certified
+case-flip rule, matching the current escrow.
+What would kill it: a reason to believe she copy-pasted a contiguous range
+(already tested) or left a blank line between every paragraph (already tested).
+Cost: needs a narrower reason before a search.
 
 ## 3. Identify what "76" indexes for Block 76
 
@@ -131,6 +89,19 @@ What would kill it, in the useful sense: nothing kills this lead outright; it
 stays open as a standing invitation, same as any human-reasoned wordplay block
 in the series.
 Cost: minutes per candidate; no sweep implied.
+
+## Killed: contiguous copy-paste spans of the chapter
+
+Killed 2026-08-27. The author said to copy-paste and change only capitalization,
+and that the hashed bytes have two line breaks between paragraphs. Every
+contiguous span of 2 or more of the 273 paragraphs, joined with `\n`, `\r\n`,
+`\n\n`, or `\r\n\r\n`, with no flip, with the certified first-character
+keep-test, and with the first-letter keep-test, including NBSP-to-space and
+edge-space strip when those characters are present in the span, is a negative:
+1,469,908 unique texts, 0 match. Witness: 3 planted texts recovered. Rate:
+530/s. 63 paragraphs start with a double quote, so the two keep-tests are not
+the same; both were run. What this does not kill is a non-contiguous selection,
+or a contiguous selection that is then edited by two or more characters.
 
 ## Killed: the 27 posts between the rehash and the shutdown
 

@@ -200,36 +200,36 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | RBB: name/word paragraph selectors, browser-copy simulation, invisible characters, alternate encodings | approximately 1,830,000 | same | 0 match | yes | 2026-08-15 |
 | RBB: 2019 Wattpad reader-page copy families (12 pages and prefixes, title/byline, SSR indent, empty-paragraph NBSP/space lines, `<br>` splits, CRLF joins, Stage One flip) | 12,848 unique texts | same | 0 match | yes: 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-08-27 |
 | RBB: 2019 Common Crawl indent (newline plus 26 spaces) and stored empty `<p><br></p>` editor-buffer copies (every gap or after headings only; plaintext, 26-space SSR, or `13 10 13 10`; Stage One flip) | 3,030 unique texts | same | 0 match | yes: 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-08-27 |
+| RBB: every contiguous span of 2+ paragraphs (first-character and first-letter Stage One keep-tests, no flip, four line-break joins, NBSP/edge-space variants when present) | 1,469,908 unique texts | same | 0 match | yes: 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-08-27 |
+| RBB: bounded 2-edit on the full chapter (every NBSP subset; every pair of joins swapped `\n\n` vs `\r\n\r\n`; three keep-tests) | 221,520 unique texts | same | 0 match | yes: 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-08-27 |
 | Block 76: standard BIP44/49/84 derivations, paths, passphrases on the one chain found by search | standard space plus 24,564 off-by-one variants | MD5 to BIP39 to address compare | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
 | Block 76: word-transform "salves" on "change to" / "from change to" | approximately 53,000 candidate solutions | MD5-prefix filter, then derivation on survivors | 0 match | yes | 2026-08-15 |
 | Block 76: scripted dictionary-times-corpus sweep | approximately 3.2x10^11 MD5, approximately 78,000,000 derivations | MD5-prefix filter, then derivation on survivors | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
 
 Cumulative: approximately 272 million candidates tested against Real Big Block
-through 2026-08-15, plus 12,848 unique 2019-copy serializations and 3,030 unique
-2019-indent/empty-`<p><br></p>` serializations on 2026-08-27, and
-approximately 78 million derivations plus approximately 78,000 smaller
-candidates tested against Block 76, all negative. Full scope notes, including
-which rows are complete sweeps versus targeted tests, are in
-`analysis/tested.md`.
+through 2026-08-15, plus 12,848 unique 2019-copy serializations, 3,030 unique
+2019-indent/empty-`<p><br></p>` serializations, 1,469,908 unique contiguous
+spans, and 221,520 unique bounded 2-edits on 2026-08-27, and approximately 78
+million derivations plus approximately 78,000 smaller candidates tested against
+Block 76, all negative. Full scope notes, including which rows are complete
+sweeps versus targeted tests, are in `analysis/tested.md`.
 
 ## Open leads, ranked
 
-1. **Reconstruct a non-uniform 2019 Wattpad editor buffer** (needs a narrower
-   reason before a search). The 2019 CSS file itself is not archived. July
-   2019 story HTML uses a newline plus 26 spaces between `<p>` tags inside
-   `<pre>`, and other chapters that week still store empty paragraphs as
-   `<p><br></p>`. Both reader-copy readings of that CSS are now tested: live
-   `inherit` (12,848 texts, 0 match) and 2019 `pre-wrap` with the 26-space
-   indent (3,030 texts, 0 match), including empty `<p><br></p>` between every
-   pair or only after headings. What remains is empty lines in some gaps only,
-   not every gap. Confirmed by such a sparse buffer matching; killed if a
-   reason appears that she left a blank line between every paragraph (already
-   tested) or hashed a reader copy (already tested under both CSS readings).
-2. **A bounded 2-character-edit sweep on the strongest base texts** (about an
-   hour on a rented GPU). The 1-character sweep is exhaustive; a 2-character
-   sweep restricted to the small set of NBSP and line-ending pairs, rather than
-   every position, is a bounded extension. Confirmed by a match in that bounded
-   space; killed by exhausting it with none.
+1. **A bounded 2-character-edit sweep on the strongest base texts** (about an
+   hour on a rented GPU). Every contiguous copy-paste span of the chapter is
+   now a negative. A first slice of this lead, on the full chapter only
+   (every NBSP subset, and every pair of joins swapped between `\n\n` and
+   `\r\n\r\n`), is also a negative (221,520 texts). What remains is 2-edits
+   that are not those two families, including on the other 1-character bases.
+   Confirmed by a match in that bounded space; killed by exhausting it with
+   none.
+2. **A non-uniform editor buffer, or a non-contiguous selection** (needs a
+   narrower reason). Uniform empty `<p><br></p>` and SSR indent contradict her
+   `13 10 13 10` ASCII note and are already negatives. Sparse gaps or a subset
+   other than the 17 already swept is what remains. Confirmed by such a buffer
+   matching; killed if a reason appears that she copy-pasted a contiguous
+   range (already tested).
 3. **Identify what "76" indexes for Block 76** (minutes per candidate corpus).
    A method confirmed on 3 sibling blocks uses the block number as a position
    index into a specific numbered corpus; every corpus tried so far does not

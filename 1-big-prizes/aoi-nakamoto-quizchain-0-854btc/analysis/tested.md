@@ -37,6 +37,8 @@ predecessor (`1EFojcAo2vbhRGCGCa7q8Wwvzss28mhQYC`).
 | Every single-character edit (insert, delete, replace, case toggle) at every position, across 40 base texts (5 paragraph-set choices x 2 NBSP conventions x 2 line-ending conventions x 2 separator conventions) | 266,038,400 | 0 match |
 | 2019 Wattpad reader-page copy families not in the rows above: the 12 live API pages and their 1-to-k prefixes; parts I/II/III; Finney-quote slice; drop title / drop headings; header "Second" and "by AoiNakamoto"; SSR 30-space indent inside `<pre>`; reconstructed empty paragraphs as a NBSP line or a space line; in-paragraph `<br>` split into extra paragraphs; joins `\n`, `\n\n`, `\r\n`, `\r\n\r\n`; NBSP kept or turned to space; Stage One case-flip on first character and on first letter; leading/trailing LF; chapter URL suffix | 12,848 unique texts (12,851 including 3 planted witnesses) | 0 match |
 | 2019 Common Crawl / userstyle copy families not in the rows above: SSR indent of newline plus 26 spaces (the width in July 2019 story HTML, not the live 30); the same indent with CRLF; empty paragraphs stored as `<p><br></p>` inserted between every pair, or only after heading paragraphs, then joined as plaintext or with the 26-space indent; author's `13 10 13 10` join with those empty paragraphs; Stage One flip; `<br>` splits; NBSP kept or turned to space | 3,030 unique texts (3,033 including 3 planted witnesses) | 0 match |
+| Every contiguous span of 2 or more of the 273 paragraphs (copy-paste of a start-end range): Stage One keep-test on first character and on first letter; no flip; joins `\n`, `\r\n`, `\n\n`, `\r\n\r\n`; NBSP kept or turned to space when the span contains any; leading/trailing spaces stripped when the span has edge spaces | 1,469,908 unique texts (1,469,911 including 3 planted witnesses) | 0 match |
+| Bounded 2-edit on the full 273 paragraphs: every subset of the 6 in-sentence NBSPs turned to space; and every pair of paragraph-joins swapped between `\n\n` and `\r\n\r\n`; three keep-tests (none, first character, first letter) | 221,520 unique texts (221,523 including 3 planted witnesses) | 0 match |
 
 Witness status: every row above 2026-08-15 used the oracle certified against Block 77 Stage
 One (see README, "Certified against"); the single-character-edit row additionally
@@ -62,13 +64,30 @@ and in a 2019-08-15 userstyle that copies Wattpad's generic
 `pre { white-space: pre-wrap }` rule. It is not a sweep of every subset of
 empty-paragraph positions.
 
+The 2026-08-27 contiguous-span row used the same `attempt()` path. Witness: 3
+synthetic two-paragraph texts planted at head, middle and tail were all
+recovered before the run was accepted. Rate: 530 candidates/s. Elapsed: 2,774 s.
+Date: 2026-08-27. This is a complete sweep of its stated space: every start-end
+pair with length at least 2, under the joins and keep-tests listed in the row.
+It is not a sweep of non-contiguous selections.
+
+The 2026-08-27 bounded-2-edit row used the same `attempt()` path. Witness: 3
+synthetic two-paragraph texts planted at head, middle and tail were all
+recovered. Rate: 514 candidates/s. Date: 2026-08-27. This is a complete sweep
+of the two stated 2-edit families on the full chapter only; it is not the
+unbounded 2-character space, and it is not the 40-base 1-character sweep
+repeated.
+
 Cumulative for Real Big Block: approximately 272 million candidates tested
-through 2026-08-15, plus 12,848 unique 2019-copy serializations and 3,030 unique
-2019-indent/empty-`<p><br></p>` serializations on 2026-08-27, 0 match. The
-single-character-edit sweep accounts for the large majority of this total and
-is the only row certified as a complete sweep of its stated space (all 40
-bases, every single edit); every other row is a targeted, not exhaustive, test
-of one specific hypothesis about which paragraphs were modified.
+through 2026-08-15, plus 12,848 unique 2019-copy serializations, 3,030 unique
+2019-indent/empty-`<p><br></p>` serializations, 1,469,908 unique contiguous
+spans, and 221,520 unique bounded 2-edits on 2026-08-27, 0 match. The
+single-character-edit sweep accounts for the large majority of this total.
+Two rows are certified as complete sweeps of their stated space: that
+1-character sweep (all 40 bases, every single edit) and the 2026-08-27
+contiguous-span row (every start-end pair of length at least 2, under the
+listed joins and keep-tests). Every other row is a targeted, not exhaustive,
+test of one specific hypothesis about which paragraphs were modified.
 
 ## Quizchain2 Block 76 (0.077 BTC)
 
