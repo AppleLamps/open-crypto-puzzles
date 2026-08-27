@@ -2,44 +2,49 @@
 
 Ranked summary is in the README. This file has the reasoning behind the ranking.
 
-## 1. Reconstruct the 2019 browser-copy rendering of the Wattpad chapter
+## 1. Exact combination and transform of the four Finney-pattern groups
 
-The author states she typed the chapter with a blank line between paragraphs
-("two line breaks... one 13 and one 10 for each"), but the chapter's current
-storage (fetched through Wattpad's API, `modifyDate` 2019-07-23, matching the
-2019-07-30 funding of the current escrow) contains no blank paragraphs at all:
-Wattpad's storage format normalizes them away. What she actually hashed was most
-likely whatever her browser produced when she selected and copied the rendered
-page in 2019, not the raw API storage read today. A first attempt at simulating
-this (Chromium's `selection.toString` and `innerText` rendering rules) is
-included in the "simulated browser copy" row of `analysis/tested.md`, but it
-used only one rendering assumption; the actual 2019 Wattpad reader page layout
-(paragraph spacing, non-breaking spaces around punctuation, title block) has not
-been reconstructed and tested as its own base text.
+The "Second" chapter contains three planted paragraph-initial blocks that match
+the Finney-post pattern (one sign paragraph plus four non-sign paragraphs whose
+first letters are F, F, W, W), plus a direct quotation from the Finney post that
+also matches the pattern. These are located at the start of each main section
+(Section I, Section II, Section III/Finney quote).
 
-What would confirm it: rendering `data/chapitre_second_page.html` the way a 2019
-browser would have displayed it, extracting the resulting paragraph text, and
-running it (with the certified case-flip rule applied to the same candidate
-paragraph groups already tested) through `tools/oracle.py`.
-What would kill it: a faithful reconstruction still not matching after the
-already-tested paragraph-selection hypotheses are re-applied to it.
-Cost: hours, mostly in getting the 2019 rendering right; the derivation itself is
-seconds per candidate.
+The 2019-08-01 author post confirms the solution text has multiple paragraphs
+and is separated by two CRLF sequences (ASCII 13 10 13 10, "hit enter twice").
+A comprehensive search over permutations, subsets, whole vs non-sign-only,
+first-only vs first+last case-flip, quote stripping, title prefixes, and
+LF/CR/CRLF/double-CRLF separators produced no match (17,921 candidates,
+`analysis/tested.md`, 2026-08-27). The remaining uncertainty is therefore not
+the separator, but the exact group-combination and transform the author applied
+before hashing.
 
-## 2. Read the 27 posts and comments between the rehash and the shutdown
+What would confirm it: a defined selection rule (which groups, in which order,
+which paragraphs per group, which flip mode, which quote/whitespace
+normalization) that reproduces the escrow address through `tools/oracle.py`.
+What would kill it: an exhaustive, witness-backed sweep of all plausible
+combinations of these four groups with no match.
+Cost: seconds per candidate; bounded by the number of plausibly distinct
+selection/flip/serialization variants.
 
-The author rehashed and refunded the Real Big Block on 2019-07-30, then stopped
-posting shortly after. The 27 posts and comments she made between 2019-07-30 and
-2019-08-04 have been read once for an explicit "twist" statement, but not
-re-read systematically against the current, narrower list of untested paragraph
-combinations.
+## 2. Reconstruct any remaining 2019 page-level copy behavior
 
-What would confirm it: a stated detail (an extra modification, a further
-paragraph, a corrected count) that, applied to the certified rule and re-tested,
-matches the address.
-What would kill it: a full re-read producing no new candidate paragraph or rule
-variant beyond what `analysis/tested.md` already covers.
-Cost: an hour of reading.
+The author typed the chapter with blank lines between paragraphs. The current
+Wattpad API storage normalizes these away, and the current Chrome reader page
+produces LF-separated innerText/selection strings. The 2019 reader page may have
+included the title, author byline, section headings, or CSS-generated
+characters (non-breaking spaces, quote marks) that are not in the API storage.
+Current captures (API JSON, `innerText`, `selection.toString`, `textContent`) are
+saved under `/tmp` but do not include a faithful 2019 render.
+
+What would confirm it: a 2019-era Wattpad reader page or snapshot, or a
+precise reconstruction of its paragraph text, applied to the same group/flip
+rule and run through `tools/oracle.py`.
+What would kill it: a faithful reconstruction of the four groups with the
+known separator still not matching after all plausible page-level prefixes and
+whitespace normalizations are exhausted.
+Cost: hours if a 2019 render must be recovered; seconds per candidate once the
+text is known.
 
 ## 3. Two-character edits on the strongest base texts
 
@@ -98,6 +103,23 @@ What would kill it, in the useful sense: nothing kills this lead outright; it
 stays open as a standing invitation, same as any human-reasoned wordplay block
 in the series.
 Cost: minutes per candidate; no sweep implied.
+
+## Resolved leads
+
+### Author posts between the rehash and shutdown (was lead 2)
+
+The Real Big Block Discussion thread contains 16 AoiNakamoto posts, not 27,
+between 2019-07-25 and 2019-08-01. The relevant constraints extracted:
+
+- 2019-07-25: extra line breaks were added between paragraphs.
+- 2019-07-31: the rehashed solution has multiple paragraphs and two line breaks
+  between each of them.
+- 2019-08-01: "I mean the second one. Hit enter twice. This displays in Ascii as
+  13 10 13 10, according to asciivalue.com."
+
+This fixes the paragraph separator as CRLF+CRLF (13 10 13 10). No further
+paragraph-selection constraints were found in the thread, so this lead is
+resolved and its information is folded into lead 1 and lead 2 above.
 
 ## Stage One reproduction: the MD5 and two reimplementation gotchas (issue #1)
 
