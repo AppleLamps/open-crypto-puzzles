@@ -2,7 +2,7 @@
 
 Ranked summary is in the README. This file has the reasoning behind the ranking.
 
-## 1. Reconstruct the 2019 Wattpad editor buffer, or a 2019 pre-wrap copy
+## 1. Reconstruct a non-uniform 2019 Wattpad editor buffer
 
 The author states she typed the chapter with a blank line between paragraphs
 and, on 2019-08-01, that "two line breaks" means hitting Enter twice, which
@@ -11,36 +11,68 @@ rehash, she said the hashed solution had only one line break, "one 13 and one
 10". The chapter's current storage (fetched through Wattpad's API, `modifyDate`
 2019-07-23, matching the 2019-07-30 funding of the current escrow) contains no
 blank paragraphs at all: 273 `<p data-p-id>` nodes, 0 empty, 10 in-paragraph
-`<br>`, 6 NBSP characters inside sentences. Wattpad's storage format
-normalizes blank paragraphs away.
+`<br>`, 6 NBSP characters inside sentences. That is this chapter's stored
+form, not a site-wide rule: other Wattpad chapters crawled the same week
+(Common Crawl CC-MAIN-2019-30, 2019-07-15 to 2019-07-23) still contain empty
+paragraphs stored as `<p data-p-id="d41d8cd98f00b204e9800998ecf8427e"><br></p>`
+(`d41d8cd98f00b204e9800998ecf8427e` is MD5 of the empty string). The "Second"
+chapter itself is absent from that crawl.
 
 Live desktop CSS (fetched 2026-08-27) is:
 
 - generic `pre { white-space: pre-wrap }`
 - `.panel.panel-reading pre { white-space: inherit }` (so the reading panel
-  inherits `normal` and collapses the 30-space SSR indent between `<p>` tags)
+  inherits `normal` and collapses the live 30-space SSR indent between `<p>`
+  tags)
 - first page is server-rendered inside `<pre>` as `id="sp720888559-pg1"` with
   36 paragraphs; pages 2 to 12 load from `apiv2/?m=storytext&id=...&page=N`
 
-A 2026-08-27 search of 12,848 unique copy serializations built from those
-facts (pages, prefixes, parts, title/byline, SSR indent, empty-paragraph NBSP
-or space lines, `<br>` splits, LF/CRLF joins, Stage One flip) produced 0 match
-against both listed addresses. Witness: 3 planted texts recovered at head,
-middle and tail. Rate: 503/s.
+July 2019 story HTML from the same crawl SSR-renders inside a classless
+`<pre>`, with a newline plus 26 spaces (not 30) between `<p>` tags. The
+stylesheet that week was
+`a.wattpad.com/css/desktop-web/desktop-web.min.css?v=eb03e30` on 2019-07-15
+and `v=28f4664` by 2019-07-21. Those CSS bytes are not in Wayback or Common
+Crawl; the live CDN ignores the `v=` hash and serves a 2022 file. The generic
+`pre { white-space: pre-wrap }` rule, including the vendor-prefixed copies,
+is copied wholesale in a 2019-08-15 userstyle
+(https://github.com/uso-archive/data/blob/master/data/usercss/170148.user.css).
+That userstyle also targets `.panel.panel-reading pre` but only to set
+`color`, so it does not prove whether the 2019 reading-panel rule already
+overrode `white-space` to `inherit`.
 
-What remains of this lead is a 2019 stylesheet that still applied `pre-wrap`
-to the reading panel (no 2019 capture of this chapter exists), or a copy from
-the write editor before save/normalize. A reader wrote on 2019-07-25 that
-Wattpad did not let them copy the chapter directly, which argues the author
-hashed an editor paste she then ran through asciivalue.com, not a reader
-`selection.toString()`.
+A 2026-08-27 search of 12,848 unique copy serializations built from the live
+DOM (pages, prefixes, parts, title/byline, 30-space SSR indent, empty-paragraph
+NBSP or space lines, `<br>` splits, LF/CRLF joins, Stage One flip) produced 0
+match. Witness: 3 planted texts recovered at head, middle and tail. Rate:
+503/s.
 
-What would confirm it: a 2019 CSS or editor-buffer capture whose serialization,
-with the certified case-flip rule, matches the current escrow.
-What would kill it: that capture still not matching after the already-tested
-paragraph-selection hypotheses are re-applied to it.
-Cost: hours, mostly in getting a 2019 editor/CSS capture; the derivation itself
-is seconds per candidate.
+A second 2026-08-27 search of 3,030 unique texts rebuilt from the 2019 HTML
+facts (26-space indent, LF or CRLF; empty `<p><br></p>` between every pair or
+only after headings; those empties then joined as plaintext, as 26-space SSR,
+or as `13 10 13 10`; Stage One flip) produced 0 match against both listed
+addresses. Witness: 3 planted texts recovered at head, middle and tail. Rate:
+534/s.
+
+So both reader-copy readings of the 2019 CSS are now tested: `inherit` (indent
+collapses; the 12,848 set) and `pre-wrap` (26-space indent preserved; the
+3,030 set). The write-editor empty-paragraph form that 2019 storage actually
+used (`<p><br></p>` between every pair, or only after headings) is tested
+too. A reader wrote on 2019-07-25 that Wattpad did not let them copy the
+chapter directly, which still argues the author hashed an editor paste she
+then ran through asciivalue.com.
+
+What remains of this lead is a non-uniform editor buffer: empty `<p><br></p>`
+only in some gaps, not every gap and not only after headings, among a
+paragraph selection that is not already in `analysis/tested.md`. The full
+2^(n-1) gap space is not proposed here.
+
+What would confirm it: such a sparse buffer, with the certified case-flip
+rule, matching the current escrow.
+What would kill it: a reason to believe she left a blank line between every
+paragraph (already tested) or that the hashed bytes were a reader copy
+(already tested under both CSS readings).
+Cost: the uniform reconstructions are seconds; a sparse-gap search needs a
+narrower reason before it is worth running.
 
 ## 2. Two-character edits on the strongest base texts
 

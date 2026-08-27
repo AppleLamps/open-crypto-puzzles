@@ -98,8 +98,9 @@ either the current or the superseded Real Big Block address. The Wattpad API
 confirms the chapter's `modifyDate` as 2019-07-23T23:12:04Z, 7 days before the
 current escrow was funded, so the text available today predates the funding and
 is very likely the version that was hashed; what is not settled is which exact
-byte sequence the author's own tool read from it, since Wattpad's storage
-normalizes away the blank lines she describes typing (see "Open leads").
+byte sequence the author's own tool read from it. This chapter's stored form
+has no blank paragraphs; other Wattpad chapters from the same week still do
+(see "Open leads").
 
 For Block 76, a community player found, in 2019, that `solution = "format"`,
 `tomi = "before TOMI"` satisfies both published MD5-prefix hints (`1d` and
@@ -177,6 +178,15 @@ Reproduced 2026-08-16.
    starts with `f8e`, matching both prefixes the author published for Block 76;
    neither of 2 other independently solved calibration blocks (73 and 74) shows
    any sign this chain is the author's real answer.
+8. July 2019 Wattpad story pages in Common Crawl (CC-MAIN-2019-30) SSR-render
+   inside a classless `<pre>` with a newline plus 26 spaces between `<p>` tags,
+   and some of those chapters still store empty paragraphs as
+   `<p data-p-id="d41d8cd98f00b204e9800998ecf8427e"><br></p>`. The homepage
+   that week linked
+   `a.wattpad.com/css/desktop-web/desktop-web.min.css?v=eb03e30` (2019-07-15),
+   later `v=28f4664` (2019-07-21). Those CSS bytes are not archived; a
+   2019-08-15 userstyle copies Wattpad's generic `pre { white-space: pre-wrap }`
+   rule. The "Second" chapter is still absent from that crawl.
 
 ## What has been tested
 
@@ -189,29 +199,32 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | RBB: every single-character edit across 40 base texts | 266,038,400 | same | 0 match | yes: 3 planted witnesses per base plus the real Stage One text, all recovered | 2026-08-15 |
 | RBB: name/word paragraph selectors, browser-copy simulation, invisible characters, alternate encodings | approximately 1,830,000 | same | 0 match | yes | 2026-08-15 |
 | RBB: 2019 Wattpad reader-page copy families (12 pages and prefixes, title/byline, SSR indent, empty-paragraph NBSP/space lines, `<br>` splits, CRLF joins, Stage One flip) | 12,848 unique texts | same | 0 match | yes: 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-08-27 |
+| RBB: 2019 Common Crawl indent (newline plus 26 spaces) and stored empty `<p><br></p>` editor-buffer copies (every gap or after headings only; plaintext, 26-space SSR, or `13 10 13 10`; Stage One flip) | 3,030 unique texts | same | 0 match | yes: 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-08-27 |
 | Block 76: standard BIP44/49/84 derivations, paths, passphrases on the one chain found by search | standard space plus 24,564 off-by-one variants | MD5 to BIP39 to address compare | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
 | Block 76: word-transform "salves" on "change to" / "from change to" | approximately 53,000 candidate solutions | MD5-prefix filter, then derivation on survivors | 0 match | yes | 2026-08-15 |
 | Block 76: scripted dictionary-times-corpus sweep | approximately 3.2x10^11 MD5, approximately 78,000,000 derivations | MD5-prefix filter, then derivation on survivors | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
 
 Cumulative: approximately 272 million candidates tested against Real Big Block
-through 2026-08-15, plus 12,848 unique 2019-copy serializations on 2026-08-27,
-and approximately 78 million derivations plus approximately 78,000 smaller
+through 2026-08-15, plus 12,848 unique 2019-copy serializations and 3,030 unique
+2019-indent/empty-`<p><br></p>` serializations on 2026-08-27, and
+approximately 78 million derivations plus approximately 78,000 smaller
 candidates tested against Block 76, all negative. Full scope notes, including
 which rows are complete sweeps versus targeted tests, are in
 `analysis/tested.md`.
 
 ## Open leads, ranked
 
-1. **Reconstruct the 2019 Wattpad editor buffer, or a 2019 `pre-wrap` copy
-   that the live CSS no longer produces** (hours). Live reader CSS sets
-   `.panel.panel-reading pre { white-space: inherit }`, so the 30-space SSR
-   indent between `<p>` tags collapses on copy; a generic `pre` rule still
-   uses `pre-wrap`. The 2026-08-27 copy families (pages, prefixes, title,
-   empty-paragraph lines, CRLF joins) did not match. What remains is a 2019
-   stylesheet that still used `pre-wrap` on the reading panel, or a copy from
-   the write editor before Wattpad dropped the blank paragraphs. Confirmed by
-   a 2019 CSS/editor capture that, applied, matches; killed if that capture
-   still does not match.
+1. **Reconstruct a non-uniform 2019 Wattpad editor buffer** (needs a narrower
+   reason before a search). The 2019 CSS file itself is not archived. July
+   2019 story HTML uses a newline plus 26 spaces between `<p>` tags inside
+   `<pre>`, and other chapters that week still store empty paragraphs as
+   `<p><br></p>`. Both reader-copy readings of that CSS are now tested: live
+   `inherit` (12,848 texts, 0 match) and 2019 `pre-wrap` with the 26-space
+   indent (3,030 texts, 0 match), including empty `<p><br></p>` between every
+   pair or only after headings. What remains is empty lines in some gaps only,
+   not every gap. Confirmed by such a sparse buffer matching; killed if a
+   reason appears that she left a blank line between every paragraph (already
+   tested) or hashed a reader copy (already tested under both CSS readings).
 2. **A bounded 2-character-edit sweep on the strongest base texts** (about an
    hour on a rented GPU). The 1-character sweep is exhaustive; a 2-character
    sweep restricted to the small set of NBSP and line-ending pairs, rather than
@@ -255,6 +268,8 @@ Full notes: [analysis/leads.md](analysis/leads.md).
 - Quizchain2 Block 76, Reddit, 2019-07-22: https://www.reddit.com/r/Grycoin/comments/cgcv9i/77_mbtc_quizchain2_block_76/
 - Real Big Block Discussion, Reddit, 2019-07-25 to 2019-07-31: https://www.reddit.com/r/Grycoin/comments/chn8un/real_big_block_discussion/
 - "Second", Wattpad chapter by AoiNakamoto: https://www.wattpad.com/720888559-second
+- Wattpad Nightmode userstyle, 2019-08-15, copies the generic `pre { white-space: pre-wrap }` rule: https://github.com/uso-archive/data/blob/master/data/usercss/170148.user.css
+- Common Crawl CC-MAIN-2019-30, Wattpad homepage 2019-07-15 (CSS URL `desktop-web.min.css?v=eb03e30`): https://index.commoncrawl.org/CC-MAIN-2019-30-index?url=www.wattpad.com/&output=json
 - Real Big Block escrow funding transaction, mempool.space, 2019-07-30: https://mempool.space/tx/a1916e7ed9eac3fcc56a55056328cb09d06925e2694f2e6720de12b228514d1f
 - Block 76 escrow funding transaction, mempool.space, 2019-07-22: https://mempool.space/tx/979670f3d1d4134e7989ed6f4a4370362e15c101711c93675790cf0751c8dbd4
 - Block 77 Stage One escrow (certification reference, solved and swept 2019-08-03), mempool.space: https://mempool.space/address/19TbyN5KCg1Lg7qHwezifsLVcdSa2Rj5KN

@@ -87,17 +87,17 @@
         "certified_against": "the author's own published calibration vector (entropy 2941774a2abec9f30c7d6777d1d53d91 to WIF L5Z66qPm... at BIP44 index 1), self-contained and exact; the case-flip rule and Block 76 prefix filter are certified separately with a synthetic example and a community-found candidate pair; full reproduction of the solved sibling lot Block 77 Stage One needs Hal Finney's bitcointalk post text, which this repository does not ship (third-party content), but which anyone can supply themselves to apply_stage_one_rule()"
       },
       "difficulty_left": "external-info",
-      "difficulty_note": "Real Big Block: the transform and the case-flip rule are confirmed exactly on a solved sibling lot; what is missing is the precise source text the author hashed on 2019-07-30. Live Wattpad reader CSS collapses SSR indent (white-space inherit on the reading pre); 12,848 2019-copy serializations tested 2026-08-27, 0 match, on top of approximately 272 million earlier candidates. Block 76: a community-found candidate pair satisfies both published MD5-prefix hints but no standard derivation of it reaches the address; the escrow was swept by a reader on 2026-08-17",
+      "difficulty_note": "Real Big Block: the transform and the case-flip rule are confirmed exactly on a solved sibling lot; what is missing is the precise source text the author hashed on 2019-07-30. 2019 CSS bytes are not archived; July 2019 story HTML uses a 26-space SSR indent and other chapters that week still store empty <p><br></p>. 12,848 live-copy plus 3,030 2019-indent/empty-p serializations tested 2026-08-27, 0 match, on top of approximately 272 million earlier candidates. Block 76: a community-found candidate pair satisfies both published MD5-prefix hints but no standard derivation of it reaches the address; the escrow was swept by a reader on 2026-08-17",
       "tested_total": {
         "candidates": 350000000,
-        "families": 21,
+        "families": 22,
         "certified": true
       },
       "leads": [
         {
           "rank": 1,
-          "title": "reconstruct the 2019 Wattpad editor buffer or a 2019 pre-wrap copy the live CSS no longer produces",
-          "cost": "hours",
+          "title": "reconstruct a non-uniform 2019 Wattpad editor buffer (empty p-br only in some gaps)",
+          "cost": "needs a narrower reason before a search",
           "status": "open"
         },
         {
@@ -144,6 +144,18 @@
           "title": "Second, Wattpad chapter by AoiNakamoto",
           "url": "https://www.wattpad.com/720888559-second",
           "date": "2019-07-23",
+          "archived": null
+        },
+        {
+          "title": "Wattpad Nightmode userstyle, copies generic pre { white-space: pre-wrap }",
+          "url": "https://github.com/uso-archive/data/blob/master/data/usercss/170148.user.css",
+          "date": "2019-08-15",
+          "archived": null
+        },
+        {
+          "title": "Common Crawl CC-MAIN-2019-30 Wattpad homepage (CSS URL v=eb03e30)",
+          "url": "https://index.commoncrawl.org/CC-MAIN-2019-30-index?url=www.wattpad.com/&output=json",
+          "date": "2019-07-15",
           "archived": null
         },
         {

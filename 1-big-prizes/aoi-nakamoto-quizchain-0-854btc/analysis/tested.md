@@ -36,6 +36,7 @@ predecessor (`1EFojcAo2vbhRGCGCa7q8Wwvzss28mhQYC`).
 | 1 to 3 single-letter case toggles across all sign positions, and 1 to 2 across all paragraph boundaries | 1,450,000 | 0 match |
 | Every single-character edit (insert, delete, replace, case toggle) at every position, across 40 base texts (5 paragraph-set choices x 2 NBSP conventions x 2 line-ending conventions x 2 separator conventions) | 266,038,400 | 0 match |
 | 2019 Wattpad reader-page copy families not in the rows above: the 12 live API pages and their 1-to-k prefixes; parts I/II/III; Finney-quote slice; drop title / drop headings; header "Second" and "by AoiNakamoto"; SSR 30-space indent inside `<pre>`; reconstructed empty paragraphs as a NBSP line or a space line; in-paragraph `<br>` split into extra paragraphs; joins `\n`, `\n\n`, `\r\n`, `\r\n\r\n`; NBSP kept or turned to space; Stage One case-flip on first character and on first letter; leading/trailing LF; chapter URL suffix | 12,848 unique texts (12,851 including 3 planted witnesses) | 0 match |
+| 2019 Common Crawl / userstyle copy families not in the rows above: SSR indent of newline plus 26 spaces (the width in July 2019 story HTML, not the live 30); the same indent with CRLF; empty paragraphs stored as `<p><br></p>` inserted between every pair, or only after heading paragraphs, then joined as plaintext or with the 26-space indent; author's `13 10 13 10` join with those empty paragraphs; Stage One flip; `<br>` splits; NBSP kept or turned to space | 3,030 unique texts (3,033 including 3 planted witnesses) | 0 match |
 
 Witness status: every row above 2026-08-15 used the oracle certified against Block 77 Stage
 One (see README, "Certified against"); the single-character-edit row additionally
@@ -51,12 +52,23 @@ all recovered before the run was accepted. Rate: 503 candidates/s. Date:
 in the live reader DOM/CSS and in the author's 2019-07-28 / 2019-08-01 ASCII
 notes; it is not a sweep of every paragraph subset.
 
+The 2026-08-27 2019-CSS/editor row used the same `attempt()` path. Witness: 3
+synthetic two-paragraph texts planted at head, middle and tail of the same
+generator were all recovered before the run was accepted. Rate: 534
+candidates/s. Date: 2026-08-27. Grounded in July 2019 Common Crawl story HTML
+(newline plus 26 spaces between `<p>` tags inside `<pre>`; empty paragraphs
+still stored in other chapters that week as `<p data-p-id="d41d8cd98f00b204e9800998ecf8427e"><br></p>`)
+and in a 2019-08-15 userstyle that copies Wattpad's generic
+`pre { white-space: pre-wrap }` rule. It is not a sweep of every subset of
+empty-paragraph positions.
+
 Cumulative for Real Big Block: approximately 272 million candidates tested
-through 2026-08-15, plus 12,848 unique 2019-copy serializations on 2026-08-27, 0
-match. The single-character-edit sweep accounts for the large majority of this
-total and is the only row certified as a complete sweep of its stated space (all
-40 bases, every single edit); every other row is a targeted, not exhaustive,
-test of one specific hypothesis about which paragraphs were modified.
+through 2026-08-15, plus 12,848 unique 2019-copy serializations and 3,030 unique
+2019-indent/empty-`<p><br></p>` serializations on 2026-08-27, 0 match. The
+single-character-edit sweep accounts for the large majority of this total and
+is the only row certified as a complete sweep of its stated space (all 40
+bases, every single edit); every other row is a targeted, not exhaustive, test
+of one specific hypothesis about which paragraphs were modified.
 
 ## Quizchain2 Block 76 (0.077 BTC)
 
