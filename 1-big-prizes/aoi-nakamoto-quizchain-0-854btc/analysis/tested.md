@@ -117,3 +117,25 @@ chain found by search. 0 match anywhere. This is reported as a targeted, not
 exhaustive, negative: the true solution may use vocabulary outside the corpora
 swept (the author's own writing and 2 general-purpose dictionaries), and the
 block may simply be misconfigured (see README).
+
+## New negatives, 2026-08-27
+
+Author-thread review (2019-07-25 through 2019-08-01) confirmed the intended
+paragraph separator is two CRLF sequences (ASCII 13 10 13 10, "hit enter
+twice") and that the solution has multiple paragraphs. A comprehensive run
+over the evidence-backed families below used the oracle certified on Block 77
+Stage One and a synthetic witness; the witness was recovered at the head of the
+run.
+
+| Hypothesis family | Candidates | Result |
+|---|---|---|
+| Full current Wattpad serializations (API, innerText, selection, body markers) with Stage One case-flip, title/heading prefixes, NBSP/unicode-space normalization, LF/CR/CRLF/double-CRLF separators | 115 | 0 match |
+| First/last N-paragraph chunk serializations (sizes 10-273) with the same flip/prefix/separator/normalization variants | 2,290 | 0 match |
+| Full-chapter serializations with all three flip modes (none, full first+last, first-only) and the author-stated CRLF/double-CRLF separators | 351 | 0 match |
+| Four Finney-pattern paragraph groups (three planted at section starts plus the Finney quote): natural and F-F-W-I-W reordered, all subsets/permutations, whole or non-sign-only, three flip modes, quote stripping, title prefixes, LF/CR/CRLF/double-CRLF separators | 15,165 | 0 match |
+
+Witness status: oracle self-test passed before the run; a synthetic witness
+address was injected into oracle.TARGETS and recovered through the same
+candidate-generation and derivation path. N = 17,921 unique candidates,
+elapsed 34.33 s, rate 522.0 candidates/s, date 2026-08-27. Cumulative for
+Real Big Block now approximately 272,017,921 candidates tested, 0 match.
