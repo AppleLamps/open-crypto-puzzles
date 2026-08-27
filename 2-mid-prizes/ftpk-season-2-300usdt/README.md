@@ -6,8 +6,9 @@ private key for an Ethereum wallet holding USDT. I mapped the site, certified th
 derivation against the author's own worked example, and broke the page-naming scheme,
 which hides a 13th URL for a 12th game. On 2026-08-27 I fetched the live Season 2
 pages and the Season 4 hint map. Eleven listed games plus extras are up; the hashed
-Game 12 URL now returns 404. None of the 12 words is confirmed via the on-chain
-oracle yet.
+Game 12 URL now returns 404. Three games now have a single-list-word reading (Game 9
+`can`, Game 11 `airport`, Game 7 `nice`). None of the 12 words is confirmed via the
+on-chain oracle yet.
 
 ## At a glance
 
@@ -23,7 +24,7 @@ oracle yet.
 | Puzzle type | bip39-seed, word-selection |
 | Target format | 12 English BIP39 words, BIP44 `m/44'/60'/0'/0/0`, no passphrase |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the author's own Game 11 worked example) |
-| What remains | interpret the 2026-08-27 live-page transcriptions; Game 12 audio is blocked by a 404; 0 words confirmed via the oracle |
+| What remains | 3 working readings (can, airport, nice), not a MATCH; Game 12 audio is blocked by a 404 |
 | Series | FTPK (this folder covers Season 2 only) |
 
 ## The puzzle as published
@@ -120,13 +121,12 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 
 ## Open leads, ranked
 
-1. **Apply the 2026-08-27 live pages** (hours). Full transcription in
-   [analysis/leads.md](analysis/leads.md). Highest-value unread steps: Photopea on
-   Game 1's `/image1.psd`; which of Game 2's four thumbnails holds the yellow; Game 3's
-   filled grids plus `SW 1881`; Game 5's 13-digit number now that the old diagonal
-   pages 404; Game 8's `A9759`; Game 9's grouping of `1211920` / `3114`; the four
-   Game 10 cities against "4 cities 1 word". Confirmed by a 12-word MATCH; killed
-   only by exhausting those readings.
+1. **Apply the 2026-08-27 live pages** (hours). Full transcription and three working
+   readings (`can`, `airport`, `nice`) in [analysis/leads.md](analysis/leads.md).
+   Still unread: Photopea on Game 1's `/image1.psd`; Game 2's two yellow thumbnails;
+   Game 3's grids plus `SW 1881`; Game 5's 13-digit number; Game 8's `A9759`; Game 10's
+   four-city cluster. Confirmed by a 12-word MATCH; killed only by exhausting those
+   readings.
 2. **Recover the Game 12 Drive file** (hours). The hashed page is 404. The tweet
    screenshot has no Drive id. Notes-to-digits still matches Season 1's `kplo.html`
    grammar once the audio is in hand. A player called the track "the Jungle".
