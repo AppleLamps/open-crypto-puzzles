@@ -172,3 +172,44 @@ on 2026-08-28.
 
 Witness: both known-good shares recovered from each host; zpub-to-address is an exact
 character match. Date: 2026-08-28.
+
+## 12. Determined 2-share algebraic models
+
+Hypothesis: extra structure on the per-byte degree-2 polynomial would make the secret
+unique, or unique up to a 2-valued choice per byte, given only the 2 published shares
+(indexes 3 and 15). The deployed splitter (`jsbtc` `__split_secret` / `__shamirFn` at
+the 2020-05-19 merge of PR 12) draws `a1` and `a2` independently per byte, rejecting
+duplicates of the secret byte. That does not by itself determine the secret. The models
+below are the extra assumptions that *would* determine it, and that are small enough
+to test (N/D well under two hours at about 650 derivations/s).
+
+Method: reconstruct a 16-byte secret under each model, re-encode with a true BIP39
+checksum, derive BIP84 `m/84'/0'/0'/0/0`, compare to the escrow. Constructed 3rd shares
+go through `tools/oracle.py`. Code: `tools/structured_candidates.py`.
+
+Families and counts:
+
+- Unique models, 14 secrets: `a2=0` for every byte (the 2-point line, already in the
+  oracle self-test), `a1=0` for every byte, `a1=a2`, `a1=s`, `a2=s`, secret equal to
+  `y1`, `y2`, `y1 XOR y2`, SHA-256 prefixes of those, and the byte-reversals of the
+  first three. 0 match.
+- Same `(a1, a2)` for all 16 bytes: 65,536 pairs checked algebraically against both
+  published points. 0 pairs consistent, so 0 secrets to derive.
+- Global constant `a1` (256) or global constant `a2` (256), the other coefficient free
+  per byte and then determined. 512 secrets, 0 match.
+- Constructed 3rd-share `y` values (zeros, ones, 0xff, copy of `y1`/`y2`, XOR, SHA-256
+  prefixes, the escrow hash160 prefix, and the five on-chain amount fingerprints as
+  16-byte integers) at each of the 13 unused indexes. 273 candidates, 0 match.
+- 2-point interpolation pretending the indexes are every pair from 1 to 15 instead of
+  3 and 15. 105 pairs, 0 match.
+- Per-byte 2-model mix (`a2=0` vs `a1=0`, vs `a1=a2`, vs `a1=s`; `a1=0` vs `a2=s`;
+  `a2=0` vs `a2=1`; `a2=1` vs `a2=255`). 6 x 65,536 = 393,216 secrets, 0 match.
+- Three BIP39 test-vector phrases from the 2020 `jsbtc` test file, as secrets and as
+  3rd shares. 0 match. A 12-word phrase claimed in `pybtc` issue 53 as a 2-share
+  recovery of this escrow fails the BIP39 checksum and is not a candidate.
+
+Result: 394,125 address comparisons, 0 match, plus 65,536 algebraic pairs with 0
+consistent. Rate: about 650 derivations/s. Witness: `tools/structured_candidates.py
+--selftest` recovers a synthetic `a1=0` split, checks the mixed-mask enumerator at
+head, bit 0 and tail, and round-trips share encode/decode; the scan uses the same
+`derive_address` path as the certified oracle. Date: 2026-08-28.

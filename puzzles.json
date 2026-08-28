@@ -371,8 +371,8 @@
       "difficulty_left": "external-info",
       "difficulty_note": "residual entropy is about 125 bits after every constraint I could establish (duplicate-value coefficient rejection plus a real defect in the deployed 2020 generator's entropy check); no third Shamir share has surfaced in the public record, including same-day Reddit and Telegram copies, archive.today, live mirrors, and 13 GitHub forks of mnemonic-offline-tool; what would close this is that missing share, or a disclosed constraint on it, not compute",
       "tested_total": {
-        "candidates": 66,
-        "families": 9,
+        "candidates": 394191,
+        "families": 10,
         "certified": true
       },
       "leads": [

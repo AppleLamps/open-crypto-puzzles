@@ -27,8 +27,11 @@ the known announcement text as witness. Cost: minutes, if the services answer.
 ## 3. Direct computation
 
 Not ranked as a lead. The residual entropy is about 125 bits (see
-`data/entropy_measurements.csv`), which is not in range for search on any hardware I have
-access to. This door is closed by the numbers, not by assumption.
+`data/entropy_measurements.csv`). Every 2-share model that actually determines a
+secret, or a 2^16 mix of two such models, is now tested and negative
+(`analysis/tested.md` section 12). What remains is the unconstrained byte, which is
+not in range for search on any hardware I have access to. This door is closed by the
+numbers, not by assumption.
 
 ## Closed this round (2026-08-28)
 
@@ -37,4 +40,6 @@ share: the gap is still empty in those two indexes, but same-day Reddit and Tele
 copies exist, archive.today's one snapshot (2021-06-20) matches, and the live pages on
 2026-08-28 still match. archive.today, Telegram `t.me/s/bitapscom`, the 13 reachable
 GitHub forks of `mnemonic-offline-tool`, and the live regional mirrors are now read,
-not merely uncertified. Details in `analysis/tested.md` sections 7 to 11.
+not merely uncertified. Determined 2-share algebraic models (unique coefficients,
+global `a1`/`a2`, constructed 3rd shares, mixed 2^16 families) are negative. Details
+in `analysis/tested.md` sections 7 to 12.

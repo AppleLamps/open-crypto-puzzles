@@ -131,6 +131,7 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | 3rd share in same-day announcements | Reddit `hc4bfk` (26 comments), Telegram `bitapscom`, X status 1274018817304379394 | fetched each, extracted 12-word BIP39 sequences, oracle on overlap windows | 0 unpublished share; 13 overlap windows, 0 MATCH | yes: both known shares recovered from the Reddit body | 2026-08-28 |
 | 3rd share in a GitHub fork of `mnemonic-offline-tool` | 13 reachable forks | compare default-branch HEAD to `5b6dd995`; code search for the published share prefixes | 12 heads equal the known commit; 1 predates the challenge; 0 extra share | yes: 12 heads equal `5b6dd995` | 2026-08-28 |
 | 3rd share on the live challenge pages | 3 hosts | fetched 2026-08-28 | same 2 shares; zpub derives the escrow | yes: both known shares recovered; zpub-to-address exact match | 2026-08-28 |
+| determined 2-share algebraic models | 394,125 secrets and constructed shares | unique coefficient assumptions, global `a1`/`a2`, 6 mixed 2^16 families, constructed 3rd shares | 0 match; 65,536 constant-`(a1,a2)` pairs with 0 consistent | yes: `tools/structured_candidates.py --selftest` | 2026-08-28 |
 
 ## Open leads, ranked
 
@@ -158,6 +159,7 @@ Full notes: [analysis/leads.md](analysis/leads.md).
 | `analysis/tested.md` | full negatives ledger |
 | `analysis/leads.md` | full lead notes |
 | `tools/oracle.py` | reconstruction checker: candidate 3rd share plus the 2 published shares to a derived address |
+| `tools/structured_candidates.py` | 2-share algebraic models: unique coefficients, mixed 2^16 families, constructed 3rd shares |
 
 ## Sources
 
