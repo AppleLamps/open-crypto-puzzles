@@ -221,41 +221,70 @@ tool pages saved the same day, carries a 3rd share in visible text, HTML comment
 or an extra share slot.
 
 The four WARC files in this folder (added 2026-08-28) are one HTTP 200 response
-each:
+each. `challenge.warc`, `tool-en.warc`, and `tool-ru.warc` are complete HTML
+documents (`</html>` present). `offline.warc` carries `WARC-Truncated: length`:
+the stored HTTP body is exactly 1,048,576 bytes (1 MiB), Common Crawl's length
+cap, and the file ends mid-tag inside the on-page BIP39 dice wordlist.
 
-| File | WARC-Date (UTC) | WARC-Target-URI |
-|---|---|---|
-| `challenge.warc` | 2020-07-04T18:20:40Z | `https://bitaps.com/mnemonic/challenge` |
-| `offline.warc` | 2020-07-04T18:12:07Z | `https://bitaps.com/mnemonic/offline` |
-| `tool-en.warc` | 2020-07-04T19:03:29Z | `https://bitaps.com/mnemonic?language=en` |
-| `tool-ru.warc` | 2020-07-04T17:31:10Z | `https://bitaps.com/mnemonic?language=ru` |
+| File | WARC-Date (UTC) | WARC-Target-URI | Complete |
+|---|---|---|---|
+| `challenge.warc` | 2020-07-04T18:20:40Z | `https://bitaps.com/mnemonic/challenge` | yes |
+| `offline.warc` | 2020-07-04T18:12:07Z | `https://bitaps.com/mnemonic/offline` | no: truncated at 1 MiB |
+| `tool-en.warc` | 2020-07-04T19:03:29Z | `https://bitaps.com/mnemonic?language=en` | yes |
+| `tool-ru.warc` | 2020-07-04T17:31:10Z | `https://bitaps.com/mnemonic?language=ru` | yes |
 
 The challenge record's timestamp is the same `CC-MAIN-2020-29` hit already logged
 in section 4 (`20200704182040`). This is that payload, not a new crawl.
 
-Method: parse each WARC record, strip tags, collect every `span.word-N` sequence,
-and search for `share-input-3`, `Share 3`, and `word-13`. Decode the published
-zpub as a BIP84 account key and derive `0/0`.
+Method: parse each WARC record including `WARC-Truncated`, strip tags, collect
+every `span.word-N` sequence, and search for `share-input-3`, `Share 3`, and
+`word-13`. Count on-page dice-wordlist entries. Decode the published zpub as a
+BIP84 account key and derive `0/0`.
 
 Result: 0 additional shares. The challenge page has exactly 24 labelled words,
 the two published shares, in `share-input-1` and `share-input-2`. No third slot.
-HTML comments are chrome (`Top fast access menu`, `Dashboard`, tool section
-labels). The online and offline tool restore boxes are empty. The split form
+The 24 `span.word-N` values decode to Shamir indexes 3 and 15, matching the
+known shares. HTML comments are chrome (`Top fast access menu`, `Dashboard`,
+tool section labels, `Dice wordlist`). The online tool restore boxes
+(`tool-en.warc`, `tool-ru.warc`) are empty; those two records are complete and
+end with the same external script includes (`/static/js/mnemonic.js`,
+`/static/js/core.js`), which are not themselves in these WARCs. The split form
 defaults to 2 of 3, not 3 of 5; that default does not describe the published
 shares, which have distinct entropy, and the degree-1 case (`a2=0`) is already
-a non-match in section 12. The 2020-07-04 challenge text is the short form:
-title "1 BTC challenge with splitted mnemonic code", the address, the zpub,
-"3 out of 5", "2 of 3 shares", the two mnemonics, path `m/84'/0'/0'/0/0`, the
-mnemonic-tool and `jsbtc` pointers, and "Good luck". It does not yet mention
-ZeroNights, the extra 1 BTC disclosure bounty, the 0.1 BTC bug tier, or
-`pybtc`. The page shows `1.00000000 BTC`, which matches the escrow before the
-later dust top-ups. The English and Russian tool pages differ in chrome and in
-a price-ticker blob, not in share words. The only zpub in the four files is
+a non-match in section 12. The offline tool's split/restore UI sits above the
+dice wordlist and is fully present in the truncated record: restore slots empty,
+placeholder `Example: crush cattle vast ...` (not a 12-word phrase), default
+2 of 3. The cut is 255 dice-word `<div class="word">` entries, `abandon` through
+`cabin`, which is the prefix of the BIP39 English list; the next word would be
+`cable`. The missing tail is the rest of that wordlist plus closing tags and
+the same script includes. It is not a third share slot.
+
+The 2020-07-04 challenge text is the short form: title "1 BTC challenge with
+splitted mnemonic code", the address, the zpub, "3 out of 5", "2 of 3 shares",
+the two mnemonics, path `m/84'/0'/0'/0/0`, pointers to the mnemonic tool,
+`mnemonic-offline-tool/.../mnemonic-improvement.md`, and
+`jsbtc/.../shamir_secret_sharing.js#L88`, and "Good luck". It does not yet
+mention ZeroNights, the extra 1 BTC disclosure bounty, or the 0.1 BTC bug
+tier. The implementation pointer is `jsbtc`. The footer chrome already has a
+"Powered by" `pybtc` logo linking to `pybtc.readthedocs.io`; that is site
+chrome, not the SSSS pointer. The page shows `1.00000000 BTC`, which matches
+the escrow before the later dust top-ups. The English and Russian tool pages
+differ in chrome and in a price-ticker blob, not in share words. The challenge
+page already linked `?language=ru`; that payload is not among these four files.
+
+The only zpub in the four files is
 `zpub6qdEDkv51FpxX6g1rpFGckmiL46vV8ccmtEgPAkj3qj8N4ZZHyXDRA9RwpTiFK2Kb8vRaDmSmwgX6rfB4t2K8Ktdq8ExQ6fumKpn2ndJCqL`.
 It is a BIP84 account key (version `04b24746`, depth 3, child `0x80000000` =
-`0'`), so `m/84'/0'/0'/0/0` is the `0/0` child of that key and derives
-`bc1qyjwa0tf0en4x09magpuwmt2smpsrlaxwn85lh6`.
+`0'`, compressed pubkey
+`03614aee0f7346f5e88f7fc218a05dbe1878a9906b2a50a20ea223b3d6961139ed`), so
+`m/84'/0'/0'/0/0` is the `0/0` child of that key and derives
+`bc1qyjwa0tf0en4x09magpuwmt2smpsrlaxwn85lh6` (child compressed pubkey
+`0385a3a591451ed7ed6c90dae882db918107d6f906d270cf4728d168126e0e89aa`). A
+one-character capital-W variant of the same string fails the Base58 checksum
+and is not a second key.
 
 Witness: stripping tags from `challenge.warc` recovers both known-good share
 phrases as contiguous 12-word sequences; the 24 `span.word-N` values are those
-same words in order. Date: 2026-08-28.
+same words in order; `tools/oracle.py` decodes them to indexes 3 and 15. The
+255 dice words in `offline.warc` are the first 255 words of the BIP39 English
+list (`abandon` through `cabin`). Date: 2026-08-28.

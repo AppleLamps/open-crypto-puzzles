@@ -114,7 +114,7 @@ path. Reproduced 2026-08-16.
    is a BIP84 account-level key (depth 3, last child `0'`), so `m/84'/0'/0'/0/0` is
    the `0/0` child of that key. That derivation produces
    `bc1qyjwa0tf0en4x09magpuwmt2smpsrlaxwn85lh6`. Confirmed from the 2020-07-04 WARC
-   string on 2026-08-28.
+   string on 2026-08-28 (version `04b24746`, child `0x80000000`).
 8. Live challenge pages on `bitaps.com`, `tbtc.bitaps.com`, and `ltc.bitaps.com` still
    show the same 2 shares on 2026-08-28. The `bitaps.com` page had returned HTTP 403 on
    2026-08-16.
@@ -135,7 +135,7 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | 3rd share in a GitHub fork of `mnemonic-offline-tool` | 13 reachable forks | compare default-branch HEAD to `5b6dd995`; code search for the published share prefixes | 12 heads equal the known commit; 1 predates the challenge; 0 extra share | yes: 12 heads equal `5b6dd995` | 2026-08-28 |
 | 3rd share on the live challenge pages | 3 hosts | fetched 2026-08-28 | same 2 shares; zpub derives the escrow | yes: both known shares recovered; zpub-to-address exact match | 2026-08-28 |
 | determined 2-share algebraic models | 394,125 secrets and constructed shares | unique coefficient assumptions, global `a1`/`a2`, 6 mixed 2^16 families, constructed 3rd shares | 0 match; 65,536 constant-`(a1,a2)` pairs with 0 consistent | yes: `tools/structured_candidates.py --selftest` | 2026-08-28 |
-| 3rd share in the 2020-07-04 Common Crawl WARC payloads | 4 records (`challenge.warc`, `offline.warc`, `tool-en.warc`, `tool-ru.warc`) | parse records, strip tags, collect `span.word-N`, search for a third slot | 0 extra share; zpub is account-level, `0/0` derives the escrow | yes: stripped `challenge.warc` recovers both known shares | 2026-08-28 |
+| 3rd share in the 2020-07-04 Common Crawl WARC payloads | 4 records (`challenge.warc`, `offline.warc`, `tool-en.warc`, `tool-ru.warc`) | parse records, strip tags, collect `span.word-N`, search for a third slot | 0 extra share; `offline.warc` truncated at 1 MiB in the dice wordlist, after empty restore slots; zpub is account-level, `0/0` derives the escrow | yes: stripped `challenge.warc` recovers both known shares; dice prefix matches BIP39 | 2026-08-28 |
 
 ## Open leads, ranked
 
@@ -161,7 +161,7 @@ Full notes: [analysis/leads.md](analysis/leads.md).
 | `challenge.warc` | Common Crawl payload of `bitaps.com/mnemonic/challenge`, 2020-07-04T18:20:40Z |
 | `tool-en.warc` | same-day payload of `bitaps.com/mnemonic?language=en` |
 | `tool-ru.warc` | same-day payload of `bitaps.com/mnemonic?language=ru` |
-| `offline.warc` | same-day payload of `bitaps.com/mnemonic/offline` |
+| `offline.warc` | same-day payload of `bitaps.com/mnemonic/offline` (Common Crawl truncated at 1 MiB in the dice wordlist) |
 | `data/entropy_measurements.csv` | the 3 residual-entropy measurements behind "about 125 bits," with method and date |
 | `data/related_disclosures.csv` | dated timeline of events on the `jsbtc` repository and the challenge address |
 | `data/channel_reads.csv` | channels read on 2026-08-28 for a 3rd share, with counts and witnesses |

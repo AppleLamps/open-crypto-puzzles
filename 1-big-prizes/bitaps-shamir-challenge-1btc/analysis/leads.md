@@ -42,7 +42,9 @@ copies exist, archive.today's one snapshot (2021-06-20) matches, and the live pa
 2026-08-28 still match. The Common Crawl payload itself is now in-folder
 (`challenge.warc`, 2020-07-04T18:20:40Z) and carries the same 2 shares; the same-day
 mnemonic tool WARCs (`tool-en.warc`, `tool-ru.warc`, `offline.warc`) have empty restore
-slots. archive.today, Telegram `t.me/s/bitapscom`, the 13 reachable GitHub forks of
+slots. `offline.warc` is truncated at Common Crawl's 1 MiB cap inside the BIP39
+dice wordlist (255 words, `abandon` through `cabin`); the split/restore UI is
+above that cut and fully present. archive.today, Telegram `t.me/s/bitapscom`, the 13 reachable GitHub forks of
 `mnemonic-offline-tool`, and the live regional mirrors are now read, not merely
 uncertified. Determined 2-share algebraic models (unique coefficients, global `a1`/`a2`,
 constructed 3rd shares, mixed 2^16 families) are negative. Details in
