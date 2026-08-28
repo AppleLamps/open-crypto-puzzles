@@ -353,7 +353,7 @@
           "label": "main",
           "explorer": "https://mempool.space/address/bc1qyjwa0tf0en4x09magpuwmt2smpsrlaxwn85lh6",
           "expected": "1.00016775 BTC (100,016,775 sats)",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-08-28",
           "verified_state": "funded-unspent"
         }
       ],
@@ -369,22 +369,22 @@
         "certified_against": "public BIP84 test vector (abandon x11 + about) and a synthetic 3-of-5 GF(256) split/reconstruct round trip; no solved sibling exists for this puzzle"
       },
       "difficulty_left": "external-info",
-      "difficulty_note": "residual entropy is about 125 bits after every constraint I could establish (duplicate-value coefficient rejection plus a real defect in the deployed 2020 generator's entropy check); no third Shamir share has surfaced in the public record; what would close this is that missing share, or a disclosed constraint on it, not compute",
+      "difficulty_note": "residual entropy is about 125 bits after every constraint I could establish (duplicate-value coefficient rejection plus a real defect in the deployed 2020 generator's entropy check); no third Shamir share has surfaced in the public record, including same-day Reddit and Telegram copies, archive.today, live mirrors, and 13 GitHub forks of mnemonic-offline-tool; what would close this is that missing share, or a disclosed constraint on it, not compute",
       "tested_total": {
-        "candidates": 14,
-        "families": 4,
+        "candidates": 66,
+        "families": 9,
         "certified": true
       },
       "leads": [
         {
           "rank": 1,
-          "title": "the 15-day archive gap, 2020-06-19 to 2020-07-04, uncovered by Wayback or Common Crawl",
+          "title": "the unpublished 3rd share; same-day copies and later archives all show only the original 2 shares",
           "cost": "hours",
           "status": "open"
         },
         {
           "rank": 2,
-          "title": "uncertified channels: archive.today, Memento TimeTravel, X replies to @bitaps_com, GitHub forks, Telegram",
+          "title": "Memento TimeTravel still unreachable; X reply tree beyond the 3 replies returned with the announcement",
           "cost": "hours",
           "status": "open"
         }
@@ -399,8 +399,26 @@
           "archived": "https://web.archive.org/web/20230328022959/https://bitaps.com/mnemonic/challenge"
         },
         {
+          "title": "archive.today snapshot of the challenge page",
+          "url": "https://archive.is/8bNRM",
+          "date": "2021-06-20",
+          "archived": "https://archive.is/8bNRM"
+        },
+        {
           "title": "Bitaps announcement",
           "url": "https://x.com/bitaps_com/status/1274018817304379394",
+          "date": "2020-06-19",
+          "archived": null
+        },
+        {
+          "title": "Bitaps Reddit copy, r/Bitcoin hc4bfk",
+          "url": "https://www.reddit.com/r/Bitcoin/comments/hc4bfk/1_btc_cryptographic_challenge_with_splitted/",
+          "date": "2020-06-19",
+          "archived": "https://web.archive.org/web/20230611002230/https://old.reddit.com/r/Bitcoin/comments/hc4bfk/1_btc_cryptographic_challenge_with_splitted/"
+        },
+        {
+          "title": "Bitaps Telegram copy",
+          "url": "https://t.me/bitapscom/15",
           "date": "2020-06-19",
           "archived": null
         },
@@ -425,12 +443,12 @@
         {
           "title": "mempool.space, escrow address",
           "url": "https://mempool.space/address/bc1qyjwa0tf0en4x09magpuwmt2smpsrlaxwn85lh6",
-          "date": "2026-08-16",
+          "date": "2026-08-28",
           "archived": null
         }
       ],
       "third_party_material": "the 2 published Shamir shares and the challenge-page quotes are Bitaps's own puzzle material, quoted briefly with source and date; no third-party copyrighted material is included",
-      "last_updated": "2026-08-16",
+      "last_updated": "2026-08-28",
       "folder": "1-big-prizes/bitaps-shamir-challenge-1btc"
     },
     {

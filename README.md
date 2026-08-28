@@ -77,7 +77,7 @@ grouped by prize, is in the tables below.
 |---|---|---|---|---|---|---|---|
 | [GSMG.io Puzzle](1-big-prizes/gsmg-io-5btc-puzzle/) | 5.0068982 BTC | 315,435 | bitcoin | text-cipher, pixel-code, web-tree, raw-private-key | insight | 2026-08-16 | open |
 | [Ballet / Bobby Lee: Take Bobby's Bitcoin](1-big-prizes/ballet-bobby-lee-2btc-cards/) | 2.00007358 BTC | 126,005 | bitcoin | bip38, physical-object | external-info | 2026-08-16 | open |
-| [Bitaps Shamir Secret Sharing Challenge](1-big-prizes/bitaps-shamir-challenge-1btc/) | 1.00016775 BTC | 63,011 | bitcoin | shamir, bip39-seed | external-info | 2026-08-16 | open |
+| [Bitaps Shamir Secret Sharing Challenge](1-big-prizes/bitaps-shamir-challenge-1btc/) | 1.00016775 BTC | 63,011 | bitcoin | shamir, bip39-seed | external-info | 2026-08-28 | open |
 | [Aoi Nakamoto Quizchain](1-big-prizes/aoi-nakamoto-quizchain-0-854btc/) | 0.777 BTC | 48,951 | bitcoin | bip39-seed, word-selection | external-info | 2026-08-21 | open |
 | [Peter Todd Hash Collision Bounties](1-big-prizes/peter-todd-hash-collision-bounties-0-59btc/) | 0.59364885 BTC | 37,400 | bitcoin | hash-collision | research-breakthrough | 2026-08-16 | watch |
 | [Guntis Vitolins: 10 ETH Challenge](1-big-prizes/guntis-vitolins-metamask-8-6eth/) | 8.612541554256945 ETH | 16,192 | ethereum | bip39-seed, word-selection, video-series | bounded-compute | 2026-08-16 | open |
