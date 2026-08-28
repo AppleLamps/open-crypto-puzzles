@@ -89,8 +89,8 @@
       "difficulty_left": "external-info",
       "difficulty_note": "Real Big Block: the transform and the case-flip rule are confirmed exactly on a solved sibling lot; what is missing is the precise source text the author hashed on 2019-07-30. Every contiguous paragraph span (1,469,908 texts) and a bounded 2-edit slice on the full chapter (221,520 texts) are negatives. Remaining cheap mechanical lead is further 2-character edits on NBSP/line-ending pairs, including on the other 1-character bases. Block 76: a community-found candidate pair satisfies both published MD5-prefix hints but no standard derivation of it reaches the address; the escrow was swept by a reader on 2026-08-17",
       "tested_total": {
-        "candidates": 350000000,
-        "families": 24,
+        "candidates": 350017921,
+        "families": 28,
         "certified": true
       },
       "leads": [

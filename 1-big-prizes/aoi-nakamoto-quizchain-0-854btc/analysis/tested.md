@@ -89,6 +89,22 @@ contiguous-span row (every start-end pair of length at least 2, under the
 listed joins and keep-tests). Every other row is a targeted, not exhaustive,
 test of one specific hypothesis about which paragraphs were modified.
 
+A second 2026-08-27 run, over Finney-pattern groups and first/last N-paragraph
+chunks, is also a negative. Method: `tools/oracle.py` certified on Block 77
+Stage One, with a synthetic witness recovered at the head of the run. Rate:
+522 candidates/s. Date: 2026-08-27.
+
+| Hypothesis family | Candidates | Result |
+|---|---|---|
+| Full current Wattpad serializations (API, innerText, selection, body markers) with Stage One case-flip, title/heading prefixes, NBSP/unicode-space normalization, LF/CR/CRLF/double-CRLF separators | 115 | 0 match |
+| First/last N-paragraph chunk serializations (sizes 10-273) with the same flip/prefix/separator/normalization variants | 2,290 | 0 match |
+| Full-chapter serializations with all three flip modes (none, full first+last, first-only) and the author-stated CRLF/double-CRLF separators | 351 | 0 match |
+| Four Finney-pattern paragraph groups (three planted at section starts plus the Finney quote): natural and F-F-W-I-W reordered, all subsets/permutations, whole or non-sign-only, three flip modes, quote stripping, title prefixes, LF/CR/CRLF/double-CRLF separators | 15,165 | 0 match |
+
+N = 17,921 unique candidates, 0 match. Some of these overlap the 2019-copy
+families above; they are kept as a separate count because the Finney-group
+permutations and the first/last N-paragraph chunks are not those rows.
+
 ## Quizchain2 Block 76 (0.077 BTC)
 
 The chain a community player found in 2019 (`solution = "format"`,

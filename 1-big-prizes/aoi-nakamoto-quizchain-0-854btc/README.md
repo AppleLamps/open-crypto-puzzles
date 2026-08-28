@@ -202,6 +202,7 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | RBB: 2019 Common Crawl indent (newline plus 26 spaces) and stored empty `<p><br></p>` editor-buffer copies (every gap or after headings only; plaintext, 26-space SSR, or `13 10 13 10`; Stage One flip) | 3,030 unique texts | same | 0 match | yes: 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-08-27 |
 | RBB: every contiguous span of 2+ paragraphs (first-character and first-letter Stage One keep-tests, no flip, four line-break joins, NBSP/edge-space variants when present) | 1,469,908 unique texts | same | 0 match | yes: 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-08-27 |
 | RBB: bounded 2-edit on the full chapter (every NBSP subset; every pair of joins swapped `\n\n` vs `\r\n\r\n`; three keep-tests) | 221,520 unique texts | same | 0 match | yes: 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-08-27 |
+| RBB: Finney-pattern group permutations and first/last N-paragraph chunks | 17,921 unique texts | same | 0 match | yes: synthetic witness recovered at head of the run | 2026-08-27 |
 | Block 76: standard BIP44/49/84 derivations, paths, passphrases on the one chain found by search | standard space plus 24,564 off-by-one variants | MD5 to BIP39 to address compare | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
 | Block 76: word-transform "salves" on "change to" / "from change to" | approximately 53,000 candidate solutions | MD5-prefix filter, then derivation on survivors | 0 match | yes | 2026-08-15 |
 | Block 76: scripted dictionary-times-corpus sweep | approximately 3.2x10^11 MD5, approximately 78,000,000 derivations | MD5-prefix filter, then derivation on survivors | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
@@ -209,7 +210,8 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 Cumulative: approximately 272 million candidates tested against Real Big Block
 through 2026-08-15, plus 12,848 unique 2019-copy serializations, 3,030 unique
 2019-indent/empty-`<p><br></p>` serializations, 1,469,908 unique contiguous
-spans, and 221,520 unique bounded 2-edits on 2026-08-27, and approximately 78
+spans, and 221,520 unique bounded 2-edits on 2026-08-27, plus 17,921 unique
+Finney-group and first/last N-paragraph serializations, and approximately 78
 million derivations plus approximately 78,000 smaller candidates tested against
 Block 76, all negative. Full scope notes, including which rows are complete
 sweeps versus targeted tests, are in `analysis/tested.md`.
