@@ -6,8 +6,10 @@ Chronological.
 ---
 
 **2020-06-19, challenge page**, `bitaps.com/mnemonic/challenge`
-(live page returns HTTP 403 as of 2026-08-16; archived copy:
-[web.archive.org, 2023-03-28](https://web.archive.org/web/20230328022959/https://bitaps.com/mnemonic/challenge)):
+(live page returned the challenge body on 2026-08-28; it had returned HTTP 403 on
+2026-08-16. Archived copies:
+[web.archive.org, 2023-03-28](https://web.archive.org/web/20230328022959/https://bitaps.com/mnemonic/challenge),
+[archive.is/8bNRM, 2021-06-20](https://archive.is/8bNRM)):
 
 > "The New Bug Bounty program for Shamir Secret Backup Scheme... if you can hack the scheme
 > completely, then the main reward is already waiting for you at the bitcoin address."
@@ -23,9 +25,27 @@ session cigar grape merry useful churn fatal thought very any arm unaware
 clock fresh security field caution effort gorilla speed plastic common tomato echo
 ```
 
+The same page also publishes the BIP84 account zpub used to derive the challenge
+address at `m/84'/0'/0'/0/0`:
+
+```
+zpub6qdEDkv51FpxX6g1rpFGckmiL46vV8ccmtEgPAkj3qj8N4ZZHyXDRA9RwpTiFK2Kb8vRaDmSmwgX6rfB4t2K8Ktdq8ExQ6fumKpn2ndJCqL
+```
+
 **2020-06-19, announcement**: [x.com/bitaps_com/status/1274018817304379394](https://x.com/bitaps_com/status/1274018817304379394)
-(not independently re-read today; X blocks automated reads without a session, see
-[Sources](../README.md#sources)).
+(re-read 2026-08-28). Posted 2020-06-19T16:38:50Z. Text: "1 BTC cryptographic challenge
+with splitted mnemonic code." plus the escrow address and a short link to the challenge
+page. No share words in the post. The 3 replies returned with the post do not add a
+share.
+
+**2020-06-19, Reddit copy**: [r/Bitcoin `hc4bfk`](https://www.reddit.com/r/Bitcoin/comments/hc4bfk/1_btc_cryptographic_challenge_with_splitted/)
+by u/bitaps. Same 2 shares, same zpub, same address, same jsbtc pointer. Wayback
+[2023-06-11 old.reddit capture](https://web.archive.org/web/20230611002230/https://old.reddit.com/r/Bitcoin/comments/hc4bfk/1_btc_cryptographic_challenge_with_splitted/)
+includes 26 comments; none adds a 12-word share.
+
+**2020-06-19, Telegram copy**: [t.me/bitapscom/15](https://t.me/bitapscom/15)
+(public preview [t.me/s/bitapscom](https://t.me/s/bitapscom)). Reprint of the X
+announcement: address and link, no share words.
 
 **2020-06-19, code of record**: [github.com/bitaps-com/mnemonic-offline-tool](https://github.com/bitaps-com/mnemonic-offline-tool),
 commit [`5b6dd995`](https://github.com/bitaps-com/mnemonic-offline-tool/commit/5b6dd995478b49c489b95444fbb0dca4006746a2)
