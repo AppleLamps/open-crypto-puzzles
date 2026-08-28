@@ -6,9 +6,10 @@ Full notes. The README shows the ranked summary.
 
 The scheme is 3-of-5. Two shares were published on 2020-06-19 and every later public
 copy agrees on those two. The remaining shares were never posted in any channel I
-could read. Same-day copies (Reddit, Telegram, X) already show only 2 shares, so a
+could read. Same-day copies (Reddit, Telegram, X) already show only 2 shares, and the
+2020-07-04 Common Crawl body (`challenge.warc`) shows the same pair, so a
 "posted then deleted during the 15-day Wayback gap" story now has to explain why the
-parallel announcements never carried a 3rd share either. What would confirm it: the
+parallel announcements and the first crawl never carried a 3rd share either. What would confirm it: the
 author publishing a 3rd share, or a dated copy of the challenge page that disagrees
 with the 2-share text. What would close it: that still has not happened. Cost:
 watching the author's remaining channels; no compute.
@@ -38,8 +39,11 @@ numbers, not by assumption.
 The 15-day Wayback/Common Crawl gap is no longer an independent source of a hidden 3rd
 share: the gap is still empty in those two indexes, but same-day Reddit and Telegram
 copies exist, archive.today's one snapshot (2021-06-20) matches, and the live pages on
-2026-08-28 still match. archive.today, Telegram `t.me/s/bitapscom`, the 13 reachable
-GitHub forks of `mnemonic-offline-tool`, and the live regional mirrors are now read,
-not merely uncertified. Determined 2-share algebraic models (unique coefficients,
-global `a1`/`a2`, constructed 3rd shares, mixed 2^16 families) are negative. Details
-in `analysis/tested.md` sections 7 to 12.
+2026-08-28 still match. The Common Crawl payload itself is now in-folder
+(`challenge.warc`, 2020-07-04T18:20:40Z) and carries the same 2 shares; the same-day
+mnemonic tool WARCs (`tool-en.warc`, `tool-ru.warc`, `offline.warc`) have empty restore
+slots. archive.today, Telegram `t.me/s/bitapscom`, the 13 reachable GitHub forks of
+`mnemonic-offline-tool`, and the live regional mirrors are now read, not merely
+uncertified. Determined 2-share algebraic models (unique coefficients, global `a1`/`a2`,
+constructed 3rd shares, mixed 2^16 families) are negative. Details in
+`analysis/tested.md` sections 7 to 13.

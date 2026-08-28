@@ -213,3 +213,49 @@ consistent. Rate: about 650 derivations/s. Witness: `tools/structured_candidates
 --selftest` recovers a synthetic `a1=0` split, checks the mixed-mask enumerator at
 head, bit 0 and tail, and round-trips share encode/decode; the scan uses the same
 `derive_address` path as the certified oracle. Date: 2026-08-28.
+
+## 13. Common Crawl WARC payloads, 2020-07-04
+
+Hypothesis: the first Common Crawl capture of the challenge page, or the mnemonic
+tool pages saved the same day, carries a 3rd share in visible text, HTML comments,
+or an extra share slot.
+
+The four WARC files in this folder (added 2026-08-28) are one HTTP 200 response
+each:
+
+| File | WARC-Date (UTC) | WARC-Target-URI |
+|---|---|---|
+| `challenge.warc` | 2020-07-04T18:20:40Z | `https://bitaps.com/mnemonic/challenge` |
+| `offline.warc` | 2020-07-04T18:12:07Z | `https://bitaps.com/mnemonic/offline` |
+| `tool-en.warc` | 2020-07-04T19:03:29Z | `https://bitaps.com/mnemonic?language=en` |
+| `tool-ru.warc` | 2020-07-04T17:31:10Z | `https://bitaps.com/mnemonic?language=ru` |
+
+The challenge record's timestamp is the same `CC-MAIN-2020-29` hit already logged
+in section 4 (`20200704182040`). This is that payload, not a new crawl.
+
+Method: parse each WARC record, strip tags, collect every `span.word-N` sequence,
+and search for `share-input-3`, `Share 3`, and `word-13`. Decode the published
+zpub as a BIP84 account key and derive `0/0`.
+
+Result: 0 additional shares. The challenge page has exactly 24 labelled words,
+the two published shares, in `share-input-1` and `share-input-2`. No third slot.
+HTML comments are chrome (`Top fast access menu`, `Dashboard`, tool section
+labels). The online and offline tool restore boxes are empty. The split form
+defaults to 2 of 3, not 3 of 5; that default does not describe the published
+shares, which have distinct entropy, and the degree-1 case (`a2=0`) is already
+a non-match in section 12. The 2020-07-04 challenge text is the short form:
+title "1 BTC challenge with splitted mnemonic code", the address, the zpub,
+"3 out of 5", "2 of 3 shares", the two mnemonics, path `m/84'/0'/0'/0/0`, the
+mnemonic-tool and `jsbtc` pointers, and "Good luck". It does not yet mention
+ZeroNights, the extra 1 BTC disclosure bounty, the 0.1 BTC bug tier, or
+`pybtc`. The page shows `1.00000000 BTC`, which matches the escrow before the
+later dust top-ups. The English and Russian tool pages differ in chrome and in
+a price-ticker blob, not in share words. The only zpub in the four files is
+`zpub6qdEDkv51FpxX6g1rpFGckmiL46vV8ccmtEgPAkj3qj8N4ZZHyXDRA9RwpTiFK2Kb8vRaDmSmwgX6rfB4t2K8Ktdq8ExQ6fumKpn2ndJCqL`.
+It is a BIP84 account key (version `04b24746`, depth 3, child `0x80000000` =
+`0'`), so `m/84'/0'/0'/0/0` is the `0/0` child of that key and derives
+`bc1qyjwa0tf0en4x09magpuwmt2smpsrlaxwn85lh6`.
+
+Witness: stripping tags from `challenge.warc` recovers both known-good share
+phrases as contiguous 12-word sequences; the 24 `span.word-N` values are those
+same words in order. Date: 2026-08-28.

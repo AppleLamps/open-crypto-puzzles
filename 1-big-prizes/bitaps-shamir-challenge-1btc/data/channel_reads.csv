@@ -10,3 +10,7 @@
 2026-08-28,x-announcement,https://x.com/bitaps_com/status/1274018817304379394,1 post + 3 replies,0,known escrow address and date recovered
 2026-08-28,github-forks,https://github.com/bitaps-com/mnemonic-offline-tool/forks,13 reachable heads,0,12 heads equal commit 5b6dd995
 2026-08-28,live-challenge-pages,https://bitaps.com/mnemonic/challenge,3 hosts (bitaps.com tbtc.bitaps.com ltc.bitaps.com),0,both known shares recovered; zpub derives the escrow
+2026-08-28,cc-warc-challenge,challenge.warc,1 response 2020-07-04T18:20:40Z https://bitaps.com/mnemonic/challenge,0,stripped HTML recovers both known shares; 24 span.word-N values; zpub 0/0 derives escrow
+2026-08-28,cc-warc-tool-en,tool-en.warc,1 response 2020-07-04T19:03:29Z https://bitaps.com/mnemonic?language=en,0,restore slots empty; default split form 2 of 3
+2026-08-28,cc-warc-tool-ru,tool-ru.warc,1 response 2020-07-04T17:31:10Z https://bitaps.com/mnemonic?language=ru,0,restore slots empty; same default 2 of 3; no extra share words vs English
+2026-08-28,cc-warc-offline,offline.warc,1 response 2020-07-04T18:12:07Z https://bitaps.com/mnemonic/offline,0,restore slots empty; placeholder example crush cattle vast; default split 2 of 3
