@@ -115,9 +115,9 @@ https://x.com/N4Khjir/status/1927621634828939664.
 
 Witness for the A1Z26 splitter: grouping the title as 12, 1, 19, 20 yields the
 Game 2 page-name preimage already listed in `analysis/leads.md`, so the decoder
-reproduces a known-good grouping. Uncertified as a negative on the seed word,
-because the live page's grouping is not in the transcription. Rate: instant.
-Date: 2026-08-27.
+reproduces a known-good grouping. Applying that same splitter to the body, the
+only English BIP39 partition is 3, 1, 14 = `can`. That is now the working
+reading for Game 9, not a MATCH. Rate: instant. Date: 2026-08-27.
 
 ## Game 12 tweet screenshot (2026-08-27)
 

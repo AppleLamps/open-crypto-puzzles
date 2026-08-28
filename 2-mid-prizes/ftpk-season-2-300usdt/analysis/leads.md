@@ -12,14 +12,47 @@ failed that checkpoint (Code 11). A later fetch on 2026-08-27 did get through:
 the eleven listed games, the extras, `home.html`, `wordorder.html`, `new.html`,
 `check.html`, and the Season 4 hint-mapping page all returned HTTP 200. The
 hashed Game 12 URL, whose preimage is still the sentence spelled by the eleven
-page names, now returns Vercel `404 NOT_FOUND`. 0 of 12 seed words are confirmed.
+page names, now returns Vercel `404 NOT_FOUND`. 0 of 12 seed words are confirmed
+by the oracle. Three games now have a single-list-word reading from a closed
+mechanic; those are working readings, not a MATCH.
 
-I am quoting visible strings and describing images. I am not treating city names,
-image captions, or near-miss list neighbours as BIP39 words.
+I am quoting visible strings and describing images. City names that are not on
+the English BIP39 list are clues, not seeds. Image captions that merely
+neighbour a list word are not seeds either.
 
-I am not treating any of the images below as a BIP39 word. Several of them
-thematically neighbour words on the English list, and that is exactly the kind
-of near-miss this catalogue refuses to print as a claim.
+## Working readings, 2026-08-27 (not a MATCH)
+
+Each line is one game, one list word, one mechanic. None of these has been
+run as a 12-word set. A reading is not a solution.
+
+1. **Game 9 = `can`**. Title `1211920` groups as 12, 1, 19, 20 = LAST, which
+   is the Game 2 page-name preimage and is the witness that this page uses
+   A1Z26 with mixed 1-digit and 2-digit groups. Body `3114` has three such
+   partitions; only 3, 1, 14 is an English BIP39 word: `can`. Scrabble maps
+   here. N was 3 partitions; D is instant.
+2. **Game 11 = `airport`**. Title `44 . C`. Season 4 says "standard" applies
+   in most games; Game 7's title names that standard as zero-based indexing.
+   English list index 44 (0-based) is `airport`. Index 43 (1-based 44) is
+   `air`. The leftover `. C` is not used. N = 2; I am ranking the 0-based
+   reading first.
+3. **Game 7 = `nice`**. The X clue "If I were a city I would be ?" maps here.
+   The seed must be an English BIP39 word. The English list contains two
+   ordinary city names: `nice` and `buffalo`. Game 7 is the French city
+   page (Paris and Dakar on the couplets, French-twice maps here). `nice`
+   is the French one. Paris, Dakar, and the IBIZA acrostic on Game 10 are
+   city-clues, not list words. The author called Game 7 too vague; a riddle
+   whose answer is a city-word fits that. N = 2.
+
+Game 4's sentence points at `simple` and Game 3's `1881` as a 0-based index
+points at `twenty`. Both have leftovers (the hidden E; the letters SW), so
+I am not putting them in the list above. Game 2's yellow discriminator hits
+two thumbnails (slot banana; car's yellow UK plate) and I will not pick
+one.
+
+Game 2's four thumbnails neighbour several list words. I am not taking
+`seven`, `bar`, `slot`, `clock`, `time`, or `car` from a caption. The yellow
+discriminator is a real mechanic and is recorded under Game 2; it still hits
+two pictures, so it is not a fourth working reading yet.
 
 ## 1. Read the twelve game pages (done for text; Game 12 is 404)
 
@@ -28,9 +61,9 @@ The derivation is certified and the page-naming scheme is already broken. On
 50-letter extras, the Game 1 `.psd` link, `wordorder.html`, `new.html`,
 `check.html`, and the Season 4 hint page. Source HTML (F12) is in the notes
 below. What remains of this lead is visual work the HTML does not settle:
-Photopea on `/image1.psd`, which of Game 2's four pictures contains the yellow
-the author mentioned, and recovering Game 12's Drive file now that the hashed
-page is gone.
+Photopea on `/image1.psd`, Game 2's two yellow thumbnails, Game 3's grids,
+Game 5's 13-digit step, Game 8, Game 10's four-city cluster, and recovering
+Game 12's Drive file now that the hashed page is gone.
 
 What would confirm it: a 12-word MATCH on `tools/oracle.py`.
 What would kill it: an on-chain sweep, or the author taking the season down.
@@ -132,14 +165,15 @@ still the unread step. CCZA and knight also map here.
 
 Solid red page, four 150px thumbnails in a 2x2 grid:
 
-- slot machine showing 7 and BAR
-- music: 4/4, quarter note = 120, then a rest and a held note
-- analog clock, about 1:50
-- light-blue Ford GT with racing stripes in a city street, police lights on
+- slot machine: 7, BAR, cherry, plum, yellow banana
+- music: 4/4, quarter = 120, a rest, then a held note
+- analog clock, hands at about 10 and 2 (the usual catalogue pose)
+- light-blue Ford GT, UK yellow rear plate `SXC`, police lights on
 
 The author's uniform-red PNG and "a little yellow in all this red" both map
-here. Library image also maps here. I have not picked which thumbnail is "the
-right one".
+here. Yellow pixels sit on two thumbnails: the banana, and the car plate.
+Library image also maps here. Not a working reading until one of those two
+wins.
 
 ### Game 3
 
@@ -198,8 +232,8 @@ Decorated by gold will be marked my mock-ups
 
 Hidden `<h1 class="hidden">Dyor</h1>`. History, Arabic history, "If I were a
 city I would be", microphone, French-twice, and 10 hidden cities all map here.
-Paris and Dakar are cities. I am not treating them as seed words. This is the
-page the author called the weakest.
+Paris and Dakar are city-clues, not list words. Working reading: `nice` (see
+the list at the top). This is the page the author called the weakest.
 
 ### Game 8
 
@@ -209,8 +243,8 @@ markup.
 ### Game 9
 
 Title `1211920`, body `3114`, `lang=fr`, huge type. Scrabble maps here. As a
-single BIP39 index both numbers are out of range; A1Z26 of the title has 0 list
-words (`analysis/tested.md`). The live page still does not show a grouping.
+single BIP39 index both numbers are out of range. Working reading: `can` (see
+the list at the top). The title grouping 12, 1, 19, 20 is the witness.
 
 ### Game 10
 
@@ -245,7 +279,8 @@ words (`analysis/tested.md`). The live page still does not show a grouping.
 Title `44 . C`. Visible: the teaching address
 `0x50D7e097e61121140c19871F06eA6FeB6d14105b`. Hidden black-on-black mnemonic,
 the selftest example, not the Season 2 seed. No second pane. Rabbit wallet,
-work of art, bip, and F12 map here.
+work of art, bip, and F12 map here. Working reading: `airport` (see the list
+at the top). The leftover `. C` is unused.
 
 ### Game 12
 
@@ -317,7 +352,8 @@ city-clues, none of them a printed seed word:
   are the remaining source.
 
 The word fixed by four cities is not required to be a city name. Game 11 is not
-on S4's city list; the IBIZA acrostic is Game 10.
+on S4's city list; the IBIZA acrostic is Game 10. Game 7's seed reading is
+`nice`; Paris and Dakar stay in the set of ten hidden cities.
 
 What would confirm it: four cities on games 3 and 10 that share one BIP39 word,
 then a 12-word MATCH.

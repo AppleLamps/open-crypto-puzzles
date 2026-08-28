@@ -41,9 +41,9 @@
     "certified_against": "the author's own published worked example, mnemonic 'claim cycle staff clump domain judge boy session razor tiny shoulder coconut' deriving to 0x50D7e097e61121140c19871F06eA6FeB6d14105b"
   },
   "difficulty_left": "insight",
-  "difficulty_note": "the derivation is fully certified and the page-naming scheme is broken; live pages for games 1-11 plus extras were fetched on 2026-08-27; the hashed Game 12 URL now 404s; extra 50-letter paths are not the concatenation oracle; Game 9 as a lone index is out of range; 0 of the 12 words are confirmed via the oracle yet",
+    "difficulty_note": "the derivation is fully certified and the page-naming scheme is broken; live pages for games 1-11 plus extras were fetched on 2026-08-27; the hashed Game 12 URL now 404s; working readings for games 9, 11, and 7 (can, airport, nice) are not a MATCH; extra 50-letter paths are not the concatenation oracle; 0 of the 12 words are confirmed via the oracle yet",
   "leads": [
-    { "rank": 1, "title": "apply the 2026-08-27 live-page transcriptions (Photopea on the Game 1 PSD, Game 2 yellow thumbnail, Game 3 SW 1881 grids, Game 5 13-digit URL, Game 8 A9759, Game 9 grouping, Game 10 four-city cluster)", "cost": "hours", "status": "open" },
+    { "rank": 1, "title": "apply the remaining live-page mechanics (Photopea on the Game 1 PSD, Game 2 two yellow thumbnails, Game 3 SW 1881 grids, Game 5 13-digit URL, Game 8 A9759, Game 10 four-city cluster); games 9/11/7 have working readings can/airport/nice", "cost": "hours", "status": "open" },
     { "rank": 2, "title": "recover the Game 12 Drive file; the hashed page is 404 and the tweet screenshot has no Drive id; notes-to-digits once the audio is in hand", "cost": "hours", "status": "open" },
     { "rank": 3, "title": "author 8-of-12 offer on new.html is not a substitute for the 12-word on-chain oracle; use it only after eight oracle-grade words", "cost": "hours", "status": "open" }
   ],
