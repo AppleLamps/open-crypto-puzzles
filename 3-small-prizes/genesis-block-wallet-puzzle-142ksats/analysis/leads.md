@@ -19,18 +19,34 @@ as hardened BIP32 indexes.
   the question. Draft, 79 bytes:
   `Root = BIP32 seed from coinbase text directly? account = genesis nonce?`
   Shorter variant, 55 bytes: `Is root seeded by the 69-byte coinbase text, no BIP39?`
-- **Why it ranks here**: pass 1 (below, killed) exhausted the plain readings of "root" and
-  "genesis_data"; the author sells hints and has answered every one; the two most useful
-  hints cost 3,000 and 3,500 sats. One yes/no answer collapses the space to a few dozen
-  candidates.
+- **Why it ranks here**: passes 1 and 2 (below, both killed) exhausted the plain and the
+  library-specific readings of "root" and "genesis_data"; the author sells hints and has
+  answered every one; the two most useful hints cost 3,000 and 3,500 sats. One answer
+  collapses the space to a few dozen candidates. The question I would send, 78 bytes:
+  `Root = Times text as BIP32 seed? BIP39? raw key? genesis_data = BIP48 account?`
 - **What would confirm it**: any answer, checked against the oracle in seconds.
 - **What would kill it**: the author stops answering (last answer 2026-08-28 23:50 UTC), or a
   spend of the escrow by someone else.
 - **Status**: open
 
-## 2. Pass 2: library-specific root constructions
+## 2. Watch the channel
 
-- **Cost**: minutes (about 65,000 more keys on the CPU, then about 3 minutes on one GPU
+- **Cost**: minutes
+- **What it is**: before any work, re-read the escrow's transactions on an explorer. A new
+  OP_RETURN spending the author's latest change output is a new constraint; a spend of the
+  escrow ends the puzzle. The author's current change address is
+  `bc1qktf2wdszlsg4fes6mlzjxkcnhp63wnhct6gkgh` (17,200 sats, unspent on 2026-08-29); it
+  changes with every message, so follow the chain of inputs from the last author
+  transaction rather than this fixed address.
+- **Why it ranks here**: zero cost, and every hint so far reduced the space more than any
+  computation could.
+- **What would confirm it**: a new author message.
+- **What would kill it**: a spend of the escrow.
+- **Status**: open
+
+## 3. Pass 2: library-specific root constructions (killed 2026-08-29)
+
+- **Cost**: minutes (about 165,000 more keys on the CPU, then about 90 s on one GPU
   paired with the pass 1 set)
 - **What it is**: the root constructions pass 1 did not model, along the same 214 paths:
   - E, hashed roots: SHA-256, double SHA-256, hash160 and SHA-512 of each text (T, J, S and
@@ -47,22 +63,12 @@ as hardened BIP32 indexes.
   of these guesses.
 - **What would confirm it**: a MATCH from the engine, re-derived on the CPU.
 - **What would kill it**: 0 match with the witness pair re-found at head, middle and tail.
-- **Status**: open
-
-## 3. Watch the channel
-
-- **Cost**: minutes
-- **What it is**: before any work, re-read the escrow's transactions on an explorer. A new
-  OP_RETURN spending the author's latest change output is a new constraint; a spend of the
-  escrow ends the puzzle. The author's current change address is
-  `bc1qktf2wdszlsg4fes6mlzjxkcnhp63wnhct6gkgh` (17,200 sats, unspent on 2026-08-29); it
-  changes with every message, so follow the chain of inputs from the last author
-  transaction rather than this fixed address.
-- **Why it ranks here**: zero cost, and every hint so far reduced the space more than any
-  computation could.
-- **What would confirm it**: a new author message.
-- **What would kill it**: a spend of the escrow.
-- **Status**: open
+- **Result, 2026-08-29**: run with `tools/candidates.py --pass 2`: 16,548 E keys, 2,996 F
+  keys and 145,306 G keys before deduplication (70 hashed integers, 77 hashed seeds, 14 raw
+  extended keys, 680 zero-chain-code roots, 214 paths), union with pass 1 = 611,008 distinct
+  keys, 373,338,108,196 ordered pairs on the GPU, 0 match, witness pair re-found in all 9
+  combinations, 89 s. Full scope in `tested.md`.
+- **Status**: killed
 
 ## 4. Pass 1: bounded first pass over the coinbase text (killed 2026-08-29)
 

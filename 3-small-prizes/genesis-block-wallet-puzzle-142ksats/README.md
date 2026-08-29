@@ -7,9 +7,9 @@ P2WSH address, and it grows every time someone pays for a hint: the author answe
 on chain and relays every payment into the escrow. Eight author messages so far fix the
 shape of the lock (a 2-of-2 multisig, both keys from one genesis field, no hash, a field you
 can read in The Times, a derivation rule that names the BIP48 levels). The oracle is exact
-and offline. The literal readings of those hints were exhausted on 2026-08-29 (447,916 keys,
-2.0e11 ordered pairs, 0 match, witnesses re-found); what is left is the exact meaning of
-"root" and "genesis_data" in the author's rule, which one paid question would settle.
+and offline. Two passes on 2026-08-29 exhausted the mechanical readings of those hints
+(611,008 keys, 5.7e11 ordered pairs, 0 match, witnesses re-found); what is left is the exact
+meaning of "root" and "genesis_data" in the author's rule, which one paid question would settle.
 
 ## At a glance
 
@@ -25,7 +25,7 @@ and offline. The literal readings of those hints were exhausted on 2026-08-29 (4
 | Puzzle type | multisig, raw-private-key |
 | Target format | P2WSH (v0), witness script `OP_2 <keyA> <keyB> OP_2 OP_CHECKMULTISIG`, both keys derived from one genesis-block field |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the BIP-173 P2WSH vector and a real 2-of-2 spent in block 963,629) |
-| What remains | insight: the meaning of "root" and "genesis_data" in the author's rule (one paid question), plus a second cheap pass over library-specific root constructions |
+| What remains | insight: the meaning of "root" and "genesis_data" in the author's rule (one paid question); the mechanical readings are exhausted |
 | Series | none |
 
 ## The puzzle as published
@@ -157,38 +157,37 @@ positive. Measured on one CPU core: about 1,200,000 pairs/s once public keys exi
    re-found at head, middle and tail. 2.0e11 ordered pairs in 103 s on one RTX 5080,
    2026-08-29 (`analysis/tested.md`). The two 2026-08-28 hints therefore describe a
    construction with at least one step I have not modeled, most likely how "root" is built.
+8. The library-specific root constructions do not produce the keys either: hashed roots
+   (SHA-256, double SHA-256, hash160, SHA-512 of the text as key, seed or entropy), a raw
+   64-byte extended key cut from the text, and a raw key with a zero chain code, along the
+   same 214 paths, add 165,064 keys; the union of 611,008 keys paired every way gives 0
+   match, witnesses re-found, 3.7e11 ordered pairs in 89 s, 2026-08-29. "root" is therefore
+   not any standard function of the coinbase text on these paths.
 
 ## What has been tested
 
 Full ledger in [analysis/tested.md](analysis/tested.md), including the exact list of texts,
-windows, readings and derivation paths. Reproduce with `tools/candidates.py --write` (about
-15 s on 22 cores) and `engines/p2wsh_2of2_pairs` (about 2 minutes on one RTX 5080), then
+windows, readings and derivation paths. Reproduce with `tools/candidates.py --write --pass 2`
+(about 17 s on 22 cores) and `engines/p2wsh_2of2_pairs` (about 90 s on one RTX 5080), then
 `tools/candidates.py --verify` on the hits file.
 
 | Hypothesis | Space | Method | Result | Witness | Date |
 |---|---|---|---|---|---|
 | Pass 1, families A to D: literal readings of hints 7 and 8 (raw keys, BIP32 seeds, BIP39 entropy from the coinbase text and the other fields, 214 paths), every ordered pair | 447,916 keys, 200,634,118,084 ordered pairs | CPU key generation (`tools/candidates.py`), GPU pairing and SHA-256 (`engines/p2wsh_2of2_pairs.cu`), exact 32-byte compare, every hit re-derived on CPU | 0 match | yes: revealed 2-of-2 pair at head, middle and tail, 9 of 9 ordered combinations re-found, `exhausted=yes` | 2026-08-29 |
+| Pass 2, A to D plus E (hashed roots), F (raw 64-byte extended key from the text), G (raw key with zero chain code), same 214 paths, every ordered pair of the union | 611,008 keys, 373,338,108,196 ordered pairs | same pipeline, `tools/candidates.py --pass 2` | 0 match | yes: same witness protocol, 9 of 9 re-found, `exhausted=yes` | 2026-08-29 |
 
 ## Open leads, ranked
 
 1. **Ask the author one precise question on chain** (needs a person, about 5,000 to
    10,000 sats, answer within hours). A transaction with an output to the escrow and an
    OP_RETURN of at most 80 bytes, for example
-   `Root = BIP32 seed from coinbase text directly? account = genesis nonce?` (79 bytes).
-   The two 2026-08-28 hints cost 3,000 and 3,500 sats each. Pass 1 shows the plain
-   readings of "root" do not work, so this is now the main lead. What confirms it: any
-   answer, since each one is checked against the oracle in seconds. What kills it: the
-   author stops answering; the last answer was on 2026-08-28.
-2. **Pass 2: library-specific root constructions** (minutes). Three families the first
-   pass did not model: (E) hashed roots, SHA-256, double SHA-256, hash160 and SHA-512 of
-   each text used as raw key, BIP32 seed and BIP39 entropy, despite "no hash"; (F) a raw
-   extended key made of 32 key bytes and 32 chain-code bytes taken directly from the text
-   (`T[:32]` and `T[32:64]`, and the same for the scriptSig and reversed forms); (G) a raw
-   private key with a zero chain code, which is how some libraries import a bare key, for
-   every 16 to 32-byte window of the text; all along the same 214 paths, about 65,000 keys
-   more, paired with the pass 1 set, about 3 minutes on the GPU. What confirms it: a MATCH.
-   What kills it: 0 match with witnesses re-found.
-3. **Watch the channel** (minutes). Re-read the escrow's transactions before any work:
+   `Root = Times text as BIP32 seed? BIP39? raw key? genesis_data = BIP48 account?`
+   (78 bytes). The two 2026-08-28 hints cost 3,000 and 3,500 sats each. Passes 1 and 2
+   show that no standard reading of "root" works, so this is the only lead left that can
+   move the puzzle. What confirms it: any answer, since each one is checked against the
+   oracle in seconds. What kills it: the author stops answering; the last answer was on
+   2026-08-28.
+2. **Watch the channel** (minutes). Re-read the escrow's transactions before any work:
    a new OP_RETURN from the author's change chain is a new constraint; a spend closes the
    puzzle. The author's current change address (17,200 sats, unspent) is
    `bc1qktf2wdszlsg4fes6mlzjxkcnhp63wnhct6gkgh`; it moves with every message.
@@ -200,10 +199,10 @@ windows, readings and derivation paths. Reproduce with `tools/candidates.py --wr
 | `clues/author-posts.md` | every OP_RETURN of the dialogue, verbatim, with txid, block and time |
 | `data/genesis-block.hex` | the raw genesis block, 285 bytes, as served by any node or explorer |
 | `data/on-chain-dialogue.json` | the 18 escrow transactions: sender attribution, amounts, decoded OP_RETURN, fetched 2026-08-29 |
-| `analysis/tested.md` | the negatives ledger: pass 1 in full, with its exact scope |
-| `analysis/leads.md` | full notes behind the ranked leads, with family sizes |
+| `analysis/tested.md` | the negatives ledger: passes 1 and 2 in full, with their exact scope |
+| `analysis/leads.md` | full notes behind the ranked leads, with family sizes and the two killed passes |
 | `tools/oracle.py` | candidate checker: two keys to 2-of-2 P2WSH, both orders, exact match; `--selftest` |
-| `tools/candidates.py` | pass 1 key generator (families A to D, labeled), witness insertion, targets file, CPU re-derivation of GPU hits |
+| `tools/candidates.py` | key generator for passes 1 and 2 (families A to G, labeled), witness insertion, targets file, CPU re-derivation of GPU hits |
 
 ## Sources
 

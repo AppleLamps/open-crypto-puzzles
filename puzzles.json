@@ -4100,10 +4100,10 @@
         "certified_against": "the BIP-173 P2WSH test vector, and a real 2-of-2 P2WSH spent in block 963629 (tx 47ded3504e855ce418e46eeca4694b55a623d1e23a8e3c83292abbcf9cee9f7a, input 0) whose revealed keys rebuild the script and hash to the spent address; private key 1 to the generator point; negative control against the escrow"
       },
       "difficulty_left": "insight",
-      "difficulty_note": "the lock is fully characterized (2-of-2 P2WSH, exact offline oracle) and the corpus is 285 public bytes; the literal readings of the two 2026-08-28 hints (raw keys, BIP32 seeds and BIP39 entropy from the coinbase text along 214 paths including every BIP48 path with a genesis integer as account) were exhausted on 2026-08-29: 447,916 keys, 2.0e11 ordered pairs, 0 match with witnesses; what remains is the exact meaning of 'root' and 'genesis_data' in the author's derivation rule, which a paid on-chain question would settle, plus a second cheap pass over library-specific root constructions",
+      "difficulty_note": "the lock is fully characterized (2-of-2 P2WSH, exact offline oracle) and the corpus is 285 public bytes; two passes on 2026-08-29 exhausted the mechanical readings of the two 2026-08-28 hints (raw keys, BIP32 seeds, BIP39 entropy, hashed roots, raw extended keys and zero-chain-code roots from the coinbase text along 214 paths including every BIP48 path with a genesis integer as account): 611,008 keys, 5.7e11 ordered pairs in total, 0 match with witnesses; what remains is the exact meaning of 'root' and 'genesis_data' in the author's derivation rule, which a paid on-chain question would settle",
       "tested_total": {
-        "candidates": 200634118084,
-        "families": 4,
+        "candidates": 573972226280,
+        "families": 7,
         "certified": true
       },
       "leads": [
@@ -4115,15 +4115,15 @@
         },
         {
           "rank": 2,
-          "title": "pass 2: library-specific roots (raw key with zero chain code, raw 64-byte extended key, hashed roots) along the same 214 paths",
+          "title": "watch the escrow for new OP_RETURN hints or a spend before any work",
           "cost": "minutes",
           "status": "open"
         },
         {
           "rank": 3,
-          "title": "watch the escrow for new OP_RETURN hints or a spend before any work",
+          "title": "pass 2: library-specific roots (hashed roots, raw 64-byte extended key, raw key with zero chain code) along the same 214 paths",
           "cost": "minutes",
-          "status": "open"
+          "status": "killed"
         },
         {
           "rank": 4,

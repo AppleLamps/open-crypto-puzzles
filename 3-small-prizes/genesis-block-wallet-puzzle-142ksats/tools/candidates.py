@@ -12,10 +12,21 @@ Purpose:
     written as the second target.
 
 Usage:
-    python3 tools/candidates.py --count                       # exact sizes, no derivation
-    python3 tools/candidates.py --write keys.bin labels.tsv targets.hex [--procs 22]
+    python3 tools/candidates.py --count [--pass 2]            # exact sizes, no derivation
+    python3 tools/candidates.py --write keys.bin labels.tsv targets.hex [--procs 22] [--pass 2]
     ../../engines/p2wsh_2of2_pairs --keys keys.bin --targets targets.hex --out hits.txt
     python3 tools/candidates.py --verify keys.bin labels.tsv hits.txt   # re-derive every hit on CPU
+
+Pass 2 (--pass 2) adds three families on top of A to D:
+    E  hashed roots: SHA-256, double SHA-256, hash160 and SHA-512 of each text, used as a raw
+       private key, as a BIP32 seed and as BIP39 entropy (32 and 16 bytes, empty passphrase).
+    F  raw extended key: 32 key bytes and 32 chain-code bytes taken directly from the text
+       (X[:32] with X[32:64], and swapped) for T, S, their case forms and their reversed forms,
+       plus T[:32] with T[37:69].
+    G  raw private key with a zero chain code (the way some libraries import a bare key into an
+       HD object): every 16/20/24/28/32-byte window of T (big-endian, little-endian, right
+       padded), the texts modulo n, the genesis integers, the fields of at most 32 bytes.
+    All three along the same 214 paths.
 
 Families (see README, "Open leads"):
     A  raw private keys: every 1 to 32-byte window of the coinbase text T (69 bytes), the
@@ -51,7 +62,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import oracle as o  # noqa: E402
 
 from bip_utils import (  # noqa: E402
-    Bip32Slip10Secp256k1, Bip39Languages, Bip39MnemonicGenerator, Bip39SeedGenerator,
+    Bip32ChainCode, Bip32KeyData, Bip32Slip10Secp256k1, Bip39Languages, Bip39MnemonicGenerator,
+    Bip39SeedGenerator,
 )
 
 # The raw genesis block, 285 bytes, as served by any node or explorer (data/genesis-block.hex).
@@ -206,23 +218,112 @@ def _work_BC(item):
     return out
 
 
-def count() -> dict:
+def _hash160(b: bytes) -> bytes:
+    return hashlib.new("ripemd160", hashlib.sha256(b).digest()).digest()
+
+
+HASHES = {
+    "sha256": lambda b: hashlib.sha256(b).digest(),
+    "sha256d": lambda b: hashlib.sha256(hashlib.sha256(b).digest()).digest(),
+    "hash160": _hash160,
+    "sha512": lambda b: hashlib.sha512(b).digest(),
+}
+
+
+def family_E_ints():
+    for name, x in TEXTS.items():
+        for hn, hf in HASHES.items():
+            h = hf(x)
+            yield f"E:{hn}({name}):BE", int.from_bytes(h[:32], "big")
+            yield f"E:{hn}({name}):LE", int.from_bytes(h[:32][::-1], "big")
+            if len(h) == 64:
+                yield f"E:{hn}({name})[32:]:BE", int.from_bytes(h[32:], "big")
+                yield f"E:{hn}({name}):modn", int.from_bytes(h, "big") % N_SECP
+
+
+def seeds_E():
+    for name, x in TEXTS.items():
+        for hn, hf in HASHES.items():
+            h = hf(x)
+            yield f"E:{hn}({name}):seed", h
+            for L in (32, 16):
+                if L <= len(h):
+                    mn = Bip39MnemonicGenerator(Bip39Languages.ENGLISH).FromEntropy(h[:L])
+                    yield f"E:{hn}({name})[:{L}]:bip39", Bip39SeedGenerator(mn, Bip39Languages.ENGLISH).Generate("")
+
+
+def roots_F():
+    sources = {"T": T, "S": S, "Tl": T.lower(), "Tu": T.upper(), "Trev": T[::-1], "Srev": S[::-1]}
+    for name, x in sources.items():
+        yield f"F:{name}[:32]|{name}[32:64]", x[:32], x[32:64]
+        yield f"F:{name}[32:64]|{name}[:32]", x[32:64], x[:32]
+    yield "F:T[:32]|T[37:69]", T[:32], T[37:69]
+    yield "F:T[37:69]|T[:32]", T[37:69], T[:32]
+
+
+def roots_G():
+    zero = b"\0" * 32
+    for s, L, c in windows(T, (16, 20, 24, 28, 32)):
+        yield f"G:T[{s}:{s+L}]:BE|cc0", int.from_bytes(c, "big").to_bytes(32, "big"), zero
+        yield f"G:T[{s}:{s+L}]:LE|cc0", int.from_bytes(c, "little").to_bytes(32, "big"), zero
+        if L < 32:
+            yield f"G:T[{s}:{s+L}]:BEpadR|cc0", c + b"\0" * (32 - L), zero
+    for name, x in (("T", T), ("J", J), ("S", S)):
+        yield f"G:{name}:modn|cc0", (int.from_bytes(x, "big") % N_SECP).to_bytes(32, "big"), zero
+    for a in G:
+        yield f"G:G:{a}|cc0", a.to_bytes(32, "big"), zero
+    for name, c in FIELDS.items():
+        if len(c) <= 32:
+            yield f"G:D:{name}:BE|cc0", int.from_bytes(c, "big").to_bytes(32, "big"), zero
+
+
+def _work_root(item):
+    label, priv, cc = item
+    d = int.from_bytes(priv, "big")
+    if not 1 <= d < N_SECP:
+        return []
+    out = []
+    try:
+        root = Bip32Slip10Secp256k1.FromPrivateKey(priv, Bip32KeyData(chain_code=Bip32ChainCode(cc)))
+    except Exception as exc:  # noqa: BLE001
+        return [(f"{label}:ERROR:{type(exc).__name__}", None)]
+    for p in PATHS:
+        try:
+            node = root if p == "m" else root.DerivePath(p)
+            out.append((f"{label}:{p}", node.PublicKey().RawCompressed().ToBytes()))
+        except Exception as exc:  # noqa: BLE001
+            out.append((f"{label}:{p}:ERROR:{type(exc).__name__}", None))
+    return out
+
+
+def count(pass_no: int = 1) -> dict:
     nA = sum(1 for _ in family_A_ints())
     nB = sum(1 for _ in seeds_B())
     nC = sum(1 for _ in seeds_C())
-    return {"A_integers": nA, "B_seeds": nB, "C_seeds": nC, "paths": len(PATHS),
-            "B_keys": nB * len(PATHS), "C_keys": nC * len(PATHS)}
+    out = {"A_integers": nA, "B_seeds": nB, "C_seeds": nC, "paths": len(PATHS),
+           "B_keys": nB * len(PATHS), "C_keys": nC * len(PATHS)}
+    if pass_no >= 2:
+        nE, nEs, nF, nG = (sum(1 for _ in family_E_ints()), sum(1 for _ in seeds_E()),
+                           sum(1 for _ in roots_F()), sum(1 for _ in roots_G()))
+        out.update({"E_integers": nE, "E_seeds": nEs, "F_roots": nF, "G_roots": nG,
+                    "EFG_keys": nE + (nEs + nF + nG) * len(PATHS)})
+    return out
 
 
-def generate(procs: int):
+def generate(procs: int, pass_no: int = 1):
     t0 = time.time()
     with Pool(procs) as pool:
         A = [kv for lst in pool.imap_unordered(_work_A, list(family_A_ints()), chunksize=256) for kv in lst]
         B = [kv for lst in pool.imap_unordered(_work_BC, list(seeds_B()), chunksize=4) for kv in lst]
         C = [kv for lst in pool.imap_unordered(_work_BC, list(seeds_C()), chunksize=4) for kv in lst]
+        EFG = []
+        if pass_no >= 2:
+            EFG += [kv for lst in pool.imap_unordered(_work_A, list(family_E_ints()), chunksize=8) for kv in lst]
+            EFG += [kv for lst in pool.imap_unordered(_work_BC, list(seeds_E()), chunksize=2) for kv in lst]
+            EFG += [kv for lst in pool.imap_unordered(_work_root, list(roots_F()) + list(roots_G()), chunksize=2) for kv in lst]
     keys: dict[bytes, list[str]] = {}
     errors = 0
-    for label, pk in A + B + C:
+    for label, pk in A + B + C + EFG:
         if pk is None:
             errors += 1
             continue
@@ -281,12 +382,13 @@ def main() -> int:
     ap.add_argument("--write", nargs=3, metavar=("keys.bin", "labels.tsv", "targets.hex"))
     ap.add_argument("--verify", nargs=3, metavar=("keys.bin", "labels.tsv", "hits.txt"))
     ap.add_argument("--procs", type=int, default=max(1, (os.cpu_count() or 2) - 2))
+    ap.add_argument("--pass", dest="pass_no", type=int, default=1, help="1 = families A to D, 2 = plus E, F, G")
     a = ap.parse_args()
     if a.count:
-        for k, v in count().items():
+        for k, v in count(a.pass_no).items():
             print(f"{k:12} {v:,}")
     if a.write:
-        keys, errors, secs = generate(a.procs)
+        keys, errors, secs = generate(a.procs, a.pass_no)
         n, digest = write(keys, Path(a.write[0]), Path(a.write[1]), Path(a.write[2]))
         print(f"{len(keys):,} distinct keys in {secs:.1f} s ({errors} derivation errors); "
               f"{n:,} records written incl. 6 witness copies; sha256 {digest}")
