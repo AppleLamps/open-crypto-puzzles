@@ -4099,24 +4099,24 @@
         "oracle_certified": true,
         "certified_against": "the BIP-173 P2WSH test vector, and a real 2-of-2 P2WSH spent in block 963629 (tx 47ded3504e855ce418e46eeca4694b55a623d1e23a8e3c83292abbcf9cee9f7a, input 0) whose revealed keys rebuild the script and hash to the spent address; private key 1 to the generator point; negative control against the escrow"
       },
-      "difficulty_left": "bounded-compute",
-      "difficulty_note": "the lock is fully characterized (2-of-2 P2WSH, exact offline oracle) and the corpus is 285 public bytes; the literal readings of the two 2026-08-28 hints give four bounded families of about 55,000 keys in total, under 15 minutes on one CPU, none run yet; if they all fail the next step is a paid on-chain question to the author, who has answered every one within hours",
+      "difficulty_left": "insight",
+      "difficulty_note": "the lock is fully characterized (2-of-2 P2WSH, exact offline oracle) and the corpus is 285 public bytes; the literal readings of the two 2026-08-28 hints (raw keys, BIP32 seeds and BIP39 entropy from the coinbase text along 214 paths including every BIP48 path with a genesis integer as account) were exhausted on 2026-08-29: 447,916 keys, 2.0e11 ordered pairs, 0 match with witnesses; what remains is the exact meaning of 'root' and 'genesis_data' in the author's derivation rule, which a paid on-chain question would settle, plus a second cheap pass over library-specific root constructions",
       "tested_total": {
-        "candidates": 0,
-        "families": 0,
-        "certified": false
+        "candidates": 200634118084,
+        "families": 4,
+        "certified": true
       },
       "leads": [
         {
           "rank": 1,
-          "title": "bounded first pass over the coinbase text: raw keys, BIP32 seeds with BIP48 paths, BIP39 entropy windows, other fields",
-          "cost": "minutes",
+          "title": "ask the author one precise question on chain about 'root' and 'genesis_data' (about 5,000 to 10,000 sats)",
+          "cost": "needs-a-person",
           "status": "open"
         },
         {
           "rank": 2,
-          "title": "ask the author one precise question on chain (about 5,000 to 10,000 sats)",
-          "cost": "needs-a-person",
+          "title": "pass 2: library-specific roots (raw key with zero chain code, raw 64-byte extended key, hashed roots) along the same 214 paths",
+          "cost": "minutes",
           "status": "open"
         },
         {
@@ -4124,6 +4124,12 @@
           "title": "watch the escrow for new OP_RETURN hints or a spend before any work",
           "cost": "minutes",
           "status": "open"
+        },
+        {
+          "rank": 4,
+          "title": "pass 1: literal readings of the 2026-08-28 hints, families A to D",
+          "cost": "minutes",
+          "status": "killed"
         }
       ],
       "solutions": [],

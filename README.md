@@ -112,7 +112,7 @@ grouped by prize, is in the tables below.
 | Puzzle | Prize | USD | Chain | Type | What remains | Escrow checked | Status |
 |---|---|---|---|---|---|---|---|
 | [Crypto Puzzles 2018: Puzzle #2](3-small-prizes/crypto-puzzles-2018-puzzle-2-0-05eth/) | 0.05 ETH | 94 | ethereum | raw-private-key, image-stego, video-series | external-info | 2026-08-16 | open |
-| [Genesis Block Wallet Puzzle](3-small-prizes/genesis-block-wallet-puzzle-142ksats/) | 142,779 sats | 90 | bitcoin | multisig, raw-private-key | bounded-compute | 2026-08-29 | open |
+| [Genesis Block Wallet Puzzle](3-small-prizes/genesis-block-wallet-puzzle-142ksats/) | 142,779 sats | 90 | bitcoin | multisig, raw-private-key | insight | 2026-08-29 | open |
 | [Bitcoin Movie Enigma](3-small-prizes/bitcoin-movie-enigma-100ksats/) | 100,000 sats | 63 | bitcoin | bip39-seed, text-cipher, word-selection | insight | 2026-08-16 | open |
 | [Exitonly Bitcoin Challenge 14](3-small-prizes/exitonly-challenge-14-30ksats/) | 30,000 sats | 18.90 | bitcoin | bip39-seed, word-selection | uneconomic | 2026-08-16 | open |
 

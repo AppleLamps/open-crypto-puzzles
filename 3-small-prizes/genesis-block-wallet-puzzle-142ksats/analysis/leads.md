@@ -10,9 +10,63 @@ S the full 77-byte scriptSig, and G the set of genesis integers {nonce 208323689
 1231006505, bits 486604799, version 1, height 0, 2, 3, 2009, 50}, all under 2^31 and so valid
 as hardened BIP32 indexes.
 
-## 1. Bounded first pass over the coinbase text
+## 1. Ask the author one precise question on chain
 
-- **Cost**: minutes (one CPU, no GPU needed)
+- **Cost**: needs a person; about 5,000 to 10,000 sats plus fees; answer within hours (every
+  paid question so far was answered in 1 to 10 hours)
+- **What it is**: a transaction with one output to the escrow (or to the author's current
+  change address, which the author then relays) and one OP_RETURN of at most 80 bytes with
+  the question. Draft, 79 bytes:
+  `Root = BIP32 seed from coinbase text directly? account = genesis nonce?`
+  Shorter variant, 55 bytes: `Is root seeded by the 69-byte coinbase text, no BIP39?`
+- **Why it ranks here**: pass 1 (below, killed) exhausted the plain readings of "root" and
+  "genesis_data"; the author sells hints and has answered every one; the two most useful
+  hints cost 3,000 and 3,500 sats. One yes/no answer collapses the space to a few dozen
+  candidates.
+- **What would confirm it**: any answer, checked against the oracle in seconds.
+- **What would kill it**: the author stops answering (last answer 2026-08-28 23:50 UTC), or a
+  spend of the escrow by someone else.
+- **Status**: open
+
+## 2. Pass 2: library-specific root constructions
+
+- **Cost**: minutes (about 65,000 more keys on the CPU, then about 3 minutes on one GPU
+  paired with the pass 1 set)
+- **What it is**: the root constructions pass 1 did not model, along the same 214 paths:
+  - E, hashed roots: SHA-256, double SHA-256, hash160 and SHA-512 of each text (T, J, S and
+    their case forms) used as a raw private key, as a BIP32 seed and as BIP39 entropy. The
+    author said "no hash", but the cost is a few thousand keys.
+  - F, raw extended key: 32 key bytes and 32 chain-code bytes taken directly from the text
+    (`T[:32]` with `T[32:64]`, `S[:32]` with `S[32:64]`, the reversed forms, and the two
+    halves swapped), which is a "no hash, no backup" reading of a 64-byte master key.
+  - G, raw private key with a zero chain code, the way some libraries import a bare 32-byte
+    key into an HD wallet object, for every 16 to 32-byte window of T (padded as in family A).
+- **Why it ranks here**: cheap, and it is the only remaining mechanical reading of "root ->
+  multisig -> mainnet -> genesis_data -> script_type" that keeps "genesis_data" at the account
+  level; it ranks below lead 1 because a single answer from the author is worth more than any
+  of these guesses.
+- **What would confirm it**: a MATCH from the engine, re-derived on the CPU.
+- **What would kill it**: 0 match with the witness pair re-found at head, middle and tail.
+- **Status**: open
+
+## 3. Watch the channel
+
+- **Cost**: minutes
+- **What it is**: before any work, re-read the escrow's transactions on an explorer. A new
+  OP_RETURN spending the author's latest change output is a new constraint; a spend of the
+  escrow ends the puzzle. The author's current change address is
+  `bc1qktf2wdszlsg4fes6mlzjxkcnhp63wnhct6gkgh` (17,200 sats, unspent on 2026-08-29); it
+  changes with every message, so follow the chain of inputs from the last author
+  transaction rather than this fixed address.
+- **Why it ranks here**: zero cost, and every hint so far reduced the space more than any
+  computation could.
+- **What would confirm it**: a new author message.
+- **What would kill it**: a spend of the escrow.
+- **Status**: open
+
+## 4. Pass 1: bounded first pass over the coinbase text (killed 2026-08-29)
+
+- **Cost**: minutes
 - **What it is**: the literal readings of the two 2026-08-28 hints, enumerated. Four families:
   - A, raw private keys: every window of 1 to 32 bytes of T, J and S, read as a big-endian
     integer, as a little-endian integer, left-padded and right-padded to 32 bytes, with
@@ -37,38 +91,10 @@ as hardened BIP32 indexes.
   -> script_type" is the BIP48 level order with a genesis value in the account slot.
 - **What would confirm it**: a MATCH from `tools/oracle.py`.
 - **What would kill it**: 0 match with the witness re-found at head, middle and tail of each
-  family. That closes the literal readings and hands the problem to lead 2; it does not close
-  the puzzle, since "root" may be built by a library step I have not modeled.
-- **Status**: open
-
-## 2. Ask the author one precise question on chain
-
-- **Cost**: needs a person; about 5,000 to 10,000 sats plus fees; answer within hours (every
-  paid question so far was answered in 1 to 10 hours)
-- **What it is**: a transaction with one output to the escrow (or to the author's current
-  change address, which the author then relays) and one OP_RETURN of at most 80 bytes with
-  the question. Draft, 79 bytes:
-  `Root = BIP32 seed from coinbase text directly? account = genesis nonce?`
-  Shorter variant, 55 bytes: `Is root seeded by the 69-byte coinbase text, no BIP39?`
-- **Why it ranks here**: the author sells hints and has answered every one; the two most
-  useful hints cost 3,000 and 3,500 sats. One yes/no answer collapses families B and C to a
-  few dozen candidates. It ranks second only because lead 1 is free and may make it moot.
-- **What would confirm it**: any answer, checked against the oracle in seconds.
-- **What would kill it**: the author stops answering (last answer 2026-08-28 23:50 UTC), or a
-  spend of the escrow by someone else.
-- **Status**: open
-
-## 3. Watch the channel
-
-- **Cost**: minutes
-- **What it is**: before any work, re-read the escrow's transactions on an explorer. A new
-  OP_RETURN spending the author's latest change output is a new constraint; a spend of the
-  escrow ends the puzzle. The author's current change address is
-  `bc1qktf2wdszlsg4fes6mlzjxkcnhp63wnhct6gkgh` (17,200 sats, unspent on 2026-08-29); it
-  changes with every message, so follow the chain of inputs from the last author
-  transaction rather than this fixed address.
-- **Why it ranks here**: zero cost, and every hint so far reduced the space more than any
-  computation could.
-- **What would confirm it**: a new author message.
-- **What would kill it**: a spend of the escrow.
-- **Status**: open
+  family.
+- **Result, 2026-08-29**: run as described, with the four families merged into one key set of
+  447,916 distinct public keys (the sizes above were estimates; the exact counts are 36,816
+  raw integers, 1,370 BIP32 seeds and 2,730 BIP39 seeds along 214 paths, deduplicated) and
+  every ordered pair checked on the GPU: 200,634,118,084 pairs, 0 match, the witness pair
+  re-found in all 9 head/middle/tail combinations, 103 s. Full scope in `tested.md`.
+- **Status**: killed (the literal readings are closed; the puzzle is not)
