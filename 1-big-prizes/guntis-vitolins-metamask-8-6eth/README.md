@@ -169,9 +169,10 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | Likelihood-ratio closure of the 6-plus-6 word budget | 91,865 candidates | same | 0 match | not recorded | before 2026-08-15 |
 | Complete reading-order model over the full recovered 2020 text and metadata, 3 anchors fixed, `fork` free | 10,484,919 derivations (of 167,688,000 arrangements, matching a closed form) | closed-form count, then checksum, then address compare | 0 match | yes: 1,062 planted and recovered, 0 disagreements between 2 engines | 2026-08-20 |
 | The same reading-order model extended to substrings of longer words | 582,725 derivations (of 9,334,500 arrangements) | same | 0 match | yes | 2026-08-20 |
+| Pool extended with short connecting words from the planted texts, fog-only, `fiber`+`fork` required | 18,657,475,200 derivations (of 298.5 billion enumerated) | checksum-aware CUDA engine (`engines/`) on a rented L40S, per-chunk witness protocol | 0 match | yes: 2 planted candidates recovered in every one of 412 chunks | 2026-08-23 |
 
-Cumulative: approximately 16.75 billion candidate derivations tested across
-the 6 metadata-era sweeps, all negative and individually witnessed, plus
+Cumulative: approximately 35.4 billion candidate derivations tested across
+the metadata-era sweeps, all negative and individually witnessed, plus
 roughly 5.6 million candidates from earlier, smaller sweeps, plus the 11.07
 million derivations of the 2 reading-order sweeps above. Full method notes are
 in `analysis/tested.md`.
@@ -200,12 +201,12 @@ word identification and re-orders the leads below.
    written surface. Confirmed by a legible dictionary word absent from the known
    pool; killed by a complete frame read yielding nothing new, which unlike a
    prose re-read is a real exhaustion point.
-2. **Extend the word pool with connecting words** (hours on 1 rented GPU).
-   Every sweep so far draws non-anchor words from full content words; short
+2. **KILLED 2026-08-23: extend the word pool with connecting words.** Every
+   sweep before this drew non-anchor words from full content words; short
    connecting words from the same sentences ("there", "will", "also", "only",
-   "because", "like", and similar) have not been included. About 1.36x10^10
-   derivations. Confirmed by a match in the extended pool; killed by exhausting
-   it with none, under the same witness protocol as every prior sweep.
+   "because", "like", and similar) were not included. Executed as sweep C1
+   (`analysis/tested.md`): 18,657,475,200 checksum-valid derivations, fog-only,
+   per-chunk witness protocol, 0 match. This lead is closed.
 3. **Re-check the already-enumerated survivors on other derivation paths**
    (about 4 hours on 2 CPU cores, seconds on a GPU). Every sweep here derives
    only `m/44'/60'/0'/0/0`. If the escrow is the second account of the same

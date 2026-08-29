@@ -21,9 +21,20 @@ not as a certified-exhaustive sweep of each corpus.
 | Canonical-source exact windows (Bitcoin whitepaper, KryptoKit press release, John Donne's "Meditation XVII", the genesis-block text, name masks, repetition masks), case and punctuation preserved | 1,959,326 candidates | 0 match | 2026 (round 2) |
 | Song lyrics, most-viewed 301,000-song slice of a genius-song-lyrics corpus | 12,000,079 lines to 52,299,649 candidates | 0 match | 2026 (round 3) |
 | OCR text from video frames (original, RuTube, HQ and 720p sources) plus 20 community guesses from the BitcoinTalk thread | about 1,588 OCR lines plus 20 guesses, about 501,600 to 509,399 candidates with variants | 0 match | 2026 (round 3) |
+| Quotes-500K corpus (huggingface `jstet/quotes-500k`, 499,709 quotes), 5 case variants (as-is, lower, UPPER, Title, capitalized-first) plus surface normalizations (strip, unquote, trailing-punctuation removal, attribution-dash removal, crossed with case variants) | 499,709 lines to 3,376,547 candidates | 0 match | 2026-08-22 (round 4) |
 
 Cumulative: about 95 million candidates across the rounds above, `FOUND` list empty every
 time.
+
+Round 4 note (2026-08-22): unlike rounds 1-3, this round is WITNESSED. A fast sweeper
+(`work-rushwallet30/fast_sweep.py`, coincurve + pycryptodome, h160 byte-compare) was first
+validated against all three certification vectors plus the negative control, then the three
+public sibling passphrases were planted at head, middle and tail of the actual stream and
+all three were recovered through the same code path during the run (2.0M candidates in the
+case-variant pass at ~103k/s on 12 cores; 3.38M cumulative with the normalization pass).
+This upgrades the round-4 negative from "candidates consumed" to a certified exhaustive
+sweep of the corpus-as-dumped, modulo the standard caveat that the corpus file replaces
+embedded newlines with spaces.
 
 ## Media channels checked, not brute-forced
 
@@ -47,3 +58,15 @@ time.
   not prime (unlike the real Cicada 3301 group's own use of 3301, which is), and an
   associated image circulated with this material was found to be fabricated. Treated as
   contest flavor, not a channel to search.
+| Full genius-song-lyrics corpus tail plus re-test of the top slice (`Dr3dre/Genius-song-lyrics-cleaned`, about 5.1M songs; English-language filter, per-song line dedupe), case variants plus surface normalizations, checksum-free GPU brainwallet engine | 149,913,074 lyric lines from 3,374,198 English songs to 456,693,751 candidates | 0 match | 2026-08-23 (round 5) |
+
+Round 5 note (2026-08-23): witnessed at both levels. Before the run, the GPU checker
+(`engines/secp256k1_hash160_engine.cu`, stream mode) passed its built-in selftest (the
+same 2 public sibling passphrases, through the identical kernel path used for candidates)
+and an end-to-end positive control: with the target overridden to a known witness's
+hash160, feeding that witness produced a MATCH. Coverage is proven by counter equality:
+the engine consumed exactly the 456,693,751 candidates fed, on one rented L40S at a
+sustained 13.78M/s (about $0.50). Scope limits, counted rather than hidden: 1,095,140
+lyric lines longer than the engine's 180-byte input limit were skipped and counted;
+non-English songs (about 11 percent of the corpus) were excluded by the dataset's
+language field; duplicate lines within a song were collapsed before expansion.

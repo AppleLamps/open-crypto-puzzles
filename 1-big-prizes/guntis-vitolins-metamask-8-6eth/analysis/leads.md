@@ -169,3 +169,16 @@ author's own reply that the challenge text carries the exact word points the
 same way: a hint may gloss, the text does not. `cloud` remains worth a glance
 during lead 1, because on-screen text is the one channel that could still
 produce it, and if it does appear there this retirement should be reopened.
+
+## Community corrections: R1 pool provenance (issue #10)
+
+HPreziosa (issue #10) grepped the 2020 Wayback captures of the video and blog
+and found three R1 pool words mis-sourced: `top` and `finish` are in the blog
+body and video description, not the video title as the ledger's "title and hook
+line" row said (`finish` only as the inflection `finished`), and `cloud` appears
+in no authored 2020 surface. Verified against the archives on 2026-08-21
+(Wayback `20200626184951` of the video, `20201026062858` of the blog). Result:
+`top` and `finish` stay in the pool but are re-sourced, and `cloud` is dropped as
+a candidate because only `fog` appears in a written 2020 surface. This is what
+settles position 5 as `fog` (see "Retired: position 5 is settled" above) and it
+is the basis for `cloud` being dropped in sweep C1.
