@@ -11,34 +11,41 @@
 # were not reconciled before this folder was written; see analysis/leads.md.
 # Sources: docs/ident_01_09.md, ident_10_18.md, ident_19_26.md, ident_27_34.md,
 # audit_identifications.md, ident_finales.md, ident_fable.md (private research notes).
+# 2026-08-29: the nine panels that diverged from the issue #9 community list (3, 5, 9,
+# 13, 16, 23, 24, 27) are set here to that consensus, credited to deviceio121, SmallCakekoo,
+# couldes and timothy-barus in issue #9; their sourced frames are linked in analysis/leads.md.
+# Panel 11 (Godzilla) and 34 (The Human Centipede) came from the same thread. Panel 14 is the
+# one I did not adopt: the community sourced it from an Instagram reel and flagged it as their
+# least sure, and the frame reads as the Eyes Wide Shut masked ball, not The Man in the Iron
+# Mask, so it stays Eyes Wide Shut (words eye/wide, not iron/mask/man) pending a re-look.
 panel,title,mpaa,confidence,candidate_bip39_words
 1,Die Hard,R,confirmed,hard
 2,Paths of Glory,APPROVED,confirmed,glory;path
-3,Alien,R,confirmed,alien
+3,Aliens,R,confirmed-community,alien
 4,Mad Max,R,confirmed,mad
-5,Star Trek: The Motion Picture,G,probable,motion;picture
+5,Alien,R,confirmed-community,alien
 6,Apocalypse Now,R,confirmed,now
 7,Escape from Alcatraz,PG,confirmed,escape
 8,The Goonies,PG,probable,none
-9,Duel in the Sun,APPROVED,confirmed,sun
+9,Spartacus,PG-13,confirmed-community,art
 10,Mission: Impossible,PG-13,confirmed,miss;possible
 11,Godzilla,PG-13,confirmed-community,ill
 12,Life of Pi,PG,confirmed,life
-13,Goodfellas,R,confirmed,good
-14,Eyes Wide Shut,R,confirmed,eye;wide
+13,Leon: The Professional,R,confirmed-community,none
+14,Eyes Wide Shut,R,disputed,eye;wide
 15,The Crimson Rivers,R,confirmed,river
-16,The 13th Warrior,R,probable,warrior
+16,The Visitors,R,confirmed-community,visit
 17,A Clockwork Orange,R,confirmed,clock;orange;range;work
 18,Star Wars: A New Hope,PG,confirmed,hope
 19,Gravity,PG-13,confirmed,gravity
 20,First Man,PG-13,probable,first;man
 21,Solaris,PG-13,probable,solar
 22,Blade Runner 2049,R,confirmed,blade
-23,Valerian and the City of a Thousand Planets,PG-13,confirmed,city;planet;sand
-24,Ordinary People,R,probable,ordinary;people
+23,Guardians of the Galaxy,PG-13,confirmed-community,galaxy;guard
+24,Close Encounters of the Third Kind,PG,confirmed-community,close;kind
 25,Barry Lyndon,PG,confirmed,none
 26,Sharknado,TV-14,probable,none
-27,The Lost Boys,R,uncertain,boy
+27,Terminator 2: Judgment Day,R,confirmed-community,day;term
 28,Scream 2,R,confirmed,cream
 29,The Matrix Reloaded,R,probable,matrix
 30,Toy Story 2,G,confirmed-community,story;toy

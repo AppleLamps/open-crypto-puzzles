@@ -81,3 +81,31 @@ counted per candidate word against the full BIP39 wordlist. This measurement rul
 out "every title contains exactly one obvious word" as the full rule (4 titles have
 none, several have more than one), but does not by itself say which of several
 candidate words is the intended one, or what the rule is for the 4 titles with none.
+
+## Community metadata-rule sweeps (issue #9, 2026-08-22 to 2026-08-23)
+
+Contributed in issue #9 and recorded here as reported by the runners, not re-run by me.
+They test the intruder criterion under the community film list, so a match would need both
+that list and the rule to be right at once.
+
+timothy-barus: every intruder predicate expressible from IMDb metadata that selects exactly
+10 of the 34 panels, three of which leave at most two panels wordless and so are fully
+coverable with 2048-word wildcards. Three rules swept exhaustively (shares a release year,
+released 2000 or later, ten shortest by runtime): 314,069,483,520 raw candidates,
+1,226,826,312 checksum-valid seeds, derived at BIP84 m/84'/0'/0'/0/{0,1,2} and matched
+against the escrow hash160. Witnessed: GPU reproduces the CPU reference byte for byte, three
+planted witness mnemonics recovered from head, middle and tail, checksum rate within 0.6
+sigma of raw/256. Result: 0 match.
+
+SmallCakekoo: 25 single-field IMDb boolean criteria cross-tested pairwise with AND/OR, 600
+combinations, 17 of which produce an exact 10-panel split; all 17 run through full derivation
+and address check, 0 match. Separately, an IMDb-connections hypothesis (30 documented
+cross-references among the 34 films, exactly 10 films with zero in-set connections) tested two
+ways: 1,828,915,200 candidates over every sourced IMDb-keyword word for the titles with no
+literal BIP39 substring, and all 131,128,140 ways to choose which 10 of 34 to drop under one
+fixed word per panel. Result: 0 match in either.
+
+Standing after these: every clean IMDb-metadata rule that leaves at most two panels wordless
+has been swept and is empty. The open problem is the title-to-word rule for the three titles
+that yield no BIP39 word under the community list (The Goonies, Leon, Sharknado), which is a
+reading question, not a compute one. See leads.md.

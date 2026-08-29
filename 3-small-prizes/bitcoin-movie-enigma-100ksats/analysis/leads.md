@@ -6,41 +6,33 @@ field), not computational: once the 34 words and the intruder rule are both know
 checking a candidate is a single `tools/oracle.py` call, and searching every way to
 drop 10 of 34 words is bounded (see the oracle's docstring for the timing).
 
-## 1. Identify panel #11
+## 1. Resolved: panels 11 and 34, and the nine disputed panels (issue #9)
 
-Panel #11 remains unidentified. The still shows what appear to be "Bumble Bee"
-branded boxes partly buried in sand; a Nutrition Facts label visible on the
-packaging dates the scene to sometime after about 1994 (that label format was not
-in use before then), which is the only anchor found so far.
+Panel #11 (Godzilla) and panel #34 (The Human Centipede, First Sequence) are settled by the
+issue #9 community pass, and the nine panels that diverged from my earlier list (3, 5, 9, 13,
+16, 23, 24, 27) are now set to that consensus in `data/films.csv`. Sourced frames from the
+thread, contributed by SmallCakekoo:
 
-What would confirm it: a film or scene search using the "Bumble Bee" branding and
-the sand/beach setting, cross-checked against the post-1994 date constraint.
-What would kill it: this lead has no natural end state; it stays open until a title
-is identified with enough confidence to add to `data/films.csv`.
-Cost: needs a person to search image and film databases; no compute cost.
+- 3 Aliens, 5 Alien (colonial-marines and Nostromo frames)
+- 9 Spartacus, 13 Leon: The Professional
+- 16 The Visitors, 23 Guardians of the Galaxy, 24 Close Encounters of the Third Kind
+- 27 Terminator 2: Judgment Day
 
-## 2. Reconcile panel #34's identity
+One panel I did not adopt: **panel 14**. The thread sourced it from an Instagram reel and
+flagged that as its least sure source, and the frame reads as the Eyes Wide Shut masked ball,
+gold Venetian masks, not The Man in the Iron Mask. It stays Eyes Wide Shut (words eye/wide,
+not iron/mask/man) until a second look settles it. This is the one identification still worth
+re-checking frame to frame.
 
-Two different identification sessions in my private research reached different
-conclusions for panel #34, and I have not reconciled them. One pass concluded
-"Dead Ringers" at probable confidence. A separate, later pass concluded "The Human
-Centipede (First Sequence)" (2009) at a higher confidence, based on a reverse image
-search on a tightly cropped region of the panel (avoiding whichever visual element
-had caused the first pass's candidate to be rejected) returning a consistent
-character-level tag across 2 independent crops of the same panel, plus an MPAA
-certificate number matching a 2009 R-rated release. I am presenting this as an open
-question rather than picking one, since the two sessions were not run against each
-other side by side before this folder was written.
+What would kill the panel-14 flag: a frame match confirming either film. Cost: one person, minutes.
 
-What would confirm either: re-running the reverse-image-search method documented in
-this folder's mechanism notes on fresh crops of the panel, or any other independent
-identification method, and checking whether it reproduces one candidate and not the
-other.
-What would kill either: a definitive identification ruling one candidate out
-entirely (for instance, a visual element in the panel that cannot appear in one of
-the two films).
-Cost: needs a person, likely under an hour given the identification methods already
-documented in this folder.
+## 2. The IMDb subtitle and AKA question (issue #9)
+
+couldes raised that IMDb pages differ by region, some carrying film subtitles. The word step
+reads from the film, so a region-specific subtitle is not in the search space by default. The
+alternate release titles (AKAs) matter only for the titles that yield no BIP39 word (The
+Goonies, Sharknado, Raiders), where an alternate title could carry one. No confirmed channel
+to the author exists to ask directly.
 
 ## 3. The title-to-word rule for titles with no literal BIP39 word
 
