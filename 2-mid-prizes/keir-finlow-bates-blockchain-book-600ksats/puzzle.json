@@ -171,10 +171,10 @@
     "certified_against": "EN_easy_1 (answer '221B Baker Street'), EN_easy_2 (answer '9781688289970', the paperback ISBN) and IT_hard (answer 'Genova Firenze Bologna Brindisi'), all reproduced byte for byte; hex-string chaining with and without newline covered with a planted witness"
   },
   "difficulty_left": "human-action",
-  "difficulty_note": "the sha256x3 transform is confirmed on three lots; the ebook-accessible text and figures of both editions are exhausted across every mechanism tested (about 8,400 answer strings, 800,800 ISBN add-on forms and 34.4e9 proof-of-work nonces, 0 match); the EN_easy_2 answer is the paperback ISBN, a string printed only on the physical book, so the missing element for the 3 open lots is most likely on the physical KDP paperback or the Lulu hardcover, neither of which I have examined",
+  "difficulty_note": "the sha256x3 transform is confirmed on three lots; the ebook-accessible text and figures of both editions are exhausted across every mechanism tested (about 9,600 answer strings, 694,000 page-number forms, 800,800 ISBN add-on forms and 34.4e9 proof-of-work nonces, 0 match); the EN_easy_2 answer is the paperback ISBN, printed on the physical copyright page and nowhere in the ebook, and every print surface reachable through Amazon's public sample reader (4 editions) is null, so the missing element for the 3 open lots, if physical, sits in the unseen interior of the printed book",
   "tested_total": {
-    "candidates": 8400,
-    "families": 12,
+    "candidates": 9600,
+    "families": 16,
     "certified": true
   },
   "leads": [

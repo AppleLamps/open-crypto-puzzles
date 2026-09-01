@@ -15,10 +15,15 @@ the full notes behind each entry.
   hands... as long as you have a physical copy, that is", an instruction rather than a
   joke. Two physical English editions exist: the KDP paperback (ISBN 9781688289970, 321
   pages, 5.5 x 8.5 inches, published 2020-12-02) and the Lulu hardcover (ISBN
-  9781716479724, listed on Open Library); the Kindle edition reports 339 pages, so its
-  page numbers likely follow the hardcover layout, not the paperback. I have examined
-  neither physical edition. Every physical string I could reach without the object
-  (ISBN formats and price add-ons, back-cover text, URLs, dates, dimensions) is null.
+  9781716479724, 322 pages on Amazon), plus a 2023 KDP hardcover (ISBN 9798394360602,
+  321 pages) and a 2025 "Limited Indexed Edition" (ISBN 9798265632500, 330 pages). The
+  Kindle edition reports 339 pages, which matches none of them, so the Kindle page
+  numbers are an Amazon estimate. Through Amazon's public sample reader I have read the
+  paperback's pages 1 to 8 (the copyright page prints the ISBN, the table of contents
+  gives the full print pagination), its About the Author page and back cover, the same
+  pages of the 2023 hardcover, pages 1 to 20 and the index of the 2025 edition, and pages
+  1 to 10 of the Italian paperback; every string on them is null, as are all page numbers
+  and page pairs. The unseen part of the physical object is the interior, pages 9 to 320.
   A used copy from the original print run is preferable to a fresh print-on-demand
   reprint: on the IT side, a planted flaw is known to have moved between printings.
 - **Why it ranks here**: it is the only lead grounded in a confirmed answer of the same

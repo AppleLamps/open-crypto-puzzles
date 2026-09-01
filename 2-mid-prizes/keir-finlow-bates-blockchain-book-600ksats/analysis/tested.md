@@ -25,8 +25,14 @@ row.
 | EN "three times" winks (the Passwords chapter sentence repeated three times, the Snark line, Three Chords, the grandfather's axe), Lexington 125 address forms, Italian forms of "221B Baker Street", Figure 5 story strings, the DIY truth-table words, planted block heights 74,638 and 252,450 as block hashes, merkle roots and timestamps, the Merkle patent number, the mugshot data | about 800 strings | full extended oracle | 0 match | yes: 221B and ISBN re-found in the same runs | 2026-09-01 |
 | Italian figure calques: the Italian Kindle Figure 9 bitmap re-extracted at pixel level (0 ambiguous cells), Figure 10 hash rows and Figure 17 key examples read from the page captures | 3 figures | pixel comparison, then the bitmap enumeration used for EN_medium_s | identical to the English edition; the Italian grid re-derives EN_medium_s with the same missing bits | yes: EN_medium_s re-found from the Italian capture | 2026-09-01 |
 
-Cumulative across the rows above: approximately 8,400 answer strings, 800,800 ISBN
-add-on forms and 34.4e9 proof-of-work nonces tested against the 3 open lots, 0 match.
+| Print surfaces read from Amazon's public "Read sample" reader (no login) for 4 physical editions: EN paperback pages 1 to 8 (title, copyright page with `ISBN: 9781688289970`, acknowledgments, table of contents), About the Author and back cover; KDP hardcover 2023 (same interior); 2025 Limited Indexed Edition pages 1 to 20 and index pages 323 to 330; Italian paperback pages 1 to 10 (copyright page dated 17.9.2021) and back cover | about 100 strings read off those pages | full extended oracle | 0 match | yes: the ISBN read off the copyright page re-finds EN_easy_2 | 2026-09-01 |
+| Print page numbers: pages 1 to 339 as "N", "page N", "p. N", "Page N of 321/339" and 8 more formats; all ordered pairs (a, b) with 6 separators; the 47, 70, 91 triple in every order | 4,407 single forms, 689,562 pairs and triples | sha256x3 raw chain, both key forms | 0 match | yes: the same code re-finds 221B, the ISBN and the IT_hard cities | 2026-09-01 |
+| Every identifier printed in the book: URLs (full, without scheme, last path segments), DOIs, arXiv ids, the Merkle patent, Bitcointalk topic ids, Medium post ids, YouTube ids, all numbers of 6 or more digits, the Spotify playlist and user ids; the author's own 60 patent and publication numbers (Justia) in 8 formats | 583 plus 486 strings | full extended oracle | 0 match | yes: 221B and ISBN re-found in the same runs | 2026-09-01 |
+| Structured combinations: Merkle roots of the Figure 10 rows, the Figure 11 full hashes under 4 input conventions and the 8 EN addresses (single and double SHA-256, both leaf orders, hashed leaves), SHA-256 chains of every XOR subset of those tables, discography track numbers and years as strings | about 2,600 keys and strings | direct key check, extended oracle | 0 match | yes: the Figure 10 XOR re-finds EN_hard_2 | 2026-09-01 |
+
+Cumulative across the rows above: approximately 9,600 answer strings, 694,000 page-number
+forms, 800,800 ISBN add-on forms and 34.4e9 proof-of-work nonces tested against the 3 open
+lots, 0 match.
 
 ## What this rules out and what it does not
 

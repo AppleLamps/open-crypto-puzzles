@@ -32,7 +32,12 @@ the physical book.
 ## The puzzle as published
 
 Finlow-Bates self-published "Move Over Brokers, Here Comes The Blockchain" in 2020 (KDP
-paperback ISBN 9781688289970, Lulu hardcover ISBN 9781716479724, Kindle ebook). The book
+paperback ISBN 9781688289970, 321 pages; Lulu hardcover ISBN 9781716479724, 322 pages;
+Kindle ebook). Two later print editions exist: a KDP hardcover (ISBN 9798394360602,
+2023-05-12, same 321-page interior) and a "Limited Indexed Edition" hardcover (ISBN
+9798265632500, dated 1 October 2025, 330 pages, listed at $250) whose extra pages are a
+figures list and an index; its copyright page and index carry nothing about the hunt, and
+its chapter epigraphs are removed. The book
 prints 8 Bitcoin addresses, one per puzzle, each seeded with 200,000 sats; the funding
 transaction for all 8 confirmed on 2020-11-28 at block 659090
 (`f26ecab737b701982a7a3d0f9b0ffb3c509225cbbefecc2a4fe2e73758ce8972`, [mempool.space](https://mempool.space/tx/f26ecab737b701982a7a3d0f9b0ffb3c509225cbbefecc2a4fe2e73758ce8972)).
@@ -157,11 +162,15 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 
 | Proof-of-work lot: nonce N with 8 or more leading zero hex digits on the Figure 11 pangram, then the hash, sha256(hash), sha256^2(hash), the input string, the nonce or the hex as key or answer | N < 2^33, 4 input conventions (space or no space before N, newline or none after), 34.4e9 hashes | `tools/pow_nonce_search.c` on 24 CPU cores, 1,988 nonces with 6 or more zeros kept (8 with 8 zeros, 2 with 9), each evaluated 9 ways against all 12 addresses | 0 match | yes: the book's own nonce 8 re-found (prefix 0ca85b7d); C output identical to an independent Python pass on the first 30,000,000 nonces | 2026-09-01 |
 | Physical-only strings: ISBN-13 of all 4 print editions in every hyphenation, ISBN-10, EAN 5-digit and 2-digit price add-ons (800,800 forms), back-cover blurb, endorsement quotes and names, printed URLs, page counts, dimensions, weight, publication dates, ASINs | 800,800 add-on forms plus about 400 strings | sha256x3 raw and hex chains, both key forms, all 12 addresses and 5 exposed public keys | 0 match | yes: the plain ISBN re-finds EN_easy_2 | 2026-09-01 |
+| Print surfaces read from Amazon's public sample reader for 4 physical editions (EN paperback pages 1 to 8 and back cover, KDP hardcover, 2025 indexed edition pages 1 to 20 plus its index, Italian paperback pages 1 to 10): every string on those pages, the Italian print date 17.9.2021, the print line, the acknowledgment paragraph leaders | about 100 strings | sha256x3 raw and hex chains, both key forms | 0 match | yes: the ISBN read off the copyright page re-finds EN_easy_2 | 2026-09-01 |
+| Print page numbers as answers: every page 1 to 339 in 13 formats, every ordered pair of pages in 6 separators, the 47/70/91 footnote triple in all orders | 4,407 single forms plus 689,562 pairs and triples | sha256x3 raw chain, both key forms | 0 match | yes: the same code re-finds the three known answers | 2026-09-01 |
+| Identifiers printed in the book as answers: every URL, DOI, arXiv id, patent number, Bitcointalk topic id, Medium post id, YouTube id and long number in the references, the Spotify playlist and user ids, the author's 60 patent and publication numbers in 8 formats | 583 plus 486 strings | sha256x3 raw and hex chains, both key forms | 0 match | yes: 221B and ISBN re-found in the same runs | 2026-09-01 |
+| Structured combinations of the printed tables: Merkle roots (single and double SHA-256, both orders, hashed leaves) of Figure 10, Figure 11 (4 input conventions), the 8 EN addresses; SHA-256 chains of every XOR subset; discography track numbers and years | about 2,600 keys and strings | direct key check and extended oracle | 0 match | yes: the Figure 10 XOR re-finds EN_hard_2 | 2026-09-01 |
 | Book lists and winks under the extended oracle: proper-noun lists from anecdotes in 8 join orders, all rotations of the ring-signature fruit and name loops, the "three times" sentences, Italian forms of the 221B answer, Figure 5 story strings, planted block heights as block hashes and merkle roots, reference identifiers | about 2,600 strings | sha256x3 raw and hex chains, with and without newline, both key forms | 0 match | yes: 221B, ISBN and the IT_hard city list re-found in the same runs | 2026-09-01 |
 | Figure 11 as a copy of the EN_hard_2 mechanism: XOR of every subset of the 9 full hashes, hashes of their concatenation, the printed prefixes as a 256-bit number, under 4 input conventions | about 2,100 keys | direct key check, both key forms | 0 match | yes: the Figure 10 XOR re-finds EN_hard_2 | 2026-09-01 |
 
-Cumulative: approximately 8,400 answer strings, 800,800 ISBN add-on forms and 34.4e9
-proof-of-work nonces tested against the 3 open lots, 0 match.
+Cumulative: approximately 9,600 answer strings, 694,000 page-number forms, 800,800 ISBN
+add-on forms and 34.4e9 proof-of-work nonces tested against the 3 open lots, 0 match.
 
 ## Open leads, ranked
 
@@ -175,9 +184,14 @@ proof-of-work nonces tested against the 3 open lots, 0 match.
    and the Kindle page numbers (339 pages) do not match the paperback (321 pages), so
    the two print layouts differ. A used copy from the original print run is safer than a
    fresh print-on-demand reprint, since a planted flaw is known to have moved between IT
-   printings. Confirmed by a string or detail on the physical object (copyright page,
-   spine, back cover, last page, figure pages) that derives to an open lot; killed if
-   every surface of both physical editions matches the ebook captures exactly.
+   printings. What I could read without buying, through Amazon's public sample reader
+   (copyright page, table of contents, acknowledgments, About the Author, back cover of
+   the paperback; the same for the 2023 hardcover; pages 1 to 20 and the index of the
+   2025 indexed edition; pages 1 to 10 of the Italian paperback), is all null, so the
+   unseen part is the interior (pages 9 to 320: running heads, page-bottom footnotes,
+   figure rendering) and the Lulu hardcover, which has no sample of its own. Confirmed by
+   a string or detail on the physical object that derives to an open lot; killed if the
+   interior matches the ebook captures exactly.
 2. **Crack IT_easy using its exposed public key as a free calibration oracle** (hours).
    IT_easy was solved and swept by a community reader in 2022, proving its answer needs
    no print gate; its public key is exposed on-chain since it was spent from. Solving it
