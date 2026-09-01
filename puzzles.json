@@ -2199,7 +2199,7 @@
         "asset": "sats",
         "usd_estimate": 378,
         "usd_snapshot": "2026-08-16",
-        "note": "3 of 12 lots still open, 200,000 sats each; 9 lots already solved and swept (4 by me, 5 by the community before I started)"
+        "note": "3 of 12 lots still open, 200,000 sats each; 9 lots already solved and swept (4 by me, 5 by the community before I started; I have since recovered the answers of 3 of those 5)"
       },
       "addresses": [
         {
@@ -2209,7 +2209,7 @@
           "label": "EN_easy_1",
           "explorer": "https://mempool.space/address/14aFhno96fkt7knLWMDQ4j8yh8v5hBF4n1",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "swept"
         },
         {
@@ -2219,7 +2219,7 @@
           "label": "EN_easy_2",
           "explorer": "https://mempool.space/address/14utGQn5GdfPvUrHNLAwTmmP99QpXm9mg6",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "swept"
         },
         {
@@ -2229,7 +2229,7 @@
           "label": "EN_medium_s",
           "explorer": "https://mempool.space/address/1QFafw3weoWTRQhiLafRw2eyWbVmES6wfJ",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "swept"
         },
         {
@@ -2239,7 +2239,7 @@
           "label": "EN_medium",
           "explorer": "https://mempool.space/address/17Y9czcbcCz433QXsy1SGQjwLb27BBtLLZ",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "funded-unspent"
         },
         {
@@ -2249,7 +2249,7 @@
           "label": "EN_hard_1",
           "explorer": "https://mempool.space/address/181rPpfdUGFg4fVEdhDZEfDbBSqgigtoZR",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "swept"
         },
         {
@@ -2259,7 +2259,7 @@
           "label": "EN_hard_2",
           "explorer": "https://mempool.space/address/161YgNX2NrCzGunWvoV1hN3DuzWeuovBK3",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "swept"
         },
         {
@@ -2269,7 +2269,7 @@
           "label": "EN_veryhard_s",
           "explorer": "https://mempool.space/address/1KZei2D5yz3UJ59LvXsC1Y9y4ktSgcnVwz",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "swept"
         },
         {
@@ -2279,7 +2279,7 @@
           "label": "EN_veryhard",
           "explorer": "https://mempool.space/address/1DZ5NbUwDgxeJkKhQLgYcUUX36PtYso1pm",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "funded-unspent"
         },
         {
@@ -2289,7 +2289,7 @@
           "label": "IT_easy",
           "explorer": "https://mempool.space/address/1MEstvLAzc5DzJtvx7uyvKNNUCPN3ofWMK",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "swept"
         },
         {
@@ -2299,7 +2299,7 @@
           "label": "IT_medium",
           "explorer": "https://mempool.space/address/1Q78hDeaHXQbuCSQxG1uPAc4V3jsuVUG9r",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "swept"
         },
         {
@@ -2309,7 +2309,7 @@
           "label": "IT_hard",
           "explorer": "https://mempool.space/address/1QExGvuieS9MvuKC3R1qjp6jGTVcqisTDj",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "swept"
         },
         {
@@ -2319,7 +2319,7 @@
           "label": "IT_veryhard",
           "explorer": "https://mempool.space/address/19kkawFcg2U2s6vq368MXD7FJU9JZvRrjA",
           "expected": "200000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-01",
           "verified_state": "funded-unspent"
         },
         {
@@ -2340,22 +2340,22 @@
       ],
       "target_format": "exact answer string, SHA-256 applied 3 times, 32-byte private key, uncompressed P2PKH, no BIP39, no passphrase",
       "derivation": {
-        "summary": "deduce an exact proper-noun answer from a clue scattered across the book, hash it with SHA-256 three times to get a 32-byte private key, derive the uncompressed P2PKH address and compare to the lot escrow",
+        "summary": "deduce an exact answer string (the known answers are a street address, the paperback ISBN and a list of four city names) from a clue scattered across the book, hash it with SHA-256 three times to get a 32-byte private key, derive the uncompressed P2PKH address and compare to the lot escrow",
         "oracle": "tools/oracle.py",
         "oracle_certified": true,
-        "certified_against": "EN_easy_1 (answer '221B Baker Street') and IT_hard (answer 'Genova Firenze Bologna Brindisi'), both reproduced byte for byte"
+        "certified_against": "EN_easy_1 (answer '221B Baker Street'), EN_easy_2 (answer '9781688289970', the paperback ISBN) and IT_hard (answer 'Genova Firenze Bologna Brindisi'), all reproduced byte for byte; hex-string chaining with and without newline covered with a planted witness"
       },
       "difficulty_left": "human-action",
-      "difficulty_note": "the sha256x3 transform is fully confirmed; the ebook-accessible text and figures of both editions are exhausted across every mechanism tested (about 5,820 candidates, 0 matches); the missing element for the 3 open lots is most likely content printed only in the physical 2020-21 book runs, not captured in any ebook, PDF, or page scan I hold",
+      "difficulty_note": "the sha256x3 transform is confirmed on three lots; the ebook-accessible text and figures of both editions are exhausted across every mechanism tested (about 8,400 answer strings, 800,800 ISBN add-on forms and 34.4e9 proof-of-work nonces, 0 match); the EN_easy_2 answer is the paperback ISBN, a string printed only on the physical book, so the missing element for the 3 open lots is most likely on the physical KDP paperback or the Lulu hardcover, neither of which I have examined",
       "tested_total": {
-        "candidates": 5820,
-        "families": 6,
+        "candidates": 8400,
+        "families": 12,
         "certified": true
       },
       "leads": [
         {
           "rank": 1,
-          "title": "buy the physical 2020-21 printed EN and IT books",
+          "title": "buy the physical books: KDP paperback 9781688289970, Lulu hardcover 9781716479724, Italian paperback",
           "cost": "needs-a-person",
           "status": "open"
         },
@@ -2460,7 +2460,7 @@
         }
       ],
       "third_party_material": "no book pages, ebook files, scans, OCR, or chapter text included; only page/figure numbers, short quotes (about 180 words total, well under the 300-word-per-book limit), and my own derived data (answer strings, hashes, solved-lot key material)",
-      "last_updated": "2026-08-16",
+      "last_updated": "2026-09-01",
       "folder": "2-mid-prizes/keir-finlow-bates-blockchain-book-600ksats"
     },
     {

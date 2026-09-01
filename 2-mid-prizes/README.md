@@ -24,7 +24,7 @@ its actual state does (solved, swept, funded).
 | [RushWallet Contest #30](rushwallet-contest-30-1msats/) | 1,000,000 sats | 630 | bitcoin | brainwallet, audio | external-info | 2026-08-16 | open |
 | [School of Bitcoin: 1 Million Sats In This Image](school-of-bitcoin-1msats/) | 1,000,000 sats | 630 | bitcoin | bip39-seed, image-stego, password-pages | external-info | 2026-08-16 | open |
 | [AH White: Walking Banks](ah-white-walking-banks-800ksats/) | 800,000 sats | 504 | bitcoin | bip39-seed, book, text-cipher | external-info | 2026-08-16 | open |
-| [Keir Finlow-Bates: Move Over Brokers Treasure Hunt](keir-finlow-bates-blockchain-book-600ksats/) | 600,000 sats | 378 | bitcoin | book, brainwallet, text-cipher | human-action | 2026-08-16 | open |
+| [Keir Finlow-Bates: Move Over Brokers Treasure Hunt](keir-finlow-bates-blockchain-book-600ksats/) | 600,000 sats | 378 | bitcoin | book, brainwallet, text-cipher | human-action | 2026-09-01 | open |
 | [Zden Cryptopuzzle LVL.5](zden-haluska-lvl5-555ksats/) | 555,550 sats | 350 | bitcoin | geometry, raw-private-key | external-info | 2026-08-16 | open |
 | [FTPK Season 2: Never-Ending](ftpk-season-2-300usdt/) | 305.930218 USDT | 306 | ethereum | bip39-seed, word-selection | insight | 2026-08-16 | open |
 | [Andy Bauch: New Money, COG](andy-bauch-new-money-cog-428ksats/) | 428,206 sats | 270 | bitcoin | pixel-code, physical-object | external-info | 2026-08-16 | open |
