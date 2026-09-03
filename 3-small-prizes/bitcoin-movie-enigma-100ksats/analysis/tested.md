@@ -160,3 +160,50 @@ Standing after these: every clean IMDb-metadata rule that leaves at most two pan
 has been swept and is empty. The open problem is the title-to-word rule for the three titles
 that yield no BIP39 word under the community list (The Goonies, Leon, Sharknado), which is a
 reading question, not a compute one. See leads.md.
+
+## Sweeps on the consensus film list, 2026-09-01 and 2026-09-02
+
+Oracle: the public BIP84 vector (`abandon` x 23 plus `art`) reproduced, target the
+escrow's hash160; enumeration with a BIP39 checksum filter in C (OpenMP), derivation on
+CPU (BIP84, BIP44, BIP49, BIP86 and raw paths) or on a 24-word port of the shared GPU
+engine (BIP84 `0/0` only). "Witness 3/3" means 3 synthetic 24-word mnemonics planted at
+head, middle and tail of that run and recovered by the normal path; "vector only" means
+no witness was planted in that run and it is uncertified.
+
+| Hypothesis | Raw candidates | Derivations | Witness | Result |
+|---|---|---|---|---|
+| Older identifications: the titles without a literal word fixed as intruders, plus 5 of the remaining 29 | 4.0e8 | 1,563,007 | 3/3 | 0 match |
+| Same, with panels 3 and 5 as Aliens and Alien | 2.2e8 | 875,811 | 3/3 | 0 match |
+| Consensus list: 6 wordless or ambiguous panels fixed as intruders plus 4 of the other 28, literal words | 5.95e7 | 231,806 | 3/3 | 0 match |
+| Same, with panel 14 as The Man in the Iron Mask (`iron`, `mask`, `man`, `ask`) | 1.67e8 | 651,882 | 3/3 | 0 match |
+| Consensus list, words from substrings of 3 or more letters, 4 wordless panels fixed plus 6 of 30 (GPU, 445 s) | 1.52e10 | 59,321,852 | 3/3 | 0 match |
+| The natural partition (the 24 titles with an obvious word), 178 derivation paths, 4 seed constructions, no checksum filter | 512 | 512 x 712 | vector only | 0 match |
+| Natural partition, forward and backward, one position free over the 2048 words | 5.0e7 | 955,206 | vector only | 0 match |
+| Kubrick x5 plus Jean Reno x5 as the 10 intruders (panel 14 = Iron Mask), panel 8 free, `share` or `tornado` for 26, `soft` for 32 | 3.1e6 | 12,344 | vector only | 0 match |
+| Same, ambiguities widened (`eye`/`wide`, `cat`, `run`, `load`, `host`, `ski`, `ride`, `tip`) | 1.0e9 | 3,981,013 | vector only | 0 match |
+| Release year or runtime read as a BIP39 index (10 variants), 11 intruders plus 9 of 33 | 3.9e8 | 1,502,910 | vector only | 0 match |
+| 6 deterministic 4-letter-prefix rules, 4 wordless panels fixed plus 6 of 30 | 3.6e6 | 13,914 | vector only | 0 match |
+| 40 neighbour rules (alphabetical neighbour, longest common prefix, letter counts), keepers = 20th-century films | 1.8e7 | 68,958 | vector only | 0 match |
+
+Totals: about 1.6e10 raw candidates and 62,644,358 derivations with witnesses (5 runs),
+about 1.5e9 raw candidates and 6,534,857 derivations without (7 runs), 0 match. Two runs
+were interrupted and are not counted: substrings of 3 or more letters with panel 14 as
+Iron Mask (85 million of 178 million lines), and a no-checksum pilot on the GPU. Rate:
+about 13,000 derivations/s on 24 CPU cores across 7 paths; about 170,000 derivations/s on
+one GPU for BIP84 `0/0`. Dates: 2026-09-01 and 2026-09-02.
+
+What this closes: on the consensus list, the intruders are not "the titles with no
+literal word plus a few others" at any depth up to substrings of 3 letters, and the
+Kubrick plus Reno split does not solve with a single free position. What it leaves: that
+split at two free positions, and the two rules themselves.
+
+## Panel 14, settled 2026-09-03
+
+I had kept panel 14 as Eyes Wide Shut against the community's The Man in the Iron
+Mask. On 2026-08-29 deviceio121 posted two frames from
+[youtube 3PcEZNC7IPw at 2:18](https://www.youtube.com/watch?v=3PcEZNC7IPw), which is
+MGM's official "Judgement Day" scene from The Man in the Iron Mask (the video's own
+title). The frame shows the same masked group as the panel: the woman in the gold mask
+and red-and-gold turban at left, the man in the long wig holding a gold bearded mask
+on a stick at centre. Panel 14 is The Man in the Iron Mask, and the Kubrick plus Reno
+split stands at exactly 10.

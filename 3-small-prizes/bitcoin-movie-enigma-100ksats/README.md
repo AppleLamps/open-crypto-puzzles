@@ -8,10 +8,12 @@ published on the author's own site, describe a two-step transform: turn each of 
 information found on each film's IMDb page, leaving the real 24-word seed in panel
 order. The derivation is fully understood and bounded once the inputs are known.
 What is missing is entirely cultural: all 34 films now have an identification
-(9 previously disputed panels were checked against the published stills on
-2026-08-27 and follow the community list in `data/films_community_issue9.csv`),
-and I have not yet found either the title-to-word rule for The Goonies or the
-IMDb field that splits the 24 keepers from the 10 intruders.
+(the community list in `data/films_community_issue9.csv`, checked against the
+published stills by AppleLamps on 2026-08-27, with panel 14 settled by a frame
+match on 2026-09-03), and I have not yet found either the title-to-word rule for
+The Goonies or the IMDb field that splits the 24 keepers from the 10 intruders.
+Every mechanical reading of those two rules I could formulate on the consensus list
+is negative (12 sweeps, 2026-09-01 and 2026-09-02).
 
 ## At a glance
 
@@ -22,12 +24,12 @@ IMDb field that splits the 24 keepers from the 10 intruders.
 | Prize | 100,000 sats (about $63 at BTC = $63,000, 2026-08-16) |
 | Chain | bitcoin |
 | Escrow | `bc1q94ecsn0qk8lap2gefrycnms3ruepy889z969a6` ([explorer](https://mempool.space/address/bc1q94ecsn0qk8lap2gefrycnms3ruepy889z969a6)) |
-| Last on-chain check | 2026-08-27: funded and unspent (100,000 sats) |
+| Last on-chain check | 2026-09-01: funded and unspent (100,000 sats) |
 | Status | OPEN |
 | Puzzle type | bip39-seed, text-cipher, word-selection |
 | Target format | BIP39 24 words (English), most likely BIP84 `m/84'/0'/0'/0/i` (script type `v0_p2wpkh`), no passphrase stated |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the public BIP39/BIP84 test vectors) |
-| What remains | the title-to-word rule for The Goonies, and the IMDb field that drops 10 of 34 words |
+| What remains | the title-to-word rule for The Goonies, and the IMDb field that drops 10 of 34 words; the natural candidate for the field, 5 Kubrick films plus 5 Jean Reno films, is negative at one wildcard and untested at two |
 | Series | none |
 
 ## The puzzle as published
@@ -116,10 +118,14 @@ Reproduced 2026-08-16.
    byte-for-byte identical, 34 of 34, confirmed by MD5.
 4. All 34 panels now have an identification. Panel 11 (Godzilla) and panel 34
    (The Human Centipede) were closed by community reports in August 2026 (issues
-   #9, #3). On 2026-08-27 the nine remaining disagreements with the 2026-08-04
-   pass were checked against the published stills; six are confirmed from the
+   #9, #3). On 2026-08-27 AppleLamps checked the nine remaining disagreements with
+   the 2026-08-04 pass against the published stills; six are confirmed from the
    still itself (panels 3, 5, 14, 16, 23, 27) and three stay confirmed-community
-   (panels 9, 13, 24). The merged list is `data/films.csv`.
+   (panels 9, 13, 24). Panel 14, which I had read as Eyes Wide Shut, was the last
+   one I held open: on 2026-08-29 deviceio121 linked MGM's official clip of The
+   Man in the Iron Mask (issue #9), and its 2:18 frame is the panel's own
+   masked-ball shot, so panel 14 is The Man in the Iron Mask (words `iron`,
+   `mask`, `man`, `ask`). The merged list is `data/films.csv`.
 5. A unique 4-letter BIP39 prefix scan of each title with spaces removed produces
    a word for 33 of 34 titles. The only title with no prefix and no literal
    substring is The Goonies (panel 8). Leon maps to `profit`, Sharknado to
@@ -129,9 +135,27 @@ Reproduced 2026-08-16.
    that then matches the escrow (`analysis/tested.md`).
 7. The 34 published PNG stills all carry the same EXIF/XMP decoy: description
    "nope", creator `@cryptop1r4t3`.
+8. `@cryptop1r4t3` is the author's X account. It posted the same 34 stills, in the
+   same order, on 2022-04-08, the day the escrow was funded, with the lines "80%
+   movie quiz and 20% reflexion" and "i might add clues" (no clue was ever added);
+   the January 2024 launch on Nostr, X and Instagram was a re-launch of a puzzle that
+   had been "still ongoing, never been found" for 21 months (read on 2026-09-01;
+   the account's earlier hunts were physical caches with BIP39-word passphrases).
+9. The Nostr launch note of 2024-01-03 is more precise than the site's rules page:
+   "34 movies screenshot will be posted in the proper order", "find the trick to
+   match a movie name with a word on that list", intruders detected from "Director /
+   Year of release / Length / Actors starring in it / etc ... nothing outside the
+   first page of IMDB", and "no fancy cryptic enigma or complex calculations"
+   (`clues/author-posts.md`).
+10. Three IMDb readings split the consensus list into exactly 24 and 10: the 5
+    films directed by Stanley Kubrick (panels 2, 9, 17, 25, 33) plus the 5 starring
+    Jean Reno (panels 10, 11, 13, 15, 16), the author's own two example fields;
+    release year 2000 or later (12, 15, 19, 20, 21, 22, 23, 26, 29, 34); and release
+    year before 1980 (2, 4, 5, 6, 7, 9, 17, 18, 24, 25). The Kubrick plus Reno
+    split needs panel 14 to be The Man in the Iron Mask, which it is.
 
 ![34 panel slots colored by identification confidence: confirmed, probable or uncertain or disputed, and unidentified](images/02-panel-grid-identification.svg)
-*Figure 1. Identification status of the 34 panels, no film stills reproduced (source: data/films.csv, script tools/fig_panel_grid.py), 2026-08-27.*
+*Figure 1. Identification status of the 34 panels, no film stills reproduced (source: data/films.csv, script tools/fig_panel_grid.py), 2026-09-03.*
 
 ## What has been tested
 
@@ -147,6 +171,8 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | PNG EXIF/XMP carries a title or word | 34 published crops | read EXIF and XMP | decoy only: description "nope", creator @cryptop1r4t3, 34/34 identical | yes: all 34 XMP packets compare equal | 2026-08-27 |
 | Unique BIP39 4-letter prefix in the compact title | 34 titles | prefix scan against the English wordlist | 33/34 titles yield a word; only The Goonies yields none | n/a: direct scan, re-checkable from data/films.csv | 2026-08-27 |
 | Intruders = G, PG, and TV-14 on the reconciled list | 55,296 raw 24-word strings, 227 checksum-valid | certified oracle, BIP84/49/44 plus 3 raw paths | 0 match | uncertified: no known-good mnemonic for this escrow to plant in the loop | 2026-08-27 |
+| Intruders = the wordless titles plus any others, literal words and substrings of 3 or more letters, on the consensus list and on the older identifications (5 runs) | 1.6e10 raw candidates, 62,644,358 derivations | checksum filter in C, then BIP84/44/49/86 and raw paths on CPU or a 24-word GPU port of the shared engine | 0 match | yes: 3 synthetic 24-word witnesses at head, middle and tail of each run, all recovered, plus the public BIP84 vector | 2026-09-01 |
+| The natural 24-title partition through 178 derivation paths; one free position over 2048 words; Kubrick x5 plus Reno x5 at one wildcard; year or runtime as a BIP39 index; 6 prefix rules; 40 neighbour rules (7 runs) | 1.5e9 raw candidates, 6,534,857 derivations | same | 0 match | uncertified: oracle vector only, no planted witness in those runs | 2026-09-02 |
 
 ## Open leads, ranked
 
@@ -156,15 +182,29 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
    Leon, Sharknado, Raiders of the Lost Ark, and The Shining all resolve once
    spaces are ignored. A rule that also drops panel 8 as an intruder is cheaper
    than one that keeps it.
-2. **Find the IMDb field that splits 24 keepers from 10 intruders** (needs an
+2. **Kubrick x5 plus Jean Reno x5 at two wildcards** (minutes on one GPU). The
+   author's own example fields, director and actors, name exactly 10 films on the
+   consensus list. At one wildcard (panel 8 free) it is negative. Two wildcards,
+   panels 8 and 26 or 8 and 32 with the other read as `share`, `tornado`, `soft`
+   or `ride`, is about 6.4e9 raw candidates and 2.5e7 derivations per pair,
+   about 3 minutes each on one GPU. Confirmed by a MATCH; killed by both pairs
+   coming back empty with witnesses.
+3. **Find the IMDb field that splits 24 keepers from 10 intruders** (needs an
    insight). Certificate G/PG/TV-14 on the reconciled list selects exactly 10
    panels and was tested through the oracle (55,296 raw strings, 0 match,
    uncertified). The three GPU metadata sweeps reported in issue #9 are empty
-   against a different word list.
-3. **Re-check panels 9, 13 and 24 against the issue #9 sources** (needs a
+   against a different word list; year 2000 or later and year before 1980 are
+   negative here at one wildcard.
+4. **Regional IMDb titles and AKAs for the wordless titles** (hours, no compute).
+   couldes noted in issue #9 that IMDb pages differ by region and some carry a
+   subtitle. The word step reads from the film, so a regional subtitle is not in
+   scope by default, but for The Goonies, Sharknado and Raiders an alternate title
+   is the cheapest place a word could hide (Sharknado's German title "Dark Skies"
+   gives `ski`, already swept as a widened ambiguity).
+5. **Re-check panels 9, 13 and 24 against the issue #9 sources** (needs a
    person, likely under an hour). Spartacus, Leon: The Professional, and Close
-   Encounters of the Third Kind are the last identifications that I could not
-   confirm from the published still alone.
+   Encounters of the Third Kind are the last identifications that rest on the
+   issue #9 sources rather than on a frame matched independently.
 
 ## Files in this folder
 
@@ -173,7 +213,7 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | `clues/author-posts.md` | verbatim quotes from the rules, about and wallet pages, with links; no film stills reproduced |
 | `data/films.csv` | my identification state for all 34 panels: title, MPAA rating, confidence, candidate BIP39 words |
 | `analysis/tested.md` | the complete negatives ledger |
-| `analysis/leads.md` | full notes behind the 4 ranked leads |
+| `analysis/leads.md` | full notes behind the ranked leads |
 | `images/02-panel-grid-identification.svg` | the 34-panel identification status grid |
 | `tools/oracle.py` | candidate checker, certified against the public BIP39/BIP84 test vectors |
 | `tools/fig_panel_grid.py` | generates images/02-panel-grid-identification.svg from data/films.csv |
@@ -183,3 +223,6 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 - Bitcoin Movie Enigma, rules page: https://bitcoinmovieenigma.com/rules
 - Bitcoin Movie Enigma, about page: https://bitcoinmovieenigma.com/about
 - Bitcoin Movie Enigma, wallet page: https://bitcoinmovieenigma.com/wallet
+- klems, Nostr launch note with the rules, 2024-01-03: https://njump.me/48fbbff9845680b463784d5ddfdc5907a953b3f4df9e0e49a97d6eb123d52145
+- klems, X account named in the panels' EXIF, first launch 2022-04-08: https://x.com/cryptop1r4t3
+- deviceio121, MGM's official The Man in the Iron Mask clip whose 2:18 frame is panel 14, issue #9, 2026-08-29: https://www.youtube.com/watch?v=3PcEZNC7IPw
