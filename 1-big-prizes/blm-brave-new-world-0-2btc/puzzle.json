@@ -44,8 +44,8 @@
     "certified_against": "the raw priv=1 P2PKH vectors, the public BIP39 all-zero-entropy test vector, and a public old-Electrum v1 test vector, since no solved sibling exists for this puzzle"
   },
   "difficulty_left": "insight",
-  "difficulty_note": "the derivation, both candidate formats, and every path are fully mapped and oracle-certified; on the order of 30 million derivations have been tested across anchor-based and anchor-free families, all negative; the 4 word-position anchors that framed nearly all of that work trace to 2 Reddit accounts with zero posts about this puzzle and are retracted here, so what remains open is the 12-word input, not compute or path coverage",
-  "tested_total": { "candidates": 30000000, "families": 10, "certified": true },
+  "difficulty_note": "the derivation, both candidate formats, and every path are fully mapped and oracle-certified; about 479 million derivations have been tested across anchor-based and anchor-free families (including 7.2 billion GPU sequences over a 13-word pool with no fixed positions), all negative; the 4 word-position anchors that framed nearly all of that work trace to 2 Reddit accounts with zero posts about this puzzle and are retracted here, so what remains open is the 12-word input, not compute or path coverage",
+  "tested_total": { "candidates": 479054867, "families": 14, "certified": true },
   "leads": [
     { "rank": 1, "title": "log the 3 already-launched btcrecover runs", "cost": "minutes", "status": "open" },
     { "rank": 2, "title": "re-derive the word inventory from the image itself", "cost": "hours", "status": "open" },
@@ -62,5 +62,5 @@
     { "title": "BitcoinTalk topic 5404767", "url": "https://bitcointalk.org/index.php?topic=5404767.0", "date": "2026-08-16", "archived": null }
   ],
   "third_party_material": "the collage image in clues/ is the author's own published puzzle material, posted once on Reddit; no other author material exists; community forum discussion is cited by URL and date only, never reproduced",
-  "last_updated": "2026-08-16"
+  "last_updated": "2026-09-03"
 }

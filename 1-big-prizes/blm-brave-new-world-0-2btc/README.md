@@ -120,13 +120,15 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | old-Electrum anchor-based campaigns (fixed pools, wide campaign, alternate positions) | about 24.1 million derivations | old-Electrum v1 | 0 match | yes | 2026-06-13 |
 | Community runs re-checked at the source (ac00300, ArmaCorex, demesmaeker) | 479,001,600 plus 377,200,000,000 plus 6 times 12 factorial | BIP39 | 0 match | reported by the runners | 2020 to 2022 |
 | Anchor-free old-Electrum sweep (16-word pool, 6 exclusive words forced, 4 order frames) | about 3,750,000 seeds (about 30,000,000 addresses) | old-Electrum v1 | 0 match | yes | 2026-06-13 |
+| Anchor-free BIP39 GPU sweeps: every 12-of-13 choice and every ordering of a 13-word pool read off the image, plus all orderings of 2 fixed 12-word sets (singled-out elements; the BitcoinTalk narrative reading) | 7,185,024,000 sequences (449,054,867 checksum-valid) | BIP39 GPU kernel, `m/44'/0'/0'/0/0` | 0 match | yes: kernel self-test on a planted target | 2026-08-02 |
 | Steganography and file-structure channels | full file | binwalk, EXIF, LSB, zsteg | clean, no hidden channel | yes | 2026-06-13 |
 | Cipher inventory (runes, Latin mottos, Bill Cipher fragment) | 14 elements | direct decode | no additional seed words found | yes | 2026-08-02 |
 
-Cumulative: on the order of 30 million derivations tested across the anchor-based and
-anchor-free families combined, 0 matches. The largest anchor-free family (about 3.75 million
-seeds) still forces 6 words present; a full anchor-free sweep over a word pool re-derived
-directly from the image has not been run (see "Open leads, ranked").
+Cumulative: about 30 million derivations across the anchor-based and anchor-free families
+through 2026-06-13, plus 449 million checksum-valid BIP39 derivations from 7.2 billion
+sequences on 2026-08-02, 0 matches. The 13-word pool sweep fixes no position, but its words
+are still the community pool; a sweep over a word pool re-derived directly from the image
+has not been run (see "Open leads, ranked").
 
 ## Open leads, ranked
 
