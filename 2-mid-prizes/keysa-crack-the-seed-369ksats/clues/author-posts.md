@@ -52,3 +52,35 @@ permutations for the 12-word case rather than correcting the framing to "you wou
 first need to know which 12 words": "Well then, I reckon this strategy is a secure
 way to store a seed when traveling... How many guesses would be needed if it was
 done with a 12-word seed?"
+
+## Reply thread, 2023-06-27 (sub-threads under the original post)
+
+These replies sit two levels down, under the "620 quintillion" comment, and do not
+show when only the first-level replies are expanded; I read them on 2026-08-16.
+
+> 13:24 UTC, [status 1673683632546873344](https://x.com/SimplestBTCBook/status/1673683632546873344):
+> "Whether they are or aren't out of order though, in this example one still wouldn't
+> know which of all those words are the 12 words in the seed phrase right? What I am
+> hoping is that this is a secure method to carry one's seed while traveling (whether
+> for leisure or while fleeing)"
+
+> 13:32 UTC, [status 1673685712498049025](https://x.com/SimplestBTCBook/status/1673685712498049025):
+> "In this example, all the words but two, are in order ;)"
+
+> 15:50 UTC, [status 1673720563318112256](https://x.com/SimplestBTCBook/status/1673720563318112256),
+> after a reader noted that words outside the BIP39 list would make the puzzle harder:
+> "Right. These are all BIP 39 words, because the anon set would decrease if one
+> includes words not on the list"
+
+Read together: the 12 seed words sit on the card in seed order except for two, and in
+her own framing the lock is which 12 words, not their order. This is the only order
+statement she has made; her 2023-07-05 "The only hint is that it's a 12 word seed"
+does not count it.
+
+## 2023-06-26, on the dots, to a reader who read them as a binary code
+
+> 05:58 UTC, [status 1673209167643832321](https://x.com/SimplestBTCBook/status/1673209167643832321):
+> "You know what, I'll tell you, because I am testing something and that's not it, so
+> no hint there, was just some typos I didn't clean up"
+
+Third statement on the dots, after "you can ignore the dots" and "the dots are random".

@@ -130,6 +130,65 @@ ledger. No single planted witness applies to this family, since it is not a sing
 enumerated space with one search order; I mark it uncertified in the summary table
 on that basis, while noting the volume of testing.
 
+## L-009: every known candidate set under "reading order, all but two words"
+
+Keysa wrote on 2023-06-27, in a sub-thread under her original post, "In this example,
+all the words but two, are in order ;)" and, 8 minutes earlier, that one "still
+wouldn't know which of all those words are the 12" (`clues/author-posts.md`). The
+order of the seed is therefore the card's reading order of the 12 selected tokens,
+except for two words. Two order models cover that sentence: reading order plus one
+transposition of two words (66 transpositions plus the identity, 67 orders per set),
+and reading order with up to two words moved anywhere (about 6,100 orders per set).
+None of the sweeps in L-001 to L-006 tested a transposition: they used the card
+order, its reverse, the reading order and its reverse only.
+
+Method: replay every candidate set the folder had produced under those two order
+models: 196,000 sets from the positional rules, 1,170,000 sets from 8 further
+positional families (row-by-column sub-grids, per-row 3-6-9 digit and mirror rules,
+arithmetic progressions plus a free token, multiple takes of 3, 3 and 6, 12 groups
+of 5 to 7 tokens, circular walks from every start, key-token initials, removal
+rounds), the 31,088 natural sets (rows of 12, row edges, dotless tokens, windows,
+left and right column pairs, sub-grids, progressions) and all 877,000 sets from the
+L-006 agent wave: 2,084,778 distinct sets. Derivation BIP84 `m/84'/0'/0'/0/0` and
+`0/1`, checksum filter first, then the certified oracle.
+
+| Campaign | Sets | Order model | Sequences | Checksum-valid derivations | Result |
+|---|---|---|---|---|---|
+| 1 | 2,084,778 | reading order plus one transposition | 139,680,327 | 8,730,698 | 0 match |
+| 2 | 31,088 natural sets | reading order, up to two words moved | 188,500,763 | 11,775,450 | 0 match |
+| 3 | 2,084,778 | reversed reading order plus one transposition | 139,680,327 | 8,729,064 | 0 match |
+
+Witness: 3 synthetic sets, each with a target address derived in advance from one
+order of the same model, planted at the head, middle and tail of each run and
+recovered by the normal path. The first reversed-order pass planted a witness built
+on the direct reading and recovered 0 of 3, which is what the witness is for; it was
+re-run with witnesses on the normal path. Rate: CPU only, elapsed time not recorded.
+Date: 2026-08-16.
+
+What this closes: under the author's own order statement, no candidate set this
+folder has produced is the seed. What it leaves open is the selection rule itself,
+which is not an enumerable space. As a scale reference, all C(70,12) sets in reading
+order are about 1e13, or 6.6e11 derivations after the checksum filter, and the two
+words out of order multiply that by 67; that is not a sweep, it is the reason the
+next step is information from the author.
+
+## Contributed (fork, not a pull request): ordered readings of the typed rows, 2026-08-17
+
+A fork by ebreen (branch `cursor/keysa-spoken-cipher-9cc6`) records four families of
+ordered readings run through this folder's oracle on 2026-08-17: every-k walks for
+k = 5 to 12, a 69-token stream that drops `mad`, 3-6-9 take-then-skip, two-column
+reads of the padded 6x12 grid and keyword-mapped columns (9,513 sequences, 643
+checksum-valid); self-referential and keyed jump walks (5,808 sequences, 388 valid);
+speakable row-block readings, first, last or middle n tokens of m rows, column takes
+on row groups, half-card concatenations (7,560 sequences, 466 valid); and per-row
+pairs of 13 types under every row permutation and per-row flip (5,203,141 sequences,
+312,753 valid). All 0 match. Recorded as reported, not re-run here; the fork describes
+constructed sequences re-found in its own candidate set as the witness for the first
+and third families and marks the jump family uncertified. Under the 2023-06-27 order
+statement most of these orders are no longer candidates. The same fork read, on the
+2024 Nostr repost of the card, the note's title "369369 Sats Guessing Game" and the
+BlueWallet header "Crack the Seed Game HD SegWit", a second confirmation of BIP84.
+
 ## Typographic measurement (not a hypothesis test)
 
 A pixel-level measurement on the binarized card image found that the gap after the

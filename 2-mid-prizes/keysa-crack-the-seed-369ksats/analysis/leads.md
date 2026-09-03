@@ -19,49 +19,43 @@ What would kill it: no reply, or a reply that does not narrow anything (she has
 stated before that she does not want to spoil the puzzle for others).
 Cost: needs a person; no compute cost.
 
-## 2. Submit argued candidate 12-word orderings (the "order, not selection" reading)
+## 2. A new selection family, replayed under the two-words-out-of-order model
 
-Under the original announcement, a reader frames the puzzle's difficulty in terms of
-knowing the 12 words but not their order ("620 quintillion guesses even if they knew
-the exact 24 words, but not the correct order"). Keysa's own reply engages with
-counting permutations for a 12-word case rather than correcting the framing to
-"you would first need to know which 12 words." Read together with her stated design
-goal (a rule short enough to say out loud), this suggests her own mental model may
-treat the selection as easier to work out than the order.
+The earlier version of this lead read the puzzle as "order, not selection", on the
+strength of Keysa engaging with a reader's permutation count. Her own replies two
+levels down in the same thread say the opposite (`clues/author-posts.md`,
+2023-06-27): "one still wouldn't know which of all those words are the 12", and "all
+the words but two, are in order". So the order is the card's reading order up to two
+words, and the lock is the selection.
 
-The practical consequence: for any well-argued candidate set of 12 tokens, checking
-every one of its 12! = 479,001,600 orderings costs about 38 seconds on a rented GPU
-(measured at about 0.79 million derivations per second), against 36.8 minutes on a
-CPU for the one set already tried in full (L-001, `analysis/tested.md`). The
-bottleneck for this lead is producing a well-reasoned candidate set of 12 tokens,
-not the permutation search itself.
+Under that model every candidate set this folder has ever produced is negative
+(L-009 in `analysis/tested.md`: 2,084,778 distinct sets under reading order plus one
+transposition, 31,088 natural sets under up to two moved words, and the reversed
+reading order). Replaying a set costs milliseconds, so a new family of sets is cheap
+to test and the whole cost is in proposing it. What such a family would be built on:
+the card's typed rows, the 20-pixel gap after `mad` (the first token), and the 3-6-9
+theme of her book, none of which has produced a selector yet.
 
-What would confirm it: any 12-token candidate set whose full 12! ordering sweep,
-run through `tools/oracle.py --stdin`, returns a MATCH.
-What would kill it: exhausting every argued candidate set without a match; this
-lead does not have a natural end state the way a bounded space does, since new
-candidate sets can always be proposed.
-Cost: minutes per candidate set on a rented GPU; the cost driver is generating
-candidates, not derivation.
+What would confirm it: any new 12-token set whose 67 (or about 6,100) orders,
+run through `tools/oracle.py --stdin`, return a MATCH.
+What would kill it: nothing bounded; the lead stays open until a family is proposed.
+Cost: minutes per family on a CPU; the 12! GPU sweeps of the earlier reading are no
+longer useful.
 
-## 3. The "two tokens per row" bounded sweep
+## 3. Two tokens per row, under the corrected order model
 
-The 6 rows are confirmed to be typed line breaks rather than a display artifact
-(see the row-structure measurement in `analysis/tested.md`), which makes any rule
-defined per row a legitimate candidate family. One specific rule not yet fully
-covered by the positional sweep in L-002 is: pick exactly 2 of the tokens from each
-row, in some order, giving 12 tokens total. The space is C(12,2)^4 times C(11,2)^2,
-about 5.7e10 raw combinations of token pairs (rows of 12 tokens each contribute 66
-ways to choose 2, rows of 11 contribute 55), narrowing to about 3.6e9 after the
-BIP39 checksum filter (1 in 16). At the measured rate of about 790,000 derivations
-per second on one GPU, checking the checksum-valid subset costs about 76 minutes.
+The 6 rows are typed line breaks (see the row-structure measurement in
+`analysis/tested.md`), so a rule that picks 2 tokens from each row is a legitimate
+family. Under the old "arbitrary order" reading it cost about 76 minutes on one GPU
+(3.6e9 candidates after the checksum filter). Under reading order plus one
+transposition it costs 67 times more: about 2.4e11 derivations after the checksum
+filter, about 3.5 days at 790,000 derivations/s on one GPU. The per-row-pair readings
+already run (the left and right column pairs among the natural sets in L-009, and
+the 13 pair types in the ebreen fork's L-010) are negative.
 
-What would confirm it: a MATCH from `tools/oracle.py` on any candidate drawn from
-this space.
-What would kill it: running the full checksum-filtered space to completion with 0
-matches, with a witness planted at the head, middle, and tail of the search order.
-Cost: about 76 minutes on one rented GPU; this is the best remaining
-information-to-cost ratio once leads 1 and 2 are exhausted.
+What would confirm it: a MATCH from `tools/oracle.py` on a candidate from this space.
+What would kill it: the full space with witnesses at head, middle and tail, 0 match.
+Cost: days of rented GPU; not proposed without a row rule that narrows which pair.
 
 ## 4. The double-width gap after "mad", and the "369 clock" theme
 
