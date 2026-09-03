@@ -2,7 +2,26 @@
 
 Ranked summary is in the README. This file has the reasoning behind the ranking.
 
-## 1. A bounded 2-character-edit sweep on the strongest base texts
+## 1. Ask the Block 76 solver for the convention of a final Aoi block
+
+Block 76 was swept on 2026-08-17 (tx
+`2e271ac2f63f488cd14112bceeed56f159ecd98cb3ce753f08e2d94bb62714a3`) into an active
+wallet whose only puzzle input is that block. Whoever did it holds, for a block the
+author wrote in the same week as Real Big Block with the same tooling, the exact
+serialization she used, the derivation index she took, and whether a "twist" sat on
+top of the stated rule. The author herself wrote that she removed "one of the twists"
+when she rehashed Real Big Block and, later, that she "lost any information on the
+solution of that one" (`clues/author-posts.md`); no archive of the 2019 chapter
+exists (established fact 6). The information that calibrates the remaining twist is
+therefore in one person's hands, not in any public source.
+
+What would confirm it: a convention that, applied to the "Second" chapter with the
+certified case-flip rule, matches `14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W`.
+What would kill it: a convention that is already one of the rows in
+`analysis/tested.md`.
+Cost: needs a person; no compute.
+
+## 2. A bounded 2-character-edit sweep on the strongest base texts
 
 The single-character-edit sweep (266,038,400 candidates, `analysis/tested.md`)
 covers every one-character difference from 40 base texts and is exhaustive for
@@ -12,15 +31,19 @@ capitalization slip. A 2-character sweep restricted to the small set of NBSP and
 line-ending pairs (rather than all positions) is a bounded space, not a full
 40-base x 2-character search.
 
-This is now rank 1 because the copy-range question is much smaller than it
+This is rank 2 because the copy-range question is much smaller than it
 looked. Every contiguous span of the chapter, with both Stage One keep-tests
 and the author's line-break bytes, is a certified negative (see killed
 section below). A 2026-08-27 slice of this lead is also done: every subset of
 the 6 in-sentence NBSPs, and every pair of paragraph-joins swapped between
 `\n\n` and `\r\n\r\n`, on the full 273 with three keep-tests (221,520 texts, 0
-match). What remains is 2-edits that are not those two families, still
-restricted to NBSP and line-ending pairs, including on the other 4 of the 40
-1-character bases that are not the full chapter.
+match). A second slice, run 2026-08-23 on 16 certified bases (8 keep-sets of the
+3 planted groups, with and without the Finney quote, across joins, trailing newline
+and NBSP conventions): every pair of invisible-character insertions (NBSP, ZWSP, BOM,
+TAB, CR, LF, SP) at two paragraph joins, and every insertion plus one case toggle of a
+boundary letter, 48,379,696 texts with 4 witnesses per base, 0 match. What remains is
+2-edits that are neither of those families, including edits inside a paragraph, on
+the other 1-character bases.
 
 What would confirm it: a match within the bounded 2-character space.
 What would kill it: exhausting that bounded space with 0 match; the full,
@@ -30,7 +53,7 @@ Cost: on the order of an hour on a rented GPU for the bounded version described
 above; the private research folder priced this at roughly 45 minutes per base
 text for a similarly scoped variant.
 
-## 2. A non-uniform 2019 editor buffer, or a non-contiguous selection
+## 3. A non-uniform 2019 editor buffer, or a non-contiguous selection
 
 The author's 2019-08-01 ASCII note is `13 10 13 10` between paragraphs. A
 26-space SSR indent would have shown a run of ASCII 32 on asciivalue.com, which
@@ -50,7 +73,7 @@ What would kill it: a reason to believe she copy-pasted a contiguous range
 (already tested) or left a blank line between every paragraph (already tested).
 Cost: needs a narrower reason before a search.
 
-## 3. Identify what "76" indexes for Block 76
+## 4. Identify what "76" indexes for Block 76 (closed: the block was swept 2026-08-17)
 
 A method confirmed on 3 other blocks in the same series (56, 57, 58) uses the
 block's own number as a position index into a specific corpus (a numbered post
@@ -71,7 +94,7 @@ What would kill it: exhausting the remaining candidate corpora with no match at
 position 76.
 Cost: minutes per corpus once a candidate corpus is assembled.
 
-## 4. A short, human-reasoned answer to "change to" / "from change to"
+## 5. A short, human-reasoned answer to "change to" / "from change to" (closed: the block was swept 2026-08-17)
 
 The author's own hint structure (a short, freeform-text question plus a short
 TOMI expansion, confirmed on more than a dozen other blocks) argues for a short,

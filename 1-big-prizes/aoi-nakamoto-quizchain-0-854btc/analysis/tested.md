@@ -39,6 +39,12 @@ predecessor (`1EFojcAo2vbhRGCGCa7q8Wwvzss28mhQYC`).
 | 2019 Common Crawl / userstyle copy families not in the rows above: SSR indent of newline plus 26 spaces (the width in July 2019 story HTML, not the live 30); the same indent with CRLF; empty paragraphs stored as `<p><br></p>` inserted between every pair, or only after heading paragraphs, then joined as plaintext or with the 26-space indent; author's `13 10 13 10` join with those empty paragraphs; Stage One flip; `<br>` splits; NBSP kept or turned to space | 3,030 unique texts (3,033 including 3 planted witnesses) | 0 match |
 | Every contiguous span of 2 or more of the 273 paragraphs (copy-paste of a start-end range): Stage One keep-test on first character and on first letter; no flip; joins `\n`, `\r\n`, `\n\n`, `\r\n\r\n`; NBSP kept or turned to space when the span contains any; leading/trailing spaces stripped when the span has edge spaces | 1,469,908 unique texts (1,469,911 including 3 planted witnesses) | 0 match |
 | Bounded 2-edit on the full 273 paragraphs: every subset of the 6 in-sentence NBSPs turned to space; and every pair of paragraph-joins swapped between `\n\n` and `\r\n\r\n`; three keep-tests (none, first character, first letter) | 221,520 unique texts (221,523 including 3 planted witnesses) | 0 match |
+| The rule paragraph 227 of the chapter dictates itself: flip every paragraph whose first letter is not I, T, A, S or M, skipping the 63 opening quotes that had hidden 118 candidate paragraphs from the earlier first-character test; 3 flip modes; joins `\n\n` and `\n`; with and without trailing newline; indices 0 to 5; both escrows | about 500 | 0 match |
+| The 3 planted paragraph groups under a SHA-256 to 24-word BIP39 derivation instead of MD5 to 12 words (8 group combinations, 3 modes, 2 joins, 2 tails) | 96 | 0 match |
+| In-paragraph `<br>` treated as a paragraph boundary (283 paragraphs) with the paragraph-227 rule | 6 | 0 match |
+| Each section alone (I. Second Life, paragraphs 3 to 52; II. Grycoin, 88 to 161; III. Identity, 163 to 272; the Satoshi Code passage, 174 to 245), with and without the planted groups flipped | 96 | 0 match |
+| The chapter's 2 abnormal capitals (`VIrgin` in paragraph 127, `BItcoin` in 135) as a selector or as a "twist" correction, with and without the groups | 64 | 0 match |
+| Every pair of boundary edits on 16 certified bases: one invisible character (NBSP, ZWSP, BOM, TAB, CR, LF, SP) inserted at any 2 paragraph joins, or 1 insertion plus 1 case toggle of a boundary letter; 8 keep-sets of the 3 groups with the Finney quote and 8 without, across joins, trailing newline and NBSP conventions | 48,379,696 | 0 match |
 
 Witness status: every row above 2026-08-15 used the oracle certified against Block 77 Stage
 One (see README, "Certified against"); the single-character-edit row additionally
@@ -88,6 +94,33 @@ Two rows are certified as complete sweeps of their stated space: that
 contiguous-span row (every start-end pair of length at least 2, under the
 listed joins and keep-tests). Every other row is a targeted, not exhaustive,
 test of one specific hypothesis about which paragraphs were modified.
+
+The 2026-08-21 rows (chapter-dictated rule, SHA-256 24-word derivation, `<br>`
+boundaries, sections alone, abnormal capitals) used an oracle rebuilt that day
+that reproduces Block 77 Stage One from the Finney post byte for byte. The base
+text was re-pulled from the Wattpad API the same day: 273 paragraphs joined with
+`\n\n` plus a final `\n` are exactly 45,451 characters, the `length` the API
+declares, with 6 NBSPs, straight quotes, no HTML entities and 10 internal `<br>`.
+Date: 2026-08-21. A brainwallet reading (MD5, SHA-256 or double SHA-256 of the text
+used directly as the private key, compressed and uncompressed, 96 variants) is also
+0 match but uncertified, since no known-good vector exists for that reading.
+
+The 2026-08-23 boundary 2-edit row reuses the certified GPU derivation (MD5 on CPU
+in a process pool, BIP39 12 words to `m/44'/0'/0'/0/i` hash160 on the GPU) against
+the current escrow, the superseded 2019-07-24 escrow and Stage One at once. Witness:
+4 synthetic texts per base (3 pairs of insertions at offsets in the head, middle and
+tail, 1 mixed insertion plus case toggle) with addresses computed on the CPU, all 4
+recovered on every one of the 16 bases, plus the real Stage One text. Rate: about
+223,000 candidates/s, bounded by the MD5 of a 45 KB text on the CPU, about 2 minutes
+per keep-set. Date: 2026-08-23. This space was the only one of 10 Real Big Block
+spaces listed in a reader's private GPU plan that this ledger had not already
+covered; the other 9 coincide with rows above (about 272 million candidates in both
+tallies).
+
+What the 2026-08-23 row establishes: if the remaining "twist" is a copy artefact,
+it is 3 or more edits, or it sits inside a paragraph rather than at a join (all
+positions at 2 edits is about 1e14, out of bounded reach), or the author's source
+differs from today's Wattpad storage, for which no 2019 copy exists.
 
 A second 2026-08-27 run, over Finney-pattern groups and first/last N-paragraph
 chunks, is also a negative. Method: `tools/oracle.py` certified on Block 77
