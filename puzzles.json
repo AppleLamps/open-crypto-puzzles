@@ -87,35 +87,35 @@
         "certified_against": "the author's own published calibration vector (entropy 2941774a2abec9f30c7d6777d1d53d91 to WIF L5Z66qPm... at BIP44 index 1), self-contained and exact; the case-flip rule and Block 76 prefix filter are certified separately with a synthetic example and a community-found candidate pair; full reproduction of the solved sibling lot Block 77 Stage One needs Hal Finney's bitcointalk post text, which this repository does not ship (third-party content), but which anyone can supply themselves to apply_stage_one_rule()"
       },
       "difficulty_left": "external-info",
-      "difficulty_note": "Real Big Block: the transform and the case-flip rule are confirmed exactly on a solved sibling lot; what is missing is the precise source text the author hashed on 2019-07-30. Every contiguous paragraph span (1,469,908 texts) and a bounded 2-edit slice on the full chapter (221,520 texts) are negatives. Remaining cheap mechanical lead is further 2-character edits on NBSP/line-ending pairs, including on the other 1-character bases. Block 76: a community-found candidate pair satisfies both published MD5-prefix hints but no standard derivation of it reaches the address; the escrow was swept by a reader on 2026-08-17",
+      "difficulty_note": "Real Big Block: the transform and the case-flip rule are confirmed exactly on a solved sibling lot; what is missing is the precise source text the author hashed on 2019-07-30. She removed one twist that day and kept at least one, and later wrote that she lost the solution herself. Every contiguous paragraph span (1,469,908 texts), a bounded 2-edit slice on the full chapter (221,520 texts), every pair of boundary edits on 16 certified bases (48,379,696 texts) and the rule the chapter dictates itself are negatives. The reader who swept Block 76 on 2026-08-17 holds the convention of a final Aoi block, which is the cheapest calibration left",
       "tested_total": {
-        "candidates": 350017921,
-        "families": 28,
+        "candidates": 398397713,
+        "families": 34,
         "certified": true
       },
       "leads": [
         {
           "rank": 1,
-          "title": "a bounded 2-character-edit sweep on the strongest base texts",
-          "cost": "about an hour on a rented GPU",
+          "title": "ask the Block 76 solver for the serialization, index and twist convention of a final Aoi block",
+          "cost": "needs-a-person",
           "status": "open"
         },
         {
           "rank": 2,
+          "title": "a bounded 2-character-edit sweep on the strongest base texts, outside the two families already swept",
+          "cost": "about an hour on a rented GPU",
+          "status": "open"
+        },
+        {
+          "rank": 3,
           "title": "a non-uniform 2019 editor buffer, or a non-contiguous selection",
           "cost": "needs a narrower reason before a search",
           "status": "open"
         },
         {
-          "rank": 3,
-          "title": "identify what 76 indexes for Block 76",
-          "cost": "minutes per candidate corpus",
-          "status": "open"
-        },
-        {
           "rank": 4,
-          "title": "a short, human-reasoned answer to change to / from change to",
-          "cost": "minutes per candidate",
+          "title": "all 2-character edits at all positions of the 8 certified bases on a rented GPU",
+          "cost": "4 to 5 GPU-hours, low expected value",
           "status": "open"
         }
       ],
@@ -159,6 +159,18 @@
           "archived": null
         },
         {
+          "title": "[777 mbtc] Quizchain last block, r/Grycoin, with the 2019-07-30 update on the removed twist",
+          "url": "https://www.reddit.com/r/Grycoin/comments/cgkpbb/777_mbtc_quizchain_last_block/",
+          "date": "2019-07-22",
+          "archived": null
+        },
+        {
+          "title": "Starting Up, Wattpad part by AoiNakamoto: the author lost the solution",
+          "url": "https://www.wattpad.com/762380140",
+          "date": "2019-07-23",
+          "archived": null
+        },
+        {
           "title": "Real Big Block escrow funding transaction",
           "url": "https://mempool.space/tx/a1916e7ed9eac3fcc56a55056328cb09d06925e2694f2e6720de12b228514d1f",
           "date": "2019-07-30",
@@ -178,7 +190,7 @@
         }
       ],
       "third_party_material": "no book, chapter text, forum dump, or other bulk third-party material is included; the Wattpad chapter (the author's own fiction) and Hal Finney's bitcointalk post (third-party historical content) are both referenced by URL only, never reproduced; quotes in clues/author-posts.md are short excerpts from the puzzle author's own public Reddit posts",
-      "last_updated": "2026-08-27",
+      "last_updated": "2026-09-03",
       "folder": "1-big-prizes/aoi-nakamoto-quizchain-0-854btc"
     },
     {
@@ -516,10 +528,10 @@
         "certified_against": "the raw priv=1 P2PKH vectors, the public BIP39 all-zero-entropy test vector, and a public old-Electrum v1 test vector, since no solved sibling exists for this puzzle"
       },
       "difficulty_left": "insight",
-      "difficulty_note": "the derivation, both candidate formats, and every path are fully mapped and oracle-certified; on the order of 30 million derivations have been tested across anchor-based and anchor-free families, all negative; the 4 word-position anchors that framed nearly all of that work trace to 2 Reddit accounts with zero posts about this puzzle and are retracted here, so what remains open is the 12-word input, not compute or path coverage",
+      "difficulty_note": "the derivation, both candidate formats, and every path are fully mapped and oracle-certified; about 479 million derivations have been tested across anchor-based and anchor-free families (including 7.2 billion GPU sequences over a 13-word pool with no fixed positions), all negative; the 4 word-position anchors that framed nearly all of that work trace to 2 Reddit accounts with zero posts about this puzzle and are retracted here, so what remains open is the 12-word input, not compute or path coverage",
       "tested_total": {
-        "candidates": 30000000,
-        "families": 10,
+        "candidates": 479054867,
+        "families": 14,
         "certified": true
       },
       "leads": [
@@ -578,7 +590,7 @@
         }
       ],
       "third_party_material": "the collage image in clues/ is the author's own published puzzle material, posted once on Reddit; no other author material exists; community forum discussion is cited by URL and date only, never reproduced",
-      "last_updated": "2026-08-16",
+      "last_updated": "2026-09-03",
       "folder": "1-big-prizes/blm-brave-new-world-0-2btc"
     },
     {
@@ -602,31 +614,31 @@
       },
       "chain": "bitcoin",
       "prize": {
-        "amount": 5.0068982,
+        "amount": 1.2563451,
         "asset": "BTC",
-        "usd_estimate": 315435,
+        "usd_estimate": 79150,
         "usd_snapshot": "2026-08-16",
-        "note": "two addresses: 1.2563451 BTC at 1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe (originally funded with 5 BTC on 2019-04-13, partially spent to the second address below) and 3.7505531 BTC at 17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa (first funded 2020-05-11, entirely from the first address's own funds, never spent)"
+        "note": "the balance of the prize address 1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe at the 2026-08-16 snapshot (1.25635374 BTC on 2026-09-03, the difference is third-party dust). The creator announced in April 2019 that the reward halves at every Bitcoin halving, and it did: 5 BTC funded 2019-04-13, 2.5 BTC moved out in block 630001 (2020-05-11) and 1.25 BTC on 2024-04-24 to 17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa, which has never spent and has no published payout path. Those 3.7505531 BTC are listed as an address below but not counted as prize; the reading that the Dualite blob gates them is unconfirmed. Correction contributed by Y0lan in issue #15 (2026-09-02), verified on chain 2026-09-03"
       },
       "addresses": [
         {
           "address": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
           "chain": "bitcoin",
           "role": "escrow",
-          "label": "small blob gate",
+          "label": "prize address (small blob gate)",
           "explorer": "https://mempool.space/address/1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
-          "expected": "125634510 sats",
-          "verified_on": "2026-08-16",
+          "expected": "125635374 sats",
+          "verified_on": "2026-09-03",
           "verified_state": "partially-spent"
         },
         {
           "address": "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
           "chain": "bitcoin",
           "role": "escrow",
-          "label": "Dualite blob gate",
+          "label": "halving split-off, creator controlled; not counted as prize (the Dualite-blob reading is unconfirmed)",
           "explorer": "https://mempool.space/address/17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
-          "expected": "375055310 sats",
-          "verified_on": "2026-08-16",
+          "expected": "375055856 sats",
+          "verified_on": "2026-09-03",
           "verified_state": "funded-unspent"
         }
       ],
@@ -636,7 +648,7 @@
         "web-tree",
         "raw-private-key"
       ],
-      "target_format": "candidate answer string X; password = sha256(X) hex; decrypts an OpenSSL Salted__ AES-256-CBC blob printed on the final page; plaintext reduces to a 32-byte private key; uncompressed secp256k1 public key; P2PKH address",
+      "target_format": "candidate answer string X; password = sha256(X) hex (the creator's stated convention, EVP key derivation on SHA-256); decrypts one of two OpenSSL Salted__ AES-256-CBC blobs of 80 ciphertext bytes (the SalPhaseIon small blob, or the phase 3.2.2 blob); plaintext reduces to a 32-byte private key; uncompressed secp256k1 public key; P2PKH address. Separately, the creator planted one P2PKH address per stage answer (key = sha256 of the answer, or its raw bytes); one such address has no known preimage and is an exact offline oracle for the third door",
       "derivation": {
         "summary": "candidate answer to sha256 password to AES-256-CBC decrypt of the small final-page blob to a 32-byte private key (one of 4 standard readings of the plaintext) to uncompressed P2PKH address",
         "oracle": "tools/oracle.py",
@@ -644,51 +656,45 @@
         "certified_against": "two independent parts: the escrow's own on-chain public key (from its 2024-04-24 spending transaction) hashes byte-exact to its address; a self-made OpenSSL-compatible AES-256-CBC round trip decrypts correctly with the right password and produces no valid padding with a wrong one. No end-to-end vector exists because X is unsolved."
       },
       "difficulty_left": "insight",
-      "difficulty_note": "the stage chain to the final page is fully solved and reproducible; the 256-symbol object the puzzle's own Bifid step produces has been tested as a direct 32-byte key reduction across roughly 335.7 million candidates with 0 match; the small blob's AES-decrypt pipeline is certified but no password has been found; a further 116,043-candidate replay of historical literal password guesses is also negative and explicitly partial (dynamically-constructed candidates from the same scripts were never replayed); the larger Dualite blob, which likely gates the second address, has never had any password tested against it",
+      "difficulty_note": "the stage chain to the final page is fully solved and replays from archived material with the creator's own convention (password = sha256 of the answer); the 256-symbol object has been tested as a direct 32-byte key reduction across roughly 335.7 million candidates with 0 match; both 80-byte locks (SalPhaseIon small blob and the 2019 phase 3.2.2 blob) are negative for every word sequence of every puzzle text and of the three Matrix films, for stage answers and digests, interleavings and iterated hashes (about 25.8 million decryptions with witnesses); the creator's unmessaged planted address of 2020-04-07, the third door, is negative for every textual construction (about 62 million candidates with witnesses); the community's decrypted Cosmic Duality is a padding accident; what would open the third door is a rule of the creator's from early 2020 read on a non-textual object",
       "tested_total": {
-        "candidates": 337199235,
-        "families": 10,
+        "candidates": 399847172,
+        "families": 17,
         "certified": true
       },
       "leads": [
         {
           "rank": 1,
-          "title": "re-run anything tested through the shipped oracle, whose key derivation was wrong until 2026-08-19",
-          "cost": "cost of the original sweep",
+          "title": "the third door: the preimage of the creator's unmessaged planted address of 2020-04-07, an exact offline oracle",
+          "cost": "seconds per family",
           "status": "open"
         },
         {
           "rank": 2,
-          "title": "the small blob is published on the SalPhaseIon page, whose own text names its password",
-          "cost": "hours",
+          "title": "every password against both 80-byte locks, plaintexts read 40 ways",
+          "cost": "seconds per family",
           "status": "open"
         },
         {
           "rank": 3,
-          "title": "replay the dynamically-constructed candidates a filter bug never reached",
+          "title": "replay the dynamically-constructed candidates a filter bug never reached, now against both locks and the third door",
           "cost": "hours-to-days",
           "status": "open"
         },
         {
           "rank": 4,
-          "title": "determine whether the 256-symbol object is the right target at all",
-          "cost": "hours",
-          "status": "open"
-        },
-        {
-          "rank": 5,
           "title": "identify the single tool reportedly used to build every phase",
           "cost": "hours",
           "status": "open"
         },
         {
-          "rank": 6,
-          "title": "follow esrever, the earliest published hint",
+          "rank": 5,
+          "title": "follow esrever on the remaining objects (explained for the image URL)",
           "cost": "minutes-to-hours",
           "status": "open"
         },
         {
-          "rank": 7,
+          "rank": 6,
           "title": "read the 29 dropped letters as their own message",
           "cost": "minutes",
           "status": "open"
@@ -722,6 +728,18 @@
           "archived": null
         },
         {
+          "title": "OP_RETURN \"Halving\" from the creator's vanity address, same block as the first split",
+          "url": "https://mempool.space/tx/a798905f53fdcadcbd2e2a1e61d23ba69a07e26130a78c76da4bf4d7a170f383",
+          "date": "2020-05-11",
+          "archived": null
+        },
+        {
+          "title": "Issue #15, Y0lan: prize is 1.25 BTC, not 5.0068982 BTC",
+          "url": "https://github.com/floflo777/open-crypto-puzzles/issues/15",
+          "date": "2026-09-02",
+          "archived": null
+        },
+        {
           "title": "bitcointalk topic 5532424",
           "url": "https://bitcointalk.org/index.php?topic=5532424.0",
           "date": "2025-02-18",
@@ -732,10 +750,22 @@
           "url": "https://github.com/puzzlehunt/gsmgio-5btc-puzzle",
           "date": "2026-08-16",
           "archived": null
+        },
+        {
+          "title": "Phase 2 and Phase 3 page with the creator's cipher convention",
+          "url": "https://gsmg.io/choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself",
+          "date": "2020-11-12",
+          "archived": "https://web.archive.org/web/20201112015439/https://gsmg.io/choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself"
+        },
+        {
+          "title": "The creator's vanity wallet that funded the planted addresses",
+          "url": "https://mempool.space/address/3GSMG24TujqfMJG1kQoBX18DzJHQLeJYMK",
+          "date": "2026-09-03",
+          "archived": null
         }
       ],
-      "third_party_material": "no book, article, forum dump, or other bulk third-party material is included; the 2 short strings quoted in clues/author-posts.md are verbatim decodings of the puzzle's own published page content; no Telegram export is quoted, since the puzzle's Telegram group has no stable public URL",
-      "last_updated": "2026-08-19",
+      "third_party_material": "no book, article, forum dump, or other bulk third-party material is included; the short strings quoted in clues/author-posts.md are verbatim decodings of the puzzle's own published page content, two lines of the creator's archived Phase 2 and 3 page, and the creator's own OP_RETURN messages read from the chain; no Telegram export is quoted, since the puzzle's Telegram group has no stable public URL, and the few Telegram statements referred to are marked reported",
+      "last_updated": "2026-09-03",
       "folder": "1-big-prizes/gsmg-io-5btc-puzzle"
     },
     {
@@ -2587,35 +2617,35 @@
         "certified_against": "the public BIP39/BIP84 test vector (mnemonic 'abandon' repeated 11 times plus 'about'), since no solved sibling exists for this puzzle"
       },
       "difficulty_left": "insight",
-      "difficulty_note": "the derivation is fully understood and the mechanical and structural search space is thoroughly mapped (669,858 positional readings, 479,001,600 orderings of the 12 dotless tokens, 572,368 semantic selections, 105 intrinsic-property criteria, 36 acrostic selections, all negative); the selection rule is described by the author as short, memorable, and meant to be spoken aloud to a trusted person, which argues the missing piece is an unrecovered insight or a fact only the author has stated, not more compute",
+      "difficulty_note": "the derivation is fully understood and the mechanical and structural search space is thoroughly mapped (669,858 positional readings, 479,001,600 orderings of the 12 dotless tokens, 572,368 semantic selections, 105 intrinsic-property criteria, 36 acrostic selections, all negative). The author wrote on 2023-06-27 that all the words but two are in order and that the lock is which 12 words; under that order model every candidate set produced so far (2,084,778 distinct sets, 468 million sequences, 29.2 million checksum-valid derivations) is negative with witnesses. The selection rule is described by the author as short, memorable, and meant to be spoken aloud to a trusted person, which argues the missing piece is a fact only the author has stated, not more compute",
       "tested_total": {
-        "candidates": 480243967,
-        "families": 5,
+        "candidates": 509479179,
+        "families": 6,
         "certified": false
       },
       "leads": [
         {
           "rank": 1,
-          "title": "write to the author",
+          "title": "write to the author: are the two out-of-order words swapped or moved, and is the spoken cipher about positions or meaning",
           "cost": "needs-a-person",
           "status": "open"
         },
         {
           "rank": 2,
-          "title": "submit argued candidate 12-word orderings (the order-not-selection reading)",
+          "title": "a new selection family, replayed under reading order with two words out of place",
           "cost": "minutes",
           "status": "open"
         },
         {
           "rank": 3,
-          "title": "the two-tokens-per-row bounded sweep",
-          "cost": "hours",
+          "title": "the double-width gap after mad, and the 369-clock theme",
+          "cost": "needs-new-information",
           "status": "open"
         },
         {
           "rank": 4,
-          "title": "the double-width gap after mad, and the 369-clock theme",
-          "cost": "needs-new-information",
+          "title": "two tokens per row under the corrected order model (about 3.5 GPU-days, needs a row rule first)",
+          "cost": "days",
           "status": "open"
         }
       ],
@@ -2646,10 +2676,28 @@
           "url": "https://njump.me/npub1dpna3xwwddnhhzg9ycpvlcz2ze0jdwm2rf3eqd2lf9leaewtq7tqhw0ef2",
           "date": "2026-08-16",
           "archived": null
+        },
+        {
+          "title": "Keysa, reply: all the words but two, are in order",
+          "url": "https://x.com/SimplestBTCBook/status/1673685712498049025",
+          "date": "2023-06-27",
+          "archived": null
+        },
+        {
+          "title": "Keysa, reply: one still wouldn't know which of all those words are the 12",
+          "url": "https://x.com/SimplestBTCBook/status/1673683632546873344",
+          "date": "2023-06-27",
+          "archived": null
+        },
+        {
+          "title": "Keysa, reply: these are all BIP 39 words, because the anon set would decrease",
+          "url": "https://x.com/SimplestBTCBook/status/1673720563318112256",
+          "date": "2023-06-27",
+          "archived": null
         }
       ],
       "third_party_material": "the two card images in clues/ are the author's own published puzzle material, posted on X and mirrored on nostr.build; her book and workshop materials are not included and are referenced by title only",
-      "last_updated": "2026-08-16",
+      "last_updated": "2026-09-03",
       "folder": "2-mid-prizes/keysa-crack-the-seed-369ksats"
     },
     {
@@ -3813,7 +3861,8 @@
       "author": {
         "name": "klems",
         "handles": [
-          "nostr:npub10q5dpm5p05a0g3vtgcl76wv0pc4t820f5fj8qmpfaa4umv6404xqvwzvp0"
+          "nostr:npub10q5dpm5p05a0g3vtgcl76wv0pc4t820f5fj8qmpfaa4umv6404xqvwzvp0",
+          "x:@cryptop1r4t3"
         ],
         "url": "https://bitcoinmovieenigma.com"
       },
@@ -3837,7 +3886,7 @@
           "label": "main",
           "explorer": "https://mempool.space/address/bc1q94ecsn0qk8lap2gefrycnms3ruepy889z969a6",
           "expected": "100000 sats",
-          "verified_on": "2026-08-27",
+          "verified_on": "2026-09-01",
           "verified_state": "funded-unspent"
         }
       ],
@@ -3854,10 +3903,10 @@
         "certified_against": "the public BIP39/BIP84 test vectors (12-word and 24-word 'abandon' vectors), since no solved sibling exists for this puzzle"
       },
       "difficulty_left": "insight",
-      "difficulty_note": "the derivation is bounded and fast once the inputs are known; all 34 films now have an identification (nine previously disputed panels were checked against the published stills on 2026-08-27 and follow the community list). A unique BIP39 4-letter prefix scan of each compact title yields a word for 33 of 34 titles; only The Goonies has none. The remaining gate is that Goonies word plus the IMDb field that drops 10 of the 34 words. Certificate G/PG/TV-14 was tested through the oracle (55,296 raw strings, 227 checksum-valid, 0 match, uncertified)",
+      "difficulty_note": "the derivation is bounded and fast once the inputs are known; all 34 films now have an identification (community list checked against the stills by AppleLamps on 2026-08-27, panel 14 settled by a frame match on 2026-09-03). A unique BIP39 4-letter prefix scan of each compact title yields a word for 33 of 34 titles; only The Goonies has none. The remaining gate is that Goonies word plus the IMDb field that drops 10 of the 34 words; three fields split the list exactly (Kubrick x5 plus Jean Reno x5, year 2000 or later, year before 1980), and 12 sweeps of the mechanical readings of both rules on the consensus list (1.7e10 raw candidates, 69 million derivations, 5 of 12 runs witnessed) are negative",
       "tested_total": {
-        "candidates": 55296,
-        "families": 8,
+        "candidates": 69234511,
+        "families": 20,
         "certified": false
       },
       "leads": [
@@ -3869,12 +3918,24 @@
         },
         {
           "rank": 2,
+          "title": "Kubrick x5 plus Jean Reno x5 as the intruders, two free positions (panels 8 and 26, or 8 and 32)",
+          "cost": "minutes",
+          "status": "open"
+        },
+        {
+          "rank": 3,
           "title": "find the IMDb field that splits 24 keepers from 10 intruders",
           "cost": "needs-new-information",
           "status": "open"
         },
         {
-          "rank": 3,
+          "rank": 4,
+          "title": "regional IMDb titles and AKAs for The Goonies, Sharknado and Raiders (issue #9, couldes)",
+          "cost": "hours",
+          "status": "open"
+        },
+        {
+          "rank": 5,
           "title": "re-check panels 9, 13 and 24 against the issue #9 sources",
           "cost": "needs-a-person",
           "status": "open"
@@ -3900,10 +3961,28 @@
           "url": "https://bitcoinmovieenigma.com/wallet",
           "date": "2026-08-16",
           "archived": null
+        },
+        {
+          "title": "klems, Nostr launch note with the rules",
+          "url": "https://njump.me/48fbbff9845680b463784d5ddfdc5907a953b3f4df9e0e49a97d6eb123d52145",
+          "date": "2024-01-03",
+          "archived": null
+        },
+        {
+          "title": "klems, X account @cryptop1r4t3, first launch of the same 34 stills",
+          "url": "https://x.com/cryptop1r4t3",
+          "date": "2022-04-08",
+          "archived": null
+        },
+        {
+          "title": "deviceio121, issue #9: MGM's official The Man in the Iron Mask clip, 2:18 frame is panel 14",
+          "url": "https://www.youtube.com/watch?v=3PcEZNC7IPw",
+          "date": "2026-08-29",
+          "archived": null
         }
       ],
       "third_party_material": "the 34 movie panels are individual frames from third-party films, not original material by the author; I do not reproduce them here and link to the author's still-live site instead",
-      "last_updated": "2026-08-27",
+      "last_updated": "2026-09-03",
       "folder": "3-small-prizes/bitcoin-movie-enigma-100ksats"
     },
     {

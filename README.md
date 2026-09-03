@@ -13,11 +13,11 @@ on-chain right now.
 <!-- totals:start -->
 | Asset | Locked in unsolved puzzles | Approx. value |
 |---|---|---|
-| Bitcoin | 9.72 BTC | $612,000 |
+| Bitcoin | 5.97 BTC | $376,000 |
 | Ethereum | 13.21 ETH | $25,000 |
 | Arweave | 1,900 AR | $3,400 |
 | Stablecoins | 306 USDT + 0 USDC | $300 |
-| **Total** | **across 32 funded puzzles** | **$641,000** |
+| **Total** | **across 32 funded puzzles** | **$404,000** |
 
 Checked 2026-08-16 at BTC $63,000, ETH $1,880, AR $1.81. Prices and balances move; verify each escrow yourself.
 <!-- totals:end -->
@@ -61,7 +61,7 @@ grouped by prize, is in the tables below.
 | [Keir Finlow-Bates: book treasure hunt](2-mid-prizes/keir-finlow-bates-blockchain-book-600ksats/) | 600,000 sats open, 4 lots solved | I solved 4 of its 12 lots; the write-ups show exactly how the author hides a key, which is the strongest lead for the 3 still open. |
 | [Corey Phillips: kitten passphrase](2-mid-prizes/corey-phillips-kitten-passphrase-1msats/) | 0.01 BTC | The seed is fixed and public; only one BIP39 passphrase is missing. A clean, bounded target to point a tool at. |
 | [Keysa: Crack the Seed](2-mid-prizes/keysa-crack-the-seed-369ksats/) | 369,369 sats | Seventy words are printed on a card; twelve of them are the seed. The whole puzzle is picking the right twelve in the right order. |
-| [GSMG.io puzzle](1-big-prizes/gsmg-io-5btc-puzzle/) | up to 5 BTC | A famous multi-stage hunt; every stage but the last is solved. The final gate is two sealed AES blobs. |
+| [GSMG.io puzzle](1-big-prizes/gsmg-io-5btc-puzzle/) | 1.25 BTC | A famous multi-stage hunt; every stage but the last is solved. The final gate is two sealed AES blobs. |
 | [Guntis Vitolins MetaMask seed](1-big-prizes/guntis-vitolins-metamask-8-6eth/) | 8.61 ETH | The largest prize here. A 12-word seed scattered across the author's own clues. |
 | [Ballet / Bobby Lee cards](1-big-prizes/ballet-bobby-lee-2btc-cards/) | 2 BTC | Two physical Ballet cards, 1 BTC each. Each needs one hidden half that was never photographed. |
 | [Aoi Nakamoto Quizchain](1-big-prizes/aoi-nakamoto-quizchain-0-854btc/) | 0.854 BTC | The key comes from a Wattpad chapter run through MD5. The rule is certified on a solved sibling block. |
@@ -75,10 +75,10 @@ grouped by prize, is in the tables below.
 ## Big prizes (>= $10,000)
 | Puzzle | Prize | USD | Chain | Type | What remains | Escrow checked | Status |
 |---|---|---|---|---|---|---|---|
-| [GSMG.io Puzzle](1-big-prizes/gsmg-io-5btc-puzzle/) | 5.0068982 BTC | 315,435 | bitcoin | text-cipher, pixel-code, web-tree, raw-private-key | insight | 2026-08-16 | open |
 | [Ballet / Bobby Lee: Take Bobby's Bitcoin](1-big-prizes/ballet-bobby-lee-2btc-cards/) | 2.00007358 BTC | 126,005 | bitcoin | bip38, physical-object | external-info | 2026-08-16 | open |
-| [Bitaps Shamir Secret Sharing Challenge](1-big-prizes/bitaps-shamir-challenge-1btc/) | 1.00016775 BTC | 63,011 | bitcoin | shamir, bip39-seed | external-info | 2026-08-16 | open |
-| [Aoi Nakamoto Quizchain](1-big-prizes/aoi-nakamoto-quizchain-0-854btc/) | 0.777 BTC | 48,951 | bitcoin | bip39-seed, word-selection | external-info | 2026-08-21 | open |
+| [GSMG.io Puzzle](1-big-prizes/gsmg-io-5btc-puzzle/) | 1.2563451 BTC | 79,150 | bitcoin | text-cipher, pixel-code, web-tree, raw-private-key | insight | 2026-09-03 | open |
+| [Bitaps Shamir Secret Sharing Challenge](1-big-prizes/bitaps-shamir-challenge-1btc/) | 1.00016775 BTC | 63,011 | bitcoin | shamir, bip39-seed | external-info | 2026-08-28 | open |
+| [Aoi Nakamoto Quizchain](1-big-prizes/aoi-nakamoto-quizchain-0-854btc/) | 0.777 BTC | 48,951 | bitcoin | bip39-seed, word-selection | external-info | 2026-08-27 | open |
 | [Peter Todd Hash Collision Bounties](1-big-prizes/peter-todd-hash-collision-bounties-0-59btc/) | 0.59364885 BTC | 37,400 | bitcoin | hash-collision | research-breakthrough | 2026-08-16 | watch |
 | [Guntis Vitolins: 10 ETH Challenge](1-big-prizes/guntis-vitolins-metamask-8-6eth/) | 8.612541554256945 ETH | 16,192 | ethereum | bip39-seed, word-selection, video-series | bounded-compute | 2026-08-16 | open |
 | [BLM Collage: Welcome to the Brave New World](1-big-prizes/blm-brave-new-world-0-2btc/) | 20,107,284 sats | 12,668 | bitcoin | image-stego, word-selection, bip39-seed, text-cipher | insight | 2026-08-16 | open |
@@ -102,7 +102,7 @@ grouped by prize, is in the tables below.
 | [AH White: Walking Banks](2-mid-prizes/ah-white-walking-banks-800ksats/) | 800,000 sats | 504 | bitcoin | bip39-seed, book, text-cipher | external-info | 2026-08-16 | open |
 | [Keir Finlow-Bates: Move Over Brokers Treasure Hunt](2-mid-prizes/keir-finlow-bates-blockchain-book-600ksats/) | 600,000 sats | 378 | bitcoin | book, brainwallet, text-cipher | human-action | 2026-09-01 | open |
 | [Zden Cryptopuzzle LVL.5](2-mid-prizes/zden-haluska-lvl5-555ksats/) | 555,550 sats | 350 | bitcoin | geometry, raw-private-key | external-info | 2026-08-16 | open |
-| [FTPK Season 2: Never-Ending](2-mid-prizes/ftpk-season-2-300usdt/) | 305.930218 USDT | 306 | ethereum | bip39-seed, word-selection | insight | 2026-08-16 | open |
+| [FTPK Season 2: Never-Ending](2-mid-prizes/ftpk-season-2-300usdt/) | 305.930218 USDT | 306 | ethereum | bip39-seed, word-selection | insight | 2026-08-27 | open |
 | [Andy Bauch: New Money, COG](2-mid-prizes/andy-bauch-new-money-cog-428ksats/) | 428,206 sats | 270 | bitcoin | pixel-code, physical-object | external-info | 2026-08-16 | open |
 | [Keysa: Crack the Seed Game](2-mid-prizes/keysa-crack-the-seed-369ksats/) | 369,369 sats | 233 | bitcoin | bip39-seed, word-selection | insight | 2026-08-16 | open |
 | [Zden Level HALV](2-mid-prizes/zden-haluska-halv-312ksats/) | 312,500 sats | 197 | bitcoin | geometry, raw-private-key | external-info | 2026-08-16 | open |
@@ -113,7 +113,7 @@ grouped by prize, is in the tables below.
 |---|---|---|---|---|---|---|---|
 | [Crypto Puzzles 2018: Puzzle #2](3-small-prizes/crypto-puzzles-2018-puzzle-2-0-05eth/) | 0.05 ETH | 94 | ethereum | raw-private-key, image-stego, video-series | external-info | 2026-08-16 | open |
 | [Genesis Block Wallet Puzzle](3-small-prizes/genesis-block-wallet-puzzle-142ksats/) | 142,779 sats | 90 | bitcoin | multisig, raw-private-key | insight | 2026-08-29 | open |
-| [Bitcoin Movie Enigma](3-small-prizes/bitcoin-movie-enigma-100ksats/) | 100,000 sats | 63 | bitcoin | bip39-seed, text-cipher, word-selection | insight | 2026-08-16 | open |
+| [Bitcoin Movie Enigma](3-small-prizes/bitcoin-movie-enigma-100ksats/) | 100,000 sats | 63 | bitcoin | bip39-seed, text-cipher, word-selection | insight | 2026-09-01 | open |
 | [Exitonly Bitcoin Challenge 14](3-small-prizes/exitonly-challenge-14-30ksats/) | 30,000 sats | 18.90 | bitcoin | bip39-seed, word-selection | uneconomic | 2026-08-16 | open |
 
 ## Solved and cashed
