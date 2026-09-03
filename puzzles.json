@@ -51,7 +51,7 @@
           "label": "Real Big Block, stage 2",
           "explorer": "https://mempool.space/address/14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W",
           "expected": "77700000 sats",
-          "verified_on": "2026-08-21",
+          "verified_on": "2026-08-27",
           "verified_state": "funded-unspent"
         },
         {
@@ -87,39 +87,33 @@
         "certified_against": "the author's own published calibration vector (entropy 2941774a2abec9f30c7d6777d1d53d91 to WIF L5Z66qPm... at BIP44 index 1), self-contained and exact; the case-flip rule and Block 76 prefix filter are certified separately with a synthetic example and a community-found candidate pair; full reproduction of the solved sibling lot Block 77 Stage One needs Hal Finney's bitcointalk post text, which this repository does not ship (third-party content), but which anyone can supply themselves to apply_stage_one_rule()"
       },
       "difficulty_left": "external-info",
-      "difficulty_note": "Real Big Block: the transform and the case-flip rule are confirmed exactly on a solved sibling lot; what is missing is the precise source text the author hashed on 2019-07-30, most likely the 2019 browser-rendered copy of a Wattpad chapter rather than today's API storage, which has been normalized; approximately 272 million candidate paragraph selections and edits tested, 0 match. Block 76: a community-found candidate pair satisfies both published MD5-prefix hints but no standard derivation of it reaches the address; roughly 78 million scripted derivations plus tens of thousands of thematic word-transform candidates tested, 0 match; the block may be a short human-reasoned wordplay riddle rather than a search problem, or may be misconfigured",
+      "difficulty_note": "Real Big Block: the transform and the case-flip rule are confirmed exactly on a solved sibling lot; what is missing is the precise source text the author hashed on 2019-07-30. Every contiguous paragraph span (1,469,908 texts) and a bounded 2-edit slice on the full chapter (221,520 texts) are negatives. Remaining cheap mechanical lead is further 2-character edits on NBSP/line-ending pairs, including on the other 1-character bases. Block 76: a community-found candidate pair satisfies both published MD5-prefix hints but no standard derivation of it reaches the address; the escrow was swept by a reader on 2026-08-17",
       "tested_total": {
-        "candidates": 350000000,
-        "families": 21,
+        "candidates": 350017921,
+        "families": 28,
         "certified": true
       },
       "leads": [
         {
           "rank": 1,
-          "title": "reconstruct the 2019 browser-copy rendering of the Wattpad chapter",
-          "cost": "hours",
-          "status": "open"
-        },
-        {
-          "rank": 2,
-          "title": "read the 27 posts and comments between the rehash and the shutdown",
-          "cost": "about an hour",
-          "status": "open"
-        },
-        {
-          "rank": 3,
           "title": "a bounded 2-character-edit sweep on the strongest base texts",
           "cost": "about an hour on a rented GPU",
           "status": "open"
         },
         {
-          "rank": 4,
+          "rank": 2,
+          "title": "a non-uniform 2019 editor buffer, or a non-contiguous selection",
+          "cost": "needs a narrower reason before a search",
+          "status": "open"
+        },
+        {
+          "rank": 3,
           "title": "identify what 76 indexes for Block 76",
           "cost": "minutes per candidate corpus",
           "status": "open"
         },
         {
-          "rank": 5,
+          "rank": 4,
           "title": "a short, human-reasoned answer to change to / from change to",
           "cost": "minutes per candidate",
           "status": "open"
@@ -153,6 +147,18 @@
           "archived": null
         },
         {
+          "title": "Wattpad Nightmode userstyle, copies generic pre { white-space: pre-wrap }",
+          "url": "https://github.com/uso-archive/data/blob/master/data/usercss/170148.user.css",
+          "date": "2019-08-15",
+          "archived": null
+        },
+        {
+          "title": "Common Crawl CC-MAIN-2019-30 Wattpad homepage (CSS URL v=eb03e30)",
+          "url": "https://index.commoncrawl.org/CC-MAIN-2019-30-index?url=www.wattpad.com/&output=json",
+          "date": "2019-07-15",
+          "archived": null
+        },
+        {
           "title": "Real Big Block escrow funding transaction",
           "url": "https://mempool.space/tx/a1916e7ed9eac3fcc56a55056328cb09d06925e2694f2e6720de12b228514d1f",
           "date": "2019-07-30",
@@ -172,7 +178,7 @@
         }
       ],
       "third_party_material": "no book, chapter text, forum dump, or other bulk third-party material is included; the Wattpad chapter (the author's own fiction) and Hal Finney's bitcointalk post (third-party historical content) are both referenced by URL only, never reproduced; quotes in clues/author-posts.md are short excerpts from the puzzle author's own public Reddit posts",
-      "last_updated": "2026-08-21",
+      "last_updated": "2026-08-27",
       "folder": "1-big-prizes/aoi-nakamoto-quizchain-0-854btc"
     },
     {
@@ -353,7 +359,7 @@
           "label": "main",
           "explorer": "https://mempool.space/address/bc1qyjwa0tf0en4x09magpuwmt2smpsrlaxwn85lh6",
           "expected": "1.00016775 BTC (100,016,775 sats)",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-08-28",
           "verified_state": "funded-unspent"
         }
       ],
@@ -369,22 +375,22 @@
         "certified_against": "public BIP84 test vector (abandon x11 + about) and a synthetic 3-of-5 GF(256) split/reconstruct round trip; no solved sibling exists for this puzzle"
       },
       "difficulty_left": "external-info",
-      "difficulty_note": "residual entropy is about 125 bits after every constraint I could establish (duplicate-value coefficient rejection plus a real defect in the deployed 2020 generator's entropy check); no third Shamir share has surfaced in the public record; what would close this is that missing share, or a disclosed constraint on it, not compute",
+      "difficulty_note": "residual entropy is about 125 bits after every constraint I could establish (duplicate-value coefficient rejection plus a real defect in the deployed 2020 generator's entropy check); no third Shamir share has surfaced in the public record, including same-day Reddit and Telegram copies, the 2020-07-04 Common Crawl body, archive.today, live mirrors, and 13 GitHub forks of mnemonic-offline-tool; the published zpub is a BIP84 account key and its 0/0 child is the escrow; what would close this is that missing share, or a disclosed constraint on it, not compute",
       "tested_total": {
-        "candidates": 14,
-        "families": 4,
+        "candidates": 394191,
+        "families": 10,
         "certified": true
       },
       "leads": [
         {
           "rank": 1,
-          "title": "the 15-day archive gap, 2020-06-19 to 2020-07-04, uncovered by Wayback or Common Crawl",
+          "title": "the unpublished 3rd share; same-day copies, the 2020-07-04 Common Crawl body, and later archives all show only the original 2 shares",
           "cost": "hours",
           "status": "open"
         },
         {
           "rank": 2,
-          "title": "uncertified channels: archive.today, Memento TimeTravel, X replies to @bitaps_com, GitHub forks, Telegram",
+          "title": "Memento TimeTravel still unreachable; X reply tree beyond the 3 replies returned with the announcement",
           "cost": "hours",
           "status": "open"
         }
@@ -399,8 +405,32 @@
           "archived": "https://web.archive.org/web/20230328022959/https://bitaps.com/mnemonic/challenge"
         },
         {
+          "title": "Common Crawl CC-MAIN-2020-29 challenge page (challenge.warc)",
+          "url": "https://bitaps.com/mnemonic/challenge",
+          "date": "2020-07-04",
+          "archived": null
+        },
+        {
+          "title": "archive.today snapshot of the challenge page",
+          "url": "https://archive.is/8bNRM",
+          "date": "2021-06-20",
+          "archived": "https://archive.is/8bNRM"
+        },
+        {
           "title": "Bitaps announcement",
           "url": "https://x.com/bitaps_com/status/1274018817304379394",
+          "date": "2020-06-19",
+          "archived": null
+        },
+        {
+          "title": "Bitaps Reddit copy, r/Bitcoin hc4bfk",
+          "url": "https://www.reddit.com/r/Bitcoin/comments/hc4bfk/1_btc_cryptographic_challenge_with_splitted/",
+          "date": "2020-06-19",
+          "archived": "https://web.archive.org/web/20230611002230/https://old.reddit.com/r/Bitcoin/comments/hc4bfk/1_btc_cryptographic_challenge_with_splitted/"
+        },
+        {
+          "title": "Bitaps Telegram copy",
+          "url": "https://t.me/bitapscom/15",
           "date": "2020-06-19",
           "archived": null
         },
@@ -425,12 +455,12 @@
         {
           "title": "mempool.space, escrow address",
           "url": "https://mempool.space/address/bc1qyjwa0tf0en4x09magpuwmt2smpsrlaxwn85lh6",
-          "date": "2026-08-16",
+          "date": "2026-08-28",
           "archived": null
         }
       ],
       "third_party_material": "the 2 published Shamir shares and the challenge-page quotes are Bitaps's own puzzle material, quoted briefly with source and date; no third-party copyrighted material is included",
-      "last_updated": "2026-08-16",
+      "last_updated": "2026-08-28",
       "folder": "1-big-prizes/bitaps-shamir-challenge-1btc"
     },
     {
@@ -2104,7 +2134,7 @@
           "label": "main",
           "explorer": "https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc",
           "expected": "305.930218 USDT",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-08-27",
           "verified_state": "funded-unspent"
         }
       ],
@@ -2120,17 +2150,23 @@
         "certified_against": "the author's own published worked example, mnemonic 'claim cycle staff clump domain judge boy session razor tiny shoulder coconut' deriving to 0x50D7e097e61121140c19871F06eA6FeB6d14105b"
       },
       "difficulty_left": "insight",
-      "difficulty_note": "the derivation is fully certified and the site is completely mapped, including a hidden 12th game found by breaking the page-naming scheme; 0 of the 12 words are confirmed via the oracle yet",
+      "difficulty_note": "the derivation is fully certified and the page-naming scheme is broken; live pages for games 1-11 plus extras were fetched on 2026-08-27; the hashed Game 12 URL now 404s; working readings for games 9, 11, and 7 (can, airport, nice) are not a MATCH; extra 50-letter paths are not the concatenation oracle; 0 of the 12 words are confirmed via the oracle yet",
       "leads": [
         {
           "rank": 1,
-          "title": "harvest the rest of the author's X posts and cross-reference the Season 4 hidden hint-mapping page, which names Game 7 as the weakest game",
+          "title": "apply the remaining live-page mechanics (Photopea on the Game 1 PSD, Game 2 two yellow thumbnails, Game 3 SW 1881 grids, Game 5 13-digit URL, Game 8 A9759, Game 10 four-city cluster); games 9/11/7 have working readings can/airport/nice",
           "cost": "hours",
           "status": "open"
         },
         {
           "rank": 2,
-          "title": "transcribe the Game 12 audio track as notes to digits, the method a Season 1 page uses for the same author's puzzle grammar",
+          "title": "recover the Game 12 Drive file; the hashed page is 404 and the tweet screenshot has no Drive id; notes-to-digits once the audio is in hand",
+          "cost": "hours",
+          "status": "open"
+        },
+        {
+          "rank": 3,
+          "title": "author 8-of-12 offer on new.html is not a substitute for the 12-word on-chain oracle; use it only after eight oracle-grade words",
           "cost": "hours",
           "status": "open"
         }
@@ -2147,30 +2183,66 @@
         {
           "title": "FTPK hub page",
           "url": "https://findtheprivatekeys.vercel.app/",
-          "date": "2026-08-16",
+          "date": "2026-08-27",
           "archived": null
         },
         {
           "title": "Season 2 puzzle site",
           "url": "https://findtheprivatekeys2.vercel.app/",
-          "date": "2026-08-16",
+          "date": "2026-08-27",
           "archived": null
         },
         {
           "title": "Season 4 hidden page cross-referencing Season 2 clues, including the Game 7 admission",
           "url": "https://findtheprivatekeys4.vercel.app/servicecricketgloomattendsupremejumpannualeagerpulpprojectdiseaseround.html",
-          "date": "2026-08-16",
+          "date": "2026-08-27",
+          "archived": null
+        },
+        {
+          "title": "Author, Attack Challenge Mode post",
+          "url": "https://x.com/FTPKgame/status/1930610344247906356",
+          "date": "2025-06-05",
+          "archived": null
+        },
+        {
+          "title": "Author, last Season 2 clue (black knight)",
+          "url": "https://x.com/FTPKgame/status/1934183762079666297",
+          "date": "2025-06-15",
+          "archived": null
+        },
+        {
+          "title": "Author, naming N4Khjir and thedragon8383",
+          "url": "https://x.com/FTPKgame/status/1931006963740979489",
+          "date": "2025-06-06",
+          "archived": null
+        },
+        {
+          "title": "N4Khjir, Game 7 title Zero-based indexing",
+          "url": "https://x.com/N4Khjir/status/1927621189503005053",
+          "date": "2025-05-28",
+          "archived": null
+        },
+        {
+          "title": "N4Khjir, Game 11 Braille / +33 / French poem",
+          "url": "https://x.com/N4Khjir/status/1927623047076282678",
+          "date": "2025-05-28",
+          "archived": null
+        },
+        {
+          "title": "Author, image2.jpg is a development error",
+          "url": "https://x.com/FTPKgame/status/1931024956046909798",
+          "date": "2025-06-06",
           "archived": null
         },
         {
           "title": "Escrow wallet, etherscan.io",
           "url": "https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc",
-          "date": "2026-08-16",
+          "date": "2026-08-27",
           "archived": null
         }
       ],
       "third_party_material": "no images, audio, or video shipped; the Game 12 audio track is a real music recording of undetermined origin and is not reproduced here; only short quoted author text and the site's own rule text are included",
-      "last_updated": "2026-08-16",
+      "last_updated": "2026-08-27",
       "folder": "2-mid-prizes/ftpk-season-2-300usdt"
     },
     {
@@ -3765,7 +3837,7 @@
           "label": "main",
           "explorer": "https://mempool.space/address/bc1q94ecsn0qk8lap2gefrycnms3ruepy889z969a6",
           "expected": "100000 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-08-27",
           "verified_state": "funded-unspent"
         }
       ],
@@ -3782,35 +3854,29 @@
         "certified_against": "the public BIP39/BIP84 test vectors (12-word and 24-word 'abandon' vectors), since no solved sibling exists for this puzzle"
       },
       "difficulty_left": "insight",
-      "difficulty_note": "the derivation is bounded and fast once the inputs are known (checking a 24-word candidate is a single oracle call; searching every way to drop 10 of 34 known words costs on the order of an hour with this stdlib-plus-bip_utils oracle); the actual gate is cultural, not computational: 32 of 34 films are identified with confidence, 1 (panel 11) is unidentified, 1 (panel 34) has two competing identifications from different research passes that were not reconciled, and neither the title-to-word rule nor the intruder-selecting IMDb field has been found",
+      "difficulty_note": "the derivation is bounded and fast once the inputs are known; all 34 films now have an identification (nine previously disputed panels were checked against the published stills on 2026-08-27 and follow the community list). A unique BIP39 4-letter prefix scan of each compact title yields a word for 33 of 34 titles; only The Goonies has none. The remaining gate is that Goonies word plus the IMDb field that drops 10 of the 34 words. Certificate G/PG/TV-14 was tested through the oracle (55,296 raw strings, 227 checksum-valid, 0 match, uncertified)",
       "tested_total": {
-        "candidates": 0,
-        "families": 5,
+        "candidates": 55296,
+        "families": 8,
         "certified": false
       },
       "leads": [
         {
           "rank": 1,
-          "title": "identify panel 11",
-          "cost": "needs-a-person",
+          "title": "find the title-to-word rule for The Goonies",
+          "cost": "needs-new-information",
           "status": "open"
         },
         {
           "rank": 2,
-          "title": "reconcile panel 34's identity (Dead Ringers vs The Human Centipede)",
-          "cost": "needs-a-person",
+          "title": "find the IMDb field that splits 24 keepers from 10 intruders",
+          "cost": "needs-new-information",
           "status": "open"
         },
         {
           "rank": 3,
-          "title": "find the title-to-word rule for the 4 titles with no literal BIP39 word",
-          "cost": "needs-new-information",
-          "status": "open"
-        },
-        {
-          "rank": 4,
-          "title": "find the IMDb field that splits 24 keepers from 10 intruders",
-          "cost": "needs-new-information",
+          "title": "re-check panels 9, 13 and 24 against the issue #9 sources",
+          "cost": "needs-a-person",
           "status": "open"
         }
       ],
@@ -3837,7 +3903,7 @@
         }
       ],
       "third_party_material": "the 34 movie panels are individual frames from third-party films, not original material by the author; I do not reproduce them here and link to the author's still-live site instead",
-      "last_updated": "2026-08-16",
+      "last_updated": "2026-08-27",
       "folder": "3-small-prizes/bitcoin-movie-enigma-100ksats"
     },
     {
