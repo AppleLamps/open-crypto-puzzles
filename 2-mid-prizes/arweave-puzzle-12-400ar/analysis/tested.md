@@ -28,6 +28,12 @@ README's "Certified against" section). Rows 1-6 are dated 2026-07-25; rows 7-8 a
 | 17 | Joint-naming model: the four clues as words in one 58-character string rather than four concatenated sub-answers. Every ordered concatenation of the clue-implied vocabulary (38 tokens: blue, whale, hexagon, alien, the scientific name, the three investors, the Forbes headline terms, date forms) totalling exactly 58 characters, plus case variants of the 240 that contain all four clue words | 516,138 | 0 match |
 | 18 | Piece 4 as a tincture sequence (20 initials) instead of five letters, reopening the algebra to p1 + p2 = 31: 576 tincture strings (6 square orders x 24 quadrant orders x colour/heraldic initials x case) against the four pairings that close the budget -- 28+3 (`USV`), 12+19 (`UnionSquareVentures`), 13+18 (`AndreessenHorowitz`), 11+20 | 414,720 | 0 match |
 | 19 | Piece 4 ordered by hatch-line count (`LEINA`/`ANIEL` and cases) x 144 piece-1 strings x 4 `AndreessenHorowitz` variants x 4 piece-3 forms | 13,824 | 0 match |
+| 20 | New 18-character piece-2 strings that are not in the row-14 list of 137: 30 PascalCase organisation / founder / whale+date / Grants+Boost concatenations x 216 geometry-derived piece-1 (blank = Blue) x `2111011` x 10 piece-4 (5 anagrams in mixed cases plus 3 visual orders) | 64,800 | 0 match |
+| 21 | Unswept length-8 date as piece 2 (`16032020` and 5 separator forms) with piece 1 = six flag hex codes plus a 2-character suffix (`IQ` / `AR`), 12 orders x 3 blank-flag hex (`ffffff` / `0000ff` / whale fill `20a0c8`) x 2 hex cases x 2 suffixes x 6 dates x 10 piece-4 | 8,640 | 0 match |
+| 22 | Blank flag read as Cerulean (sampled whale fill is `#20a0c8`): 216 piece-1 of length 32 x 5 fourteen-character piece-2 (`AndreessenA16z`, `a16zCryptoFund`, `SixteenMarch20`, `A16zSixteenMar`, `CoinbasePlusAH`) x 10 piece-4 | 10,800 | 0 match |
+| 23 | 24 block orders of the 6 strongest new 18-character piece-2 strings x 24 favoured piece-1 (12 geometry orders x Gray/Grey, Purple/Violet as drawn) x `Alien` in 3 cases | 10,368 | 0 match |
+| 24 | Forbes-article date as an 18-character string (5 concatenations of Forbes / Haley / Sixteen / March) x 216 piece-1 x `2111011` x 10 piece-4 | 10,800 | 0 match |
+| 25 | All 120 letter orders of IEALN on the 10 strongest new 18-character piece-2 strings x 24 favoured piece-1 x `2111011` | 28,800 | 0 match |
 
 ## Notes on rows 7 and 8 (2026-08-18)
 
@@ -245,6 +251,26 @@ far, as bytes, as letters, and as a literal 20-character sub-answer, is negative
 hatching still has no demonstrated role in the answer, under the directional reading
 (row 1), the heraldic reading, or the count reading.
 
-Cumulative: 3,014,356 assembled 58-character candidates tested against the escrow, 0
+## Notes on rows 20 to 25 (2026-09-15)
+
+Method: the `--fast` front end now shipped in `tools/oracle.py` (plaintext block 0 only;
+any hit re-checked through the unmodified full decrypt). Measured 26.4 candidates/second
+on one core and 108.2 across 4 cores. Script: `tools/sweep_new_piece2.py` for rows 20-22
+and 24 (row 24's five Forbes-date strings were added to that script after the run so a
+re-run covers them); rows 23 and 25 were one-off 24-order and 120-letter-order extras
+on the strongest new piece-2 strings.
+
+Witness: before each run, sibling #8's published answer `RasputinWilhelmAlekhine` was
+re-found through the same fast path, and `--selftest` rejected a case flip, a truncation,
+and #8's answer against #12's ciphertext. No known-good #12 answer exists to plant inside
+the candidate space. Call these certified-oracle, uncertified-space negatives. The same
+scope limit as rows 7 and 8 applies: a candidate whose `"kty":"RSA"` gate sat outside
+block 0 would have been missed.
+
+N = 84,240 for the scripted A/B/C families at D = 26.4/s gives t = 52 min on one core,
+inside the two-hour rule; ALLCAPS and lowercase of the new 18-character strings were
+dropped to stay inside that budget (sibling #8 is PascalCase).
+
+Cumulative: 3,148,564 assembled 58-character candidates tested against the escrow, 0
 matches. 3 of the 4 sub-answers have a strong-to-certain reading; the gap is piece 2's
 exact 18-character string.

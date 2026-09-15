@@ -103,6 +103,11 @@ P2_18_PASCAL = [
     "LibraryAlexandriaA",
     "HaltCensorshipARWV",
     "ArweaveBoostGrants",
+    "ForbesMarchSixteen",
+    "ForbesSixteenMarch",
+    "SixteenMarchForbes",
+    "HaleyForbesMarch16",
+    "MarchSixteenForbes",
 ]
 
 P2_8 = [
