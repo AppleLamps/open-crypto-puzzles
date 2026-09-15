@@ -61,6 +61,7 @@ sub-answers, with no separator between them.
 python3 tools/oracle.py --selftest          # reproduces the solved sibling Arweave #8
 python3 tools/oracle.py "BlueAndreessenHorowitz2111011Alien"
 python3 tools/oracle.py --stdin             # one candidate per line
+python3 tools/oracle.py --fast --stdin      # block-0 reject; hits re-checked in full
 ```
 
 A candidate is passed through exactly as typed (case-sensitive, no trimming).
