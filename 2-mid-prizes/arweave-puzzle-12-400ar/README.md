@@ -9,7 +9,7 @@ case-sensitive. I reversed and certified the decrypt pipeline against a solved s
 puzzle, and solved one of the 4 sub-answers with certainty from the page's own printed
 numbers. A second sub-answer has a strong but unconfirmed reading, a third is refuted as
 an ordering scheme, and the fourth, a company or investor named after a whale, has not
-been identified. About 157,000 assembled 58-character candidates have been tested with 0
+been identified. 3,148,564 assembled 58-character candidates have been tested with 0
 matches.
 
 ## At a glance
@@ -21,12 +21,12 @@ matches.
 | Prize | 400.00248121 AR (about $724 at AR = $1.81, 2026-08-16) |
 | Chain | arweave |
 | Escrow | `XRGEfkMbCMHeTY9mZI9Lh6hf8EmA8RstmBFUjDm40fg` ([explorer](https://viewblock.io/arweave/address/XRGEfkMbCMHeTY9mZI9Lh6hf8EmA8RstmBFUjDm40fg)) |
-| Last on-chain check | 2026-08-16: funded and unspent, 400002481210000 winston, 0 outgoing transactions ever |
+| Last on-chain check | 2026-09-15: funded and unspent, 400.00248121 AR, 0 outgoing transactions ever |
 | Status | OPEN |
 | Puzzle type | word-selection, geometry, text-cipher |
 | Target format | one 58-character case-sensitive answer, 4 sub-answers concatenated with no separator, SHA-512 x11513, AES-decrypt to an Arweave JWK keyfile |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against solved sibling Arweave Puzzle Weave #8) |
-| What remains | piece 2's exact 18-character string, and an oracle-confirmed hit on piece 1 |
+| What remains | piece 2's exact string; every source-material pairing that closes the 58-character budget is now a negative |
 | Series | Arweave Puzzles (this folder covers puzzle #12 only) |
 
 ## The puzzle as published
@@ -61,6 +61,7 @@ sub-answers, with no separator between them.
 python3 tools/oracle.py --selftest          # reproduces the solved sibling Arweave #8
 python3 tools/oracle.py "BlueAndreessenHorowitz2111011Alien"
 python3 tools/oracle.py --stdin             # one candidate per line
+python3 tools/oracle.py --fast --stdin      # block-0 reject; hits re-checked in full
 ```
 
 A candidate is passed through exactly as typed (case-sensitive, no trimming).
@@ -82,7 +83,7 @@ JavaScript decryptor running under Node, on both matching and non-matching passp
 ### Established facts
 
 1. The escrow is funded and unspent: 400.00248121 AR, checked via
-   `arweave.net/wallet/<address>/balance` on 2026-08-16; a GraphQL query for the wallet's
+   `arweave.net/wallet/<address>/balance` on 2026-09-15; a GraphQL query for the wallet's
    own transaction history returns 0 outgoing transactions ever.
 2. The author confirmed the answer is exactly 58 characters, case-sensitive.
 3. Piece 3 is solved with certainty: the shapes read as `2111011` (spelling HEXAGON, one
@@ -108,25 +109,28 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | "BLUE" literal readings (6 bounded runs: orders, spellings, cases, anagrams) | 3,266 | certified oracle | 0 match | uncertified | 2026-07-25 |
 | Literal Hexagon / BalaenopteraMusculus / number-reordering partitions | 1,824 | certified oracle | 0 match | uncertified | 2026-07-25 |
 | Piece 1 as RGB decimal or hex numbers instead of color words | 768 | certified oracle | 0 match | uncertified | 2026-07-25 |
+| New 18-character piece-2 (orgs, founder, whale+date, Grants+Boost) | 64,800 | certified oracle, `--fast` | 0 match | uncertified-space | 2026-09-15 |
+| Length-8 date x hex+IQ/AR piece 1 | 8,640 | certified oracle, `--fast` | 0 match | uncertified-space | 2026-09-15 |
+| Cerulean-for-Blue x 14-character piece 2 | 10,800 | certified oracle, `--fast` | 0 match | uncertified-space | 2026-09-15 |
+| 24 block orders of the 6 strongest new piece-2 strings | 10,368 | certified oracle, `--fast` | 0 match | uncertified-space | 2026-09-15 |
+| Forbes-date 18-character concatenations | 10,800 | certified oracle, `--fast` | 0 match | uncertified-space | 2026-09-15 |
+| All 120 IEALN orders on the 10 strongest new piece-2 strings | 28,800 | certified oracle, `--fast` | 0 match | uncertified-space | 2026-09-15 |
 
-Cumulative: 156,730 assembled 58-character candidates tested against the escrow, 0
-matches.
+Cumulative: 3,148,564 assembled 58-character candidates tested against the escrow, 0
+matches. Rows 7-19 of the full ledger are in [analysis/tested.md](analysis/tested.md).
 
 ## Open leads, ranked
 
-1. **Identify piece 2, "the whale"** (hours). With piece 1's length forced to 28 (blank
-   flag read as Blue) and piece 3 fixed at 7, piece 2 is forced to exactly 18 characters;
-   the natural reading, `AndreessenHorowitz` (the investment firm's March 2020 $8.3
-   million round, reported by Forbes on the same date drawn on the piece), fails in every
-   order and case tried. A co-investor, a ticker, or a string derived from the date
-   itself would each keep the 58-character budget intact. Confirmed by an oracle hit;
-   killed only by exhausting every plausible naming of the round.
-2. **Confirm piece 1's blank flag as Blue with an oracle hit** (hours). The flag
-   structure is certain: 3 vertical pairs, each an opposite-attribute pair (ball or no
-   ball, left or right side, top or bottom height); the reading that a missing additive
-   RGB primary color fills the blank, and that it is Blue, is currently favored only
-   because it is the one 4-letter completion that keeps the 58-character total exact,
-   not because any candidate has matched yet.
+Ranked list in [analysis/leads.md](analysis/leads.md). Short version:
+
+1. **Piece 2 as a non-name encoding** (hours). Every source-material pairing that closes
+   p1 + p2 = 46 is now a negative, including `AndreessenHorowitz`, 35 other 18-character
+   concatenations, `16032020` with hex+IQ/AR, and Cerulean-for-Blue. Sibling #5 used a
+   symbol, a number, an acronym and a name; another English proper noun is the wrong
+   shape of search.
+2. **A leftover piece-1 encoding of length 4 or 6** (hours, weakly). Those force 42- and
+   40-character piece-2 strings. An Ethereum address is 42 characters, but the drawn
+   date's funding round was not an on-chain transfer.
 
 ## Files in this folder
 
@@ -134,7 +138,9 @@ matches.
 |---|---|
 | `clues/puzzle-image.jpg` | the published jigsaw puzzle image, byte-exact |
 | `analysis/tested.md` | the complete negatives ledger |
-| `tools/oracle.py` | candidate checker: 58-character answer to JWK address, certified against the solved sibling #8 |
+| `analysis/leads.md` | ranked open and retired leads |
+| `tools/oracle.py` | candidate checker, including `--fast` block-0 reject, certified against sibling #8 |
+| `tools/sweep_new_piece2.py` | bounded sweep for rows 20-22 and 24 |
 
 ## Sources
 

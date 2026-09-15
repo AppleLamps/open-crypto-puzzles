@@ -1532,7 +1532,7 @@
           "label": "main",
           "explorer": "https://viewblock.io/arweave/address/XRGEfkMbCMHeTY9mZI9Lh6hf8EmA8RstmBFUjDm40fg",
           "expected": "400.00248121 AR",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-09-15",
           "verified_state": "funded-unspent"
         }
       ],
@@ -1549,22 +1549,22 @@
         "certified_against": "solved sibling Arweave Puzzle Weave #8 (answer RasputinWilhelmAlekhine), reproduced byte-for-byte against the puzzle's own decrypt routine"
       },
       "difficulty_left": "insight",
-      "difficulty_note": "mechanism and oracle fully certified; piece 3 is solved with certainty, piece 1 has a strong unconfirmed reading, piece 4's hatching is refuted as an ordering scheme; the open gap is piece 2's exact 18-character string once the other 3 pieces are fixed",
+      "difficulty_note": "mechanism and oracle fully certified; piece 3 is solved with certainty; every source-material pairing that closes the 58-character budget is a negative, including AndreessenHorowitz and 35 other 18-character piece-2 strings; the open gap is a non-name encoding of piece 2, or a misread of one of the 'certain' pieces",
       "tested_total": {
-        "candidates": 3014356,
-        "families": 16,
+        "candidates": 3148564,
+        "families": 21,
         "certified": true
       },
       "leads": [
         {
           "rank": 1,
-          "title": "identify piece 2, \"the whale\": a co-investor, a ticker, or a date-derived string once AndreessenHorowitz is ruled out",
+          "title": "piece 2 as a non-name encoding (symbol, number, acronym) now that every source-material 18-character name pairing is dead",
           "cost": "hours",
           "status": "open"
         },
         {
           "rank": 2,
-          "title": "confirm piece 1's blank flag as Blue by an oracle hit rather than by the 58-character budget alone",
+          "title": "leftover piece-1 encodings of length 4 or 6, which force 42- and 40-character piece-2 strings; an ETH address is 42 characters but the drawn date was not an on-chain transfer",
           "cost": "hours",
           "status": "open"
         }
@@ -1617,7 +1617,7 @@
         }
       ],
       "third_party_material": "the jigsaw image is the author's own puzzle material, published on the Arweave permaweb page; no book, audio, or video material",
-      "last_updated": "2026-08-19",
+      "last_updated": "2026-09-15",
       "folder": "2-mid-prizes/arweave-puzzle-12-400ar"
     },
     {

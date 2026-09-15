@@ -26,10 +26,18 @@ Usage:
   python3 oracle.py --selftest        # reproduces the solved sibling Arweave #8
   python3 oracle.py "<candidate>"     # MATCH / NO MATCH, exit 0 / 1
   python3 oracle.py --stdin           # one candidate per line, prints MATCH lines only
+  python3 oracle.py --fast ...        # decrypt plaintext block 0 only; any hit is
+                                      # re-checked through the full pipeline before MATCH
 
 Input: a single answer string on the command line, or one per line on stdin.
 Expected output: "SELFTEST OK" (exit 0) or "SELFTEST FAILED" (exit 1) for --selftest;
 "MATCH <address>" or "NO MATCH" per candidate otherwise.
+
+--fast decrypts only the first 16-byte ciphertext block. Sibling #8's keyfile begins
+with {"kty":"RSA" at offset 0, so the gate lies wholly in block 0; this puzzle used
+the same generator. A candidate whose plaintext carried the gate at a non-zero offset
+would be missed by --fast and caught by the default path. Rate is about 20x the full
+decrypt (block 0 vs 198 blocks) after the shared SHA-512 x11513 stretch.
 """
 import base64
 import hashlib
@@ -157,11 +165,14 @@ def _decrypt_block(ct_block, w, nr):
     return state
 
 
-def _cbc_decrypt(ciphertext, key, iv):
+def _cbc_decrypt(ciphertext, key, iv, n_blocks=None):
     w, nr = _key_expansion(key)
     prev = iv
     out = bytearray()
-    for i in range(0, len(ciphertext), 16):
+    limit = len(ciphertext)
+    if n_blocks is not None:
+        limit = min(limit, n_blocks * 16)
+    for i in range(0, limit, 16):
         block = ciphertext[i:i + 16]
         out += bytes(a ^ b for a, b in zip(_decrypt_block(block, w, nr), prev))
         prev = block
@@ -207,7 +218,7 @@ def jwk_to_address(n_b64url):
     return base64.urlsafe_b64encode(digest).decode("ascii").rstrip("=")
 
 
-def decode_wallet(ciphertext_b64, passphrase):
+def decode_wallet(ciphertext_b64, passphrase, first_block_only=False):
     """Returns the decrypted plaintext string (empty/garbage on a wrong passphrase)."""
     key_hex = _stretch(passphrase)
     raw = base64.b64decode(ciphertext_b64)
@@ -215,17 +226,28 @@ def decode_wallet(ciphertext_b64, passphrase):
         return ""
     salt, body = raw[8:16], raw[16:]
     key, iv = _evp_bytes_to_key(key_hex.encode("ascii"), salt, 128, 16, 10000)
-    plain = _pkcs7_unpad(_cbc_decrypt(body, key, iv))
-    nul = plain.find(b"\x00")
-    if nul != -1:
-        plain = plain[:nul]
+    if first_block_only:
+        plain = _cbc_decrypt(body, key, iv, n_blocks=1)
+    else:
+        plain = _pkcs7_unpad(_cbc_decrypt(body, key, iv))
+        nul = plain.find(b"\x00")
+        if nul != -1:
+            plain = plain[:nul]
     return plain.decode("latin-1", errors="replace")
 
 
-def check(candidate):
-    """Returns (ok, address_or_none)."""
+def check(candidate, fast=False):
+    """Returns (ok, address_or_none).
+
+    If fast=True, reject on plaintext block 0 alone. A fast-path hit is always
+    re-checked through the full decrypt before being returned as a match.
+    """
     if LOWERCASE_INPUT:
         candidate = candidate.lower()
+    if fast:
+        head = decode_wallet(CIPHERTEXT_B64, candidate, first_block_only=True)
+        if GATE not in head:
+            return False, None
     out = decode_wallet(CIPHERTEXT_B64, candidate)
     if GATE not in out:
         return False, None
@@ -253,29 +275,45 @@ def selftest():
     if GATE in decode_wallet(PZL8_CIPHERTEXT_B64, PZL8_ANSWER.lower()):
         print("SELFTEST FAILED: lowercased answer incorrectly matched (gate is not case-sensitive)")
         return False
+    head = decode_wallet(PZL8_CIPHERTEXT_B64, PZL8_ANSWER, first_block_only=True)
+    if not head.startswith('{"kty":"RSA"'):
+        print("SELFTEST FAILED: fast path did not recover gate at offset 0 of sibling #8")
+        return False
+    if GATE in decode_wallet(PZL8_CIPHERTEXT_B64, PZL8_ANSWER.lower(), first_block_only=True):
+        print("SELFTEST FAILED: fast path matched a lowercased sibling #8 answer")
+        return False
+    if GATE in decode_wallet(PZL8_CIPHERTEXT_B64, PZL8_ANSWER[:-1], first_block_only=True):
+        print("SELFTEST FAILED: fast path matched a truncated sibling #8 answer")
+        return False
+    if GATE in decode_wallet(CIPHERTEXT_B64, PZL8_ANSWER, first_block_only=True):
+        print("SELFTEST FAILED: sibling #8 answer fast-matched this puzzle's ciphertext")
+        return False
     print("SELFTEST OK: solved sibling Arweave #8, answer %r -> %s" % (PZL8_ANSWER, addr))
     return True
 
 
 def main():
-    if len(sys.argv) < 2:
-        print('usage: oracle.py --selftest | "<candidate>" | --stdin', file=sys.stderr)
+    argv = [a for a in sys.argv[1:] if a != "--fast"]
+    fast = "--fast" in sys.argv[1:]
+    if not argv:
+        print('usage: oracle.py --selftest | [--fast] "<candidate>" | [--fast] --stdin',
+              file=sys.stderr)
         sys.exit(2)
-    if sys.argv[1] == "--selftest":
+    if argv[0] == "--selftest":
         sys.exit(0 if selftest() else 1)
-    if sys.argv[1] == "--stdin":
+    if argv[0] == "--stdin":
         found = False
         for line in sys.stdin:
             cand = line.rstrip("\n")
             if not cand:
                 continue
-            ok, addr = check(cand)
+            ok, addr = check(cand, fast=fast)
             if ok:
                 print("MATCH %s <- %r" % (addr, cand))
                 found = True
         sys.exit(0 if found else 1)
-    candidate = sys.argv[1]
-    ok, addr = check(candidate)
+    candidate = argv[0]
+    ok, addr = check(candidate, fast=fast)
     if ok:
         print("MATCH %s" % addr)
         sys.exit(0)
