@@ -217,6 +217,7 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | RBB: hash used directly as the private key (brainwallet: SHA-256, MD5, double SHA-256, compressed and uncompressed) | 96 variants | direct key | 0 match | uncertified: no known-good vector for this reading; the certified mechanism is BIP39 | 2026-08-21 |
 | RBB: every pair of boundary edits on 16 certified bases (8 keep-sets of the 3 groups with and without the Finney quote, times joins, trailing newline and NBSP): insertion of one invisible character (NBSP, ZWSP, BOM, TAB, CR, LF, SP) at any two paragraph joins, or one insertion plus one case toggle of a boundary letter | 48,379,696 (24,189,848 per keep-set) | same, MD5 on CPU and BIP39 to hash160 on GPU, 223,000 candidates/s | 0 match | yes: 4 planted witnesses per base (3 insertion pairs at head, middle and tail, 1 mixed insertion plus case) and the real Stage One text, all recovered on all 16 bases | 2026-08-23 |
 | RBB: Stage One solution concatenated with the chapter; first-four and last-four words (paragraph 241); last letters of non-ITASM paragraphs; Satoshi Code short strings plus the chapter; stored HTML; one extra first/last-letter toggle on a keep-tested chapter | 5,326 unique texts | same | 0 match | yes: Stage One MD5 and address reproduced; 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-09-15 |
+| RBB: two extra first/last-letter toggles on a keep-tested chapter (exactly two distinct paragraphs, four keep-tests, joins `\n\n` and `\r\n\r\n`); last letters/words of relevant paragraphs as paragraph 245 states | 1,188,109 | same | 0 match | yes: known-good pair re-found by MD5 in --selftest; 3 planted two-paragraph witnesses recovered | 2026-09-15 |
 | Block 76: standard BIP44/49/84 derivations, paths, passphrases on the one chain found by search | standard space plus 24,564 off-by-one variants | MD5 to BIP39 to address compare | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
 | Block 76: word-transform "salves" on "change to" / "from change to" | approximately 53,000 candidate solutions | MD5-prefix filter, then derivation on survivors | 0 match | yes | 2026-08-15 |
 | Block 76: scripted dictionary-times-corpus sweep | approximately 3.2x10^11 MD5, approximately 78,000,000 derivations | MD5-prefix filter, then derivation on survivors | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
@@ -227,8 +228,8 @@ through 2026-08-15, about 1,300 chapter-rule and section variants on 2026-08-21,
 serializations, 3,030 unique 2019-indent/empty-`<p><br></p>` serializations,
 1,469,908 unique contiguous spans, and 221,520 unique bounded 2-edits on
 2026-08-27 (AppleLamps), plus 17,921 unique Finney-group and first/last
-N-paragraph serializations, 5,326 unique Stage One-plus-chapter texts on
-2026-09-15, and approximately 78 million derivations plus
+N-paragraph serializations, 5,326 unique Stage One-plus-chapter texts and
+1,188,109 two-sign-toggle texts on 2026-09-15, and approximately 78 million derivations plus
 approximately 78,000 smaller candidates tested against Block 76, all negative. Full scope notes, including which rows are complete
 sweeps versus targeted tests, are in `analysis/tested.md`.
 
@@ -247,9 +248,11 @@ sweeps versus targeted tests, are in `analysis/tested.md`.
    of joins swapped between `\n\n` and `\r\n\r\n` on the full chapter
    (221,520 texts, AppleLamps), and every pair of boundary edits, invisible
    characters at two joins or one insertion plus one boundary case toggle, on 16
-   certified bases (48,379,696 texts, 4 witnesses per base). If the remaining twist
-   is a copy artefact it is 3 or more edits, or inside a paragraph, or the source
-   differs from today's Wattpad storage. Confirmed by a match in a narrower
+   certified bases (48,379,696 texts, 4 witnesses per base). Two extra first or
+   last-letter toggles on the full keep-tested chapter are also a negative
+   (1,188,096 texts, 2026-09-15). If the remaining twist is a copy artefact it is
+   3 or more edits, or inside a paragraph away from the sign positions, or the
+   source differs from today's Wattpad storage. Confirmed by a match in a narrower
    2-edit family; killed by exhausting it with none.
 3. **A non-uniform editor buffer, or a non-contiguous selection** (needs a
    narrower reason). Uniform empty `<p><br></p>` and SSR indent contradict her

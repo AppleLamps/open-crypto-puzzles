@@ -41,9 +41,10 @@ match). A second slice, run 2026-08-23 on 16 certified bases (8 keep-sets of the
 3 planted groups, with and without the Finney quote, across joins, trailing newline
 and NBSP conventions): every pair of invisible-character insertions (NBSP, ZWSP, BOM,
 TAB, CR, LF, SP) at two paragraph joins, and every insertion plus one case toggle of a
-boundary letter, 48,379,696 texts with 4 witnesses per base, 0 match. What remains is
-2-edits that are neither of those families, including edits inside a paragraph, on
-the other 1-character bases.
+boundary letter, 48,379,696 texts with 4 witnesses per base, 0 match. What remains is 2-edits that are neither of those families, including edits
+inside a paragraph that are not first/last-letter toggles, on the other
+1-character bases. Two extra sign-position toggles on the full keep-tested
+chapter are now a negative (1,188,096 texts, 2026-09-15).
 
 What would confirm it: a match within the bounded 2-character space.
 What would kill it: exhausting that bounded space with 0 match; the full,
@@ -112,6 +113,15 @@ What would kill it, in the useful sense: nothing kills this lead outright; it
 stays open as a standing invitation, same as any human-reasoned wordplay block
 in the series.
 Cost: minutes per candidate; no sweep implied.
+
+## Killed: two extra sign-position toggles
+
+Killed 2026-09-15. After the ITASM keep-test, toggling the first or last letter
+of exactly two distinct paragraphs, under four keep-tests and both LF and CRLF
+joins, is a negative: 1,188,096 texts, 0 match, plus 13 last-letter/last-word
+extras from paragraph 245. Witness: known-good pair re-found by MD5; 3 plants
+recovered. Rate: 1,830/s. What this does not kill is two edits that are not
+first/last-letter toggles.
 
 ## Killed: Stage One solution concatenated with the chapter
 

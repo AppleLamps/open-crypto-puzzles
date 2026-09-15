@@ -242,7 +242,7 @@ def scan() -> int:
 
     done = 0
     witness_hits = 0
-    witness_label = "char|" + repr("\n\n") + "|p1:first|p50:last"
+    witness_label = "char|" + repr("\n\n".encode()) + "|p1:first|p50:last"
     workers = min(4, cpu_count() or 1)
     if match is None:
         with Pool(

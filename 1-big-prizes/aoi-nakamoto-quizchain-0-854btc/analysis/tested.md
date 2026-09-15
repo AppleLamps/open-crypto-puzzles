@@ -46,6 +46,7 @@ predecessor (`1EFojcAo2vbhRGCGCa7q8Wwvzss28mhQYC`).
 | The chapter's 2 abnormal capitals (`VIrgin` in paragraph 127, `BItcoin` in 135) as a selector or as a "twist" correction, with and without the groups | 64 | 0 match |
 | Every pair of boundary edits on 16 certified bases: one invisible character (NBSP, ZWSP, BOM, TAB, CR, LF, SP) inserted at any 2 paragraph joins, or 1 insertion plus 1 case toggle of a boundary letter; 8 keep-sets of the 3 groups with the Finney quote and 8 without, across joins, trailing newline and NBSP conventions | 48,379,696 | 0 match |
 | Stage One solution concatenated with the chapter; first-four and last-four words as paragraph 241 states; last letters of paragraphs that fail the ITASM keep-test; short strings the Satoshi Code passage derives, plus the chapter; stored HTML; one extra first/last-letter case toggle on a keep-tested chapter (`tools/stage_two_question.py`) | 5,326 unique texts | 0 match |
+| Two extra first/last-letter toggles on a keep-tested chapter (exactly two distinct paragraphs, four keep-tests, joins `\n\n` and `\r\n\r\n`), plus last letters/words of relevant paragraphs as paragraph 245 states (`tools/two_sign_toggles.py`) | 1,188,096 + 13 | 0 match |
 
 Witness status: every row above 2026-08-15 used the oracle certified against Block 77 Stage
 One (see README, "Certified against"); the single-character-edit row additionally
@@ -89,12 +90,15 @@ Cumulative for Real Big Block: approximately 272 million candidates tested
 through 2026-08-15, plus 12,848 unique 2019-copy serializations, 3,030 unique
 2019-indent/empty-`<p><br></p>` serializations, 1,469,908 unique contiguous
 spans, and 221,520 unique bounded 2-edits on 2026-08-27, plus 5,326 unique
-Stage One-plus-chapter texts on 2026-09-15, 0 match. The
+Stage One-plus-chapter texts and 1,188,109 two-sign-toggle texts on 2026-09-15,
+0 match. The
 single-character-edit sweep accounts for the large majority of this total.
 Two rows are certified as complete sweeps of their stated space: that
 1-character sweep (all 40 bases, every single edit) and the 2026-08-27
 contiguous-span row (every start-end pair of length at least 2, under the
-listed joins and keep-tests). Every other row is a targeted, not exhaustive,
+listed joins and keep-tests). The 2026-09-15 two-sign-toggle row is a complete
+sweep of its stated space (every pair of paragraphs, first or last letter of
+each, four keep-tests, two joins). Every other row is a targeted, not exhaustive,
 test of one specific hypothesis about which paragraphs were modified.
 
 The 2026-08-21 rows (chapter-dictated rule, SHA-256 24-word derivation, `<br>`
@@ -145,6 +149,18 @@ candidates/s. Elapsed: 11.9 s. Date: 2026-09-15. This is a targeted test of
 her statement that the Stage One solution is the question for stage 2, and of
 the leftover instructions the chapter states after paragraph 227. It is not a
 sweep of non-contiguous subsets or of unbounded 2-edits.
+
+The 2026-09-15 two-sign-toggle run used `tools/two_sign_toggles.py` against the
+current escrow, the superseded 2019-07-24 escrow, and Block 76. N = C(273, 2)
+x 2 x 2 x 4 keep-tests x 2 joins = 1,188,096 two-toggle texts, plus 13 last
+letter/word extras from paragraph 245. Witness: a known-good pair
+(keep=char, join LF LF, paragraphs 1 and 50, first and last) re-found by MD5
+`20cff19b...` through the same `render()` path before the scan; 3 synthetic
+two-paragraph plants recovered through the same `check_one()` path. The scan
+enumerated all 1,188,096 two-toggle jobs. Rate: 1,830 candidates/s on 4 cores.
+Elapsed: 649.2 s. Date: 2026-09-15. This is a complete sweep of its stated
+space: two extra sign-position toggles on a keep-tested chapter. It is not
+two edits at arbitrary character positions.
 
 | Hypothesis family | Candidates | Result |
 |---|---|---|
