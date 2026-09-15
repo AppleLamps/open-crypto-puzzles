@@ -2,8 +2,8 @@
   "schema_version": 1,
   "slug": "ftpk-season-2-300usdt",
   "title": "FTPK Season 2: Never-Ending",
-  "tier": "mid",
-  "status": "open",
+  "tier": "solved",
+  "status": "solved",
   "dead_end_reason": null,
   "series": "ftpk",
   "author": {
@@ -18,7 +18,7 @@
     "asset": "USDT",
     "usd_estimate": 306,
     "usd_snapshot": "2026-08-16",
-    "note": "ERC-20 USDT; the escrow's native ETH balance is 0, the prize is entirely the token balance"
+    "note": "ERC-20 USDT plus later paid-checker top-ups; the escrow's native ETH balance was 0 until solvers sent gas. Swept 2026-09-10: 310.37 USDT and 20.04 USDC left the wallet"
   },
   "addresses": [
     {
@@ -28,8 +28,8 @@
       "label": "main",
       "explorer": "https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc",
       "expected": "305.930218 USDT",
-      "verified_on": "2026-08-27",
-      "verified_state": "funded-unspent"
+      "verified_on": "2026-09-15",
+      "verified_state": "swept"
     }
   ],
   "puzzle_type": ["bip39-seed", "word-selection"],
@@ -40,14 +40,25 @@
     "oracle_certified": true,
     "certified_against": "the author's own published worked example, mnemonic 'claim cycle staff clump domain judge boy session razor tiny shoulder coconut' deriving to 0x50D7e097e61121140c19871F06eA6FeB6d14105b"
   },
-  "difficulty_left": "insight",
-    "difficulty_note": "the derivation is fully certified and the page-naming scheme is broken; live pages for games 1-11 plus extras were fetched on 2026-08-27; the hashed Game 12 URL now 404s; working readings for games 9, 11, and 7 (can, airport, nice) are not a MATCH; extra 50-letter paths are not the concatenation oracle; 0 of the 12 words are confirmed via the oracle yet",
+  "difficulty_left": "none",
+  "difficulty_note": "solved by a reader after publication, not by me",
   "leads": [
     { "rank": 1, "title": "apply the remaining live-page mechanics (Photopea on the Game 1 PSD, Game 2 two yellow thumbnails, Game 3 SW 1881 grids, Game 5 13-digit URL, Game 8 A9759, Game 10 four-city cluster); games 9/11/7 have working readings can/airport/nice", "cost": "hours", "status": "open" },
     { "rank": 2, "title": "recover the Game 12 Drive file; the hashed page is 404 and the tweet screenshot has no Drive id; notes-to-digits once the audio is in hand", "cost": "hours", "status": "open" },
     { "rank": 3, "title": "author 8-of-12 offer on new.html is not a substitute for the 12-word on-chain oracle; use it only after eight oracle-grade words", "cost": "hours", "status": "open" }
   ],
-  "solutions": [],
+  "solutions": [
+    {
+      "lot": "main",
+      "date": "2026-09-10",
+      "answer": "not published by the solver",
+      "key_material_disclosed": false,
+      "payout_txid": "0x06d2e114ed75c77b71f71d291ea6cf59160d450169899bcd4a5d0a1223e3e971",
+      "payout_amount": "310.37 USDT",
+      "payout_to": "0x14AaF6444DaA7ae0cB6C669F11D70578d465BFCB",
+      "explorer": "https://etherscan.io/tx/0x06d2e114ed75c77b71f71d291ea6cf59160d450169899bcd4a5d0a1223e3e971"
+    }
+  ],
   "artifacts": [],
   "sources": [
     { "title": "\"Here we go for a new game, 300 USDT to win\"", "url": "https://x.com/FTPKgame/status/1924450289311961483", "date": "2025-05-19", "archived": null },
@@ -60,8 +71,10 @@
     { "title": "N4Khjir, Game 7 title Zero-based indexing", "url": "https://x.com/N4Khjir/status/1927621189503005053", "date": "2025-05-28", "archived": null },
     { "title": "N4Khjir, Game 11 Braille / +33 / French poem", "url": "https://x.com/N4Khjir/status/1927623047076282678", "date": "2025-05-28", "archived": null },
     { "title": "Author, image2.jpg is a development error", "url": "https://x.com/FTPKgame/status/1931024956046909798", "date": "2025-06-06", "archived": null },
-    { "title": "Escrow wallet, etherscan.io", "url": "https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc", "date": "2026-08-27", "archived": null }
+    { "title": "Author, Season 2 solved by @real_avi_eth", "url": "https://x.com/FTPKgame/status/2098108242807169062", "date": "2026-09-10", "archived": null },
+    { "title": "Escrow wallet, etherscan.io", "url": "https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc", "date": "2026-09-15", "archived": null },
+    { "title": "USDT sweep via Relay", "url": "https://etherscan.io/tx/0x06d2e114ed75c77b71f71d291ea6cf59160d450169899bcd4a5d0a1223e3e971", "date": "2026-09-10", "archived": null }
   ],
   "third_party_material": "no images, audio, or video shipped; the Game 12 audio track is a real music recording of undetermined origin and is not reproduced here; only short quoted author text and the site's own rule text are included",
-  "last_updated": "2026-08-27"
+  "last_updated": "2026-09-15"
 }
