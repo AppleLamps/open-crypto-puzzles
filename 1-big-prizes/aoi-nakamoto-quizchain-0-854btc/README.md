@@ -275,6 +275,7 @@ Full notes: [analysis/leads.md](analysis/leads.md).
 | `images/01-pipeline-derivation.svg` | the MD5-to-address derivation pipeline diagram |
 | `images/02-structure-blocks.svg` | the Quizchain series structure, colored by claim status |
 | `tools/oracle.py` | candidate checker, certified against the author's own vector; includes the Block 76 prefix filter and the Stage One case-flip helper |
+| `tools/stage_two_question.py` | Stage One solution concatenated with the chapter, plus the leftover instructions the chapter states after paragraph 227 |
 | `tools/fig_pipeline.py` | generates images/01-pipeline-derivation.svg from data/pipeline-stages.json |
 | `tools/fig_blocks.py` | generates images/02-structure-blocks.svg from data/blocks-structure.json |
 
