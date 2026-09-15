@@ -111,7 +111,7 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 None. The puzzle is solved; see the Solution section.
 ## Solution
 
-Solved by another reader, not by me. The solver (`0x97e9E65edA435CE80c95d554bf8FBb757FCFcbfE`) sent a 1 USDC test deposit, then imported the reconstructed seed and swept the prize: 181 USDC out on 2026-08-20 in tx `0x4c10674a4856cbba9b66543cc027a77e6b3a1ba458085f8fe680d588ffdd8f37`. The answer was not published. Season 2 of the same series is still funded.
+Solved by another reader, not by me. The solver (`0x97e9E65edA435CE80c95d554bf8FBb757FCFcbfE`) sent a 1 USDC test deposit, then imported the reconstructed seed and swept the prize: 181 USDC out on 2026-08-20 in tx `0x4c10674a4856cbba9b66543cc027a77e6b3a1ba458085f8fe680d588ffdd8f37`. The answer was not published. Season 2 of the same series was swept on 2026-09-10 by a different reader.
 
 ## Files in this folder
 

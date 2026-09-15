@@ -16,8 +16,8 @@ on-chain right now.
 | Bitcoin | 5.97 BTC | $376,000 |
 | Ethereum | 13.21 ETH | $25,000 |
 | Arweave | 1,900 AR | $3,400 |
-| Stablecoins | 306 USDT + 0 USDC | $300 |
-| **Total** | **across 32 funded puzzles** | **$404,000** |
+| Stablecoins | 0 USDT + 0 USDC | $0 |
+| **Total** | **across 31 funded puzzles** | **$404,000** |
 
 Checked 2026-08-16 at BTC $63,000, ETH $1,880, AR $1.81. Prices and balances move; verify each escrow yourself.
 <!-- totals:end -->
@@ -102,7 +102,6 @@ grouped by prize, is in the tables below.
 | [AH White: Walking Banks](2-mid-prizes/ah-white-walking-banks-800ksats/) | 800,000 sats | 504 | bitcoin | bip39-seed, book, text-cipher | external-info | 2026-08-16 | open |
 | [Keir Finlow-Bates: Move Over Brokers Treasure Hunt](2-mid-prizes/keir-finlow-bates-blockchain-book-600ksats/) | 600,000 sats | 378 | bitcoin | book, brainwallet, text-cipher | human-action | 2026-09-01 | open |
 | [Zden Cryptopuzzle LVL.5](2-mid-prizes/zden-haluska-lvl5-555ksats/) | 555,550 sats | 350 | bitcoin | geometry, raw-private-key | external-info | 2026-08-16 | open |
-| [FTPK Season 2: Never-Ending](2-mid-prizes/ftpk-season-2-300usdt/) | 305.930218 USDT | 306 | ethereum | bip39-seed, word-selection | insight | 2026-08-27 | open |
 | [Andy Bauch: New Money, COG](2-mid-prizes/andy-bauch-new-money-cog-428ksats/) | 428,206 sats | 270 | bitcoin | pixel-code, physical-object | external-info | 2026-08-16 | open |
 | [Keysa: Crack the Seed Game](2-mid-prizes/keysa-crack-the-seed-369ksats/) | 369,369 sats | 233 | bitcoin | bip39-seed, word-selection | insight | 2026-08-16 | open |
 | [Zden Level HALV](2-mid-prizes/zden-haluska-halv-312ksats/) | 312,500 sats | 197 | bitcoin | geometry, raw-private-key | external-info | 2026-08-16 | open |
@@ -119,6 +118,7 @@ grouped by prize, is in the tables below.
 ## Solved and cashed
 | Puzzle | Cashed | Payout tx | Date | Series lesson |
 |---|---|---|---|---|
+| [FTPK Season 2: Never-Ending](4-solved/ftpk-season-2-300usdt/) | 310.37 USDT | [0x06d2e114ed75c77b71f71d291ea6cf59160d450169899bcd4a5d0a1223e3e971](https://etherscan.io/tx/0x06d2e114ed75c77b71f71d291ea6cf59160d450169899bcd4a5d0a1223e3e971) | 2026-09-10 | solved by a reader after publication, not by me |
 | [VeteranHODL: Hunting Time](4-solved/veteranhodl-hunting-time-420ksats/) | 420000 sats | [d3783a1cde2c491a6edfbead81aeebda90257c8c25b4b0c9b2bac89bc5cd607a](https://mempool.space/tx/d3783a1cde2c491a6edfbead81aeebda90257c8c25b4b0c9b2bac89bc5cd607a) | 2026-08-18 | solved by a reader after publication, not by me |
 | [FTPK Season 4: Something in Common](4-solved/ftpk-season-4-166usdc/) | 181 USDC | [0x4c10674a4856cbba9b66543cc027a77e6b3a1ba458085f8fe680d588ffdd8f37](https://etherscan.io/tx/0x4c10674a4856cbba9b66543cc027a77e6b3a1ba458085f8fe680d588ffdd8f37) | 2026-08-20 | solved by a reader after publication, not by me |
 | [bc1q21 Time-Lock Challenge, Level 5](4-solved/bc1q21-timelock-challenge-l5-100ksats/) | 99604 sats | [73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed](https://mempool.space/tx/73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed) | 2026-07-24 | solved; the claim transaction confirms the answer |
@@ -133,7 +133,7 @@ Puzzles that turned out swept, unfunded, custodial, or fake are kept off the lis
 
 - Arweave puzzles: #3, #10, #11, #12 open; #8 solved by others is the oracle calibration.
 - Zden (crypto.haluska.sk): LVL5 and HALV open; earlier levels solved by others.
-- FTPK: seasons 2 and 4 open; seasons 1 and 3 finished and still playable, used to learn the author's grammar.
+- FTPK: seasons 2 and 4 solved by readers after publication; seasons 1 and 3 finished and still playable, used to learn the author's grammar.
 - Finlow-Bates "Blockchain book": 12 lots, 3 open, 4 solved by me, 5 by others.
 - Aoi Nakamoto Quizchain: Real Big Block and Block 76 open; Block 77 Stage One reproduced.
 

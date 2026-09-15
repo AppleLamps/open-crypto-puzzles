@@ -10,6 +10,7 @@ main reason a solved puzzle stays useful to a reader working on an open sibling.
 <!-- generated:start -->
 | Puzzle | Cashed | Payout tx | Date | Series lesson |
 |---|---|---|---|---|
+| [FTPK Season 2: Never-Ending](ftpk-season-2-300usdt/) | 310.37 USDT | [0x06d2e114ed75c77b71f71d291ea6cf59160d450169899bcd4a5d0a1223e3e971](https://etherscan.io/tx/0x06d2e114ed75c77b71f71d291ea6cf59160d450169899bcd4a5d0a1223e3e971) | 2026-09-10 | solved by a reader after publication, not by me |
 | [VeteranHODL: Hunting Time](veteranhodl-hunting-time-420ksats/) | 420000 sats | [d3783a1cde2c491a6edfbead81aeebda90257c8c25b4b0c9b2bac89bc5cd607a](https://mempool.space/tx/d3783a1cde2c491a6edfbead81aeebda90257c8c25b4b0c9b2bac89bc5cd607a) | 2026-08-18 | solved by a reader after publication, not by me |
 | [FTPK Season 4: Something in Common](ftpk-season-4-166usdc/) | 181 USDC | [0x4c10674a4856cbba9b66543cc027a77e6b3a1ba458085f8fe680d588ffdd8f37](https://etherscan.io/tx/0x4c10674a4856cbba9b66543cc027a77e6b3a1ba458085f8fe680d588ffdd8f37) | 2026-08-20 | solved by a reader after publication, not by me |
 | [bc1q21 Time-Lock Challenge, Level 5](bc1q21-timelock-challenge-l5-100ksats/) | 99604 sats | [73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed](https://mempool.space/tx/73baf40f668fb221b6b9c934f199a51f7e0ab1f1bb585e07c18a7b3e88dfd7ed) | 2026-07-24 | solved; the claim transaction confirms the answer |

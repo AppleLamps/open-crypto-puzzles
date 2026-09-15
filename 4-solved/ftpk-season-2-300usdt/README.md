@@ -1,14 +1,14 @@
-# FTPK Season 2: Never-Ending (305.930218 USDT, [OPEN])
+# FTPK Season 2: Never-Ending (305.930218 USDT, [SOLVED])
 
 FTPKgame (@FTPKgame on X) launched the second season of this puzzle series on
 2025-05-19: 12 mini-games, each worth one English BIP39 word, that together derive the
 private key for an Ethereum wallet holding USDT. I mapped the site, certified the
 derivation against the author's own worked example, and broke the page-naming scheme,
 which hides a 13th URL for a 12th game. On 2026-08-27 I fetched the live Season 2
-pages and the Season 4 hint map. Eleven listed games plus extras are up; the hashed
-Game 12 URL now returns 404. Three games now have a single-list-word reading (Game 9
-`can`, Game 11 `airport`, Game 7 `nice`). None of the 12 words is confirmed via the
-on-chain oracle yet.
+pages and the Season 4 hint map. Eleven listed games plus extras were up; the hashed
+Game 12 URL returned 404. Three games had a single-list-word reading (Game 9
+`can`, Game 11 `airport`, Game 7 `nice`). A reader swept the escrow on 2026-09-10
+before any 12-word MATCH was recorded here. The answer was not published.
 
 ## At a glance
 
@@ -19,12 +19,12 @@ on-chain oracle yet.
 | Prize | 305.930218 USDT (about $306, stablecoin, 2026-08-16) |
 | Chain | ethereum |
 | Escrow | `0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc` ([explorer](https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc)) |
-| Last on-chain check | 2026-08-27: USDT balance 305.930218, native ETH 0, 0 outgoing transactions ever |
-| Status | OPEN |
+| Last on-chain check | 2026-09-15: escrow emptied, native ETH 0, nonce 6 |
+| Status | SOLVED |
 | Puzzle type | bip39-seed, word-selection |
 | Target format | 12 English BIP39 words, BIP44 `m/44'/60'/0'/0/0`, no passphrase |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the author's own Game 11 worked example) |
-| What remains | 3 working readings (can, airport, nice), not a MATCH; Game 12 audio is blocked by a 404 |
+| What remains | nothing; solved and paid out |
 | Series | FTPK (this folder covers Season 2 only) |
 
 ## The puzzle as published
@@ -75,9 +75,10 @@ reproduced exactly.
 
 ### Established facts
 
-1. The escrow holds 305.930218 USDT and 0 native ETH, with 0 outgoing transactions ever,
-   checked via `eth_call` to the USDT contract and `eth_getTransactionCount` on
-   2026-08-27.
+1. On 2026-08-27 the escrow held 305.930218 USDT and 0 native ETH, with 0 outgoing
+   transactions. On 2026-09-10 a reader imported the seed and swept 310.37 USDT plus
+   20.04 USDC of paid-checker deposits. Rechecked 2026-09-15: native ETH 0, nonce 6,
+   USDT 0.
 2. The BIP44 derivation is certified against the author's own published example.
 3. The page-naming scheme, `sha256(word)`, is broken: the 11 known preimages spell a
    sentence that names the URL of a 12th, hidden game page. As of 2026-08-27 that
@@ -121,19 +122,22 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 
 ## Open leads, ranked
 
-1. **Apply the 2026-08-27 live pages** (hours). Full transcription and three working
-   readings (`can`, `airport`, `nice`) in [analysis/leads.md](analysis/leads.md).
-   Still unread: Photopea on Game 1's `/image1.psd`; Game 2's two yellow thumbnails;
-   Game 3's grids plus `SW 1881`; Game 5's 13-digit number; Game 8's `A9759`; Game 10's
-   four-city cluster. Confirmed by a 12-word MATCH; killed only by exhausting those
-   readings.
-2. **Recover the Game 12 Drive file** (hours). The hashed page is 404. The tweet
-   screenshot has no Drive id. Notes-to-digits still matches Season 1's `kplo.html`
-   grammar once the audio is in hand. A player called the track "the Jungle".
-3. **Use the author's 8-of-12 offer only after eight oracle-grade words are held**
-   (hours). `new.html` says the author will fill the rest through the paid checker.
-   That is not a substitute for `tools/oracle.py`, which still needs twelve valid
-   words.
+None. The puzzle is solved; see the Solution section.
+
+## Solution
+
+Solved by another reader, not by me. The author named [@real_avi_eth](https://x.com/real_avi_eth)
+as the solver on 2026-09-10
+([announcement](https://x.com/FTPKgame/status/2098108242807169062)) and wrote that they
+used the site's 8-of-12 paid word check (`new.html`, titled New (2/3)). The reconstructed
+seed was imported and the escrow swept the same day: 310.37 USDT out in tx
+[`0x06d2e114ed75c77b71f71d291ea6cf59160d450169899bcd4a5d0a1223e3e971`](https://etherscan.io/tx/0x06d2e114ed75c77b71f71d291ea6cf59160d450169899bcd4a5d0a1223e3e971),
+then 20.04 USDC of checker deposits in tx
+[`0xf703fa5c67c0c31f49e7ea3c04471dd030b0ba5349450e4077824da5720c524a`](https://etherscan.io/tx/0xf703fa5c67c0c31f49e7ea3c04471dd030b0ba5349450e4077824da5720c524a).
+Leftover ETH went to `0x14AaF6444DaA7ae0cB6C669F11D70578d465BFCB` and from there to
+Coinbase. The 12-word answer was not published. The series lesson is that the author's
+paid 8-of-12 fill-in is a live claim path, not only a convenience: Game 12's hashed page
+was already 404, so recovering every mini-game was not required.
 
 ## Files in this folder
 
@@ -155,4 +159,6 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 - N4Khjir, Game 7 title "Zero-based indexing", X, 2025-05-28: https://x.com/N4Khjir/status/1927621189503005053
 - N4Khjir, Game 11 Braille / +33 / French poem, X, 2025-05-28: https://x.com/N4Khjir/status/1927623047076282678
 - Author, image2.jpg is a development error, X, 2025-06-06: https://x.com/FTPKgame/status/1931024956046909798
+- Author, Season 2 solved by @real_avi_eth, X, 2026-09-10: https://x.com/FTPKgame/status/2098108242807169062
 - Escrow wallet, etherscan.io: https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc
+- USDT sweep via Relay, 2026-09-10: https://etherscan.io/tx/0x06d2e114ed75c77b71f71d291ea6cf59160d450169899bcd4a5d0a1223e3e971
