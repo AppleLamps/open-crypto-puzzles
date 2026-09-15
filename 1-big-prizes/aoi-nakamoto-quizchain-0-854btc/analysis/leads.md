@@ -113,6 +113,20 @@ stays open as a standing invitation, same as any human-reasoned wordplay block
 in the series.
 Cost: minutes per candidate; no sweep implied.
 
+## Killed: Stage One solution concatenated with the chapter
+
+Killed 2026-09-15. She wrote that the complete Stage One solution "will in turn
+be the question for the Second stage". Concatenating the certified Stage One
+bytes (MD5 `9dd2efb9bc976c2095bd534d7b8d431c`) with the live Wattpad chapter,
+in both orders, under the keep-tests and joins already used on the chapter
+alone, is a negative: 1,920 unique concatenations, 0 match. The same run also
+killed the leftover instructions the chapter states after paragraph 227
+(first-four and last-four words; last letters of non-ITASM paragraphs; the
+short strings that passage derives) and one extra first/last-letter toggle on
+a keep-tested chapter: 5,326 unique texts in all, 0 match. Witness: Stage One
+reproduced; 3 planted texts recovered. Rate: 448/s. What this does not kill is
+a remaining twist that is not a concatenation of those two source texts.
+
 ## Killed: contiguous copy-paste spans of the chapter
 
 Killed 2026-08-27. The author said to copy-paste and change only capitalization,
@@ -149,5 +163,7 @@ research but never recorded as a number:
 Both reimplementation gotchas they flag are already handled in `tools/oracle.py`, but neither
 was stated in prose: a paragraph break is `<br><br>`, so a single `<br>` (as in the
 "[edited slightly]" line) does not start a new paragraph; and the byte encoding is ISO-8859-1,
-not UTF-8. Recording the MD5 makes the Stage One reproduction checkable without re-deriving
-from the post.
+not UTF-8. The 2026-09-15 reconstruction adds that the single `<br>` is kept as a newline
+inside that last paragraph, and that `[edited slightly]` is part of the hashed bytes.
+Without that newline the MD5 is not `9dd2efb9bc976c2095bd534d7b8d431c`. Recording the MD5
+makes the Stage One reproduction checkable without re-deriving from the post.

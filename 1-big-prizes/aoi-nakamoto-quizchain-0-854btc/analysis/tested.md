@@ -45,6 +45,7 @@ predecessor (`1EFojcAo2vbhRGCGCa7q8Wwvzss28mhQYC`).
 | Each section alone (I. Second Life, paragraphs 3 to 52; II. Grycoin, 88 to 161; III. Identity, 163 to 272; the Satoshi Code passage, 174 to 245), with and without the planted groups flipped | 96 | 0 match |
 | The chapter's 2 abnormal capitals (`VIrgin` in paragraph 127, `BItcoin` in 135) as a selector or as a "twist" correction, with and without the groups | 64 | 0 match |
 | Every pair of boundary edits on 16 certified bases: one invisible character (NBSP, ZWSP, BOM, TAB, CR, LF, SP) inserted at any 2 paragraph joins, or 1 insertion plus 1 case toggle of a boundary letter; 8 keep-sets of the 3 groups with the Finney quote and 8 without, across joins, trailing newline and NBSP conventions | 48,379,696 | 0 match |
+| Stage One solution concatenated with the chapter; first-four and last-four words as paragraph 241 states; last letters of paragraphs that fail the ITASM keep-test; short strings the Satoshi Code passage derives, plus the chapter; stored HTML; one extra first/last-letter case toggle on a keep-tested chapter (`tools/stage_two_question.py`) | 5,326 unique texts | 0 match |
 
 Witness status: every row above 2026-08-15 used the oracle certified against Block 77 Stage
 One (see README, "Certified against"); the single-character-edit row additionally
@@ -87,7 +88,8 @@ repeated.
 Cumulative for Real Big Block: approximately 272 million candidates tested
 through 2026-08-15, plus 12,848 unique 2019-copy serializations, 3,030 unique
 2019-indent/empty-`<p><br></p>` serializations, 1,469,908 unique contiguous
-spans, and 221,520 unique bounded 2-edits on 2026-08-27, 0 match. The
+spans, and 221,520 unique bounded 2-edits on 2026-08-27, plus 5,326 unique
+Stage One-plus-chapter texts on 2026-09-15, 0 match. The
 single-character-edit sweep accounts for the large majority of this total.
 Two rows are certified as complete sweeps of their stated space: that
 1-character sweep (all 40 bases, every single edit) and the 2026-08-27
@@ -126,6 +128,23 @@ A second 2026-08-27 run, over Finney-pattern groups and first/last N-paragraph
 chunks, is also a negative. Method: `tools/oracle.py` certified on Block 77
 Stage One, with a synthetic witness recovered at the head of the run. Rate:
 522 candidates/s. Date: 2026-08-27.
+
+The 2026-09-15 Stage One-plus-chapter run used `tools/stage_two_question.py`
+against the current escrow, the superseded 2019-07-24 escrow, and Block 76.
+Witness: Stage One reconstructed from the live bitcointalk post (single `<br>`
+kept as a newline inside the last paragraph, `[edited slightly]` retained)
+reproduces MD5 `9dd2efb9bc976c2095bd534d7b8d431c` and address
+`19TbyN5KCg1Lg7qHwezifsLVcdSa2Rj5KN` at index 0; 3 synthetic two-paragraph
+texts planted at head, middle and tail of the same generator were all
+recovered before the run was accepted. Unique texts: 1,920 concatenations of
+the certified Stage One bytes with chapter tokenizations; 76 first-four and
+last-four-word extracts; 10 last-letter / selected-paragraph strings; 48 short
+Satoshi Code strings plus the chapter; 2 stored-HTML serializations; 3,270
+single extra first/last-letter toggles on a keep-tested chapter. Rate: 448
+candidates/s. Elapsed: 11.9 s. Date: 2026-09-15. This is a targeted test of
+her statement that the Stage One solution is the question for stage 2, and of
+the leftover instructions the chapter states after paragraph 227. It is not a
+sweep of non-contiguous subsets or of unbounded 2-edits.
 
 | Hypothesis family | Candidates | Result |
 |---|---|---|

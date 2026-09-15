@@ -23,7 +23,7 @@ Block.
 | Prize | 0.777 BTC open (Real Big Block); Block 76's 0.077 BTC was solved and swept by a reader 2026-08-17 (about $48,951 at BTC = $63,000, 2026-08-16) |
 | Chain | bitcoin |
 | Escrow | `14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W` (Real Big Block, [explorer](https://mempool.space/address/14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W)) and `13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd` (Block 76, solved and swept 2026-08-17, [explorer](https://mempool.space/address/13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd)) |
-| Last on-chain check | 2026-08-27: Real Big Block funded and unspent (0.777 BTC); Block 76 swept 2026-08-17 (0.077 BTC claimed by a reader) |
+| Last on-chain check | 2026-09-15: Real Big Block funded and unspent (0.777 BTC); Block 76 swept 2026-08-17 (0.077 BTC claimed by a reader) |
 | Status | OPEN |
 | Puzzle type | bip39-seed, word-selection |
 | Target format | source text (candidate answer), MD5 to 128-bit entropy, BIP39 mnemonic, BIP44 `m/44'/0'/0'/0/i` for i = 0 to 5, P2PKH address |
@@ -153,7 +153,7 @@ Reproduced 2026-08-16.
 
 ### Established facts
 
-1. Real Big Block is funded and unspent as of 2026-08-27:
+1. Real Big Block is funded and unspent as of 2026-09-15:
    `14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W` holds 0.777 BTC (funded 2019-07-30,
    block 587833), checked via [mempool.space](https://mempool.space). Block 76's
    escrow `13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd` was funded 2019-07-22 (block
@@ -216,6 +216,7 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | RBB: the rule the chapter itself dictates (paragraph 227: flip every paragraph whose first letter is not I, T, A, S or M, skipping opening quotes; 118 paragraphs, 3 modes, both joins, with and without trailing newline, indices 0 to 5); 3 planted groups under a SHA-256 24-word derivation; `<br>` as a paragraph boundary (283 paragraphs); each section alone (Second Life, Grycoin, Identity, Satoshi Code) with and without the groups; the chapter's 2 abnormal capitals (`VIrgin`, `BItcoin`) as selector or as correction | about 1,200 texts | same | 0 match | yes: Stage One reproduced by the same code | 2026-08-21 |
 | RBB: hash used directly as the private key (brainwallet: SHA-256, MD5, double SHA-256, compressed and uncompressed) | 96 variants | direct key | 0 match | uncertified: no known-good vector for this reading; the certified mechanism is BIP39 | 2026-08-21 |
 | RBB: every pair of boundary edits on 16 certified bases (8 keep-sets of the 3 groups with and without the Finney quote, times joins, trailing newline and NBSP): insertion of one invisible character (NBSP, ZWSP, BOM, TAB, CR, LF, SP) at any two paragraph joins, or one insertion plus one case toggle of a boundary letter | 48,379,696 (24,189,848 per keep-set) | same, MD5 on CPU and BIP39 to hash160 on GPU, 223,000 candidates/s | 0 match | yes: 4 planted witnesses per base (3 insertion pairs at head, middle and tail, 1 mixed insertion plus case) and the real Stage One text, all recovered on all 16 bases | 2026-08-23 |
+| RBB: Stage One solution concatenated with the chapter; first-four and last-four words (paragraph 241); last letters of non-ITASM paragraphs; Satoshi Code short strings plus the chapter; stored HTML; one extra first/last-letter toggle on a keep-tested chapter | 5,326 unique texts | same | 0 match | yes: Stage One MD5 and address reproduced; 3 planted two-paragraph witnesses recovered at head, middle and tail | 2026-09-15 |
 | Block 76: standard BIP44/49/84 derivations, paths, passphrases on the one chain found by search | standard space plus 24,564 off-by-one variants | MD5 to BIP39 to address compare | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
 | Block 76: word-transform "salves" on "change to" / "from change to" | approximately 53,000 candidate solutions | MD5-prefix filter, then derivation on survivors | 0 match | yes | 2026-08-15 |
 | Block 76: scripted dictionary-times-corpus sweep | approximately 3.2x10^11 MD5, approximately 78,000,000 derivations | MD5-prefix filter, then derivation on survivors | 0 match | yes: calibrated on blocks 73 and 74 | 2026-08-15 |
@@ -226,7 +227,8 @@ through 2026-08-15, about 1,300 chapter-rule and section variants on 2026-08-21,
 serializations, 3,030 unique 2019-indent/empty-`<p><br></p>` serializations,
 1,469,908 unique contiguous spans, and 221,520 unique bounded 2-edits on
 2026-08-27 (AppleLamps), plus 17,921 unique Finney-group and first/last
-N-paragraph serializations, and approximately 78 million derivations plus
+N-paragraph serializations, 5,326 unique Stage One-plus-chapter texts on
+2026-09-15, and approximately 78 million derivations plus
 approximately 78,000 smaller candidates tested against Block 76, all negative. Full scope notes, including which rows are complete
 sweeps versus targeted tests, are in `analysis/tested.md`.
 
