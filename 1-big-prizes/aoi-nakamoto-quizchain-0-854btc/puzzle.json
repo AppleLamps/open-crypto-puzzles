@@ -34,7 +34,7 @@
       "label": "Real Big Block, stage 2",
       "explorer": "https://mempool.space/address/14zMkTgaVXJcxdh4JdWi29MLRR44iUSG9W",
       "expected": "77700000 sats",
-      "verified_on": "2026-08-27",
+      "verified_on": "2026-09-15",
       "verified_state": "funded-unspent"
     },
     {
@@ -44,7 +44,7 @@
       "label": "Quizchain2 Block 76",
       "explorer": "https://mempool.space/address/13Cv6SXUnzGDT8JHqzzJ8xMPtsSdhJA4wd",
       "expected": "7700000 sats",
-      "verified_on": "2026-08-21",
+      "verified_on": "2026-09-15",
       "verified_state": "swept"
     },
     {
@@ -54,7 +54,7 @@
       "label": "Real Big Block, stage 1 (certification reference, solved by a third party in 2019, not part of the live prize)",
       "explorer": "https://mempool.space/address/19TbyN5KCg1Lg7qHwezifsLVcdSa2Rj5KN",
       "expected": "n/a",
-      "verified_on": "2026-08-16",
+      "verified_on": "2026-09-15",
       "verified_state": "swept"
     }
   ],
@@ -70,10 +70,10 @@
     "certified_against": "the author's own published calibration vector (entropy 2941774a2abec9f30c7d6777d1d53d91 to WIF L5Z66qPm... at BIP44 index 1), self-contained and exact; the case-flip rule and Block 76 prefix filter are certified separately with a synthetic example and a community-found candidate pair; full reproduction of the solved sibling lot Block 77 Stage One needs Hal Finney's bitcointalk post text, which this repository does not ship (third-party content), but which anyone can supply themselves to apply_stage_one_rule()"
   },
   "difficulty_left": "external-info",
-  "difficulty_note": "Real Big Block: the transform and the case-flip rule are confirmed exactly on a solved sibling lot; what is missing is the precise source text the author hashed on 2019-07-30. She removed one twist that day and kept at least one, and later wrote that she lost the solution herself. Every contiguous paragraph span (1,469,908 texts), a bounded 2-edit slice on the full chapter (221,520 texts), every pair of boundary edits on 16 certified bases (48,379,696 texts) and the rule the chapter dictates itself are negatives. The reader who swept Block 76 on 2026-08-17 holds the convention of a final Aoi block, which is the cheapest calibration left",
+  "difficulty_note": "Real Big Block: the transform and the case-flip rule are confirmed exactly on a solved sibling lot; what is missing is the precise source text the author hashed on 2019-07-30. She removed one twist that day and kept at least one, and later wrote that she lost the solution herself. Every contiguous paragraph span (1,469,908 texts), a bounded 2-edit slice on the full chapter (221,520 texts), every pair of boundary edits on 16 certified bases (48,379,696 texts), the rule the chapter dictates itself, concatenating the certified Stage One bytes with the chapter (5,326 texts), and two extra sign-position toggles (1,188,096 texts) are negatives. The reader who swept Block 76 on 2026-08-17 holds the convention of a final Aoi block, which is the cheapest calibration left",
   "tested_total": {
-    "candidates": 398397713,
-    "families": 34,
+    "candidates": 399591148,
+    "families": 36,
     "certified": true
   },
   "leads": [
@@ -173,5 +173,5 @@
     }
   ],
   "third_party_material": "no book, chapter text, forum dump, or other bulk third-party material is included; the Wattpad chapter (the author's own fiction) and Hal Finney's bitcointalk post (third-party historical content) are both referenced by URL only, never reproduced; quotes in clues/author-posts.md are short excerpts from the puzzle author's own public Reddit posts",
-  "last_updated": "2026-09-03"
+  "last_updated": "2026-09-15"
 }
