@@ -119,6 +119,12 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 Cumulative: 3,148,564 assembled 58-character candidates tested against the escrow, 0
 matches. Rows 7-19 of the full ledger are in [analysis/tested.md](analysis/tested.md).
 
+Added 2026-09-05 by @BorisLoveDev (PR #21): 432 further 58-character candidates built
+from two dated 2020-03-16 transfer addresses (USDT and HUSD) and RGB/base64 readings,
+checked with the exact-address oracle and an original-page control at head, middle and
+tail: 0 match. The exact input lists stayed outside git, so these rows are recorded as
+contributed and are not reproducible from a checkout yet.
+
 ## Open leads, ranked
 
 Ranked list in [analysis/leads.md](analysis/leads.md). Short version:
@@ -150,3 +156,5 @@ Ranked list in [analysis/leads.md](analysis/leads.md). Short version:
 - "1,2,4,8 = solved / 3,5,7,9 = not solved yet", Twitter, 2020-04-14: https://twitter.com/arweavep/status/1250036746802298885
 - HomelessPhD/AR_Puzzles community repository, PZL12 entry: https://github.com/HomelessPhD/AR_Puzzles/tree/main/PZL12
 - Escrow wallet, viewblock.io: https://viewblock.io/arweave/address/XRGEfkMbCMHeTY9mZI9Lh6hf8EmA8RstmBFUjDm40fg
+
+Credits: @BorisLoveDev (PR #21): the three dated transfer-address readings and the replay tool.
