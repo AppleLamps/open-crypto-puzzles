@@ -135,7 +135,7 @@ Puzzles that turned out swept, unfunded, custodial, or fake are kept off the lis
 ## Series
 
 - Arweave puzzles: #3, #10, #11, #12 open; #8 solved by others is the oracle calibration.
-- Zden (crypto.haluska.sk): LVL5 and HALV open; earlier levels solved by others.
+- Zden (crypto.haluska.sk): HALV open; LVL5 swept on 2026-09-22 and moved to solved; earlier levels solved by others.
 - FTPK: seasons 2 and 4 solved by readers after publication; seasons 1 and 3 finished and still playable, used to learn the author's grammar.
 - Finlow-Bates "Blockchain book": 12 lots, 3 open, 4 solved by me, 5 by others.
 - Aoi Nakamoto Quizchain: Real Big Block and Block 76 open; Block 77 Stage One reproduced.
