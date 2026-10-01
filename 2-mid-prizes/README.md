@@ -25,6 +25,7 @@ its actual state does (solved, swept, funded).
 | [RushWallet Contest #30](rushwallet-contest-30-1msats/) | 1,000,000 sats | 630 | bitcoin | brainwallet, audio | external-info | 2026-08-16 | open |
 | [School of Bitcoin: 1 Million Sats In This Image](school-of-bitcoin-1msats/) | 1,000,000 sats | 630 | bitcoin | bip39-seed, image-stego, password-pages | external-info | 2026-08-16 | open |
 | [AH White: Walking Banks](ah-white-walking-banks-800ksats/) | 800,000 sats | 504 | bitcoin | bip39-seed, book, text-cipher | external-info | 2026-08-16 | open |
+| [kTimesG: Phy Challenge](ktimesg-phy-challenge-800ksats/) | 800,000 sats | 504 | bitcoin | raw-private-key, image-stego, pixel-code | insight | 2026-10-01 | open |
 | [Keir Finlow-Bates: Move Over Brokers Treasure Hunt](keir-finlow-bates-blockchain-book-600ksats/) | 600,000 sats | 378 | bitcoin | book, brainwallet, text-cipher | human-action | 2026-09-01 | open |
 | [Q's donated BIP38 paper wallet](q-bip38-paper-wallet/) | 0.005297 BTC | 334 | bitcoin | bip38 | uneconomic | 2026-10-01 | watch |
 | [Zden Level HALV](zden-haluska-halv-312ksats/) | 312,500 sats | 197 | bitcoin | geometry, raw-private-key | external-info | 2026-08-16 | open |

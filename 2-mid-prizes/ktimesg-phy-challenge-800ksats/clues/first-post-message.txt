@@ -1,0 +1,8 @@
+A purely P2P version of modular values would allow online
+payments to be sent directly from one party to another without going through the fractional reserve banking system. Digital signatures provide part of the solution, but the main benefits are lost if a trusted third party is still required to prevent private key recovery. We propose a solution to the problem using a peer-to-peer network. The network spacestamps information by carefully measuring it into an ongoing chain of phylo-based proof-of-equivalence, forming a record that cannot be changed without redoing the proof-of-equivalence. The chain not only serves as proof of the sequence of events witnessed, but proof that it serves the chain. The network itself requires minimal structure.
+
+=================
+
+The kTimesG 2026/06/05 Bitcoin has worst weekly fall since 2022
+
+looks bad this bearish cycle around and no end is in sight, so here's a puzzle for everyone, no loose ends, no hashing.

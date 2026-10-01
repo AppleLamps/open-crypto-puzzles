@@ -1,0 +1,16 @@
+# Negatives ledger: Phy Challenge
+
+Every row names its count, method, witness, rate and date. No key search has been run on this
+puzzle: 0 candidate private keys tested. The rows below are checks of the setup, so that the
+next person does not repeat them.
+
+Oracle: `tools/oracle.py`. Witness for all rows: `tools/oracle.py --selftest` prints
+`SELFTEST OK`, which includes the public BIP-173 vector (private key 1 gives
+`bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4`) and the recovery of the escrow address from the
+author's own signature.
+
+| Hypothesis | Space (N) | Method | Result | Witness | Rate | Date |
+|---|---|---|---|---|---|---|
+| The signed message is exactly the first code block of the first post, LF line endings, no trailing newline (959 bytes) | 1 reading | BIP-137 public key recovery with `tools/oracle.py --recover`, compare the hash160 address to the escrow | 1 match: recovers `bc1qrpn28qa82uyjg37dvsz3w7wpm3kpdea957nm9p` | yes: same code reproduces the BIP-173 vector | about 55 recoveries/s, pure Python on one CPU core | 2026-10-01 |
+| Whitespace variants of the signed message: trailing LF added, CRLF line endings, CRLF with a trailing CRLF | 3 readings | same recovery | 0 match. They recover `bc1qpmpy8zy2reer2ext9cffwr6tdhwlm937dtwfvh`, `bc1qvjvyugkw3xwjnqeu5cld32xlss9kjvyd7csm98` and `bc1q3tazetwnw22jxmew9ptj34tyn6x53zg4a7qadr`, none of which is the escrow | yes: the exact reading in row 1 is re-found by the same code | about 55 recoveries/s, pure Python on one CPU core | 2026-10-01 |
+| The escrow key has signed an on-chain input under another single-key script form | 4 addresses for one public key: the P2WPKH escrow, P2PKH compressed, P2PKH uncompressed, P2SH-P2WPKH | `python3 tools/oracle.py --scripts` prints the three other addresses; read each with `curl https://mempool.space/api/address/<address>` | 0 transactions on each of the three other addresses (`13E2B4vuY9apuK9f7ZAASf21na5LUouB8N`, `1Bi7nd8D6iNvxQPovXhboqHsDfWup4TEi1`, `3HXSmptQnuWukC8TenCnJ7V1u1JWHyjMXG`); the escrow has `spent_txo_sum` 0 and `tx_count` 1. Not covered: multisig, taproot, a bare public key, and any script that embeds this key some other way | yes: the same derivation reproduces the published P2PKH addresses of private key 1, and its P2SH-P2WPKH address has 38 transactions in the same API | not applicable | 2026-10-01 |
