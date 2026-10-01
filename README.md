@@ -13,13 +13,13 @@ on-chain right now.
 <!-- totals:start -->
 | Asset | Locked in unsolved puzzles | Approx. value |
 |---|---|---|
-| Bitcoin | 13.10 BTC | $826,000 |
+| Bitcoin | 13.11 BTC | $826,000 |
 | Ethereum | 13.21 ETH | $25,000 |
 | Arweave | 1,900 AR | $3,400 |
 | Litecoin | 3.03 LTC | $200 |
 | Solana | 0.834 SOL | $63 |
 | Stablecoins | 0 USDT + 0 USDC | $0 |
-| **Total** | **across 32 funded puzzles** | **$854,000** |
+| **Total** | **across 33 funded puzzles** | **$855,000** |
 
 Price snapshot 2026-08-16: BTC $63,000, ETH $1,880, AR $1.81, LTC $54, SOL $75.28. Balances were checked on the dates in each table; these are not historical balances at the price date. Prices and balances move; verify each escrow yourself.
 <!-- totals:end -->
@@ -103,6 +103,7 @@ grouped by prize, is in the tables below.
 | [RushWallet Contest #30](2-mid-prizes/rushwallet-contest-30-1msats/) | 1,000,000 sats | 630 | bitcoin | brainwallet, audio | external-info | 2026-08-16 | open |
 | [School of Bitcoin: 1 Million Sats In This Image](2-mid-prizes/school-of-bitcoin-1msats/) | 1,000,000 sats | 630 | bitcoin | bip39-seed, image-stego, password-pages | external-info | 2026-08-16 | open |
 | [AH White: Walking Banks](2-mid-prizes/ah-white-walking-banks-800ksats/) | 800,000 sats | 504 | bitcoin | bip39-seed, book, text-cipher | external-info | 2026-08-16 | open |
+| [kTimesG: Phy Challenge](2-mid-prizes/ktimesg-phy-challenge-800ksats/) | 800,000 sats | 504 | bitcoin | raw-private-key, image-stego, pixel-code | insight | 2026-10-01 | open |
 | [Keir Finlow-Bates: Move Over Brokers Treasure Hunt](2-mid-prizes/keir-finlow-bates-blockchain-book-600ksats/) | 600,000 sats | 378 | bitcoin | book, brainwallet, text-cipher | human-action | 2026-09-01 | open |
 | [Q's donated BIP38 paper wallet](2-mid-prizes/q-bip38-paper-wallet/) | 0.005297 BTC | 334 | bitcoin | bip38 | uneconomic | 2026-10-01 | watch |
 | [Zden Level HALV](2-mid-prizes/zden-haluska-halv-312ksats/) | 312,500 sats | 197 | bitcoin | geometry, raw-private-key | external-info | 2026-08-16 | open |
