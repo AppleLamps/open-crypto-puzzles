@@ -35,5 +35,10 @@ jobs:
             git add assets/prize-map.svg
             git commit -m "assets: prize map refreshed at live prices"
             git pull --rebase origin main
+            # A push between checkout and here may have changed the manifests;
+            # render again on the rebased tree so the pushed map matches them.
+            python3 tools/fig_prize_bars.py
+            git add assets/prize-map.svg
+            git commit --amend --no-edit
             git push
           fi

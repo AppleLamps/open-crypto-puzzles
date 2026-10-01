@@ -10,8 +10,6 @@ on-chain right now.
 
 *The chart is regenerated every day at live CoinGecko prices by a scheduled job; the balances are the ones recorded in each folder and re-checked with `tools/check_escrows.py`.*
 
-*The biggest unsolved prizes on-chain right now. Regenerated from the manifests by `tools/fig_readme_totals.py`.*
-
 <!-- totals:start -->
 | Asset | Locked in unsolved puzzles | Approx. value |
 |---|---|---|

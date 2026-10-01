@@ -34,6 +34,7 @@ from bip_utils import (
     Bip44,
     Bip44Coins,
     Bip44Changes,
+    MnemonicChecksumError,
 )
 
 TARGET_ADDRESS = "0x9c2f44efad0c1e852a09df9939e6daf061140caf"
@@ -77,7 +78,13 @@ def attempt(candidate: str) -> tuple[str, dict]:
     words = candidate.strip().split()
     if len(words) != 12:
         return "INVALID WORD", {"reason": f"expected 12 words, got {len(words)}"}
-    checksum_ok = Bip39MnemonicValidator().IsValid(candidate)
+    try:
+        Bip39MnemonicValidator().Validate(" ".join(words))
+        checksum_ok = True
+    except MnemonicChecksumError:
+        checksum_ok = False
+    except ValueError as exc:
+        return "INVALID WORD", {"reason": str(exc)}
     address = derive_address(candidate)
     if address == TARGET_ADDRESS:
         return "MATCH", {"address": address, "checksum_valid": checksum_ok}
@@ -101,6 +108,12 @@ def selftest() -> bool:
     part2b = derive_address(neighbor).startswith("0x")
     print(f"an invalid-checksum phrase still derives an address (no checksum gate): {'OK' if part2b else 'FAIL'}")
     ok = ok and part2b
+
+    verdict_bad_checksum, _ = attempt(neighbor)
+    verdict_unknown_word, _ = attempt(" ".join(["abandon"] * 11 + ["zzzz"]))
+    part2c = verdict_bad_checksum == "NO MATCH" and verdict_unknown_word == "INVALID WORD"
+    print(f"attempt(): bad checksum -> NO MATCH, word not in the list -> INVALID WORD: {'OK' if part2c else 'FAIL'}")
+    ok = ok and part2c
 
     part3 = TARGET_ADDRESS == TARGET_ADDRESS.lower()
     print(f"target address is stored lowercase for exact comparison: {'OK' if part3 else 'FAIL'}")

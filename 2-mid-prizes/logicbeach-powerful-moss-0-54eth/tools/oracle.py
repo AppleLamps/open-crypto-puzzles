@@ -113,7 +113,7 @@ def selftest() -> bool:
     ok = ok and clean
 
     bad = check("abandon " * 12)
-    derived_no_match = bad is None and _eth_addresses(bip39_seed("abandon " * 12))
+    derived_no_match = bad is None and len(list(_eth_addresses(bip39_seed("abandon " * 12)))) == 9
     print(f"invalid BIP39 checksum -> still derived, no match, no gate: {'OK' if derived_no_match else 'FAIL'}")
     ok = ok and bool(derived_no_match)
 
