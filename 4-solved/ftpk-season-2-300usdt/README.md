@@ -5,10 +5,14 @@ FTPKgame (@FTPKgame on X) launched the second season of this puzzle series on
 private key for an Ethereum wallet holding USDT. I mapped the site, certified the
 derivation against the author's own worked example, and broke the page-naming scheme,
 which hides a 13th URL for a 12th game. On 2026-08-27 I fetched the live Season 2
-pages and the Season 4 hint map. Eleven listed games plus extras were up; the hashed
-Game 12 URL returned 404. Three games had a single-list-word reading (Game 9
-`can`, Game 11 `airport`, Game 7 `nice`). A reader swept the escrow on 2026-09-10
-before any 12-word MATCH was recorded here. The answer was not published.
+pages and the Season 4 hint map. Eleven listed games plus extras were up. The Game 12
+page was live after all: its name is the sha256 of the 11-word sentence with the spaces
+removed, not of the spaced sentence I probed in August (issue #17, @deviceio121). Game
+5's first step was settled: the visual diagonal of the rendered 13x25 block,
+`5509589357423`, names a live stage-2 page (issue #23, @CyberCalculus). Three games had a
+single-list-word reading (Game 9 `can`, Game 11 `airport`, Game 7 `nice`). A reader swept
+the escrow on 2026-09-10 before any 12-word MATCH was recorded here. The answer was not
+published.
 
 ## At a glance
 
@@ -35,8 +39,8 @@ manual, paid answer checker the site itself does not require, since the escrow a
 a free and exact offline oracle. Each game page is named `sha256(word).html`, where
 `word` is that game's own answer; reading the 11 known page names in order spells "the
 last game has for url this sentence that is hashed", which names the URL of a 12th,
-otherwise unlisted game. That hashed Game 12 path returns Vercel 404 as of 2026-08-27;
-the eleven listed games are still up. The word-order helper states that once all 12 words are known,
+otherwise unlisted game. That page is live at the no-spaces spelling of the sentence
+(see Established facts, item 3); the eleven listed games are still up. The word-order helper states that once all 12 words are known,
 visiting a page named by their literal concatenation (no spaces) confirms the correct
 order. On a page the author built for Season 4 to cross-reference Season 2, found by
 breaking the same naming scheme, the author wrote: "game number 7 is the weakest game,
@@ -81,8 +85,13 @@ reproduced exactly.
    USDT 0.
 2. The BIP44 derivation is certified against the author's own published example.
 3. The page-naming scheme, `sha256(word)`, is broken: the 11 known preimages spell a
-   sentence that names the URL of a 12th, hidden game page. As of 2026-08-27 that
-   hashed Game 12 path returns Vercel 404; the sha256 of the sentence still matches.
+   sentence that names the URL of a 12th, hidden game page. The live page is
+   `sha256("thelastgamehasforurlthissentencethatishashed")` =
+   `913170fd2a64507ceb9cedcd29961f63c03888a2207d4bd8f5e55729c5d67a39.html` (HTTP 200
+   on 2026-07-26 and 2026-09-07); the spaced spelling (`2d80326b...`) and the tail-only
+   spelling `sha256("this sentence that is hashed")` (`d4dd1bdf...`) both return 404.
+   The page shows `C1094`, a hidden `simplicity must be rewarded T`, and a Google Drive
+   link to `FTPK.wav`.
 4. A second, free, offline-equivalent oracle exists: probing the page named by the 12
    words concatenated without spaces confirms both the words and their order.
 5. Game 1's 2 hidden decoy channels (a steganographic image layer and an invisible link
@@ -117,8 +126,11 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | Extra 50-letter page names as the 12-word concatenation oracle | 2 strings, 50 letters | DP word-break vs English BIP39 | 0 reconstructions | yes: teaching mnemonic concat re-found as 12 words | 2026-08-27 |
 | Game 9 title/body as a single BIP39 index | 2 numbers | range check against 0..2047 / 1..2048 | both out of range | yes: bounds of the published list | 2026-08-27 |
 | Game 9 title as A1Z26 of the whole digit string | 8 partitions | A1Z26 then BIP39 membership | 0 list words | yes: 12,1,19,20 reproduces the Game 2 page-name preimage | 2026-08-27 |
-| Game 12 hashed URL as currently hosted | 1 URL | GET the sha256 path | 404 NOT_FOUND | yes: Game 11 on the same host still 200 | 2026-08-27 |
-| Game 5 13-digit diagonals and column 0 as page names | 5 URLs | GET `/{13 digits}.html` | all 404 | yes: Game 9 hashed URL still 200 | 2026-08-27 |
+| Game 12 hashed URL, spaced-sentence spelling `2d80326b...` | 1 URL | GET the sha256 path | 404 NOT_FOUND | yes: Game 11 on the same host still 200 | 2026-08-27 |
+| Game 12 hashed URL, three spellings (`913170fd...` no spaces, `2d80326b...` spaced, `d4dd1bdf...` tail only) | 3 URLs | GET through a real browser | `913170fd...` 200 with the Drive link; the other two 404 | yes: 404 pages come back as Vercel NOT_FOUND, not as the security checkpoint | 2026-09-07 |
+| Game 5 13-digit matrix diagonals and column 0 as page names | 5 URLs | GET `/{13 digits}.html` | all 404 | yes: Game 9 hashed URL still 200 | 2026-08-27 |
+| Game 5 visual diagonal of the rendered block (row i, column 2i) = `5509589357423` | 1 URL | GET `/5509589357423.html` | 200: stage-2 page with a 12x12 digit block and hidden `C` (my 2026-07-26 capture; reported live again by @CyberCalculus, issue #23) | yes: same fetcher returned 404 for the five matrix readings | 2026-07-26 |
+| Game 5 stage 2: 12x12 block read as main diagonal, its reverse, anti-diagonal and reverse, all 12 columns, row sums, column sums, both sums, and 13-digit wrap variants | about 25 URLs | GET `/{digits}.html` | all 404 | uncertified: no positive control in that batch | 2026-07-26 |
 
 ## Open leads, ranked
 
@@ -136,8 +148,8 @@ then 20.04 USDC of checker deposits in tx
 [`0xf703fa5c67c0c31f49e7ea3c04471dd030b0ba5349450e4077824da5720c524a`](https://etherscan.io/tx/0xf703fa5c67c0c31f49e7ea3c04471dd030b0ba5349450e4077824da5720c524a).
 Leftover ETH went to `0x14AaF6444DaA7ae0cB6C669F11D70578d465BFCB` and from there to
 Coinbase. The 12-word answer was not published. The series lesson is that the author's
-paid 8-of-12 fill-in is a live claim path, not only a convenience: Game 12's hashed page
-was already 404, so recovering every mini-game was not required.
+paid 8-of-12 fill-in is a live claim path, not only a convenience: recovering every
+mini-game, including the Game 12 audio, was not required.
 
 ## Files in this folder
 
@@ -162,3 +174,5 @@ was already 404, so recovering every mini-game was not required.
 - Author, Season 2 solved by @real_avi_eth, X, 2026-09-10: https://x.com/FTPKgame/status/2098108242807169062
 - Escrow wallet, etherscan.io: https://etherscan.io/address/0xb5fe4f1b6cb2bbe6a327f8c68f370da7df18b2dc
 - USDT sweep via Relay, 2026-09-10: https://etherscan.io/tx/0x06d2e114ed75c77b71f71d291ea6cf59160d450169899bcd4a5d0a1223e3e971
+
+Credits: @CyberCalculus (issue #23): Game 5 stage-1 number `5509589357423` reported live. @deviceio121 (issue #17): Game 12 page content (C1094, hidden T, Drive link to FTPK.wav).

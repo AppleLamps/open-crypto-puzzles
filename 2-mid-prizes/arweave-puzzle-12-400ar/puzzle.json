@@ -8,10 +8,15 @@
   "series": "arweave-puzzles",
   "author": {
     "name": "Tiamat",
-    "handles": ["twitter:@ArweaveP"],
+    "handles": [
+      "twitter:@ArweaveP"
+    ],
     "url": "https://twitter.com/arweavep"
   },
-  "published": { "date": "2020-05-05", "url": "https://twitter.com/arweavep/status/1257613928185675776" },
+  "published": {
+    "date": "2020-05-05",
+    "url": "https://twitter.com/arweavep/status/1257613928185675776"
+  },
   "chain": "arweave",
   "prize": {
     "amount": 400.00248121,
@@ -32,7 +37,11 @@
       "verified_state": "funded-unspent"
     }
   ],
-  "puzzle_type": ["word-selection", "geometry", "text-cipher"],
+  "puzzle_type": [
+    "word-selection",
+    "geometry",
+    "text-cipher"
+  ],
   "target_format": "one 58-character answer, case-sensitive, the concatenation of 4 jigsaw sub-answers with no separator, SHA-512 applied 11,513 times, CryptoJS AES-OpenSSL decrypt (non-standard 1024-bit key, 38-round Rijndael), plaintext must contain the literal \"kty\":\"RSA\"",
   "derivation": {
     "summary": "read each of the 4 jigsaw pieces (flags, a whale and a date, shapes with digit strings, hatched letters) into its own sub-answer, concatenate with no separator into an exact 58-character case-sensitive string, stretch with SHA-512 x11513, use the result as an EvpKDF/AES-OpenSSL password to decrypt the page's ciphertext into an Arweave RSA wallet keyfile",
@@ -42,22 +51,71 @@
   },
   "difficulty_left": "insight",
   "difficulty_note": "mechanism and oracle fully certified; piece 3 is solved with certainty; every source-material pairing that closes the 58-character budget is a negative, including AndreessenHorowitz and 35 other 18-character piece-2 strings; the open gap is a non-name encoding of piece 2, or a misread of one of the 'certain' pieces",
-  "tested_total": { "candidates": 3148564, "families": 21, "certified": true },
+  "tested_total": {
+    "candidates": 3148564,
+    "families": 21,
+    "certified": true
+  },
   "leads": [
-    { "rank": 1, "title": "piece 2 as a non-name encoding (symbol, number, acronym) now that every source-material 18-character name pairing is dead", "cost": "hours", "status": "open" },
-    { "rank": 2, "title": "leftover piece-1 encodings of length 4 or 6, which force 42- and 40-character piece-2 strings; an ETH address is 42 characters but the drawn date was not an on-chain transfer", "cost": "hours", "status": "open" }
+    {
+      "rank": 1,
+      "title": "piece 2 as a non-name encoding (symbol, number, acronym) now that every source-material 18-character name pairing is dead",
+      "cost": "hours",
+      "status": "open"
+    },
+    {
+      "rank": 2,
+      "title": "leftover piece-1 encodings of length 4 or 6, which force 42- and 40-character piece-2 strings; an ETH address is 42 characters but the drawn date was not an on-chain transfer",
+      "cost": "hours",
+      "status": "open"
+    }
   ],
   "solutions": [],
   "artifacts": [
-    { "path": "clues/puzzle-image.jpg", "sha256": "f299e805bd2f453328457ccd8ce40f199f0cd4d5caa30c67fd21e0fcfcc4d722", "source": "https://arweave.net/gymumAAsxGlzqPL5HzoEB8Xryu61o174j7vHwx21Qoo", "archived": null }
+    {
+      "path": "clues/puzzle-image.jpg",
+      "sha256": "f299e805bd2f453328457ccd8ce40f199f0cd4d5caa30c67fd21e0fcfcc4d722",
+      "source": "https://arweave.net/gymumAAsxGlzqPL5HzoEB8Xryu61o174j7vHwx21Qoo",
+      "archived": null
+    }
   ],
   "sources": [
-    { "title": "\"Puzzle 12 is here\"", "url": "https://twitter.com/arweavep/status/1257613928185675776", "date": "2020-05-05", "archived": null },
-    { "title": "Live puzzle page", "url": "https://arweave.net/gymumAAsxGlzqPL5HzoEB8Xryu61o174j7vHwx21Qoo", "date": "2020-04-29", "archived": null },
-    { "title": "\"58 chars CS\"", "url": "https://twitter.com/arweavep/status/1264211142714499072", "date": "2020-05-23", "archived": null },
-    { "title": "\"1,2,4,8 = solved / 3,5,7,9 = not solved yet\"", "url": "https://twitter.com/arweavep/status/1250036746802298885", "date": "2020-04-14", "archived": null },
-    { "title": "HomelessPhD/AR_Puzzles community repository, PZL12 entry", "url": "https://github.com/HomelessPhD/AR_Puzzles/tree/main/PZL12", "date": "2026-08-16", "archived": null },
-    { "title": "Escrow wallet, viewblock.io", "url": "https://viewblock.io/arweave/address/XRGEfkMbCMHeTY9mZI9Lh6hf8EmA8RstmBFUjDm40fg", "date": "2026-08-16", "archived": null }
+    {
+      "title": "\"Puzzle 12 is here\"",
+      "url": "https://twitter.com/arweavep/status/1257613928185675776",
+      "date": "2020-05-05",
+      "archived": null
+    },
+    {
+      "title": "Live puzzle page",
+      "url": "https://arweave.net/gymumAAsxGlzqPL5HzoEB8Xryu61o174j7vHwx21Qoo",
+      "date": "2020-04-29",
+      "archived": null
+    },
+    {
+      "title": "\"58 chars CS\"",
+      "url": "https://twitter.com/arweavep/status/1264211142714499072",
+      "date": "2020-05-23",
+      "archived": null
+    },
+    {
+      "title": "\"1,2,4,8 = solved / 3,5,7,9 = not solved yet\"",
+      "url": "https://twitter.com/arweavep/status/1250036746802298885",
+      "date": "2020-04-14",
+      "archived": null
+    },
+    {
+      "title": "HomelessPhD/AR_Puzzles community repository, PZL12 entry",
+      "url": "https://github.com/HomelessPhD/AR_Puzzles/tree/main/PZL12",
+      "date": "2026-08-16",
+      "archived": null
+    },
+    {
+      "title": "Escrow wallet, viewblock.io",
+      "url": "https://viewblock.io/arweave/address/XRGEfkMbCMHeTY9mZI9Lh6hf8EmA8RstmBFUjDm40fg",
+      "date": "2026-08-16",
+      "archived": null
+    }
   ],
   "third_party_material": "the jigsaw image is the author's own puzzle material, published on the Arweave permaweb page; no book, audio, or video material",
   "last_updated": "2026-09-15"

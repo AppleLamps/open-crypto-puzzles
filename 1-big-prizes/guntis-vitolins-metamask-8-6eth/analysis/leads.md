@@ -29,6 +29,23 @@ is now a reading task rather than a sweep.
 
 ## 1. Read the text shown on screen in the challenge video
 
+Executed by @cjmcdaniel on 2026-09-04 (issue #18): 720p download, 1 frame per
+second (431 frames), OCR of every frame, intersection with the BIP-0039 list,
+diff against `data/reading-order-pool.json`. Result: 122 dictionary words are
+legible on screen, 109 of them in no written surface of the pool, so the pool
+every sweep below used was incomplete. Most of the 109 are browser chrome. The
+words that match the portfolio-table prediction are `atom`, `link`, `basic`,
+`token` and `dash`; `cash`, `icon`, `wave`, `gas`, `ocean`, `fetch` and
+`ripple` are not legible at that resolution and not spoken. `cloud` is not on
+screen, which supports `fog`. A second channel no sweep has used: the spoken
+words of the video (129 dictionary words in the auto captions, 110 not in the
+pool). Both lists are in `data/video-onscreen-words.json`. I checked all 219
+words against the list and spot-checked `link`, `token`, `atom` and `reveal` on
+my own frames. The RO1 model extended with the five coin words as free video
+words is the natural next sweep; @cjmcdaniel said they are running it.
+
+Original lead text, kept for the reasoning:
+
 The author states in the spoken rules of the challenge video,
 https://www.youtube.com/watch?v=w4mpiuBP_aY at 5:22 to 5:38, that the words
 "could be you know written in the video on the screen so read carefully". The
@@ -88,6 +105,9 @@ witness protocol as every prior sweep.
 Cost: hours on one rented GPU.
 
 ## 3. Re-check the already-enumerated survivors on other derivation paths
+
+**Tested negative on 2026-09-26** (issue #18, Bayols): RO1 on `/0/0` to `/0/4`, `1'/0/0`, `2'/0/0`,
+see `analysis/tested.md`. Kept below for the record.
 
 Cheap, decisive, and never run. Every sweep in this folder derives only
 `m/44'/60'/0'/0/0`, the MetaMask default first account. The escrow is stated to

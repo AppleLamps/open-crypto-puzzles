@@ -81,3 +81,38 @@ bytes, BIP85, SLIP-39), hashed roots (the author said "no hash", but a SHA-256 o
 seed or key costs nothing to add), paths outside the list above, a passphrase other than empty
 or T, and any witness script other than `OP_2 <A> <B> OP_2 OP_CHECKMULTISIG` with 33-byte keys
 (uncompressed keys were only tried for family A and D).
+
+
+## Additional bounded constructions, 2026-09-05 (contributed by @BorisLoveDev, PR #21)
+
+Recorded escrow check on 2026-09-05: 142,779 sats, 18 funded outputs, none spent; no pending transactions. No newer message at the escrow or the last author change address. All tests below passed the existing oracle self-test before generation and compared the exact 32-byte target witness program. Candidate material stayed local; no transactions were constructed or sent.
+
+| Hypothesis | Space (N) | Method | Result | Witness | Rate | Date |
+|---|---|---|---|---|---|---|
+| T and J exact/lower/upper directly as BIP39 mnemonic sentences, PBKDF2 with empty passphrase, existing 214 paths | 1,284 unique compressed keys; 1,648,656 candidate ordered pairs; 1,664,100 stream pairs including witness-key cross-pairs | CPU SHA256 of standard 2-of-2 script, exact target-program comparison | 0 match, exhausted | real revealed pair at head/middle/tail of key records, all 9 combinations recovered; BIP39 PBKDF2 also checked against a valid mnemonic vector | 2.62M hashes/s calibration; 0.873 s total | 2026-09-05 |
+| Newspaper date as decimal YYYYMMDD/DDMMYYYY/MMDDYYYY integer, BE/LE padded to 16/32 bytes, BIP32 seed or BIP39 entropy with empty passphrase, existing 214 paths | 5,136 unique keys; 26,378,496 candidate ordered pairs; 26,440,164 stream pairs including witness-key cross-pairs | same exact CPU checker | 0 match, exhausted | same real pair inserted head/middle/tail, all 9 combinations recovered | 2.72M hashes/s calibration; 11.548 s total | 2026-09-05 |
+| T[:21] exact/lower/upper directly as BIP39 mnemonic, empty passphrase, 214 paths; paired with itself and prior direct-mnemonic keys | 642 new keys plus 1,284 old keys; 2,060,820 new ordered pairs, old-old pairs excluded | exact CPU checker; 3 additional witness pair records | 0 match, exhausted | real pair recovered at stream head/middle/tail | 2.48M hashes/s calibration; 2.366 s total | 2026-09-05 |
+| T/J/T[:21] as hardened byte indices or 4-byte BE chunk indices inside m/48'/0'/text/2', optional /0/0; seed T or 32 zero bytes | 24 keys, 576 ordered pairs | exact CPU checker; final chunk padded right with zero, chunks masked to 31 bits; 3 additional witness records | 0 match, exhausted | real pair recovered at stream head/middle/tail | 2.90M hashes/s calibration; 0.027 s total | 2026-09-05 |
+
+These negatives cover only the stated constructions and paths. They do not establish that any natural-language clue has a unique interpretation.
+
+
+| Additional hypothesis | Space (N) | Method | Result | Witness | Rate | Date |
+|---|---|---|---|---|---|---|
+| Zero-filled 16/32 bytes as BIP32 seed or BIP39 entropy, empty passphrase, prior 214 paths | 856 keys; 732736 candidate ordered pairs, 743044 stream pairs including witness-key cross-pairs | standard 2-of-2 script, exact target SHA256 compare | 0 match, exhausted | public real pair at head/middle/tail, all 9 combinations recovered; oracle self-test passed | 2.83M hashes/s calibration; 0.434 s total | 2026-09-05 |
+| Six canonical T/J raw BIP32 seeds, all hardening combinations for 48/0/account/script, prior 12 genesis accounts, script 0/1/2, suffix empty or /0/0 /0/1 /1/0; pairs share a hardening pattern | 11150784 new ordered pairs in 15 patterns; all prior old-old pairs excluded; standard all-hardened group had no new pairs and was skipped | exact CPU target-program compare | 0 match, exhausted | public real pair at stream head/middle/tail, all 3 recovered; oracle self-test passed | 2.47M hashes/s calibration; 8.625 s total | 2026-09-05 |
+
+
+[Scripts and per-run reports](../tools/REPRODUCE.md) preserve the six bounded
+constructions. The pair counts above are per-family coverage, not a claim that
+all families are mutually disjoint. No solution was obtained.
+
+## Pass 3, the September model (2026-09-12)
+
+After the author's answers of 2026-09-10 and 2026-09-11 (12 words, a passphrase, entropy from the genesis block, a genesis value as the BIP48 account), one bounded pass over that model.
+
+| Hypothesis | Space | Method | Result | Witness | Date |
+|---|---|---|---|---|---|
+| Pass 3, the September model (2026-09-12): 12-word BIP39 mnemonic whose entropy is a 16-byte window of genesis data (every window of the raw 285-byte block, of the merkle root and block hash in both byte orders, of the coinbase text, headline, scriptSig, header and coinbase public key, plus the header integers zero-padded and as decimal strings: 329 entropies), 53 passphrases (empty as control, the coinbase text, the headline, The Times, Satoshi, genesis, bitcoin, the header integers, the hashes in hex and a dozen short words from the author's messages), BIP48 `m/48'/0'/a'/s'` with a in {0, 1, 2, 3, 50, 2009, 285, bits, time, nonce} and s in {0', 1', 2'}, suffix empty, /0/0 or /0/1; every ordered pair | 1,569,330 keys, 2.463e12 ordered pairs | CPU BIP39/BIP32 generation (25 s on 22 cores), GPU pairing and SHA-256 (`engines/p2wsh_2of2_pairs.cu`, 4.18e9 pairs/s, 589 s), exact 32-byte compare | 0 match | yes: revealed 2-of-2 pair at head, middle and tail, 9 of 9 ordered combinations re-found, `exhausted=yes` | 2026-09-12 |
+
+Scope: only 12-word mnemonics, only the listed entropy windows, only the 53 listed passphrases, only the listed accounts and script types, compressed keys. Under that model the passphrase is not among the obvious readings of the block. Not covered: a passphrase outside the list (the one thing the author has not described), 24 words, other accounts, non-BIP48 paths.
