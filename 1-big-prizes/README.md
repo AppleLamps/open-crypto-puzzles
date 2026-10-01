@@ -10,6 +10,7 @@ puzzle between tiers, only a change in its actual state does (solved, swept, fun
 <!-- generated:start -->
 | Puzzle | Prize | USD | Chain | Type | What remains | Escrow checked | Status |
 |---|---|---|---|---|---|---|---|
+| [Bitcoin Puzzle Transaction family (verified lot 71)](bitcoin-puzzle-transaction-family/) | 7.1019168 BTC | 447,421 | bitcoin | raw-private-key | bounded-compute | 2026-10-01 | watch |
 | [Ballet / Bobby Lee: Take Bobby's Bitcoin](ballet-bobby-lee-2btc-cards/) | 2.00007358 BTC | 126,005 | bitcoin | bip38, physical-object | external-info | 2026-08-16 | open |
 | [GSMG.io Puzzle](gsmg-io-5btc-puzzle/) | 1.2563451 BTC | 79,150 | bitcoin | text-cipher, pixel-code, web-tree, raw-private-key | insight | 2026-09-03 | open |
 | [Bitaps Shamir Secret Sharing Challenge](bitaps-shamir-challenge-1btc/) | 1.00016775 BTC | 63,011 | bitcoin | shamir, bip39-seed | external-info | 2026-08-28 | open |

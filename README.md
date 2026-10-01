@@ -13,14 +13,15 @@ on-chain right now.
 <!-- totals:start -->
 | Asset | Locked in unsolved puzzles | Approx. value |
 |---|---|---|
-| Bitcoin | 5.95 BTC | $375,000 |
+| Bitcoin | 13.10 BTC | $826,000 |
 | Ethereum | 13.21 ETH | $25,000 |
 | Arweave | 1,900 AR | $3,400 |
 | Litecoin | 3.03 LTC | $200 |
+| Solana | 0.834 SOL | $63 |
 | Stablecoins | 0 USDT + 0 USDC | $0 |
-| **Total** | **across 28 funded puzzles** | **$403,000** |
+| **Total** | **across 32 funded puzzles** | **$854,000** |
 
-Checked 2026-08-16 at BTC $63,000, ETH $1,880, AR $1.81. Prices and balances move; verify each escrow yourself.
+Price snapshot 2026-08-16: BTC $63,000, ETH $1,880, AR $1.81, LTC $54, SOL $75.28. Balances were checked on the dates in each table; these are not historical balances at the price date. Prices and balances move; verify each escrow yourself.
 <!-- totals:end -->
 
 I am floflo777. I worked about 40 of these and solved a few (0.5 ETH and about 0.01 BTC).
@@ -75,6 +76,7 @@ grouped by prize, is in the tables below.
 ## Big prizes (>= $10,000)
 | Puzzle | Prize | USD | Chain | Type | What remains | Escrow checked | Status |
 |---|---|---|---|---|---|---|---|
+| [Bitcoin Puzzle Transaction family (verified lot 71)](1-big-prizes/bitcoin-puzzle-transaction-family/) | 7.1019168 BTC | 447,421 | bitcoin | raw-private-key | bounded-compute | 2026-10-01 | watch |
 | [Ballet / Bobby Lee: Take Bobby's Bitcoin](1-big-prizes/ballet-bobby-lee-2btc-cards/) | 2.00007358 BTC | 126,005 | bitcoin | bip38, physical-object | external-info | 2026-08-16 | open |
 | [GSMG.io Puzzle](1-big-prizes/gsmg-io-5btc-puzzle/) | 1.2563451 BTC | 79,150 | bitcoin | text-cipher, pixel-code, web-tree, raw-private-key | insight | 2026-09-03 | open |
 | [Bitaps Shamir Secret Sharing Challenge](1-big-prizes/bitaps-shamir-challenge-1btc/) | 1.00016775 BTC | 63,011 | bitcoin | shamir, bip39-seed | external-info | 2026-08-28 | open |
@@ -87,6 +89,7 @@ grouped by prize, is in the tables below.
 | Puzzle | Prize | USD | Chain | Type | What remains | Escrow checked | Status |
 |---|---|---|---|---|---|---|---|
 | [TeikhosBounty: Johan Nygren's Proof-of-Public-Key Puzzles](2-mid-prizes/teikhos-bipedaljoe-solver-bounties-2eth/) | 2.000006 ETH | 3,760 | ethereum | smart-contract, timelock | external-info | 2026-08-16 | open |
+| [bitplane hotel-drawer Bitcoin treasure hunt](2-mid-prizes/bitplane-hotel-drawer-bitcoin-treasure-hunt/) | 0.04645836 BTC | 2,927 | bitcoin | physical-object, raw-private-key, book | human-action | 2026-10-01 | watch |
 | [Smith, Lyle & Moore Hunt #2: Glimmer](2-mid-prizes/smith-lyle-moore-hunt-2-0-032btc/) | 0.031777 BTC | 2,002 | bitcoin | bip39-seed, password-pages, web-tree | insight | 2026-08-16 | open |
 | [Trithemius: Wealth in Poetry](2-mid-prizes/wealth-in-poetry-0-03btc/) | 3,124,630 sats | 1,969 | bitcoin | bip39-seed, text-cipher, brainwallet | insight | 2026-08-16 | open |
 | [Arweave Puzzle #11](2-mid-prizes/arweave-puzzle-11-1eth/) | 1 ETH | 1,880 | ethereum | image-stego, pixel-code, raw-private-key | insight | 2026-08-16 | open |
@@ -101,8 +104,9 @@ grouped by prize, is in the tables below.
 | [School of Bitcoin: 1 Million Sats In This Image](2-mid-prizes/school-of-bitcoin-1msats/) | 1,000,000 sats | 630 | bitcoin | bip39-seed, image-stego, password-pages | external-info | 2026-08-16 | open |
 | [AH White: Walking Banks](2-mid-prizes/ah-white-walking-banks-800ksats/) | 800,000 sats | 504 | bitcoin | bip39-seed, book, text-cipher | external-info | 2026-08-16 | open |
 | [Keir Finlow-Bates: Move Over Brokers Treasure Hunt](2-mid-prizes/keir-finlow-bates-blockchain-book-600ksats/) | 600,000 sats | 378 | bitcoin | book, brainwallet, text-cipher | human-action | 2026-09-01 | open |
+| [Q's donated BIP38 paper wallet](2-mid-prizes/q-bip38-paper-wallet/) | 0.005297 BTC | 334 | bitcoin | bip38 | uneconomic | 2026-10-01 | watch |
 | [Zden Level HALV](2-mid-prizes/zden-haluska-halv-312ksats/) | 312,500 sats | 197 | bitcoin | geometry, raw-private-key | external-info | 2026-08-16 | open |
-| [Path to Greatness: Treasure Hunt](2-mid-prizes/path-to-greatness-treasure-hunt-3ltc/) | 3.02608794 LTC | 163 | litecoin | raw-private-key, image-stego, audio, text-cipher | insight | 2026-09-12 | open |
+| [Path to Greatness: Treasure Hunt](2-mid-prizes/path-to-greatness-treasure-hunt-3ltc/) | 3.02608794 LTC | 163 | litecoin | raw-private-key, image-stego, audio, text-cipher | insight | 2026-10-01 | open |
 | [Pindar Van Arman: cryptoArtGAN Act 1 Puzzle](2-mid-prizes/pindar-van-arman-cryptoartgan-nft/) | 1 NFT |  | ethereum | bip39-seed, word-selection | insight | 2026-08-16 | open |
 
 ## Small prizes (< $100)
@@ -110,6 +114,7 @@ grouped by prize, is in the tables below.
 |---|---|---|---|---|---|---|---|
 | [Genesis Block Wallet Puzzle](3-small-prizes/genesis-block-wallet-puzzle-142ksats/) | 168,779 sats | 106 | bitcoin | multisig, raw-private-key | insight | 2026-09-12 | open |
 | [Crypto Puzzles 2018: Puzzle #2](3-small-prizes/crypto-puzzles-2018-puzzle-2-0-05eth/) | 0.05 ETH | 94 | ethereum | raw-private-key, image-stego, video-series | external-info | 2026-08-16 | open |
+| [Solana Puzzles #4](3-small-prizes/solana-puzzles-4/) | 0.834 SOL | 63 | solana | bip39-seed, image-stego, word-selection | insight | 2026-10-01 | open |
 | [Exitonly Bitcoin Challenge 14](3-small-prizes/exitonly-challenge-14-30ksats/) | 30,000 sats | 18.90 | bitcoin | bip39-seed, word-selection | uneconomic | 2026-08-16 | open |
 
 ## Solved and cashed

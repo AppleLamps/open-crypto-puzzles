@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "slug": "q-bip38-paper-wallet",
+  "title": "Q's donated BIP38 paper wallet",
+  "tier": "mid",
+  "status": "watch",
+  "dead_end_reason": null,
+  "series": null,
+  "author": {
+    "name": "q",
+    "handles": [
+      "q"
+    ],
+    "url": "https://stacker.news/q"
+  },
+  "published": {
+    "date": "2023-10-06",
+    "url": "https://stacker.news/items/275973",
+    "note": "Dated public invitation on Stacker News."
+  },
+  "chain": "bitcoin",
+  "prize": {
+    "amount": 0.005297,
+    "asset": "BTC",
+    "usd_estimate": 334,
+    "usd_snapshot": "2026-08-16",
+    "note": "529700 sats is the verified remainder, not the lifetime receipts. Historical spends do not by themselves prove the donated challenge has been solved."
+  },
+  "addresses": [
+    {
+      "address": "1J7BVeP8JK4op2X3GN3Hy7xkTnGnQTMpou",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "explorer": "https://mempool.space/address/1J7BVeP8JK4op2X3GN3Hy7xkTnGnQTMpou",
+      "expected": "4865700 sats received, 4336000 sats historically spent, 529700 sats remain; 3 transactions, no pending activity.",
+      "verified_on": "2026-10-01",
+      "verified_state": "partially-spent"
+    }
+  ],
+  "puzzle_type": [
+    "bip38"
+  ],
+  "target_format": "BIP38 encrypted private-key record published by q; recover the passphrase and match the named Bitcoin address.",
+  "derivation": {
+    "summary": "The wallet has previous spends, and the author says it was used before the passphrase was forgotten. The balance is therefore partially-spent rather than lifetime-unspent. Recovering a BIP38 passphrase and reproducing the public address is the target; I have not decoded the record, certified a derivation or tested candidates. No recovered key material is reproduced here.",
+    "oracle": null,
+    "oracle_certified": false
+  },
+  "difficulty_left": "uneconomic",
+  "difficulty_note": "The author recalls a likely sub-30-character passphrase and possibly combined passwords, but no small candidate space or feasible search cost is established. Ownership is the author's public claim.",
+  "tested_total": {
+    "candidates": 0,
+    "families": 0,
+    "certified": false
+  },
+  "leads": [
+    {
+      "rank": 1,
+      "title": "Review only the hints intentionally published with the donation. A smaller public constraint would be needed before a measured, bounded search could be assessed. No personal-information search or leaked-password collection is supported by this entry.",
+      "cost": "Public-source review; no compute estimate established.",
+      "status": "open"
+    }
+  ],
+  "solutions": [],
+  "sources": [
+    {
+      "title": "Author material, read 2026-10-01; publication timing explained above",
+      "url": "https://stacker.news/items/275973",
+      "date": "2023-10-06",
+      "archived": null
+    },
+    {
+      "title": "Public funding evidence, read 2026-10-01",
+      "url": "https://mempool.space/api/address/1J7BVeP8JK4op2X3GN3Hy7xkTnGnQTMpou",
+      "date": "2026-10-01",
+      "archived": null
+    }
+  ],
+  "third_party_material": "Original puzzle and source material remain the respective authors' property. Only links, attributed summaries and a small balance observation are included; no clue image, article, forum dump, seed, decrypted key or wordlist is copied.",
+  "last_updated": "2026-10-01"
+}

@@ -1,0 +1,17 @@
+{
+  "retrieval_started_at_utc": "2026-10-01T04:28:15Z",
+  "retrieved_at_utc": "2026-10-01T04:28:26Z",
+  "source": "https://api.blockcypher.com/v1/ltc/main/addrs/LUtL7qnm3gzxKjHcfVLSjydqhhinTVmTmS/balance",
+  "response": {
+    "address": "LUtL7qnm3gzxKjHcfVLSjydqhhinTVmTmS",
+    "total_received": 302608794,
+    "total_sent": 0,
+    "balance": 302608794,
+    "unconfirmed_balance": 0,
+    "final_balance": 302608794,
+    "n_tx": 8,
+    "unconfirmed_n_tx": 0,
+    "final_n_tx": 8
+  },
+  "method": "Read-only public source, cache reuse disabled. Timestamp records when the response was available for review; upstream caching or explorer lag cannot be excluded."
+}

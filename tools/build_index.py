@@ -32,7 +32,9 @@ from datetime import date
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-PRICE_SNAPSHOT = {"date": "2026-08-16", "BTC": 63000, "ETH": 1880, "AR": 1.81, "LTC": 54}
+# SOL: CoinGecko historical USD quote for the same date; evidence is linked in
+# 3-small-prizes/solana-puzzles-4/data/evidence-2026-10-01.json.
+PRICE_SNAPSHOT = {"date": "2026-08-16", "BTC": 63000, "ETH": 1880, "AR": 1.81, "LTC": 54, "SOL": 75.27983398665542}
 
 TIERS = [
     ("1-big-prizes", "big"),
@@ -194,7 +196,7 @@ def build_table(puzzles, tier, header, row_fn, empty_note, tier_relative=False):
 
 def build_totals_block(puzzles):
     funded = [p for p in puzzles if p.get("status") in ("open", "watch")]
-    btc = eth = ar = ltc = usdt = usdc = 0.0
+    btc = eth = ar = ltc = sol = usdt = usdc = 0.0
     usd = 0.0
     for p in funded:
         pr = p.get("prize", {})
@@ -205,6 +207,7 @@ def build_totals_block(puzzles):
         elif a == "ETH": eth += amt
         elif a == "AR": ar += amt
         elif a == "LTC": ltc += amt
+        elif a == "SOL": sol += amt
         elif a == "USDT": usdt += amt
         elif a == "USDC": usdc += amt
         u = pr.get("usd_estimate")
@@ -225,11 +228,13 @@ def build_totals_block(puzzles):
         f"| Ethereum | {eth:,.2f} ETH | {usd_for(eth, p['ETH'])} |",
         f"| Arweave | {ar:,.0f} AR | {usd_for(ar, p['AR'])} |",
         f"| Litecoin | {ltc:,.2f} LTC | {usd_for(ltc, p['LTC'])} |",
+        f"| Solana | {sol:,.3f} SOL | ${sol * p['SOL']:,.0f} |",
         f"| Stablecoins | {usdt:,.0f} USDT + {usdc:,.0f} USDC | {rnd(usdt + usdc)} |",
         f"| **Total** | **across {len(funded)} funded puzzles** | **{rnd(usd)}** |",
     ]
-    note = (f"\n\nChecked {p['date']} at BTC ${p['BTC']:,}, ETH ${p['ETH']:,}, AR ${p['AR']}. "
-            "Prices and balances move; verify each escrow yourself.")
+    note = (f"\n\nPrice snapshot {p['date']}: BTC ${p['BTC']:,}, ETH ${p['ETH']:,}, AR ${p['AR']}, "
+            f"LTC ${p['LTC']}, SOL ${p['SOL']:.2f}. Balances were checked on the dates in each table; "
+            "these are not historical balances at the price date. Prices and balances move; verify each escrow yourself.")
     return "\n".join(rows) + note
 
 

@@ -1,0 +1,23 @@
+{
+  "retrieval_started_at_utc": "2026-10-01T04:28:15Z",
+  "retrieved_at_utc": "2026-10-01T04:28:26Z",
+  "source": "https://mempool.space/api/address/1J7BVeP8JK4op2X3GN3Hy7xkTnGnQTMpou",
+  "response": {
+    "address": "1J7BVeP8JK4op2X3GN3Hy7xkTnGnQTMpou",
+    "chain_stats": {
+      "funded_txo_count": 3,
+      "funded_txo_sum": 4865700,
+      "spent_txo_count": 2,
+      "spent_txo_sum": 4336000,
+      "tx_count": 3
+    },
+    "mempool_stats": {
+      "funded_txo_count": 0,
+      "funded_txo_sum": 0,
+      "spent_txo_count": 0,
+      "spent_txo_sum": 0,
+      "tx_count": 0
+    }
+  },
+  "method": "Read-only public source, cache reuse disabled. Timestamp records when the response was available for review; upstream caching or explorer lag cannot be excluded."
+}

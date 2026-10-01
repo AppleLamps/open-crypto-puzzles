@@ -6,12 +6,13 @@
     "BTC": 63000,
     "ETH": 1880,
     "AR": 1.81,
-    "LTC": 54
+    "LTC": 54,
+    "SOL": 75.27983398665542
   },
   "counts": {
-    "big": 7,
-    "mid": 18,
-    "small": 3,
+    "big": 8,
+    "mid": 20,
+    "small": 4,
     "solved": 10,
     "dead-end": 11
   },
@@ -475,6 +476,94 @@
       "third_party_material": "the 2 published Shamir shares and the challenge-page quotes are Bitaps's own puzzle material, quoted briefly with source and date; no third-party copyrighted material is included",
       "last_updated": "2026-08-28",
       "folder": "1-big-prizes/bitaps-shamir-challenge-1btc"
+    },
+    {
+      "schema_version": 1,
+      "slug": "bitcoin-puzzle-transaction-family",
+      "title": "Bitcoin Puzzle Transaction family (verified lot 71)",
+      "tier": "big",
+      "status": "watch",
+      "dead_end_reason": null,
+      "series": "Bitcoin Puzzle Transaction",
+      "author": {
+        "name": "Unknown creator; saatoshi_rising claims authorship",
+        "handles": [
+          "saatoshi_rising"
+        ],
+        "url": "https://bitcointalk.org/index.php?action=profile;u=991321"
+      },
+      "published": {
+        "date": "2017-04-27",
+        "url": "https://bitcointalk.org/index.php?topic=1306983.msg18765941#msg18765941",
+        "note": "Date of the creator-claim post, not the 2015 funding date or the first public discussion."
+      },
+      "chain": "bitcoin",
+      "prize": {
+        "amount": 7.1019168,
+        "asset": "BTC",
+        "usd_estimate": 447421,
+        "usd_snapshot": "2026-08-16",
+        "note": "Only the current balance of lot 71 is counted. Initial lot allocations and later top-ups are different from this balance; no live whole-family aggregate is asserted."
+      },
+      "addresses": [
+        {
+          "address": "1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+          "chain": "bitcoin",
+          "role": "escrow",
+          "explorer": "https://mempool.space/address/1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+          "expected": "Lot 71 only: 710191680 sats received over 69 transactions, 0 spent, no pending activity.",
+          "verified_on": "2026-10-01",
+          "verified_state": "funded-unspent"
+        }
+      ],
+      "puzzle_type": [
+        "raw-private-key"
+      ],
+      "target_format": "Lot 71: scalar in [2^70, 2^71), compressed secp256k1 public key, Bitcoin P2PKH address.",
+      "derivation": {
+        "summary": "For lot N the advertised private-key interval is [2^(N-1), 2^N). Lot 71 is therefore a finite range of 2^70 scalars. Deriving a compressed Bitcoin P2PKH address is the target mechanism. I have not certified a local oracle or established a feasible search rate. This is one numerical family; solved members and unsolved members are not independent discoveries.",
+        "oracle": null,
+        "oracle_certified": false
+      },
+      "difficulty_left": "bounded-compute",
+      "difficulty_note": "Finite 2^70-scalar range for the verified lot; no measured rate, affordable search or solve is established here. Other funded lots are not included in the amount.",
+      "tested_total": {
+        "candidates": 0,
+        "families": 0,
+        "certified": false
+      },
+      "leads": [
+        {
+          "rank": 1,
+          "title": "Track exact lot-level balances and verified payout transactions. A drained lot alone does not identify a solver; preserve the distinction between an individual lot and the whole series.",
+          "cost": "Public-source review; no compute estimate established.",
+          "status": "open"
+        }
+      ],
+      "solutions": [],
+      "sources": [
+        {
+          "title": "Author material, read 2026-10-01; publication timing explained above",
+          "url": "https://bitcointalk.org/index.php?topic=1306983.msg18765941#msg18765941",
+          "date": "2017-04-27",
+          "archived": null
+        },
+        {
+          "title": "Public funding evidence, read 2026-10-01",
+          "url": "https://mempool.space/api/address/1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+          "date": "2026-10-01",
+          "archived": null
+        },
+        {
+          "title": "Original January 2015 funding transaction (event evidence, not invitation date)",
+          "url": "https://mempool.space/tx/08389f34c98c606322740c0be6a7125d9860bb8d5cb182c02f98461e5fa6cd15",
+          "date": "2015-01-15",
+          "archived": null
+        }
+      ],
+      "third_party_material": "Original puzzle and source material remain the respective authors' property. Only links, attributed summaries and a small balance observation are included; no clue image, article, forum dump, seed, decrypted key or wordlist is copied.",
+      "last_updated": "2026-10-01",
+      "folder": "1-big-prizes/bitcoin-puzzle-transaction-family"
     },
     {
       "schema_version": 1,
@@ -1689,6 +1778,103 @@
     },
     {
       "schema_version": 1,
+      "slug": "bitplane-hotel-drawer-bitcoin-treasure-hunt",
+      "title": "bitplane hotel-drawer Bitcoin treasure hunt",
+      "tier": "mid",
+      "status": "watch",
+      "dead_end_reason": null,
+      "series": null,
+      "author": {
+        "name": "bitplane / gaz",
+        "handles": [
+          "bitplane",
+          "gaz"
+        ],
+        "url": "https://bitplane.net/"
+      },
+      "published": {
+        "date": null,
+        "url": "https://bitplane.net/log/2013/12/bitcoin-treasure-hunt/",
+        "note": "Author reports a 2013-12-17 event. A 2024-12-07 archive capture establishes public availability by then; a contemporaneous 2013 invitation is not verified."
+      },
+      "chain": "bitcoin",
+      "prize": {
+        "amount": 0.04645836,
+        "asset": "BTC",
+        "usd_estimate": 2927,
+        "usd_snapshot": "2026-08-16",
+        "note": "The author describes an original GBP 20 deposit. The current address balance is 0.04645836 BTC; the historical GBP value is not the present prize value."
+      },
+      "addresses": [
+        {
+          "address": "1EuhWQkaVg8CCVLEQ9dMgCroJUcNGHMBot",
+          "chain": "bitcoin",
+          "role": "escrow",
+          "explorer": "https://mempool.space/address/1EuhWQkaVg8CCVLEQ9dMgCroJUcNGHMBot",
+          "expected": "4645836 sats received in 1 transaction, 0 spent, no pending activity.",
+          "verified_on": "2026-10-01",
+          "verified_state": "funded-unspent"
+        }
+      ],
+      "puzzle_type": [
+        "physical-object",
+        "raw-private-key",
+        "book"
+      ],
+      "target_format": "Private key written beneath a physical drawer; encoding and key compression are not established.",
+      "derivation": {
+        "summary": "The chain check establishes that the named address is still funded and has no spending history. It does not establish that the furniture, clue or key survives, or that the room is accessible. I retain WATCH rather than assert a currently practical recovery path. No location identification, visit, contact or permission to enter private property is part of this entry.",
+        "oracle": null,
+        "oracle_certified": false
+      },
+      "difficulty_left": "human-action",
+      "difficulty_note": "Funds remain, but physical clue survival, location access and recovery have not been verified. A November 2024 author update is not a fresh physical inspection.",
+      "tested_total": {
+        "candidates": 0,
+        "families": 0,
+        "certified": false
+      },
+      "leads": [
+        {
+          "rank": 1,
+          "title": "Seek publicly documented evidence of the physical clue's continued availability. Confirmation of a surviving clue and a permitted access route would support changing the access assessment; an author cancellation or destroyed clue would support archival review.",
+          "cost": "Public-source review; no compute estimate established.",
+          "status": "open"
+        }
+      ],
+      "solutions": [],
+      "sources": [
+        {
+          "title": "Author material, read 2026-10-01; publication timing explained above",
+          "url": "https://bitplane.net/log/2013/12/bitcoin-treasure-hunt/",
+          "date": "2026-10-01",
+          "archived": "https://web.archive.org/web/20241207232107/https://bitplane.net/log/2013/12/bitcoin-treasure-hunt/"
+        },
+        {
+          "title": "Public funding evidence, read 2026-10-01",
+          "url": "https://mempool.space/api/address/1EuhWQkaVg8CCVLEQ9dMgCroJUcNGHMBot",
+          "date": "2026-10-01",
+          "archived": null
+        },
+        {
+          "title": "Retrospective public capture; not proof of a 2013 announcement",
+          "url": "https://web.archive.org/web/20241207232107/https://bitplane.net/log/2013/12/bitcoin-treasure-hunt/",
+          "date": "2024-12-07",
+          "archived": null
+        },
+        {
+          "title": "Funding transaction, physical-placement event evidence",
+          "url": "https://mempool.space/tx/bf05ad36b0d8ef76a711dba3c8b67a7be574d0b237e61eeb772fa2c6aa486408",
+          "date": "2013-12-17",
+          "archived": null
+        }
+      ],
+      "third_party_material": "Original puzzle and source material remain the respective authors' property. Only links, attributed summaries and a small balance observation are included; no clue image, article, forum dump, seed, decrypted key or wordlist is copied.",
+      "last_updated": "2026-10-01",
+      "folder": "2-mid-prizes/bitplane-hotel-drawer-bitcoin-treasure-hunt"
+    },
+    {
+      "schema_version": 1,
       "slug": "corey-phillips-kitten-passphrase-1msats",
       "title": "Corey Phillips: Kitten Passphrase Puzzle",
       "tier": "mid",
@@ -2472,7 +2658,7 @@
           "label": "prize",
           "explorer": "https://litecoinspace.org/address/LUtL7qnm3gzxKjHcfVLSjydqhhinTVmTmS",
           "expected": "302,608,794 litoshis received over 8 transactions, 0 spent",
-          "verified_on": "2026-09-12",
+          "verified_on": "2026-10-01",
           "verified_state": "funded-unspent"
         }
       ],
@@ -2605,6 +2791,12 @@
       ],
       "sources": [
         {
+          "title": "BlockCypher Litecoin balance API, read 2026-10-01; exact timestamp in data/evidence-2026-10-01.json",
+          "url": "https://api.blockcypher.com/v1/ltc/main/addrs/LUtL7qnm3gzxKjHcfVLSjydqhhinTVmTmS/balance",
+          "date": "2026-10-01",
+          "archived": null
+        },
+        {
           "title": "I made a treasure hunt with a crypto prize, r/ARG announcement",
           "url": "https://reddit.com/r/ARG/comments/orgh1k/i_made_a_treasure_hunt_with_a_crypto_prize/",
           "date": "2021-07-25",
@@ -2660,7 +2852,7 @@
         }
       ],
       "third_party_material": "Only the author's own published puzzle files are shipped here: the nine clue images served by p2gtreasure.com, the site banner, and the two lossless carriers Beach.png and Ship.png that his QR codes point at. Not shipped, and not to be added: the game demo p2g_demo.zip (134 MB, Google Drive, the author's own but far over the repository size limits), the album audio embedded in it or published on Spotify and iTunes, any frame or transcript of the 1997 film Titanic that the clue 7 montage is built from, and the audio of the author's YouTube video EojQgdZeTyM. All four are linked by URL instead. The clue poems are quoted in short excerpts only, in clues/author-posts.md.",
-      "last_updated": "2026-09-12",
+      "last_updated": "2026-10-01",
       "folder": "2-mid-prizes/path-to-greatness-treasure-hunt-3ltc"
     },
     {
@@ -2772,6 +2964,88 @@
       "third_party_material": "",
       "last_updated": "2026-08-16",
       "folder": "2-mid-prizes/pindar-van-arman-cryptoartgan-nft"
+    },
+    {
+      "schema_version": 1,
+      "slug": "q-bip38-paper-wallet",
+      "title": "Q's donated BIP38 paper wallet",
+      "tier": "mid",
+      "status": "watch",
+      "dead_end_reason": null,
+      "series": null,
+      "author": {
+        "name": "q",
+        "handles": [
+          "q"
+        ],
+        "url": "https://stacker.news/q"
+      },
+      "published": {
+        "date": "2023-10-06",
+        "url": "https://stacker.news/items/275973",
+        "note": "Dated public invitation on Stacker News."
+      },
+      "chain": "bitcoin",
+      "prize": {
+        "amount": 0.005297,
+        "asset": "BTC",
+        "usd_estimate": 334,
+        "usd_snapshot": "2026-08-16",
+        "note": "529700 sats is the verified remainder, not the lifetime receipts. Historical spends do not by themselves prove the donated challenge has been solved."
+      },
+      "addresses": [
+        {
+          "address": "1J7BVeP8JK4op2X3GN3Hy7xkTnGnQTMpou",
+          "chain": "bitcoin",
+          "role": "escrow",
+          "explorer": "https://mempool.space/address/1J7BVeP8JK4op2X3GN3Hy7xkTnGnQTMpou",
+          "expected": "4865700 sats received, 4336000 sats historically spent, 529700 sats remain; 3 transactions, no pending activity.",
+          "verified_on": "2026-10-01",
+          "verified_state": "partially-spent"
+        }
+      ],
+      "puzzle_type": [
+        "bip38"
+      ],
+      "target_format": "BIP38 encrypted private-key record published by q; recover the passphrase and match the named Bitcoin address.",
+      "derivation": {
+        "summary": "The wallet has previous spends, and the author says it was used before the passphrase was forgotten. The balance is therefore partially-spent rather than lifetime-unspent. Recovering a BIP38 passphrase and reproducing the public address is the target; I have not decoded the record, certified a derivation or tested candidates. No recovered key material is reproduced here.",
+        "oracle": null,
+        "oracle_certified": false
+      },
+      "difficulty_left": "uneconomic",
+      "difficulty_note": "The author recalls a likely sub-30-character passphrase and possibly combined passwords, but no small candidate space or feasible search cost is established. Ownership is the author's public claim.",
+      "tested_total": {
+        "candidates": 0,
+        "families": 0,
+        "certified": false
+      },
+      "leads": [
+        {
+          "rank": 1,
+          "title": "Review only the hints intentionally published with the donation. A smaller public constraint would be needed before a measured, bounded search could be assessed. No personal-information search or leaked-password collection is supported by this entry.",
+          "cost": "Public-source review; no compute estimate established.",
+          "status": "open"
+        }
+      ],
+      "solutions": [],
+      "sources": [
+        {
+          "title": "Author material, read 2026-10-01; publication timing explained above",
+          "url": "https://stacker.news/items/275973",
+          "date": "2023-10-06",
+          "archived": null
+        },
+        {
+          "title": "Public funding evidence, read 2026-10-01",
+          "url": "https://mempool.space/api/address/1J7BVeP8JK4op2X3GN3Hy7xkTnGnQTMpou",
+          "date": "2026-10-01",
+          "archived": null
+        }
+      ],
+      "third_party_material": "Original puzzle and source material remain the respective authors' property. Only links, attributed summaries and a small balance observation are included; no clue image, article, forum dump, seed, decrypted key or wordlist is copied.",
+      "last_updated": "2026-10-01",
+      "folder": "2-mid-prizes/q-bip38-paper-wallet"
     },
     {
       "schema_version": 1,
@@ -3912,6 +4186,96 @@
       "third_party_material": "none: the genesis block and the author's OP_RETURN messages are public chain data; press articles are linked, not reproduced",
       "last_updated": "2026-09-12",
       "folder": "3-small-prizes/genesis-block-wallet-puzzle-142ksats"
+    },
+    {
+      "schema_version": 1,
+      "slug": "solana-puzzles-4",
+      "title": "Solana Puzzles #4",
+      "tier": "small",
+      "status": "open",
+      "dead_end_reason": null,
+      "series": "Solana Puzzles",
+      "author": {
+        "name": "SolanaPuzzles",
+        "handles": [
+          "solanapuzzles"
+        ],
+        "url": "https://solanapuzzles.com/"
+      },
+      "published": {
+        "date": null,
+        "url": "https://solanapuzzles.com/puzzle4.html",
+        "note": "Funding and the page timer suggest approximately September 2025, but an exact public launch date is not verified."
+      },
+      "chain": "solana",
+      "prize": {
+        "amount": 0.834,
+        "asset": "SOL",
+        "usd_estimate": 63,
+        "usd_snapshot": "2026-08-16",
+        "note": "The page advertises 0.8 SOL. The observed wallet contains 0.834 SOL. USD estimate uses the verified 2026-08-16 historical SOL quote of $75.27983398665542, rounded to the nearest dollar."
+      },
+      "addresses": [
+        {
+          "address": "DmDBmb7AEm6xRxkoBYq1mJYqsZP263gmXB53zA2dqjne",
+          "chain": "solana",
+          "role": "escrow",
+          "explorer": "https://solscan.io/account/DmDBmb7AEm6xRxkoBYq1mJYqsZP263gmXB53zA2dqjne",
+          "expected": "834000000 lamports (0.834 SOL); explorer displays 2 incoming transfers of 0.417 SOL and no outgoing transfer.",
+          "verified_on": "2026-10-01",
+          "verified_state": "funded-unspent"
+        }
+      ],
+      "puzzle_type": [
+        "bip39-seed",
+        "image-stego",
+        "word-selection"
+      ],
+      "target_format": "12-word seed phrase inferred from an image; the site names Phantom, but the exact derivation path and optional passphrase are not established.",
+      "derivation": {
+        "summary": "The fresh explorer page displays 0.834 SOL and two incoming transfers. An independent earlier finalized RPC observation on 2026-10-01 at slot 452162643 reported 834000000 lamports. The timer and first funding suggest approximately September 2025, but neither establishes an exact public launch date. Phantom's name alone does not certify a derivation path or optional passphrase.",
+        "oracle": null,
+        "oracle_certified": false
+      },
+      "difficulty_left": "insight",
+      "difficulty_note": "The public page is marked ACTIVE and supplies twelve hints. Address derivation is unverified; no candidate seeds or certified negatives are claimed.",
+      "tested_total": {
+        "candidates": 0,
+        "families": 0,
+        "certified": false
+      },
+      "leads": [
+        {
+          "rank": 1,
+          "title": "Establish the exact address-derivation convention from public author material before interpreting any seed search. A self-test matching a known author example would be needed before a negative could count as certified.",
+          "cost": "Public-source review; no compute estimate established.",
+          "status": "open"
+        }
+      ],
+      "solutions": [],
+      "sources": [
+        {
+          "title": "Author material, read 2026-10-01; publication timing explained above",
+          "url": "https://solanapuzzles.com/puzzle4.html",
+          "date": "2026-10-01",
+          "archived": null
+        },
+        {
+          "title": "Public funding evidence, read 2026-10-01",
+          "url": "https://solscan.io/account/DmDBmb7AEm6xRxkoBYq1mJYqsZP263gmXB53zA2dqjne",
+          "date": "2026-10-01",
+          "archived": null
+        },
+        {
+          "title": "Historical SOL/USD quote for 2026-08-16, read 2026-10-01",
+          "url": "https://api.coingecko.com/api/v3/coins/solana/history?date=16-08-2026",
+          "date": "2026-10-01",
+          "archived": null
+        }
+      ],
+      "third_party_material": "Original puzzle and source material remain the respective authors' property. Only links, attributed summaries and a small balance observation are included; no clue image, article, forum dump, seed, decrypted key or wordlist is copied.",
+      "last_updated": "2026-10-01",
+      "folder": "3-small-prizes/solana-puzzles-4"
     },
     {
       "schema_version": 1,

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "slug": "bitcoin-puzzle-transaction-family",
+  "title": "Bitcoin Puzzle Transaction family (verified lot 71)",
+  "tier": "big",
+  "status": "watch",
+  "dead_end_reason": null,
+  "series": "Bitcoin Puzzle Transaction",
+  "author": {
+    "name": "Unknown creator; saatoshi_rising claims authorship",
+    "handles": [
+      "saatoshi_rising"
+    ],
+    "url": "https://bitcointalk.org/index.php?action=profile;u=991321"
+  },
+  "published": {
+    "date": "2017-04-27",
+    "url": "https://bitcointalk.org/index.php?topic=1306983.msg18765941#msg18765941",
+    "note": "Date of the creator-claim post, not the 2015 funding date or the first public discussion."
+  },
+  "chain": "bitcoin",
+  "prize": {
+    "amount": 7.1019168,
+    "asset": "BTC",
+    "usd_estimate": 447421,
+    "usd_snapshot": "2026-08-16",
+    "note": "Only the current balance of lot 71 is counted. Initial lot allocations and later top-ups are different from this balance; no live whole-family aggregate is asserted."
+  },
+  "addresses": [
+    {
+      "address": "1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "explorer": "https://mempool.space/address/1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+      "expected": "Lot 71 only: 710191680 sats received over 69 transactions, 0 spent, no pending activity.",
+      "verified_on": "2026-10-01",
+      "verified_state": "funded-unspent"
+    }
+  ],
+  "puzzle_type": [
+    "raw-private-key"
+  ],
+  "target_format": "Lot 71: scalar in [2^70, 2^71), compressed secp256k1 public key, Bitcoin P2PKH address.",
+  "derivation": {
+    "summary": "For lot N the advertised private-key interval is [2^(N-1), 2^N). Lot 71 is therefore a finite range of 2^70 scalars. Deriving a compressed Bitcoin P2PKH address is the target mechanism. I have not certified a local oracle or established a feasible search rate. This is one numerical family; solved members and unsolved members are not independent discoveries.",
+    "oracle": null,
+    "oracle_certified": false
+  },
+  "difficulty_left": "bounded-compute",
+  "difficulty_note": "Finite 2^70-scalar range for the verified lot; no measured rate, affordable search or solve is established here. Other funded lots are not included in the amount.",
+  "tested_total": {
+    "candidates": 0,
+    "families": 0,
+    "certified": false
+  },
+  "leads": [
+    {
+      "rank": 1,
+      "title": "Track exact lot-level balances and verified payout transactions. A drained lot alone does not identify a solver; preserve the distinction between an individual lot and the whole series.",
+      "cost": "Public-source review; no compute estimate established.",
+      "status": "open"
+    }
+  ],
+  "solutions": [],
+  "sources": [
+    {
+      "title": "Author material, read 2026-10-01; publication timing explained above",
+      "url": "https://bitcointalk.org/index.php?topic=1306983.msg18765941#msg18765941",
+      "date": "2017-04-27",
+      "archived": null
+    },
+    {
+      "title": "Public funding evidence, read 2026-10-01",
+      "url": "https://mempool.space/api/address/1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU",
+      "date": "2026-10-01",
+      "archived": null
+    },
+    {
+      "title": "Original January 2015 funding transaction (event evidence, not invitation date)",
+      "url": "https://mempool.space/tx/08389f34c98c606322740c0be6a7125d9860bb8d5cb182c02f98461e5fa6cd15",
+      "date": "2015-01-15",
+      "archived": null
+    }
+  ],
+  "third_party_material": "Original puzzle and source material remain the respective authors' property. Only links, attributed summaries and a small balance observation are included; no clue image, article, forum dump, seed, decrypted key or wordlist is copied.",
+  "last_updated": "2026-10-01"
+}

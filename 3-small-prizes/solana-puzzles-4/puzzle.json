@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "slug": "solana-puzzles-4",
+  "title": "Solana Puzzles #4",
+  "tier": "small",
+  "status": "open",
+  "dead_end_reason": null,
+  "series": "Solana Puzzles",
+  "author": {
+    "name": "SolanaPuzzles",
+    "handles": [
+      "solanapuzzles"
+    ],
+    "url": "https://solanapuzzles.com/"
+  },
+  "published": {
+    "date": null,
+    "url": "https://solanapuzzles.com/puzzle4.html",
+    "note": "Funding and the page timer suggest approximately September 2025, but an exact public launch date is not verified."
+  },
+  "chain": "solana",
+  "prize": {
+    "amount": 0.834,
+    "asset": "SOL",
+    "usd_estimate": 63,
+    "usd_snapshot": "2026-08-16",
+    "note": "The page advertises 0.8 SOL. The observed wallet contains 0.834 SOL. USD estimate uses the verified 2026-08-16 historical SOL quote of $75.27983398665542, rounded to the nearest dollar."
+  },
+  "addresses": [
+    {
+      "address": "DmDBmb7AEm6xRxkoBYq1mJYqsZP263gmXB53zA2dqjne",
+      "chain": "solana",
+      "role": "escrow",
+      "explorer": "https://solscan.io/account/DmDBmb7AEm6xRxkoBYq1mJYqsZP263gmXB53zA2dqjne",
+      "expected": "834000000 lamports (0.834 SOL); explorer displays 2 incoming transfers of 0.417 SOL and no outgoing transfer.",
+      "verified_on": "2026-10-01",
+      "verified_state": "funded-unspent"
+    }
+  ],
+  "puzzle_type": [
+    "bip39-seed",
+    "image-stego",
+    "word-selection"
+  ],
+  "target_format": "12-word seed phrase inferred from an image; the site names Phantom, but the exact derivation path and optional passphrase are not established.",
+  "derivation": {
+    "summary": "The fresh explorer page displays 0.834 SOL and two incoming transfers. An independent earlier finalized RPC observation on 2026-10-01 at slot 452162643 reported 834000000 lamports. The timer and first funding suggest approximately September 2025, but neither establishes an exact public launch date. Phantom's name alone does not certify a derivation path or optional passphrase.",
+    "oracle": null,
+    "oracle_certified": false
+  },
+  "difficulty_left": "insight",
+  "difficulty_note": "The public page is marked ACTIVE and supplies twelve hints. Address derivation is unverified; no candidate seeds or certified negatives are claimed.",
+  "tested_total": {
+    "candidates": 0,
+    "families": 0,
+    "certified": false
+  },
+  "leads": [
+    {
+      "rank": 1,
+      "title": "Establish the exact address-derivation convention from public author material before interpreting any seed search. A self-test matching a known author example would be needed before a negative could count as certified.",
+      "cost": "Public-source review; no compute estimate established.",
+      "status": "open"
+    }
+  ],
+  "solutions": [],
+  "sources": [
+    {
+      "title": "Author material, read 2026-10-01; publication timing explained above",
+      "url": "https://solanapuzzles.com/puzzle4.html",
+      "date": "2026-10-01",
+      "archived": null
+    },
+    {
+      "title": "Public funding evidence, read 2026-10-01",
+      "url": "https://solscan.io/account/DmDBmb7AEm6xRxkoBYq1mJYqsZP263gmXB53zA2dqjne",
+      "date": "2026-10-01",
+      "archived": null
+    },
+    {
+      "title": "Historical SOL/USD quote for 2026-08-16, read 2026-10-01",
+      "url": "https://api.coingecko.com/api/v3/coins/solana/history?date=16-08-2026",
+      "date": "2026-10-01",
+      "archived": null
+    }
+  ],
+  "third_party_material": "Original puzzle and source material remain the respective authors' property. Only links, attributed summaries and a small balance observation are included; no clue image, article, forum dump, seed, decrypted key or wordlist is copied.",
+  "last_updated": "2026-10-01"
+}

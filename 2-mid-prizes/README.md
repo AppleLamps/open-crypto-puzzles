@@ -11,6 +11,7 @@ its actual state does (solved, swept, funded).
 | Puzzle | Prize | USD | Chain | Type | What remains | Escrow checked | Status |
 |---|---|---|---|---|---|---|---|
 | [TeikhosBounty: Johan Nygren's Proof-of-Public-Key Puzzles](teikhos-bipedaljoe-solver-bounties-2eth/) | 2.000006 ETH | 3,760 | ethereum | smart-contract, timelock | external-info | 2026-08-16 | open |
+| [bitplane hotel-drawer Bitcoin treasure hunt](bitplane-hotel-drawer-bitcoin-treasure-hunt/) | 0.04645836 BTC | 2,927 | bitcoin | physical-object, raw-private-key, book | human-action | 2026-10-01 | watch |
 | [Smith, Lyle & Moore Hunt #2: Glimmer](smith-lyle-moore-hunt-2-0-032btc/) | 0.031777 BTC | 2,002 | bitcoin | bip39-seed, password-pages, web-tree | insight | 2026-08-16 | open |
 | [Trithemius: Wealth in Poetry](wealth-in-poetry-0-03btc/) | 3,124,630 sats | 1,969 | bitcoin | bip39-seed, text-cipher, brainwallet | insight | 2026-08-16 | open |
 | [Arweave Puzzle #11](arweave-puzzle-11-1eth/) | 1 ETH | 1,880 | ethereum | image-stego, pixel-code, raw-private-key | insight | 2026-08-16 | open |
@@ -25,7 +26,8 @@ its actual state does (solved, swept, funded).
 | [School of Bitcoin: 1 Million Sats In This Image](school-of-bitcoin-1msats/) | 1,000,000 sats | 630 | bitcoin | bip39-seed, image-stego, password-pages | external-info | 2026-08-16 | open |
 | [AH White: Walking Banks](ah-white-walking-banks-800ksats/) | 800,000 sats | 504 | bitcoin | bip39-seed, book, text-cipher | external-info | 2026-08-16 | open |
 | [Keir Finlow-Bates: Move Over Brokers Treasure Hunt](keir-finlow-bates-blockchain-book-600ksats/) | 600,000 sats | 378 | bitcoin | book, brainwallet, text-cipher | human-action | 2026-09-01 | open |
+| [Q's donated BIP38 paper wallet](q-bip38-paper-wallet/) | 0.005297 BTC | 334 | bitcoin | bip38 | uneconomic | 2026-10-01 | watch |
 | [Zden Level HALV](zden-haluska-halv-312ksats/) | 312,500 sats | 197 | bitcoin | geometry, raw-private-key | external-info | 2026-08-16 | open |
-| [Path to Greatness: Treasure Hunt](path-to-greatness-treasure-hunt-3ltc/) | 3.02608794 LTC | 163 | litecoin | raw-private-key, image-stego, audio, text-cipher | insight | 2026-09-12 | open |
+| [Path to Greatness: Treasure Hunt](path-to-greatness-treasure-hunt-3ltc/) | 3.02608794 LTC | 163 | litecoin | raw-private-key, image-stego, audio, text-cipher | insight | 2026-10-01 | open |
 | [Pindar Van Arman: cryptoArtGAN Act 1 Puzzle](pindar-van-arman-cryptoartgan-nft/) | 1 NFT |  | ethereum | bip39-seed, word-selection | insight | 2026-08-16 | open |
 <!-- generated:end -->

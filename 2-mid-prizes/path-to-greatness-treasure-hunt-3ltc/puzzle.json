@@ -31,7 +31,7 @@
       "label": "prize",
       "explorer": "https://litecoinspace.org/address/LUtL7qnm3gzxKjHcfVLSjydqhhinTVmTmS",
       "expected": "302,608,794 litoshis received over 8 transactions, 0 spent",
-      "verified_on": "2026-09-12",
+      "verified_on": "2026-10-01",
       "verified_state": "funded-unspent"
     }
   ],
@@ -159,6 +159,12 @@
   ],
   "sources": [
     {
+      "title": "BlockCypher Litecoin balance API, read 2026-10-01; exact timestamp in data/evidence-2026-10-01.json",
+      "url": "https://api.blockcypher.com/v1/ltc/main/addrs/LUtL7qnm3gzxKjHcfVLSjydqhhinTVmTmS/balance",
+      "date": "2026-10-01",
+      "archived": null
+    },
+    {
       "title": "I made a treasure hunt with a crypto prize, r/ARG announcement",
       "url": "https://reddit.com/r/ARG/comments/orgh1k/i_made_a_treasure_hunt_with_a_crypto_prize/",
       "date": "2021-07-25",
@@ -214,5 +220,5 @@
     }
   ],
   "third_party_material": "Only the author's own published puzzle files are shipped here: the nine clue images served by p2gtreasure.com, the site banner, and the two lossless carriers Beach.png and Ship.png that his QR codes point at. Not shipped, and not to be added: the game demo p2g_demo.zip (134 MB, Google Drive, the author's own but far over the repository size limits), the album audio embedded in it or published on Spotify and iTunes, any frame or transcript of the 1997 film Titanic that the clue 7 montage is built from, and the audio of the author's YouTube video EojQgdZeTyM. All four are linked by URL instead. The clue poems are quoted in short excerpts only, in clues/author-posts.md.",
-  "last_updated": "2026-09-12"
+  "last_updated": "2026-10-01"
 }

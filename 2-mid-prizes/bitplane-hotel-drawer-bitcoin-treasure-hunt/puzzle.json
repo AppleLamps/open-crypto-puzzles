@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "slug": "bitplane-hotel-drawer-bitcoin-treasure-hunt",
+  "title": "bitplane hotel-drawer Bitcoin treasure hunt",
+  "tier": "mid",
+  "status": "watch",
+  "dead_end_reason": null,
+  "series": null,
+  "author": {
+    "name": "bitplane / gaz",
+    "handles": [
+      "bitplane",
+      "gaz"
+    ],
+    "url": "https://bitplane.net/"
+  },
+  "published": {
+    "date": null,
+    "url": "https://bitplane.net/log/2013/12/bitcoin-treasure-hunt/",
+    "note": "Author reports a 2013-12-17 event. A 2024-12-07 archive capture establishes public availability by then; a contemporaneous 2013 invitation is not verified."
+  },
+  "chain": "bitcoin",
+  "prize": {
+    "amount": 0.04645836,
+    "asset": "BTC",
+    "usd_estimate": 2927,
+    "usd_snapshot": "2026-08-16",
+    "note": "The author describes an original GBP 20 deposit. The current address balance is 0.04645836 BTC; the historical GBP value is not the present prize value."
+  },
+  "addresses": [
+    {
+      "address": "1EuhWQkaVg8CCVLEQ9dMgCroJUcNGHMBot",
+      "chain": "bitcoin",
+      "role": "escrow",
+      "explorer": "https://mempool.space/address/1EuhWQkaVg8CCVLEQ9dMgCroJUcNGHMBot",
+      "expected": "4645836 sats received in 1 transaction, 0 spent, no pending activity.",
+      "verified_on": "2026-10-01",
+      "verified_state": "funded-unspent"
+    }
+  ],
+  "puzzle_type": [
+    "physical-object",
+    "raw-private-key",
+    "book"
+  ],
+  "target_format": "Private key written beneath a physical drawer; encoding and key compression are not established.",
+  "derivation": {
+    "summary": "The chain check establishes that the named address is still funded and has no spending history. It does not establish that the furniture, clue or key survives, or that the room is accessible. I retain WATCH rather than assert a currently practical recovery path. No location identification, visit, contact or permission to enter private property is part of this entry.",
+    "oracle": null,
+    "oracle_certified": false
+  },
+  "difficulty_left": "human-action",
+  "difficulty_note": "Funds remain, but physical clue survival, location access and recovery have not been verified. A November 2024 author update is not a fresh physical inspection.",
+  "tested_total": {
+    "candidates": 0,
+    "families": 0,
+    "certified": false
+  },
+  "leads": [
+    {
+      "rank": 1,
+      "title": "Seek publicly documented evidence of the physical clue's continued availability. Confirmation of a surviving clue and a permitted access route would support changing the access assessment; an author cancellation or destroyed clue would support archival review.",
+      "cost": "Public-source review; no compute estimate established.",
+      "status": "open"
+    }
+  ],
+  "solutions": [],
+  "sources": [
+    {
+      "title": "Author material, read 2026-10-01; publication timing explained above",
+      "url": "https://bitplane.net/log/2013/12/bitcoin-treasure-hunt/",
+      "date": "2026-10-01",
+      "archived": "https://web.archive.org/web/20241207232107/https://bitplane.net/log/2013/12/bitcoin-treasure-hunt/"
+    },
+    {
+      "title": "Public funding evidence, read 2026-10-01",
+      "url": "https://mempool.space/api/address/1EuhWQkaVg8CCVLEQ9dMgCroJUcNGHMBot",
+      "date": "2026-10-01",
+      "archived": null
+    },
+    {
+      "title": "Retrospective public capture; not proof of a 2013 announcement",
+      "url": "https://web.archive.org/web/20241207232107/https://bitplane.net/log/2013/12/bitcoin-treasure-hunt/",
+      "date": "2024-12-07",
+      "archived": null
+    },
+    {
+      "title": "Funding transaction, physical-placement event evidence",
+      "url": "https://mempool.space/tx/bf05ad36b0d8ef76a711dba3c8b67a7be574d0b237e61eeb772fa2c6aa486408",
+      "date": "2013-12-17",
+      "archived": null
+    }
+  ],
+  "third_party_material": "Original puzzle and source material remain the respective authors' property. Only links, attributed summaries and a small balance observation are included; no clue image, article, forum dump, seed, decrypted key or wordlist is copied.",
+  "last_updated": "2026-10-01"
+}

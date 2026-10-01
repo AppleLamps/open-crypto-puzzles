@@ -1,0 +1,22 @@
+{
+  "retrieved_at_utc": "2026-10-01T04:26:24Z",
+  "source": "https://solscan.io/account/DmDBmb7AEm6xRxkoBYq1mJYqsZP263gmXB53zA2dqjne",
+  "observation": {
+    "balance_lamports": 834000000,
+    "balance_sol": 0.834,
+    "displayed_transactions": 2,
+    "displayed_transfers_sol": [
+      0.417,
+      0.417
+    ]
+  },
+  "limitation": "Fresh explorer page, requested with maxAge 0; not a new finalized RPC query. Earlier independent finalized RPC observation at 2026-10-01T03:12:43.632571Z reported 834000000 lamports at slot 452162643.",
+  "valuation": {
+    "price_source": "https://api.coingecko.com/api/v3/coins/solana/history?date=16-08-2026",
+    "snapshot_date": "2026-08-16",
+    "retrieved_at_utc": "2026-10-01T04:26:24Z",
+    "sol_usd": 75.27983398665542,
+    "note": "Historical USD quote applied to the presently observed balance, not a historical balance."
+  },
+  "method": "Read-only public source, cache reuse disabled. Timestamp records when the response was available for review; upstream caching or explorer lag cannot be excluded."
+}

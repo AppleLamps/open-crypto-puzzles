@@ -17,7 +17,7 @@ guess about a pair of clues is settled on its own in microseconds. Four locks, n
 | Prize | 3.02608794 LTC (about $163 at LTC = $54, 2026-08-16; LTC was $54.17 when I read the price on 2026-09-12) |
 | Chain | litecoin |
 | Escrow | `LUtL7qnm3gzxKjHcfVLSjydqhhinTVmTmS` ([explorer](https://litecoinspace.org/address/LUtL7qnm3gzxKjHcfVLSjydqhhinTVmTmS)) |
-| Last on-chain check | 2026-09-12: funded and unspent, 302,608,794 litoshis received over 8 transactions, 0 spent |
+| Last on-chain check | 2026-10-01: funded and unspent, 302,608,794 litoshis received over 8 transactions, 0 spent, no pending activity; [timestamped evidence](data/evidence-2026-10-01.json) |
 | Status | OPEN |
 | Puzzle type | raw-private-key, image-stego, audio, text-cipher |
 | Target format | Litecoin WIF (version byte 0xB0, so it starts with `T` or `6`), AES-256-CBC encrypted; the 8 answers concatenate to 128 ASCII characters, which are four AES-256 keys |
@@ -144,7 +144,11 @@ core in Python.
 ### Established facts
 
 1. The escrow holds 302,608,794 litoshis, received over 8 transactions, with 0 spent, checked
-   on 2026-09-12 against the litecoinspace API. The filter that matters here is
+   on 2026-10-01 against the BlockCypher Litecoin balance API with no pending activity.
+   The [evidence record](data/evidence-2026-10-01.json) preserves the response and exact
+   retrieval time. The current public rules still show the same prize and say no donation
+   is required. This refresh does not add any solver work or oracle certification.
+   The filter that matters here is
    `spent == 0`, not "one incoming transaction": this is a pot the public tops up.
 2. The composition scheme transcribed above is verified against the lossless texture shipped
    inside the game demo, not against the JPEG. Its four segment ciphertexts and the WIF blob
@@ -274,6 +278,7 @@ Full notes in [analysis/leads.md](analysis/leads.md).
 
 | Path | What it is |
 |---|---|
+| `data/evidence-2026-10-01.json` | public balance summary with exact retrieval time; no solver execution |
 | `clues/computer_screen.jpg` | the author's fake desktop: the whole encryption scheme, as served by the site |
 | `clues/clue1_imagine.jpg` | clue 1, 16 characters, the rewritten Lennon poem and the number 19410712 |
 | `clues/clue2_scramble.jpg` | clue 2, 15 characters, eight anagrams over a 41-character mixed-case string |
@@ -292,6 +297,8 @@ Full notes in [analysis/leads.md](analysis/leads.md).
 
 ## Sources
 
+- [BlockCypher Litecoin balance API, checked 2026-10-01](https://api.blockcypher.com/v1/ltc/main/addrs/LUtL7qnm3gzxKjHcfVLSjydqhhinTVmTmS/balance); [exact retrieval time and response](data/evidence-2026-10-01.json).
+- [Current puzzle rules and prize, read 2026-10-01](https://p2gtreasure.com/); no donation is required.
 - Announcement, r/ARG, 2021-07-25: https://reddit.com/r/ARG/comments/orgh1k/i_made_a_treasure_hunt_with_a_crypto_prize/
 - Puzzle site, read 2026-09-09: https://p2gtreasure.com/ (archived: https://web.archive.org/web/20211220074516/http://p2gtreasure.com/)
 - Older site and its rules page, still served: https://p2gtreasure.com/old/index.html (archived: https://web.archive.org/web/20220323235950/http://p2gtreasure.com/old/index.html)
