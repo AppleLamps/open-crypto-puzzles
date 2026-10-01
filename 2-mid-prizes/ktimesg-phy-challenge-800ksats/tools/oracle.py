@@ -164,7 +164,7 @@ def recovered_address():
     return pub, p2wpkh_address(pub)
 
 
-def check_candidate(hex_key):
+def check_candidate(hex_key, target=ESCROW):
     hex_key = hex_key.strip()
     if len(hex_key) != 64:
         return False
@@ -174,7 +174,7 @@ def check_candidate(hex_key):
         return False
     if not 1 <= d < N:
         return False
-    return p2wpkh_address(compress(point_mul(d, G))) == ESCROW
+    return p2wpkh_address(compress(point_mul(d, G))) == target
 
 
 def selftest():
@@ -202,9 +202,19 @@ def selftest():
         print("FAIL: altered message still recovers the escrow address")
         ok = False
 
-    # The oracle must reject a wrong key and report MATCH only for an exact address match.
-    if check_candidate("00" * 31 + "01"):
-        print("FAIL: private key 1 reported as a match")
+    # The candidate matcher must re-find a known-good input through the same code path:
+    # private key 1 against its own public BIP-173 address (the target is injected here).
+    bip173 = "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4"
+    one = "00" * 31 + "01"
+    if not check_candidate(one, target=bip173):
+        print("FAIL: known-good key 1 not re-found against its BIP-173 address")
+        ok = False
+    # It must also reject a wrong key for that target, and reject key 1 for the real escrow.
+    if check_candidate("00" * 31 + "02", target=bip173):
+        print("FAIL: private key 2 reported as a match for the key 1 address")
+        ok = False
+    if check_candidate(one):
+        print("FAIL: private key 1 reported as a match for the escrow")
         ok = False
 
     print("SELFTEST OK" if ok else "SELFTEST FAILED")

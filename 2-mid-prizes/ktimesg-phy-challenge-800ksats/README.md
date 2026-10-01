@@ -85,7 +85,9 @@ On a MATCH, stop, broadcast nothing, and hand the key to the human running you. 
 
 1. The public BIP-173 vector: private key 1 has the compressed public key
    `0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798` and the address
-   `bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4`.
+   `bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4`. The candidate matcher itself re-finds
+   private key 1 against that address (the target is injected in the self-test), and a
+   matcher that always returns false fails the self-test.
 2. The author's own data: the published signature over the saved 959-byte message recovers
    `bc1qrpn28qa82uyjg37dvsz3w7wpm3kpdea957nm9p`. A message with one byte added recovers a
    different address, so the check can fail.
