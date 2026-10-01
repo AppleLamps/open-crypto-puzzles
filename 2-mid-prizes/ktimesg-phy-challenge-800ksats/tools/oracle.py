@@ -12,11 +12,15 @@ Purpose:
     2. check a candidate private key (64 hex characters): derive its compressed public key
        and P2WPKH address and compare to the escrow address.
 
+    The recovery accepts only BIP-137 header bytes 39 to 42 (compressed key, native SegWit
+    P2WPKH), so it certifies the signature type the author published.
+
     Only an exact address match counts. Nothing else is reported as progress.
 
 Usage:
     python3 tools/oracle.py --selftest            # must print SELFTEST OK
     python3 tools/oracle.py --recover             # print the recovered public key and address
+    python3 tools/oracle.py --scripts             # print the same key under other script forms
     python3 tools/oracle.py <64-hex private key>  # candidate check
     python3 tools/oracle.py --stdin               # one 64-hex candidate per line
 
@@ -122,6 +126,37 @@ def p2wpkh_address(pubkey33):
     return hrp + "1" + "".join(BECH32_CHARSET[d] for d in data + checksum)
 
 
+BASE58 = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+
+
+def base58check(payload):
+    full = payload + hashlib.sha256(hashlib.sha256(payload).digest()).digest()[:4]
+    n = int.from_bytes(full, "big")
+    out = ""
+    while n:
+        n, rem = divmod(n, 58)
+        out = BASE58[rem] + out
+    return "1" * (len(full) - len(full.lstrip(b"\0"))) + out
+
+
+def decompress(pubkey33):
+    x = int.from_bytes(pubkey33[1:], "big")
+    y = pow((pow(x, 3, P) + 7) % P, (P + 1) // 4, P)
+    if y % 2 != pubkey33[0] % 2:
+        y = P - y
+    return b"\x04" + x.to_bytes(32, "big") + y.to_bytes(32, "big")
+
+
+def other_script_addresses(pubkey33):
+    """The same key under other single-key script forms (not P2WPKH, not multisig, not taproot)."""
+    redeem = b"\x00\x14" + hash160(pubkey33)
+    return {
+        "P2PKH compressed": base58check(b"\x00" + hash160(pubkey33)),
+        "P2PKH uncompressed": base58check(b"\x00" + hash160(decompress(pubkey33))),
+        "P2SH-P2WPKH": base58check(b"\x05" + hash160(redeem)),
+    }
+
+
 def _varint(n):
     return bytes([n]) if n < 253 else b"\xfd" + n.to_bytes(2, "little")
 
@@ -137,9 +172,11 @@ def recover_pubkey(signature_b64, message):
     if len(raw) != 65:
         raise ValueError("signature is not 65 bytes")
     header = raw[0]
+    if not 39 <= header <= 42:
+        raise ValueError("BIP-137 header must be 39 to 42 for a compressed P2WPKH key")
     r = int.from_bytes(raw[1:33], "big")
     s = int.from_bytes(raw[33:], "big")
-    recid = (header - 27) & 3
+    recid = header - 39
     x = r + (recid >> 1) * N
     beta = pow((pow(x, 3, P) + 7) % P, (P + 1) // 4, P)
     y = beta if (beta - recid) % 2 == 0 else P - beta
@@ -217,6 +254,29 @@ def selftest():
         print("FAIL: private key 1 reported as a match for the escrow")
         ok = False
 
+    # Header validation: other BIP-137 address types and out-of-range headers must be refused,
+    # even when their low bits would recover the same key.
+    raw = bytearray(base64.b64decode(signature + "=" * (-len(signature) % 4)))
+    for bad_header in (27, 31, 35, 38, 43):
+        raw[0] = bad_header
+        try:
+            recover_pubkey(base64.b64encode(bytes(raw)).decode(), message)
+            print(f"FAIL: header {bad_header} was accepted")
+            ok = False
+        except ValueError:
+            pass
+
+    # Other script forms of private key 1. The two P2PKH vectors are the widely published
+    # addresses for key 1. The P2SH-P2WPKH address has 38 transactions on chain (2026-10-01).
+    expected = {
+        "P2PKH compressed": "1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH",
+        "P2PKH uncompressed": "1EHNa6Q4Jz2uvNExL497mE43ikXhwF6kZm",
+        "P2SH-P2WPKH": "3JvL6Ymt8MVWiCNHC7oWU6nLeHNJKLZGLN",
+    }
+    if other_script_addresses(pub1) != expected:
+        print("FAIL: other script forms of private key 1")
+        ok = False
+
     print("SELFTEST OK" if ok else "SELFTEST FAILED")
     return ok
 
@@ -226,6 +286,7 @@ def main():
     ap.add_argument("candidate", nargs="?", help="private key as 64 hex characters")
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--recover", action="store_true")
+    ap.add_argument("--scripts", action="store_true")
     ap.add_argument("--stdin", action="store_true")
     args = ap.parse_args()
 
@@ -238,6 +299,11 @@ def main():
         print("escrow:    ", ESCROW)
         print("MATCH" if address == ESCROW else "NO MATCH")
         return 0 if address == ESCROW else 1
+    if args.scripts:
+        pub, _ = recovered_address()
+        for name, address in other_script_addresses(pub).items():
+            print(f"{name}: {address}")
+        return 0
     if args.stdin:
         found = False
         for line in sys.stdin:

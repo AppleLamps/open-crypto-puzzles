@@ -90,7 +90,9 @@ On a MATCH, stop, broadcast nothing, and hand the key to the human running you. 
    matcher that always returns false fails the self-test.
 2. The author's own data: the published signature over the saved 959-byte message recovers
    `bc1qrpn28qa82uyjg37dvsz3w7wpm3kpdea957nm9p`. A message with one byte added recovers a
-   different address, so the check can fail.
+   different address, so the check can fail. The recovery accepts only BIP-137 header bytes
+   39 to 42, which is the published signature type (compressed key, native SegWit), and the
+   self-test refuses headers 27, 31, 35, 38 and 43.
 
 ### Established facts
 
@@ -113,8 +115,10 @@ On a MATCH, stop, broadcast nothing, and hand the key to the human running you. 
    `0x5b890b292ba1abd9b1`. A signature from a random nonce has an `s` near 256 bits, so the
    small `s` is a property of how the author built this signature. Why it is small is not
    established. Re-check: decode `clues/signature.txt` from base64. Checked 2026-10-01.
-6. The escrow has never spent an output, so no on-chain signature from its key exists. The
-   only published signature is the forum one. Checked 2026-10-01.
+6. The escrow address has never spent an output, so it has exposed no spending signature on
+   chain. The same public key has 0 transactions as P2PKH (compressed and uncompressed) and
+   as P2SH-P2WPKH (`python3 tools/oracle.py --scripts` prints the addresses). Multisig,
+   taproot and bare-key uses of this key were not checked. Checked 2026-10-01.
 7. The author said on 2026-08-13 that the signature verifies and the address is the target.
    Source: the thread, post linked in `clues/author-posts.md`. Reported by the author.
 8. The thread has 94 posts, the last on 2026-09-24, and no post claims a solution. Read in
@@ -129,7 +133,7 @@ checks of the setup. Full ledger in `analysis/tested.md`.
 |---|---|---|---|---|---|
 | The signed message is the first code block, LF endings, no trailing newline | 1 reading | BIP-137 recovery, compare address | 1 match: the escrow | yes: BIP-173 vector re-found by the same code | 2026-10-01 |
 | Whitespace variants of that message | 3 readings | same recovery | 0 match | yes: exact reading re-found by the same code | 2026-10-01 |
-| The escrow has revealed a signature on chain | 1 address | mempool.space address stats | no: 0 spent outputs | uncertified (one API read) | 2026-10-01 |
+| The escrow key has signed an on-chain input under another single-key script form | 4 addresses | `--scripts` plus mempool.space address stats | 0 transactions on the 3 other forms, 0 spent outputs on the escrow; multisig, taproot and bare-key uses not checked | yes: derivation reproduces key 1's P2PKH vectors; its P2SH-P2WPKH address has 38 transactions | 2026-10-01 |
 
 ## Open leads, ranked
 
