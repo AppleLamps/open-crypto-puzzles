@@ -1,3692 +1,3223 @@
-[
- {
-  "i": 0,
-  "x": 1054.5,
-  "y": 130.0,
-  "glyph": "1f64e-1f3fb-200d-2640-fe0f",
-  "shape_score": 0.954,
-  "mirror_margin": -0.036,
-  "tone_err": 6.55,
-  "tone_runner_up": [
-   "1f64e-1f3fd-200d-2640-fe0f",
-   48.42
-  ],
-  "tone_rmse": 20.3,
-  "tone_changed": false
- },
- {
-  "i": 1,
-  "x": 760.5,
-  "y": 154.5,
-  "glyph": "1f44f",
-  "shape_score": 0.97,
-  "mirror_margin": -0.612,
-  "tone_err": 8.87,
-  "tone_runner_up": [
-   "1f44f-1f3fc",
-   19.26
-  ],
-  "tone_rmse": 13.16,
-  "tone_changed": false
- },
- {
-  "i": 2,
-  "x": 874.5,
-  "y": 165.0,
-  "glyph": "1f4ad",
-  "shape_score": 0.975,
-  "mirror_margin": -0.135,
-  "tone_err": 7.37,
-  "tone_runner_up": null,
-  "tone_rmse": 6.97,
-  "tone_changed": false
- },
- {
-  "i": 3,
-  "x": 1158.5,
-  "y": 178.0,
-  "glyph": "1f5a4",
-  "shape_score": 0.98,
-  "mirror_margin": -0.002,
-  "tone_err": 9.36,
-  "tone_runner_up": null,
-  "tone_rmse": 15.47,
-  "tone_changed": false
- },
- {
-  "i": 4,
-  "x": 985.5,
-  "y": 194.5,
-  "glyph": "1f974",
-  "shape_score": 0.97,
-  "mirror_margin": -0.045,
-  "tone_err": 7.03,
-  "tone_runner_up": null,
-  "tone_rmse": 10.28,
-  "tone_changed": false
- },
- {
-  "i": 5,
-  "x": 1337.0,
-  "y": 200.5,
-  "glyph": "1f3c3-1f3fc-200d-2640-fe0f",
-  "shape_score": 0.99,
-  "mirror_margin": 0.601,
-  "tone_err": 7.2,
-  "tone_runner_up": [
-   "1f3c3-200d-2640-fe0f",
-   23.54
-  ],
-  "tone_rmse": 13.62,
-  "tone_changed": false
- },
- {
-  "i": 6,
-  "x": 713.0,
-  "y": 237.0,
-  "glyph": "1f64b-1f3ff-200d-2642-fe0f",
-  "shape_score": 0.955,
-  "mirror_margin": -0.544,
-  "tone_err": 6.35,
-  "tone_runner_up": [
-   "1f64b-1f3fe-200d-2642-fe0f",
-   31.05
-  ],
-  "tone_rmse": 11.97,
-  "tone_changed": false
- },
- {
-  "i": 7,
-  "x": 1084.5,
-  "y": 236.5,
-  "glyph": "1f499",
-  "shape_score": 0.993,
-  "mirror_margin": 0.0,
-  "tone_err": 6.02,
-  "tone_runner_up": null,
-  "tone_rmse": 11.03,
-  "tone_changed": false
- },
- {
-  "i": 8,
-  "x": 1250.0,
-  "y": 239.5,
-  "glyph": "1f6b4-1f3fb",
-  "shape_score": 0.981,
-  "mirror_margin": -0.523,
-  "tone_err": 20.12,
-  "tone_runner_up": [
-   "1f6b4",
-   22.82
-  ],
-  "tone_rmse": 17.53,
-  "tone_changed": false
- },
- {
-  "i": 9,
-  "x": 823.0,
-  "y": 244.0,
-  "glyph": "1f9d1-1f3fb-200d-1f373",
-  "shape_score": 0.98,
-  "mirror_margin": -0.143,
-  "tone_err": 8.49,
-  "tone_runner_up": [
-   "1f9d1-200d-1f373",
-   28.37
-  ],
-  "tone_rmse": 16.95,
-  "tone_changed": false
- },
- {
-  "i": 10,
-  "x": 598.0,
-  "y": 247.0,
-  "glyph": "1f9d7-1f3fd-200d-2642-fe0f",
-  "shape_score": 0.943,
-  "mirror_margin": -0.907,
-  "tone_err": 2.19,
-  "tone_runner_up": [
-   "1f9d7-1f3fe-200d-2642-fe0f",
-   15.49
-  ],
-  "tone_rmse": 8.52,
-  "tone_changed": false
- },
- {
-  "i": 11,
-  "x": 1510.0,
-  "y": 261.0,
-  "glyph": "1f9cd-1f3fd-200d-2640-fe0f",
-  "shape_score": 0.99,
-  "mirror_margin": 0.005,
-  "tone_err": 5.76,
-  "tone_runner_up": [
-   "1f9cd-1f3fe-200d-2640-fe0f",
-   28.01
-  ],
-  "tone_rmse": 12.67,
-  "tone_changed": false
- },
- {
-  "i": 12,
-  "x": 926.5,
-  "y": 267.0,
-  "glyph": "1f9bb-1f3fe",
-  "shape_score": 0.998,
-  "mirror_margin": -0.245,
-  "tone_err": 3.64,
-  "tone_runner_up": [
-   "1f9bb-1f3ff",
-   29.13
-  ],
-  "tone_rmse": 5.47,
-  "tone_changed": false
- },
- {
-  "i": 13,
-  "x": 1421.5,
-  "y": 279.0,
-  "glyph": "1f468-1f3fe-200d-2708-fe0f",
-  "shape_score": 0.975,
-  "mirror_margin": -0.019,
-  "tone_err": 5.74,
-  "tone_runner_up": [
-   "1f468-1f3ff-200d-2708-fe0f",
-   24.03
-  ],
-  "tone_rmse": 19.94,
-  "tone_changed": false
- },
- {
-  "i": 14,
-  "x": 1173.0,
-  "y": 292.0,
-  "glyph": "1fa99",
-  "shape_score": 0.976,
-  "mirror_margin": -0.263,
-  "tone_err": 5.06,
-  "tone_runner_up": null,
-  "tone_rmse": 13.82,
-  "tone_changed": false
- },
- {
-  "i": 15,
-  "x": 1021.0,
-  "y": 309.0,
-  "glyph": "1f47c",
-  "shape_score": 0.972,
-  "mirror_margin": -0.016,
-  "tone_err": 6.66,
-  "tone_runner_up": [
-   "1f47c-1f3fc",
-   18.05
-  ],
-  "tone_rmse": 11.51,
-  "tone_changed": false
- },
- {
-  "i": 16,
-  "x": 1329.0,
-  "y": 312.0,
-  "glyph": "1f64f-1f3fb",
-  "shape_score": 0.969,
-  "mirror_margin": -0.053,
-  "tone_err": 11.6,
-  "tone_runner_up": [
-   "1f64f",
-   28.03
-  ],
-  "tone_rmse": 10.07,
-  "tone_changed": false
- },
- {
-  "i": 17,
-  "x": 685.5,
-  "y": 326.0,
-  "glyph": "1f9d1-1f3fe-200d-2696-fe0f",
-  "shape_score": 0.977,
-  "mirror_margin": -0.498,
-  "tone_err": 5.22,
-  "tone_runner_up": [
-   "1f9d1-1f3ff-200d-2696-fe0f",
-   21.85
-  ],
-  "tone_rmse": 12.88,
-  "tone_changed": false
- },
- {
-  "i": 18,
-  "x": 784.0,
-  "y": 330.0,
-  "glyph": "1f63a",
-  "shape_score": 0.995,
-  "mirror_margin": -0.013,
-  "tone_err": 5.66,
-  "tone_runner_up": null,
-  "tone_rmse": 18.5,
-  "tone_changed": false
- },
- {
-  "i": 19,
-  "x": 575.0,
-  "y": 346.0,
-  "glyph": "1f3ca-1f3fd",
-  "shape_score": 0.985,
-  "mirror_margin": -0.414,
-  "tone_err": 3.09,
-  "tone_runner_up": [
-   "1f3ca-1f3fc",
-   27.49
-  ],
-  "tone_rmse": 12.49,
-  "tone_changed": false
- },
- {
-  "i": 20,
-  "x": 882.0,
-  "y": 354.0,
-  "glyph": "1f9d1-1f3ff-200d-1f4bc",
-  "shape_score": 0.984,
-  "mirror_margin": -0.046,
-  "tone_err": 6.33,
-  "tone_runner_up": [
-   "1f9d1-1f3fe-200d-1f4bc",
-   31.72
-  ],
-  "tone_rmse": 14.14,
-  "tone_changed": false
- },
- {
-  "i": 21,
-  "x": 1577.0,
-  "y": 356.5,
-  "glyph": "1f9d1-200d-1f33e",
-  "shape_score": 0.995,
-  "mirror_margin": -0.209,
-  "tone_err": 4.68,
-  "tone_runner_up": [
-   "1f9d1-1f3fc-200d-1f33e",
-   13.15
-  ],
-  "tone_rmse": 8.79,
-  "tone_changed": true
- },
- {
-  "i": 22,
-  "x": 1242.5,
-  "y": 361.0,
-  "glyph": "1f446-1f3ff",
-  "shape_score": 0.991,
-  "mirror_margin": -0.474,
-  "tone_err": 6.98,
-  "tone_runner_up": [
-   "1f446-1f3fe",
-   43.89
-  ],
-  "tone_rmse": 8.59,
-  "tone_changed": false
- },
- {
-  "i": 23,
-  "x": 1104.5,
-  "y": 362.5,
-  "glyph": "1f6b6-1f3fe-200d-2640-fe0f",
-  "shape_score": 0.969,
-  "mirror_margin": -0.468,
-  "tone_err": 4.87,
-  "tone_runner_up": [
-   "1f6b6-1f3ff-200d-2640-fe0f",
-   17.36
-  ],
-  "tone_rmse": 12.34,
-  "tone_changed": false
- },
- {
-  "i": 24,
-  "x": 1484.0,
-  "y": 367.0,
-  "glyph": "1f4a1",
-  "shape_score": 0.515,
-  "mirror_margin": 0.004,
-  "tone_err": 119.43,
-  "tone_runner_up": null,
-  "tone_rmse": 141.73,
-  "tone_changed": false
- },
- {
-  "i": 25,
-  "x": 469.5,
-  "y": 368.0,
-  "glyph": "1f9db-1f3fb-200d-2642-fe0f",
-  "shape_score": 0.977,
-  "mirror_margin": 0.001,
-  "tone_err": 7.99,
-  "tone_runner_up": [
-   "1f9db-200d-2642-fe0f",
-   20.18
-  ],
-  "tone_rmse": 17.45,
-  "tone_changed": true
- },
- {
-  "i": 26,
-  "x": 1391.0,
-  "y": 394.0,
-  "glyph": "1f9d4-1f3fe-200d-2640-fe0f",
-  "shape_score": 0.967,
-  "mirror_margin": -0.065,
-  "tone_err": 6.09,
-  "tone_runner_up": [
-   "1f9d4-1f3ff-200d-2640-fe0f",
-   22.22
-  ],
-  "tone_rmse": 15.96,
-  "tone_changed": false
- },
- {
-  "i": 27,
-  "x": 969.5,
-  "y": 400.0,
-  "glyph": "1f3ca-1f3fd-200d-2640-fe0f",
-  "shape_score": 0.97,
-  "mirror_margin": -0.41,
-  "tone_err": 7.96,
-  "tone_runner_up": [
-   "1f3ca-1f3fe-200d-2640-fe0f",
-   29.34
-  ],
-  "tone_rmse": 12.54,
-  "tone_changed": false
- },
- {
-  "i": 28,
-  "x": 364.0,
-  "y": 417.0,
-  "glyph": "1f928",
-  "shape_score": 0.977,
-  "mirror_margin": -0.026,
-  "tone_err": 8.3,
-  "tone_runner_up": null,
-  "tone_rmse": 13.56,
-  "tone_changed": false
- },
- {
-  "i": 29,
-  "x": 664.0,
-  "y": 421.0,
-  "glyph": "1faf2-1f3fb",
-  "shape_score": 0.994,
-  "mirror_margin": -0.334,
-  "tone_err": 11.35,
-  "tone_runner_up": [
-   "1faf2",
-   25.7
-  ],
-  "tone_rmse": 9.55,
-  "tone_changed": false
- },
- {
-  "i": 30,
-  "x": 1171.0,
-  "y": 428.5,
-  "glyph": "1f6b4-1f3fb-200d-2640-fe0f",
-  "shape_score": 0.965,
-  "mirror_margin": -0.554,
-  "tone_err": 7.53,
-  "tone_runner_up": [
-   "1f6b4-1f3fc-200d-2640-fe0f",
-   34.52
-  ],
-  "tone_rmse": 18.97,
-  "tone_changed": false
- },
- {
-  "i": 31,
-  "x": 764.0,
-  "y": 427.0,
-  "glyph": "1f9d1-1f3fb-200d-1f9bd-200d-27a1-fe0f",
-  "shape_score": 0.934,
-  "mirror_margin": -0.601,
-  "tone_err": 7.32,
-  "tone_runner_up": [
-   "1f9d1-1f3fd-200d-1f9bd-200d-27a1-fe0f",
-   34.76
-  ],
-  "tone_rmse": 19.35,
-  "tone_changed": false
- },
- {
-  "i": 32,
-  "x": 564.0,
-  "y": 432.0,
-  "glyph": "1f469-1f3fb-200d-1f33e",
-  "shape_score": 0.969,
-  "mirror_margin": -0.218,
-  "tone_err": 6.4,
-  "tone_runner_up": [
-   "1f469-200d-1f33e",
-   41.26
-  ],
-  "tone_rmse": 17.81,
-  "tone_changed": false
- },
- {
-  "i": 33,
-  "x": 1304.5,
-  "y": 440.5,
-  "glyph": "1f62f",
-  "shape_score": 0.987,
-  "mirror_margin": 0.001,
-  "tone_err": 8.71,
-  "tone_runner_up": null,
-  "tone_rmse": 15.5,
-  "tone_changed": false
- },
- {
-  "i": 34,
-  "x": 1046.0,
-  "y": 447.0,
-  "glyph": "1f9e9",
-  "shape_score": 0.987,
-  "mirror_margin": -0.893,
-  "tone_err": 11.36,
-  "tone_runner_up": null,
-  "tone_rmse": 13.55,
-  "tone_changed": false
- },
- {
-  "i": 35,
-  "x": 853.0,
-  "y": 450.5,
-  "glyph": "1f9cd-1f3fc",
-  "shape_score": 0.997,
-  "mirror_margin": -0.068,
-  "tone_err": 6.25,
-  "tone_runner_up": [
-   "1f9cd",
-   13.65
-  ],
-  "tone_rmse": 10.58,
-  "tone_changed": true
- },
- {
-  "i": 36,
-  "x": 1620.5,
-  "y": 457.5,
-  "glyph": "1f513",
-  "shape_score": 0.994,
-  "mirror_margin": -0.07,
-  "tone_err": 6.78,
-  "tone_runner_up": null,
-  "tone_rmse": 10.42,
-  "tone_changed": false
- },
- {
-  "i": 37,
-  "x": 463.0,
-  "y": 463.0,
-  "glyph": "2620-fe0f",
-  "shape_score": 0.977,
-  "mirror_margin": -0.007,
-  "tone_err": 8.88,
-  "tone_runner_up": null,
-  "tone_rmse": 15.26,
-  "tone_changed": false
- },
- {
-  "i": 38,
-  "x": 1533.5,
-  "y": 462.0,
-  "glyph": "1f9d1-1f3fb-200d-1f527",
-  "shape_score": 0.988,
-  "mirror_margin": -0.359,
-  "tone_err": 6.73,
-  "tone_runner_up": [
-   "1f9d1-1f3fd-200d-1f527",
-   54.13
-  ],
-  "tone_rmse": 16.89,
-  "tone_changed": false
- },
- {
-  "i": 39,
-  "x": 1719.0,
-  "y": 469.0,
-  "glyph": "1f935-1f3fc",
-  "shape_score": 0.979,
-  "mirror_margin": -0.008,
-  "tone_err": 6.91,
-  "tone_runner_up": [
-   "1f935",
-   22.07
-  ],
-  "tone_rmse": 17.67,
-  "tone_changed": true
- },
- {
-  "i": 40,
-  "x": 1435.5,
-  "y": 483.0,
-  "glyph": "1f64b-1f3fc-200d-2640-fe0f",
-  "shape_score": 0.979,
-  "mirror_margin": -0.296,
-  "tone_err": 5.16,
-  "tone_runner_up": [
-   "1f64b-200d-2640-fe0f",
-   22.34
-  ],
-  "tone_rmse": 13.75,
-  "tone_changed": false
- },
- {
-  "i": 41,
-  "x": 935.0,
-  "y": 494.0,
-  "glyph": "1f9d6-1f3fb",
-  "shape_score": 0.98,
-  "mirror_margin": -0.032,
-  "tone_err": 7.99,
-  "tone_runner_up": [
-   "1f9d6-1f3fd",
-   40.5
-  ],
-  "tone_rmse": 11.32,
-  "tone_changed": false
- },
- {
-  "i": 42,
-  "x": 999.5,
-  "y": 557.0,
-  "glyph": "1f471-1f3fc-200d-2640-fe0f",
-  "shape_score": 0.877,
-  "mirror_margin": -0.396,
-  "tone_err": 5.59,
-  "tone_runner_up": [
-   "1f471-200d-2640-fe0f",
-   42.49
-  ],
-  "tone_rmse": 38.64,
-  "tone_changed": false
- },
- {
-  "i": 43,
-  "x": 1222.0,
-  "y": 507.0,
-  "glyph": "1f471-1f3fb-200d-2642-fe0f",
-  "shape_score": 0.984,
-  "mirror_margin": -0.006,
-  "tone_err": 26.34,
-  "tone_runner_up": [
-   "1f471-200d-2642-fe0f",
-   42.4
-  ],
-  "tone_rmse": 36.53,
-  "tone_changed": false
- },
- {
-  "i": 44,
-  "x": 366.0,
-  "y": 511.5,
-  "glyph": "1f9df-200d-2640-fe0f",
-  "shape_score": 0.958,
-  "mirror_margin": -0.144,
-  "tone_err": 5.63,
-  "tone_runner_up": null,
-  "tone_rmse": 10.38,
-  "tone_changed": false
- },
- {
-  "i": 45,
-  "x": 1106.0,
-  "y": 517.0,
-  "glyph": "1f487",
-  "shape_score": 0.967,
-  "mirror_margin": -1.362,
-  "tone_err": 5.05,
-  "tone_runner_up": [
-   "1f487-1f3fc",
-   13.27
-  ],
-  "tone_rmse": 9.59,
-  "tone_changed": true
- },
- {
-  "i": 46,
-  "x": 666.0,
-  "y": 520.0,
-  "glyph": "1f486-200d-2640-fe0f",
-  "shape_score": 0.973,
-  "mirror_margin": -0.023,
-  "tone_err": 4.68,
-  "tone_runner_up": [
-   "1f486-1f3fc-200d-2640-fe0f",
-   21.38
-  ],
-  "tone_rmse": 14.97,
-  "tone_changed": false
- },
- {
-  "i": 47,
-  "x": 1343.0,
-  "y": 526.5,
-  "glyph": "1f9de",
-  "shape_score": 0.979,
-  "mirror_margin": -0.962,
-  "tone_err": 5.01,
-  "tone_runner_up": null,
-  "tone_rmse": 11.15,
-  "tone_changed": false
- },
- {
-  "i": 48,
-  "x": 760.0,
-  "y": 531.0,
-  "glyph": "1f46e-1f3fd",
-  "shape_score": 0.976,
-  "mirror_margin": -0.06,
-  "tone_err": 5.25,
-  "tone_runner_up": [
-   "1f46e-1f3fe",
-   29.34
-  ],
-  "tone_rmse": 16.55,
-  "tone_changed": false
- },
- {
-  "i": 49,
-  "x": 476.0,
-  "y": 557.0,
-  "glyph": "1f9d1-1f3fe-200d-1f9b0",
-  "shape_score": 0.991,
-  "mirror_margin": -0.036,
-  "tone_err": 20.59,
-  "tone_runner_up": [
-   "1f9d1-1f3ff-200d-1f9b0",
-   41.09
-  ],
-  "tone_rmse": 34.96,
-  "tone_changed": false
- },
- {
-  "i": 50,
-  "x": 1561.5,
-  "y": 558.5,
-  "glyph": "1f469-1f3fc-200d-1f37c",
-  "shape_score": 0.985,
-  "mirror_margin": -0.227,
-  "tone_err": 4.65,
-  "tone_runner_up": [
-   "1f469-200d-1f37c",
-   23.16
-  ],
-  "tone_rmse": 15.84,
-  "tone_changed": false
- },
- {
-  "i": 51,
-  "x": 1656.0,
-  "y": 562.5,
-  "glyph": "1f574-1f3fe",
-  "shape_score": 0.948,
-  "mirror_margin": -0.021,
-  "tone_err": 8.37,
-  "tone_runner_up": [
-   "1f574-1f3ff",
-   21.36
-  ],
-  "tone_rmse": 20.36,
-  "tone_changed": true
- },
- {
-  "i": 52,
-  "x": 846.0,
-  "y": 565.0,
-  "glyph": "1f468-1f3fc-200d-1f3eb",
-  "shape_score": 0.943,
-  "mirror_margin": -0.062,
-  "tone_err": 3.01,
-  "tone_runner_up": [
-   "1f468-200d-1f3eb",
-   16.56
-  ],
-  "tone_rmse": 13.17,
-  "tone_changed": false
- },
- {
-  "i": 53,
-  "x": 1462.5,
-  "y": 577.0,
-  "glyph": "1f632",
-  "shape_score": 0.991,
-  "mirror_margin": -0.001,
-  "tone_err": 7.84,
-  "tone_runner_up": null,
-  "tone_rmse": 12.07,
-  "tone_changed": false
- },
- {
-  "i": 54,
-  "x": 1749.0,
-  "y": 578.5,
-  "glyph": "1f608",
-  "shape_score": 0.99,
-  "mirror_margin": -0.002,
-  "tone_err": 3.93,
-  "tone_runner_up": null,
-  "tone_rmse": 14.53,
-  "tone_changed": false
- },
- {
-  "i": 55,
-  "x": 275.0,
-  "y": 581.0,
-  "glyph": "1faf1-1f3fe-200d-1faf2-1f3fd",
-  "shape_score": 0.998,
-  "mirror_margin": -0.132,
-  "tone_err": 3.27,
-  "tone_runner_up": [
-   "1faf1-1f3fe-200d-1faf2-1f3fc",
-   23.54
-  ],
-  "tone_rmse": 5.53,
-  "tone_changed": false
- },
- {
-  "i": 56,
-  "x": 1252.0,
-  "y": 594.5,
-  "glyph": "1f60a",
-  "shape_score": 0.977,
-  "mirror_margin": 0.017,
-  "tone_err": 14.18,
-  "tone_runner_up": null,
-  "tone_rmse": 29.99,
-  "tone_changed": false
- },
- {
-  "i": 57,
-  "x": 1143.5,
-  "y": 603.0,
-  "glyph": "1f46f-200d-2642-fe0f",
-  "shape_score": 0.917,
-  "mirror_margin": -0.278,
-  "tone_err": 66.38,
-  "tone_runner_up": null,
-  "tone_rmse": 83.26,
-  "tone_changed": false
- },
- {
-  "i": 58,
-  "x": 385.5,
-  "y": 604.0,
-  "glyph": "1f477-1f3ff-200d-2640-fe0f",
-  "shape_score": 0.981,
-  "mirror_margin": -0.014,
-  "tone_err": 5.95,
-  "tone_runner_up": [
-   "1f477-1f3fe-200d-2640-fe0f",
-   28.25
-  ],
-  "tone_rmse": 17.04,
-  "tone_changed": false
- },
- {
-  "i": 59,
-  "x": 1362.0,
-  "y": 616.0,
-  "glyph": "1f468-1f3fe-200d-1f33e",
-  "shape_score": 0.975,
-  "mirror_margin": -0.215,
-  "tone_err": 5.37,
-  "tone_runner_up": [
-   "1f468-1f3ff-200d-1f33e",
-   17.2
-  ],
-  "tone_rmse": 12.06,
-  "tone_changed": false
- },
- {
-  "i": 60,
-  "x": 922.5,
-  "y": 622.0,
-  "glyph": "1f9dd-1f3fd-200d-2642-fe0f",
-  "shape_score": 0.99,
-  "mirror_margin": -0.013,
-  "tone_err": 3.68,
-  "tone_runner_up": [
-   "1f9dd-1f3fe-200d-2642-fe0f",
-   24.86
-  ],
-  "tone_rmse": 9.67,
-  "tone_changed": false
- },
- {
-  "i": 61,
-  "x": 600.0,
-  "y": 628.0,
-  "glyph": "1f931-1f3fc",
-  "shape_score": 0.977,
-  "mirror_margin": -0.215,
-  "tone_err": 6.02,
-  "tone_runner_up": [
-   "1f931",
-   15.68
-  ],
-  "tone_rmse": 11.72,
-  "tone_changed": false
- },
- {
-  "i": 62,
-  "x": 691.0,
-  "y": 627.5,
-  "glyph": "1f6a3-1f3fb",
-  "shape_score": 0.987,
-  "mirror_margin": -0.238,
-  "tone_err": 6.13,
-  "tone_runner_up": [
-   "1f6a3-1f3fd",
-   24.6
-  ],
-  "tone_rmse": 11.58,
-  "tone_changed": false
- },
- {
-  "i": 63,
-  "x": 781.5,
-  "y": 650.0,
-  "glyph": "1f918",
-  "shape_score": 0.991,
-  "mirror_margin": -0.202,
-  "tone_err": 8.91,
-  "tone_runner_up": [
-   "1f918-1f3fc",
-   17.28
-  ],
-  "tone_rmse": 9.58,
-  "tone_changed": false
- },
- {
-  "i": 64,
-  "x": 1054.5,
-  "y": 644.0,
-  "glyph": "2753",
-  "shape_score": 0.936,
-  "mirror_margin": -0.443,
-  "tone_err": 9.42,
-  "tone_runner_up": null,
-  "tone_rmse": 10.01,
-  "tone_changed": false
- },
- {
-  "i": 65,
-  "x": 1573.0,
-  "y": 656.0,
-  "glyph": "1f3cb-fe0f-200d-2642-fe0f",
-  "shape_score": 0.99,
-  "mirror_margin": -0.109,
-  "tone_err": 11.16,
-  "tone_runner_up": null,
-  "tone_rmse": 19.86,
-  "tone_changed": false
- },
- {
-  "i": 66,
-  "x": 1670.0,
-  "y": 664.0,
-  "glyph": "1f482-1f3fc-200d-2640-fe0f",
-  "shape_score": 0.981,
-  "mirror_margin": -0.015,
-  "tone_err": 9.43,
-  "tone_runner_up": [
-   "1f482-200d-2640-fe0f",
-   14.48
-  ],
-  "tone_rmse": 13.23,
-  "tone_changed": false
- },
- {
-  "i": 67,
-  "x": 508.0,
-  "y": 657.5,
-  "glyph": "1f91c-1f3fb",
-  "shape_score": 0.998,
-  "mirror_margin": -0.377,
-  "tone_err": 11.3,
-  "tone_runner_up": [
-   "1f91c",
-   31.39
-  ],
-  "tone_rmse": 10.91,
-  "tone_changed": false
- },
- {
-  "i": 68,
-  "x": 1468.5,
-  "y": 669.0,
-  "glyph": "1f471-1f3ff-200d-2642-fe0f",
-  "shape_score": 0.977,
-  "mirror_margin": -0.018,
-  "tone_err": 6.44,
-  "tone_runner_up": [
-   "1f471-1f3fe-200d-2642-fe0f",
-   34.12
-  ],
-  "tone_rmse": 12.64,
-  "tone_changed": false
- },
- {
-  "i": 69,
-  "x": 300.0,
-  "y": 677.0,
-  "glyph": "1f3ca-1f3fd-200d-2642-fe0f",
-  "shape_score": 0.985,
-  "mirror_margin": -0.43,
-  "tone_err": 4.52,
-  "tone_runner_up": [
-   "1f3ca-1f3fc-200d-2642-fe0f",
-   39.24
-  ],
-  "tone_rmse": 14.31,
-  "tone_changed": false
- },
- {
-  "i": 70,
-  "x": 1758.5,
-  "y": 689.5,
-  "glyph": "1f9d9-1f3ff",
-  "shape_score": 0.969,
-  "mirror_margin": -0.448,
-  "tone_err": 5.6,
-  "tone_runner_up": [
-   "1f9d9-1f3fe",
-   24.08
-  ],
-  "tone_rmse": 13.84,
-  "tone_changed": false
- },
- {
-  "i": 71,
-  "x": 418.5,
-  "y": 693.5,
-  "glyph": "1f9d9-200d-2642-fe0f",
-  "shape_score": 0.992,
-  "mirror_margin": -0.355,
-  "tone_err": 3.78,
-  "tone_runner_up": [
-   "1f9d9-1f3fc-200d-2642-fe0f",
-   13.89
-  ],
-  "tone_rmse": 11.15,
-  "tone_changed": false
- },
- {
-  "i": 72,
-  "x": 1255.5,
-  "y": 692.0,
-  "glyph": "270a-1f3fc",
-  "shape_score": 0.99,
-  "mirror_margin": -0.129,
-  "tone_err": 6.69,
-  "tone_runner_up": [
-   "270a",
-   12.92
-  ],
-  "tone_rmse": 9.04,
-  "tone_changed": false
- },
- {
-  "i": 73,
-  "x": 870.5,
-  "y": 706.0,
-  "glyph": "1f6b6-1f3fd-200d-2642-fe0f-200d-27a1-fe0f",
-  "shape_score": 0.989,
-  "mirror_margin": -0.488,
-  "tone_err": 4.13,
-  "tone_runner_up": [
-   "1f6b6-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
-   18.95
-  ],
-  "tone_rmse": 12.8,
-  "tone_changed": false
- },
- {
-  "i": 74,
-  "x": 1157.5,
-  "y": 708.0,
-  "glyph": "1f595",
-  "shape_score": 0.998,
-  "mirror_margin": -0.159,
-  "tone_err": 9.69,
-  "tone_runner_up": [
-   "1f595-1f3fb",
-   12.86
-  ],
-  "tone_rmse": 8.83,
-  "tone_changed": true
- },
- {
-  "i": 75,
-  "x": 1357.0,
-  "y": 710.0,
-  "glyph": "1f926-1f3fe",
-  "shape_score": 0.979,
-  "mirror_margin": -0.054,
-  "tone_err": 4.81,
-  "tone_runner_up": [
-   "1f926-1f3ff",
-   23.9
-  ],
-  "tone_rmse": 11.54,
-  "tone_changed": false
- },
- {
-  "i": 76,
-  "x": 986.5,
-  "y": 713.5,
-  "glyph": "1f9db",
-  "shape_score": 0.97,
-  "mirror_margin": 0.005,
-  "tone_err": 6.99,
-  "tone_runner_up": [
-   "1f9db-1f3fb",
-   21.47
-  ],
-  "tone_rmse": 15.85,
-  "tone_changed": false
- },
- {
-  "i": 77,
-  "x": 654.5,
-  "y": 731.0,
-  "glyph": "1f469-1f3fb-200d-1f9af-200d-27a1-fe0f",
-  "shape_score": 0.971,
-  "mirror_margin": -1.168,
-  "tone_err": 4.52,
-  "tone_runner_up": [
-   "1f469-1f3fd-200d-1f9af-200d-27a1-fe0f",
-   39.68
-  ],
-  "tone_rmse": 26.78,
-  "tone_changed": false
- },
- {
-  "i": 78,
-  "x": 1846.5,
-  "y": 731.5,
-  "glyph": "1f64a",
-  "shape_score": 0.985,
-  "mirror_margin": -0.011,
-  "tone_err": 4.99,
-  "tone_runner_up": null,
-  "tone_rmse": 13.79,
-  "tone_changed": false
- },
- {
-  "i": 79,
-  "x": 224.0,
-  "y": 747.0,
-  "glyph": "1f639",
-  "shape_score": 0.99,
-  "mirror_margin": -0.018,
-  "tone_err": 5.5,
-  "tone_runner_up": null,
-  "tone_rmse": 21.96,
-  "tone_changed": false
- },
- {
-  "i": 80,
-  "x": 753.0,
-  "y": 747.5,
-  "glyph": "1f9d1-1f3fc-200d-1f4bc",
-  "shape_score": 0.979,
-  "mirror_margin": -0.056,
-  "tone_err": 10.8,
-  "tone_runner_up": [
-   "1f9d1-200d-1f4bc",
-   38.44
-  ],
-  "tone_rmse": 35.05,
-  "tone_changed": false
- },
- {
-  "i": 81,
-  "x": 1565.5,
-  "y": 750.0,
-  "glyph": "1f473",
-  "shape_score": 0.982,
-  "mirror_margin": -0.014,
-  "tone_err": 5.8,
-  "tone_runner_up": [
-   "1f473-1f3fc",
-   14.94
-  ],
-  "tone_rmse": 11.75,
-  "tone_changed": true
- },
- {
-  "i": 82,
-  "x": 345.0,
-  "y": 755.0,
-  "glyph": "1f9d1-1f3fb-200d-1f3a4",
-  "shape_score": 0.977,
-  "mirror_margin": -0.354,
-  "tone_err": 6.71,
-  "tone_runner_up": [
-   "1f9d1-200d-1f3a4",
-   21.17
-  ],
-  "tone_rmse": 13.43,
-  "tone_changed": false
- },
- {
-  "i": 83,
-  "x": 1455.5,
-  "y": 760.0,
-  "glyph": "1f596-1f3fe",
-  "shape_score": 0.976,
-  "mirror_margin": -0.533,
-  "tone_err": 1.73,
-  "tone_runner_up": [
-   "1f596-1f3ff",
-   33.43
-  ],
-  "tone_rmse": 6.75,
-  "tone_changed": false
- },
- {
-  "i": 84,
-  "x": 562.0,
-  "y": 746.5,
-  "glyph": "1faf3",
-  "shape_score": 0.993,
-  "mirror_margin": -0.39,
-  "tone_err": 8.87,
-  "tone_runner_up": [
-   "1faf3-1f3fc",
-   18.56
-  ],
-  "tone_rmse": 9.06,
-  "tone_changed": false
- },
- {
-  "i": 85,
-  "x": 1667.0,
-  "y": 762.5,
-  "glyph": "1f473-200d-2640-fe0f",
-  "shape_score": 0.992,
-  "mirror_margin": -0.05,
-  "tone_err": 5.7,
-  "tone_runner_up": [
-   "1f473-1f3fc-200d-2640-fe0f",
-   19.93
-  ],
-  "tone_rmse": 15.0,
-  "tone_changed": true
- },
- {
-  "i": 86,
-  "x": 1076.0,
-  "y": 766.0,
-  "glyph": "1f475",
-  "shape_score": 0.976,
-  "mirror_margin": -0.003,
-  "tone_err": 6.22,
-  "tone_runner_up": [
-   "1f475-1f3fc",
-   24.06
-  ],
-  "tone_rmse": 16.12,
-  "tone_changed": false
- },
- {
-  "i": 87,
-  "x": 476.5,
-  "y": 779.0,
-  "glyph": "1f9d2-1f3ff",
-  "shape_score": 0.99,
-  "mirror_margin": -0.076,
-  "tone_err": 8.15,
-  "tone_runner_up": [
-   "1f9d2-1f3fe",
-   35.31
-  ],
-  "tone_rmse": 12.45,
-  "tone_changed": false
- },
- {
-  "i": 88,
-  "x": 1223.0,
-  "y": 800.0,
-  "glyph": "1f9d1-1f3ff-200d-1f9b0",
-  "shape_score": 0.99,
-  "mirror_margin": -0.023,
-  "tone_err": 5.88,
-  "tone_runner_up": [
-   "1f9d1-1f3fe-200d-1f9b0",
-   33.28
-  ],
-  "tone_rmse": 13.62,
-  "tone_changed": false
- },
- {
-  "i": 89,
-  "x": 862.0,
-  "y": 805.0,
-  "glyph": "1f469-1f3fc-200d-2696-fe0f",
-  "shape_score": 0.982,
-  "mirror_margin": -0.479,
-  "tone_err": 5.27,
-  "tone_runner_up": [
-   "1f469-200d-2696-fe0f",
-   30.25
-  ],
-  "tone_rmse": 13.27,
-  "tone_changed": false
- },
- {
-  "i": 90,
-  "x": 1322.5,
-  "y": 805.0,
-  "glyph": "1f469-1f3ff-200d-1f3eb",
-  "shape_score": 0.905,
-  "mirror_margin": -0.035,
-  "tone_err": 4.35,
-  "tone_runner_up": [
-   "1f469-1f3fe-200d-1f3eb",
-   31.83
-  ],
-  "tone_rmse": 29.94,
-  "tone_changed": false
- },
- {
-  "i": 91,
-  "x": 1755.0,
-  "y": 795.5,
-  "glyph": "1faf4-1f3ff",
-  "shape_score": 0.989,
-  "mirror_margin": -0.362,
-  "tone_err": 7.97,
-  "tone_runner_up": [
-   "1faf4-1f3fe",
-   43.61
-  ],
-  "tone_rmse": 10.41,
-  "tone_changed": false
- },
- {
-  "i": 92,
-  "x": 956.5,
-  "y": 818.0,
-  "glyph": "1f3cb-1f3fd-200d-2640-fe0f",
-  "shape_score": 0.978,
-  "mirror_margin": -0.056,
-  "tone_err": 9.58,
-  "tone_runner_up": [
-   "1f3cb-1f3fe-200d-2640-fe0f",
-   24.6
-  ],
-  "tone_rmse": 13.61,
-  "tone_changed": false
- },
- {
-  "i": 93,
-  "x": 270.5,
-  "y": 831.0,
-  "glyph": "1f9d1-1f3fb-200d-1f9b1",
-  "shape_score": 0.989,
-  "mirror_margin": -0.016,
-  "tone_err": 9.75,
-  "tone_runner_up": [
-   "1f9d1-1f3fd-200d-1f9b1",
-   64.27
-  ],
-  "tone_rmse": 23.47,
-  "tone_changed": false
- },
- {
-  "i": 94,
-  "x": 650.0,
-  "y": 834.0,
-  "glyph": "1faf5-1f3fd",
-  "shape_score": 0.985,
-  "mirror_margin": -0.37,
-  "tone_err": 1.74,
-  "tone_runner_up": [
-   "1faf5-1f3fe",
-   37.69
-  ],
-  "tone_rmse": 4.7,
-  "tone_changed": false
- },
- {
-  "i": 95,
-  "x": 399.0,
-  "y": 832.5,
-  "glyph": "1f932-1f3fb",
-  "shape_score": 0.986,
-  "mirror_margin": 0.0,
-  "tone_err": 10.35,
-  "tone_runner_up": [
-   "1f932",
-   18.36
-  ],
-  "tone_rmse": 10.5,
-  "tone_changed": false
- },
- {
-  "i": 96,
-  "x": 158.5,
-  "y": 841.5,
-  "glyph": "1f46f-200d-2640-fe0f",
-  "shape_score": 0.958,
-  "mirror_margin": -0.669,
-  "tone_err": 27.35,
-  "tone_runner_up": null,
-  "tone_rmse": 43.81,
-  "tone_changed": false
- },
- {
-  "i": 97,
-  "x": 1838.0,
-  "y": 841.5,
-  "glyph": "1f469-1f3ff-200d-2708-fe0f",
-  "shape_score": 0.993,
-  "mirror_margin": -0.073,
-  "tone_err": 6.53,
-  "tone_runner_up": [
-   "1f469-1f3fe-200d-2708-fe0f",
-   25.44
-  ],
-  "tone_rmse": 14.91,
-  "tone_changed": false
- },
- {
-  "i": 98,
-  "x": 759.0,
-  "y": 845.0,
-  "glyph": "1f64e-1f3fe",
-  "shape_score": 0.975,
-  "mirror_margin": -0.006,
-  "tone_err": 5.84,
-  "tone_runner_up": [
-   "1f64e-1f3ff",
-   21.85
-  ],
-  "tone_rmse": 11.5,
-  "tone_changed": false
- },
- {
-  "i": 99,
-  "x": 1411.5,
-  "y": 847.0,
-  "glyph": "1f609",
-  "shape_score": 0.99,
-  "mirror_margin": -0.031,
-  "tone_err": 8.62,
-  "tone_runner_up": null,
-  "tone_rmse": 11.88,
-  "tone_changed": false
- },
- {
-  "i": 100,
-  "x": 1121.5,
-  "y": 853.0,
-  "glyph": "1f64b-1f3fe",
-  "shape_score": 0.975,
-  "mirror_margin": -0.538,
-  "tone_err": 4.35,
-  "tone_runner_up": [
-   "1f64b-1f3ff",
-   20.72
-  ],
-  "tone_rmse": 9.56,
-  "tone_changed": false
- },
- {
-  "i": 101,
-  "x": 1535.5,
-  "y": 842.0,
-  "glyph": "1f6a3-1f3fc-200d-2640-fe0f",
-  "shape_score": 0.935,
-  "mirror_margin": -0.257,
-  "tone_err": 6.32,
-  "tone_runner_up": [
-   "1f6a3-200d-2640-fe0f",
-   16.2
-  ],
-  "tone_rmse": 15.98,
-  "tone_changed": true
- },
- {
-  "i": 102,
-  "x": 1641.5,
-  "y": 859.0,
-  "glyph": "1f92e",
-  "shape_score": 0.964,
-  "mirror_margin": -0.086,
-  "tone_err": 5.36,
-  "tone_runner_up": null,
-  "tone_rmse": 18.53,
-  "tone_changed": false
- },
- {
-  "i": 103,
-  "x": 559.0,
-  "y": 859.0,
-  "glyph": "1f469-1f3fc-200d-1f52c",
-  "shape_score": 0.975,
-  "mirror_margin": -0.18,
-  "tone_err": 5.86,
-  "tone_runner_up": [
-   "1f469-200d-1f52c",
-   23.43
-  ],
-  "tone_rmse": 13.2,
-  "tone_changed": false
- },
- {
-  "i": 104,
-  "x": 1733.0,
-  "y": 896.0,
-  "glyph": "1f642",
-  "shape_score": 0.992,
-  "mirror_margin": -0.001,
-  "tone_err": 8.91,
-  "tone_runner_up": null,
-  "tone_rmse": 10.24,
-  "tone_changed": false
- },
- {
-  "i": 105,
-  "x": 1911.5,
-  "y": 900.0,
-  "glyph": "1f9dd-1f3fd-200d-2640-fe0f",
-  "shape_score": 0.987,
-  "mirror_margin": -0.004,
-  "tone_err": 5.12,
-  "tone_runner_up": [
-   "1f9dd-1f3fe-200d-2640-fe0f",
-   23.01
-  ],
-  "tone_rmse": 11.35,
-  "tone_changed": false
- },
- {
-  "i": 106,
-  "x": 1237.0,
-  "y": 902.0,
-  "glyph": "1f468-1f3fe-200d-1f9b2",
-  "shape_score": 0.988,
-  "mirror_margin": 0.012,
-  "tone_err": 2.86,
-  "tone_runner_up": [
-   "1f468-1f3ff-200d-1f9b2",
-   32.07
-  ],
-  "tone_rmse": 12.22,
-  "tone_changed": false
- },
- {
-  "i": 107,
-  "x": 474.5,
-  "y": 904.0,
-  "glyph": "1f3c3-1f3fd-200d-27a1-fe0f",
-  "shape_score": 0.988,
-  "mirror_margin": 0.522,
-  "tone_err": 9.05,
-  "tone_runner_up": [
-   "1f3c3-1f3fe-200d-27a1-fe0f",
-   32.79
-  ],
-  "tone_rmse": 13.79,
-  "tone_changed": false
- },
- {
-  "i": 108,
-  "x": 1024.5,
-  "y": 900.5,
-  "glyph": "1f443",
-  "shape_score": 0.989,
-  "mirror_margin": 0.0,
-  "tone_err": 4.37,
-  "tone_runner_up": [
-   "1f443-1f3fb",
-   13.72
-  ],
-  "tone_rmse": 10.15,
-  "tone_changed": true
- },
- {
-  "i": 109,
-  "x": 1137.0,
-  "y": 1109.5,
-  "glyph": "1f9d1-1f3fc-200d-1f692",
-  "shape_score": 0.964,
-  "mirror_margin": -0.379,
-  "tone_err": 3.55,
-  "tone_runner_up": [
-   "1f9d1-1f3fd-200d-1f692",
-   72.84
-  ],
-  "tone_rmse": 72.67,
-  "tone_changed": true
- },
- {
-  "i": 110,
-  "x": 1028.5,
-  "y": 1146.5,
-  "glyph": "1f469-1f3fc-200d-1f37c",
-  "shape_score": 0.742,
-  "mirror_margin": -0.066,
-  "tone_err": 14.11,
-  "tone_runner_up": [
-   "1f469-200d-1f37c",
-   67.63
-  ],
-  "tone_rmse": 65.96,
-  "tone_changed": false
- },
- {
-  "i": 111,
-  "x": 1486.0,
-  "y": 918.5,
-  "glyph": "1f90c-1f3fe",
-  "shape_score": 0.954,
-  "mirror_margin": -1.068,
-  "tone_err": 2.83,
-  "tone_runner_up": [
-   "1f90c-1f3ff",
-   31.52
-  ],
-  "tone_rmse": 6.31,
-  "tone_changed": false
- },
- {
-  "i": 112,
-  "x": 214.5,
-  "y": 920.0,
-  "glyph": "1f468-200d-1f3a4",
-  "shape_score": 0.983,
-  "mirror_margin": -0.28,
-  "tone_err": 4.17,
-  "tone_runner_up": [
-   "1f468-1f3fc-200d-1f3a4",
-   16.53
-  ],
-  "tone_rmse": 13.28,
-  "tone_changed": false
- },
- {
-  "i": 113,
-  "x": 331.0,
-  "y": 910.0,
-  "glyph": "1f90f-1f3fb",
-  "shape_score": 0.979,
-  "mirror_margin": -0.548,
-  "tone_err": 10.99,
-  "tone_runner_up": [
-   "1f90f-1f3fc",
-   40.54
-  ],
-  "tone_rmse": 14.31,
-  "tone_changed": false
- },
- {
-  "i": 114,
-  "x": 914.5,
-  "y": 925.0,
-  "glyph": "1f645-1f3fc-200d-2640-fe0f",
-  "shape_score": 0.987,
-  "mirror_margin": -0.032,
-  "tone_err": 6.98,
-  "tone_runner_up": [
-   "1f645-200d-2640-fe0f",
-   18.16
-  ],
-  "tone_rmse": 12.99,
-  "tone_changed": false
- },
- {
-  "i": 115,
-  "x": 1340.5,
-  "y": 925.0,
-  "glyph": "1f469-200d-1f527",
-  "shape_score": 0.977,
-  "mirror_margin": -0.338,
-  "tone_err": 3.95,
-  "tone_runner_up": [
-   "1f469-1f3fc-200d-1f527",
-   23.97
-  ],
-  "tone_rmse": 14.54,
-  "tone_changed": false
- },
- {
-  "i": 116,
-  "x": 678.5,
-  "y": 931.0,
-  "glyph": "1f64d-200d-2642-fe0f",
-  "shape_score": 0.968,
-  "mirror_margin": 0.002,
-  "tone_err": 5.36,
-  "tone_runner_up": [
-   "1f64d-1f3fc-200d-2642-fe0f",
-   26.4
-  ],
-  "tone_rmse": 21.89,
-  "tone_changed": false
- },
- {
-  "i": 117,
-  "x": 812.0,
-  "y": 934.0,
-  "glyph": "1f6b5-1f3fb",
-  "shape_score": 0.959,
-  "mirror_margin": -0.376,
-  "tone_err": 3.28,
-  "tone_runner_up": [
-   "1f6b5-1f3fc",
-   19.11
-  ],
-  "tone_rmse": 17.63,
-  "tone_changed": false
- },
- {
-  "i": 118,
-  "x": 1603.5,
-  "y": 944.0,
-  "glyph": "1f3cc-1f3fc",
-  "shape_score": 0.964,
-  "mirror_margin": -1.075,
-  "tone_err": 3.12,
-  "tone_runner_up": [
-   "1f3cc-1f3fd",
-   42.33
-  ],
-  "tone_rmse": 11.99,
-  "tone_changed": false
- },
- {
-  "i": 119,
-  "x": 1812.5,
-  "y": 948.0,
-  "glyph": "1f497",
-  "shape_score": 0.992,
-  "mirror_margin": -0.013,
-  "tone_err": 3.29,
-  "tone_runner_up": null,
-  "tone_rmse": 10.01,
-  "tone_changed": false
- },
- {
-  "i": 120,
-  "x": 581.0,
-  "y": 962.0,
-  "glyph": "1f645-1f3fe-200d-2642-fe0f",
-  "shape_score": 0.981,
-  "mirror_margin": -0.05,
-  "tone_err": 4.38,
-  "tone_runner_up": [
-   "1f645-1f3ff-200d-2642-fe0f",
-   20.79
-  ],
-  "tone_rmse": 12.58,
-  "tone_changed": false
- },
- {
-  "i": 121,
-  "x": 409.5,
-  "y": 968.0,
-  "glyph": "1f468-1f3fc-200d-1f37c",
-  "shape_score": 0.963,
-  "mirror_margin": -0.175,
-  "tone_err": 4.76,
-  "tone_runner_up": [
-   "1f468-200d-1f37c",
-   23.07
-  ],
-  "tone_rmse": 17.92,
-  "tone_changed": false
- },
- {
-  "i": 122,
-  "x": 1412.0,
-  "y": 985.0,
-  "glyph": "1f9d7-1f3ff-200d-2640-fe0f",
-  "shape_score": 0.964,
-  "mirror_margin": -1.015,
-  "tone_err": 3.39,
-  "tone_runner_up": [
-   "1f9d7-1f3fe-200d-2640-fe0f",
-   17.07
-  ],
-  "tone_rmse": 8.66,
-  "tone_changed": false
- },
- {
-  "i": 123,
-  "x": 1696.5,
-  "y": 987.0,
-  "glyph": "1f469-200d-1f3a4",
-  "shape_score": 0.985,
-  "mirror_margin": -0.424,
-  "tone_err": 4.54,
-  "tone_runner_up": [
-   "1f469-1f3fc-200d-1f3a4",
-   18.01
-  ],
-  "tone_rmse": 15.11,
-  "tone_changed": true
- },
- {
-  "i": 124,
-  "x": 278.0,
-  "y": 989.0,
-  "glyph": "1f9b5",
-  "shape_score": 0.994,
-  "mirror_margin": -0.631,
-  "tone_err": 10.65,
-  "tone_runner_up": [
-   "1f9b5-1f3fc",
-   17.56
-  ],
-  "tone_rmse": 7.31,
-  "tone_changed": false
- },
- {
-  "i": 125,
-  "x": 1191.5,
-  "y": 989.5,
-  "glyph": "1f468-1f3fb-200d-1f9af",
-  "shape_score": 0.974,
-  "mirror_margin": -1.159,
-  "tone_err": 5.24,
-  "tone_runner_up": [
-   "1f468-1f3fd-200d-1f9af",
-   36.13
-  ],
-  "tone_rmse": 18.75,
-  "tone_changed": false
- },
- {
-  "i": 126,
-  "x": 742.0,
-  "y": 1006.0,
-  "glyph": "1f44b-1f3fe",
-  "shape_score": 0.978,
-  "mirror_margin": -0.661,
-  "tone_err": 1.24,
-  "tone_runner_up": [
-   "1f44b-1f3ff",
-   33.14
-  ],
-  "tone_rmse": 6.53,
-  "tone_changed": false
- },
- {
-  "i": 127,
-  "x": 1882.0,
-  "y": 1012.5,
-  "glyph": "1f481",
-  "shape_score": 0.984,
-  "mirror_margin": -0.797,
-  "tone_err": 5.69,
-  "tone_runner_up": [
-   "1f481-1f3fc",
-   13.37
-  ],
-  "tone_rmse": 10.91,
-  "tone_changed": false
- },
- {
-  "i": 128,
-  "x": 1540.0,
-  "y": 1016.0,
-  "glyph": "26f9-1f3fc",
-  "shape_score": 0.976,
-  "mirror_margin": -0.676,
-  "tone_err": 3.68,
-  "tone_runner_up": [
-   "26f9-1f3fb",
-   37.13
-  ],
-  "tone_rmse": 20.2,
-  "tone_changed": false
- },
- {
-  "i": 129,
-  "x": 505.0,
-  "y": 1019.0,
-  "glyph": "1f9dc-1f3fe-200d-2640-fe0f",
-  "shape_score": 0.966,
-  "mirror_margin": -0.799,
-  "tone_err": 5.65,
-  "tone_runner_up": [
-   "1f9dc-1f3ff-200d-2640-fe0f",
-   22.69
-  ],
-  "tone_rmse": 17.53,
-  "tone_changed": true
- },
- {
-  "i": 130,
-  "x": 166.0,
-  "y": 1022.0,
-  "glyph": "1f9b8-200d-2642-fe0f",
-  "shape_score": 0.974,
-  "mirror_margin": -0.039,
-  "tone_err": 4.62,
-  "tone_runner_up": [
-   "1f9b8-1f3fc-200d-2642-fe0f",
-   21.67
-  ],
-  "tone_rmse": 18.67,
-  "tone_changed": false
- },
- {
-  "i": 131,
-  "x": 1306.5,
-  "y": 1028.0,
-  "glyph": "1f487-1f3fc-200d-2640-fe0f",
-  "shape_score": 0.967,
-  "mirror_margin": -0.956,
-  "tone_err": 6.67,
-  "tone_runner_up": [
-   "1f487-200d-2640-fe0f",
-   24.14
-  ],
-  "tone_rmse": 12.52,
-  "tone_changed": false
- },
- {
-  "i": 132,
-  "x": 857.0,
-  "y": 1045.0,
-  "glyph": "1f646-1f3fb-200d-2642-fe0f",
-  "shape_score": 0.943,
-  "mirror_margin": -0.02,
-  "tone_err": 6.28,
-  "tone_runner_up": [
-   "1f646-1f3fd-200d-2642-fe0f",
-   46.91
-  ],
-  "tone_rmse": 25.67,
-  "tone_changed": false
- },
- {
-  "i": 133,
-  "x": 1771.5,
-  "y": 1045.0,
-  "glyph": "2639-fe0f",
-  "shape_score": 0.994,
-  "mirror_margin": -0.002,
-  "tone_err": 8.6,
-  "tone_runner_up": null,
-  "tone_rmse": 9.66,
-  "tone_changed": false
- },
- {
-  "i": 134,
-  "x": 357.0,
-  "y": 1047.0,
-  "glyph": "1f3cc-1f3fb-200d-2642-fe0f",
-  "shape_score": 0.976,
-  "mirror_margin": -1.072,
-  "tone_err": 4.14,
-  "tone_runner_up": [
-   "1f3cc-1f3fc-200d-2642-fe0f",
-   19.2
-  ],
-  "tone_rmse": 13.29,
-  "tone_changed": false
- },
- {
-  "i": 135,
-  "x": 634.5,
-  "y": 1050.5,
-  "glyph": "1f469-200d-1f692",
-  "shape_score": 0.99,
-  "mirror_margin": -0.441,
-  "tone_err": 3.53,
-  "tone_runner_up": [
-   "1f469-1f3fc-200d-1f692",
-   17.96
-  ],
-  "tone_rmse": 12.43,
-  "tone_changed": false
- },
- {
-  "i": 136,
-  "x": 1635.5,
-  "y": 1066.0,
-  "glyph": "1f647-1f3fd-200d-2640-fe0f",
-  "shape_score": 0.976,
-  "mirror_margin": -0.042,
-  "tone_err": 4.1,
-  "tone_runner_up": [
-   "1f647-1f3fe-200d-2640-fe0f",
-   29.49
-  ],
-  "tone_rmse": 13.56,
-  "tone_changed": false
- },
- {
-  "i": 137,
-  "x": 1466.5,
-  "y": 1072.0,
-  "glyph": "1f470-1f3fb-200d-2640-fe0f",
-  "shape_score": 0.961,
-  "mirror_margin": -0.015,
-  "tone_err": 7.16,
-  "tone_runner_up": [
-   "1f470-1f3fd-200d-2640-fe0f",
-   58.64
-  ],
-  "tone_rmse": 26.4,
-  "tone_changed": false
- },
- {
-  "i": 138,
-  "x": 235.5,
-  "y": 1087.0,
-  "glyph": "1f919-1f3fd",
-  "shape_score": 0.982,
-  "mirror_margin": -0.46,
-  "tone_err": 3.02,
-  "tone_runner_up": [
-   "1f919-1f3fe",
-   42.58
-  ],
-  "tone_rmse": 4.83,
-  "tone_changed": false
- },
- {
-  "i": 139,
-  "x": 447.5,
-  "y": 1090.0,
-  "glyph": "1f477-1f3ff-200d-2642-fe0f",
-  "shape_score": 0.995,
-  "mirror_margin": 0.005,
-  "tone_err": 6.34,
-  "tone_runner_up": [
-   "1f477-1f3fe-200d-2642-fe0f",
-   26.97
-  ],
-  "tone_rmse": 9.72,
-  "tone_changed": false
- },
- {
-  "i": 140,
-  "x": 1235.0,
-  "y": 1099.5,
-  "glyph": "261d-1f3ff",
-  "shape_score": 0.991,
-  "mirror_margin": -0.252,
-  "tone_err": 7.08,
-  "tone_runner_up": [
-   "261d-1f3fe",
-   44.0
-  ],
-  "tone_rmse": 9.0,
-  "tone_changed": false
- },
- {
-  "i": 141,
-  "x": 1370.0,
-  "y": 1104.5,
-  "glyph": "1f44d-1f3fc",
-  "shape_score": 0.975,
-  "mirror_margin": -0.205,
-  "tone_err": 6.18,
-  "tone_runner_up": [
-   "1f44d",
-   10.19
-  ],
-  "tone_rmse": 6.56,
-  "tone_changed": false
- },
- {
-  "i": 142,
-  "x": 710.0,
-  "y": 1110.0,
-  "glyph": "1f4a4",
-  "shape_score": 0.966,
-  "mirror_margin": -1.002,
-  "tone_err": 6.69,
-  "tone_runner_up": null,
-  "tone_rmse": 8.12,
-  "tone_changed": false
- },
- {
-  "i": 143,
-  "x": 559.5,
-  "y": 1115.0,
-  "glyph": "1f3cb-1f3fe",
-  "shape_score": 0.975,
-  "mirror_margin": -0.001,
-  "tone_err": 7.15,
-  "tone_runner_up": [
-   "1f3cb-1f3ff",
-   19.77
-  ],
-  "tone_rmse": 12.92,
-  "tone_changed": false
- },
- {
-  "i": 144,
-  "x": 1836.0,
-  "y": 1113.5,
-  "glyph": "1faf6-1f3fc",
-  "shape_score": 0.995,
-  "mirror_margin": 0.0,
-  "tone_err": 8.6,
-  "tone_runner_up": [
-   "1faf6",
-   11.09
-  ],
-  "tone_rmse": 8.98,
-  "tone_changed": false
- },
- {
-  "i": 145,
-  "x": 1716.0,
-  "y": 1130.5,
-  "glyph": "1f469-1f3fd-200d-1f9b3",
-  "shape_score": 0.975,
-  "mirror_margin": -0.077,
-  "tone_err": 4.91,
-  "tone_runner_up": [
-   "1f469-1f3fe-200d-1f9b3",
-   25.43
-  ],
-  "tone_rmse": 11.79,
-  "tone_changed": false
- },
- {
-  "i": 146,
-  "x": 1570.5,
-  "y": 1131.0,
-  "glyph": "1f62a",
-  "shape_score": 0.993,
-  "mirror_margin": -0.089,
-  "tone_err": 8.2,
-  "tone_runner_up": null,
-  "tone_rmse": 10.38,
-  "tone_changed": false
- },
- {
-  "i": 147,
-  "x": 808.5,
-  "y": 1134.0,
-  "glyph": "1f6b6-1f3ff-200d-2640-fe0f-200d-27a1-fe0f",
-  "shape_score": 0.971,
-  "mirror_margin": -0.429,
-  "tone_err": 6.45,
-  "tone_runner_up": [
-   "1f6b6-1f3fe-200d-2640-fe0f-200d-27a1-fe0f",
-   24.91
-  ],
-  "tone_rmse": 14.28,
-  "tone_changed": false
- },
- {
-  "i": 148,
-  "x": 136.0,
-  "y": 1135.0,
-  "glyph": "1f977-1f3fc",
-  "shape_score": 0.984,
-  "mirror_margin": -0.16,
-  "tone_err": 9.2,
-  "tone_runner_up": [
-   "1f977",
-   11.27
-  ],
-  "tone_rmse": 11.16,
-  "tone_changed": false
- },
- {
-  "i": 149,
-  "x": 316.5,
-  "y": 1139.5,
-  "glyph": "1f469-1f3ff-200d-1f9bc-200d-27a1-fe0f",
-  "shape_score": 0.948,
-  "mirror_margin": 0.578,
-  "tone_err": 8.73,
-  "tone_runner_up": [
-   "1f469-1f3fe-200d-1f9bc-200d-27a1-fe0f",
-   18.71
-  ],
-  "tone_rmse": 13.14,
-  "tone_changed": false
- },
- {
-  "i": 150,
-  "x": 408.0,
-  "y": 1176.0,
-  "glyph": "1f483-1f3ff",
-  "shape_score": 0.957,
-  "mirror_margin": -0.542,
-  "tone_err": 11.41,
-  "tone_runner_up": [
-   "1f483-1f3fe",
-   21.3
-  ],
-  "tone_rmse": 11.82,
-  "tone_changed": false
- },
- {
-  "i": 151,
-  "x": 1489.5,
-  "y": 1176.0,
-  "glyph": "270c-1f3ff",
-  "shape_score": 0.985,
-  "mirror_margin": -0.348,
-  "tone_err": 7.5,
-  "tone_runner_up": [
-   "270c-1f3fe",
-   43.33
-  ],
-  "tone_rmse": 9.14,
-  "tone_changed": false
- },
- {
-  "i": 152,
-  "x": 926.0,
-  "y": 1182.0,
-  "glyph": "1f646-1f3fe-200d-2640-fe0f",
-  "shape_score": 0.953,
-  "mirror_margin": -0.043,
-  "tone_err": 6.73,
-  "tone_runner_up": [
-   "1f646-1f3ff-200d-2640-fe0f",
-   17.1
-  ],
-  "tone_rmse": 15.58,
-  "tone_changed": true
- },
- {
-  "i": 153,
-  "x": 1289.0,
-  "y": 1191.5,
-  "glyph": "1f64e-200d-2642-fe0f",
-  "shape_score": 0.99,
-  "mirror_margin": -0.001,
-  "tone_err": 4.77,
-  "tone_runner_up": [
-   "1f64e-1f3fc-200d-2642-fe0f",
-   18.75
-  ],
-  "tone_rmse": 10.46,
-  "tone_changed": false
- },
- {
-  "i": 154,
-  "x": 636.0,
-  "y": 1190.5,
-  "glyph": "1f937-1f3fd",
-  "shape_score": 0.988,
-  "mirror_margin": -0.194,
-  "tone_err": 4.76,
-  "tone_runner_up": [
-   "1f937-1f3fe",
-   22.56
-  ],
-  "tone_rmse": 10.09,
-  "tone_changed": false
- },
- {
-  "i": 155,
-  "x": 513.0,
-  "y": 1195.0,
-  "glyph": "1f9d1-1f3fe-200d-1f393",
-  "shape_score": 0.977,
-  "mirror_margin": -0.211,
-  "tone_err": 6.63,
-  "tone_runner_up": [
-   "1f9d1-1f3ff-200d-1f393",
-   21.27
-  ],
-  "tone_rmse": 14.26,
-  "tone_changed": false
- },
- {
-  "i": 156,
-  "x": 210.0,
-  "y": 1194.0,
-  "glyph": "1faf1-1f3ff",
-  "shape_score": 0.986,
-  "mirror_margin": -0.327,
-  "tone_err": 6.58,
-  "tone_runner_up": [
-   "1faf1-1f3fe",
-   45.24
-  ],
-  "tone_rmse": 10.46,
-  "tone_changed": false
- },
- {
-  "i": 157,
-  "x": 1398.0,
-  "y": 1200.0,
-  "glyph": "1f511",
-  "shape_score": 0.994,
-  "mirror_margin": -1.038,
-  "tone_err": 5.72,
-  "tone_runner_up": null,
-  "tone_rmse": 7.5,
-  "tone_changed": false
- },
- {
-  "i": 158,
-  "x": 1648.0,
-  "y": 1201.0,
-  "glyph": "1f9d4-1f3ff",
-  "shape_score": 0.977,
-  "mirror_margin": -0.031,
-  "tone_err": 8.17,
-  "tone_runner_up": [
-   "1f9d4-1f3fe",
-   33.35
-  ],
-  "tone_rmse": 14.94,
-  "tone_changed": false
- },
- {
-  "i": 159,
-  "x": 1888.0,
-  "y": 1193.0,
-  "glyph": "1f441-fe0f",
-  "shape_score": 0.979,
-  "mirror_margin": -0.091,
-  "tone_err": 4.23,
-  "tone_runner_up": null,
-  "tone_rmse": 20.56,
-  "tone_changed": false
- },
- {
-  "i": 160,
-  "x": 1789.0,
-  "y": 1205.0,
-  "glyph": "1faf8",
-  "shape_score": 0.997,
-  "mirror_margin": -0.718,
-  "tone_err": 6.32,
-  "tone_runner_up": [
-   "1faf8-1f3fc",
-   9.72
-  ],
-  "tone_rmse": 6.35,
-  "tone_changed": true
- },
- {
-  "i": 161,
-  "x": 1089.0,
-  "y": 1216.0,
-  "glyph": "1f46f",
-  "shape_score": 0.917,
-  "mirror_margin": -0.28,
-  "tone_err": 35.65,
-  "tone_runner_up": null,
-  "tone_rmse": 59.13,
-  "tone_changed": false
- },
- {
-  "i": 162,
-  "x": 728.0,
-  "y": 1230.0,
-  "glyph": "1f9cf-1f3fe-200d-2642-fe0f",
-  "shape_score": 0.953,
-  "mirror_margin": -1.335,
-  "tone_err": 5.56,
-  "tone_runner_up": [
-   "1f9cf-1f3ff-200d-2642-fe0f",
-   25.81
-  ],
-  "tone_rmse": 13.68,
-  "tone_changed": false
- },
- {
-  "i": 163,
-  "x": 823.0,
-  "y": 1234.0,
-  "glyph": "1f9b6-1f3fe",
-  "shape_score": 0.993,
-  "mirror_margin": -0.134,
-  "tone_err": 1.88,
-  "tone_runner_up": [
-   "1f9b6-1f3ff",
-   29.32
-  ],
-  "tone_rmse": 8.2,
-  "tone_changed": false
- },
- {
-  "i": 164,
-  "x": 292.0,
-  "y": 1238.0,
-  "glyph": "1f91f-1f3fb",
-  "shape_score": 0.991,
-  "mirror_margin": -0.738,
-  "tone_err": 11.89,
-  "tone_runner_up": [
-   "1f91f",
-   30.16
-  ],
-  "tone_rmse": 11.12,
-  "tone_changed": false
- },
- {
-  "i": 165,
-  "x": 1190.0,
-  "y": 1231.0,
-  "glyph": "1f449-1f3fb",
-  "shape_score": 0.987,
-  "mirror_margin": 0.622,
-  "tone_err": 12.69,
-  "tone_runner_up": [
-   "1f449",
-   24.6
-  ],
-  "tone_rmse": 12.73,
-  "tone_changed": false
- },
- {
-  "i": 166,
-  "x": 1570.5,
-  "y": 1257.0,
-  "glyph": "1f469-1f3fb-200d-2695-fe0f",
-  "shape_score": 0.983,
-  "mirror_margin": -0.026,
-  "tone_err": 8.01,
-  "tone_runner_up": [
-   "1f469-1f3fd-200d-2695-fe0f",
-   52.99
-  ],
-  "tone_rmse": 22.97,
-  "tone_changed": false
- },
- {
-  "i": 167,
-  "x": 383.5,
-  "y": 1271.0,
-  "glyph": "1f628",
-  "shape_score": 0.993,
-  "mirror_margin": -0.001,
-  "tone_err": 6.29,
-  "tone_runner_up": null,
-  "tone_rmse": 8.7,
-  "tone_changed": false
- },
- {
-  "i": 168,
-  "x": 970.0,
-  "y": 1272.0,
-  "glyph": "1f478-1f3fb",
-  "shape_score": 0.938,
-  "mirror_margin": -0.027,
-  "tone_err": 5.91,
-  "tone_runner_up": [
-   "1f478-1f3fd",
-   52.95
-  ],
-  "tone_rmse": 24.5,
-  "tone_changed": false
- },
- {
-  "i": 169,
-  "x": 595.0,
-  "y": 1275.0,
-  "glyph": "1f468-1f3fc-200d-1f3a8",
-  "shape_score": 0.972,
-  "mirror_margin": -0.275,
-  "tone_err": 4.44,
-  "tone_runner_up": [
-   "1f468-200d-1f3a8",
-   19.13
-  ],
-  "tone_rmse": 15.12,
-  "tone_changed": true
- },
- {
-  "i": 170,
-  "x": 1706.0,
-  "y": 1280.5,
-  "glyph": "1f935-1f3fe-200d-2642-fe0f",
-  "shape_score": 0.992,
-  "mirror_margin": -0.014,
-  "tone_err": 5.6,
-  "tone_runner_up": [
-   "1f935-1f3ff-200d-2642-fe0f",
-   28.65
-  ],
-  "tone_rmse": 22.72,
-  "tone_changed": false
- },
- {
-  "i": 171,
-  "x": 483.5,
-  "y": 1283.0,
-  "glyph": "1f470-1f3fe-200d-2642-fe0f",
-  "shape_score": 0.983,
-  "mirror_margin": -0.003,
-  "tone_err": 5.97,
-  "tone_runner_up": [
-   "1f470-1f3ff-200d-2642-fe0f",
-   23.95
-  ],
-  "tone_rmse": 14.28,
-  "tone_changed": false
- },
- {
-  "i": 172,
-  "x": 1826.0,
-  "y": 1287.0,
-  "glyph": "1f575-1f3fe-200d-2642-fe0f",
-  "shape_score": 0.994,
-  "mirror_margin": -0.326,
-  "tone_err": 5.73,
-  "tone_runner_up": [
-   "1f575-1f3ff-200d-2642-fe0f",
-   20.53
-  ],
-  "tone_rmse": 15.88,
-  "tone_changed": true
- },
- {
-  "i": 173,
-  "x": 1295.5,
-  "y": 1289.5,
-  "glyph": "1f469-1f3ff-200d-1f4bc",
-  "shape_score": 0.948,
-  "mirror_margin": -0.006,
-  "tone_err": 8.91,
-  "tone_runner_up": [
-   "1f469-1f3fe-200d-1f4bc",
-   28.91
-  ],
-  "tone_rmse": 15.55,
-  "tone_changed": false
- },
- {
-  "i": 174,
-  "x": 1484.5,
-  "y": 1291.0,
-  "glyph": "1f930-1f3fc",
-  "shape_score": 0.983,
-  "mirror_margin": -0.131,
-  "tone_err": 2.8,
-  "tone_runner_up": [
-   "1f930",
-   22.6
-  ],
-  "tone_rmse": 15.4,
-  "tone_changed": false
- },
- {
-  "i": 175,
-  "x": 1393.5,
-  "y": 1303.0,
-  "glyph": "1f934-1f3fd",
-  "shape_score": 0.983,
-  "mirror_margin": -0.019,
-  "tone_err": 2.25,
-  "tone_runner_up": [
-   "1f934-1f3fe",
-   28.65
-  ],
-  "tone_rmse": 15.6,
-  "tone_changed": false
- },
- {
-  "i": 176,
-  "x": 201.5,
-  "y": 1305.5,
-  "glyph": "1f979",
-  "shape_score": 0.996,
-  "mirror_margin": -0.045,
-  "tone_err": 5.48,
-  "tone_runner_up": null,
-  "tone_rmse": 10.61,
-  "tone_changed": false
- },
- {
-  "i": 177,
-  "x": 1062.5,
-  "y": 1322.0,
-  "glyph": "1f468-1f3fe-200d-2695-fe0f",
-  "shape_score": 0.964,
-  "mirror_margin": -0.025,
-  "tone_err": 5.12,
-  "tone_runner_up": [
-   "1f468-1f3ff-200d-2695-fe0f",
-   23.47
-  ],
-  "tone_rmse": 15.53,
-  "tone_changed": false
- },
- {
-  "i": 178,
-  "x": 690.5,
-  "y": 1325.5,
-  "glyph": "1f6b6-1f3fd-200d-27a1-fe0f",
-  "shape_score": 0.971,
-  "mirror_margin": -0.354,
-  "tone_err": 6.15,
-  "tone_runner_up": [
-   "1f6b6-1f3fe-200d-27a1-fe0f",
-   28.72
-  ],
-  "tone_rmse": 20.54,
-  "tone_changed": false
- },
- {
-  "i": 179,
-  "x": 886.5,
-  "y": 1326.5,
-  "glyph": "26f9-1f3fb-200d-2640-fe0f",
-  "shape_score": 0.995,
-  "mirror_margin": -0.705,
-  "tone_err": 4.81,
-  "tone_runner_up": [
-   "26f9-1f3fc-200d-2640-fe0f",
-   38.19
-  ],
-  "tone_rmse": 24.89,
-  "tone_changed": false
- },
- {
-  "i": 180,
-  "x": 1176.0,
-  "y": 1329.0,
-  "glyph": "1f926-1f3fc-200d-2640-fe0f",
-  "shape_score": 0.981,
-  "mirror_margin": -0.062,
-  "tone_err": 5.43,
-  "tone_runner_up": [
-   "1f926-200d-2640-fe0f",
-   22.93
-  ],
-  "tone_rmse": 13.55,
-  "tone_changed": false
- },
- {
-  "i": 181,
-  "x": 1626.0,
-  "y": 1339.5,
-  "glyph": "270d-fe0f",
-  "shape_score": 0.994,
-  "mirror_margin": -0.304,
-  "tone_err": 7.87,
-  "tone_runner_up": null,
-  "tone_rmse": 11.86,
-  "tone_changed": false
- },
- {
-  "i": 182,
-  "x": 274.0,
-  "y": 1346.0,
-  "glyph": "1faf7-1f3fe",
-  "shape_score": 0.995,
-  "mirror_margin": -0.694,
-  "tone_err": 4.34,
-  "tone_runner_up": [
-   "1faf7-1f3ff",
-   25.54
-  ],
-  "tone_rmse": 9.0,
-  "tone_changed": false
- },
- {
-  "i": 183,
-  "x": 789.0,
-  "y": 1344.5,
-  "glyph": "1f9d1-1f3ff-200d-1f9bd-200d-27a1-fe0f",
-  "shape_score": 0.957,
-  "mirror_margin": 0.657,
-  "tone_err": 10.38,
-  "tone_runner_up": [
-   "1f9d1-1f3fe-200d-1f9bd-200d-27a1-fe0f",
-   25.08
-  ],
-  "tone_rmse": 19.78,
-  "tone_changed": false
- },
- {
-  "i": 184,
-  "x": 1747.0,
-  "y": 1366.0,
-  "glyph": "1f469-1f3fc-200d-1f9b1",
-  "shape_score": 0.963,
-  "mirror_margin": -0.058,
-  "tone_err": 4.37,
-  "tone_runner_up": [
-   "1f469-200d-1f9b1",
-   19.76
-  ],
-  "tone_rmse": 9.79,
-  "tone_changed": false
- },
- {
-  "i": 185,
-  "x": 379.0,
-  "y": 1370.0,
-  "glyph": "1f3c3-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
-  "shape_score": 0.968,
-  "mirror_margin": -0.529,
-  "tone_err": 5.43,
-  "tone_runner_up": [
-   "1f3c3-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
-   29.48
-  ],
-  "tone_rmse": 11.97,
-  "tone_changed": false
- },
- {
-  "i": 186,
-  "x": 579.5,
-  "y": 1367.5,
-  "glyph": "1f469-1f3fd-200d-1f9bd-200d-27a1-fe0f",
-  "shape_score": 0.988,
-  "mirror_margin": -0.592,
-  "tone_err": 6.52,
-  "tone_runner_up": [
-   "1f469-1f3fe-200d-1f9bd-200d-27a1-fe0f",
-   18.98
-  ],
-  "tone_rmse": 11.65,
-  "tone_changed": true
- },
- {
-  "i": 187,
-  "x": 475.0,
-  "y": 1378.5,
-  "glyph": "1f9b9-1f3fe-200d-2640-fe0f",
-  "shape_score": 0.96,
-  "mirror_margin": -0.104,
-  "tone_err": 5.76,
-  "tone_runner_up": [
-   "1f9b9-1f3ff-200d-2640-fe0f",
-   14.96
-  ],
-  "tone_rmse": 13.76,
-  "tone_changed": true
- },
- {
-  "i": 188,
-  "x": 1266.0,
-  "y": 1384.0,
-  "glyph": "1f385-1f3fb",
-  "shape_score": 0.985,
-  "mirror_margin": -0.133,
-  "tone_err": 8.92,
-  "tone_runner_up": [
-   "1f385-1f3fc",
-   23.3
-  ],
-  "tone_rmse": 13.19,
-  "tone_changed": false
- },
- {
-  "i": 189,
-  "x": 1541.0,
-  "y": 1383.5,
-  "glyph": "1f468-1f3fe-200d-1f52c",
-  "shape_score": 0.98,
-  "mirror_margin": -0.223,
-  "tone_err": 6.58,
-  "tone_runner_up": [
-   "1f468-1f3ff-200d-1f52c",
-   16.96
-  ],
-  "tone_rmse": 11.53,
-  "tone_changed": false
- },
- {
-  "i": 190,
-  "x": 993.5,
-  "y": 1392.0,
-  "glyph": "1f9d1-1f3fe-200d-1f4bb",
-  "shape_score": 0.983,
-  "mirror_margin": 0.0,
-  "tone_err": 3.23,
-  "tone_runner_up": [
-   "1f9d1-1f3ff-200d-1f4bb",
-   18.84
-  ],
-  "tone_rmse": 12.59,
-  "tone_changed": false
- },
- {
-  "i": 191,
-  "x": 1450.0,
-  "y": 1406.0,
-  "glyph": "1f469-1f3fc-200d-1f393",
-  "shape_score": 0.994,
-  "mirror_margin": -0.095,
-  "tone_err": 5.27,
-  "tone_runner_up": [
-   "1f469-200d-1f393",
-   21.87
-  ],
-  "tone_rmse": 9.82,
-  "tone_changed": false
- },
- {
-  "i": 192,
-  "x": 1356.0,
-  "y": 1408.5,
-  "glyph": "1f9b8-1f3fc",
-  "shape_score": 0.973,
-  "mirror_margin": -0.014,
-  "tone_err": 6.34,
-  "tone_runner_up": [
-   "1f9b8",
-   26.25
-  ],
-  "tone_rmse": 21.16,
-  "tone_changed": false
- },
- {
-  "i": 193,
-  "x": 1124.5,
-  "y": 1412.0,
-  "glyph": "1f487-200d-2642-fe0f",
-  "shape_score": 0.994,
-  "mirror_margin": -1.372,
-  "tone_err": 5.89,
-  "tone_runner_up": [
-   "1f487-1f3fc-200d-2642-fe0f",
-   16.02
-  ],
-  "tone_rmse": 10.84,
-  "tone_changed": false
- },
- {
-  "i": 194,
-  "x": 684.5,
-  "y": 1418.0,
-  "glyph": "1fac3-1f3fb",
-  "shape_score": 0.991,
-  "mirror_margin": -0.183,
-  "tone_err": 2.75,
-  "tone_runner_up": [
-   "1fac3-1f3fd",
-   40.04
-  ],
-  "tone_rmse": 17.01,
-  "tone_changed": false
- },
- {
-  "i": 195,
-  "x": 1662.0,
-  "y": 1430.0,
-  "glyph": "1fae8",
-  "shape_score": 0.982,
-  "mirror_margin": -0.112,
-  "tone_err": 6.48,
-  "tone_runner_up": null,
-  "tone_rmse": 9.09,
-  "tone_changed": false
- },
- {
-  "i": 196,
-  "x": 904.0,
-  "y": 1431.0,
-  "glyph": "1f575-1f3ff-200d-2640-fe0f",
-  "shape_score": 0.974,
-  "mirror_margin": -0.29,
-  "tone_err": 5.76,
-  "tone_runner_up": [
-   "1f575-1f3fe-200d-2640-fe0f",
-   27.88
-  ],
-  "tone_rmse": 19.58,
-  "tone_changed": false
- },
- {
-  "i": 197,
-  "x": 796.5,
-  "y": 1440.0,
-  "glyph": "1f468-200d-1f680",
-  "shape_score": 0.991,
-  "mirror_margin": -0.026,
-  "tone_err": 1.54,
-  "tone_runner_up": [
-   "1f468-1f3fc-200d-1f680",
-   14.91
-  ],
-  "tone_rmse": 13.28,
-  "tone_changed": true
- },
- {
-  "i": 198,
-  "x": 299.5,
-  "y": 1456.0,
-  "glyph": "1f614",
-  "shape_score": 0.987,
-  "mirror_margin": -0.001,
-  "tone_err": 8.88,
-  "tone_runner_up": null,
-  "tone_rmse": 13.09,
-  "tone_changed": false
- },
- {
-  "i": 199,
-  "x": 1773.5,
-  "y": 1457.0,
-  "glyph": "1f477-1f3fe",
-  "shape_score": 0.984,
-  "mirror_margin": -0.007,
-  "tone_err": 4.33,
-  "tone_runner_up": [
-   "1f477-1f3ff",
-   20.29
-  ],
-  "tone_rmse": 16.77,
-  "tone_changed": false
- },
- {
-  "i": 200,
-  "x": 584.5,
-  "y": 1459.0,
-  "glyph": "1f91e-1f3ff",
-  "shape_score": 0.981,
-  "mirror_margin": -0.304,
-  "tone_err": 6.94,
-  "tone_runner_up": [
-   "1f91e-1f3fe",
-   44.41
-  ],
-  "tone_rmse": 8.79,
-  "tone_changed": false
- },
- {
-  "i": 201,
-  "x": 1204.0,
-  "y": 1471.0,
-  "glyph": "1f469-1f3fe-200d-1f373",
-  "shape_score": 0.981,
-  "mirror_margin": -0.193,
-  "tone_err": 5.53,
-  "tone_runner_up": [
-   "1f469-1f3ff-200d-1f373",
-   21.41
-  ],
-  "tone_rmse": 14.9,
-  "tone_changed": false
- },
- {
-  "i": 202,
-  "x": 392.5,
-  "y": 1473.0,
-  "glyph": "1f466-1f3fe",
-  "shape_score": 0.968,
-  "mirror_margin": -0.023,
-  "tone_err": 5.66,
-  "tone_runner_up": [
-   "1f466-1f3ff",
-   23.69
-  ],
-  "tone_rmse": 11.93,
-  "tone_changed": false
- },
- {
-  "i": 203,
-  "x": 487.5,
-  "y": 1476.5,
-  "glyph": "1f6b6-1f3fc-200d-2642-fe0f",
-  "shape_score": 0.982,
-  "mirror_margin": -0.57,
-  "tone_err": 4.63,
-  "tone_runner_up": [
-   "1f6b6-200d-2642-fe0f",
-   18.8
-  ],
-  "tone_rmse": 15.73,
-  "tone_changed": false
- },
- {
-  "i": 204,
-  "x": 1043.5,
-  "y": 1477.0,
-  "glyph": "1f9d6-200d-2642-fe0f",
-  "shape_score": 0.979,
-  "mirror_margin": -0.021,
-  "tone_err": 8.04,
-  "tone_runner_up": [
-   "1f9d6-1f3fc-200d-2642-fe0f",
-   15.74
-  ],
-  "tone_rmse": 11.13,
-  "tone_changed": false
- },
- {
-  "i": 205,
-  "x": 1570.5,
-  "y": 1477.5,
-  "glyph": "1f61e",
-  "shape_score": 0.99,
-  "mirror_margin": -0.001,
-  "tone_err": 9.17,
-  "tone_runner_up": null,
-  "tone_rmse": 11.17,
-  "tone_changed": false
- },
- {
-  "i": 206,
-  "x": 1289.0,
-  "y": 1503.0,
-  "glyph": "26a0-fe0f",
-  "shape_score": 0.991,
-  "mirror_margin": 0.0,
-  "tone_err": 9.09,
-  "tone_runner_up": null,
-  "tone_rmse": 9.01,
-  "tone_changed": false
- },
- {
-  "i": 207,
-  "x": 1477.0,
-  "y": 1505.5,
-  "glyph": "1f9dc-1f3fe",
-  "shape_score": 0.964,
-  "mirror_margin": -0.787,
-  "tone_err": 2.96,
-  "tone_runner_up": [
-   "1f9dc-1f3ff",
-   15.03
-  ],
-  "tone_rmse": 9.08,
-  "tone_changed": true
- },
- {
-  "i": 208,
-  "x": 703.5,
-  "y": 1508.5,
-  "glyph": "1f933-1f3fc",
-  "shape_score": 0.988,
-  "mirror_margin": -1.117,
-  "tone_err": 5.04,
-  "tone_runner_up": [
-   "1f933",
-   11.12
-  ],
-  "tone_rmse": 10.9,
-  "tone_changed": true
- },
- {
-  "i": 209,
-  "x": 942.0,
-  "y": 1517.0,
-  "glyph": "1f44c-1f3fe",
-  "shape_score": 0.974,
-  "mirror_margin": -0.397,
-  "tone_err": 1.17,
-  "tone_runner_up": [
-   "1f44c-1f3ff",
-   33.38
-  ],
-  "tone_rmse": 8.71,
-  "tone_changed": false
- },
- {
-  "i": 210,
-  "x": 1379.0,
-  "y": 1515.5,
-  "glyph": "1f469-1f3fe-200d-1f9bc-200d-27a1-fe0f",
-  "shape_score": 0.983,
-  "mirror_margin": -0.632,
-  "tone_err": 4.92,
-  "tone_runner_up": [
-   "1f469-1f3ff-200d-1f9bc-200d-27a1-fe0f",
-   14.52
-  ],
-  "tone_rmse": 12.86,
-  "tone_changed": true
- },
- {
-  "i": 211,
-  "x": 826.0,
-  "y": 1528.0,
-  "glyph": "1f9de-200d-2640-fe0f",
-  "shape_score": 0.987,
-  "mirror_margin": -0.892,
-  "tone_err": 4.97,
-  "tone_runner_up": null,
-  "tone_rmse": 9.77,
-  "tone_changed": false
- },
- {
-  "i": 212,
-  "x": 1681.0,
-  "y": 1523.0,
-  "glyph": "1f449-1f3fc",
-  "shape_score": 0.997,
-  "mirror_margin": -0.62,
-  "tone_err": 8.06,
-  "tone_runner_up": [
-   "1f449",
-   14.65
-  ],
-  "tone_rmse": 7.07,
-  "tone_changed": false
- },
- {
-  "i": 213,
-  "x": 1113.0,
-  "y": 1540.5,
-  "glyph": "1fae1",
-  "shape_score": 0.983,
-  "mirror_margin": -1.259,
-  "tone_err": 6.57,
-  "tone_runner_up": null,
-  "tone_rmse": 9.13,
-  "tone_changed": false
- },
- {
-  "i": 214,
-  "x": 329.5,
-  "y": 1567.0,
-  "glyph": "1f6b6-1f3ff-200d-27a1-fe0f",
-  "shape_score": 0.975,
-  "mirror_margin": 0.432,
-  "tone_err": 7.91,
-  "tone_runner_up": [
-   "1f6b6-1f3fe-200d-27a1-fe0f",
-   28.17
-  ],
-  "tone_rmse": 22.78,
-  "tone_changed": false
- },
- {
-  "i": 215,
-  "x": 1583.5,
-  "y": 1571.0,
-  "glyph": "1f645-1f3fc",
-  "shape_score": 0.984,
-  "mirror_margin": -0.028,
-  "tone_err": 5.74,
-  "tone_runner_up": [
-   "1f645",
-   15.05
-  ],
-  "tone_rmse": 12.24,
-  "tone_changed": false
- },
- {
-  "i": 216,
-  "x": 518.0,
-  "y": 1574.0,
-  "glyph": "1f64e-1f3fc-200d-2640-fe0f",
-  "shape_score": 0.986,
-  "mirror_margin": -0.031,
-  "tone_err": 4.57,
-  "tone_runner_up": [
-   "1f64e-200d-2640-fe0f",
-   31.17
-  ],
-  "tone_rmse": 18.56,
-  "tone_changed": false
- },
- {
-  "i": 217,
-  "x": 422.0,
-  "y": 1577.0,
-  "glyph": "1f9b9-1f3fc-200d-2642-fe0f",
-  "shape_score": 0.899,
-  "mirror_margin": -0.073,
-  "tone_err": 7.19,
-  "tone_runner_up": [
-   "1f9b9-200d-2642-fe0f",
-   29.43
-  ],
-  "tone_rmse": 24.59,
-  "tone_changed": false
- },
- {
-  "i": 218,
-  "x": 1193.5,
-  "y": 1584.0,
-  "glyph": "1f647-1f3fd",
-  "shape_score": 0.973,
-  "mirror_margin": -0.025,
-  "tone_err": 4.08,
-  "tone_runner_up": [
-   "1f647-1f3fe",
-   27.18
-  ],
-  "tone_rmse": 8.74,
-  "tone_changed": false
- },
- {
-  "i": 219,
-  "x": 1001.0,
-  "y": 1588.5,
-  "glyph": "2764-fe0f-200d-1fa79",
-  "shape_score": 0.99,
-  "mirror_margin": -0.094,
-  "tone_err": 6.26,
-  "tone_runner_up": null,
-  "tone_rmse": 11.58,
-  "tone_changed": false
- },
- {
-  "i": 220,
-  "x": 744.0,
-  "y": 1594.0,
-  "glyph": "1f47f",
-  "shape_score": 0.988,
-  "mirror_margin": 0.001,
-  "tone_err": 3.9,
-  "tone_runner_up": null,
-  "tone_rmse": 16.75,
-  "tone_changed": false
- },
- {
-  "i": 221,
-  "x": 1483.5,
-  "y": 1602.0,
-  "glyph": "1fac4-1f3fc",
-  "shape_score": 0.996,
-  "mirror_margin": -0.176,
-  "tone_err": 5.31,
-  "tone_runner_up": [
-   "1fac4",
-   11.64
-  ],
-  "tone_rmse": 9.62,
-  "tone_changed": false
- },
- {
-  "i": 222,
-  "x": 1285.0,
-  "y": 1609.0,
-  "glyph": "1f64c-1f3ff",
-  "shape_score": 0.965,
-  "mirror_margin": 0.008,
-  "tone_err": 7.15,
-  "tone_runner_up": [
-   "1f64c-1f3fe",
-   45.47
-  ],
-  "tone_rmse": 13.02,
-  "tone_changed": false
- },
- {
-  "i": 223,
-  "x": 1386.5,
-  "y": 1614.0,
-  "glyph": "1f575-1f3fb",
-  "shape_score": 0.985,
-  "mirror_margin": -0.284,
-  "tone_err": 5.73,
-  "tone_runner_up": [
-   "1f575-1f3fc",
-   31.74
-  ],
-  "tone_rmse": 14.05,
-  "tone_changed": false
- },
- {
-  "i": 224,
-  "x": 1684.0,
-  "y": 1616.5,
-  "glyph": "1f49d",
-  "shape_score": 0.991,
-  "mirror_margin": -0.223,
-  "tone_err": 6.24,
-  "tone_runner_up": null,
-  "tone_rmse": 10.13,
-  "tone_changed": false
- },
- {
-  "i": 225,
-  "x": 877.0,
-  "y": 1607.0,
-  "glyph": "1f6a3-200d-2642-fe0f",
-  "shape_score": 0.991,
-  "mirror_margin": -0.277,
-  "tone_err": 6.56,
-  "tone_runner_up": [
-   "1f6a3-1f3fc-200d-2642-fe0f",
-   16.34
-  ],
-  "tone_rmse": 15.81,
-  "tone_changed": true
- },
- {
-  "i": 226,
-  "x": 657.0,
-  "y": 1640.0,
-  "glyph": "1f442-1f3ff",
-  "shape_score": 0.998,
-  "mirror_margin": -0.082,
-  "tone_err": 7.56,
-  "tone_runner_up": [
-   "1f442-1f3fe",
-   43.67
-  ],
-  "tone_rmse": 9.33,
-  "tone_changed": false
- },
- {
-  "i": 227,
-  "x": 1077.5,
-  "y": 1644.0,
-  "glyph": "1f9dd-1f3fe",
-  "shape_score": 0.983,
-  "mirror_margin": 0.005,
-  "tone_err": 3.92,
-  "tone_runner_up": [
-   "1f9dd-1f3ff",
-   22.74
-  ],
-  "tone_rmse": 11.57,
-  "tone_changed": false
- },
- {
-  "i": 228,
-  "x": 1581.0,
-  "y": 1667.0,
-  "glyph": "1f64d-1f3fc",
-  "shape_score": 0.978,
-  "mirror_margin": -0.004,
-  "tone_err": 6.99,
-  "tone_runner_up": [
-   "1f64d",
-   16.69
-  ],
-  "tone_rmse": 12.83,
-  "tone_changed": false
- },
- {
-  "i": 229,
-  "x": 563.0,
-  "y": 1668.0,
-  "glyph": "1f468-1f3fb-200d-1f9bc",
-  "shape_score": 0.958,
-  "mirror_margin": 0.613,
-  "tone_err": 6.9,
-  "tone_runner_up": [
-   "1f468-1f3fd-200d-1f9bc",
-   33.08
-  ],
-  "tone_rmse": 27.29,
-  "tone_changed": false
- },
- {
-  "i": 230,
-  "x": 803.5,
-  "y": 1673.0,
-  "glyph": "1f4aa-1f3fb",
-  "shape_score": 0.988,
-  "mirror_margin": -0.619,
-  "tone_err": 10.93,
-  "tone_runner_up": [
-   "1f4aa",
-   35.16
-  ],
-  "tone_rmse": 10.62,
-  "tone_changed": false
- },
- {
-  "i": 231,
-  "x": 946.5,
-  "y": 1673.5,
-  "glyph": "1f3c3-1f3fb-200d-27a1-fe0f",
-  "shape_score": 0.992,
-  "mirror_margin": -0.525,
-  "tone_err": 8.57,
-  "tone_runner_up": [
-   "1f3c3-1f3fd-200d-27a1-fe0f",
-   48.02
-  ],
-  "tone_rmse": 13.38,
-  "tone_changed": false
- },
- {
-  "i": 232,
-  "x": 471.5,
-  "y": 1677.5,
-  "glyph": "1f614",
-  "shape_score": 0.927,
-  "mirror_margin": 0.0,
-  "tone_err": 14.73,
-  "tone_runner_up": null,
-  "tone_rmse": 60.95,
-  "tone_changed": false
- },
- {
-  "i": 233,
-  "x": 1165.0,
-  "y": 1681.0,
-  "glyph": "1f486-1f3fd-200d-2642-fe0f",
-  "shape_score": 0.978,
-  "mirror_margin": -0.011,
-  "tone_err": 3.54,
-  "tone_runner_up": [
-   "1f486-1f3fe-200d-2642-fe0f",
-   35.46
-  ],
-  "tone_rmse": 11.03,
-  "tone_changed": false
- },
- {
-  "i": 234,
-  "x": 1472.5,
-  "y": 1696.0,
-  "glyph": "1f482-1f3fb-200d-2642-fe0f",
-  "shape_score": 0.994,
-  "mirror_margin": -0.023,
-  "tone_err": 10.31,
-  "tone_runner_up": [
-   "1f482-200d-2642-fe0f",
-   15.47
-  ],
-  "tone_rmse": 12.9,
-  "tone_changed": false
- },
- {
-  "i": 235,
-  "x": 1263.0,
-  "y": 1705.0,
-  "glyph": "1f4a1",
-  "shape_score": 0.996,
-  "mirror_margin": 0.0,
-  "tone_err": 10.47,
-  "tone_runner_up": null,
-  "tone_rmse": 9.23,
-  "tone_changed": false
- },
- {
-  "i": 236,
-  "x": 1366.0,
-  "y": 1711.5,
-  "glyph": "1f937-1f3fb-200d-2642-fe0f",
-  "shape_score": 0.997,
-  "mirror_margin": -0.206,
-  "tone_err": 4.59,
-  "tone_runner_up": [
-   "1f937-1f3fd-200d-2642-fe0f",
-   44.12
-  ],
-  "tone_rmse": 22.17,
-  "tone_changed": false
- },
- {
-  "i": 237,
-  "x": 718.0,
-  "y": 1722.0,
-  "glyph": "1f9de-200d-2642-fe0f",
-  "shape_score": 0.968,
-  "mirror_margin": -0.883,
-  "tone_err": 2.58,
-  "tone_runner_up": null,
-  "tone_rmse": 11.25,
-  "tone_changed": false
- },
- {
-  "i": 238,
-  "x": 1031.0,
-  "y": 1727.0,
-  "glyph": "1f469-1f3ff-200d-1f3ed",
-  "shape_score": 0.97,
-  "mirror_margin": -0.404,
-  "tone_err": 7.55,
-  "tone_runner_up": [
-   "1f469-1f3fe-200d-1f3ed",
-   26.54
-  ],
-  "tone_rmse": 14.7,
-  "tone_changed": false
- },
- {
-  "i": 239,
-  "x": 879.0,
-  "y": 1742.0,
-  "glyph": "1f3cc-1f3ff-200d-2640-fe0f",
-  "shape_score": 0.98,
-  "mirror_margin": -1.063,
-  "tone_err": 4.0,
-  "tone_runner_up": [
-   "1f3cc-1f3fe-200d-2640-fe0f",
-   15.35
-  ],
-  "tone_rmse": 13.14,
-  "tone_changed": false
- },
- {
-  "i": 240,
-  "x": 630.5,
-  "y": 1756.0,
-  "glyph": "1f620",
-  "shape_score": 0.991,
-  "mirror_margin": 0.001,
-  "tone_err": 8.83,
-  "tone_runner_up": null,
-  "tone_rmse": 11.88,
-  "tone_changed": false
- },
- {
-  "i": 241,
-  "x": 1119.5,
-  "y": 1767.0,
-  "glyph": "1f468-1f3fb-200d-1f9af",
-  "shape_score": 0.986,
-  "mirror_margin": 1.169,
-  "tone_err": 5.15,
-  "tone_runner_up": [
-   "1f468-1f3fd-200d-1f9af",
-   35.83
-  ],
-  "tone_rmse": 21.03,
-  "tone_changed": false
- },
- {
-  "i": 242,
-  "x": 1447.0,
-  "y": 1787.0,
-  "glyph": "1f485",
-  "shape_score": 0.937,
-  "mirror_margin": -0.69,
-  "tone_err": 3.92,
-  "tone_runner_up": [
-   "1f485-1f3fb",
-   23.3
-  ],
-  "tone_rmse": 21.94,
-  "tone_changed": true
- },
- {
-  "i": 243,
-  "x": 537.0,
-  "y": 1778.5,
-  "glyph": "1f91b",
-  "shape_score": 0.994,
-  "mirror_margin": -0.364,
-  "tone_err": 10.01,
-  "tone_runner_up": [
-   "1f91b-1f3fb",
-   18.98
-  ],
-  "tone_rmse": 8.63,
-  "tone_changed": false
- },
- {
-  "i": 244,
-  "x": 1224.0,
-  "y": 1790.0,
-  "glyph": "1f9d1-1f3fe",
-  "shape_score": 0.969,
-  "mirror_margin": -0.024,
-  "tone_err": 4.83,
-  "tone_runner_up": [
-   "1f9d1-1f3ff",
-   29.17
-  ],
-  "tone_rmse": 19.33,
-  "tone_changed": false
- },
- {
-  "i": 245,
-  "x": 798.5,
-  "y": 1795.0,
-  "glyph": "1f590-1f3fe",
-  "shape_score": 0.982,
-  "mirror_margin": -0.554,
-  "tone_err": 0.96,
-  "tone_runner_up": [
-   "1f590-1f3ff",
-   34.37
-  ],
-  "tone_rmse": 6.24,
-  "tone_changed": false
- },
- {
-  "i": 246,
-  "x": 1333.5,
-  "y": 1797.0,
-  "glyph": "1f9ee",
-  "shape_score": 0.95,
-  "mirror_margin": -0.158,
-  "tone_err": 2.84,
-  "tone_runner_up": null,
-  "tone_rmse": 17.52,
-  "tone_changed": false
- },
- {
-  "i": 247,
-  "x": 964.0,
-  "y": 1799.0,
-  "glyph": "1f9cf-1f3fe",
-  "shape_score": 0.995,
-  "mirror_margin": -1.413,
-  "tone_err": 4.54,
-  "tone_runner_up": [
-   "1f9cf-1f3ff",
-   23.72
-  ],
-  "tone_rmse": 8.51,
-  "tone_changed": false
- },
- {
-  "i": 248,
-  "x": 712.5,
-  "y": 1835.0,
-  "glyph": "1f468-1f3fe-200d-1f373",
-  "shape_score": 0.98,
-  "mirror_margin": -0.151,
-  "tone_err": 6.07,
-  "tone_runner_up": [
-   "1f468-1f3ff-200d-1f373",
-   19.89
-  ],
-  "tone_rmse": 14.4,
-  "tone_changed": false
- },
- {
-  "i": 249,
-  "x": 1062.5,
-  "y": 1841.5,
-  "glyph": "1f472-1f3fd",
-  "shape_score": 0.989,
-  "mirror_margin": -0.04,
-  "tone_err": 4.55,
-  "tone_runner_up": [
-   "1f472-1f3fe",
-   30.03
-  ],
-  "tone_rmse": 14.05,
-  "tone_changed": false
- },
- {
-  "i": 250,
-  "x": 1171.5,
-  "y": 1869.0,
-  "glyph": "1f926-1f3fd-200d-2642-fe0f",
-  "shape_score": 0.977,
-  "mirror_margin": -0.036,
-  "tone_err": 2.87,
-  "tone_runner_up": [
-   "1f926-1f3fe-200d-2642-fe0f",
-   29.21
-  ],
-  "tone_rmse": 8.37,
-  "tone_changed": false
- },
- {
-  "i": 251,
-  "x": 1291.0,
-  "y": 1882.0,
-  "glyph": "1f468-1f3fe-200d-1f527",
-  "shape_score": 0.966,
-  "mirror_margin": -0.331,
-  "tone_err": 4.46,
-  "tone_runner_up": [
-   "1f468-1f3ff-200d-1f527",
-   23.24
-  ],
-  "tone_rmse": 17.3,
-  "tone_changed": false
- },
- {
-  "i": 252,
-  "x": 993.0,
-  "y": 1907.0,
-  "glyph": "1fac5-1f3ff",
-  "shape_score": 0.985,
-  "mirror_margin": -0.007,
-  "tone_err": 7.53,
-  "tone_runner_up": [
-   "1fac5-1f3fe",
-   30.43
-  ],
-  "tone_rmse": 10.84,
-  "tone_changed": false
- },
- {
-  "i": 253,
-  "x": 571.5,
-  "y": 536.5,
-  "glyph": "1f9ce-200d-2642-fe0f-200d-27a1-fe0f",
-  "shape_score": 0.983,
-  "mirror_margin": -0.495,
-  "tone_err": 5.84,
-  "tone_runner_up": [
-   "1f9ce-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
-   19.74
-  ],
-  "tone_rmse": 18.46,
-  "tone_changed": false
- },
- {
-  "i": 254,
-  "x": 611.5,
-  "y": 1557.5,
-  "glyph": "1f9ce-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
-  "shape_score": 0.922,
-  "mirror_margin": -0.39,
-  "tone_err": 5.09,
-  "tone_runner_up": [
-   "1f9ce-200d-2642-fe0f-200d-27a1-fe0f",
-   21.36
-  ],
-  "tone_rmse": 21.0,
-  "tone_changed": false
- },
- {
-  "i": 255,
-  "x": 888.5,
-  "y": 1864.5,
-  "glyph": "1f9ce-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
-  "shape_score": 0.965,
-  "mirror_margin": 0.438,
-  "tone_err": 7.58,
-  "tone_runner_up": [
-   "1f9ce-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
-   22.87
-  ],
-  "tone_rmse": 13.11,
-  "tone_changed": false
- }
-]
+{
+ "grey_calibration": {
+  "formula": "puzzle = a * rec709 + b",
+  "a": 1.1225,
+  "b": -16.15
+ },
+ "emojis": [
+  {
+   "i": 0,
+   "x": 1054.5,
+   "y": 130.0,
+   "glyph": "1f64e-1f3fb-200d-2640-fe0f",
+   "shape_score": 0.954,
+   "mirror_margin": -0.036,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 9.7,
+   "skin_second": "d",
+   "skin_uncertain": false
+  },
+  {
+   "i": 1,
+   "x": 760.5,
+   "y": 154.5,
+   "glyph": "1f44f",
+   "shape_score": 0.97,
+   "mirror_margin": -0.612,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 5.66,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 2,
+   "x": 874.5,
+   "y": 165.0,
+   "glyph": "1f4ad",
+   "shape_score": 0.975,
+   "mirror_margin": -0.135,
+   "tone_err": 7.37,
+   "tone_runner_up": null,
+   "tone_rmse": 6.97,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 3,
+   "x": 1158.5,
+   "y": 178.0,
+   "glyph": "1f5a4",
+   "shape_score": 0.98,
+   "mirror_margin": -0.002,
+   "tone_err": 9.36,
+   "tone_runner_up": null,
+   "tone_rmse": 15.47,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 4,
+   "x": 985.5,
+   "y": 194.5,
+   "glyph": "1f974",
+   "shape_score": 0.97,
+   "mirror_margin": -0.045,
+   "tone_err": 7.03,
+   "tone_runner_up": null,
+   "tone_rmse": 10.28,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 5,
+   "x": 1337.0,
+   "y": 200.5,
+   "glyph": "1f3c3-1f3fc-200d-2640-fe0f",
+   "shape_score": 0.99,
+   "mirror_margin": 0.601,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 31.65,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 6,
+   "x": 713.0,
+   "y": 237.0,
+   "glyph": "1f64b-1f3ff-200d-2642-fe0f",
+   "shape_score": 0.955,
+   "mirror_margin": -0.544,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 31.09,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 7,
+   "x": 1084.5,
+   "y": 236.5,
+   "glyph": "1f499",
+   "shape_score": 0.993,
+   "mirror_margin": 0.0,
+   "tone_err": 6.02,
+   "tone_runner_up": null,
+   "tone_rmse": 11.03,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 8,
+   "x": 1250.0,
+   "y": 239.5,
+   "glyph": "1f6b4-1f3fb",
+   "shape_score": 0.981,
+   "mirror_margin": -0.523,
+   "tone_err": 20.12,
+   "tone_runner_up": [
+    "1f6b4",
+    22.82
+   ],
+   "tone_rmse": 17.53,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 9,
+   "x": 823.0,
+   "y": 244.0,
+   "glyph": "1f9d1-1f3fb-200d-1f373",
+   "shape_score": 0.98,
+   "mirror_margin": -0.143,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 21.93,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 10,
+   "x": 598.0,
+   "y": 247.0,
+   "glyph": "1f9d7-1f3fd-200d-2642-fe0f",
+   "shape_score": 0.943,
+   "mirror_margin": -0.907,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 42.99,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 11,
+   "x": 1510.0,
+   "y": 261.0,
+   "glyph": "1f9cd-1f3fd-200d-2640-fe0f",
+   "shape_score": 0.99,
+   "mirror_margin": 0.005,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 32.46,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 12,
+   "x": 926.5,
+   "y": 267.0,
+   "glyph": "1f9bb-1f3fe",
+   "shape_score": 0.998,
+   "mirror_margin": -0.245,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 39.18,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 13,
+   "x": 1421.5,
+   "y": 279.0,
+   "glyph": "1f468-1f3fe-200d-2708-fe0f",
+   "shape_score": 0.975,
+   "mirror_margin": -0.019,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 33.27,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 14,
+   "x": 1173.0,
+   "y": 292.0,
+   "glyph": "1fa99",
+   "shape_score": 0.976,
+   "mirror_margin": -0.263,
+   "tone_err": 5.06,
+   "tone_runner_up": null,
+   "tone_rmse": 13.82,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 15,
+   "x": 1021.0,
+   "y": 309.0,
+   "glyph": "1f47c",
+   "shape_score": 0.972,
+   "mirror_margin": -0.016,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 9.21,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 16,
+   "x": 1329.0,
+   "y": 312.0,
+   "glyph": "1f64f-1f3fb",
+   "shape_score": 0.969,
+   "mirror_margin": -0.053,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 25.18,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 17,
+   "x": 685.5,
+   "y": 326.0,
+   "glyph": "1f9d1-1f3fe-200d-2696-fe0f",
+   "shape_score": 0.977,
+   "mirror_margin": -0.498,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 29.41,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 18,
+   "x": 784.0,
+   "y": 330.0,
+   "glyph": "1f63a",
+   "shape_score": 0.995,
+   "mirror_margin": -0.013,
+   "tone_err": 5.66,
+   "tone_runner_up": null,
+   "tone_rmse": 18.5,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 19,
+   "x": 575.0,
+   "y": 346.0,
+   "glyph": "1f3ca-1f3fd",
+   "shape_score": 0.985,
+   "mirror_margin": -0.414,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 20.14,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 20,
+   "x": 882.0,
+   "y": 354.0,
+   "glyph": "1f9d1-1f3ff-200d-1f4bc",
+   "shape_score": 0.984,
+   "mirror_margin": -0.046,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 29.75,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 21,
+   "x": 1577.0,
+   "y": 356.5,
+   "glyph": "1f9d1-200d-1f33e",
+   "shape_score": 0.995,
+   "mirror_margin": -0.209,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 1.13,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 22,
+   "x": 1242.5,
+   "y": 361.0,
+   "glyph": "1f446-1f3ff",
+   "shape_score": 0.991,
+   "mirror_margin": -0.474,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 41.14,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 23,
+   "x": 1104.5,
+   "y": 362.5,
+   "glyph": "1f6b6-1f3fe-200d-2640-fe0f",
+   "shape_score": 0.969,
+   "mirror_margin": -0.468,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 23.92,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 24,
+   "x": 1484.0,
+   "y": 367.0,
+   "glyph": "1f4a1",
+   "shape_score": 0.515,
+   "mirror_margin": 0.004,
+   "tone_err": 119.43,
+   "tone_runner_up": null,
+   "tone_rmse": 141.73,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 25,
+   "x": 469.5,
+   "y": 368.0,
+   "glyph": "1f9db-1f3fb-200d-2642-fe0f",
+   "shape_score": 0.977,
+   "mirror_margin": 0.001,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 2.13,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 26,
+   "x": 1391.0,
+   "y": 394.0,
+   "glyph": "1f9d4-1f3fe-200d-2640-fe0f",
+   "shape_score": 0.967,
+   "mirror_margin": -0.065,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 18.97,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 27,
+   "x": 969.5,
+   "y": 400.0,
+   "glyph": "1f3ca-1f3fd-200d-2640-fe0f",
+   "shape_score": 0.97,
+   "mirror_margin": -0.41,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 39.48,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 28,
+   "x": 364.0,
+   "y": 417.0,
+   "glyph": "1f928",
+   "shape_score": 0.977,
+   "mirror_margin": -0.026,
+   "tone_err": 8.3,
+   "tone_runner_up": null,
+   "tone_rmse": 13.56,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 29,
+   "x": 664.0,
+   "y": 421.0,
+   "glyph": "1faf2-1f3fb",
+   "shape_score": 0.994,
+   "mirror_margin": -0.334,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 13.19,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 30,
+   "x": 1171.0,
+   "y": 428.5,
+   "glyph": "1f6b4-1f3fb-200d-2640-fe0f",
+   "shape_score": 0.965,
+   "mirror_margin": -0.554,
+   "tone_err": 7.53,
+   "tone_runner_up": [
+    "1f6b4-1f3fc-200d-2640-fe0f",
+    34.52
+   ],
+   "tone_rmse": 18.97,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 31,
+   "x": 764.0,
+   "y": 427.0,
+   "glyph": "1f9d1-1f3fd-200d-1f9bd-200d-27a1-fe0f",
+   "shape_score": 0.934,
+   "mirror_margin": -0.601,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 2.36,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 32,
+   "x": 564.0,
+   "y": 432.0,
+   "glyph": "1f469-200d-1f33e",
+   "shape_score": 0.969,
+   "mirror_margin": -0.218,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 1.35,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 33,
+   "x": 1304.5,
+   "y": 440.5,
+   "glyph": "1f62f",
+   "shape_score": 0.987,
+   "mirror_margin": 0.001,
+   "tone_err": 8.71,
+   "tone_runner_up": null,
+   "tone_rmse": 15.5,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 34,
+   "x": 1046.0,
+   "y": 447.0,
+   "glyph": "1f9e9",
+   "shape_score": 0.987,
+   "mirror_margin": -0.893,
+   "tone_err": 11.36,
+   "tone_runner_up": null,
+   "tone_rmse": 13.55,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 35,
+   "x": 853.0,
+   "y": 450.5,
+   "glyph": "1f9cd-1f3fc",
+   "shape_score": 0.997,
+   "mirror_margin": -0.068,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 6.29,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 36,
+   "x": 1620.5,
+   "y": 457.5,
+   "glyph": "1f513",
+   "shape_score": 0.994,
+   "mirror_margin": -0.07,
+   "tone_err": 6.78,
+   "tone_runner_up": null,
+   "tone_rmse": 10.42,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 37,
+   "x": 463.0,
+   "y": 463.0,
+   "glyph": "2620-fe0f",
+   "shape_score": 0.977,
+   "mirror_margin": -0.007,
+   "tone_err": 8.88,
+   "tone_runner_up": null,
+   "tone_rmse": 15.26,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 38,
+   "x": 1533.5,
+   "y": 462.0,
+   "glyph": "1f9d1-1f3fb-200d-1f527",
+   "shape_score": 0.988,
+   "mirror_margin": -0.359,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 30.87,
+   "skin_second": "d",
+   "skin_uncertain": false
+  },
+  {
+   "i": 39,
+   "x": 1719.0,
+   "y": 469.0,
+   "glyph": "1f935-1f3fc",
+   "shape_score": 0.979,
+   "mirror_margin": -0.008,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 1.03,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 40,
+   "x": 1435.5,
+   "y": 483.0,
+   "glyph": "1f64b-200d-2640-fe0f",
+   "shape_score": 0.979,
+   "mirror_margin": -0.296,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 1.12,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 41,
+   "x": 935.0,
+   "y": 494.0,
+   "glyph": "1f9d6-1f3fb",
+   "shape_score": 0.98,
+   "mirror_margin": -0.032,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 16.05,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 42,
+   "x": 999.5,
+   "y": 557.0,
+   "glyph": "1f471-1f3fc-200d-2640-fe0f",
+   "shape_score": 0.877,
+   "mirror_margin": -0.396,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 11.56,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 43,
+   "x": 1222.0,
+   "y": 507.0,
+   "glyph": "1f471-1f3fb-200d-2642-fe0f",
+   "shape_score": 0.984,
+   "mirror_margin": -0.006,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 17.85,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 44,
+   "x": 366.0,
+   "y": 511.5,
+   "glyph": "1f9df-200d-2640-fe0f",
+   "shape_score": 0.958,
+   "mirror_margin": -0.144,
+   "tone_err": 5.63,
+   "tone_runner_up": null,
+   "tone_rmse": 10.38,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 45,
+   "x": 1106.0,
+   "y": 517.0,
+   "glyph": "1f487",
+   "shape_score": 0.967,
+   "mirror_margin": -1.362,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 4.1,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 46,
+   "x": 666.0,
+   "y": 520.0,
+   "glyph": "1f486-200d-2640-fe0f",
+   "shape_score": 0.973,
+   "mirror_margin": -0.023,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 1.35,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 47,
+   "x": 1343.0,
+   "y": 526.5,
+   "glyph": "1f9de",
+   "shape_score": 0.979,
+   "mirror_margin": -0.962,
+   "tone_err": 5.01,
+   "tone_runner_up": null,
+   "tone_rmse": 11.15,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 48,
+   "x": 760.0,
+   "y": 531.0,
+   "glyph": "1f46e-1f3fd",
+   "shape_score": 0.976,
+   "mirror_margin": -0.06,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 46.43,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 49,
+   "x": 476.0,
+   "y": 557.0,
+   "glyph": "1f9d1-1f3fe-200d-1f9b0",
+   "shape_score": 0.991,
+   "mirror_margin": -0.036,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 39.15,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 50,
+   "x": 1561.5,
+   "y": 558.5,
+   "glyph": "1f469-1f3fc-200d-1f37c",
+   "shape_score": 0.985,
+   "mirror_margin": -0.227,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 11.0,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 51,
+   "x": 1656.0,
+   "y": 562.5,
+   "glyph": "1f574-1f3fe",
+   "shape_score": 0.948,
+   "mirror_margin": -0.021,
+   "tone_err": 8.37,
+   "tone_runner_up": [
+    "1f574-1f3ff",
+    21.36
+   ],
+   "tone_rmse": 20.36,
+   "tone_changed": true,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 52,
+   "x": 846.0,
+   "y": 565.0,
+   "glyph": "1f468-1f3fc-200d-1f3eb",
+   "shape_score": 0.943,
+   "mirror_margin": -0.062,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 10.66,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 53,
+   "x": 1462.5,
+   "y": 577.0,
+   "glyph": "1f632",
+   "shape_score": 0.991,
+   "mirror_margin": -0.001,
+   "tone_err": 7.84,
+   "tone_runner_up": null,
+   "tone_rmse": 12.07,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 54,
+   "x": 1749.0,
+   "y": 578.5,
+   "glyph": "1f608",
+   "shape_score": 0.99,
+   "mirror_margin": -0.002,
+   "tone_err": 3.93,
+   "tone_runner_up": null,
+   "tone_rmse": 14.53,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 55,
+   "x": 275.0,
+   "y": 581.0,
+   "glyph": "1faf1-1f3fe-200d-1faf2-1f3fd",
+   "shape_score": 0.998,
+   "mirror_margin": -0.132,
+   "tone_err": 3.27,
+   "tone_runner_up": [
+    "1faf1-1f3fe-200d-1faf2-1f3fc",
+    23.54
+   ],
+   "tone_rmse": 5.53,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 56,
+   "x": 1252.0,
+   "y": 594.5,
+   "glyph": "1f60a",
+   "shape_score": 0.977,
+   "mirror_margin": 0.017,
+   "tone_err": 14.18,
+   "tone_runner_up": null,
+   "tone_rmse": 29.99,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 57,
+   "x": 1143.5,
+   "y": 603.0,
+   "glyph": "1f46f-200d-2642-fe0f",
+   "shape_score": 0.917,
+   "mirror_margin": -0.278,
+   "tone_err": 66.38,
+   "tone_runner_up": null,
+   "tone_rmse": 83.26,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 58,
+   "x": 385.5,
+   "y": 604.0,
+   "glyph": "1f477-1f3ff-200d-2640-fe0f",
+   "shape_score": 0.981,
+   "mirror_margin": -0.014,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 31.66,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 59,
+   "x": 1362.0,
+   "y": 616.0,
+   "glyph": "1f468-1f3fe-200d-1f33e",
+   "shape_score": 0.975,
+   "mirror_margin": -0.215,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 31.55,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 60,
+   "x": 922.5,
+   "y": 622.0,
+   "glyph": "1f9dd-1f3fd-200d-2642-fe0f",
+   "shape_score": 0.99,
+   "mirror_margin": -0.013,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 42.66,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 61,
+   "x": 600.0,
+   "y": 628.0,
+   "glyph": "1f931-1f3fc",
+   "shape_score": 0.977,
+   "mirror_margin": -0.215,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 10.21,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 62,
+   "x": 691.0,
+   "y": 627.5,
+   "glyph": "1f6a3-1f3fb",
+   "shape_score": 0.987,
+   "mirror_margin": -0.238,
+   "tone_err": 6.13,
+   "tone_runner_up": [
+    "1f6a3-1f3fd",
+    24.6
+   ],
+   "tone_rmse": 11.58,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 63,
+   "x": 781.5,
+   "y": 650.0,
+   "glyph": "1f918",
+   "shape_score": 0.991,
+   "mirror_margin": -0.202,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 4.4,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 64,
+   "x": 1054.5,
+   "y": 644.0,
+   "glyph": "2753",
+   "shape_score": 0.936,
+   "mirror_margin": -0.443,
+   "tone_err": 9.42,
+   "tone_runner_up": null,
+   "tone_rmse": 10.01,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 65,
+   "x": 1573.0,
+   "y": 656.0,
+   "glyph": "1f3cb-fe0f-200d-2642-fe0f",
+   "shape_score": 0.99,
+   "mirror_margin": -0.109,
+   "tone_err": 11.16,
+   "tone_runner_up": null,
+   "tone_rmse": 19.86,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 66,
+   "x": 1670.0,
+   "y": 664.0,
+   "glyph": "1f482-1f3fc-200d-2640-fe0f",
+   "shape_score": 0.981,
+   "mirror_margin": -0.015,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 11.34,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 67,
+   "x": 508.0,
+   "y": 657.5,
+   "glyph": "1f91c-1f3fb",
+   "shape_score": 0.998,
+   "mirror_margin": -0.377,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 19.82,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 68,
+   "x": 1468.5,
+   "y": 669.0,
+   "glyph": "1f471-1f3ff-200d-2642-fe0f",
+   "shape_score": 0.977,
+   "mirror_margin": -0.018,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 36.48,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 69,
+   "x": 300.0,
+   "y": 677.0,
+   "glyph": "1f3ca-1f3fd-200d-2642-fe0f",
+   "shape_score": 0.985,
+   "mirror_margin": -0.43,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 40.38,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 70,
+   "x": 1758.5,
+   "y": 689.5,
+   "glyph": "1f9d9-1f3ff",
+   "shape_score": 0.969,
+   "mirror_margin": -0.448,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 39.74,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 71,
+   "x": 418.5,
+   "y": 693.5,
+   "glyph": "1f9d9-200d-2642-fe0f",
+   "shape_score": 0.992,
+   "mirror_margin": -0.355,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 6.23,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 72,
+   "x": 1255.5,
+   "y": 692.0,
+   "glyph": "270a-1f3fc",
+   "shape_score": 0.99,
+   "mirror_margin": -0.129,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 3.03,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 73,
+   "x": 870.5,
+   "y": 706.0,
+   "glyph": "1f6b6-1f3fd-200d-2642-fe0f-200d-27a1-fe0f",
+   "shape_score": 0.989,
+   "mirror_margin": -0.488,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 13.37,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 74,
+   "x": 1157.5,
+   "y": 708.0,
+   "glyph": "1f595",
+   "shape_score": 0.998,
+   "mirror_margin": -0.159,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 15.6,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 75,
+   "x": 1357.0,
+   "y": 710.0,
+   "glyph": "1f926-1f3fe",
+   "shape_score": 0.979,
+   "mirror_margin": -0.054,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 31.77,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 76,
+   "x": 986.5,
+   "y": 713.5,
+   "glyph": "1f9db",
+   "shape_score": 0.97,
+   "mirror_margin": 0.005,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 19.53,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 77,
+   "x": 654.5,
+   "y": 731.0,
+   "glyph": "1f469-1f3fd-200d-1f9af-200d-27a1-fe0f",
+   "shape_score": 0.971,
+   "mirror_margin": -1.168,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 4.04,
+   "skin_second": "b",
+   "skin_uncertain": true
+  },
+  {
+   "i": 78,
+   "x": 1846.5,
+   "y": 731.5,
+   "glyph": "1f64a",
+   "shape_score": 0.985,
+   "mirror_margin": -0.011,
+   "tone_err": 4.99,
+   "tone_runner_up": null,
+   "tone_rmse": 13.79,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 79,
+   "x": 224.0,
+   "y": 747.0,
+   "glyph": "1f639",
+   "shape_score": 0.99,
+   "mirror_margin": -0.018,
+   "tone_err": 5.5,
+   "tone_runner_up": null,
+   "tone_rmse": 21.96,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 80,
+   "x": 753.0,
+   "y": 747.5,
+   "glyph": "1f9d1-1f3fc-200d-1f4bc",
+   "shape_score": 0.979,
+   "mirror_margin": -0.056,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 1.05,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 81,
+   "x": 1565.5,
+   "y": 750.0,
+   "glyph": "1f473",
+   "shape_score": 0.982,
+   "mirror_margin": -0.014,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 4.34,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 82,
+   "x": 345.0,
+   "y": 755.0,
+   "glyph": "1f9d1-1f3fb-200d-1f3a4",
+   "shape_score": 0.977,
+   "mirror_margin": -0.354,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 27.28,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 83,
+   "x": 1455.5,
+   "y": 760.0,
+   "glyph": "1f596-1f3fe",
+   "shape_score": 0.976,
+   "mirror_margin": -0.533,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 42.19,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 84,
+   "x": 562.0,
+   "y": 746.5,
+   "glyph": "1faf3",
+   "shape_score": 0.993,
+   "mirror_margin": -0.39,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 8.53,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 85,
+   "x": 1667.0,
+   "y": 762.5,
+   "glyph": "1f473-200d-2640-fe0f",
+   "shape_score": 0.992,
+   "mirror_margin": -0.05,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 10.1,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 86,
+   "x": 1076.0,
+   "y": 766.0,
+   "glyph": "1f475",
+   "shape_score": 0.976,
+   "mirror_margin": -0.003,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 3.65,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 87,
+   "x": 476.5,
+   "y": 779.0,
+   "glyph": "1f9d2-1f3ff",
+   "shape_score": 0.99,
+   "mirror_margin": -0.076,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 28.74,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 88,
+   "x": 1223.0,
+   "y": 800.0,
+   "glyph": "1f9d1-1f3ff-200d-1f9b0",
+   "shape_score": 0.99,
+   "mirror_margin": -0.023,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 39.51,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 89,
+   "x": 862.0,
+   "y": 805.0,
+   "glyph": "1f469-1f3fc-200d-2696-fe0f",
+   "shape_score": 0.982,
+   "mirror_margin": -0.479,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 8.08,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 90,
+   "x": 1322.5,
+   "y": 805.0,
+   "glyph": "1f469-1f3fe-200d-1f3eb",
+   "shape_score": 0.905,
+   "mirror_margin": -0.035,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 10.71,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 91,
+   "x": 1755.0,
+   "y": 795.5,
+   "glyph": "1faf4-1f3ff",
+   "shape_score": 0.989,
+   "mirror_margin": -0.362,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 38.95,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 92,
+   "x": 956.5,
+   "y": 818.0,
+   "glyph": "1f3cb-1f3fd-200d-2640-fe0f",
+   "shape_score": 0.978,
+   "mirror_margin": -0.056,
+   "tone_err": 9.58,
+   "tone_runner_up": [
+    "1f3cb-1f3fe-200d-2640-fe0f",
+    24.6
+   ],
+   "tone_rmse": 13.61,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 93,
+   "x": 270.5,
+   "y": 831.0,
+   "glyph": "1f9d1-1f3fb-200d-1f9b1",
+   "shape_score": 0.989,
+   "mirror_margin": -0.016,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 20.09,
+   "skin_second": "d",
+   "skin_uncertain": false
+  },
+  {
+   "i": 94,
+   "x": 650.0,
+   "y": 834.0,
+   "glyph": "1faf5-1f3fd",
+   "shape_score": 0.985,
+   "mirror_margin": -0.37,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 41.89,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 95,
+   "x": 399.0,
+   "y": 832.5,
+   "glyph": "1f932-1f3fb",
+   "shape_score": 0.986,
+   "mirror_margin": 0.0,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 8.16,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 96,
+   "x": 158.5,
+   "y": 841.5,
+   "glyph": "1f46f-200d-2640-fe0f",
+   "shape_score": 0.958,
+   "mirror_margin": -0.669,
+   "tone_err": 27.35,
+   "tone_runner_up": null,
+   "tone_rmse": 43.81,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 97,
+   "x": 1838.0,
+   "y": 841.5,
+   "glyph": "1f469-1f3ff-200d-2708-fe0f",
+   "shape_score": 0.993,
+   "mirror_margin": -0.073,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 33.17,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 98,
+   "x": 759.0,
+   "y": 845.0,
+   "glyph": "1f64e-1f3fe",
+   "shape_score": 0.975,
+   "mirror_margin": -0.006,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 30.08,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 99,
+   "x": 1411.5,
+   "y": 847.0,
+   "glyph": "1f609",
+   "shape_score": 0.99,
+   "mirror_margin": -0.031,
+   "tone_err": 8.62,
+   "tone_runner_up": null,
+   "tone_rmse": 11.88,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 100,
+   "x": 1121.5,
+   "y": 853.0,
+   "glyph": "1f64b-1f3fe",
+   "shape_score": 0.975,
+   "mirror_margin": -0.538,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 29.75,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 101,
+   "x": 1535.5,
+   "y": 842.0,
+   "glyph": "1f6a3-1f3fc-200d-2640-fe0f",
+   "shape_score": 0.935,
+   "mirror_margin": -0.257,
+   "tone_err": 6.32,
+   "tone_runner_up": [
+    "1f6a3-200d-2640-fe0f",
+    16.2
+   ],
+   "tone_rmse": 15.98,
+   "tone_changed": true,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 102,
+   "x": 1641.5,
+   "y": 859.0,
+   "glyph": "1f92e",
+   "shape_score": 0.964,
+   "mirror_margin": -0.086,
+   "tone_err": 5.36,
+   "tone_runner_up": null,
+   "tone_rmse": 18.53,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 103,
+   "x": 559.0,
+   "y": 859.0,
+   "glyph": "1f469-1f3fc-200d-1f52c",
+   "shape_score": 0.975,
+   "mirror_margin": -0.18,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 8.64,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 104,
+   "x": 1733.0,
+   "y": 896.0,
+   "glyph": "1f642",
+   "shape_score": 0.992,
+   "mirror_margin": -0.001,
+   "tone_err": 8.91,
+   "tone_runner_up": null,
+   "tone_rmse": 10.24,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 105,
+   "x": 1911.5,
+   "y": 900.0,
+   "glyph": "1f9dd-1f3fd-200d-2640-fe0f",
+   "shape_score": 0.987,
+   "mirror_margin": -0.004,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 40.79,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 106,
+   "x": 1237.0,
+   "y": 902.0,
+   "glyph": "1f468-1f3fe-200d-1f9b2",
+   "shape_score": 0.988,
+   "mirror_margin": 0.012,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 38.56,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 107,
+   "x": 474.5,
+   "y": 904.0,
+   "glyph": "1f3c3-1f3fd-200d-27a1-fe0f",
+   "shape_score": 0.988,
+   "mirror_margin": 0.522,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 3.22,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 108,
+   "x": 1024.5,
+   "y": 900.5,
+   "glyph": "1f443",
+   "shape_score": 0.989,
+   "mirror_margin": 0.0,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 14.26,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 109,
+   "x": 1137.0,
+   "y": 1109.5,
+   "glyph": "1f9d1-1f3fd-200d-1f692",
+   "shape_score": 0.964,
+   "mirror_margin": -0.379,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 11.33,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 110,
+   "x": 1028.5,
+   "y": 1146.5,
+   "glyph": "1f469-200d-1f37c",
+   "shape_score": 0.742,
+   "mirror_margin": -0.066,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 2.49,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 111,
+   "x": 1486.0,
+   "y": 918.5,
+   "glyph": "1f90c-1f3fe",
+   "shape_score": 0.954,
+   "mirror_margin": -1.068,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 40.02,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 112,
+   "x": 214.5,
+   "y": 920.0,
+   "glyph": "1f468-200d-1f3a4",
+   "shape_score": 0.983,
+   "mirror_margin": -0.28,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 10.89,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 113,
+   "x": 331.0,
+   "y": 910.0,
+   "glyph": "1f90f-1f3fb",
+   "shape_score": 0.979,
+   "mirror_margin": -0.548,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 28.29,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 114,
+   "x": 914.5,
+   "y": 925.0,
+   "glyph": "1f645-1f3fc-200d-2640-fe0f",
+   "shape_score": 0.987,
+   "mirror_margin": -0.032,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 0.14,
+   "skin_second": "0",
+   "skin_uncertain": true
+  },
+  {
+   "i": 115,
+   "x": 1340.5,
+   "y": 925.0,
+   "glyph": "1f469-200d-1f527",
+   "shape_score": 0.977,
+   "mirror_margin": -0.338,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 5.72,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 116,
+   "x": 678.5,
+   "y": 931.0,
+   "glyph": "1f64d-200d-2642-fe0f",
+   "shape_score": 0.968,
+   "mirror_margin": 0.002,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 12.8,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 117,
+   "x": 812.0,
+   "y": 934.0,
+   "glyph": "1f6b5-1f3fb",
+   "shape_score": 0.959,
+   "mirror_margin": -0.376,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 13.13,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 118,
+   "x": 1603.5,
+   "y": 944.0,
+   "glyph": "1f3cc-1f3fc",
+   "shape_score": 0.964,
+   "mirror_margin": -1.075,
+   "tone_err": 3.12,
+   "tone_runner_up": [
+    "1f3cc-1f3fd",
+    42.33
+   ],
+   "tone_rmse": 11.99,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 119,
+   "x": 1812.5,
+   "y": 948.0,
+   "glyph": "1f497",
+   "shape_score": 0.992,
+   "mirror_margin": -0.013,
+   "tone_err": 3.29,
+   "tone_runner_up": null,
+   "tone_rmse": 10.01,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 120,
+   "x": 581.0,
+   "y": 962.0,
+   "glyph": "1f645-1f3fe-200d-2642-fe0f",
+   "shape_score": 0.981,
+   "mirror_margin": -0.05,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 29.19,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 121,
+   "x": 409.5,
+   "y": 968.0,
+   "glyph": "1f468-200d-1f37c",
+   "shape_score": 0.963,
+   "mirror_margin": -0.175,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 0.56,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 122,
+   "x": 1412.0,
+   "y": 985.0,
+   "glyph": "1f9d7-1f3ff-200d-2640-fe0f",
+   "shape_score": 0.964,
+   "mirror_margin": -1.015,
+   "tone_err": 3.39,
+   "tone_runner_up": [
+    "1f9d7-1f3fe-200d-2640-fe0f",
+    17.07
+   ],
+   "tone_rmse": 8.66,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 123,
+   "x": 1696.5,
+   "y": 987.0,
+   "glyph": "1f469-200d-1f3a4",
+   "shape_score": 0.985,
+   "mirror_margin": -0.424,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 5.04,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 124,
+   "x": 278.0,
+   "y": 989.0,
+   "glyph": "1f9b5",
+   "shape_score": 0.994,
+   "mirror_margin": -0.631,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 11.16,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 125,
+   "x": 1191.5,
+   "y": 989.5,
+   "glyph": "1f468-1f3fb-200d-1f9af",
+   "shape_score": 0.974,
+   "mirror_margin": -1.159,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 18.18,
+   "skin_second": "d",
+   "skin_uncertain": false
+  },
+  {
+   "i": 126,
+   "x": 742.0,
+   "y": 1006.0,
+   "glyph": "1f44b-1f3fe",
+   "shape_score": 0.978,
+   "mirror_margin": -0.661,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 41.22,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 127,
+   "x": 1882.0,
+   "y": 1012.5,
+   "glyph": "1f481",
+   "shape_score": 0.984,
+   "mirror_margin": -0.797,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 0.53,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 128,
+   "x": 1540.0,
+   "y": 1016.0,
+   "glyph": "26f9-1f3fc",
+   "shape_score": 0.976,
+   "mirror_margin": -0.676,
+   "tone_err": 3.68,
+   "tone_runner_up": [
+    "26f9-1f3fb",
+    37.13
+   ],
+   "tone_rmse": 20.2,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 129,
+   "x": 505.0,
+   "y": 1019.0,
+   "glyph": "1f9dc-1f3fe-200d-2640-fe0f",
+   "shape_score": 0.966,
+   "mirror_margin": -0.799,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 32.63,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 130,
+   "x": 166.0,
+   "y": 1022.0,
+   "glyph": "1f9b8-200d-2642-fe0f",
+   "shape_score": 0.974,
+   "mirror_margin": -0.039,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 6.74,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 131,
+   "x": 1306.5,
+   "y": 1028.0,
+   "glyph": "1f487-1f3fc-200d-2640-fe0f",
+   "shape_score": 0.967,
+   "mirror_margin": -0.956,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 6.96,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 132,
+   "x": 857.0,
+   "y": 1045.0,
+   "glyph": "1f646-1f3fb-200d-2642-fe0f",
+   "shape_score": 0.943,
+   "mirror_margin": -0.02,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 20.58,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 133,
+   "x": 1771.5,
+   "y": 1045.0,
+   "glyph": "2639-fe0f",
+   "shape_score": 0.994,
+   "mirror_margin": -0.002,
+   "tone_err": 8.6,
+   "tone_runner_up": null,
+   "tone_rmse": 9.66,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 134,
+   "x": 357.0,
+   "y": 1047.0,
+   "glyph": "1f3cc-1f3fb-200d-2642-fe0f",
+   "shape_score": 0.976,
+   "mirror_margin": -1.072,
+   "tone_err": 4.14,
+   "tone_runner_up": [
+    "1f3cc-1f3fc-200d-2642-fe0f",
+    19.2
+   ],
+   "tone_rmse": 13.29,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 135,
+   "x": 634.5,
+   "y": 1050.5,
+   "glyph": "1f469-200d-1f692",
+   "shape_score": 0.99,
+   "mirror_margin": -0.441,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 5.14,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 136,
+   "x": 1635.5,
+   "y": 1066.0,
+   "glyph": "1f647-1f3fd-200d-2640-fe0f",
+   "shape_score": 0.976,
+   "mirror_margin": -0.042,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 0.65,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 137,
+   "x": 1466.5,
+   "y": 1072.0,
+   "glyph": "1f470-1f3fb-200d-2640-fe0f",
+   "shape_score": 0.961,
+   "mirror_margin": -0.015,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 22.47,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 138,
+   "x": 235.5,
+   "y": 1087.0,
+   "glyph": "1f919-1f3fd",
+   "shape_score": 0.982,
+   "mirror_margin": -0.46,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 45.46,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 139,
+   "x": 447.5,
+   "y": 1090.0,
+   "glyph": "1f477-1f3ff-200d-2642-fe0f",
+   "shape_score": 0.995,
+   "mirror_margin": 0.005,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 39.4,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 140,
+   "x": 1235.0,
+   "y": 1099.5,
+   "glyph": "261d-1f3ff",
+   "shape_score": 0.991,
+   "mirror_margin": -0.252,
+   "tone_err": 7.08,
+   "tone_runner_up": [
+    "261d-1f3fe",
+    44.0
+   ],
+   "tone_rmse": 9.0,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 141,
+   "x": 1370.0,
+   "y": 1104.5,
+   "glyph": "1f44d-1f3fc",
+   "shape_score": 0.975,
+   "mirror_margin": -0.205,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 16.73,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 142,
+   "x": 710.0,
+   "y": 1110.0,
+   "glyph": "1f4a4",
+   "shape_score": 0.966,
+   "mirror_margin": -1.002,
+   "tone_err": 6.69,
+   "tone_runner_up": null,
+   "tone_rmse": 8.12,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 143,
+   "x": 559.5,
+   "y": 1115.0,
+   "glyph": "1f3cb-1f3fe",
+   "shape_score": 0.975,
+   "mirror_margin": -0.001,
+   "tone_err": 7.15,
+   "tone_runner_up": [
+    "1f3cb-1f3ff",
+    19.77
+   ],
+   "tone_rmse": 12.92,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 144,
+   "x": 1836.0,
+   "y": 1113.5,
+   "glyph": "1faf6-1f3fc",
+   "shape_score": 0.995,
+   "mirror_margin": 0.0,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 6.06,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 145,
+   "x": 1716.0,
+   "y": 1130.5,
+   "glyph": "1f469-1f3fd-200d-1f9b3",
+   "shape_score": 0.975,
+   "mirror_margin": -0.077,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 28.14,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 146,
+   "x": 1570.5,
+   "y": 1131.0,
+   "glyph": "1f62a",
+   "shape_score": 0.993,
+   "mirror_margin": -0.089,
+   "tone_err": 8.2,
+   "tone_runner_up": null,
+   "tone_rmse": 10.38,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 147,
+   "x": 808.5,
+   "y": 1134.0,
+   "glyph": "1f6b6-1f3ff-200d-2640-fe0f-200d-27a1-fe0f",
+   "shape_score": 0.971,
+   "mirror_margin": -0.429,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 21.69,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 148,
+   "x": 136.0,
+   "y": 1135.0,
+   "glyph": "1f977-1f3fc",
+   "shape_score": 0.984,
+   "mirror_margin": -0.16,
+   "tone_err": 9.2,
+   "tone_runner_up": [
+    "1f977",
+    11.27
+   ],
+   "tone_rmse": 11.16,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 149,
+   "x": 316.5,
+   "y": 1139.5,
+   "glyph": "1f469-1f3ff-200d-1f9bc-200d-27a1-fe0f",
+   "shape_score": 0.948,
+   "mirror_margin": 0.578,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 21.34,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 150,
+   "x": 408.0,
+   "y": 1176.0,
+   "glyph": "1f483-1f3fe",
+   "shape_score": 0.957,
+   "mirror_margin": -0.542,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 1.79,
+   "skin_second": "f",
+   "skin_uncertain": true
+  },
+  {
+   "i": 151,
+   "x": 1489.5,
+   "y": 1176.0,
+   "glyph": "270c-1f3ff",
+   "shape_score": 0.985,
+   "mirror_margin": -0.348,
+   "tone_err": 7.5,
+   "tone_runner_up": [
+    "270c-1f3fe",
+    43.33
+   ],
+   "tone_rmse": 9.14,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 152,
+   "x": 926.0,
+   "y": 1182.0,
+   "glyph": "1f646-1f3fe-200d-2640-fe0f",
+   "shape_score": 0.953,
+   "mirror_margin": -0.043,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 15.91,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 153,
+   "x": 1289.0,
+   "y": 1191.5,
+   "glyph": "1f64e-200d-2642-fe0f",
+   "shape_score": 0.99,
+   "mirror_margin": -0.001,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 11.54,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 154,
+   "x": 636.0,
+   "y": 1190.5,
+   "glyph": "1f937-1f3fd",
+   "shape_score": 0.988,
+   "mirror_margin": -0.194,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 27.3,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 155,
+   "x": 513.0,
+   "y": 1195.0,
+   "glyph": "1f9d1-1f3fe-200d-1f393",
+   "shape_score": 0.977,
+   "mirror_margin": -0.211,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 32.83,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 156,
+   "x": 210.0,
+   "y": 1194.0,
+   "glyph": "1faf1-1f3ff",
+   "shape_score": 0.986,
+   "mirror_margin": -0.327,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 41.2,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 157,
+   "x": 1398.0,
+   "y": 1200.0,
+   "glyph": "1f511",
+   "shape_score": 0.994,
+   "mirror_margin": -1.038,
+   "tone_err": 5.72,
+   "tone_runner_up": null,
+   "tone_rmse": 7.5,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 158,
+   "x": 1648.0,
+   "y": 1201.0,
+   "glyph": "1f9d4-1f3ff",
+   "shape_score": 0.977,
+   "mirror_margin": -0.031,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 24.92,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 159,
+   "x": 1888.0,
+   "y": 1193.0,
+   "glyph": "1f441-fe0f",
+   "shape_score": 0.979,
+   "mirror_margin": -0.091,
+   "tone_err": 4.23,
+   "tone_runner_up": null,
+   "tone_rmse": 20.56,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 160,
+   "x": 1789.0,
+   "y": 1205.0,
+   "glyph": "1faf8",
+   "shape_score": 0.997,
+   "mirror_margin": -0.718,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 0.22,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 161,
+   "x": 1089.0,
+   "y": 1216.0,
+   "glyph": "1f46f",
+   "shape_score": 0.917,
+   "mirror_margin": -0.28,
+   "tone_err": 35.65,
+   "tone_runner_up": null,
+   "tone_rmse": 59.13,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 162,
+   "x": 728.0,
+   "y": 1230.0,
+   "glyph": "1f9cf-1f3fe-200d-2642-fe0f",
+   "shape_score": 0.953,
+   "mirror_margin": -1.335,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 33.79,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 163,
+   "x": 823.0,
+   "y": 1234.0,
+   "glyph": "1f9b6-1f3fe",
+   "shape_score": 0.993,
+   "mirror_margin": -0.134,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 38.52,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 164,
+   "x": 292.0,
+   "y": 1238.0,
+   "glyph": "1f91f-1f3fb",
+   "shape_score": 0.991,
+   "mirror_margin": -0.738,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 20.09,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 165,
+   "x": 1190.0,
+   "y": 1231.0,
+   "glyph": "1f449-1f3fb",
+   "shape_score": 0.987,
+   "mirror_margin": 0.622,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 15.15,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 166,
+   "x": 1570.5,
+   "y": 1257.0,
+   "glyph": "1f469-1f3fb-200d-2695-fe0f",
+   "shape_score": 0.983,
+   "mirror_margin": -0.026,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 18.55,
+   "skin_second": "d",
+   "skin_uncertain": false
+  },
+  {
+   "i": 167,
+   "x": 383.5,
+   "y": 1271.0,
+   "glyph": "1f628",
+   "shape_score": 0.993,
+   "mirror_margin": -0.001,
+   "tone_err": 6.29,
+   "tone_runner_up": null,
+   "tone_rmse": 8.7,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 168,
+   "x": 970.0,
+   "y": 1272.0,
+   "glyph": "1f478-1f3fb",
+   "shape_score": 0.938,
+   "mirror_margin": -0.027,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 27.44,
+   "skin_second": "d",
+   "skin_uncertain": false
+  },
+  {
+   "i": 169,
+   "x": 595.0,
+   "y": 1275.0,
+   "glyph": "1f468-1f3fc-200d-1f3a8",
+   "shape_score": 0.972,
+   "mirror_margin": -0.275,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 8.08,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 170,
+   "x": 1706.0,
+   "y": 1280.5,
+   "glyph": "1f935-1f3fe-200d-2642-fe0f",
+   "shape_score": 0.992,
+   "mirror_margin": -0.014,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 29.3,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 171,
+   "x": 483.5,
+   "y": 1283.0,
+   "glyph": "1f470-1f3fe-200d-2642-fe0f",
+   "shape_score": 0.983,
+   "mirror_margin": -0.003,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 34.3,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 172,
+   "x": 1826.0,
+   "y": 1287.0,
+   "glyph": "1f575-1f3fe-200d-2642-fe0f",
+   "shape_score": 0.994,
+   "mirror_margin": -0.326,
+   "tone_err": 5.73,
+   "tone_runner_up": [
+    "1f575-1f3ff-200d-2642-fe0f",
+    20.53
+   ],
+   "tone_rmse": 15.88,
+   "tone_changed": true,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 173,
+   "x": 1295.5,
+   "y": 1289.5,
+   "glyph": "1f469-1f3ff-200d-1f4bc",
+   "shape_score": 0.948,
+   "mirror_margin": -0.006,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 19.89,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 174,
+   "x": 1484.5,
+   "y": 1291.0,
+   "glyph": "1f930-1f3fc",
+   "shape_score": 0.983,
+   "mirror_margin": -0.131,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 15.15,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 175,
+   "x": 1393.5,
+   "y": 1303.0,
+   "glyph": "1f934-1f3fd",
+   "shape_score": 0.983,
+   "mirror_margin": -0.019,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 37.45,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 176,
+   "x": 201.5,
+   "y": 1305.5,
+   "glyph": "1f979",
+   "shape_score": 0.996,
+   "mirror_margin": -0.045,
+   "tone_err": 5.48,
+   "tone_runner_up": null,
+   "tone_rmse": 10.61,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 177,
+   "x": 1062.5,
+   "y": 1322.0,
+   "glyph": "1f468-1f3fe-200d-2695-fe0f",
+   "shape_score": 0.964,
+   "mirror_margin": -0.025,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 29.1,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 178,
+   "x": 690.5,
+   "y": 1325.5,
+   "glyph": "1f6b6-1f3fd-200d-27a1-fe0f",
+   "shape_score": 0.971,
+   "mirror_margin": -0.354,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 5.5,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 179,
+   "x": 886.5,
+   "y": 1326.5,
+   "glyph": "26f9-1f3fb-200d-2640-fe0f",
+   "shape_score": 0.995,
+   "mirror_margin": -0.705,
+   "tone_err": 4.81,
+   "tone_runner_up": [
+    "26f9-1f3fc-200d-2640-fe0f",
+    38.19
+   ],
+   "tone_rmse": 24.89,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 180,
+   "x": 1176.0,
+   "y": 1329.0,
+   "glyph": "1f926-1f3fc-200d-2640-fe0f",
+   "shape_score": 0.981,
+   "mirror_margin": -0.062,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 1.27,
+   "skin_second": "0",
+   "skin_uncertain": true
+  },
+  {
+   "i": 181,
+   "x": 1626.0,
+   "y": 1339.5,
+   "glyph": "270d-fe0f",
+   "shape_score": 0.994,
+   "mirror_margin": -0.304,
+   "tone_err": 7.87,
+   "tone_runner_up": null,
+   "tone_rmse": 11.86,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 182,
+   "x": 274.0,
+   "y": 1346.0,
+   "glyph": "1faf7-1f3fe",
+   "shape_score": 0.995,
+   "mirror_margin": -0.694,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 36.0,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 183,
+   "x": 789.0,
+   "y": 1344.5,
+   "glyph": "1f9d1-1f3ff-200d-1f9bd-200d-27a1-fe0f",
+   "shape_score": 0.957,
+   "mirror_margin": 0.657,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 20.65,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 184,
+   "x": 1747.0,
+   "y": 1366.0,
+   "glyph": "1f469-1f3fc-200d-1f9b1",
+   "shape_score": 0.963,
+   "mirror_margin": -0.058,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 10.21,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 185,
+   "x": 379.0,
+   "y": 1370.0,
+   "glyph": "1f3c3-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
+   "shape_score": 0.968,
+   "mirror_margin": -0.529,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 16.64,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 186,
+   "x": 579.5,
+   "y": 1367.5,
+   "glyph": "1f469-1f3fd-200d-1f9bd-200d-27a1-fe0f",
+   "shape_score": 0.988,
+   "mirror_margin": -0.592,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 11.92,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 187,
+   "x": 475.0,
+   "y": 1378.5,
+   "glyph": "1f9b9-1f3fe-200d-2640-fe0f",
+   "shape_score": 0.96,
+   "mirror_margin": -0.104,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 16.95,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 188,
+   "x": 1266.0,
+   "y": 1384.0,
+   "glyph": "1f385-1f3fb",
+   "shape_score": 0.985,
+   "mirror_margin": -0.133,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 10.15,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 189,
+   "x": 1541.0,
+   "y": 1383.5,
+   "glyph": "1f468-1f3fe-200d-1f52c",
+   "shape_score": 0.98,
+   "mirror_margin": -0.223,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 24.43,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 190,
+   "x": 993.5,
+   "y": 1392.0,
+   "glyph": "1f9d1-1f3fe-200d-1f4bb",
+   "shape_score": 0.983,
+   "mirror_margin": 0.0,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 26.35,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 191,
+   "x": 1450.0,
+   "y": 1406.0,
+   "glyph": "1f469-1f3fc-200d-1f393",
+   "shape_score": 0.994,
+   "mirror_margin": -0.095,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 6.96,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 192,
+   "x": 1356.0,
+   "y": 1408.5,
+   "glyph": "1f9b8-1f3fc",
+   "shape_score": 0.973,
+   "mirror_margin": -0.014,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 11.23,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 193,
+   "x": 1124.5,
+   "y": 1412.0,
+   "glyph": "1f487-200d-2642-fe0f",
+   "shape_score": 0.994,
+   "mirror_margin": -1.372,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 0.21,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 194,
+   "x": 684.5,
+   "y": 1418.0,
+   "glyph": "1fac3-1f3fb",
+   "shape_score": 0.991,
+   "mirror_margin": -0.183,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 17.06,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 195,
+   "x": 1662.0,
+   "y": 1430.0,
+   "glyph": "1fae8",
+   "shape_score": 0.982,
+   "mirror_margin": -0.112,
+   "tone_err": 6.48,
+   "tone_runner_up": null,
+   "tone_rmse": 9.09,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 196,
+   "x": 904.0,
+   "y": 1431.0,
+   "glyph": "1f575-1f3ff-200d-2640-fe0f",
+   "shape_score": 0.974,
+   "mirror_margin": -0.29,
+   "tone_err": 5.76,
+   "tone_runner_up": [
+    "1f575-1f3fe-200d-2640-fe0f",
+    27.88
+   ],
+   "tone_rmse": 19.58,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 197,
+   "x": 796.5,
+   "y": 1440.0,
+   "glyph": "1f468-200d-1f680",
+   "shape_score": 0.991,
+   "mirror_margin": -0.026,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 4.6,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 198,
+   "x": 299.5,
+   "y": 1456.0,
+   "glyph": "1f614",
+   "shape_score": 0.987,
+   "mirror_margin": -0.001,
+   "tone_err": 8.88,
+   "tone_runner_up": null,
+   "tone_rmse": 13.09,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 199,
+   "x": 1773.5,
+   "y": 1457.0,
+   "glyph": "1f477-1f3fe",
+   "shape_score": 0.984,
+   "mirror_margin": -0.007,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 37.59,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 200,
+   "x": 584.5,
+   "y": 1459.0,
+   "glyph": "1f91e-1f3ff",
+   "shape_score": 0.981,
+   "mirror_margin": -0.304,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 39.96,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 201,
+   "x": 1204.0,
+   "y": 1471.0,
+   "glyph": "1f469-1f3fe-200d-1f373",
+   "shape_score": 0.981,
+   "mirror_margin": -0.193,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 31.78,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 202,
+   "x": 392.5,
+   "y": 1473.0,
+   "glyph": "1f466-1f3fe",
+   "shape_score": 0.968,
+   "mirror_margin": -0.023,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 28.74,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 203,
+   "x": 487.5,
+   "y": 1476.5,
+   "glyph": "1f6b6-200d-2642-fe0f",
+   "shape_score": 0.982,
+   "mirror_margin": -0.57,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 3.96,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 204,
+   "x": 1043.5,
+   "y": 1477.0,
+   "glyph": "1f9d6-200d-2642-fe0f",
+   "shape_score": 0.979,
+   "mirror_margin": -0.021,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 4.83,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 205,
+   "x": 1570.5,
+   "y": 1477.5,
+   "glyph": "1f61e",
+   "shape_score": 0.99,
+   "mirror_margin": -0.001,
+   "tone_err": 9.17,
+   "tone_runner_up": null,
+   "tone_rmse": 11.17,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 206,
+   "x": 1289.0,
+   "y": 1503.0,
+   "glyph": "26a0-fe0f",
+   "shape_score": 0.991,
+   "mirror_margin": 0.0,
+   "tone_err": 9.09,
+   "tone_runner_up": null,
+   "tone_rmse": 9.01,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 207,
+   "x": 1477.0,
+   "y": 1505.5,
+   "glyph": "1f9dc-1f3fe",
+   "shape_score": 0.964,
+   "mirror_margin": -0.787,
+   "tone_err": 2.96,
+   "tone_runner_up": [
+    "1f9dc-1f3ff",
+    15.03
+   ],
+   "tone_rmse": 9.08,
+   "tone_changed": true,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 208,
+   "x": 703.5,
+   "y": 1508.5,
+   "glyph": "1f933-1f3fc",
+   "shape_score": 0.988,
+   "mirror_margin": -1.117,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 14.37,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 209,
+   "x": 942.0,
+   "y": 1517.0,
+   "glyph": "1f44c-1f3fe",
+   "shape_score": 0.974,
+   "mirror_margin": -0.397,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 39.06,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 210,
+   "x": 1379.0,
+   "y": 1515.5,
+   "glyph": "1f469-1f3fe-200d-1f9bc-200d-27a1-fe0f",
+   "shape_score": 0.983,
+   "mirror_margin": -0.632,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 23.26,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 211,
+   "x": 826.0,
+   "y": 1528.0,
+   "glyph": "1f9de-200d-2640-fe0f",
+   "shape_score": 0.987,
+   "mirror_margin": -0.892,
+   "tone_err": 4.97,
+   "tone_runner_up": null,
+   "tone_rmse": 9.77,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 212,
+   "x": 1681.0,
+   "y": 1523.0,
+   "glyph": "1f449-1f3fc",
+   "shape_score": 0.997,
+   "mirror_margin": -0.62,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 22.79,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 213,
+   "x": 1113.0,
+   "y": 1540.5,
+   "glyph": "1fae1",
+   "shape_score": 0.983,
+   "mirror_margin": -1.259,
+   "tone_err": 6.57,
+   "tone_runner_up": null,
+   "tone_rmse": 9.13,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 214,
+   "x": 329.5,
+   "y": 1567.0,
+   "glyph": "1f6b6-1f3fe-200d-27a1-fe0f",
+   "shape_score": 0.975,
+   "mirror_margin": 0.432,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 1.5,
+   "skin_second": "f",
+   "skin_uncertain": true
+  },
+  {
+   "i": 215,
+   "x": 1583.5,
+   "y": 1571.0,
+   "glyph": "1f645-1f3fc",
+   "shape_score": 0.984,
+   "mirror_margin": -0.028,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 3.7,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 216,
+   "x": 518.0,
+   "y": 1574.0,
+   "glyph": "1f64e-1f3fc-200d-2640-fe0f",
+   "shape_score": 0.986,
+   "mirror_margin": -0.031,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 5.61,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 217,
+   "x": 422.0,
+   "y": 1577.0,
+   "glyph": "1f9b9-1f3fc-200d-2642-fe0f",
+   "shape_score": 0.899,
+   "mirror_margin": -0.073,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 17.62,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 218,
+   "x": 1193.5,
+   "y": 1584.0,
+   "glyph": "1f647-1f3fd",
+   "shape_score": 0.973,
+   "mirror_margin": -0.025,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 5.84,
+   "skin_second": "b",
+   "skin_uncertain": false
+  },
+  {
+   "i": 219,
+   "x": 1001.0,
+   "y": 1588.5,
+   "glyph": "2764-fe0f-200d-1fa79",
+   "shape_score": 0.99,
+   "mirror_margin": -0.094,
+   "tone_err": 6.26,
+   "tone_runner_up": null,
+   "tone_rmse": 11.58,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 220,
+   "x": 744.0,
+   "y": 1594.0,
+   "glyph": "1f47f",
+   "shape_score": 0.988,
+   "mirror_margin": 0.001,
+   "tone_err": 3.9,
+   "tone_runner_up": null,
+   "tone_rmse": 16.75,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 221,
+   "x": 1483.5,
+   "y": 1602.0,
+   "glyph": "1fac4-1f3fc",
+   "shape_score": 0.996,
+   "mirror_margin": -0.176,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 5.21,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 222,
+   "x": 1285.0,
+   "y": 1609.0,
+   "glyph": "1f64c-1f3ff",
+   "shape_score": 0.965,
+   "mirror_margin": 0.008,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 42.48,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 223,
+   "x": 1386.5,
+   "y": 1614.0,
+   "glyph": "1f575-1f3fb",
+   "shape_score": 0.985,
+   "mirror_margin": -0.284,
+   "tone_err": 5.73,
+   "tone_runner_up": [
+    "1f575-1f3fc",
+    31.74
+   ],
+   "tone_rmse": 14.05,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 224,
+   "x": 1684.0,
+   "y": 1616.5,
+   "glyph": "1f49d",
+   "shape_score": 0.991,
+   "mirror_margin": -0.223,
+   "tone_err": 6.24,
+   "tone_runner_up": null,
+   "tone_rmse": 10.13,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 225,
+   "x": 877.0,
+   "y": 1607.0,
+   "glyph": "1f6a3-200d-2642-fe0f",
+   "shape_score": 0.991,
+   "mirror_margin": -0.277,
+   "tone_err": 6.56,
+   "tone_runner_up": [
+    "1f6a3-1f3fc-200d-2642-fe0f",
+    16.34
+   ],
+   "tone_rmse": 15.81,
+   "tone_changed": true,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 226,
+   "x": 657.0,
+   "y": 1640.0,
+   "glyph": "1f442-1f3ff",
+   "shape_score": 0.998,
+   "mirror_margin": -0.082,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 38.01,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 227,
+   "x": 1077.5,
+   "y": 1644.0,
+   "glyph": "1f9dd-1f3fe",
+   "shape_score": 0.983,
+   "mirror_margin": 0.005,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 40.86,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 228,
+   "x": 1581.0,
+   "y": 1667.0,
+   "glyph": "1f64d-1f3fc",
+   "shape_score": 0.978,
+   "mirror_margin": -0.004,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 1.57,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 229,
+   "x": 563.0,
+   "y": 1668.0,
+   "glyph": "1f468-1f3fb-200d-1f9bc",
+   "shape_score": 0.958,
+   "mirror_margin": 0.613,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 9.75,
+   "skin_second": "d",
+   "skin_uncertain": false
+  },
+  {
+   "i": 230,
+   "x": 803.5,
+   "y": 1673.0,
+   "glyph": "1f4aa-1f3fb",
+   "shape_score": 0.988,
+   "mirror_margin": -0.619,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 26.73,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 231,
+   "x": 946.5,
+   "y": 1673.5,
+   "glyph": "1f3c3-1f3fb-200d-27a1-fe0f",
+   "shape_score": 0.992,
+   "mirror_margin": -0.525,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 3.66,
+   "skin_second": "d",
+   "skin_uncertain": false
+  },
+  {
+   "i": 232,
+   "x": 471.5,
+   "y": 1677.5,
+   "glyph": "1f614",
+   "shape_score": 0.927,
+   "mirror_margin": 0.0,
+   "tone_err": 14.73,
+   "tone_runner_up": null,
+   "tone_rmse": 60.95,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 233,
+   "x": 1165.0,
+   "y": 1681.0,
+   "glyph": "1f486-1f3fd-200d-2642-fe0f",
+   "shape_score": 0.978,
+   "mirror_margin": -0.011,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 40.48,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 234,
+   "x": 1472.5,
+   "y": 1696.0,
+   "glyph": "1f482-1f3fb-200d-2642-fe0f",
+   "shape_score": 0.994,
+   "mirror_margin": -0.023,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 11.62,
+   "skin_second": "0",
+   "skin_uncertain": false
+  },
+  {
+   "i": 235,
+   "x": 1263.0,
+   "y": 1705.0,
+   "glyph": "1f4a1",
+   "shape_score": 0.996,
+   "mirror_margin": 0.0,
+   "tone_err": 10.47,
+   "tone_runner_up": null,
+   "tone_rmse": 9.23,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 236,
+   "x": 1366.0,
+   "y": 1711.5,
+   "glyph": "1f937-1f3fb-200d-2642-fe0f",
+   "shape_score": 0.997,
+   "mirror_margin": -0.206,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 23.01,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 237,
+   "x": 718.0,
+   "y": 1722.0,
+   "glyph": "1f9de-200d-2642-fe0f",
+   "shape_score": 0.968,
+   "mirror_margin": -0.883,
+   "tone_err": 2.58,
+   "tone_runner_up": null,
+   "tone_rmse": 11.25,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 238,
+   "x": 1031.0,
+   "y": 1727.0,
+   "glyph": "1f469-1f3ff-200d-1f3ed",
+   "shape_score": 0.97,
+   "mirror_margin": -0.404,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 32.55,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 239,
+   "x": 879.0,
+   "y": 1742.0,
+   "glyph": "1f3cc-1f3ff-200d-2640-fe0f",
+   "shape_score": 0.98,
+   "mirror_margin": -1.063,
+   "tone_err": 4.0,
+   "tone_runner_up": [
+    "1f3cc-1f3fe-200d-2640-fe0f",
+    15.35
+   ],
+   "tone_rmse": 13.14,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 240,
+   "x": 630.5,
+   "y": 1756.0,
+   "glyph": "1f620",
+   "shape_score": 0.991,
+   "mirror_margin": 0.001,
+   "tone_err": 8.83,
+   "tone_runner_up": null,
+   "tone_rmse": 11.88,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 241,
+   "x": 1119.5,
+   "y": 1767.0,
+   "glyph": "1f468-1f3fb-200d-1f9af",
+   "shape_score": 0.986,
+   "mirror_margin": 1.169,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 20.88,
+   "skin_second": "d",
+   "skin_uncertain": false
+  },
+  {
+   "i": 242,
+   "x": 1447.0,
+   "y": 1787.0,
+   "glyph": "1f485",
+   "shape_score": 0.937,
+   "mirror_margin": -0.69,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 9.21,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 243,
+   "x": 537.0,
+   "y": 1778.5,
+   "glyph": "1f91b",
+   "shape_score": 0.994,
+   "mirror_margin": -0.364,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 7.87,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 244,
+   "x": 1224.0,
+   "y": 1790.0,
+   "glyph": "1f9d1-1f3fe",
+   "shape_score": 0.969,
+   "mirror_margin": -0.024,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 29.52,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 245,
+   "x": 798.5,
+   "y": 1795.0,
+   "glyph": "1f590-1f3fe",
+   "shape_score": 0.982,
+   "mirror_margin": -0.554,
+   "tone_err": 0.96,
+   "tone_runner_up": [
+    "1f590-1f3ff",
+    34.37
+   ],
+   "tone_rmse": 6.24,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 246,
+   "x": 1333.5,
+   "y": 1797.0,
+   "glyph": "1f9ee",
+   "shape_score": 0.95,
+   "mirror_margin": -0.158,
+   "tone_err": 2.84,
+   "tone_runner_up": null,
+   "tone_rmse": 17.52,
+   "tone_changed": false,
+   "tone_method": "aligned-glyph"
+  },
+  {
+   "i": 247,
+   "x": 964.0,
+   "y": 1799.0,
+   "glyph": "1f9cf-1f3fe",
+   "shape_score": 0.995,
+   "mirror_margin": -1.413,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 34.35,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 248,
+   "x": 712.5,
+   "y": 1835.0,
+   "glyph": "1f468-1f3fe-200d-1f373",
+   "shape_score": 0.98,
+   "mirror_margin": -0.151,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 31.41,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 249,
+   "x": 1062.5,
+   "y": 1841.5,
+   "glyph": "1f472-1f3fd",
+   "shape_score": 0.989,
+   "mirror_margin": -0.04,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 41.18,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 250,
+   "x": 1171.5,
+   "y": 1869.0,
+   "glyph": "1f926-1f3fd-200d-2642-fe0f",
+   "shape_score": 0.977,
+   "mirror_margin": -0.036,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 38.02,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 251,
+   "x": 1291.0,
+   "y": 1882.0,
+   "glyph": "1f468-1f3fe-200d-1f527",
+   "shape_score": 0.966,
+   "mirror_margin": -0.331,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 26.63,
+   "skin_second": "f",
+   "skin_uncertain": false
+  },
+  {
+   "i": 252,
+   "x": 993.0,
+   "y": 1907.0,
+   "glyph": "1fac5-1f3ff",
+   "shape_score": 0.985,
+   "mirror_margin": -0.007,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 31.7,
+   "skin_second": "e",
+   "skin_uncertain": false
+  },
+  {
+   "i": 253,
+   "x": 571.5,
+   "y": 536.5,
+   "glyph": "1f9ce-200d-2642-fe0f-200d-27a1-fe0f",
+   "shape_score": 0.983,
+   "mirror_margin": -0.495,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 18.3,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 254,
+   "x": 611.5,
+   "y": 1557.5,
+   "glyph": "1f9ce-200d-2642-fe0f-200d-27a1-fe0f",
+   "shape_score": 0.922,
+   "mirror_margin": -0.39,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 17.17,
+   "skin_second": "c",
+   "skin_uncertain": false
+  },
+  {
+   "i": 255,
+   "x": 888.5,
+   "y": 1864.5,
+   "glyph": "1f9ce-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
+   "shape_score": 0.965,
+   "mirror_margin": 0.438,
+   "tone_method": "skin-calibrated",
+   "skin_margin": 13.02,
+   "skin_second": "e",
+   "skin_uncertain": false
+  }
+ ]
+}

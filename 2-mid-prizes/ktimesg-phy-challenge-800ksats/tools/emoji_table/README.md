@@ -18,6 +18,8 @@ python3 match.py    # normalise the 3,793 reference glyphs -> refs.npz
 python3 match2.py   # shape + luminance correlation, plain and mirrored -> matches.json
 python3 tone.py     # skin tone by Rec.709 luminance quantiles within each glyph family -> emoji_table.json
 python3 tone2.py    # skin tone by aligned Rec.709 pixel comparison with every tone variant -> emoji_table2.json
+python3 skin.py     # mean grey over each glyph's skin pixels vs every tone's level -> skin_calls.json
+python3 calibrate.py  # fit puzzle grey = a*Rec.709 + b, re-call tones -> emoji_table3.json (= data/emoji-table.json)
 python3 fit.py      # optional: golden-angle spiral fit and index assignment -> fit.json
 ```
 

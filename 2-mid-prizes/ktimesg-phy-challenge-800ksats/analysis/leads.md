@@ -49,6 +49,14 @@ the mirrored glyph fits. Rebuild with `tools/emoji_table/`. What it established:
   image". Hearts and other coloured objects carry the same problem (a grey heart could be several
   colours) and were not resolved. A restored colour picture is easy to render from the table, but
   it is not stored here because it reproduces Apple's artwork.
+- Calibrated skin tones (`tools/emoji_table/skin.py`, `calibrate.py`): measuring only each glyph's
+  skin pixels (the pixels that change between its tone variants, eroded by 2) and fitting the
+  puzzle's grey against the references gives **puzzle grey = 1.1225 x Rec.709 - 16.15**, a
+  contrast stretch, with a median residual of 0.76 grey levels over 183 single-person glyphs.
+  With that calibration only 5 tone calls stay uncertain (emojis 77, 114, 150, 180, 214), down
+  from 41. This is most likely the "much easier and precise normalization" the author mentions.
+  Tone counts among those 183: medium-dark 40, default yellow 36, light 29, medium-light 29,
+  medium 25, dark 24. `data/emoji-table.json` now carries the calibration and these calls.
 - The forum IDs behind the point `H` cannot be reproduced. The 9 emojis whose code points spell
   `H.x` decode as index up (dark), woman climbing (dark), raised fist (medium-light), running
   (medium), woman kneeling facing right (medium-light), grinning cat, frowning face, woman
