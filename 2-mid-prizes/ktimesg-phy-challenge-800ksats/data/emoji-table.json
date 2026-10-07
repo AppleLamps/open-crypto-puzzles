@@ -9,8 +9,10 @@
   "tone_err": 6.55,
   "tone_runner_up": [
    "1f64e-1f3fd-200d-2640-fe0f",
-   28.65
-  ]
+   48.42
+  ],
+  "tone_rmse": 20.3,
+  "tone_changed": false
  },
  {
   "i": 1,
@@ -21,9 +23,11 @@
   "mirror_margin": -0.612,
   "tone_err": 8.87,
   "tone_runner_up": [
-   "1f44f-1f3fb",
-   12.06
-  ]
+   "1f44f-1f3fc",
+   19.26
+  ],
+  "tone_rmse": 13.16,
+  "tone_changed": false
  },
  {
   "i": 2,
@@ -33,7 +37,9 @@
   "shape_score": 0.975,
   "mirror_margin": -0.135,
   "tone_err": 7.37,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 6.97,
+  "tone_changed": false
  },
  {
   "i": 3,
@@ -43,7 +49,9 @@
   "shape_score": 0.98,
   "mirror_margin": -0.002,
   "tone_err": 9.36,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 15.47,
+  "tone_changed": false
  },
  {
   "i": 4,
@@ -53,7 +61,9 @@
   "shape_score": 0.97,
   "mirror_margin": -0.045,
   "tone_err": 7.03,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 10.28,
+  "tone_changed": false
  },
  {
   "i": 5,
@@ -65,8 +75,10 @@
   "tone_err": 7.2,
   "tone_runner_up": [
    "1f3c3-200d-2640-fe0f",
-   11.26
-  ]
+   23.54
+  ],
+  "tone_rmse": 13.62,
+  "tone_changed": false
  },
  {
   "i": 6,
@@ -78,8 +90,10 @@
   "tone_err": 6.35,
   "tone_runner_up": [
    "1f64b-1f3fe-200d-2642-fe0f",
-   23.07
-  ]
+   31.05
+  ],
+  "tone_rmse": 11.97,
+  "tone_changed": false
  },
  {
   "i": 7,
@@ -89,7 +103,9 @@
   "shape_score": 0.993,
   "mirror_margin": 0.0,
   "tone_err": 6.02,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 11.03,
+  "tone_changed": false
  },
  {
   "i": 8,
@@ -101,8 +117,10 @@
   "tone_err": 20.12,
   "tone_runner_up": [
    "1f6b4",
-   25.12
-  ]
+   22.82
+  ],
+  "tone_rmse": 17.53,
+  "tone_changed": false
  },
  {
   "i": 9,
@@ -114,8 +132,10 @@
   "tone_err": 8.49,
   "tone_runner_up": [
    "1f9d1-200d-1f373",
-   15.33
-  ]
+   28.37
+  ],
+  "tone_rmse": 16.95,
+  "tone_changed": false
  },
  {
   "i": 10,
@@ -127,8 +147,10 @@
   "tone_err": 2.19,
   "tone_runner_up": [
    "1f9d7-1f3fe-200d-2642-fe0f",
-   5.65
-  ]
+   15.49
+  ],
+  "tone_rmse": 8.52,
+  "tone_changed": false
  },
  {
   "i": 11,
@@ -140,8 +162,10 @@
   "tone_err": 5.76,
   "tone_runner_up": [
    "1f9cd-1f3fe-200d-2640-fe0f",
-   17.69
-  ]
+   28.01
+  ],
+  "tone_rmse": 12.67,
+  "tone_changed": false
  },
  {
   "i": 12,
@@ -153,8 +177,10 @@
   "tone_err": 3.64,
   "tone_runner_up": [
    "1f9bb-1f3ff",
-   27.8
-  ]
+   29.13
+  ],
+  "tone_rmse": 5.47,
+  "tone_changed": false
  },
  {
   "i": 13,
@@ -166,8 +192,10 @@
   "tone_err": 5.74,
   "tone_runner_up": [
    "1f468-1f3ff-200d-2708-fe0f",
-   10.15
-  ]
+   24.03
+  ],
+  "tone_rmse": 19.94,
+  "tone_changed": false
  },
  {
   "i": 14,
@@ -177,7 +205,9 @@
   "shape_score": 0.976,
   "mirror_margin": -0.263,
   "tone_err": 5.06,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 13.82,
+  "tone_changed": false
  },
  {
   "i": 15,
@@ -188,9 +218,11 @@
   "mirror_margin": -0.016,
   "tone_err": 6.66,
   "tone_runner_up": [
-   "1f47c-1f3fb",
-   9.61
-  ]
+   "1f47c-1f3fc",
+   18.05
+  ],
+  "tone_rmse": 11.51,
+  "tone_changed": false
  },
  {
   "i": 16,
@@ -201,9 +233,11 @@
   "mirror_margin": -0.053,
   "tone_err": 11.6,
   "tone_runner_up": [
-   "1f64f-1f3fc",
-   28.52
-  ]
+   "1f64f",
+   28.03
+  ],
+  "tone_rmse": 10.07,
+  "tone_changed": false
  },
  {
   "i": 17,
@@ -215,8 +249,10 @@
   "tone_err": 5.22,
   "tone_runner_up": [
    "1f9d1-1f3ff-200d-2696-fe0f",
-   12.1
-  ]
+   21.85
+  ],
+  "tone_rmse": 12.88,
+  "tone_changed": false
  },
  {
   "i": 18,
@@ -226,7 +262,9 @@
   "shape_score": 0.995,
   "mirror_margin": -0.013,
   "tone_err": 5.66,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 18.5,
+  "tone_changed": false
  },
  {
   "i": 19,
@@ -237,9 +275,11 @@
   "mirror_margin": -0.414,
   "tone_err": 3.09,
   "tone_runner_up": [
-   "1f3ca-1f3fe",
-   16.79
-  ]
+   "1f3ca-1f3fc",
+   27.49
+  ],
+  "tone_rmse": 12.49,
+  "tone_changed": false
  },
  {
   "i": 20,
@@ -251,21 +291,25 @@
   "tone_err": 6.33,
   "tone_runner_up": [
    "1f9d1-1f3fe-200d-1f4bc",
-   23.36
-  ]
+   31.72
+  ],
+  "tone_rmse": 14.14,
+  "tone_changed": false
  },
  {
   "i": 21,
   "x": 1577.0,
   "y": 356.5,
-  "glyph": "1f9d1-1f3fb-200d-1f33e",
+  "glyph": "1f9d1-200d-1f33e",
   "shape_score": 0.995,
   "mirror_margin": -0.209,
   "tone_err": 4.68,
   "tone_runner_up": [
-   "1f9d1-200d-1f33e",
-   5.94
-  ]
+   "1f9d1-1f3fc-200d-1f33e",
+   13.15
+  ],
+  "tone_rmse": 8.79,
+  "tone_changed": true
  },
  {
   "i": 22,
@@ -277,8 +321,10 @@
   "tone_err": 6.98,
   "tone_runner_up": [
    "1f446-1f3fe",
-   42.53
-  ]
+   43.89
+  ],
+  "tone_rmse": 8.59,
+  "tone_changed": false
  },
  {
   "i": 23,
@@ -290,8 +336,10 @@
   "tone_err": 4.87,
   "tone_runner_up": [
    "1f6b6-1f3ff-200d-2640-fe0f",
-   6.31
-  ]
+   17.36
+  ],
+  "tone_rmse": 12.34,
+  "tone_changed": false
  },
  {
   "i": 24,
@@ -301,20 +349,24 @@
   "shape_score": 0.515,
   "mirror_margin": 0.004,
   "tone_err": 119.43,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 141.73,
+  "tone_changed": false
  },
  {
   "i": 25,
   "x": 469.5,
   "y": 368.0,
-  "glyph": "1f9db-200d-2642-fe0f",
+  "glyph": "1f9db-1f3fb-200d-2642-fe0f",
   "shape_score": 0.977,
   "mirror_margin": 0.001,
   "tone_err": 7.99,
   "tone_runner_up": [
-   "1f9db-1f3fb-200d-2642-fe0f",
-   8.22
-  ]
+   "1f9db-200d-2642-fe0f",
+   20.18
+  ],
+  "tone_rmse": 17.45,
+  "tone_changed": true
  },
  {
   "i": 26,
@@ -326,8 +378,10 @@
   "tone_err": 6.09,
   "tone_runner_up": [
    "1f9d4-1f3ff-200d-2640-fe0f",
-   10.13
-  ]
+   22.22
+  ],
+  "tone_rmse": 15.96,
+  "tone_changed": false
  },
  {
   "i": 27,
@@ -339,8 +393,10 @@
   "tone_err": 7.96,
   "tone_runner_up": [
    "1f3ca-1f3fe-200d-2640-fe0f",
-   20.04
-  ]
+   29.34
+  ],
+  "tone_rmse": 12.54,
+  "tone_changed": false
  },
  {
   "i": 28,
@@ -350,7 +406,9 @@
   "shape_score": 0.977,
   "mirror_margin": -0.026,
   "tone_err": 8.3,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 13.56,
+  "tone_changed": false
  },
  {
   "i": 29,
@@ -362,8 +420,10 @@
   "tone_err": 11.35,
   "tone_runner_up": [
    "1faf2",
-   28.59
-  ]
+   25.7
+  ],
+  "tone_rmse": 9.55,
+  "tone_changed": false
  },
  {
   "i": 30,
@@ -374,9 +434,11 @@
   "mirror_margin": -0.554,
   "tone_err": 7.53,
   "tone_runner_up": [
-   "1f6b4-200d-2640-fe0f",
-   11.2
-  ]
+   "1f6b4-1f3fc-200d-2640-fe0f",
+   34.52
+  ],
+  "tone_rmse": 18.97,
+  "tone_changed": false
  },
  {
   "i": 31,
@@ -387,9 +449,11 @@
   "mirror_margin": -0.601,
   "tone_err": 7.32,
   "tone_runner_up": [
-   "1f9d1-200d-1f9bd-200d-27a1-fe0f",
-   17.0
-  ]
+   "1f9d1-1f3fd-200d-1f9bd-200d-27a1-fe0f",
+   34.76
+  ],
+  "tone_rmse": 19.35,
+  "tone_changed": false
  },
  {
   "i": 32,
@@ -401,8 +465,10 @@
   "tone_err": 6.4,
   "tone_runner_up": [
    "1f469-200d-1f33e",
-   16.01
-  ]
+   41.26
+  ],
+  "tone_rmse": 17.81,
+  "tone_changed": false
  },
  {
   "i": 33,
@@ -412,7 +478,9 @@
   "shape_score": 0.987,
   "mirror_margin": 0.001,
   "tone_err": 8.71,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 15.5,
+  "tone_changed": false
  },
  {
   "i": 34,
@@ -422,20 +490,24 @@
   "shape_score": 0.987,
   "mirror_margin": -0.893,
   "tone_err": 11.36,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 13.55,
+  "tone_changed": false
  },
  {
   "i": 35,
   "x": 853.0,
   "y": 450.5,
-  "glyph": "1f9cd",
+  "glyph": "1f9cd-1f3fc",
   "shape_score": 0.997,
   "mirror_margin": -0.068,
   "tone_err": 6.25,
   "tone_runner_up": [
-   "1f9cd-1f3fc",
-   7.77
-  ]
+   "1f9cd",
+   13.65
+  ],
+  "tone_rmse": 10.58,
+  "tone_changed": true
  },
  {
   "i": 36,
@@ -445,7 +517,9 @@
   "shape_score": 0.994,
   "mirror_margin": -0.07,
   "tone_err": 6.78,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 10.42,
+  "tone_changed": false
  },
  {
   "i": 37,
@@ -455,7 +529,9 @@
   "shape_score": 0.977,
   "mirror_margin": -0.007,
   "tone_err": 8.88,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 15.26,
+  "tone_changed": false
  },
  {
   "i": 38,
@@ -467,21 +543,25 @@
   "tone_err": 6.73,
   "tone_runner_up": [
    "1f9d1-1f3fd-200d-1f527",
-   35.77
-  ]
+   54.13
+  ],
+  "tone_rmse": 16.89,
+  "tone_changed": false
  },
  {
   "i": 39,
   "x": 1719.0,
   "y": 469.0,
-  "glyph": "1f935",
+  "glyph": "1f935-1f3fc",
   "shape_score": 0.979,
   "mirror_margin": -0.008,
   "tone_err": 6.91,
   "tone_runner_up": [
-   "1f935-1f3fc",
-   7.77
-  ]
+   "1f935",
+   22.07
+  ],
+  "tone_rmse": 17.67,
+  "tone_changed": true
  },
  {
   "i": 40,
@@ -493,8 +573,10 @@
   "tone_err": 5.16,
   "tone_runner_up": [
    "1f64b-200d-2640-fe0f",
-   6.82
-  ]
+   22.34
+  ],
+  "tone_rmse": 13.75,
+  "tone_changed": false
  },
  {
   "i": 41,
@@ -505,9 +587,11 @@
   "mirror_margin": -0.032,
   "tone_err": 7.99,
   "tone_runner_up": [
-   "1f9d6-1f3fc",
-   15.1
-  ]
+   "1f9d6-1f3fd",
+   40.5
+  ],
+  "tone_rmse": 11.32,
+  "tone_changed": false
  },
  {
   "i": 42,
@@ -519,8 +603,10 @@
   "tone_err": 5.59,
   "tone_runner_up": [
    "1f471-200d-2640-fe0f",
-   6.37
-  ]
+   42.49
+  ],
+  "tone_rmse": 38.64,
+  "tone_changed": false
  },
  {
   "i": 43,
@@ -532,8 +618,10 @@
   "tone_err": 26.34,
   "tone_runner_up": [
    "1f471-200d-2642-fe0f",
-   34.48
-  ]
+   42.4
+  ],
+  "tone_rmse": 36.53,
+  "tone_changed": false
  },
  {
   "i": 44,
@@ -543,20 +631,24 @@
   "shape_score": 0.958,
   "mirror_margin": -0.144,
   "tone_err": 5.63,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 10.38,
+  "tone_changed": false
  },
  {
   "i": 45,
   "x": 1106.0,
   "y": 517.0,
-  "glyph": "1f487-1f3fc",
+  "glyph": "1f487",
   "shape_score": 0.967,
   "mirror_margin": -1.362,
   "tone_err": 5.05,
   "tone_runner_up": [
-   "1f487",
-   5.95
-  ]
+   "1f487-1f3fc",
+   13.27
+  ],
+  "tone_rmse": 9.59,
+  "tone_changed": true
  },
  {
   "i": 46,
@@ -568,8 +660,10 @@
   "tone_err": 4.68,
   "tone_runner_up": [
    "1f486-1f3fc-200d-2640-fe0f",
-   10.85
-  ]
+   21.38
+  ],
+  "tone_rmse": 14.97,
+  "tone_changed": false
  },
  {
   "i": 47,
@@ -579,7 +673,9 @@
   "shape_score": 0.979,
   "mirror_margin": -0.962,
   "tone_err": 5.01,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 11.15,
+  "tone_changed": false
  },
  {
   "i": 48,
@@ -591,8 +687,10 @@
   "tone_err": 5.25,
   "tone_runner_up": [
    "1f46e-1f3fe",
-   15.54
-  ]
+   29.34
+  ],
+  "tone_rmse": 16.55,
+  "tone_changed": false
  },
  {
   "i": 49,
@@ -603,9 +701,11 @@
   "mirror_margin": -0.036,
   "tone_err": 20.59,
   "tone_runner_up": [
-   "1f9d1-1f3fd-200d-1f9b0",
-   34.69
-  ]
+   "1f9d1-1f3ff-200d-1f9b0",
+   41.09
+  ],
+  "tone_rmse": 34.96,
+  "tone_changed": false
  },
  {
   "i": 50,
@@ -617,21 +717,25 @@
   "tone_err": 4.65,
   "tone_runner_up": [
    "1f469-200d-1f37c",
-   9.42
-  ]
+   23.16
+  ],
+  "tone_rmse": 15.84,
+  "tone_changed": false
  },
  {
   "i": 51,
   "x": 1656.0,
   "y": 562.5,
-  "glyph": "1f574-1f3ff",
+  "glyph": "1f574-1f3fe",
   "shape_score": 0.948,
   "mirror_margin": -0.021,
   "tone_err": 8.37,
   "tone_runner_up": [
-   "1f574-1f3fe",
-   9.41
-  ]
+   "1f574-1f3ff",
+   21.36
+  ],
+  "tone_rmse": 20.36,
+  "tone_changed": true
  },
  {
   "i": 52,
@@ -643,8 +747,10 @@
   "tone_err": 3.01,
   "tone_runner_up": [
    "1f468-200d-1f3eb",
-   4.57
-  ]
+   16.56
+  ],
+  "tone_rmse": 13.17,
+  "tone_changed": false
  },
  {
   "i": 53,
@@ -654,7 +760,9 @@
   "shape_score": 0.991,
   "mirror_margin": -0.001,
   "tone_err": 7.84,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 12.07,
+  "tone_changed": false
  },
  {
   "i": 54,
@@ -664,7 +772,9 @@
   "shape_score": 0.99,
   "mirror_margin": -0.002,
   "tone_err": 3.93,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 14.53,
+  "tone_changed": false
  },
  {
   "i": 55,
@@ -675,9 +785,11 @@
   "mirror_margin": -0.132,
   "tone_err": 3.27,
   "tone_runner_up": [
-   "1faf1-1f3fd-200d-1faf2-1f3fe",
-   15.44
-  ]
+   "1faf1-1f3fe-200d-1faf2-1f3fc",
+   23.54
+  ],
+  "tone_rmse": 5.53,
+  "tone_changed": false
  },
  {
   "i": 56,
@@ -687,7 +799,9 @@
   "shape_score": 0.977,
   "mirror_margin": 0.017,
   "tone_err": 14.18,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 29.99,
+  "tone_changed": false
  },
  {
   "i": 57,
@@ -697,7 +811,9 @@
   "shape_score": 0.917,
   "mirror_margin": -0.278,
   "tone_err": 66.38,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 83.26,
+  "tone_changed": false
  },
  {
   "i": 58,
@@ -709,8 +825,10 @@
   "tone_err": 5.95,
   "tone_runner_up": [
    "1f477-1f3fe-200d-2640-fe0f",
-   17.92
-  ]
+   28.25
+  ],
+  "tone_rmse": 17.04,
+  "tone_changed": false
  },
  {
   "i": 59,
@@ -722,8 +840,10 @@
   "tone_err": 5.37,
   "tone_runner_up": [
    "1f468-1f3ff-200d-1f33e",
-   5.88
-  ]
+   17.2
+  ],
+  "tone_rmse": 12.06,
+  "tone_changed": false
  },
  {
   "i": 60,
@@ -735,8 +855,10 @@
   "tone_err": 3.68,
   "tone_runner_up": [
    "1f9dd-1f3fe-200d-2642-fe0f",
-   15.58
-  ]
+   24.86
+  ],
+  "tone_rmse": 9.67,
+  "tone_changed": false
  },
  {
   "i": 61,
@@ -748,8 +870,10 @@
   "tone_err": 6.02,
   "tone_runner_up": [
    "1f931",
-   10.25
-  ]
+   15.68
+  ],
+  "tone_rmse": 11.72,
+  "tone_changed": false
  },
  {
   "i": 62,
@@ -760,9 +884,11 @@
   "mirror_margin": -0.238,
   "tone_err": 6.13,
   "tone_runner_up": [
-   "1f6a3-1f3ff",
-   7.7
-  ]
+   "1f6a3-1f3fd",
+   24.6
+  ],
+  "tone_rmse": 11.58,
+  "tone_changed": false
  },
  {
   "i": 63,
@@ -773,9 +899,11 @@
   "mirror_margin": -0.202,
   "tone_err": 8.91,
   "tone_runner_up": [
-   "1f918-1f3fb",
-   14.32
-  ]
+   "1f918-1f3fc",
+   17.28
+  ],
+  "tone_rmse": 9.58,
+  "tone_changed": false
  },
  {
   "i": 64,
@@ -785,7 +913,9 @@
   "shape_score": 0.936,
   "mirror_margin": -0.443,
   "tone_err": 9.42,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 10.01,
+  "tone_changed": false
  },
  {
   "i": 65,
@@ -795,7 +925,9 @@
   "shape_score": 0.99,
   "mirror_margin": -0.109,
   "tone_err": 11.16,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 19.86,
+  "tone_changed": false
  },
  {
   "i": 66,
@@ -807,8 +939,10 @@
   "tone_err": 9.43,
   "tone_runner_up": [
    "1f482-200d-2640-fe0f",
-   9.65
-  ]
+   14.48
+  ],
+  "tone_rmse": 13.23,
+  "tone_changed": false
  },
  {
   "i": 67,
@@ -820,8 +954,10 @@
   "tone_err": 11.3,
   "tone_runner_up": [
    "1f91c",
-   31.66
-  ]
+   31.39
+  ],
+  "tone_rmse": 10.91,
+  "tone_changed": false
  },
  {
   "i": 68,
@@ -833,8 +969,10 @@
   "tone_err": 6.44,
   "tone_runner_up": [
    "1f471-1f3fe-200d-2642-fe0f",
-   26.22
-  ]
+   34.12
+  ],
+  "tone_rmse": 12.64,
+  "tone_changed": false
  },
  {
   "i": 69,
@@ -845,9 +983,11 @@
   "mirror_margin": -0.43,
   "tone_err": 4.52,
   "tone_runner_up": [
-   "1f3ca-1f3fe-200d-2642-fe0f",
-   34.02
-  ]
+   "1f3ca-1f3fc-200d-2642-fe0f",
+   39.24
+  ],
+  "tone_rmse": 14.31,
+  "tone_changed": false
  },
  {
   "i": 70,
@@ -859,8 +999,10 @@
   "tone_err": 5.6,
   "tone_runner_up": [
    "1f9d9-1f3fe",
-   13.95
-  ]
+   24.08
+  ],
+  "tone_rmse": 13.84,
+  "tone_changed": false
  },
  {
   "i": 71,
@@ -872,8 +1014,10 @@
   "tone_err": 3.78,
   "tone_runner_up": [
    "1f9d9-1f3fc-200d-2642-fe0f",
-   5.72
-  ]
+   13.89
+  ],
+  "tone_rmse": 11.15,
+  "tone_changed": false
  },
  {
   "i": 72,
@@ -885,8 +1029,10 @@
   "tone_err": 6.69,
   "tone_runner_up": [
    "270a",
-   10.29
-  ]
+   12.92
+  ],
+  "tone_rmse": 9.04,
+  "tone_changed": false
  },
  {
   "i": 73,
@@ -898,21 +1044,25 @@
   "tone_err": 4.13,
   "tone_runner_up": [
    "1f6b6-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
-   8.23
-  ]
+   18.95
+  ],
+  "tone_rmse": 12.8,
+  "tone_changed": false
  },
  {
   "i": 74,
   "x": 1157.5,
   "y": 708.0,
-  "glyph": "1f595-1f3fb",
+  "glyph": "1f595",
   "shape_score": 0.998,
   "mirror_margin": -0.159,
   "tone_err": 9.69,
   "tone_runner_up": [
-   "1f595",
-   10.28
-  ]
+   "1f595-1f3fb",
+   12.86
+  ],
+  "tone_rmse": 8.83,
+  "tone_changed": true
  },
  {
   "i": 75,
@@ -924,8 +1074,10 @@
   "tone_err": 4.81,
   "tone_runner_up": [
    "1f926-1f3ff",
-   18.45
-  ]
+   23.9
+  ],
+  "tone_rmse": 11.54,
+  "tone_changed": false
  },
  {
   "i": 76,
@@ -937,8 +1089,10 @@
   "tone_err": 6.99,
   "tone_runner_up": [
    "1f9db-1f3fb",
-   7.55
-  ]
+   21.47
+  ],
+  "tone_rmse": 15.85,
+  "tone_changed": false
  },
  {
   "i": 77,
@@ -949,9 +1103,11 @@
   "mirror_margin": -1.168,
   "tone_err": 4.52,
   "tone_runner_up": [
-   "1f469-200d-1f9af-200d-27a1-fe0f",
-   11.98
-  ]
+   "1f469-1f3fd-200d-1f9af-200d-27a1-fe0f",
+   39.68
+  ],
+  "tone_rmse": 26.78,
+  "tone_changed": false
  },
  {
   "i": 78,
@@ -961,7 +1117,9 @@
   "shape_score": 0.985,
   "mirror_margin": -0.011,
   "tone_err": 4.99,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 13.79,
+  "tone_changed": false
  },
  {
   "i": 79,
@@ -971,7 +1129,9 @@
   "shape_score": 0.99,
   "mirror_margin": -0.018,
   "tone_err": 5.5,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 21.96,
+  "tone_changed": false
  },
  {
   "i": 80,
@@ -983,21 +1143,25 @@
   "tone_err": 10.8,
   "tone_runner_up": [
    "1f9d1-200d-1f4bc",
-   12.55
-  ]
+   38.44
+  ],
+  "tone_rmse": 35.05,
+  "tone_changed": false
  },
  {
   "i": 81,
   "x": 1565.5,
   "y": 750.0,
-  "glyph": "1f473-1f3fb",
+  "glyph": "1f473",
   "shape_score": 0.982,
   "mirror_margin": -0.014,
   "tone_err": 5.8,
   "tone_runner_up": [
-   "1f473",
-   8.02
-  ]
+   "1f473-1f3fc",
+   14.94
+  ],
+  "tone_rmse": 11.75,
+  "tone_changed": true
  },
  {
   "i": 82,
@@ -1009,8 +1173,10 @@
   "tone_err": 6.71,
   "tone_runner_up": [
    "1f9d1-200d-1f3a4",
-   13.42
-  ]
+   21.17
+  ],
+  "tone_rmse": 13.43,
+  "tone_changed": false
  },
  {
   "i": 83,
@@ -1022,8 +1188,10 @@
   "tone_err": 1.73,
   "tone_runner_up": [
    "1f596-1f3ff",
-   34.99
-  ]
+   33.43
+  ],
+  "tone_rmse": 6.75,
+  "tone_changed": false
  },
  {
   "i": 84,
@@ -1034,22 +1202,26 @@
   "mirror_margin": -0.39,
   "tone_err": 8.87,
   "tone_runner_up": [
-   "1faf3-1f3fb",
-   11.31
-  ]
+   "1faf3-1f3fc",
+   18.56
+  ],
+  "tone_rmse": 9.06,
+  "tone_changed": false
  },
  {
   "i": 85,
   "x": 1667.0,
   "y": 762.5,
-  "glyph": "1f473-1f3fb-200d-2640-fe0f",
+  "glyph": "1f473-200d-2640-fe0f",
   "shape_score": 0.992,
   "mirror_margin": -0.05,
   "tone_err": 5.7,
   "tone_runner_up": [
-   "1f473-200d-2640-fe0f",
-   8.24
-  ]
+   "1f473-1f3fc-200d-2640-fe0f",
+   19.93
+  ],
+  "tone_rmse": 15.0,
+  "tone_changed": true
  },
  {
   "i": 86,
@@ -1060,9 +1232,11 @@
   "mirror_margin": -0.003,
   "tone_err": 6.22,
   "tone_runner_up": [
-   "1f475-1f3fb",
-   7.29
-  ]
+   "1f475-1f3fc",
+   24.06
+  ],
+  "tone_rmse": 16.12,
+  "tone_changed": false
  },
  {
   "i": 87,
@@ -1074,8 +1248,10 @@
   "tone_err": 8.15,
   "tone_runner_up": [
    "1f9d2-1f3fe",
-   30.74
-  ]
+   35.31
+  ],
+  "tone_rmse": 12.45,
+  "tone_changed": false
  },
  {
   "i": 88,
@@ -1087,8 +1263,10 @@
   "tone_err": 5.88,
   "tone_runner_up": [
    "1f9d1-1f3fe-200d-1f9b0",
-   23.26
-  ]
+   33.28
+  ],
+  "tone_rmse": 13.62,
+  "tone_changed": false
  },
  {
   "i": 89,
@@ -1100,8 +1278,10 @@
   "tone_err": 5.27,
   "tone_runner_up": [
    "1f469-200d-2696-fe0f",
-   9.73
-  ]
+   30.25
+  ],
+  "tone_rmse": 13.27,
+  "tone_changed": false
  },
  {
   "i": 90,
@@ -1113,8 +1293,10 @@
   "tone_err": 4.35,
   "tone_runner_up": [
    "1f469-1f3fe-200d-1f3eb",
-   9.97
-  ]
+   31.83
+  ],
+  "tone_rmse": 29.94,
+  "tone_changed": false
  },
  {
   "i": 91,
@@ -1126,8 +1308,10 @@
   "tone_err": 7.97,
   "tone_runner_up": [
    "1faf4-1f3fe",
-   41.4
-  ]
+   43.61
+  ],
+  "tone_rmse": 10.41,
+  "tone_changed": false
  },
  {
   "i": 92,
@@ -1139,8 +1323,10 @@
   "tone_err": 9.58,
   "tone_runner_up": [
    "1f3cb-1f3fe-200d-2640-fe0f",
-   12.35
-  ]
+   24.6
+  ],
+  "tone_rmse": 13.61,
+  "tone_changed": false
  },
  {
   "i": 93,
@@ -1152,8 +1338,10 @@
   "tone_err": 9.75,
   "tone_runner_up": [
    "1f9d1-1f3fd-200d-1f9b1",
-   56.45
-  ]
+   64.27
+  ],
+  "tone_rmse": 23.47,
+  "tone_changed": false
  },
  {
   "i": 94,
@@ -1165,8 +1353,10 @@
   "tone_err": 1.74,
   "tone_runner_up": [
    "1faf5-1f3fe",
-   38.33
-  ]
+   37.69
+  ],
+  "tone_rmse": 4.7,
+  "tone_changed": false
  },
  {
   "i": 95,
@@ -1178,8 +1368,10 @@
   "tone_err": 10.35,
   "tone_runner_up": [
    "1f932",
-   18.71
-  ]
+   18.36
+  ],
+  "tone_rmse": 10.5,
+  "tone_changed": false
  },
  {
   "i": 96,
@@ -1189,7 +1381,9 @@
   "shape_score": 0.958,
   "mirror_margin": -0.669,
   "tone_err": 27.35,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 43.81,
+  "tone_changed": false
  },
  {
   "i": 97,
@@ -1201,8 +1395,10 @@
   "tone_err": 6.53,
   "tone_runner_up": [
    "1f469-1f3fe-200d-2708-fe0f",
-   15.06
-  ]
+   25.44
+  ],
+  "tone_rmse": 14.91,
+  "tone_changed": false
  },
  {
   "i": 98,
@@ -1214,8 +1410,10 @@
   "tone_err": 5.84,
   "tone_runner_up": [
    "1f64e-1f3ff",
-   16.55
-  ]
+   21.85
+  ],
+  "tone_rmse": 11.5,
+  "tone_changed": false
  },
  {
   "i": 99,
@@ -1225,7 +1423,9 @@
   "shape_score": 0.99,
   "mirror_margin": -0.031,
   "tone_err": 8.62,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 11.88,
+  "tone_changed": false
  },
  {
   "i": 100,
@@ -1237,21 +1437,25 @@
   "tone_err": 4.35,
   "tone_runner_up": [
    "1f64b-1f3ff",
-   14.58
-  ]
+   20.72
+  ],
+  "tone_rmse": 9.56,
+  "tone_changed": false
  },
  {
   "i": 101,
   "x": 1535.5,
   "y": 842.0,
-  "glyph": "1f6a3-1f3ff-200d-2640-fe0f",
+  "glyph": "1f6a3-1f3fc-200d-2640-fe0f",
   "shape_score": 0.935,
   "mirror_margin": -0.257,
   "tone_err": 6.32,
   "tone_runner_up": [
-   "1f6a3-1f3fe-200d-2640-fe0f",
-   7.53
-  ]
+   "1f6a3-200d-2640-fe0f",
+   16.2
+  ],
+  "tone_rmse": 15.98,
+  "tone_changed": true
  },
  {
   "i": 102,
@@ -1261,7 +1465,9 @@
   "shape_score": 0.964,
   "mirror_margin": -0.086,
   "tone_err": 5.36,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 18.53,
+  "tone_changed": false
  },
  {
   "i": 103,
@@ -1273,8 +1479,10 @@
   "tone_err": 5.86,
   "tone_runner_up": [
    "1f469-200d-1f52c",
-   8.39
-  ]
+   23.43
+  ],
+  "tone_rmse": 13.2,
+  "tone_changed": false
  },
  {
   "i": 104,
@@ -1284,7 +1492,9 @@
   "shape_score": 0.992,
   "mirror_margin": -0.001,
   "tone_err": 8.91,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 10.24,
+  "tone_changed": false
  },
  {
   "i": 105,
@@ -1296,8 +1506,10 @@
   "tone_err": 5.12,
   "tone_runner_up": [
    "1f9dd-1f3fe-200d-2640-fe0f",
-   14.71
-  ]
+   23.01
+  ],
+  "tone_rmse": 11.35,
+  "tone_changed": false
  },
  {
   "i": 106,
@@ -1309,8 +1521,10 @@
   "tone_err": 2.86,
   "tone_runner_up": [
    "1f468-1f3ff-200d-1f9b2",
-   31.0
-  ]
+   32.07
+  ],
+  "tone_rmse": 12.22,
+  "tone_changed": false
  },
  {
   "i": 107,
@@ -1321,35 +1535,41 @@
   "mirror_margin": 0.522,
   "tone_err": 9.05,
   "tone_runner_up": [
-   "1f3c3-200d-27a1-fe0f",
-   21.59
-  ]
+   "1f3c3-1f3fe-200d-27a1-fe0f",
+   32.79
+  ],
+  "tone_rmse": 13.79,
+  "tone_changed": false
  },
  {
   "i": 108,
   "x": 1024.5,
   "y": 900.5,
-  "glyph": "1f443-1f3fb",
+  "glyph": "1f443",
   "shape_score": 0.989,
   "mirror_margin": 0.0,
   "tone_err": 4.37,
   "tone_runner_up": [
-   "1f443",
-   10.17
-  ]
+   "1f443-1f3fb",
+   13.72
+  ],
+  "tone_rmse": 10.15,
+  "tone_changed": true
  },
  {
   "i": 109,
   "x": 1137.0,
   "y": 1109.5,
-  "glyph": "1f9d1-1f3fb-200d-1f692",
+  "glyph": "1f9d1-1f3fc-200d-1f692",
   "shape_score": 0.964,
   "mirror_margin": -0.379,
   "tone_err": 3.55,
   "tone_runner_up": [
-   "1f9d1-200d-1f692",
-   8.81
-  ]
+   "1f9d1-1f3fd-200d-1f692",
+   72.84
+  ],
+  "tone_rmse": 72.67,
+  "tone_changed": true
  },
  {
   "i": 110,
@@ -1361,8 +1581,10 @@
   "tone_err": 14.11,
   "tone_runner_up": [
    "1f469-200d-1f37c",
-   14.33
-  ]
+   67.63
+  ],
+  "tone_rmse": 65.96,
+  "tone_changed": false
  },
  {
   "i": 111,
@@ -1374,8 +1596,10 @@
   "tone_err": 2.83,
   "tone_runner_up": [
    "1f90c-1f3ff",
-   32.49
-  ]
+   31.52
+  ],
+  "tone_rmse": 6.31,
+  "tone_changed": false
  },
  {
   "i": 112,
@@ -1386,9 +1610,11 @@
   "mirror_margin": -0.28,
   "tone_err": 4.17,
   "tone_runner_up": [
-   "1f468-1f3fb-200d-1f3a4",
-   6.37
-  ]
+   "1f468-1f3fc-200d-1f3a4",
+   16.53
+  ],
+  "tone_rmse": 13.28,
+  "tone_changed": false
  },
  {
   "i": 113,
@@ -1399,9 +1625,11 @@
   "mirror_margin": -0.548,
   "tone_err": 10.99,
   "tone_runner_up": [
-   "1f90f",
-   37.3
-  ]
+   "1f90f-1f3fc",
+   40.54
+  ],
+  "tone_rmse": 14.31,
+  "tone_changed": false
  },
  {
   "i": 114,
@@ -1413,8 +1641,10 @@
   "tone_err": 6.98,
   "tone_runner_up": [
    "1f645-200d-2640-fe0f",
-   7.6
-  ]
+   18.16
+  ],
+  "tone_rmse": 12.99,
+  "tone_changed": false
  },
  {
   "i": 115,
@@ -1426,8 +1656,10 @@
   "tone_err": 3.95,
   "tone_runner_up": [
    "1f469-1f3fc-200d-1f527",
-   7.88
-  ]
+   23.97
+  ],
+  "tone_rmse": 14.54,
+  "tone_changed": false
  },
  {
   "i": 116,
@@ -1439,8 +1671,10 @@
   "tone_err": 5.36,
   "tone_runner_up": [
    "1f64d-1f3fc-200d-2642-fe0f",
-   14.03
-  ]
+   26.4
+  ],
+  "tone_rmse": 21.89,
+  "tone_changed": false
  },
  {
   "i": 117,
@@ -1451,9 +1685,11 @@
   "mirror_margin": -0.376,
   "tone_err": 3.28,
   "tone_runner_up": [
-   "1f6b5",
-   4.74
-  ]
+   "1f6b5-1f3fc",
+   19.11
+  ],
+  "tone_rmse": 17.63,
+  "tone_changed": false
  },
  {
   "i": 118,
@@ -1464,9 +1700,11 @@
   "mirror_margin": -1.075,
   "tone_err": 3.12,
   "tone_runner_up": [
-   "1f3cc-1f3fb",
-   12.93
-  ]
+   "1f3cc-1f3fd",
+   42.33
+  ],
+  "tone_rmse": 11.99,
+  "tone_changed": false
  },
  {
   "i": 119,
@@ -1476,7 +1714,9 @@
   "shape_score": 0.992,
   "mirror_margin": -0.013,
   "tone_err": 3.29,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 10.01,
+  "tone_changed": false
  },
  {
   "i": 120,
@@ -1488,8 +1728,10 @@
   "tone_err": 4.38,
   "tone_runner_up": [
    "1f645-1f3ff-200d-2642-fe0f",
-   9.8
-  ]
+   20.79
+  ],
+  "tone_rmse": 12.58,
+  "tone_changed": false
  },
  {
   "i": 121,
@@ -1501,8 +1743,10 @@
   "tone_err": 4.76,
   "tone_runner_up": [
    "1f468-200d-1f37c",
-   6.89
-  ]
+   23.07
+  ],
+  "tone_rmse": 17.92,
+  "tone_changed": false
  },
  {
   "i": 122,
@@ -1514,21 +1758,25 @@
   "tone_err": 3.39,
   "tone_runner_up": [
    "1f9d7-1f3fe-200d-2640-fe0f",
-   5.6
-  ]
+   17.07
+  ],
+  "tone_rmse": 8.66,
+  "tone_changed": false
  },
  {
   "i": 123,
   "x": 1696.5,
   "y": 987.0,
-  "glyph": "1f469-1f3fb-200d-1f3a4",
+  "glyph": "1f469-200d-1f3a4",
   "shape_score": 0.985,
   "mirror_margin": -0.424,
   "tone_err": 4.54,
   "tone_runner_up": [
-   "1f469-200d-1f3a4",
-   5.31
-  ]
+   "1f469-1f3fc-200d-1f3a4",
+   18.01
+  ],
+  "tone_rmse": 15.11,
+  "tone_changed": true
  },
  {
   "i": 124,
@@ -1539,9 +1787,11 @@
   "mirror_margin": -0.631,
   "tone_err": 10.65,
   "tone_runner_up": [
-   "1f9b5-1f3fb",
-   14.17
-  ]
+   "1f9b5-1f3fc",
+   17.56
+  ],
+  "tone_rmse": 7.31,
+  "tone_changed": false
  },
  {
   "i": 125,
@@ -1552,9 +1802,11 @@
   "mirror_margin": -1.159,
   "tone_err": 5.24,
   "tone_runner_up": [
-   "1f468-200d-1f9af",
-   13.12
-  ]
+   "1f468-1f3fd-200d-1f9af",
+   36.13
+  ],
+  "tone_rmse": 18.75,
+  "tone_changed": false
  },
  {
   "i": 126,
@@ -1566,8 +1818,10 @@
   "tone_err": 1.24,
   "tone_runner_up": [
    "1f44b-1f3ff",
-   35.82
-  ]
+   33.14
+  ],
+  "tone_rmse": 6.53,
+  "tone_changed": false
  },
  {
   "i": 127,
@@ -1579,8 +1833,10 @@
   "tone_err": 5.69,
   "tone_runner_up": [
    "1f481-1f3fc",
-   6.66
-  ]
+   13.37
+  ],
+  "tone_rmse": 10.91,
+  "tone_changed": false
  },
  {
   "i": 128,
@@ -1591,22 +1847,26 @@
   "mirror_margin": -0.676,
   "tone_err": 3.68,
   "tone_runner_up": [
-   "26f9-1f3fd",
-   11.72
-  ]
+   "26f9-1f3fb",
+   37.13
+  ],
+  "tone_rmse": 20.2,
+  "tone_changed": false
  },
  {
   "i": 129,
   "x": 505.0,
   "y": 1019.0,
-  "glyph": "1f9dc-1f3ff-200d-2640-fe0f",
+  "glyph": "1f9dc-1f3fe-200d-2640-fe0f",
   "shape_score": 0.966,
   "mirror_margin": -0.799,
   "tone_err": 5.65,
   "tone_runner_up": [
-   "1f9dc-1f3fe-200d-2640-fe0f",
-   6.2
-  ]
+   "1f9dc-1f3ff-200d-2640-fe0f",
+   22.69
+  ],
+  "tone_rmse": 17.53,
+  "tone_changed": true
  },
  {
   "i": 130,
@@ -1618,8 +1878,10 @@
   "tone_err": 4.62,
   "tone_runner_up": [
    "1f9b8-1f3fc-200d-2642-fe0f",
-   9.52
-  ]
+   21.67
+  ],
+  "tone_rmse": 18.67,
+  "tone_changed": false
  },
  {
   "i": 131,
@@ -1631,8 +1893,10 @@
   "tone_err": 6.67,
   "tone_runner_up": [
    "1f487-200d-2640-fe0f",
-   12.34
-  ]
+   24.14
+  ],
+  "tone_rmse": 12.52,
+  "tone_changed": false
  },
  {
   "i": 132,
@@ -1643,9 +1907,11 @@
   "mirror_margin": -0.02,
   "tone_err": 6.28,
   "tone_runner_up": [
-   "1f646-200d-2642-fe0f",
-   19.96
-  ]
+   "1f646-1f3fd-200d-2642-fe0f",
+   46.91
+  ],
+  "tone_rmse": 25.67,
+  "tone_changed": false
  },
  {
   "i": 133,
@@ -1655,7 +1921,9 @@
   "shape_score": 0.994,
   "mirror_margin": -0.002,
   "tone_err": 8.6,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 9.66,
+  "tone_changed": false
  },
  {
   "i": 134,
@@ -1667,8 +1935,10 @@
   "tone_err": 4.14,
   "tone_runner_up": [
    "1f3cc-1f3fc-200d-2642-fe0f",
-   6.13
-  ]
+   19.2
+  ],
+  "tone_rmse": 13.29,
+  "tone_changed": false
  },
  {
   "i": 135,
@@ -1679,9 +1949,11 @@
   "mirror_margin": -0.441,
   "tone_err": 3.53,
   "tone_runner_up": [
-   "1f469-1f3fb-200d-1f692",
-   3.83
-  ]
+   "1f469-1f3fc-200d-1f692",
+   17.96
+  ],
+  "tone_rmse": 12.43,
+  "tone_changed": false
  },
  {
   "i": 136,
@@ -1693,8 +1965,10 @@
   "tone_err": 4.1,
   "tone_runner_up": [
    "1f647-1f3fe-200d-2640-fe0f",
-   21.19
-  ]
+   29.49
+  ],
+  "tone_rmse": 13.56,
+  "tone_changed": false
  },
  {
   "i": 137,
@@ -1706,8 +1980,10 @@
   "tone_err": 7.16,
   "tone_runner_up": [
    "1f470-1f3fd-200d-2640-fe0f",
-   30.64
-  ]
+   58.64
+  ],
+  "tone_rmse": 26.4,
+  "tone_changed": false
  },
  {
   "i": 138,
@@ -1718,9 +1994,11 @@
   "mirror_margin": -0.46,
   "tone_err": 3.02,
   "tone_runner_up": [
-   "1f919-1f3fc",
-   41.25
-  ]
+   "1f919-1f3fe",
+   42.58
+  ],
+  "tone_rmse": 4.83,
+  "tone_changed": false
  },
  {
   "i": 139,
@@ -1732,8 +2010,10 @@
   "tone_err": 6.34,
   "tone_runner_up": [
    "1f477-1f3fe-200d-2642-fe0f",
-   18.91
-  ]
+   26.97
+  ],
+  "tone_rmse": 9.72,
+  "tone_changed": false
  },
  {
   "i": 140,
@@ -1745,8 +2025,10 @@
   "tone_err": 7.08,
   "tone_runner_up": [
    "261d-1f3fe",
-   42.56
-  ]
+   44.0
+  ],
+  "tone_rmse": 9.0,
+  "tone_changed": false
  },
  {
   "i": 141,
@@ -1758,8 +2040,10 @@
   "tone_err": 6.18,
   "tone_runner_up": [
    "1f44d",
-   8.66
-  ]
+   10.19
+  ],
+  "tone_rmse": 6.56,
+  "tone_changed": false
  },
  {
   "i": 142,
@@ -1769,7 +2053,9 @@
   "shape_score": 0.966,
   "mirror_margin": -1.002,
   "tone_err": 6.69,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 8.12,
+  "tone_changed": false
  },
  {
   "i": 143,
@@ -1781,8 +2067,10 @@
   "tone_err": 7.15,
   "tone_runner_up": [
    "1f3cb-1f3ff",
-   11.09
-  ]
+   19.77
+  ],
+  "tone_rmse": 12.92,
+  "tone_changed": false
  },
  {
   "i": 144,
@@ -1794,8 +2082,10 @@
   "tone_err": 8.6,
   "tone_runner_up": [
    "1faf6",
-   11.39
-  ]
+   11.09
+  ],
+  "tone_rmse": 8.98,
+  "tone_changed": false
  },
  {
   "i": 145,
@@ -1807,8 +2097,10 @@
   "tone_err": 4.91,
   "tone_runner_up": [
    "1f469-1f3fe-200d-1f9b3",
-   15.38
-  ]
+   25.43
+  ],
+  "tone_rmse": 11.79,
+  "tone_changed": false
  },
  {
   "i": 146,
@@ -1818,7 +2110,9 @@
   "shape_score": 0.993,
   "mirror_margin": -0.089,
   "tone_err": 8.2,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 10.38,
+  "tone_changed": false
  },
  {
   "i": 147,
@@ -1830,8 +2124,10 @@
   "tone_err": 6.45,
   "tone_runner_up": [
    "1f6b6-1f3fe-200d-2640-fe0f-200d-27a1-fe0f",
-   15.39
-  ]
+   24.91
+  ],
+  "tone_rmse": 14.28,
+  "tone_changed": false
  },
  {
   "i": 148,
@@ -1843,8 +2139,10 @@
   "tone_err": 9.2,
   "tone_runner_up": [
    "1f977",
-   9.29
-  ]
+   11.27
+  ],
+  "tone_rmse": 11.16,
+  "tone_changed": false
  },
  {
   "i": 149,
@@ -1856,8 +2154,10 @@
   "tone_err": 8.73,
   "tone_runner_up": [
    "1f469-1f3fe-200d-1f9bc-200d-27a1-fe0f",
-   12.39
-  ]
+   18.71
+  ],
+  "tone_rmse": 13.14,
+  "tone_changed": false
  },
  {
   "i": 150,
@@ -1869,8 +2169,10 @@
   "tone_err": 11.41,
   "tone_runner_up": [
    "1f483-1f3fe",
-   16.58
-  ]
+   21.3
+  ],
+  "tone_rmse": 11.82,
+  "tone_changed": false
  },
  {
   "i": 151,
@@ -1882,21 +2184,25 @@
   "tone_err": 7.5,
   "tone_runner_up": [
    "270c-1f3fe",
-   42.3
-  ]
+   43.33
+  ],
+  "tone_rmse": 9.14,
+  "tone_changed": false
  },
  {
   "i": 152,
   "x": 926.0,
   "y": 1182.0,
-  "glyph": "1f646-1f3ff-200d-2640-fe0f",
+  "glyph": "1f646-1f3fe-200d-2640-fe0f",
   "shape_score": 0.953,
   "mirror_margin": -0.043,
   "tone_err": 6.73,
   "tone_runner_up": [
-   "1f646-1f3fe-200d-2640-fe0f",
-   9.37
-  ]
+   "1f646-1f3ff-200d-2640-fe0f",
+   17.1
+  ],
+  "tone_rmse": 15.58,
+  "tone_changed": true
  },
  {
   "i": 153,
@@ -1908,8 +2214,10 @@
   "tone_err": 4.77,
   "tone_runner_up": [
    "1f64e-1f3fc-200d-2642-fe0f",
-   13.4
-  ]
+   18.75
+  ],
+  "tone_rmse": 10.46,
+  "tone_changed": false
  },
  {
   "i": 154,
@@ -1920,9 +2228,11 @@
   "mirror_margin": -0.194,
   "tone_err": 4.76,
   "tone_runner_up": [
-   "1f937-1f3fb",
-   11.16
-  ]
+   "1f937-1f3fe",
+   22.56
+  ],
+  "tone_rmse": 10.09,
+  "tone_changed": false
  },
  {
   "i": 155,
@@ -1934,8 +2244,10 @@
   "tone_err": 6.63,
   "tone_runner_up": [
    "1f9d1-1f3ff-200d-1f393",
-   9.05
-  ]
+   21.27
+  ],
+  "tone_rmse": 14.26,
+  "tone_changed": false
  },
  {
   "i": 156,
@@ -1947,8 +2259,10 @@
   "tone_err": 6.58,
   "tone_runner_up": [
    "1faf1-1f3fe",
-   41.92
-  ]
+   45.24
+  ],
+  "tone_rmse": 10.46,
+  "tone_changed": false
  },
  {
   "i": 157,
@@ -1958,7 +2272,9 @@
   "shape_score": 0.994,
   "mirror_margin": -1.038,
   "tone_err": 5.72,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 7.5,
+  "tone_changed": false
  },
  {
   "i": 158,
@@ -1970,8 +2286,10 @@
   "tone_err": 8.17,
   "tone_runner_up": [
    "1f9d4-1f3fe",
-   27.56
-  ]
+   33.35
+  ],
+  "tone_rmse": 14.94,
+  "tone_changed": false
  },
  {
   "i": 159,
@@ -1981,20 +2299,24 @@
   "shape_score": 0.979,
   "mirror_margin": -0.091,
   "tone_err": 4.23,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 20.56,
+  "tone_changed": false
  },
  {
   "i": 160,
   "x": 1789.0,
   "y": 1205.0,
-  "glyph": "1faf8-1f3fc",
+  "glyph": "1faf8",
   "shape_score": 0.997,
   "mirror_margin": -0.718,
   "tone_err": 6.32,
   "tone_runner_up": [
-   "1faf8",
-   6.38
-  ]
+   "1faf8-1f3fc",
+   9.72
+  ],
+  "tone_rmse": 6.35,
+  "tone_changed": true
  },
  {
   "i": 161,
@@ -2004,7 +2326,9 @@
   "shape_score": 0.917,
   "mirror_margin": -0.28,
   "tone_err": 35.65,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 59.13,
+  "tone_changed": false
  },
  {
   "i": 162,
@@ -2016,8 +2340,10 @@
   "tone_err": 5.56,
   "tone_runner_up": [
    "1f9cf-1f3ff-200d-2642-fe0f",
-   17.09
-  ]
+   25.81
+  ],
+  "tone_rmse": 13.68,
+  "tone_changed": false
  },
  {
   "i": 163,
@@ -2029,8 +2355,10 @@
   "tone_err": 1.88,
   "tone_runner_up": [
    "1f9b6-1f3ff",
-   31.51
-  ]
+   29.32
+  ],
+  "tone_rmse": 8.2,
+  "tone_changed": false
  },
  {
   "i": 164,
@@ -2042,8 +2370,10 @@
   "tone_err": 11.89,
   "tone_runner_up": [
    "1f91f",
-   32.22
-  ]
+   30.16
+  ],
+  "tone_rmse": 11.12,
+  "tone_changed": false
  },
  {
   "i": 165,
@@ -2055,8 +2385,10 @@
   "tone_err": 12.69,
   "tone_runner_up": [
    "1f449",
-   25.31
-  ]
+   24.6
+  ],
+  "tone_rmse": 12.73,
+  "tone_changed": false
  },
  {
   "i": 166,
@@ -2068,8 +2400,10 @@
   "tone_err": 8.01,
   "tone_runner_up": [
    "1f469-1f3fd-200d-2695-fe0f",
-   28.44
-  ]
+   52.99
+  ],
+  "tone_rmse": 22.97,
+  "tone_changed": false
  },
  {
   "i": 167,
@@ -2079,7 +2413,9 @@
   "shape_score": 0.993,
   "mirror_margin": -0.001,
   "tone_err": 6.29,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 8.7,
+  "tone_changed": false
  },
  {
   "i": 168,
@@ -2091,21 +2427,25 @@
   "tone_err": 5.91,
   "tone_runner_up": [
    "1f478-1f3fd",
-   36.47
-  ]
+   52.95
+  ],
+  "tone_rmse": 24.5,
+  "tone_changed": false
  },
  {
   "i": 169,
   "x": 595.0,
   "y": 1275.0,
-  "glyph": "1f468-200d-1f3a8",
+  "glyph": "1f468-1f3fc-200d-1f3a8",
   "shape_score": 0.972,
   "mirror_margin": -0.275,
   "tone_err": 4.44,
   "tone_runner_up": [
-   "1f468-1f3fc-200d-1f3a8",
-   5.36
-  ]
+   "1f468-200d-1f3a8",
+   19.13
+  ],
+  "tone_rmse": 15.12,
+  "tone_changed": true
  },
  {
   "i": 170,
@@ -2117,8 +2457,10 @@
   "tone_err": 5.6,
   "tone_runner_up": [
    "1f935-1f3ff-200d-2642-fe0f",
-   13.79
-  ]
+   28.65
+  ],
+  "tone_rmse": 22.72,
+  "tone_changed": false
  },
  {
   "i": 171,
@@ -2130,21 +2472,25 @@
   "tone_err": 5.97,
   "tone_runner_up": [
    "1f470-1f3ff-200d-2642-fe0f",
-   13.15
-  ]
+   23.95
+  ],
+  "tone_rmse": 14.28,
+  "tone_changed": false
  },
  {
   "i": 172,
   "x": 1826.0,
   "y": 1287.0,
-  "glyph": "1f575-1f3ff-200d-2642-fe0f",
+  "glyph": "1f575-1f3fe-200d-2642-fe0f",
   "shape_score": 0.994,
   "mirror_margin": -0.326,
   "tone_err": 5.73,
   "tone_runner_up": [
-   "1f575-1f3fe-200d-2642-fe0f",
-   5.75
-  ]
+   "1f575-1f3ff-200d-2642-fe0f",
+   20.53
+  ],
+  "tone_rmse": 15.88,
+  "tone_changed": true
  },
  {
   "i": 173,
@@ -2156,8 +2502,10 @@
   "tone_err": 8.91,
   "tone_runner_up": [
    "1f469-1f3fe-200d-1f4bc",
-   21.13
-  ]
+   28.91
+  ],
+  "tone_rmse": 15.55,
+  "tone_changed": false
  },
  {
   "i": 174,
@@ -2169,8 +2517,10 @@
   "tone_err": 2.8,
   "tone_runner_up": [
    "1f930",
-   4.54
-  ]
+   22.6
+  ],
+  "tone_rmse": 15.4,
+  "tone_changed": false
  },
  {
   "i": 175,
@@ -2182,8 +2532,10 @@
   "tone_err": 2.25,
   "tone_runner_up": [
    "1f934-1f3fe",
-   22.99
-  ]
+   28.65
+  ],
+  "tone_rmse": 15.6,
+  "tone_changed": false
  },
  {
   "i": 176,
@@ -2193,7 +2545,9 @@
   "shape_score": 0.996,
   "mirror_margin": -0.045,
   "tone_err": 5.48,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 10.61,
+  "tone_changed": false
  },
  {
   "i": 177,
@@ -2205,8 +2559,10 @@
   "tone_err": 5.12,
   "tone_runner_up": [
    "1f468-1f3ff-200d-2695-fe0f",
-   16.1
-  ]
+   23.47
+  ],
+  "tone_rmse": 15.53,
+  "tone_changed": false
  },
  {
   "i": 178,
@@ -2217,9 +2573,11 @@
   "mirror_margin": -0.354,
   "tone_err": 6.15,
   "tone_runner_up": [
-   "1f6b6-1f3fb-200d-27a1-fe0f",
-   14.77
-  ]
+   "1f6b6-1f3fe-200d-27a1-fe0f",
+   28.72
+  ],
+  "tone_rmse": 20.54,
+  "tone_changed": false
  },
  {
   "i": 179,
@@ -2231,8 +2589,10 @@
   "tone_err": 4.81,
   "tone_runner_up": [
    "26f9-1f3fc-200d-2640-fe0f",
-   13.71
-  ]
+   38.19
+  ],
+  "tone_rmse": 24.89,
+  "tone_changed": false
  },
  {
   "i": 180,
@@ -2244,8 +2604,10 @@
   "tone_err": 5.43,
   "tone_runner_up": [
    "1f926-200d-2640-fe0f",
-   7.87
-  ]
+   22.93
+  ],
+  "tone_rmse": 13.55,
+  "tone_changed": false
  },
  {
   "i": 181,
@@ -2255,7 +2617,9 @@
   "shape_score": 0.994,
   "mirror_margin": -0.304,
   "tone_err": 7.87,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 11.86,
+  "tone_changed": false
  },
  {
   "i": 182,
@@ -2267,8 +2631,10 @@
   "tone_err": 4.34,
   "tone_runner_up": [
    "1faf7-1f3ff",
-   27.3
-  ]
+   25.54
+  ],
+  "tone_rmse": 9.0,
+  "tone_changed": false
  },
  {
   "i": 183,
@@ -2280,8 +2646,10 @@
   "tone_err": 10.38,
   "tone_runner_up": [
    "1f9d1-1f3fe-200d-1f9bd-200d-27a1-fe0f",
-   17.13
-  ]
+   25.08
+  ],
+  "tone_rmse": 19.78,
+  "tone_changed": false
  },
  {
   "i": 184,
@@ -2293,8 +2661,10 @@
   "tone_err": 4.37,
   "tone_runner_up": [
    "1f469-200d-1f9b1",
-   5.94
-  ]
+   19.76
+  ],
+  "tone_rmse": 9.79,
+  "tone_changed": false
  },
  {
   "i": 185,
@@ -2306,34 +2676,40 @@
   "tone_err": 5.43,
   "tone_runner_up": [
    "1f3c3-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
-   19.03
-  ]
+   29.48
+  ],
+  "tone_rmse": 11.97,
+  "tone_changed": false
  },
  {
   "i": 186,
   "x": 579.5,
   "y": 1367.5,
-  "glyph": "1f469-1f3fe-200d-1f9bd-200d-27a1-fe0f",
+  "glyph": "1f469-1f3fd-200d-1f9bd-200d-27a1-fe0f",
   "shape_score": 0.988,
   "mirror_margin": -0.592,
   "tone_err": 6.52,
   "tone_runner_up": [
-   "1f469-1f3ff-200d-1f9bd-200d-27a1-fe0f",
-   7.37
-  ]
+   "1f469-1f3fe-200d-1f9bd-200d-27a1-fe0f",
+   18.98
+  ],
+  "tone_rmse": 11.65,
+  "tone_changed": true
  },
  {
   "i": 187,
   "x": 475.0,
   "y": 1378.5,
-  "glyph": "1f9b9-1f3ff-200d-2640-fe0f",
+  "glyph": "1f9b9-1f3fe-200d-2640-fe0f",
   "shape_score": 0.96,
   "mirror_margin": -0.104,
   "tone_err": 5.76,
   "tone_runner_up": [
-   "1f9b9-1f3fe-200d-2640-fe0f",
-   7.65
-  ]
+   "1f9b9-1f3ff-200d-2640-fe0f",
+   14.96
+  ],
+  "tone_rmse": 13.76,
+  "tone_changed": true
  },
  {
   "i": 188,
@@ -2345,8 +2721,10 @@
   "tone_err": 8.92,
   "tone_runner_up": [
    "1f385-1f3fc",
-   17.31
-  ]
+   23.3
+  ],
+  "tone_rmse": 13.19,
+  "tone_changed": false
  },
  {
   "i": 189,
@@ -2358,8 +2736,10 @@
   "tone_err": 6.58,
   "tone_runner_up": [
    "1f468-1f3ff-200d-1f52c",
-   12.21
-  ]
+   16.96
+  ],
+  "tone_rmse": 11.53,
+  "tone_changed": false
  },
  {
   "i": 190,
@@ -2371,8 +2751,10 @@
   "tone_err": 3.23,
   "tone_runner_up": [
    "1f9d1-1f3ff-200d-1f4bb",
-   9.58
-  ]
+   18.84
+  ],
+  "tone_rmse": 12.59,
+  "tone_changed": false
  },
  {
   "i": 191,
@@ -2384,8 +2766,10 @@
   "tone_err": 5.27,
   "tone_runner_up": [
    "1f469-200d-1f393",
-   8.28
-  ]
+   21.87
+  ],
+  "tone_rmse": 9.82,
+  "tone_changed": false
  },
  {
   "i": 192,
@@ -2397,8 +2781,10 @@
   "tone_err": 6.34,
   "tone_runner_up": [
    "1f9b8",
-   9.25
-  ]
+   26.25
+  ],
+  "tone_rmse": 21.16,
+  "tone_changed": false
  },
  {
   "i": 193,
@@ -2410,8 +2796,10 @@
   "tone_err": 5.89,
   "tone_runner_up": [
    "1f487-1f3fc-200d-2642-fe0f",
-   9.9
-  ]
+   16.02
+  ],
+  "tone_rmse": 10.84,
+  "tone_changed": false
  },
  {
   "i": 194,
@@ -2422,9 +2810,11 @@
   "mirror_margin": -0.183,
   "tone_err": 2.75,
   "tone_runner_up": [
-   "1fac3",
-   7.32
-  ]
+   "1fac3-1f3fd",
+   40.04
+  ],
+  "tone_rmse": 17.01,
+  "tone_changed": false
  },
  {
   "i": 195,
@@ -2434,7 +2824,9 @@
   "shape_score": 0.982,
   "mirror_margin": -0.112,
   "tone_err": 6.48,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 9.09,
+  "tone_changed": false
  },
  {
   "i": 196,
@@ -2446,21 +2838,25 @@
   "tone_err": 5.76,
   "tone_runner_up": [
    "1f575-1f3fe-200d-2640-fe0f",
-   14.67
-  ]
+   27.88
+  ],
+  "tone_rmse": 19.58,
+  "tone_changed": false
  },
  {
   "i": 197,
   "x": 796.5,
   "y": 1440.0,
-  "glyph": "1f468-1f3fb-200d-1f680",
+  "glyph": "1f468-200d-1f680",
   "shape_score": 0.991,
   "mirror_margin": -0.026,
   "tone_err": 1.54,
   "tone_runner_up": [
-   "1f468-200d-1f680",
-   4.66
-  ]
+   "1f468-1f3fc-200d-1f680",
+   14.91
+  ],
+  "tone_rmse": 13.28,
+  "tone_changed": true
  },
  {
   "i": 198,
@@ -2470,7 +2866,9 @@
   "shape_score": 0.987,
   "mirror_margin": -0.001,
   "tone_err": 8.88,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 13.09,
+  "tone_changed": false
  },
  {
   "i": 199,
@@ -2482,8 +2880,10 @@
   "tone_err": 4.33,
   "tone_runner_up": [
    "1f477-1f3ff",
-   14.01
-  ]
+   20.29
+  ],
+  "tone_rmse": 16.77,
+  "tone_changed": false
  },
  {
   "i": 200,
@@ -2495,8 +2895,10 @@
   "tone_err": 6.94,
   "tone_runner_up": [
    "1f91e-1f3fe",
-   43.0
-  ]
+   44.41
+  ],
+  "tone_rmse": 8.79,
+  "tone_changed": false
  },
  {
   "i": 201,
@@ -2508,8 +2910,10 @@
   "tone_err": 5.53,
   "tone_runner_up": [
    "1f469-1f3ff-200d-1f373",
-   13.12
-  ]
+   21.41
+  ],
+  "tone_rmse": 14.9,
+  "tone_changed": false
  },
  {
   "i": 202,
@@ -2521,8 +2925,10 @@
   "tone_err": 5.66,
   "tone_runner_up": [
    "1f466-1f3ff",
-   19.23
-  ]
+   23.69
+  ],
+  "tone_rmse": 11.93,
+  "tone_changed": false
  },
  {
   "i": 203,
@@ -2534,8 +2940,10 @@
   "tone_err": 4.63,
   "tone_runner_up": [
    "1f6b6-200d-2642-fe0f",
-   5.78
-  ]
+   18.8
+  ],
+  "tone_rmse": 15.73,
+  "tone_changed": false
  },
  {
   "i": 204,
@@ -2547,8 +2955,10 @@
   "tone_err": 8.04,
   "tone_runner_up": [
    "1f9d6-1f3fc-200d-2642-fe0f",
-   12.03
-  ]
+   15.74
+  ],
+  "tone_rmse": 11.13,
+  "tone_changed": false
  },
  {
   "i": 205,
@@ -2558,7 +2968,9 @@
   "shape_score": 0.99,
   "mirror_margin": -0.001,
   "tone_err": 9.17,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 11.17,
+  "tone_changed": false
  },
  {
   "i": 206,
@@ -2568,33 +2980,39 @@
   "shape_score": 0.991,
   "mirror_margin": 0.0,
   "tone_err": 9.09,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 9.01,
+  "tone_changed": false
  },
  {
   "i": 207,
   "x": 1477.0,
   "y": 1505.5,
-  "glyph": "1f9dc-1f3ff",
+  "glyph": "1f9dc-1f3fe",
   "shape_score": 0.964,
   "mirror_margin": -0.787,
   "tone_err": 2.96,
   "tone_runner_up": [
-   "1f9dc-1f3fe",
-   6.04
-  ]
+   "1f9dc-1f3ff",
+   15.03
+  ],
+  "tone_rmse": 9.08,
+  "tone_changed": true
  },
  {
   "i": 208,
   "x": 703.5,
   "y": 1508.5,
-  "glyph": "1f933",
+  "glyph": "1f933-1f3fc",
   "shape_score": 0.988,
   "mirror_margin": -1.117,
   "tone_err": 5.04,
   "tone_runner_up": [
-   "1f933-1f3fc",
-   5.23
-  ]
+   "1f933",
+   11.12
+  ],
+  "tone_rmse": 10.9,
+  "tone_changed": true
  },
  {
   "i": 209,
@@ -2606,21 +3024,25 @@
   "tone_err": 1.17,
   "tone_runner_up": [
    "1f44c-1f3ff",
-   34.92
-  ]
+   33.38
+  ],
+  "tone_rmse": 8.71,
+  "tone_changed": false
  },
  {
   "i": 210,
   "x": 1379.0,
   "y": 1515.5,
-  "glyph": "1f469-1f3ff-200d-1f9bc-200d-27a1-fe0f",
+  "glyph": "1f469-1f3fe-200d-1f9bc-200d-27a1-fe0f",
   "shape_score": 0.983,
   "mirror_margin": -0.632,
   "tone_err": 4.92,
   "tone_runner_up": [
-   "1f469-1f3fe-200d-1f9bc-200d-27a1-fe0f",
-   7.98
-  ]
+   "1f469-1f3ff-200d-1f9bc-200d-27a1-fe0f",
+   14.52
+  ],
+  "tone_rmse": 12.86,
+  "tone_changed": true
  },
  {
   "i": 211,
@@ -2630,7 +3052,9 @@
   "shape_score": 0.987,
   "mirror_margin": -0.892,
   "tone_err": 4.97,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 9.77,
+  "tone_changed": false
  },
  {
   "i": 212,
@@ -2642,8 +3066,10 @@
   "tone_err": 8.06,
   "tone_runner_up": [
    "1f449",
-   11.26
-  ]
+   14.65
+  ],
+  "tone_rmse": 7.07,
+  "tone_changed": false
  },
  {
   "i": 213,
@@ -2653,7 +3079,9 @@
   "shape_score": 0.983,
   "mirror_margin": -1.259,
   "tone_err": 6.57,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 9.13,
+  "tone_changed": false
  },
  {
   "i": 214,
@@ -2665,8 +3093,10 @@
   "tone_err": 7.91,
   "tone_runner_up": [
    "1f6b6-1f3fe-200d-27a1-fe0f",
-   13.08
-  ]
+   28.17
+  ],
+  "tone_rmse": 22.78,
+  "tone_changed": false
  },
  {
   "i": 215,
@@ -2678,8 +3108,10 @@
   "tone_err": 5.74,
   "tone_runner_up": [
    "1f645",
-   8.59
-  ]
+   15.05
+  ],
+  "tone_rmse": 12.24,
+  "tone_changed": false
  },
  {
   "i": 216,
@@ -2691,8 +3123,10 @@
   "tone_err": 4.57,
   "tone_runner_up": [
    "1f64e-200d-2640-fe0f",
-   7.4
-  ]
+   31.17
+  ],
+  "tone_rmse": 18.56,
+  "tone_changed": false
  },
  {
   "i": 217,
@@ -2704,8 +3138,10 @@
   "tone_err": 7.19,
   "tone_runner_up": [
    "1f9b9-200d-2642-fe0f",
-   11.14
-  ]
+   29.43
+  ],
+  "tone_rmse": 24.59,
+  "tone_changed": false
  },
  {
   "i": 218,
@@ -2717,8 +3153,10 @@
   "tone_err": 4.08,
   "tone_runner_up": [
    "1f647-1f3fe",
-   17.75
-  ]
+   27.18
+  ],
+  "tone_rmse": 8.74,
+  "tone_changed": false
  },
  {
   "i": 219,
@@ -2728,7 +3166,9 @@
   "shape_score": 0.99,
   "mirror_margin": -0.094,
   "tone_err": 6.26,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 11.58,
+  "tone_changed": false
  },
  {
   "i": 220,
@@ -2738,7 +3178,9 @@
   "shape_score": 0.988,
   "mirror_margin": 0.001,
   "tone_err": 3.9,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 16.75,
+  "tone_changed": false
  },
  {
   "i": 221,
@@ -2750,8 +3192,10 @@
   "tone_err": 5.31,
   "tone_runner_up": [
    "1fac4",
-   7.68
-  ]
+   11.64
+  ],
+  "tone_rmse": 9.62,
+  "tone_changed": false
  },
  {
   "i": 222,
@@ -2763,8 +3207,10 @@
   "tone_err": 7.15,
   "tone_runner_up": [
    "1f64c-1f3fe",
-   43.3
-  ]
+   45.47
+  ],
+  "tone_rmse": 13.02,
+  "tone_changed": false
  },
  {
   "i": 223,
@@ -2776,8 +3222,10 @@
   "tone_err": 5.73,
   "tone_runner_up": [
    "1f575-1f3fc",
-   15.3
-  ]
+   31.74
+  ],
+  "tone_rmse": 14.05,
+  "tone_changed": false
  },
  {
   "i": 224,
@@ -2787,20 +3235,24 @@
   "shape_score": 0.991,
   "mirror_margin": -0.223,
   "tone_err": 6.24,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 10.13,
+  "tone_changed": false
  },
  {
   "i": 225,
   "x": 877.0,
   "y": 1607.0,
-  "glyph": "1f6a3-1f3ff-200d-2642-fe0f",
+  "glyph": "1f6a3-200d-2642-fe0f",
   "shape_score": 0.991,
   "mirror_margin": -0.277,
   "tone_err": 6.56,
   "tone_runner_up": [
-   "1f6a3-1f3fb-200d-2642-fe0f",
-   7.52
-  ]
+   "1f6a3-1f3fc-200d-2642-fe0f",
+   16.34
+  ],
+  "tone_rmse": 15.81,
+  "tone_changed": true
  },
  {
   "i": 226,
@@ -2812,8 +3264,10 @@
   "tone_err": 7.56,
   "tone_runner_up": [
    "1f442-1f3fe",
-   42.83
-  ]
+   43.67
+  ],
+  "tone_rmse": 9.33,
+  "tone_changed": false
  },
  {
   "i": 227,
@@ -2825,8 +3279,10 @@
   "tone_err": 3.92,
   "tone_runner_up": [
    "1f9dd-1f3ff",
-   12.59
-  ]
+   22.74
+  ],
+  "tone_rmse": 11.57,
+  "tone_changed": false
  },
  {
   "i": 228,
@@ -2838,8 +3294,10 @@
   "tone_err": 6.99,
   "tone_runner_up": [
    "1f64d",
-   8.24
-  ]
+   16.69
+  ],
+  "tone_rmse": 12.83,
+  "tone_changed": false
  },
  {
   "i": 229,
@@ -2851,8 +3309,10 @@
   "tone_err": 6.9,
   "tone_runner_up": [
    "1f468-1f3fd-200d-1f9bc",
-   11.56
-  ]
+   33.08
+  ],
+  "tone_rmse": 27.29,
+  "tone_changed": false
  },
  {
   "i": 230,
@@ -2864,8 +3324,10 @@
   "tone_err": 10.93,
   "tone_runner_up": [
    "1f4aa",
-   36.48
-  ]
+   35.16
+  ],
+  "tone_rmse": 10.62,
+  "tone_changed": false
  },
  {
   "i": 231,
@@ -2876,9 +3338,11 @@
   "mirror_margin": -0.525,
   "tone_err": 8.57,
   "tone_runner_up": [
-   "1f3c3-200d-27a1-fe0f",
-   21.04
-  ]
+   "1f3c3-1f3fd-200d-27a1-fe0f",
+   48.02
+  ],
+  "tone_rmse": 13.38,
+  "tone_changed": false
  },
  {
   "i": 232,
@@ -2888,7 +3352,9 @@
   "shape_score": 0.927,
   "mirror_margin": 0.0,
   "tone_err": 14.73,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 60.95,
+  "tone_changed": false
  },
  {
   "i": 233,
@@ -2900,8 +3366,10 @@
   "tone_err": 3.54,
   "tone_runner_up": [
    "1f486-1f3fe-200d-2642-fe0f",
-   30.95
-  ]
+   35.46
+  ],
+  "tone_rmse": 11.03,
+  "tone_changed": false
  },
  {
   "i": 234,
@@ -2913,8 +3381,10 @@
   "tone_err": 10.31,
   "tone_runner_up": [
    "1f482-200d-2642-fe0f",
-   11.23
-  ]
+   15.47
+  ],
+  "tone_rmse": 12.9,
+  "tone_changed": false
  },
  {
   "i": 235,
@@ -2924,7 +3394,9 @@
   "shape_score": 0.996,
   "mirror_margin": 0.0,
   "tone_err": 10.47,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 9.23,
+  "tone_changed": false
  },
  {
   "i": 236,
@@ -2935,9 +3407,11 @@
   "mirror_margin": -0.206,
   "tone_err": 4.59,
   "tone_runner_up": [
-   "1f937-200d-2642-fe0f",
-   18.19
-  ]
+   "1f937-1f3fd-200d-2642-fe0f",
+   44.12
+  ],
+  "tone_rmse": 22.17,
+  "tone_changed": false
  },
  {
   "i": 237,
@@ -2947,7 +3421,9 @@
   "shape_score": 0.968,
   "mirror_margin": -0.883,
   "tone_err": 2.58,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 11.25,
+  "tone_changed": false
  },
  {
   "i": 238,
@@ -2959,8 +3435,10 @@
   "tone_err": 7.55,
   "tone_runner_up": [
    "1f469-1f3fe-200d-1f3ed",
-   17.9
-  ]
+   26.54
+  ],
+  "tone_rmse": 14.7,
+  "tone_changed": false
  },
  {
   "i": 239,
@@ -2972,8 +3450,10 @@
   "tone_err": 4.0,
   "tone_runner_up": [
    "1f3cc-1f3fe-200d-2640-fe0f",
-   6.58
-  ]
+   15.35
+  ],
+  "tone_rmse": 13.14,
+  "tone_changed": false
  },
  {
   "i": 240,
@@ -2983,7 +3463,9 @@
   "shape_score": 0.991,
   "mirror_margin": 0.001,
   "tone_err": 8.83,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 11.88,
+  "tone_changed": false
  },
  {
   "i": 241,
@@ -2994,22 +3476,26 @@
   "mirror_margin": 1.169,
   "tone_err": 5.15,
   "tone_runner_up": [
-   "1f468-200d-1f9af",
-   12.87
-  ]
+   "1f468-1f3fd-200d-1f9af",
+   35.83
+  ],
+  "tone_rmse": 21.03,
+  "tone_changed": false
  },
  {
   "i": 242,
   "x": 1447.0,
   "y": 1787.0,
-  "glyph": "1f485-1f3fb",
+  "glyph": "1f485",
   "shape_score": 0.937,
   "mirror_margin": -0.69,
   "tone_err": 3.92,
   "tone_runner_up": [
-   "1f485",
-   8.52
-  ]
+   "1f485-1f3fb",
+   23.3
+  ],
+  "tone_rmse": 21.94,
+  "tone_changed": true
  },
  {
   "i": 243,
@@ -3021,8 +3507,10 @@
   "tone_err": 10.01,
   "tone_runner_up": [
    "1f91b-1f3fb",
-   10.33
-  ]
+   18.98
+  ],
+  "tone_rmse": 8.63,
+  "tone_changed": false
  },
  {
   "i": 244,
@@ -3034,8 +3522,10 @@
   "tone_err": 4.83,
   "tone_runner_up": [
    "1f9d1-1f3ff",
-   19.85
-  ]
+   29.17
+  ],
+  "tone_rmse": 19.33,
+  "tone_changed": false
  },
  {
   "i": 245,
@@ -3047,8 +3537,10 @@
   "tone_err": 0.96,
   "tone_runner_up": [
    "1f590-1f3ff",
-   36.76
-  ]
+   34.37
+  ],
+  "tone_rmse": 6.24,
+  "tone_changed": false
  },
  {
   "i": 246,
@@ -3058,7 +3550,9 @@
   "shape_score": 0.95,
   "mirror_margin": -0.158,
   "tone_err": 2.84,
-  "tone_runner_up": null
+  "tone_runner_up": null,
+  "tone_rmse": 17.52,
+  "tone_changed": false
  },
  {
   "i": 247,
@@ -3070,8 +3564,10 @@
   "tone_err": 4.54,
   "tone_runner_up": [
    "1f9cf-1f3ff",
-   18.2
-  ]
+   23.72
+  ],
+  "tone_rmse": 8.51,
+  "tone_changed": false
  },
  {
   "i": 248,
@@ -3083,8 +3579,10 @@
   "tone_err": 6.07,
   "tone_runner_up": [
    "1f468-1f3ff-200d-1f373",
-   13.13
-  ]
+   19.89
+  ],
+  "tone_rmse": 14.4,
+  "tone_changed": false
  },
  {
   "i": 249,
@@ -3096,8 +3594,10 @@
   "tone_err": 4.55,
   "tone_runner_up": [
    "1f472-1f3fe",
-   22.48
-  ]
+   30.03
+  ],
+  "tone_rmse": 14.05,
+  "tone_changed": false
  },
  {
   "i": 250,
@@ -3109,8 +3609,10 @@
   "tone_err": 2.87,
   "tone_runner_up": [
    "1f926-1f3fe-200d-2642-fe0f",
-   23.43
-  ]
+   29.21
+  ],
+  "tone_rmse": 8.37,
+  "tone_changed": false
  },
  {
   "i": 251,
@@ -3122,8 +3624,10 @@
   "tone_err": 4.46,
   "tone_runner_up": [
    "1f468-1f3ff-200d-1f527",
-   12.42
-  ]
+   23.24
+  ],
+  "tone_rmse": 17.3,
+  "tone_changed": false
  },
  {
   "i": 252,
@@ -3135,8 +3639,10 @@
   "tone_err": 7.53,
   "tone_runner_up": [
    "1fac5-1f3fe",
-   23.98
-  ]
+   30.43
+  ],
+  "tone_rmse": 10.84,
+  "tone_changed": false
  },
  {
   "i": 253,
@@ -3148,8 +3654,10 @@
   "tone_err": 5.84,
   "tone_runner_up": [
    "1f9ce-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
-   9.53
-  ]
+   19.74
+  ],
+  "tone_rmse": 18.46,
+  "tone_changed": false
  },
  {
   "i": 254,
@@ -3161,8 +3669,10 @@
   "tone_err": 5.09,
   "tone_runner_up": [
    "1f9ce-200d-2642-fe0f-200d-27a1-fe0f",
-   5.87
-  ]
+   21.36
+  ],
+  "tone_rmse": 21.0,
+  "tone_changed": false
  },
  {
   "i": 255,
@@ -3174,7 +3684,9 @@
   "tone_err": 7.58,
   "tone_runner_up": [
    "1f9ce-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
-   16.18
-  ]
+   22.87
+  ],
+  "tone_rmse": 13.11,
+  "tone_changed": false
  }
 ]

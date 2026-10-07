@@ -17,6 +17,7 @@ python3 detect.py   # 256 emoji centres + the coin centre -> centres.json
 python3 match.py    # normalise the 3,793 reference glyphs -> refs.npz
 python3 match2.py   # shape + luminance correlation, plain and mirrored -> matches.json
 python3 tone.py     # skin tone by Rec.709 luminance quantiles within each glyph family -> emoji_table.json
+python3 tone2.py    # skin tone by aligned Rec.709 pixel comparison with every tone variant -> emoji_table2.json
 python3 fit.py      # optional: golden-angle spiral fit and index assignment -> fit.json
 ```
 

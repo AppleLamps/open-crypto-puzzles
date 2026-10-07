@@ -39,6 +39,16 @@ the mirrored glyph fits. Rebuild with `tools/emoji_table/`. What it established:
   in the thread, is not true.
 - Skin tone is decided within each glyph family by luminance quantiles; 42 of 256 calls have a
   runner-up within 2 levels and are uncertain.
+- Colour restoration (`tools/emoji_table/tone2.py`): every tone variant of each glyph is converted
+  to Rec.709 grey, scaled to the puzzle glyph's box and compared pixel by pixel. Measured from the
+  references, the skin grey levels are 227 (light), 204 (default yellow), 198 (medium-light),
+  about 150 (medium), 114 (medium-dark) and 75 (dark). Default yellow and medium-light are 6
+  levels apart, and that pair accounts for 24 of the 41 tone calls whose runner-up is within 25
+  percent; medium-dark against dark accounts for 10 more. This is the most likely meaning of the
+  author's remark that the image "was redrawn and requires to test the skin-tone to fix the
+  image". Hearts and other coloured objects carry the same problem (a grey heart could be several
+  colours) and were not resolved. A restored colour picture is easy to render from the table, but
+  it is not stored here because it reproduces Apple's artwork.
 - The forum IDs behind the point `H` cannot be reproduced. The 9 emojis whose code points spell
   `H.x` decode as index up (dark), woman climbing (dark), raised fist (medium-light), running
   (medium), woman kneeling facing right (medium-light), grinning cat, frowning face, woman
