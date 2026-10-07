@@ -321,3 +321,24 @@ the RO1 reading-order model, checksum-invalid phrases (only valid candidates wer
 and the other paths for the extra-word sweeps. Speed was about 1,000 derivations per second
 per core; the paths sweep took about 13 minutes on 22 workers. The connecting-words lead
 (about 1.36e10 derivations) needs a GPU PBKDF2 implementation.
+
+## Round tag and the full on-screen and spoken word list (2026-10-07)
+
+Two sweeps on the RO1 model, both at `m/44'/60'/0'/0/0`, both negative.
+
+| Hypothesis | Space | Method | Result | Witness | Date |
+| --- | --- | --- | --- | --- | --- |
+| RO1 plus `round` as a free post-side word. `round` is the post's second planted tag (it exists on no other post on the site), so like `fork` it has no reading position; RO1 dropped it because "Round" precedes `dutch` in the prose | 125,766,000 arrangements, 7,860,627 valid | `sweep_postword.py --words round`, 4 CPU cores, 2,475 derivations/second, 53 minutes | 0 match | yes: `--selftest` planted a candidate containing `round` and recovered it | 2026-10-07 |
+| RO1 plus one free video-side word from every word in `data/video-onscreen-words.json` not already swept as a floater: 181 words (109 on screen, 110 spoken, 27 in both, minus the 13 tested on 2026-09-26) | 63,029,268,000 arrangements, 3,939,345,650 valid | `floater_gen.c` (C enumerator, checksum filter) feeding `engines/bip39_passphrase_engine.cu` through `floater_gpu.py`, 1 rented A100, 425,386 derivations/second, 154 minutes | 0 match | yes: 3 planted targets per unit (first, random, last valid row, addresses derived on the CPU) found at exactly the expected rows in all 816 units; the run aborts on any miss | 2026-10-07 |
+
+Certification of the GPU sweep. Before the run, `floater_gpu.py --crosscheck` compared the C
+enumerator with `sweep_coins.scan_unit` on 4 units (first, second, middle, last) with 5 floater
+words: identical valid candidates in identical order. On 2 full units it reproduced the closed
+form, 77,241,750 arrangements per unit, at a checksum pass rate of 0.0625. The same check ran again
+inside the GPU job, followed by the engine's known-answer test (`abandon` x11 `about` found at row
+100 of a 256-row batch). Per-unit closed form: 85,350 video arrangements x 5 fork slots x 181 words.
+
+What this closes: lead 1's 219-word extension under the one-free-video-slot reading, and the
+`round` tag as a floater. What it does not close: 2 or more of these words in the same phrase
+(about 90 times larger), these words on the post side, other derivation paths for these two
+sweeps, and anything outside the RO1 reading-order model.

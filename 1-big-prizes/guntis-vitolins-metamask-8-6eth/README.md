@@ -170,11 +170,14 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | Complete reading-order model over the full recovered 2020 text and metadata, 3 anchors fixed, `fork` free | 10,484,919 derivations (of 167,688,000 arrangements, matching a closed form) | closed-form count, then checksum, then address compare | 0 match | yes: 1,062 planted and recovered, 0 disagreements between 2 engines | 2026-08-20 |
 | The same reading-order model extended to substrings of longer words | 582,725 derivations (of 9,334,500 arrangements) | same | 0 match | yes | 2026-08-20 |
 | Pool extended with short connecting words from the planted texts, fog-only, `fiber`+`fork` required | 18,657,475,200 derivations (of 298.5 billion enumerated) | checksum-aware CUDA engine (`engines/`) on a rented L40S, per-chunk witness protocol | 0 match | yes: 2 planted candidates recovered in every one of 412 chunks | 2026-08-23 |
+| RO1 plus `round` (the post's second planted tag) as a free post word | 7,860,627 derivations (of 125,766,000 arrangements) | reading-order enumeration, checksum, address compare | 0 match | yes: planted candidate containing `round` recovered | 2026-10-07 |
+| RO1 plus one free video word from the 181 untested on-screen and spoken words | 3,939,345,650 derivations (of 63,029,268,000 arrangements) | C enumerator cross-checked against the Python sweep, CUDA engine on 1 rented A100 | 0 match | yes: 3 planted targets found at the expected rows in all 816 units | 2026-10-07 |
 
 Cumulative: approximately 35.4 billion candidate derivations tested across
 the metadata-era sweeps, all negative and individually witnessed, plus
 roughly 5.6 million candidates from earlier, smaller sweeps, plus the 11.07
-million derivations of the 2 reading-order sweeps above. Full method notes are
+million derivations of the 2 reading-order sweeps above. The 2 sweeps of 2026-10-07 add another 3.95
+billion. Full method notes are
 in `analysis/tested.md`.
 
 The reading-order sweep matters out of proportion to its size. It is the first
@@ -228,6 +231,14 @@ word identification and re-orders the leads below.
    against it. About 2.78x10^11 derivations; the reading-order corner is
    already swept.
 
+5. **Read the challenge video's own YouTube tags** (minutes, by hand). The
+   author's written rules list "description, tags, title" as video channels, and
+   the post's planted tags are where `fork` and the unique tag `round` were found.
+   The swept pool indexes the video description only; no video tag has been read.
+   They sit in the page source of a 2020 archive capture of the video (look for
+   `"keywords"`). Confirmed by a tag word absent from the pool; killed by tags that
+   add nothing new.
+
 Full notes: [analysis/leads.md](analysis/leads.md).
 
 ## Files in this folder
@@ -243,6 +254,8 @@ Full notes: [analysis/leads.md](analysis/leads.md).
 | `tools/oracle.py` | candidate checker, certified against the canonical BIP-0039 vector |
 | `tools/fig_slots.py` | generates images/01-seed-slot-grid.svg from data/seed-slots.json |
 | `tools/sweep_reading_order.py` | the reading-order sweep of `analysis/tested.md`; `--size` prints the closed form, `--selftest` plants and recovers a witness, `--run` is resumable |
+| `tools/floater_gen.c` | fast C enumerator for RO1 plus one free video word; emits checksum-valid rows in the same order as `sweep_coins.py` |
+| `tools/floater_gpu.py` | builds the plan for `floater_gen.c`, cross-checks it against the Python sweep, and drives the CUDA engine with 3 planted witnesses per unit |
 
 ## Sources
 
