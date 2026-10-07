@@ -2,6 +2,25 @@
 
 Ordered by cost to test, then by expected value.
 
+## Thread state on 2026-10-07 (96 posts)
+
+What the community has established since this folder was written, re-read from the thread:
+
+- The 9 bytes of `s` (91, 137, 11, 41, 43, 161, 171, 217, 177) are emoji IDs in a forum
+  member's numbering of the image, and the low bytes of those 9 emojis' Unicode code points
+  spell `1dffd7ff0d400f0a...0d080f` (`0d 40 0f` is ZWJ, female sign, VS16; `fb` to `ff` are
+  the skin tone modifiers). With a `03` prefix it is a valid compressed point. The numbering
+  is not public (its author's GitHub repo is private), so this step is reported, not
+  reproduced here.
+- The meta-clue `gvonys fhelucrM kbZ`, ROT13 then each word reversed, reads `flabit Zephyrus
+  Mox`: Latin, "soon the west wind will blow".
+- The author, in the post after the meta-clue: the LLM-driven readings miss "the actual structural
+  things that a human brain would instantly see and wonder about".
+
+What it implies: for `s` to name emoji IDs, the author chose `s` and the nonce `k` and then
+derived the key as `d = (s*k - z)/r mod n`. So `k` must be published in the image, and the
+point `H` is either a decoy or a step towards `k`.
+
 ## 1. Read the author's hints as one set
 
 - **Cost**: minutes
