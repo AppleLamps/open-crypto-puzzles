@@ -21,6 +21,33 @@ What it implies: for `s` to name emoji IDs, the author chose `s` and the nonce `
 derived the key as `d = (s*k - z)/r mod n`. So `k` must be published in the image, and the
 point `H` is either a decoy or a step towards `k`.
 
+## Measured emoji table (2026-10-07)
+
+`data/emoji-table.json` holds all 256 emojis measured from `clues/spiral.png` rather than read by
+eye: centre, best-matching Apple glyph as a Unicode sequence, skin tone, and how much better
+the mirrored glyph fits. Rebuild with `tools/emoji_table/`. What it established:
+
+- The background is fully transparent (alpha 0); the only coloured object is the coin, centred
+  at about (1023.5, 1030.1).
+- The greyscale conversion is Rec.709 luminance: against 41 tone-free glyphs it fits with a
+  mean quantile error of 7.0, against 9.7 for Rec.601 and 27.6 for a plain average.
+- Shape match is strong: median correlation 0.981; 9 glyphs score below 0.93 and deserve a
+  manual look (ballet dancer, woman feeding baby, and a few people glyphs).
+- 205 asymmetric glyphs are drawn in Apple's normal orientation. The 9 that match mirrored are
+  walking, running, kneeling, white-cane and wheelchair figures facing right, which is how the
+  Unicode "facing right" sequences look, plus a backhand index. "Every emoji is mirrored", said
+  in the thread, is not true.
+- Skin tone is decided within each glyph family by luminance quantiles; 42 of 256 calls have a
+  runner-up within 2 levels and are uncertain.
+- The forum IDs behind the point `H` cannot be reproduced. The 9 emojis whose code points spell
+  `H.x` decode as index up (dark), woman climbing (dark), raised fist (medium-light), running
+  (medium), woman kneeling facing right (medium-light), grinning cat, frowning face, woman
+  construction worker (dark) and man pilot (medium-dark). Matched to their positions, their IDs
+  (91, 137, 11, 41, 43, 161, 171, 217, 177) follow none of: radius from the coin either way,
+  a golden-angle spiral index either way, x order, y order. The IDs come from a forum member's
+  private numbering, so the "s selects nine emojis" chain may be a pattern found after the
+  fact; the author has not confirmed it.
+
 ## 1. Read the author's hints as one set
 
 - **Cost**: minutes

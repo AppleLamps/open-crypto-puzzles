@@ -1,0 +1,23 @@
+# Emoji table of the spiral image
+
+Rebuilds `data/emoji-table.json`: the position, best-matching Apple glyph (Unicode sequence),
+skin tone and mirror margin of each of the 256 emojis in `clues/spiral.png`.
+
+The reference glyphs are not in this repository. Fetch them once into a scratch directory:
+
+```bash
+npm pack emoji-datasource-apple@16.0.0 && mkdir x && tar xzf emoji-datasource-apple-16.0.0.tgz -C x
+export APPLE_EMOJI_64=$PWD/x/package/img/apple/64
+```
+
+Then, from a scratch working directory (the scripts write their JSON files to the current directory):
+
+```bash
+python3 detect.py   # 256 emoji centres + the coin centre -> centres.json
+python3 match.py    # normalise the 3,793 reference glyphs -> refs.npz
+python3 match2.py   # shape + luminance correlation, plain and mirrored -> matches.json
+python3 tone.py     # skin tone by Rec.709 luminance quantiles within each glyph family -> emoji_table.json
+python3 fit.py      # optional: golden-angle spiral fit and index assignment -> fit.json
+```
+
+Needs numpy, scipy and pillow. Method notes and known limits are in `../../analysis/leads.md`.

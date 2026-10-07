@@ -160,6 +160,8 @@ checks of the setup. Full ledger in `analysis/tested.md`.
 | `analysis/tested.md` | the negatives ledger |
 | `analysis/leads.md` | the full lead notes |
 | `tools/oracle.py` | recovery check and candidate checker, standard library only |
+| `data/emoji-table.json` | the 256 emojis measured from the image: centre, matched Apple glyph (Unicode sequence), skin tone, mirror margin, match scores |
+| `tools/emoji_table/` | the pipeline that rebuilds `data/emoji-table.json` (reference glyphs fetched from npm, not stored here) |
 
 ## Sources
 
