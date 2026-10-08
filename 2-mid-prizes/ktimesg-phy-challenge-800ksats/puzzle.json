@@ -45,7 +45,7 @@
   },
   "difficulty_left": "insight",
   "difficulty_note": "the author states the first post holds everything needed and that the solution is quick once seen; the mechanism that turns the signature and the image into a private key has not been published or reproduced",
-  "tested_total": { "candidates": 0, "families": 0, "certified": true },
+  "tested_total": { "candidates": 1099511667932, "families": 5, "certified": true },
   "leads": [
     { "rank": 1, "title": "read the author's hints as one set", "cost": "minutes", "status": "open" },
     { "rank": 2, "title": "check the structure a forum user reported on 2026-07-29", "cost": "hours", "status": "open" },
@@ -68,11 +68,11 @@
     }
   ],
   "sources": [
-    { "title": "kTimesG, Phy Challenge, bitcointalk thread (94 posts read)", "url": "https://bitcointalk.org/index.php?topic=5584952.0", "date": "2026-10-01", "archived": null },
+    { "title": "kTimesG, Phy Challenge, bitcointalk thread (96 posts read)", "url": "https://bitcointalk.org/index.php?topic=5584952.0", "date": "2026-10-07", "archived": null },
     { "title": "kTimesG, bitcointalk profile", "url": "https://bitcointalk.org/index.php?action=profile;u=3610370", "date": "2026-10-01", "archived": null },
     { "title": "Funding transaction 2ba79d0b377ab2c41f3508e91e84d0b2aff771fd81b97b8e85c24788795964d3", "url": "https://mempool.space/tx/2ba79d0b377ab2c41f3508e91e84d0b2aff771fd81b97b8e85c24788795964d3", "date": "2026-10-01", "archived": null },
     { "title": "Author's puzzle image (first post)", "url": "https://www.talkimg.com/images/2026/06/05/UrS0Mq.png", "date": "2026-10-01", "archived": null }
   ],
   "third_party_material": "the signed message and the image are the author's own published puzzle material; short author quotes are in clues/author-posts.md; no other third-party material is included",
-  "last_updated": "2026-10-01"
+  "last_updated": "2026-10-08"
 }

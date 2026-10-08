@@ -44,6 +44,11 @@ words against the list and spot-checked `link`, `token`, `atom` and `reveal` on
 my own frames. The RO1 model extended with the five coin words as free video
 words is the natural next sweep; @cjmcdaniel said they are running it.
 
+**Tested negative at one free video slot on 2026-10-07**: the remaining 181 words of
+`data/video-onscreen-words.json`, 3,939,345,650 derivations on a rented A100, every unit
+witnessed (`analysis/tested.md`). Still open: 2 or more of these words in the same phrase,
+about 90 times larger, and the video's own YouTube tags, which nobody has read yet.
+
 Original lead text, kept for the reasoning:
 
 The author states in the spoken rules of the challenge video,
