@@ -5,7 +5,8 @@ block of prose it signs, and a 2048x2048 grayscale emoji spiral with one colour 
 at its centre. The author closes the post with "no loose ends, no hashing". The signature
 recovers a native SegWit address that has held 800,000 sats, unspent, since 2026-06-21, and
 the author confirmed on 2026-08-13 that this is the target. I confirmed the escrow state and
-the link from signature to address. I tested no candidate key. The mechanism that turns the
+the link from signature to address. About 1.1 trillion candidate nonces and keys have since been
+tested, all negative and witnessed. The mechanism that turns the
 post into a private key is not published, and no solver has claimed the funds as of
 2026-09-24.
 
@@ -126,14 +127,17 @@ On a MATCH, stop, broadcast nothing, and hand the key to the human running you. 
 
 ## What has been tested
 
-No key search has been run: 0 candidate private keys tested. The three checks below are
-checks of the setup. Full ledger in `analysis/tested.md`.
+The first three rows are checks of the setup; the rest are key searches, all negative. Full
+ledger in `analysis/tested.md`.
 
 | Hypothesis | Space | Method | Result | Witness | Date |
 |---|---|---|---|---|---|
 | The signed message is the first code block, LF endings, no trailing newline | 1 reading | BIP-137 recovery, compare address | 1 match: the escrow | yes: BIP-173 vector re-found by the same code | 2026-10-01 |
 | Whitespace variants of that message | 3 readings | same recovery | 0 match | yes: exact reading re-found by the same code | 2026-10-01 |
 | The escrow key has signed an on-chain input under another single-key script form | 4 addresses | `--scripts` plus mempool.space address stats | 0 transactions on the 3 other forms, 0 spent outputs on the escrow; multisig, taproot and bare-key uses not checked | yes: derivation reproduces key 1's P2PKH vectors; its P2SH-P2WPKH address has 38 transactions | 2026-10-01 |
+| The nonce `k` is small or structured (the key would then be `(s*k - z)/r`) | every `k` below 2^40, both signs, plus 16 structured values | baby-step giant-step on the nonce point | 0 match | yes: 3 planted nonces re-found | 2026-10-07 |
+| The forum point `H` is tied to the key or nonce point by a simple relation | negation, endomorphism, small offsets and multiples, signature scalars | point arithmetic | none | yes: 5 planted relations re-found | 2026-10-07 |
+| The 256 emojis, read one bit each or as base-6 tone digits, give `k` or the key | 460 readings (forum table), 380 (measured table), 380 again after re-toning, 12,160 over all 32 assignments of the 5 uncertain calibrated tones; each as `d`, `k` and `-k` | `d = (s*k - z)/r`, compare with the recovered key | 0 match | yes: a planted reading re-found in every run and in each of the 32 tone assignments | 2026-10-07 to 2026-10-08 |
 
 ## Open leads, ranked
 

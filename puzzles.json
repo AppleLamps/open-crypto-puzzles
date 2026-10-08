@@ -2556,8 +2556,8 @@
       "difficulty_left": "insight",
       "difficulty_note": "the author states the first post holds everything needed and that the solution is quick once seen; the mechanism that turns the signature and the image into a private key has not been published or reproduced",
       "tested_total": {
-        "candidates": 0,
-        "families": 0,
+        "candidates": 1099511667932,
+        "families": 5,
         "certified": true
       },
       "leads": [
@@ -2628,7 +2628,7 @@
         }
       ],
       "third_party_material": "the signed message and the image are the author's own published puzzle material; short author quotes are in clues/author-posts.md; no other third-party material is included",
-      "last_updated": "2026-10-01",
+      "last_updated": "2026-10-08",
       "folder": "2-mid-prizes/ktimesg-phy-challenge-800ksats"
     },
     {
