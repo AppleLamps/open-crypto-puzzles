@@ -140,6 +140,9 @@ ledger in `analysis/tested.md`.
 | The 256 emojis, read one bit each or as base-6 tone digits, give `k` or the key | 460 readings (forum table), 380 (measured table), 380 again after re-toning, 12,160 over all 32 assignments of the 5 uncertain calibrated tones; each as `d`, `k` and `-k` | `d = (s*k - z)/r`, compare with the recovered key | 0 match | yes: a planted reading re-found in every run and in each of the 32 tone assignments | 2026-10-07 to 2026-10-08 |
 | Small deliberate offsets from the ideal spiral carry data | 128 mirror pairs, shared offset against partner noise | Levene test | no signal (p = 0.28 radial, 0.80 tangential) | yes: a +-1 px injected code is detected 96.5 percent of the time | 2026-10-08 |
 | The emojis read in the exact geometric spiral order give `k` or the key | 366 readings, including per-pair comparisons | `d = (s*k - z)/r` | 0 match | yes: planted reading re-found | 2026-10-08 |
+| The nonce is tied to the key, `k = a*d + b` | `a` in -16..16, `b` below 2^40 | baby-step giant-step | 0 match | yes: planted `a = 3`, `b = -987654321098` re-found | 2026-10-08 |
+| The private key is below 2^40 | 2^41 keys | baby-step giant-step | 0 match | yes: 2 planted keys re-found | 2026-10-08 |
+| 32 consecutive emojis, one byte each, give `k` or the key | 6,596 readings | `d = (s*k - z)/r` | 0 match | yes: planted window re-found | 2026-10-08 |
 
 ## Open leads, ranked
 

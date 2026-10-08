@@ -69,6 +69,10 @@ the mirrored glyph fits. Rebuild with `tools/emoji_table/`. What it established:
   emojis of a pair share no base glyph (0 of 128) and share a skin tone only 26 times out of 128,
   close to chance. Unexplained so far: why 130.26 degrees, and why the symmetry centre is offset
   from the coin.
+- The divergence angle has no clean closed form: the nearest simple fraction of a turn is 55/152
+  (130.263 degrees), and no golden-ratio or `e` expression matches. It was probably tuned for spacing.
+- The emoji code points carry no visible relation within mirror pairs: the first code points of A and B
+  differ by 119 distinct amounts over 128 pairs, and their sums and XORs show no repeat pattern.
 - The forum IDs behind the point `H` cannot be reproduced. The 9 emojis whose code points spell
   `H.x` decode as index up (dark), woman climbing (dark), raised fist (medium-light), running
   (medium), woman kneeling facing right (medium-light), grinning cat, frowning face, woman
