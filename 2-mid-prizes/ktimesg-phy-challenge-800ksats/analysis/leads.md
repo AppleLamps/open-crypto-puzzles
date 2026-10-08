@@ -57,6 +57,18 @@ the mirrored glyph fits. Rebuild with `tools/emoji_table/`. What it established:
   from 41. This is most likely the "much easier and precise normalization" the author mentions.
   Tone counts among those 183: medium-dark 40, default yellow 36, light 29, medium-light 29,
   medium 25, dark 24. `data/emoji-table.json` now carries the calibration and these calls.
+- Spiral geometry (`tools/emoji_table/geometry.py`, `data/spiral-geometry.json`). The layout is
+  exactly point-symmetric: all 256 emojis form 128 mutual mirror pairs through a centre at about
+  (1023.9, 1017.5), median mismatch 1.7 px against 44 px for random rotations. The centre sits
+  about 12.5 px above the coin's measured centroid. Pair n (1 to 128) lies at radius
+  76.045*sqrt(n) + 42.822 px and angle 319.72 + 130.2601*n degrees (image coordinates), its
+  partner at the same radius plus 180 degrees; the fit leaves 1.2 px median error. The divergence
+  angle is 130.26 degrees, not the golden 137.51. The offsets from this ideal carry no data (see
+  `analysis/tested.md`). The geometric order agrees with the "in-out A,B" draw order posted in
+  the thread, so that order is now confirmed from the image rather than assumed. The two
+  emojis of a pair share no base glyph (0 of 128) and share a skin tone only 26 times out of 128,
+  close to chance. Unexplained so far: why 130.26 degrees, and why the symmetry centre is offset
+  from the coin.
 - The forum IDs behind the point `H` cannot be reproduced. The 9 emojis whose code points spell
   `H.x` decode as index up (dark), woman climbing (dark), raised fist (medium-light), running
   (medium), woman kneeling facing right (medium-light), grinning cat, frowning face, woman

@@ -22,6 +22,7 @@ python3 $T/tone.py     # skin tone by Rec.709 luminance quantiles within each gl
 python3 $T/tone2.py    # skin tone by aligned Rec.709 pixel comparison with every tone variant -> emoji_table2.json
 python3 $T/skin.py     # mean grey over each glyph's skin pixels vs every tone's level -> skin_calls.json
 python3 $T/calibrate.py  # fit puzzle grey = a*Rec.709 + b, re-call tones -> emoji_table3.json (= data/emoji-table.json)
+python3 $T/geometry.py  # point symmetry, two-armed spiral fit, offset test -> spiral-geometry.json (= data/spiral-geometry.json)
 python3 $T/fit.py      # optional: golden-angle spiral fit and index assignment -> fit.json
 ```
 

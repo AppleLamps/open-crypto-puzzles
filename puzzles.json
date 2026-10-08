@@ -2556,8 +2556,8 @@
       "difficulty_left": "insight",
       "difficulty_note": "the author states the first post holds everything needed and that the solution is quick once seen; the mechanism that turns the signature and the image into a private key has not been published or reproduced",
       "tested_total": {
-        "candidates": 1099511667932,
-        "families": 5,
+        "candidates": 1099511669030,
+        "families": 7,
         "certified": true
       },
       "leads": [

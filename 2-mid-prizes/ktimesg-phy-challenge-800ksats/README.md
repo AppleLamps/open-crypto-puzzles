@@ -138,6 +138,8 @@ ledger in `analysis/tested.md`.
 | The nonce `k` is small or structured (the key would then be `(s*k - z)/r`) | every `k` below 2^40, both signs, plus 16 structured values | baby-step giant-step on the nonce point | 0 match | yes: 3 planted nonces re-found | 2026-10-07 |
 | The forum point `H` is tied to the key or nonce point by a simple relation | negation, endomorphism, small offsets and multiples, signature scalars | point arithmetic | none | yes: 5 planted relations re-found | 2026-10-07 |
 | The 256 emojis, read one bit each or as base-6 tone digits, give `k` or the key | 460 readings (forum table), 380 (measured table), 380 again after re-toning, 12,160 over all 32 assignments of the 5 uncertain calibrated tones; each as `d`, `k` and `-k` | `d = (s*k - z)/r`, compare with the recovered key | 0 match | yes: a planted reading re-found in every run and in each of the 32 tone assignments | 2026-10-07 to 2026-10-08 |
+| Small deliberate offsets from the ideal spiral carry data | 128 mirror pairs, shared offset against partner noise | Levene test | no signal (p = 0.28 radial, 0.80 tangential) | yes: a +-1 px injected code is detected 96.5 percent of the time | 2026-10-08 |
+| The emojis read in the exact geometric spiral order give `k` or the key | 366 readings, including per-pair comparisons | `d = (s*k - z)/r` | 0 match | yes: planted reading re-found | 2026-10-08 |
 
 ## Open leads, ranked
 
@@ -165,6 +167,7 @@ ledger in `analysis/tested.md`.
 | `analysis/leads.md` | the full lead notes |
 | `tools/oracle.py` | recovery check and candidate checker, standard library only |
 | `data/emoji-table.json` | the 256 emojis measured from the image: centre, matched Apple glyph (Unicode sequence), skin tone, mirror margin, match scores |
+| `data/spiral-geometry.json` | the two-armed spiral the emojis sit on: symmetry centre, radius law, divergence angle, each emoji's pair index, arm and offset, and the offset test result |
 | `tools/emoji_table/` | the pipeline that rebuilds `data/emoji-table.json` (reference glyphs fetched from npm, not stored here) |
 
 ## Sources
