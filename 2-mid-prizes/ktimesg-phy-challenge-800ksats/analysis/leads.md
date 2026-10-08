@@ -73,6 +73,12 @@ the mirrored glyph fits. Rebuild with `tools/emoji_table/`. What it established:
   (130.263 degrees), and no golden-ratio or `e` expression matches. It was probably tuned for spacing.
 - The emoji code points carry no visible relation within mirror pairs: the first code points of A and B
   differ by 119 distinct amounts over 128 pairs, and their sums and XORs show no repeat pattern.
+- The coin sits at the exact image centre, (1023.5, 1023.5), radius 59.4 px, with 34 regular rim
+  ticks (one due east) and an upright B. The thread's "34 divisions" is right; its "14 degree tilt"
+  does not show on the coin. The spiral's symmetry centre is 5.9 px above the coin's centre. Apple's
+  ink placement inside the glyph box explains only 0.6 px of that, and in the wrong direction, so
+  the emojis were probably drawn as text from a baseline that sits slightly high. That is a rendering
+  detail, not an obvious carrier, and the 34 ticks look like the stock coin art.
 - The forum IDs behind the point `H` cannot be reproduced. The 9 emojis whose code points spell
   `H.x` decode as index up (dark), woman climbing (dark), raised fist (medium-light), running
   (medium), woman kneeling facing right (medium-light), grinning cat, frowning face, woman
