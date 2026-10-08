@@ -10,17 +10,19 @@ npm pack emoji-datasource-apple@16.0.0 && mkdir x && tar xzf emoji-datasource-ap
 export APPLE_EMOJI_64=$PWD/x/package/img/apple/64
 ```
 
-Then, from a scratch working directory (the scripts write their JSON files to the current directory):
+Then, from a scratch working directory (the scripts write their JSON files to the current directory),
+with `T` pointing at this folder:
 
 ```bash
-python3 detect.py   # 256 emoji centres + the coin centre -> centres.json
-python3 match.py    # normalise the 3,793 reference glyphs -> refs.npz
-python3 match2.py   # shape + luminance correlation, plain and mirrored -> matches.json
-python3 tone.py     # skin tone by Rec.709 luminance quantiles within each glyph family -> emoji_table.json
-python3 tone2.py    # skin tone by aligned Rec.709 pixel comparison with every tone variant -> emoji_table2.json
-python3 skin.py     # mean grey over each glyph's skin pixels vs every tone's level -> skin_calls.json
-python3 calibrate.py  # fit puzzle grey = a*Rec.709 + b, re-call tones -> emoji_table3.json (= data/emoji-table.json)
-python3 fit.py      # optional: golden-angle spiral fit and index assignment -> fit.json
+T=/path/to/2-mid-prizes/ktimesg-phy-challenge-800ksats/tools/emoji_table
+python3 $T/detect.py   # 256 emoji centres + the coin centre -> centres.json
+python3 $T/match.py    # normalise the 3,793 reference glyphs -> refs.npz
+python3 $T/match2.py   # shape + luminance correlation, plain and mirrored -> matches.json
+python3 $T/tone.py     # skin tone by Rec.709 luminance quantiles within each glyph family -> emoji_table.json
+python3 $T/tone2.py    # skin tone by aligned Rec.709 pixel comparison with every tone variant -> emoji_table2.json
+python3 $T/skin.py     # mean grey over each glyph's skin pixels vs every tone's level -> skin_calls.json
+python3 $T/calibrate.py  # fit puzzle grey = a*Rec.709 + b, re-call tones -> emoji_table3.json (= data/emoji-table.json)
+python3 $T/fit.py      # optional: golden-angle spiral fit and index assignment -> fit.json
 ```
 
 Needs numpy, scipy and pillow. Method notes and known limits are in `../../analysis/leads.md`.

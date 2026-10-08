@@ -51,7 +51,7 @@
     "certified_against": "the public canonical BIP-0039 test vector (abandon x11 + about to 0x9858effd...), plus a checksum-acceptance-rate check over the full English wordlist"
   },
   "difficulty_left": "bounded-compute",
-  "difficulty_note": "3 of 12 positions are confirmed (1, 5 with 2 candidates, and 12), plus 2 more confirmed list members with unknown positions; every sweep of the confirmed word pool (approximately 16.75 billion derivations across 6 metadata-era sweeps, all witnessed) has failed; the next 2 leads (connecting words, then substrings of longer words) are priced at hours and about a day respectively on one rented GPU and have not been run; a third lead (re-reading remaining metadata) is a human task, not a sweep",
+  "difficulty_note": "3 of 12 positions are confirmed (1, 5 and 12), plus 2 more confirmed list members with unknown positions; about 25 billion witnessed derivations across 11 families have failed, including the connecting-words sweep (C1, 2026-08-23), the reading-order model on 7 derivation paths, and one free video word from every on-screen and spoken word (2026-10-07); dropping reading order leaves about 1.5e14 derivations, so the binding constraint is word identification, starting with the video's own YouTube tags",
   "tested_total": {
     "candidates": 25174396277,
     "families": 11,
@@ -68,7 +68,7 @@
       "rank": 2,
       "title": "extend the word pool with connecting words",
       "cost": "hours on one rented GPU",
-      "status": "open"
+      "status": "killed: 18,657,475,200 derivations, 0 match (sweep C1, 2026-08-23)"
     },
     {
       "rank": 3,

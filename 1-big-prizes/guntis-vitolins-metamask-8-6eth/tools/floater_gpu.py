@@ -27,7 +27,8 @@ PIPELINE
 WITNESSES
 
 Every unit carries 3 planted targets next to the escrow: the addresses of its
-first, middle and last valid rows, derived on the CPU before the unit is sent.
+first valid row, a seeded random interior row and the last valid row, derived on the CPU
+before the unit is sent.
 A unit counts only if the GPU reports all 3 at exactly the expected row; any
 miss aborts the run with exit 3 instead of reporting a negative.
 
@@ -214,6 +215,8 @@ def cmd_gpu_selftest(a, be=None, lib=None):
 
 def cmd_run(a):
     words, index_of, floaters, units = setup(a)
+    if not 0 <= a.start_unit < len(units):
+        sys.exit("--start-unit must be in 0..%d" % (len(units) - 1))
     be, lib = load_engine()
     if cmd_gpu_selftest(a, be, lib):
         return 1
