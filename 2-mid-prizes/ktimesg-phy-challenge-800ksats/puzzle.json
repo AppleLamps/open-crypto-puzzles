@@ -45,7 +45,7 @@
   },
   "difficulty_left": "insight",
   "difficulty_note": "the author states the first post holds everything needed and that the solution is quick once seen; the mechanism that turns the signature and the image into a private key has not been published or reproduced",
-  "tested_total": { "candidates": 1099511667932, "families": 5, "certified": true },
+  "tested_total": { "candidates": 75866302377586, "families": 10, "certified": true },
   "leads": [
     { "rank": 1, "title": "read the author's hints as one set", "cost": "minutes", "status": "open" },
     { "rank": 2, "title": "check the structure a forum user reported on 2026-07-29", "cost": "hours", "status": "open" },
