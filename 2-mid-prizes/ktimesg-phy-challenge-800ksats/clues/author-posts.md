@@ -23,7 +23,7 @@ files in this folder carry the corrected string.
   "The rest of the provided parts are all correct and complete, and there is a prize (as of
   today)." And: "If you reach a state where you believe "this cannot be solved", it means you
   are missing the direct and indirect clues along the way." The post also holds a PGP message
-  and the line "the password's already mentioned". The PGP message is not saved here.
+  and the line "the password's already mentioned". Decrypted 2026-10-08 with GnuPG: the password is the literal phrase `already mentioned` and the plaintext is a single full stop, `.`. A forum member reported the same plaintext on page 1 without naming the password. The author's "a final useful sign" most plausibly confirms that the signed message ends in that full stop with no trailing newline, which is the only reading that recovers the escrow (`analysis/tested.md`, row 2).
 - 2026-07-23, [post](https://bitcointalk.org/index.php?topic=5584952.msg66971742#msg66971742):
   "I don't know what to hint at, when the hints are already inside-out, and everyone seems to
   be stuck at the ASCII 8 cat incident, or don't want to share what they found."
